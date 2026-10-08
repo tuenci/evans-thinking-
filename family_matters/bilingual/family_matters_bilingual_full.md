@@ -1,0 +1,3183 @@
+# 《属灵家事：走近门诺弟兄会》（中英双语典藏版）
+## *Family Matters: Discovering the Mennonite Brethren (Revised United States Edition)*
+**编著**：美国门诺弟兄会信仰与生活委员会（Board of Faith and Life, USMB）· 康妮·费伯（Connie Faber）主编
+
+---
+
+# 扉页、版权与目录
+## *Title, Copyright & Table of Contents*
+
+> **归属分部**：导言与序章 (Front Matter)
+
+### 中文译文
+
+# 扉页与目录 (Front Matter & Table of Contents)
+
+### 属灵家事：走近门诺弟兄会 (Family Matters: Discovering the Mennonite Brethren)
+
+**美国修订版 (Revised United States Edition)**  
+**美国门诺弟兄会总会 · 信仰与生命委员会 委任编撰 (Commissioned by the Board of Faith and Life, USMB)**
+
+---
+
+#### 版权与出版说明
+除非另有特别注明，全书英文经文引自《新国际版圣经》（New International Version, NIV），版权所有 © 1973, 1978, 1984, 2011 归 Biblica, Inc. 所有；中文经文引证均严谨采用中文圣经《和合本》（CUV）。
+
+本《美国修订版》由美国门诺弟兄会总会（United States Conference of Mennonite Brethren Churches, USMB）信仰与生命委员会正式委任编撰。本次修订由康妮·费伯（Connie Faber）担任主编。本美国修订版以2017年加拿大门诺弟兄会总会（CCMBC）修订版为基础，两个修订版均大量吸纳了2002年首版《属灵家事》（Family Matters）两位原作者——林恩·乔斯特（Lynn Jost）与康妮·费伯（Connie Faber）的核心研究成果。乔斯特与费伯在原书中特别致谢了凯蒂·芬克·维贝（Katie Funk Wiebe），她早先所著的经典著作《谁是门诺弟兄会？》（Who are the Mennonite Brethren?）为本书提供了极其宝贵的史料背景、措辞表达与神学洞见。
+
+**封面设计与版式构图**：凯瑟琳·哈姆（Katherine Hamm）
+
+---
+
+### 全书总目录 (Table of Contents)
+
+**引言：教会作为神的家 (Introduction: The Church as Family)** ................................................... 7
+
+#### 第一部分：家族历史 (PART ONE: The Family History)
+- **第 1 章：重洗派宗教改革 (Chapter 1: The Anabaptist Reformation)** ....................................... 12
+  - 早期教会 (Early Church)
+  - 君士坦丁与大公教会 (Constantine and Catholicism)
+  - 宗教改革运动 (Protestant Reformation)
+  - 激进宗教改革 (Radical Reformation)
+  - 门诺·西蒙斯 (Menno Simons)
+- **第 2 章：“弟兄会”的诞生 (Chapter 2: The Birth of “the Brotherhood”)** ................................. 26
+  - 迁徙至波兰与普鲁士 (Migration to Poland)
+  - 俄国门诺殖民地 (Mennonite Colonies in Russia)
+  - 敬虔复兴运动 (Revival Movements)
+  - 门诺弟兄会的诞生 (Birth of the Mennonite Brethren)
+  - 殖民地管理阶层的反应 (Reaction of the Mennonite Colony Administration)
+- **第 3 章：门诺弟兄会的成长 (Chapter 3: The MB Church Grows)** ................................................ 34
+  - 初期的挑战（1860–1865） (Early Challenges)
+  - 首次向北美的移民潮 (The First Migration to North America)
+  - 俄国革命与后续的移民 (The Russian Revolution and Later Migrations)
+  - 动荡年代、世界大战与全球大迁徙 (Revolution, World Wars and Migrations)
+
+#### 第二部分：家族特质与信念 (PART TWO: Family Distinctives)
+- **第 4 章：圣道之民 (Chapter 4: People of the Word)** .................................................... 43
+  - 福音派敬虔主义的影响 (Evangelical Pietist Influences)
+  - 重洗派对圣经的诠释 (The Anabaptist Interpretation of Scripture)
+  - 门诺弟兄会的圣经诠释原则 (MB Principles of Interpretation)
+- **第 5 章：新约教会 (Chapter 5: The New Testament Church)** ........................................ 57
+  - 作为家庭的生活 (Life as Family)
+  - 扩大家庭：信徒洗礼 (Growing the Family)
+  - 救赎性的教会纪律 (Redemptive Discipline)
+  - 洗礼与主的晚餐 (Baptism and the Lord’s Supper)
+  - 过肢体相爱的家庭生活 (Living as a Family)
+  - 会众治理体制 (Congregational Polity)
+- **第 6 章：缔造和平 (Chapter 6: Peacemaking)** .............................................................. 72
+  - 第三千禧年的和平缔造者 (Third Millennium Peacemakers)
+  - 积极缔造和平所面临的挑战 (Challenges to Active Peacemaking)
+  - 教会与国家政权 (Church and State)
+- **第 7 章：门徒即宣教士 (Chapter 7: Disciples are Missionaries)** ........................................... 88
+  - 成为基督的门徒 (Becoming a Disciple)
+  - 全球宣教的历程 (Global Mission)
+  - 当代宣教事工与实践 (Contemporary Mission Work)
+
+#### 第三部分：不断扩增的大家庭 (PART THREE: A Growing Family)
+- **第 8 章：携手同行 (Chapter 8: Working Together)** .................................................... 102
+  - 与加拿大教会的联合事工 (Ministry with Canada)
+  - 历史委员会 (Historical Commission)
+  - 全球宣教差会 Multiply (Multiply)
+  - 在全美各地的联合事奉 (Working Together in the U.S.)
+  - 高等教育学府 (Higher Education)
+  - 门诺弟兄会基金会 (MB Foundation)
+- **第 9 章：美国门诺弟兄会 (Chapter 9: Mennonite Brethren in the U.S.)** ................................ 115
+  - 治理机制与前瞻异象 (Governance and Vision)
+  - 核心委身目标 (Core Commitments)
+  - USMB 事工运作模式 (USMB Ministry Model)
+  - 各教区联会 (District Conferences)
+- **第 10 章：国际门诺弟兄会大家庭 (Chapter 10: The International MB Family - ICOMB)** ..................... 133
+  - 非洲各成员教会 (Africa)
+  - 亚洲各成员教会 (Asia)
+  - 欧洲各成员教会 (Europe)
+  - 拉丁美洲各成员教会 (Latin America)
+  - 北美洲成员教会 (North America)
+- **第 11 章：跨门诺宗派的连结 (Chapter 11: Inter-Mennonite Connections)** ................................... 165
+  - 携手服事人群 (Working Together to Serve Others)
+  - 门诺中央委员会百年历程 (MCC Turns 100)
+  - 门诺灾害救助服务处 (MDS: North American Disaster Response)
+  - 门诺世界大会：信仰大家庭 (MWC: A Family of Faith)
+  - 跨门诺宗派重要事工机构指南 (Guide to Inter-Mennonite Agencies)
+
+#### 第四部分：迈向未来的家族纽带 (PART FOUR: Family Ties for the Future)
+- **第 12 章：迈向未来的挑战 (Chapter 12: The Challenge for the Future)** ................................... 187
+- **推荐阅读书目 (Recommended Reading)** ............................................................. 194
+- **全书引用文献 (Works Cited)** ............................................................................... 197
+
+
+---
+
+### English Original Text
+
+# Front Matter & Table of Contents
+
+
+<!-- Page 1 -->
+
+
+### FamilyMattersDISCOVERING THE MENN
+
+
+<!-- Page 2 -->
+
+
+### Family Matters
+
+
+### DISCOVERING THE MENN
+
+Revised United States Edition Commissioned by the Board of Faith and Life United States Conference of Mennonite Brethren Churches All Scripture quotations unless otherwise indicated, are taken from the Holy Bible, New International Version, NIV. Copyright 1973, 1978, 1984, 2011 by Biblica, Inc. The United States Revised Edition was commissioned by the Board of Faith and Life of the United States Conference of Mennonite Brethren Churches (USMB). Revision was edited by Connie Faber. The U.S. revision is based on the 2017 revision by the Canadian Conference of Mennonite Brethren. Both revisions include much of the work of Lynn Jost and Connie Faber, authors of the first edition of Family Matters (2002). Jost and Faber acknowledged the contributions of Katie Funk Wiebe, whose earlier book, Who are the Mennonite Brethren? , served as a source of information, wording and ideas. Cover design and layout by Katherine Hamm
+
+
+<!-- Page 3 -->
+
+
+### Introduction
+
+................................................................................... 7 PART ONE
+
+
+### The Family History
+
+
+### Chapter 1: The Anabaptist Reformation
+
+....................................... 12 Early Church Constantine and Catholicism Protestant Reformation Radical Reformation Menno Simons
+
+
+### Chapter 2: The Birth of “the Brotherhood”
+
+................................. 26 Migration to Poland Mennonite Colonies in Russia Revival Movements Birth of the Mennonite Brethren Reaction of the Mennonite Colony Administration
+
+
+### Chapter 3: The MB Church Grows
+
+................................................ 34 Early Challenges (1860-65) The First Migration to North America The Russian Revolution and Later Migrations Revolution, World Wars and Migrations
+
+
+<!-- Page 4 -->
+
+
+### PART TWO
+
+
+### Family Distinctives
+
+
+### Chapter 4: People of the Word
+
+.................................................... 43 Evangelical Pietist Influences The Anabaptist Interpretation of Scripture MB Principles of Interpretation
+
+
+### Chapter 5: The New Testament Church
+
+........................................ 57 Life as Family Growing the Family Redemptive Discipline Baptism and the Lord’s Supper Living as a Family Congregational Polity
+
+
+### Chapter 6: Peacemaking
+
+.............................................................. 72 Third Millennium Peacemakers Challenges to Active Peacemaking Church and State
+
+
+### Chapter 7: Disciples are Missionaries
+
+........................................... 88 Becoming a Disciple Global Mission Contemporary Mission Work
+
+
+<!-- Page 5 -->
+
+
+### PART THREE
+
+
+### A Growing Family
+
+
+### Chapter 8: Working Together
+
+.................................................... 102 Ministry with Canada Historical Commission Multiply Working Together in the U.S. Higher Education MB Foundation Chapter 9: Mennonite Brethren in the U.S. ................................ 115 Governance and Vision Core Commitments USMB Ministry Model District Conferences
+
+
+### Chapter 10: The International MB Family (ICOMB)
+
+..................... 133 Africa Asia Europe Latin America North America
+
+
+### Chapter 11: Inter-Mennonite Connections
+
+................................... 165 Working Together to Serve Others MCC Turns 100 MDS: North American Disaster Response MWC: A Family of Faith Guide to Inter-Mennonite Agencies
+
+
+<!-- Page 6 -->
+
+
+### PART FOUR
+
+
+### Family Ties for the Future
+
+
+### Chapter 12: The Challenge for the Future
+
+................................... 187 Recommended Reading ............................................................. 194 Works Cited ............................................................................... 197
+
+
+---
+
+# 教会作为神的家
+## *The Church as Family*
+
+> **归属分部**：导言与序章 (Introduction)
+
+### 中文译文
+
+# 引言：教会作为神的家 (Introduction: The Church as Family)
+
+### 引言 (Introduction)
+
+“门诺弟兄会”（Mennonite Brethren）这个名字本身，就深刻揭示了我们的身份本质：我们是在基督里的弟兄与姊妹。我们是——或者说我们切切渴慕成为——上帝的属灵大家庭。将教会比喻为“家庭”这一核心意象，是门诺弟兄会对往往充斥着个人主义倾向的北美基督教社群的一大独特神学贡献。教会这个属灵大家庭，是上帝在地上设立的最核心制度。教会是至关重要的社会动员与生命培育的载体。教会家庭塑造着基督徒的品格；教会更是上帝用以拯救那处于苦苦等候与绝望之中的世界的器皿。这正是门诺弟兄会的共同认信。“教会作为属灵家庭”最清晰地界定了我们的身份。尽管我们深知在许多门诺弟兄会的实际堂会中，这一崇高理想尚未完全成为现实，但本书的目的绝非仅仅客观陈述“现状如何”，而是深切呼吁我们牢记“曾几何时”的光辉传统，并回归到“应当如何”以及“将来必成”的属灵光景之中。
+
+教会是我们终极的属灵家园。作为重洗派（Anabaptists）信徒，我们阅读与研读圣经的起点，并非从创世记第一章的创造记叙开始，而是从福音书中耶稣基督的生平与言行出发。在那里，我们清晰地看到，耶稣宣告祂最首要的家人关系，乃是建立在那些遵行上帝旨意、在生活中活出神国统治的人身上：
+
+“凡遵行神旨意的人，就是我的弟兄姐妹和母亲了。”（马可福音 3:35）。耶稣对“家庭”的领会，深深植根于希伯来圣经对“圣约”（Covenant）的神学理解之中。在圣约的核心，本质上就是一种彼此相属的家庭关系。上帝向亚伯兰应许赐下一家之人，并由此繁衍成为一个大国；婚姻与家庭构成了以色列民族身份与历史使命的核心。然而，直到以色列人出埃及时，他们才真正淬炼成为一个成熟的圣约共同体。正如出埃及记12章38节所记，这个圣约民族包含了“许多闲杂人”（和合本），他们绝非仅仅由单一血缘纽带将自己从周边邻邦在族裔上隔绝开来。尽管以色列人拥有血缘家庭的纽带，但在根本上，以色列之所以成为上帝的子民，完全是因为上帝在历史中所施行的大能作为。通过坚持以“伦理信服”而非“血统族裔”来界定家人，耶稣的教导与希伯来圣经中上帝与以色列所立的圣约一脉相承。耶稣呼召门徒加入神国统治的圣约社群，并将这世上原本四分五裂的各样族群社团，联合缔造成一个“新人”（以弗所书 2:11-22）。正如以弗所书2章19节所宣告的：“这样，你们不再作外人和客旅，是与圣徒同国，是神家里的人了。”信仰的呼召，跟从耶稣的呼召，正是呼召我们融入上帝荣耀的大家庭之中。
+
+耶稣特别赐予那些被社会边缘化、孤苦无依、没有肉身家庭的人以尊贵的身份。在旧约圣经中，上帝明确将孤儿、寡妇和寄居的寄居者等弱势边缘群体纳为圣约子民的核心关怀对象；而在新约的圣约中，耶稣向贫穷的、瘸腿的、瞎眼的、被掳的人宣告恩年的福音。上帝的大家庭，正是由“最微小、最失丧、最后、最卑微之人”（Capon语）所汇聚而成的。血缘纽带从来不能决定或限定上帝的属灵家庭。使徒保罗反复重申这一宏大主题：归入基督，就是加入上帝的属灵家庭。保罗使用诸多生动的比喻来描绘教会，但他最钟情、最深刻的比喻莫过于“家庭”。在保罗的书信中，他使用“我的弟兄（与姊妹）”这一亲切称谓达65次以上。初代教会皆在家居小组（Household groups）中聚集敬拜；洗礼正是象征新蒙接纳的属灵儿女正式被领养进入神的家中；而主的圣餐（主餐），则让人时刻忆起家庭日常围坐一堂、擘饼分享的温馨团契。当使徒行传16章31节在救恩呼召中将“全家”包含在内时（“当信主耶稣，你和你一家都必得救”），我们应当想到的是腓立比禁卒包括奴仆在内的整个大宅眷属（household），而绝非仅仅狭义的血亲家庭。对保罗而言，最根本的亲族连结乃是上帝家里信徒间的属灵纽带。
+
+无论我们今天是否完全习惯“门诺弟兄会”这一名称，这一“教会即家庭”的生动隐喻都极大地帮助我们述说“我们究竟是谁”的属灵旅程。回顾我们的起源背景——那场源于强调与主耶稣建立深邃亲密关系、并在家庭查经祈祷小组中持续孕育的敬虔复兴——在我们内心深处孕育出了一种浓厚而真挚的家庭亲情。而建道初期那不可避免的冲突与阵痛（包括迫不得已与当时的传统门诺老教会决裂），更是进一步强化了彼此依靠、互为属灵家人的现实紧迫性。
+
+然而，在门诺弟兄会的历史叙事中，也许没有任何一种对家庭隐喻的实践，比“寄居者与外人”（strangers and aliens）的神学理念更为核心。如前所述，希伯来圣经赋予了寄居者或外邦异客以极其特殊的优先地位。这一特殊地位的历史与神学根基，正是源于以色列民族自身的起源：以色列起初就是一个由异客、外来者所组成的民族。正因为他们曾在埃及地作过寄居者，以色列人受召必须厚待并关顾身边的寄居者（利未记 19:33-34；出埃及记 23:9；申命记 10:17-19）。耶稣基督自己也曾是一位“连枕头的地方都没有”的无家浪民（马太福音 8:20）。新约圣经再三叮嘱基督徒要乐意款待外人，打开家门欢迎寄居者，身体力行地实践爱心接待。
+
+正如以色列一样，门诺弟兄会起初也是从一个共同的血缘族裔群体孕育而生的。最初签署成立门诺弟兄会的全部创始先贤，均来自俄国境内讲德语的门诺殖民地村庄。他们或其祖先早先曾是从普鲁士迁徙而来的移民，而在普鲁士之前，又源自荷兰低地。在门诺弟兄会教会诞生后短短二十年之内，门诺信徒便以寄居者的身份大规模跨越大洋迁徙至北美。而且，就在俄国门诺弟兄会诞生伊始，信徒心中便瞬间觉醒了接纳外人进入属灵大家庭的迫切渴望——无论这些外人是当地的斯拉夫邻舍，还是远在印度或非洲刚果宣教工场上的人民。然而具有讽刺意味的是，我们的历史同样坦诚揭示出：正如新约时代的初期教会一样，我们在将新的族裔完全接纳融入我们的堂会生活方面，常常存在着抵触心理或步伐过于迟缓。尽管如此，这种在“身为家人”、“作为天路客的寄居者”与“热情接纳新家庭成员”之间交织跌宕的属灵张力，始终构成了门诺弟兄会横跨几个世纪历史长河的鲜明底色。
+
+要真正深入认识一个家庭，既需要细致观察其当前的鲜活特质，也需要追本溯源研读其历史背景。前者旨在辨析出我们称之为该家庭所独具的“精神气质”（ethos），并确认其属灵热忱与恩赐资源所在；而后者则深入解释了事物今日为何呈现如此样态的历史成因。然而，我们应当从当下出发，还是从历史起步？在本书中，我们选择从门诺弟兄会的起源切入（简要将我们的根脉追溯至教会历史的源头），继而深入剖析我们的核心神学认信与信条；最后，我们将放眼考察门诺弟兄会在北美的蓬勃成长、主要联合事工机构，以及遍布全球五大洲的国际门诺弟兄会大家庭。当然，读者完全可以根据自己的阅读喜好，选择先研读我们的神学信念，再回溯历史脉络。诚挚邀请您查阅目录，随心开启探索之旅。最重要的是——热烈欢迎您走进这个属灵大家庭！
+
+
+---
+
+### English Original Text
+
+# Introduction: The Church as Family
+
+
+<!-- Page 7 -->
+
+
+### Introduction
+
+The name “Mennonite Brethren” says a lot about who we are: we are sisters and brothers in Christ. We are, or we aim to be, a family of God. This emphasis on the metaphor of the church as family is a big part of the Mennonite Brethren contribution to the often-individualistic North American Christian community. The church family is God’s most important institution on earth. The church is the foremost social agent. The church family shapes Christian character. The church is the means God uses to save a waiting, desperate world. This is the confession of Mennonite Brethren. The church as family most clearly defines our identity. While we may protest that this ideal is not a reality in many Mennonite Brethren congregations, the purpose of this book is not simply to report what is. It is a call to remember what has been and to return to what should be and will be. The church is our primary home. As Anabaptists, we begin reading the Bible, not with the creation account in the first chapter of Genesis, but with the story of Jesus in the Gospels. There we see that Jesus claims that his primary family relationship is with those who do God’s will, who live out the reign of God:
+
+
+<!-- Page 8 -->
+
+“Whoever does God’s will is my brother and sister and mother” (Mark 3:35). Jesus’ notion of family grew out of his Hebrew understanding of covenant. At its core, the covenant was a family relationship. God promised Abram a family that would become a nation. Marriage and family were the essence of Israel’s identity and purpose. But it was not until the exodus from Egypt that Israel became a nation, a mature covenant community. As Exodus 12:38 tells us, the covenant nation was “a mixed multitude” (KJV), not a blood kinship set apart from its neighbors ethnically. Although Israel had ties to biological family, at its core, Israel was a people of God because of God’s historical acts. By insisting on a family based on ethics not ethnicity, Jesus was consistent with the covenant God made with Israel in the Hebrew Bible. Jesus called the disciples to join the community of God’s reign. Jesus united the world’s divided communities into a single new humanity (Ephesians 2:11-22). In Christ Jesus, Ephesians 2:19 says, “you are…fellow citizens with God’s people and also members of his household.” The call to faith, to following Jesus, is a call to become part of the family of God. Jesus gives identity particularly to those who are marginalized, to those who have no family. In the Old Testament, God explicitly includes marginal people like orphans, widows and foreigners in the covenant people. In the new covenant, Jesus announces good news for the
+
+
+<!-- Page 9 -->
+
+poor, the lame, the blind, the prisoner. The family of God is composed of “the last, the least, the lost and the little” (Capon). Biological connections do not determine or define the family of God. Paul reiterates this theme. To join Christ, Paul says, is to join God’s family. He uses many metaphors to describe the church, but perhaps his most significant is the family. He uses the phrase “my brothers (and sisters)” more than 65 times in his letters. The early church met in household groups. Baptism was admitting newly adopted children into God’s family. The Lord’s Supper recalled the daily family activity of breaking bread together. When Acts 16:31 includes the house in the salvation call (“you will be saved—you and your household”), we should think of the Philippian jailer’s entire household including slaves, rather than merely his biological family. The primary kinship links for Paul were those of the family of God. Whether we like the name “Mennonite Brethren” or not, the “church as family” metaphor aids us in telling the story of who we are. The circumstances of our beginnings—in a renewal sprung from an emphasis on an intimate relationship with Jesus and fostered in intimate group Bible study and prayer—birthed in us a family feeling. The conflict and difficulties inherent in the founding, which involved a break with the existing Mennonite church, further strengthened the need to rely on and be family for one another.
+
+
+<!-- Page 10 -->
+
+Perhaps no application of the metaphor is more central to the Mennonite Brethren story, however, than the notion of strangers and aliens. As mentioned above, the Hebrew Bible gives privileged place to aliens or foreigners. The historical and theological basis for this special status is the origin of Israel itself. Israel began as a nation of strangers. Outsiders. Because they were aliens in Egypt, Israel is called to provide for strangers (Leviticus 19:33-34; Exodus 23:9; Deuteronomy 10:17-19). Jesus himself was a homeless person with no place to “lay his head” (Matthew 8:20). Repeatedly, the New Testament calls Christians to welcome strangers into their homes. Christians practice hospitality. Like Israel, Mennonite Brethren began from a common biological stock. All the charter Mennonite Brethren came from German-speaking Mennonite colonies in Russia. They or their forebearers had been migrants from Prussia and, before that, from Holland. Within two decades of the origin of the Mennonite Brethren church, Mennonites began migrating as strangers to North America. Immediately upon the Mennonite Brethren church’s birth in Russia, there awoke the desire to welcome strangers into the family, whether these be the Slavic people in the area or people in the mission field of India or Congo. Ironically, our story also reveals that, like the New Testament church, we have often resisted or moved too slowly in including new ethnicities within our congregations. Nevertheless, this exciting interplay
+
+
+<!-- Page 11 -->
+
+of being family, being strangers on a pilgrimage, and welcoming new family members has characterized the Mennonite Brethren church throughout its history. Getting to know a family well involves discovering its current traits, and it also involves studying its background. The first task identifies those characteristics and views that we might call the family’s particular “ethos,” and identifies its passion and resources. The second offers some explanation of why things are the way they are. But does one begin with the present or the past? In this book, we begin with the origins of the Mennonite Brethren church (briefly tracing our roots back into church history) and then discuss our theological convictions. We conclude with a look at our growth in North America, some of our institutions and the worldwide Mennonite Brethren family. The story could easily be read by beginning with our convictions and ending with a look back through history. You are invited to consult the contents page and enjoy the book the way you prefer. Above all, welcome!
+
+
+---
+
+# 第一章：重洗派宗教改革
+## *Chapter 1: The Anabaptist Reformation*
+
+> **归属分部**：第一部分：家族的根基 (Part One: Roots of the Family)
+
+### 中文译文
+
+# 第 1 章：重洗派宗教改革 (Chapter 1: The Anabaptist Reformation)
+
+### 第一部分：家族历史 (PART ONE: The Family History)
+
+---
+
+### 第 1 章：重洗派宗教改革 (The Anabaptist Reformation)
+
+#### 早期教会 (Early Church)
+
+一切新的开端总是令人心潮澎湃：一场圣洁的婚礼、一个初生的婴孩；而最激动人心的，莫过于拓植建立一间崭新的教会。在每一个场景中，我们都能深切体会到一个全新家庭初建时的无比喜乐。《使徒行传》1至8章生动记载了基督的属灵大家庭——教会——诞生的震撼历史。主耶稣的门徒起初曾心灰意冷，绝望地紧闭门窗聚集一处；然而，当他们亲眼得见复活的主，并在五旬节被上帝借着圣灵满有权柄地大能膏抹之后，他们的生命发生了翻天覆地的彻底转变。
+
+新建立的教会展现出惊人的刚强与胆识，泰然藐视来自四面八方的反对与迫害。“耶稣掌权执王权！”他们放胆传讲；“耶稣是主！”他们响亮宣告。这样的坚定信条与绝对效忠，直接向耶路撒冷乃至随后罗马帝国的世俗政治权力结构发出了根本性的挑战——如果耶稣是唯一的至高之主，那么凯撒就绝不是主！福音的宣讲随即招致了残酷的迫害甚至血腥的殉道；然而，正如早期教父所见证的：“殉道者的鲜血，成了教会复兴繁衍的种子。”
+
+上帝全新的天国统治，彻底重塑了每一个加入其中的人的日常生活。基督徒如同一个崭新的家庭般生活在一起：他们同心合意敬拜赞美、同桌团契用餐，并慷慨解囊，将自己的资财与贫困软弱者分享。他们迫切热烈地查考圣经，惊喜地发现，正是借着他们对弥赛亚耶稣的信靠与回应，整卷旧约圣经的应许正在他们眼前全然应验。他们渴慕活出全新且圣洁的生活，因此甘心领受教会的纪律约束与彼此问责。他们深切体会到，对上帝的赤诚之爱在他们心底催生出了一种激进而深沉的爱——这爱不仅倾注于主内的基督徒家庭，更广施于他们身旁周遭的世人。
+
+随着基督徒在生活中放胆见证上帝的大能，教会迅速从耶路撒冷扩展蔓延到整个地中海沿岸的大街小巷。那些自以为在“捍卫上帝与国家利益”的迫害者，四处搜捕并屠杀基督徒。在严酷高压之下，少数信徒在惊恐中离弃了跟从耶稣的道路；然而绝大多数信徒却在试炼中更加坚如磐石。面对每一个在逼迫中退后跌倒的人，总有更多受感于信徒不屈勇气的慕道者，毅然决然归信这位能赐给跟从者如此浩瀚胆量的独一真神。
+
+#### 君士坦丁与大公教会 (Constantine and Catholicism)
+
+到了公元320年左右，基督教会的影响力已如此深入人心，以至于罗马皇帝君士坦丁公开宣布归信基督教，不仅确立了教会的合法地位，更将其置于帝国政权的全力庇护之下。公元367年，亚他那修主教（Bishop Athanasius）正式颁布了一份包含27卷早期使徒书信与著作的权威清单，授权在教会敬拜中公开诵读，这被公认为教导纯正教义、属灵辨别与神学建构的权威依据。这些书卷与希伯来圣经旧约全书一起，最终汇编成了我们今天所熟知的《基督教圣经》。当各种彼此冲突对抗的异端邪说试图左右基督教走向时，这一被称为“正典”（Canon，原意为衡量标准与准绳）的标准，在确立大公教会正统信仰的轮廓方面发挥了决定性作用。
+
+在那段争鸣激烈的风云岁月中，教会领袖齐聚一堂，共同验证、淬炼并制定了一系列核心教义的神学信条与宣言：公元325年与381年的尼西亚大公会议（Council of Nicea），正式确立了“三位一体”（圣父、圣子与圣灵同尊同荣、同质同等）的核心教义；公元451年的迦克墩大公会议（Council of Chalcedon），则精辟界定了基督兼具“完全的人性与完全的神性”的二性一位真理。在大公正统信仰轮廓逐步成型的这几个世纪中，既伴随着神学争辩的分歧激荡，也涌现出了许多感召人心的社会变革创举（如创立现代意义上的医院和大学）。
+
+然而，教阶等级体制与圣礼主义（Sacramentalism）开始不知不觉侵蚀教会的生活。越来越多地借用世俗强权和国家武力来捍卫和推展信仰，最终导致了十六世纪包括门诺派在内的宗教改革先贤所痛心疾首指出的——“教会的堕落”（the fall of the church）。尽管教会依然致力于传承基督信仰的外在传统，但死板的信条教条主义（Creedalism）往往扼杀了内在真实的属灵生命活力。基督的属灵大家庭逐渐演变成一个在世俗舞台上争权夺利的政治官僚建制。
+
+到了中世纪，宗教权力的滥用与腐败日趋狰狞险恶。势力强大的国家教会通过兜售“赎罪券”（宣称能以此免除罪罚）以及强索钱财“将亲友亡魂从炼狱中赎出”而聚敛了富可敌国的世俗财富。前往圣地的朝圣热潮与十字军东征，竟以“和平之君”耶稣的圣名到处挑起血腥杀戮与残暴争端。原本旨在纪念基督十字架代赎胜利的主餐圣餐，常常被歪曲扭曲为一种讨好上帝、赚取功德的机械仪式。圣徒的遗物遗骸被吹捧为拥有超自然的法力神迹；而那些贪得无厌、道德败坏的高层教职人员，不仅没有仆人般事奉万王之王，反而生活奢靡、作威作福如同世俗帝王。教会正在迅速丧失其属灵的生命脉搏与圣洁光辉。
+
+#### 宗教改革运动 (Protestant Reformation)
+
+就在这至暗时刻，马丁·路德（Martin Luther）登上了历史舞台。这位德国天主教神父在深研新约圣经、尤其是保罗的《罗马书》时，内心被圣灵大能照亮。他坚信：上帝白白将“因信称义”的属天恩赐赏赐给一切以信心依靠祂的儿女。借着纯全的信心，路德在基督里亲身体验到了灵魂重生的奇妙释放。
+
+1517年，路德对天主教会大肆贩卖赎罪券的行径深感义愤。在向教区总主教上书呼吁内部革新无果后，他毅然决然公开发表了著名的《九十五条论纲》，直击教廷滥用特权的种种罪愆弊端。风暴骤起，路德点燃了一场再也无法扑灭的改革烈火。他高举“唯独恩典、唯独信心、唯独圣经”，教导救恩是上帝白白赐予的礼物，唯凭信心领受；他坚称地上的终极权威乃是上帝的圣道圣经，而非罗马教皇。炼狱、赎罪券、圣徒遗物、功德祭祀性的弥撒以及向圣徒祈祷，完全是人工捏造的教权传统，绝非圣经真理。
+
+在瑞士，另外两位卓越的改教家也得出了相似的结论。在日内瓦，法学出身的约翰·加尔文（John Calvin）彻底决裂天主教体制，笔耕不辍，建构了一套恢宏严密的归正神学体系。然而如同路德一样，加尔文依然保留了“政教合一”的国家教会（State Church）体制。在当时的瑞士、德国以及天主教领地，统治阶层的封建诸侯决定了当地臣民的信仰归属：在路德派诸侯的领地内，所有新生婴儿必须受洗归入路德宗教会；而在加尔文派掌权的瑞士各州，婴儿则自幼受洗归入改革宗教会。
+
+另一位瑞士改教先驱，则是苏黎世的乌尔里希·慈运理（Ulrich Zwingli）。被誉为“人民的牧师”的慈运理才华横溢、充满活力，是一位极具震撼力的布道大师。他开创了严格的“逐章逐节解经讲道”传统。正如其他改革家一样，慈运理对圣经的研读促使他看清了天主教内部的种种腐败。在苏黎世市议会的支持下，他以雷霆之势废除了一项又一项天主教繁文缛节。
+
+1525年，在开启事工六年后，慈运理主导建立了一种全新的主餐仪式。天主教教导弥撒圣餐的面饼会奇迹般变成基督肉身的肉与血（化质说），路德则主张基督在饼酒之中有“真实的临在”（同质说/真实临在说）；而慈运理则明确将主的晚餐视作一种圣洁的“纪念”（Memorial），他特别强调耶稣的圣训：“你们也当如此行，为的是纪念我。”慈运理还教导教会的崇拜应当摈弃一切“虚饰浮夸之物”（例如取消乐器伴奏），认为教会聚会乃是单单聆听与领受上帝圣道神圣话语的圣洁场所。
+
+#### 激进宗教改革 (Radical Reformation)
+
+借着慈运理充满异象的服事，一群风华正茂、满怀赤诚的热血青年聚集在他的周围，他们渴望在教会生活与实践中推进更加彻底、纯正、决不妥协的圣经改革。康拉德·格列伯（Conrad Grebel）——一位出身豪门名门却反叛旧俗、因在基督里蒙恩重生而彻底摆脱放荡不羁生活的才俊——与他的挚友同工费利克斯·曼茨（Felix Manz），最终在“洗礼”这一核心真理上与恩师慈运理公开决裂。
+
+在世俗市政当局的政治压力与考量下，慈运理妥协让步，继续保留并推行婴儿洗礼；而格列伯等人坚信世俗政权绝对无权干涉教会的信仰实践，坚决主张唯有基于个人认罪信主决志的“信徒洗礼”（Believer's Baptism）。
+
+在洗礼问题的表象之下，深层横亘着慈运理与格列伯之间一道无法逾越的鸿沟：那便是关于“教会的本质究竟是什么”的神学认信。教会究竟应当是一间“全民性的国家教会”——即一地之内的所有公民生下来便自动成为教会成员；还是一间真正的“信徒教会”（Believers Church）——即唯有那些真正为罪悔改、全然归向基督、并立志全人全心效忠遵从耶稣的人，方可受洗归入其中？
+
+当苏黎世市议会正式下达禁令，勒令格列伯与曼茨立即终止在信徒家中举行的家庭查经聚会时，决裂已无可挽回。
+
+1525年1月21日深夜，这群年轻人在严峻危急的险境中聚首祷告。在圣灵的大能感动与对上帝战兢敬畏的心中，乔治·布劳罗克（George Blaurock）首先请求格列伯奉主的名按圣经为他施洗；随后，在场的所有弟兄彼此施洗，立下坚不可摧的圣约：脱离世俗罪恶的缠累，誓死遵行基督的门徒之道。再洗礼派 / 重洗派（Anabaptism——意为“重新施洗者”）在烈火中正式诞生！
+
+这群自称为“基督弟兄”（The Brethren）的先锋，满怀属天的平安喜乐与惊人胆量，四处放胆见证自己的纯正信仰。格列伯满怀福音烈火的讲道，引领了成百上千的灵魂归信救主。由于频繁被捕入狱，格列伯的身体遭受严重摧残，于1526年夏因染上瘟疫不幸离世。而曼茨尽管屡次身陷囹圄，却依然马不停蹄地传道并为新归信者施洗。
+
+1527年1月5日，费利克斯·曼茨在苏黎世利马特河被处以溺水极刑，成为重洗派历史上首位殉道的烈士。在被押往刑场的木船上，曼茨引吭高歌赞美上帝，他临终前的绝笔诗歌化作了激励一代代重洗派后人坚守信仰、视死如归的永恒圣诗。
+
+早期重洗派的神学，正如新约初代教会一样，是在“颠沛流离、仓皇逃难之中”（on the run）淬炼而成的；我们今天所掌握的许多原始文献，甚至是直接从敌对审判法庭的严苛审讯记录中得以留存。然而，一位来自南德意志的杰出改教家迈克尔·萨特勒（Michael Sattler），于1527年2月24日在瑞士小镇施莱特海姆主持召开了具有里程碑意义的重洗派信徒代表大会，正式起草制定了瑞士重洗派的共同纲领性文献——著名的《施莱特海姆信仰宣言》（The Schleitheim Confession）。该宣言明确宣告了六大核心信仰原则：
+1. **信徒洗礼**：唯有那些明白真道、真实悔改信主并在生活中结出悔改果子的信徒，方可接受洗礼。
+2. **教会惩诫（除名）**：对于那些离弃信仰、重蹈罪恶而屡劝不改拒绝悔改的人，教会应当依据马太福音18章施以挽回性的严谨惩诫（除名/团契相交隔离）。
+3. **擘饼圣餐**：唯有在纯正信仰中同心合意、并已领受信徒洗礼的门徒，方可一同领受主的圣餐。
+4. **与世俗罪恶分别**：基督徒必须过圣洁的生活，从周边罪恶堕落的世俗社会风俗中分别出来。堂会设立牧者传道人，负责忠心宣讲圣道、主领主餐并牧养监督众信徒。
+5. **爱与非抵抗原则**：基督徒当效法受苦基督的心志，彻底弃绝一切刀剑、武力报复与世俗争战。
+6. **不宣誓起誓**：信徒当遵照基督在登山宝训中的明训，坚决拒绝进行任何世俗宣誓或法律起誓，在一切言语上诚实无伪，是就说是，不是就说不是。
+
+在施莱特海姆会议闭幕后不到三个月，萨特勒便在罗滕堡不幸被捕。法庭依据他亲手参与制定的信仰条文判处他极刑。行刑时，残暴的刽子手残忍地割掉了他的舌头，用烧红的铁钳一次又一次撕扯他的血肉，最终将他绑在火刑柱上活活烧死。
+
+萨特勒以及千千万万为了这一崇高纯正信仰而慷慨赴难的重洗派弟兄姊妹的悲壮史迹，全部被详实完整地载入了不朽名著《殉道者之镜》（Martyrs Mirror）之中。这本滴血的巨著不仅记载了弟兄们的忠贞，更浓墨重彩地铭刻了无数坚贞不屈的圣徒姊妹的见证。其中一位感人肺腑的信仰母亲便是迈肯·温斯（Maeyken Wens），她于1573年10月在安特卫普壮烈殉道。温斯是一位传道人的妻子，更是五个幼小儿女的慈母；她遭受了长达数月的残酷严刑拷打，却始终坚决拒绝背弃自己的重洗派福音信仰。由于她在公堂上慷慨陈词的见证太具震撼力，法官在将她押赴火刑柱之前，竟然惨无人道地下令用铁螺丝死死夹住她的舌头，企图在生命的最后一刻彻底扼杀她的信仰宣告。行刑当天，她年仅15岁的长子阿德里安（Adriaen），怀抱着年仅3岁的幼弟汉斯（Hans）亲临刑场为母亲送行。当熊熊烈火吞噬母亲身躯的刹那，长子当场痛绝晕厥；但他苏醒之后，却扑入骨灰残骸之中，哭泣着翻找出那枚烧黑的夹舌铁螺丝，将其作为一生的圣洁纪念珍藏于怀中。
+
+迈肯在走上火刑架前夜写给长子阿德里安的遗书，奇迹般流传至今。她在信中深情写道：
+> “我至爱的儿子，母亲如今满怀指望先行一步去往天家；你要竭力珍惜看顾自己的灵魂，在基督的道上紧紧跟从我。我现在将你全然交托给亲爱的主。在你们一生的岁月中要彼此相爱；偶尔替母亲抱一抱小汉斯。若是你们的父亲将来也被带走，你们更要彼此细心照应。愿慈爱的主保守你们每一个孩子。我亲爱的儿女啊，为了怀念母亲，请你们彼此深情地亲吻一次。再见了，我至宝至爱的孩子们，天家再见！”
+
+#### 门诺·西蒙斯 (Menno Simons)
+
+瑞士重洗派信徒满怀宣教火热，将纯正的福音迅速播撒至南欧各地。不久，这一重归新约使徒道路的教导也被传扬到了北方的荷兰低地，奥伯·菲利普斯（Obbe Philips）与迪克·菲利普斯（Dirk Philips）两兄弟成为了当地教会早期的卓越领袖。他们坚定持守信徒洗礼、以非暴力抵制罪恶、以及追求圣洁有纪律的教会生活。
+
+然而，真正将自己的名字赋予整个门诺教会的历史伟人，是另一位荷兰重洗派领袖——门诺·西蒙斯（Menno Simons）。
+
+门诺于1496年出生于荷兰弗里斯兰省，青年时被按立为天主教神父。他是那个时代典型的神职人员：例行公事地主持宗教仪式，闲暇时则与同僚纵情于掷骰打牌、饮酒纵乐与世俗虚浮之中。然而，有三件重大的属灵冲击，如同惊雷般将门诺从属灵的昏沉沉睡中彻底震醒，并将他一步步塑造成激进宗教改革中举足轻重的领袖。
+
+第一次冲击发生在1525年，即门诺担任神父的第一年。门诺开始对天主教核心的“化质说”（Transubstantiation）教义产生深深的怀疑。当他在祭坛前主持弥撒时，心中突然闪过一个剧烈的困惑：祝圣后的面饼和葡萄酒，真的会神奇地变成基督有形肉身的血肉吗？在内心痛苦的煎熬争战中，门诺做出了一个彻底颠覆他一生的决定——他翻开并开始深入研读新约圣经。他震惊地发现，圣经根本不支持他多年来照本宣科教导的大多数天主教教条。门诺被迫面临人生的重大抉择：自己的终极权威究竟是罗马教廷，还是上帝的圣道圣经？
+
+第二次冲击彻底粉碎了门诺对天主教神职身份的留恋：1531年3月20日，一位名叫西克·弗里尔克斯·斯奈德（Sicke Freerks Snijder）的普通裁缝，仅仅因为接受了信徒重新施洗，便在吕伐登被当众斩首。尽管门诺此前曾读过一些倡导洗礼年龄当享有自由的学术论著，但他万万没想到，一个目不识丁、虔敬质朴的普通裁缝，竟然坚信圣经所教导的洗礼乃是成年人在公众面前对自己个人信心的宣告！门诺再次彻夜查考新约圣经，得出了无可辩驳的定论：婴儿洗礼在整本圣经中毫无根据！他同时敏锐地察觉到，主流抗罗宗教改家之所以保留婴儿洗礼，根本不是基于上帝的话语，而是出于世俗理性和政治维稳的妥协。在1531年的这个关键节点上，门诺已在三项重大真理上坚信重洗派完全正确：
+1. 唯独圣经（而非教权传统）是信仰与生活的终极权威；
+2. 主的晚餐是对基督代赎大爱的圣洁纪念，绝非将基督肉身重复献祭的弥撒法术；
+3. 洗礼是成年信徒立志忠贞作门徒的顺服记号，绝非让人误以为只要受过点水礼便能自动成为基督徒的仪式。
+
+然而，出于对安逸生活的眷恋，门诺在当时的体制内依然犹豫观望。
+
+第三次猛烈的冲击，终于将门诺彻底从思想的认同推向了断然的行动。当时，一群极端的狂热重洗派农民，在德国西北部的明斯特（Münster）发动了一场企图用暴力推翻统治阶级的狂热武装暴动。门诺堂区内的一些教友（恰恰是受他激进圣经讲道影响最深的那批人），被这种虚妄的革命狂热裹挟而去。当门诺的亲生弟弟在随后的血腥暴乱战火中死于非命时，门诺再也无法保持沉默！从一开始，他就极力反对明斯特派的致命错谬；而此时此刻，门诺撕心裂肺地感到，那些盲从死难之人的鲜血沉重地压在他的灵魂之上。
+
+这一惨剧促使门诺·西蒙斯从1535年4月起，开始在讲台上毫无保留地公开发表他彻底归正的全新圣经信念。到了1536年1月，门诺毅然公开发表声明彻底脱离罗马天主教会，隐退至荷兰东北部的格罗宁根潜心研经著述。
+
+然而，门诺清幽的隐修生活很快被一群重洗派忠心信徒的登门造访所打破。信徒们跪倒在他面前，切切哀求他接受按立，出任重洗派群羊的长老牧者。门诺深知前路凶险与自身软弱，再三推辞，请求给予充分的祈祷与思想时间。经过一场惊心动魄、泪流满面的内心属灵交战，门诺最终降服于主的呼召，于1537年正式接受了奥伯·菲利普斯的按立出任长老牧长（在此前后，门诺接受了信徒洗礼）。
+
+当时的重洗派教会迫切需要一位力挽狂澜的属灵领袖：许多人先前误入明斯特极端狂热歧途而在战乱中惨遭杀戮屠戮；许多人因不堪忍受血腥迫害而四散逃亡、心灰意冷；残存的福音派重洗派忠心信徒分散各处，陷于迷茫、孤立与日渐消亡的绝境之中。
+
+门诺毫无保留地将自己的余生奉献给了这项艰难卓绝的牧养监督使命：他先后负责牧养荷兰（1536–1543）、德意志西北部（1543–1546）以及丹麦管辖下的荷尔斯泰因地区（1546–1561）的众信徒。1536年，门诺迎娶了敬虔贤淑的姊妹格特鲁德（Gertrude）为妻，育有数名子女。然而，身为被重金悬赏追捕的亡命之徒，他们一生四海为家，从未拥有过一处属于自己的安稳居所。神圣罗马帝国皇帝查理五世于1542年下达严厉通缉令，悬赏100枚金币买门诺的人头；在西弗里斯兰，一位曾接受门诺施洗的信徒仅仅因为在家中留宿接待了门诺一晚，便被当局残忍处死；许多由门诺施洗的同工同道也相继惨烈殉道。在无数次千钧一发的险境中，门诺仿佛总是蒙上帝天使的奇妙护佑，奇迹般化险为夷，在迫害者追捕的脚步前始终快出一步。
+
+在颠沛流离的逃亡生涯中，门诺撰写了约二十余部闪烁着属灵智慧的书籍与宣道册子。这些著作如甘霖般滋润了那些迷茫困顿的心灵，成为将散居各地、遭受残酷逼迫的信徒紧紧凝聚在一起的属灵坚石。他的著作深入透彻地阐明了真实悔改、活泼信心、圣灵重生与基督徒圣洁生活的教义。因为是专为普通底层民众而写，语言真挚恳切、生动有力；每当统治当局严厉查禁他的书籍时，他的著作反而在民间流传得更加广泛与热烈！
+
+严格来说，门诺·西蒙斯并非门诺派（Mennonites）的创教始祖；然而，教会历史最终选择以他的名字来称呼这群信徒，是有其极为深厚而充分的缘由的：
+- 他是一位在至暗时刻重新凝聚起溃散群羊、带领信徒坚毅穿越大患难的杰出领袖。
+- 他的高贵品格极大地坚固了受逼迫教会的信心，他用生命活出了“深邃的信念、不动摇的委身、无畏的胆量与平静的信靠”（著名教会历史学家本德尔 Harold S. Bender 语）。
+- 他更是一位卓越的新约圣经神学家。对他而言，圣经是指导信仰与每日生活的至高且唯一的准则；真正的基督教信仰必须将“内在信心”与“外在顺服”紧密结合；每一个基督徒都被神圣呼召，在实际生活中完完全全践行基督的十字架之道。
+
+门诺的全部神学著述，清晰聚焦于两大不可分割的圣经崇高理想：**实际的圣洁（Practical Holiness）**与**自由的信徒教会（Free Church）**。基督的门徒之道必然包含着基督样式的慈爱与非抵抗和平主义（Nonresistance）、以言以行放胆宣扬福音的无畏见证、以及与世俗社会秩序的罪恶实行彻底的属灵决裂。尽管门诺有时因在执行教会惩诫纪律（如绝罚与断绝交往 ban）上的严格立场而受到后世学者的某些争议，但他至死深信：基督的真教会必须是一个蒙神彻底救赎的圣洁共同体，由一群在生活中彰显圣洁的弟兄姊妹同心组成。
+
+1561年1月31日，门诺·西蒙斯在丹麦境内的维斯滕费尔德（Wüstenfelde）安息主怀，平静归天。
+
+在门诺生前所撰写的一切书籍与册子的扉页上，他始终不渝地将使徒保罗在《哥林多前书》3章11节的圣言作为终生的座右铭与灵魂锚点：
+
+> **“因为那已经立好的根基就是耶稣基督，此外没有人能立别的根基。”**
+
+
+---
+
+### English Original Text
+
+# Chapter 1: The Anabaptist Reformation
+
+
+<!-- Page 12 -->
+
+
+### PART ONE
+
+
+### The Family History
+
+
+<!-- Page 13 -->
+
+
+### CHAPTER 1
+
+
+### The Anabaptist Reformation
+
+
+### Early Church
+
+New beginnings create thrills. A wedding. A newborn baby. Above all, a new church plant. In each case, we experience the joy of a new family begun. Acts 1-8 tells the exciting story of the birth of Christ’s family, the church. Jesus’ followers, discouraged and huddled behind locked doors, were transformed. They saw the risen Lord. At Pentecost, they were powerfully anointed by God with the Holy Spirit. The newly established church became courageous, defying opposition and persecution. “Jesus reigns!” they proclaimed. “Jesus is Lord!” they declared. Such assertions, such allegiances clearly challenged the political power structures of Jerusalem and subsequently Rome. If Jesus was Lord, then Caesar was not. Evangelism was met by persecution and even martyrdom, but the blood of the martyrs became the seed of the church.
+
+
+<!-- Page 14 -->
+
+The new reign of God transformed the daily lives of those who joined it. Christians lived as a new family. They worshipped together, ate together, shared belongings with those in need. They studied the Scriptures, excitedly discovering that the Old Testament was being fulfilled with their response to Jesus, the Messiah. They wanted to live new and holy lives, so they accepted the discipline of the church. They discovered that love for God produced a radical love within them, not only for the Christian family but for the others around them. As Christians witnessed to the power of God, the church spread from Jerusalem to all the regions around the Mediterranean basin. Persecutors, who thought they were defending God and country, hunted and killed Christians. Under pressure, some Christians turned away from following Jesus. Many, however, remained firm in their convictions. For every Christian who became discouraged and fell away, many others converted to the One who could give his followers such courage.
+
+
+### Constantine and Catholicism
+
+By 320 C.E., the church had become so popular that the Emperor Constantine converted to Christianity, making the church not only legal but protected. In 367 C.E., Bishop Athanasius issued a list of 27 early Christian writings authorized for reading in churches; they were deemed useful for teaching, discernment and theological
+
+
+<!-- Page 15 -->
+
+construction. These books, together with the books of the Hebrew Bible, would eventually become known as the Christian Bible. This “canon” or measuring rod proved useful for determining the shape of emerging Christian orthodoxy as various and conflicting teachings tried to move Christianity one way or another. During these contested times, church leaders gathered to test, refine and work out statements of faith on theological issues. The Council of Nicea (325 C.E. and 381 C.E.) defined the doctrine of the Trinity (Father, Son and Holy Spirit), and the Council of Chalcedon (451 C.E.) defined the nature of Christ as fully human and fully divine. As the basic form of Christian orthodoxy gradually emerged, these centuries were marked by a mix of divisive arguments and of inspiring social reforms (e.g., creation of hospitals and universities). However, hierarchy and sacramentalism began to creep into church life. The increasing use of force to defend and promote the faith brought about what sixteenth-century reformers, including Mennonites, would later call “the fall of the church.” Despite the church’s commitment to pass along traditions of the Christian faith, creedalism often replaced spiritual vigor. The family of Christ became an institution vying for power and prestige. Abuses of religious power grew increasingly menacing during the Middle Ages. The powerful state church gained enormous wealth by selling indulgences (absolution of sin) and by demanding payment to release loved ones from purgatory. Pilgrimages
+
+
+<!-- Page 16 -->
+
+and crusades to the Holy Land produced strife in the name of the Prince of Peace. The Mass was often distorted from a celebration of Christ’s victory to a ritual aimed at gaining God’s favor. The relics of saints were promoted as conveying supernatural power. Money-hungry, immoral church leaders lived like kings instead of serving the King of Kings. The church was losing her vitality.
+
+
+### Protestant Reformation
+
+Enter Martin Luther. The German priest began studying the New Testament, especially Paul’s letter to the Romans. He became convinced God offered the divine gift of righteousness to believing children of God. By faith, Luther experienced new birth in Christ. In 1517, Luther became deeply troubled over the selling of indulgences. Unable to convince his archbishop to support internal reform, he went public with 95 theses or statements, which were indictments of church abuses. Controversy flared. Luther had kindled a fire that would not go out. Luther began to teach that salvation was a gift from God to be received by faith. He maintained that the Bible, not the Pope, was God’s authority on earth. Purgatory, indulgences, relics, the sacrificial Mass and prayers to the saints were churchly traditions, not biblical truth. In Switzerland, two other reformers reached similar conclusions. In Geneva, John Calvin, a former lawyer,
+
+
+<!-- Page 17 -->
+
+rejected Catholicism and wrote extensively to develop a thorough theological system. Like Luther, Calvin also retained the practice of establishing a state church. In Switzerland, as in Germany and the Catholic lands, the ruling prince determined church identity. In lands of a Lutheran prince, the church christened Lutheran babies. In the Calvinist Swiss cantons, babies were baptized into the Reformed church. The other Swiss reformer was Ulrich Zwingli of Zurich. Known as the “People’s Priest,” Zwingli was flamboyant, energetic and a powerful preacher. He preached exegetically—verse by verse, chapter by chapter. Like his fellow reformers, Zwingli’s study of the Bible led him to recognize the abuses within the Catholic church. With the approval of the city council, he pushed aside one Catholic practice after another. In 1525, six years after he had begun his ministry, Zwingli led a new observance of the Lord’s Supper. Unlike the Catholics who taught that the wafer of the Mass became Christ’s physical body and blood and unlike Luther who held that the bread and wine became the “real presence” of Christ, Zwingli saw the Lord’s Supper as a memorial. He emphasized Jesus’ words, “Do this in memory of me.” Zwingli also taught that the church and its services should be free of “ostentation” (for example, instrumental music). The church service was a place for hearing and teaching the Word of God.
+
+
+<!-- Page 18 -->
+
+Radical Reformation Through his visionary ministry, Zwingli attracted a group of young radicals who wanted even more thoroughgoing reform of church life. Conrad Grebel—a bright but rebellious son of high society whose decadent life had been transformed through new birth in Christ—and his colleague Felix Manz broke with Zwingli on the issue of baptism. Following the counsel of civil authorities, Zwingli had continued the practice of infant baptism. Grebel, insisting that the state had nothing to do with church practice, argued for believers baptism. Under the question of baptism was a deeper issue dividing Zwingli and Grebel: the nature of the church. Was it to be a state church, in which all citizens of a region are also church members, or a believers church, in which only persons who repent of sin, turn to Christ and give total loyalty to Jesus are baptized? When the Zurich Council ordered Grebel and Manz to stop their home Bible studies, the break was complete. On January 21, 1525, this group met to pray about their critical situation. Moved by the Spirit and with great fear, every person present was baptized and pledged to live in separation from the world. Anabaptism—“baptism again”—was born. The Brethren, as they called themselves, witnessed to their faith with joy and great courage. Grebel’s evangelistic preaching brought hundreds of converts to know the Lord.
+
+
+<!-- Page 19 -->
+
+Grebel was frequently imprisoned and his health failed; he died of the plague in the summer of 1526. Manz, too, though in and out of jail, evangelized and baptized new converts. On January 5, 1527, Manz became the first martyr of the Anabaptists. Sentenced to be drowned, Manz sang from the boat on his way to his death. His final words became a hymn calling for faithfulness in persecution. The theology of the early Anabaptists, like that of the New Testament church, was developed “on the run,” and much of what we know about it is from the court records of their enemies. A South German convert, Michael Sattler, however, wrote out the basic theology that the Swiss Anabaptists agreed to at a conference in the Swiss village of Schleitheim, February 24, 1527. The Schleitheim Confession stated: 1. Only believers who give evidence of transformed lives shall be baptized. 2. Those who return to a life of sin and refuse to return to faithful discipleship are to be banned from the church. 3. Believers must be united in faith and believers baptism before taking the Lord’s Supper. 4. Christians must live a holy life separated from the surrounding sinful society. The congregation is served by pastors who preach the Word, preside at the Lord’s Supper and provide pastoral oversight to the members. 5. Christians take the attitude of the suffering Christ and renounce force, violence and warfare.
+
+
+<!-- Page 20 -->
+
+6. Members follow the teachings of Christ in the Sermon on the Mount and refuse to take oaths, even the civil oath, but instead affirm the truth. Sattler lived less than three months after the Schleitheim conference. He was convicted on the grounds of the confessional statement he had helped shape. His tongue was cut off, his body repeatedly pierced with hot tongs and he was burned at the stake. The stories of Sattler and many other Anabaptist men and women who died for their beliefs have been recorded in the Martyrs Mirror. The record includes not only men but also many women who died for their faith. One such mother of faith was Maeyken Wens who died in Antwerp in October of 1573. Wens, the wife of a minister and mother of five, endured months of torture but refused to recant her Anabaptist evangelical faith. Because of her powerful witness, the court insisted that her tongue be fastened with a screw to silence her witness before she went to be burned at the stake. Her oldest son, Adriaen Wens, age 15, brought his youngest brother Hans, age 3, to witness the execution. Adriaen fainted when the torch was put to his mother’s body, but when he came to, he searched the ashes for the tongue screw as a memory. A letter Maeyken wrote on the eve of her death to young Adriaen has been preserved. She wrote: My dear son, I hope now to go before you; follow me as much as you value your soul. I now commend you to the Lord. Love one another all your days; take little Hans on your arm now and
+
+
+<!-- Page 21 -->
+
+then for me. If your father should be taken from you, care for one another. The Lord keep you one and all. My dear children, kiss one another once for me, for remembrance. Adieu, my dear children, adieu.
+
+
+### Menno Simons
+
+The Swiss Anabaptists were fervent missionaries throughout southern Europe. Eventually, their teachings were also carried north to Holland, where brothers Obbe and Dirk Philips became early leaders of the church. They held to believers baptism, nonviolent resistance to evil and a call to a disciplined church. It was another Dutch Anabaptist leader, Menno Simons, however, who gave his name to the Mennonite church. Born in Holland in 1496, Menno became a Catholic priest. He was a typical priest of the time, performing the formal religious rituals but otherwise occupying himself with card playing, drinking and frivolity. Three factors jolted Menno Simons out of his spiritual stupor and into leadership in the Radical Reformation. The first was in 1525, during his first year as priest when Menno began having doubts about the dogma of transubstantiation. As he was celebrating the mass, a doubt struck him: Are the bread and wine actually miraculously changed into the flesh and blood of Christ? In his struggle with this question, Menno did something that would radically change his life. He began a thorough search of
+
+
+<!-- Page 22 -->
+
+the New Testament. He discovered that the Scriptures did not support many of the Catholic understandings he had been teaching. Menno was forced to make a choice: was his authority the church or the Bible? Second, Menno was shocked into reconsidering his commitment to the Catholic priesthood by the news that a simple tailor, Sicke Freerks Snijder, had been beheaded because of his rebaptism on March 20, 1531. Though Menno had read some writings that advocated the principle of liberty regarding the age of baptism, he was stunned to learn that the simple, pious Freerks believed the Scriptures taught baptism as an adult confession of personal faith. Turning again to the New Testament, Menno concluded that infant baptism had no scriptural basis. He also found that the retention of infant baptism by the mainline Protestant reformers was not based on the Word of God but on human reason. At this point, in 1531, Menno was convinced that the Anabaptists were correct regarding three truths: that the Bible, and not church tradition, was the authority in matters of faith; that the Lord’s Supper was a memorial commemorating Christ’s redemptive act, not a sacrifice of his flesh and blood; and that baptism was an act of faithful adult discipleship, not a christening event to make children Christians. Yet he stayed in his priestly office. A third shock moved Menno from thought to action. A group of radical Anabaptist peasants got involved in a violent attempt to overthrow the dominant upper class
+
+
+<!-- Page 23 -->
+
+at Muenster in northwest Germany. Some of the people in Menno’s parish, the very ones most influenced by his radical teaching, were swept away with revolutionary zeal. When his own brother was killed in revolutionary battle, Menno could no longer remain silent. From the first, he had vigorously opposed the Muensterite error. Now Menno felt that their blood was upon his soul. The event moved Menno Simons to preach his new ideas openly, beginning in April 1535. By January of 1536, Menno publicly renounced the Catholic church and withdrew to study and write in Groningen in northeast Holland. Menno’s retreat was broken by a visit from a group of believers begging him to accept ordination as an elder of the Anabaptists. Menno resisted, asking for time to pray and consider the call. After an intense struggle, Menno yielded and in 1537 was ordained an elder by Obbe Philips. No one knows exactly when Menno was rebaptized. The Anabaptists desperately needed a strong leader. Many had joined the Anabaptist revolutionaries and been slaughtered in war. Some had fled persecution, abandoning the church. The remaining evangelical faithful were discouraged, scattered and dwindling. Menno gave himself to the role of overseer of the congregations in Holland (1536-43), northwest Germany (1543-46) and Holstein under Danish rule (1546-61). In 1536, Menno married Gertrude, a godly woman who bore him several children, but he maintained no permanent residence.
+
+
+<!-- Page 24 -->
+
+He travelled to visit the scattered brothers and sisters, preaching, baptizing, evangelizing and building up the church. Menno was a hunted man. A price of 100 gold guilders was placed on his head in 1542. One man he had baptized in West Friesland was executed because he had sheltered Menno. Others baptized by Menno were also martyred. Menno himself seemed to stay a step ahead of his persecutors. During these years, he wrote about two dozen books and pamphlets. His writings helped establish and hold together the scattered, confused, persecuted church. His writings contain substantial doctrinal expositions of repentance, faith, the new birth and holiness. Written for the common person, his books became even more popular when authorities banned them. Menno Simons was not the founder of the Mennonites. The church bears his name, however, for good reasons. He was a church leader who rallied a scattered people and led them through a time of great tribulation. His character encouraged the persecuted church, for he lived with “deep conviction, unshakable devotion, fearless courage and calm trust” (Bender, 29). And Menno was a New Testament theologian. For him, the Bible was the sole authority in matters of faith and life. For Menno, Christianity involved both faith and obedience. The Christian was called to live in the way of Christ. Menno’s writings focus a clear vision of twin biblical ideals: practical holiness and the free church. The
+
+
+<!-- Page 25 -->
+
+way of Christ involves Christ-like love and nonresistance, bold evangelistic witness in word and deed and a complete separation from the sin of the worldly social order. While sometimes criticized for harsh disciplinary judgments (e.g., the ban), Menno was convinced of the necessity of the church as the redeemed community, consisting of brothers and sisters living in holiness. Menno Simons died January 31, 1561, in Wuestenfelde, Denmark. Menno placed 1 Corinthians 3:11 on the title page of all his writings. “For no one can lay any foundation other than the one already laid, which is Jesus Christ.”
+
+
+---
+
+# 第二章：“弟兄会”的诞生
+## *Chapter 2: Birth of "the Brotherhood"*
+
+> **归属分部**：第一部分：家族的根基 (Part One: Roots of the Family)
+
+### 中文译文
+
+# 第 2 章：“弟兄会”的诞生 (Chapter 2: The Birth of 'the Brotherhood')
+
+### 第 2 章：“弟兄会”的诞生 (Birth of “the Brethren”)
+
+#### 迁徙至波兰与普鲁士 (Migration to Poland)
+
+十六世纪中叶，严酷的宗教迫害与迫切的宣教冲动，促使门诺教会的前沿从荷兰低地向东迁移至波兰但泽（Danzig）附近的维斯瓦河三角洲（Vistula Delta）。当地波兰贵族对这些新来者表示热烈欢迎，雇佣他们作为庄园农工。门诺派移民凭借坚韧不拔的勤劳，排干了低洼湿地，修筑起繁盛的农场，并在重重行政限制之下建立起自己的教会。
+
+在长达两百五十年之久的时间里（1540–1790），门诺信徒几乎过着一种在宗教与文化上与世隔绝的生活。他们渐渐形成了一种沉溺于宗教传统守旧、文化保守主义且极度匮乏宣教异象的生活方式，以至于在历史上被外界冠以“地上安静的人”（The Quiet in the Land，德文 Die Stillen im Lande）的称号。
+
+1772年，该地区沦归普鲁士统治。在腓特烈大帝（Frederick the Great）统治下，普鲁士军国主义的高压统治使得持守非抵抗和平主义的门诺信徒处境愈发艰难。由于门诺信徒坚决拒绝缴纳支持国家教会与军费开支的税款，加之普鲁士当局对他们为日益扩大的家庭购置更多农田施加了苛刻的法律限制，迫使门诺信徒不得不再次背井离乡，寻找全新的家园。
+
+#### 俄国门诺殖民地 (Mennonite Colonies in Russia)
+
+许多普鲁士门诺信徒将俄国沙皇叶卡捷琳娜二世（Catherine the Great，叶卡捷琳娜大帝）于1763年颁布的招募外来移民垦殖政策，视为上帝奇妙的神圣预备。当时的沙皇俄国正急需招募勤劳能干的定居者，开垦其在黑海以北新近吞并的辽阔疆土。俄国政府向门诺信徒及其他德意志移民做出了极其丰厚的优待承诺：保障私有土地产权、享有高度社区自治权，并享有永久免服兵役的神圣特权。
+
+从1788年起，门诺信徒开始成批迁入乌克兰大草原，先后开辟建立了霍尔蒂察（Chortitza，老殖民区）和莫洛奇纳（Molotschna，新殖民区）两大讲德语的门诺殖民区。他们建造了一座座错落有致的小村落，拥有肥沃的耕地、庄严的教堂建筑、学校和温馨的宅邸。在乌克兰大荒原上的拓荒初期岁月虽然充满艰辛，但勤勉自律的门诺人最终扎下深根；到了1860年，俄国门诺殖民地人口已蓬勃增长至3万人之众。
+
+然而极其讽刺的是，到了十九世纪中叶，俄国门诺教会竟不可思议地蜕变演变出了十六世纪欧洲国家教会所特有的大多数腐朽弊病：教会会籍成为了享有世俗政治特权（如投票权、土地所有权和合法结婚权）的不可或缺的前提条件。只要青少年完成了例行公事的要理问答课程，教会便大开方便之门为其施洗，而不再严格考察其是否对耶稣基督有真正个人的生命降服与认罪悔改。
+
+教会的年长长老们开始充当世俗殖民当局的行政官僚；许多长老在个人私德上毫无作门徒的圣洁见证；严肃的教会纪律、教牧辅导与肢体间的彼此代求看顾几乎荡然无存。拥有大片土地的豪强富户与一无所有的贫困无地阶层之间的社会鸿沟日益加剧；酗酒放荡、赌博赌资、道德堕落之风在社会上屡见不鲜，却无人过问。主餐与洗礼这两项神圣礼仪，完全沦为了法术般的圣礼主义（Sacramentalism）形式——人们误以为只要按部就班履行了外在仪式，就足以替代日常克己舍己的基督徒敬虔门徒生活。俄国门诺社群深陷于社会、经济、思想与属灵层面的全面僵化与停滞之中，迫切需要一场翻天覆地的属灵大复兴！
+
+#### 敬虔复兴运动 (Revival Movements)
+
+然而，上帝的恩典从未在这片门诺殖民地上断绝。早在1812年至1819年间，微小的祈祷小组便开始在信徒家中自发聚集。这些小组以深入研读圣经以及重温早期重洗派先贤的经典著述而闻名，旨在唤醒并恢复早期重洗派的使徒神学原则。尽管他们遭到殖民地当权长老们的严厉驱逐威胁，但该群体最终仍被当局合法承认为“微小教会”（Kleine Gemeinde，由克拉斯·赖默 Klaas Reimer 领导）。
+
+1822年，一位才华横溢的敬虔教师与属灵领袖托比亚斯·沃斯（Tobias Voth）从普鲁士迁徙至莫洛奇纳的奥尔洛夫（Ohrloff）社区。他热情组织家庭祈祷会，感召并培育了一大批青年才俊，这些人后来大多成为了门诺弟兄会复兴运动的核心领袖骨干。
+
+到了十九世纪四十与五十年代，另一场规模更宏大的灵性复兴在格纳登费尔德村（Gnadenfeld，意为“恩典原野”）破土而出。这场“弟兄”（Brotherhood）运动的成员早先在普鲁士曾深受路德宗敬虔派（Lutheran Pietists）的深切熏陶，后于1835年迁入南乌克兰以逃避普鲁士当局的高压。格纳登费尔德堂会极力倡导全社区及家庭个人的查经祈祷生活，并大力推行戒酒节制运动。早期门诺弟兄会的绝大多数奠基领袖，正是从这间充满活力的堂会中涌现出来的。
+
+十九世纪中叶引爆俄国门诺社群属灵大复兴的最关键催化剂，当属一位路德宗敬虔派牧师——爱德华·维斯特（Eduard Wuest）。维斯特在经历深刻的个人重生悔改体验后，被神塑造成一位极具震撼力的布道奇才。他身材魁梧伟岸、嗓音优美洪亮、极具人格魅力与属灵吸引力，经常受邀作为特约讲员莅临格纳登费尔德教会讲道。维斯特放胆传讲真实悔改与上帝白白舍己恩典的信息，切切呼召每一个听众对“被钉十字架的耶稣基督”做出明确、坚定的个人全人委身。无数早已对死气沉沉的宗教形式主义深恶痛绝的信徒，被他满怀火热的信息深深震撼，毅然走进了与上帝、与彼此之间充满活泼生命力的深邃属灵关系中。
+
+维斯特的跟随者与保守僵化的传统老门诺教会建制之间的公开决裂似乎已在所难免。然而，天不假年，维斯特牧师于1859年英年早逝，年仅42岁，未能亲眼目睹这场复兴整合成一个正式的教会运动。维斯特虽点燃了复兴火种，但他自己的堂会依然允许未真正信主受洗者保留会籍，也并未提倡信徒洗礼。维斯特是一剂强有力的发酵剂，但在他离世之后，这群渴慕更新的复兴群体毅然将目光重新投向他们深厚的重洗派根脉，回归新约圣经对于“真正信徒教会”的神圣定义。
+
+#### 门诺弟兄会的诞生 (Birth of the Mennonite Brethren)
+
+在乌克兰莫洛奇纳门诺殖民地的数个村庄里，大批信徒经历了个人信靠耶稣的真实重生。这些自称为“弟兄”（Brethren）的人，开始定期在家庭中聚集查经祷告。这一个个充满圣灵同在与手足深情的家庭查经班，成为了孕育门诺弟兄会教会的摇篮。
+
+有两起关键事件直接促成了他们与传统母会的彻底分道扬镳：
+
+第一，几批人数不多的弟兄（其中也包含忠心的姊妹们），诚恳请求一位深表同情的门诺老教会长老，希望按照《使徒行传》2章46–47节的初代教会榜样，在信徒家中为他们主持主的晚餐（圣餐）。他们渴望能更加频繁地同守主餐；而更深层的动机，是他们极不情愿在公堂大教堂中，与那些从未公开宣告悔改重生、生活放荡的挂名教友同领圣餐。然而，这位长老断然拒绝了他们的恳求，理由是“私家领受圣餐没有历史先例，容易滋生属灵骄傲，并可能引发教会分裂”。1859年11月，这群弟兄毅然决然决定：在没有官方长老批准的情况下，在信徒家中同擘圣餐！
+
+第二，教会随即召开全教区大会，商讨如何严厉处分这批“桀骜不驯的复兴分子”。起初似乎尚有和平调解挽回的余地；不幸的是，在一次情绪激动的会议上，几位毫无同理心的顽固反对派突然对家庭查经领袖发难，厉声咆哮道：“把他们轰出去！他们并不比别人更高尚！”在一片混乱的怒斥声中，约十位复兴派弟兄痛心疾首地愤然退场离席。最终，格纳登费尔德母会总共失去了约25位骨干信徒，他们全部毅然决然加入了家庭教会的信仰改革行列。
+
+**1860年1月6日（主显节）**，在莫洛奇纳殖民地的伊丽莎白塔尔村（Elisabethtal），一群弟兄齐聚在一户信徒家中，举行了一场具有划时代意义的“弟兄相交大会”（Brotherhood meeting）。这场神圣的聚会，成为了**门诺弟兄会教会（Mennonite Brethren Church）正式诞生的创教大会**！
+
+他们在会上庄重起草了一份长篇纲领性文件——《脱离文书》（Letter of Secession），详尽阐明了他们不得不脱离母会的深层神学考量。这封震撼人心的历史文件，首先庄严重申了他们与先贤门诺·西蒙斯（Menno Simons）纯正神学教导的完全合一，随后尖锐指出了当时母会在信徒洗礼、主的晚餐、教会纪律、教牧领导职分以及圣洁生活等核心领域所泛滥的严重妥协与弊端。归根结底，他们最深沉的忧患，乃是传统教会竟然接纳那些生命毫无被救赎与受纪律约束证据的人参与神圣的礼仪！
+
+当天，**18位坚贞的弟兄**在文件上郑重签署了自己的名字。在随后两周内，又有9位弟兄庄严补签。由于在当时的社会习俗中，每一个弟兄的名字均代表其名下的整个信徒全家（household），因此，门诺弟兄会的首批创会核心会友已达50人以上！
+
+几乎在同一时期，一场性质完全相同、却各自独立自发的属灵大觉醒，也在邻近的霍尔蒂察门诺老殖民区破土而出。在德国浸信会（Baptist）运动的积极影响下，那里的信徒同样经历了深刻的认罪悔改、渴慕查经与灵性更新。霍尔蒂察复兴群体的领袖专程造访了莫洛奇纳的弟兄们，并领受了浸礼。随后，这些重新受浸的领袖于1862年3月11日在霍尔蒂察为首批归信者施浸，这一天被正式公认为**艾恩拉格门诺弟兄会堂（Einlage MB Church）**的诞生纪念日。
+
+#### 殖民地管理阶层的反应 (Reaction of the Mennonite Colony Administration)
+
+门诺传统教会与殖民地行政特权阶层对这份《脱离文书》做出了极其迅速而暴烈的打压反应。教会长老们立即宣布对全体门诺弟兄会信徒施以“绝罚除名”（Excommunication）；殖民地行政公署则颁布严厉禁令，明令禁止该团体的任何私下聚集，违者立即予以拘捕下狱。殖民当局甚至公然以流放苦役、肉刑鞭笞、社会与经济全面孤立封锁、以及剥夺一切公民生存特权相威胁！
+
+所幸的是，奥尔洛夫堂会的约翰·哈德长老（Johann Harder）对这群重生的弟兄抱有极大的宽容与理解，他挺身而出，极力劝阻行政官僚对新兴群体采取更加极端的灭绝手段。杰出的弟兄会青年领袖约翰内斯·克拉森（Johannes Claassen），受全体弟兄全权委托，奔走呼号，竭力向沙皇俄国最高中央当局乃至殖民地行政长官争取合法承认。克拉森不顾个人安危，冒着严寒风雪一次又一次远赴帝国首都圣彼得堡，向沙皇政府据理力争，终于成功赢得了沙皇政府对门诺弟兄会的官方宗教宽容与保护法令，并为部分遭受逼迫的弟兄在库班地区（高加索山麓）争取到了宝贵的新开垦移民定居权。约翰·哈德长老随后也撰写了长文，公开承认门诺弟兄会是完全忠于圣经与重洗派纯正信仰的合法门诺教会。尽管两派之间的紧张敌意未能瞬间消除，但这个新生教会从此在俄国国家法律和殖民地层面上正式赢得了不可撼动的合法承认。
+
+一间全新的教会，在烈火中诞生了！信徒对属灵生命更新、严谨圣洁生活以及在新约圣经根基上全新启航的迫切渴慕，终于化为了现实。然而不可否认的是，这场复兴运动崇高目标的达成，是在尖锐的冲突与惨痛的分裂代价中换取的。当时弟兄们在文书中对母会的一些严厉指控，难免带有些许年轻过火与言辞过激之处。若是当时的弟兄们能拥有更大的恒久忍耐，或许他们会看到在部分老母会堂区中所萌发的灵性复苏正在悄然蔓延；若是各方能倾注更多心力于爱中的合一，或许这场属灵更新本可以在不导致肢体惨烈决裂的前提下实现。
+
+然而，伴随着这间新教会的诞生，一系列极为健康、纯正的圣经核心原则得以被牢牢确立：
+1. **唯独恩典的重生归信**：门诺弟兄会强力传讲每个人必须基于上帝白白的浩瀚恩典经历真正的重生；悔改归正意味着全人从罪恶彻底转向圣洁的上帝，而绝非仅仅靠机械背诵要理问答便能自动达成的世俗惯例。
+2. **忠心作门徒的信徒全身浸礼**：洗礼不再是挂名礼仪，而是向世界明确宣告向旧生命死去、在基督荣耀身体中复活、并一生立志背起十字架忠诚作门徒的顺服记号（门诺弟兄会正式确立了全身浸入水中的信徒浸礼传统）。
+3. **肢体相交的主餐与洗脚礼**：主餐以更为频繁、庄严的方式举行，并恢复了彼此谦卑服事的洗脚礼（Footwashing）。
+4. **火热的宣教与福音使命**：这间新生的教会清晰领受了至高的神圣呼召——放胆在普世宣扬基督的福音，以牺牲舍己的爱心行动，向远方近处的人民展开大能的宣教工场拓展！
+
+
+---
+
+### English Original Text
+
+# Chapter 2: The Birth of 'the Brotherhood'
+
+
+<!-- Page 26 -->
+
+
+### CHAPTER 2
+
+
+### Birth of “the Brethren”
+
+
+### Migration to Poland
+
+In the mid-1500s, persecution and evangelistic impulses pushed the frontier of the Mennonite church from Holland to the Vistula Delta of Poland near Danzig. Polish nobles welcomed the newcomers to their estates as farm laborers. The Mennonite immigrants drained swampy lowlands, built farms and, despite restrictions, established churches. For 250 years (1540-1790), Mennonites lived in religious and cultural isolation. They developed a lifestyle of religious tradition, cultural conservatism and lack of missionary vision that caused them to be known as “The Quiet in the Land.” The area came under Prussian rule in 1772. The pressure of Prussian militarism under Frederick the Great made it increasingly difficult for the nonresistant Mennonites. Mennonites’ refusal to pay taxes to support the state church and the military establishment, together with government restrictions on the purchase of more land
+
+
+<!-- Page 27 -->
+
+for their growing families, forced them to look for a new home.
+
+
+### Mennonite Colonies in Russia
+
+Many Prussian Mennonites saw the land settlement policy announced in 1763 by Catherine the Great of Russia as providential. Russia was looking for industrious settlers for new territories acquired north of the Black Sea. Mennonites and other German immigrants were promised freedom of ownership, self-government and nonparticipation in the military. Starting in 1788, the Mennonites established German-speaking colonies of small villages with farmlands, church buildings, schools and homes. The early years on the Ukrainian steppes were difficult, but the industrious Mennonites eventually established themselves and by 1860 were a population of 30,000. Ironically, by the mid-1800s, the Russian Mennonite church had taken on many of the characteristics of the European state church of the 1500s. Church membership was a prerequisite for civic privileges such as voting, land ownership and marriage. To those who completed a catechism class, the church extended baptism without insisting on a personal commitment to Jesus Christ. Church elders began to act as civic authorities. Many elders showed no evidence of discipleship themselves. Church discipline, pastoral counselling and mutual
+
+
+<!-- Page 28 -->
+
+care were often neglected. Divisions between wealthy members and the impoverished landless class deepened. Public drunkenness, gambling and moral decadence went undisciplined. The ordinances of the Lord’s Supper and baptism took on a sacramental character, a sense that the rite itself replaced a need for disciplined Christian living. The Russian Mennonites faced social, economic, intellectual and spiritual stagnation. They were in need of renewal.
+
+
+### Revival Movements
+
+The Mennonite colonies had not been without experiences of renewal, however. Between 1812 and 1819, small prayer circles began meeting in private homes. The groups became known for their study of the Bible and the writings of the early Anabaptists. These reformers sought a reawakening of early Anabaptist principles. Although threatened with exclusion by the ruling elders, this group was recognized by the authorities as the Kleine Gemeinde (Little Church). In 1822, a gifted teacher and spiritual leader, Tobias Voth, migrated from Prussia to the Ohrloff community. He organized prayer meetings and inspired students who later became leaders within the Mennonite Brethren renewal. In the 1840s and 1850s, another revival emerged, centered in the village of Gnadenfeld. The members of this “Brotherhood” movement had been influenced by
+
+
+<!-- Page 29 -->
+
+Lutheran Pietists in Prussia and had migrated to the southern Ukraine in 1835 to escape pressure from the Prussian government. The Gnadenfeld church promoted community and private Bible study and prayer, as well as the temperance movement. Most of the early Mennonite Brethren came out of this congregation. The greatest catalyst for renewal among Russian Mennonites in the mid-19th century was a Lutheran Pietist pastor, Eduard Wuest. After a personal conversion experience, he developed into a powerful preacher. Gifted with a commanding physique, melodious voice and attractive personality, Wuest frequently was a guest speaker in the Gnadenfeld church. He preached a message of true repentance and God’s free grace and called for personal commitment to “Jesus Christ, the Crucified.” Many who were weary of lifeless formalism were drawn by his message into a vibrant spiritual relationship with God and each other. A clash between Wuest’s followers and the established Mennonite church seemed inevitable, but Wuest died in 1859 at the age of 42 before the renewal could organize into a formal movement. Wuest had prompted renewal, but his own congregation allowed unbelievers to retain membership; he did not promote believers baptism. Wuest was an important catalyst, but with his death the renewal movement turned to its Anabaptist roots for a New Testament concept of church.
+
+
+<!-- Page 30 -->
+
+Birth of the Mennonite Brethren Many people had been converted to personal faith in Jesus in several villages of the Molotschna Mennonite colony in the Ukraine. The “brethren,” as they called themselves, met regularly in homes for Bible study and prayer. These home Bible studies were the cradle for the birth of the Mennonite Brethren church. Two developments brought about a break with the old church. First, several small groups of the brethren (which also included women or “sisters”) requested a sympathetic elder of the Mennonite church to serve them the Lord’s Supper in their own home, in accordance with Acts 2:46- 47. They wanted to celebrate communion more frequently, but their request was also a reaction to taking communion in church with people they believed had made no open profession of faith. The elder refused their request on the basis that private communion was without historical precedent, would foster spiritual pride and could cause disunity in the church. In November of 1859, the brethren decided to take the Lord’s Supper in a home without the elders’ sanction. Second, church meetings were held to decide how to discipline the renegade revivalists. It appeared that reconciliation would be possible. Unfortunately, a few unsympathetic opponents attacked the leaders of the house Bible study movement at a meeting, shouting, “Out with them; they are not better than the rest!” More shouts
+
+
+<!-- Page 31 -->
+
+followed. About 10 revivalist “brothers” walked out of the church meeting. In all, the Gnadenfeld church lost about 25 members to the house church reform movement. On Epiphany, January 6, 1860, a group of brethren met in a home for a “brotherhood” meeting. This gathering proved to be the charter meeting of the Mennonite Brethren church. They formulated a letter of secession that explained their differences with the mother church. The letter affirmed their agreement with the teaching of Menno Simons and addressed abuses they saw in baptism, the Lord’s Supper, church discipline, pastoral leadership and lifestyle. Essentially, they were concerned that the church accepted members and leaders who gave no evidence of a redeemed and disciplined life as participants in the ordinances. Eighteen men signed the document. Within two weeks, an additional nine men signed the letter of secession. Since each signature stood for a household, the charter membership of the Mennonite Brethren church consisted of more than 50 people. A similar, but independent, spiritual awakening spontaneously emerged in the neighboring Chortitza Mennonite colony. It was characterized by conversions, Bible studies and renewal under Baptist influence. A visit of leaders from the Chortitza group to the brethren in Molotschna resulted in a baptismal service. These rebaptized leaders subsequently baptized others in Chortitza on March 11, 1862, the day recognized as the founding of the Einlage MB Church.
+
+
+<!-- Page 32 -->
+
+Reaction of the Mennonite Colony Administration The Mennonite church and colony hierarchy reacted swiftly to the letter of secession. The church elders excommunicated the Mennonite Brethren and the colony administrative office prohibited further gatherings of the group, with violators subject to arrest and imprisonment. The colony also threatened exile, corporal punishment, social and economic ostracism and the loss of civic privileges. Fortunately for the brethren, elder Johann Harder of the Ohrloff congregation was more tolerant toward them, preventing administrative authorities from taking drastic action against the new group. Johannes Claassen acted on behalf of the newly organized brethren group to win official sanction from the Russian authorities and, subsequently, the colony administrators. Claassen made repeated trips to St. Petersburg to obtain government protection and to secure permission for resettlement for some of the group to the Kuban area in the Caucasus. Elder Johann Harder wrote a letter recognizing the Mennonite Brethren as a faithful Anabaptist Mennonite church. Although hostility between the groups was not eliminated by this act, the new group was on its way to recognition and acceptance by both colonial and national authorities. A new church had been born. The desire for spiritual renewal, stricter church discipline and a fresh start had been realized. Unfortunately, the goals of the new
+
+
+<!-- Page 33 -->
+
+movement were won at the cost of conflict and division. Some of the accusations against the mother church were too severe. Had the brethren been more patient, they would have seen that the revival which had begun in some of the congregations continued. Perhaps greater concern for unity would have allowed them to achieve their goals for renewal without a division. Healthy emphases did, however, emerge with the birth of the new church. Mennonite Brethren taught the need for conversion based on the grace of God. Conversion involved repentance—a turning from sin to God. It was not simply a natural process involving learning the catechism. Baptism came to symbolize death to the old life and resurrection into the body of Christ and a lifestyle of discipleship. Communion, which included footwashing, was held more frequently. The church sensed the call to boldly proclaim the good news in evangelism, loving action and mission.
+
+
+---
+
+# 第三章：门诺弟兄会的成长
+## *Chapter 3: The MB Church Grows*
+
+> **归属分部**：第一部分：家族的根基 (Part One: Roots of the Family)
+
+### 中文译文
+
+# 第 3 章：门诺弟兄会的成长 (Chapter 3: The MB Church Grows)
+
+### 第 3 章：门诺弟兄会的成长 (The MB Church Grows)
+
+#### 初期的挑战（1860–1865） (Early Challenges)
+
+著名教会历史学家约翰·A·托伊斯（John A. Toews）在其权威巨著《门诺弟兄会历史》（*A History of the Mennonite Brethren Church*）中精辟指出：“门诺弟兄会的初期历史，不仅充满着其与周围母会建制和世俗政权关系的剧烈争端与冲突，更伴随着其内部成员之间极具张力的思想震荡与阵痛波折。”
+
+在建立最初的数年间，门诺弟兄会经历了一场极其艰难的探索过程，力求在领袖职分权柄与堂会会众治理之间找到合乎圣经的平衡点。新兴群体面临的首要争议之一便是洗礼的方式。在深入研读当时关于该主题的神学册子、全面考察新约圣经原文字义以及重温门诺·西蒙斯的著述之后，教会最终确立了合乎新约榜样的全身“浸礼”（Immersion）乃是圣经唯一的纯正洗礼形式。随后，教会进一步做出规定：唯有接受过全身浸礼的信徒方可领受主餐圣餐；然而这一排他性决定在当时令不少资深创会先贤感到深切忧虑与遗憾。令人深思的是，整整经历了一百年之后，门诺弟兄会才在总会层面重新修订了这一严格立场，正式接纳那些在诚心认罪归信基础上接受过其他洗礼方式（如点水礼或浇水礼）的信徒加入会籍。
+
+对强烈个人宗教体验的过分强调，很快在教会内部引发了另一场更为严重的危机。起初的聚会崇拜打破了传统繁文缛节，采用底层日常通用的低地德语方言（Low German），充满着非正式的自发性。崇拜在传统庄严圣诗中启应开始与结束，但聚会的核心过程主要由欢快现代的短歌、此起彼伏的长时间出声祷告、以及穿插着会众随时插话附和的简短经文劝勉所充斥。信徒个人属灵情感的宣泄日益走向狂热失控。
+
+少数极端领袖严重歪曲误解了爱德华·维斯特关于“喜乐称义”（Joyous Justification）的纯正福音教导，开始以极其失控放纵的情感主义来彰显他们所谓的“新自由与大喜乐”。这场被称为“欢愉派”（德文 *Fröhliche Richtung*，即狂欢狂热运动）的偏差，以极度狂乱的喧嚣亢奋（如在敬拜中敲击铜锣鼓点、拍手跺脚）、虚假的属灵自由（如弟兄姊妹间不分场合亲吻问安，进而诱发了严重的道德越轨与淫乱罪愆）、以及独裁专制的属灵暴政（如对任何敢于质疑抵制这种狂热偏差的清醒信徒，专断滥用“绝罚除名 ban”施加残酷打击）为鲜明特征。
+
+所幸的是，在圣灵的保守与敬虔领袖的力挽狂澜下，**1865年6月的“六月改革总会”**彻底扭转并清除了这一极端情感狂热主义。总会以极大的谦卑与勇气，公开恢复了此前被无辜除名的忠心教牧同工的圣职，对敬拜中包括狂乱起舞在内的一切放诞行为进行了严厉的神圣斥责。总会庄严宣告：主里的真正喜乐，必须以合乎圣徒体统的庄严、端庄且有节制的方式彰显！
+
+历史学家托伊斯精辟总结了门诺弟兄会早期在危机淬炼中奠定的六大核心属灵特质，这些原则不仅在当时拯救了教会，在今天依然是我们不可动摇的指路明灯：
+1. **系统性圣经教导的绝对优先地位**：弃绝死板僵化的形式主义必然带来发自内心的喜乐宣泄，但这喜乐必须始终受制于严谨、全面且扎实的圣经真道栽培。
+2. **敏锐的属灵分辨力胜过肤浅的情感冲动**：宗教狂热往往伴随着强烈的情感宣泄而缺乏深度的理性真理考量，因此迫切需要圣灵引导下的属灵辨别力。情感与个人体验只能是仆人，绝不能作主人；唯有源于深入查经的谦卑顺服，才是我们终生的可靠向导。
+3. **将领袖权柄托付给德行纯全、灵命平衡的仆人**：教会领袖必须具备毋庸置疑的道德操守与稳健成熟的属灵身量。
+4. **坚决摒弃专制独裁，坚持全会众民主参与**：教会固然需要刚强睿智的领袖，但任何形式的个人独裁与属灵霸权必须被坚决抵制。唯有全体会众的充分交通、共同辨识与积极参与，才能筑就稳健坚固的教会体制。
+5. **强调严谨的基督徒圣洁伦理**：割裂了圣洁追求的所谓“喜乐自由”，必然沦为放纵肉体的虚假自由；信仰与每日生活的实践必须保持全然的和谐平衡。
+6. **建立满有属灵深度的庄严敬拜**：不冷不热的世俗化崇拜往往为极端的情感狂乱大开方便之门；真正的激进属灵更新，必然要求与之相称的庄严、圣洁且心灵诚实的敬拜范式。
+
+#### 首次向北美的移民潮 (The First Migration to North America)
+
+俄国门诺弟兄会随后进入了迅猛增长的黄金时期。到了1872年，即建会仅12年后，门诺弟兄会的受洗会友人数已达约600人。各地堂会代表齐聚一堂，召开了历史性的第一届门诺弟兄会全国家庭年会，不仅同心领受圣灵更新的培灵信息，更制定了雄心勃勃的福音拓展与跨区域植堂宣教大计。大会正式选举成立了宣教监督委员会，并全职差派了五位巡回布道家奔赴各地宣讲天国福音。
+
+从1874年至1880年间，受俄国沙皇政府推行“全员强制服兵役法案”（企图取消门诺信徒永久免役特权）以及经济土地瓶颈的强烈驱使，约有**18,000名门诺信徒**毅然决然掀起了向北美大陆的大移民浪潮。在这浩浩荡荡的移民大军中，包含了大批门诺弟兄会信徒，以及由雅各布·A·维贝长老（Jacob A. Wiebe）于1867年创立的克里米亚门诺弟兄会（Krimmer MB Church）的35户敬虔家庭。
+
+初来乍到的新移民在北美大草原上面临着难以想象的拓荒艰辛：居住在极其简陋阴暗的草皮泥屋（sod houses）中、遭受遮天蔽日的蝗灾摧残、农作物严重缺乏销售市场、以及子女教育资源的极度匮乏。据托伊斯记载，在北美拓荒早年（1874–1879），教会生活同样充斥着神学分歧与内部张力：来自俄国不同殖民背景的移民群体，在浸礼的具体细节（如向前倾三次或向后浸一次）、与浸信会的关系、以及与其他门诺老教派的相处原则上各持己见。
+
+1878年，门诺弟兄会领袖在内布拉斯加州亨德森（Henderson）举行了具有里程碑意义的**首届全美州际教牧领袖峰会**。该次历史性聚会的核心议题，乃是将原本四散各州的门诺弟兄会堂会紧密联合为一个统一的宣教共同体！对失丧灵魂的福音迫切感与普世宣教异象，从此成为了横跨百余年、将全美门诺弟兄会紧紧凝聚在一起的最强大纽带。当时困扰他们的一些次要神学争论（如姊妹亲吻问安礼、女性蒙头、纪律除名尺度等），在今天看来已不再是核心障碍，但在当时却在一定程度上阻碍了他们与其他门诺宗派的全面合并。
+
+到了二十世纪之交，门诺弟兄会的蓬勃堂会已牢牢扎根于堪萨斯州、内布拉斯加州、北达科他州、南达科他州、俄克拉荷马州、科罗拉多州，以及加拿大马尼托巴省和萨斯喀彻温省；不久之后，福音的帐幕进一步大举拓展至加利福尼亚州、蒙大拿州、德克萨斯州、俄勒冈州和华盛顿州！
+
+#### 俄国革命与后续的移民 (The Russian Revolution and Later Migrations)
+
+在北美拓荒的同时，1875年之后留守俄国本土的门诺弟兄会，也开始主动寻求与更广泛的传统门诺老教会冰释前嫌、携手同工。双方定期举行联合神学协商会议，就洗礼与圣餐等核心议题达成深刻共识。在1884至1885年间，俄国门诺殖民地迎来了规模空前的灵性大复兴，成千上万的人悔改归主、受洗加入教会，门诺弟兄会的会友人数呈现爆炸式增长。一大批极具学识与威望的杰出领袖脱颖而出，尤其是在教师知识分子阶层中涌现了大批优秀圣徒。
+
+在第一次世界大战爆发前的整整三十年（1885–1914），被教会史学家公认为俄国门诺弟兄会的**“黄金时代”**。门诺弟兄会的领袖在整个泛门诺社群中担任了举足轻重的领导职务；门诺殖民地向全俄境内广泛辐射开辟了诸多新兴定居点，在这些新村落中门诺弟兄会占有极高的人口比例。高等教育的飞跃普及、现代农业经济的空前繁荣、作为兵役替代役的“林业服役”（Forestry Service, 俄文 *Forstei*）体制的稳固确立、以及福音书刊出版物的大规模印刷分发，共同构成了这一黄金时代的辉煌画卷。
+
+从建会伊始，俄国门诺弟兄会便将落实主耶稣的大使命视为教会存在的根本命脉。无论是流放西伯利亚的威胁，还是投掷下狱的危险，都无法阻挡信徒向身边的斯拉夫俄国邻舍放胆见证基督！布道家们跋山涉水散发福音单张与圣经译本。由于沙皇法律严禁诱使东正教徒改教，门诺弟兄会智慧地指导那些新归信的俄罗斯族信徒加入当地的浸信会堂会。在海外宣教方面，教会从起初的单纯经济奉献支持西方差会，迅速跃升为亲自差派宣教士建立海外工场——门诺弟兄会的首个独立海外宣教工场在遥远的印度大地上结出了累累硕果！
+
+#### 动荡年代、世界大战与全球大迁徙 (Revolution, World Wars and Migrations)
+
+然而，俄国门诺社群繁花似锦的黄金盛世，随着1914年第一次世界大战的爆发以及1917年俄国十月革命的烈焰，瞬间化为了灰烬与泡影。由于文化、语言和血统上被敌对视作德意志敌国的同盟，门诺信徒遭受了俄国社会的残酷猜忌与仇视打压。
+
+当德意志帝国军队一度控制乌克兰全境时，面对凶残暴徒的洗劫，俄国门诺信徒在持守“非抵抗原则”上发生了痛苦的分裂——部分年轻人违背了历代信徒的和平传统，擅自组织了武装自卫民兵（德文 *Selbstschutz*）。这场惨痛的悲剧后来被公认不仅在军事战术上是一场自取灭亡的灾难性溃败，更在神学上严重践踏背叛了重洗派数百年纯正的圣经非抵抗和平主义信仰。
+
+随着德军撤退，随之而来的俄国内战与无政府主义残暴土匪武装（如臭名昭著的马赫诺匪帮）的血腥洗劫，使门诺殖民地沦为了人间地狱。从1920年至1922年，空前绝后的极度大饥荒、斑疹伤寒等致命瘟疫席卷乌克兰荒原，白骨露野。危急关头，大洋彼岸的北美与欧洲门诺信徒紧急动员，正式组建了**门诺中央委员会（Mennonite Central Committee, MCC）**！1922年3月，MCC的第一批满载着救命面粉与药品的救济列车终于奇迹般冲破重重关卡抵达乌克兰灾区，奉基督的慈爱圣名挽救了成千上万在死亡线上挣扎的饥民生命！
+
+令人肃然起敬的是，在战火纷飞与社会失序的至暗绝境中，俄国门诺信徒反而经历了全境普遍的灵性大复兴，以前所未有的热忱向身旁的俄罗斯邻舍敞开宣教怀抱。由于苏俄早期政策一度允许对东正教教徒公开传教，加之布尔什维克政权明令禁止传道人继续在公立学校任教，反而促使许多具备深厚学养的门诺弟兄会教师彻底全职献身于巡回布道。1924至1925年的圣灵大复兴，不仅彻底点燃了全境的福音烈火，更为那些即将逃离俄国的信徒注入了坚不可摧的属灵生命力。
+
+在1923年至1929年间，约有**20,000名门诺难民**历尽千辛万苦成功逃离苏联大清洗的前夜，移民定居加拿大；其中约有四分之一是坚贞的门诺弟兄会信徒。
+
+而那些未能及时逃离的门诺弟兄姊妹，则不得不直面斯大林无神论专制极权的残酷迫害浩劫：所有的礼拜堂被强行充公查封没收，宗教自由被彻底践踏剥夺；无数敬虔的牧师、长老和骨干领袖被成批逮捕，惨遭枪决或流放到冰天雪地的西伯利亚古拉格集中营在繁重劳役中悲壮殉道；那些因信仰良心拒绝服兵役的青年信徒，更是在枪口下慷慨赴死，用鲜血见证了对基督和平福音的至死忠诚。
+
+从1930年至1940年，有组织的残酷反宗教迫害进一步常态化与制度化。第二次世界大战期间（1941–1943），德军对乌克兰的暂时占领为废墟中的教会带来了短暂的宗教自由喘息；当德军节节败退撤退时，约有35,000名门诺信徒冒着漫天炮火跟随大军西逃。最终，约有12,000名历经九死一生的幸存者成功抵达西德占领区，随后大批移居加拿大，并深入南美洲的巴拉圭查科荒原和巴西开辟了崭新的家园。
+
+历经烈火的淬炼与全球大迁徙的洗礼，门诺弟兄会这棵从重洗派古老树干上抽出的幼苗，终于超越了单一的地域与疆界，在北美、南美乃至普世各处深深扎根，成长为一棵荫庇万民的参天大树！
+
+
+---
+
+### English Original Text
+
+# Chapter 3: The MB Church Grows
+
+
+<!-- Page 34 -->
+
+
+### PART TWO
+
+
+### Family Convictions
+
+
+<!-- Page 35 -->
+
+
+### CHAPTER 3
+
+
+### The MB Church Grows
+
+
+### Early Challenges (1860-65)
+
+“The early history of the MB Church is not only characterized by controversy and conflict in its relations to church and state, but also by internal tension and turbulence among its members,” writes John A. Toews in A History of the Mennonite Brethren Church. The Mennonite Brethren church struggled in its early years to find a balanced approach to leadership and congregational organization. One of the first issues to confront the new group was the mode of baptism. After a study of contemporary pamphlets on the subject, the Scriptures and the writings of Menno Simons, the church concluded that baptism by immersion was the correct biblical form. Eventually, participation in communion was limited to immersed members only, to the disappointment of a number of the early leaders. One hundred years passed before Mennonite Brethren reversed this stance and allowed membership
+
+
+<!-- Page 36 -->
+
+to those who had been baptized upon confession of faith, regardless of the mode of baptism. The emphasis on strong personal religious experience led to another controversy. Worship was characterized by informal spontaneity with the use of the vernacular Low German dialect. Traditional hymns introduced and closed the service, but the body of the worship time included lively contemporary songs, long audible prayers and brief biblical exhortations interrupted by comments from the congregation. The expression of personal spiritual experience became increasingly enthusiastic. Some leaders misinterpreted Eduard Wuest’s “joyous justification” doctrine and began expressing their new freedom and joy in an excessively emotional manner. This Froehliche Richtung (the joyous or exuberant movement) was characterized by intense enthusiasm (including noisy clapping and drum playing), false freedom (including brothers and sisters greeting each other with kissing, which led to moral sin) and spiritual dictatorship (including arbitrary use of the “ban” against those who disagreed with the excesses). The “June Reform” of 1865 reversed this excessive emotionalism. Excommunicated ministers were reinstated and wild manifestations in worship, including dancing, were condemned. The joy of the Lord was to be expressed in a “becoming” manner. Historian Toews identifies six distinctive Mennonite Brethren emphases true to the early Mennonite Brethren
+
+
+<!-- Page 37 -->
+
+church as well as today (66-68). (1) The need for systematic Bible teaching is primary. Rejection of lifeless formalism leads to joyous expression, but this must be directed by thorough biblical instruction. (2) Because religious ferment is subject to powerful emotional expression with shallow intellectual consideration, there is a keen need for spiritual discernment. Emotion and personal experience are servants, not masters; obedience born of biblical study is to be our guide. (3) Leadership is to be entrusted to members with integrity and spiritual balance. (4) While strong and wise leaders are needed, dictatorship is suspect and to be rejected. Congregational participation and action are necessary for a strong church polity. (5) A strong ethical emphasis is needed. Happiness divorced from holiness leads to false freedom. Faith and practice must be kept in proper balance. (6) Meaningful church worship is essential. Lukewarm worship opens the door to hyper-emotional expressions. Radical renewal demands appropriate worship forms.
+
+
+### The First Migration to North America
+
+The Mennonite Brethren church in Russia grew rapidly. By 1872, 12 years after its founding, the Mennonite Brethren church numbered about 600 members. Representatives met for the first Mennonite Brethren church family gathering, a time of inspirational meetings and planning for evangelistic church extension.
+
+
+<!-- Page 38 -->
+
+A committee was elected to supervise the work of evangelism, and five men were appointed to itinerant evangelistic ministry. From 1874 to 1880, some 18,000 Mennonites migrated from Russia to North America, prompted by the Russian government’s plans to introduce universal military service and economic factors. Among the immigrants were many Mennonite Brethren and a group of 35 families from the Krimmer (Crimea) MB Church founded under Elder Jacob A. Wiebe in 1867. The new settlers experienced all the hardships of pioneer life, including primitive sod houses, grasshopper plagues, lack of markets for their produce and limited educational opportunities. According to Toews, church life in the early years (1874-79) in North America was also characterized by religious ferment and inner tensions. Settlers from different Russian colonies disagreed about issues such as mode of baptism and relations with Baptists and other groups of Mennonites. In 1878, the first interstate meeting of Mennonite Brethren leaders was held near Henderson, Nebraska, where the primary issue was uniting Mennonite Brethren congregations for mission purposes. An interest in evangelism and mission has continued to bind Mennonite Brethren congregations together through the years. The other early issues seem less significant today, including the “sister kiss,” head coverings for women, excommunication, mode of baptism and relations with
+
+
+<!-- Page 39 -->
+
+Baptists, but these worked against achieving a merger with other Mennonite groups. By the turn of the century, Mennonite Brethren congregations had been established in Kansas, Nebraska, North and South Dakota, Oklahoma, Colorado, Manitoba and Saskatchewan and, soon afterward, in California, Montana, Texas, Oregon and Washington.
+
+
+### The Russian Revolution and Later Migrations
+
+After 1875, the Mennonite Brethren who remained in Russia began to work in concert with the larger Mennonite church. Joint conferences were held to discuss issues like baptism and the Lord’s Supper. In 1884-85, large-scale revivals resulted in conversions, baptisms and growth in Mennonite Brethren church membership. Strong Mennonite Brethren leaders emerged, especially from the ranks of the teaching profession. The three decades preceding the First World War have been described as the “golden age” of the Russian Mennonite Brethren church. Mennonite Brethren assumed positions of leadership within the larger Mennonite community. Mennonite colonies expanded into new settlements in many parts of Russia; these contained a high concentration of Mennonite Brethren. Educational growth, economic prosperity, forestry service as an alternative to military conscription and the production
+
+
+<!-- Page 40 -->
+
+and distribution of Christian literature characterized these years. From its inception, the Russian Mennonite Brethren church actively pursued evangelism and missions. Fulfilling the great commission was understood as fundamental to the church. Risk of imprisonment or exile did not keep people from witnessing to Russian neighbors. Evangelists distributed Bibles and witnessed to the good news. Because of a law prohibiting proselytizing, ethnic Russian converts were advised to join the Baptist church. Participation in foreign missions began with financial support of mission societies and quickly moved beyond it, with the first Mennonite Brethren mission field established in India.
+
+
+### Revolution, World Wars and Migrations
+
+The prosperous golden age of the Russian Mennonite colonies was shattered by the events of World War 1 (1914- 18) and the Russian Revolution (1917-18). Because their culture identified them with the German military foe, Mennonites experienced hostile treatment from the Russians. When German troops gained control of Ukraine for a time, the Mennonites divided on the issue of nonresistance, with some forming armed units of self- defense. Later, it was recognized that this was not only a tactical blunder but a violation of their historic biblical nonresistance. The Mennonites of Russia were caught
+
+
+<!-- Page 41 -->
+
+in the events of the civil war that followed, as well as the terrors of bandit attacks. They experienced the ravages of malnutrition, disease epidemics and famine from 1920 to 1922. Relief assistance by European and American Mennonites, who organized to form the Mennonite Central Committee (MCC), finally arrived in March 1922, saving thousands from starvation. During the time of war and anarchy, Russian Mennonites experienced widespread spiritual revival and engaged in unprecedented missionary outreach to their Russian neighbors. Communist policies allowed for open proselytizing among Russian Orthodox church members for a time. When the Communist government barred ministers from teaching in public schools, many Mennonite Brethren teachers were freed for evangelistic ministry. The revivals of 1924-25 not only fueled the fires of evangelism, but also enriched the Christian experience of many who fled Russia for Canada. Some 20,000 Mennonites immigrated to Canada between 1923 and 1929, about a quarter of them Mennonite Brethren. The Mennonites who were unable to escape faced the atheistic policies of the Stalinist regime. Church property was liquidated and religious freedom denied. Ministers were exiled to Siberian concentration camps or killed. Conscientious objectors to military service faced martyrdom.
+
+
+<!-- Page 42 -->
+
+From 1930 to 1940, anti-religious oppression was even more firmly institutionalized. German occupation of Ukraine during World War 2 (1941-43) offered a brief interlude of relative religious freedom. When the German armies retreated, 35,000 Mennonites tried to escape with them. Some 12,000 eventually reached Western zones in Germany and migrated to Canada and South America.
+
+
+---
+
+# 第四章：圣道之民
+## *Chapter 4: People of the Word*
+
+> **归属分部**：第二部分：家族的特质 (Part Two: Characteristics of the Family)
+
+### 中文译文
+
+# 第 4 章：圣道之民 (Chapter 4: People of the Word)
+
+### 第二部分：家族特质与信念 (PART TWO: Family Distinctives)
+
+---
+
+### 第 4 章：圣道之民 (People of the Word / People of the Book)
+
+历代以来，门诺弟兄会始终自勉为“圣道之民”（People of the Book）。正是对圣经夜以继日的潜心研读，点燃了孕育门诺弟兄会教会诞生的属灵大复兴之火。
+
+当我们凝眸回望门诺弟兄会建会初期的岁月，几幅令人动容的生动画卷便跃然眼前：
+
+首先，我们看见在十九世纪中叶南乌克兰的门诺村庄中，一小群一小群渴慕真道的信徒在民宅中聚集，同心查考圣经与恒切祈祷。大家围绕着所选读的圣经经文，展开热烈而深沉的属灵对话与思想激荡。学校导师托比亚斯·沃斯（Tobias Voth）创办的基督教文献社所发行的属灵读物，为信徒的讨论注入了丰厚的养分；推动他们深入探索的议题涵盖了福音布道、普世宣教、以及个人与基督日渐亲密的生命契合。重洗派先贤门诺·西蒙斯（Menno Simons）的经典著述成为了他们学习的重要导师。这种查经虽然具有极其鲜明的理性求索深度，但它绝非冰冷抽象的经院学术探讨，而是直接催生出椎心泣血的认罪悔改、生命重生与灵性大觉醒！
+
+接着，我们看见两位年轻的门诺弟兄会传道人在农田劳作间歇于田埂上相遇。当时，一个极其棘手且充满争议的神学实践难题正困扰着羽翼未丰的新生教会。他们该如何寻求上帝明确的指引？只见这两位传道人倚靠在木质栅栏旁，伸手探入那鼓鼓囊囊的粗布大衣口袋，掏出随身携带、已被翻得卷边磨损的新约圣经。他们的手腕上虽然没有佩戴现代流行的“若是耶稣会怎么做”（WWJD）的时尚手环，但他们心中毫不迟疑地确信：任何现实棘手问题的合宜解决方案，必能在眼前这本至圣真道中寻得！主耶稣借着祂在世上的崇高一生以及在“登山宝训”中所颁布的神圣诫命，正是他们寻求前路方向的唯一神圣起点。
+
+随后，我们看见了规模宏大的查经研讨大会（Bible Conferences）。在这里，满有圣灵能力的大能布道家深入浅出、逐章逐节地剖析讲解圣经真道。全场人头攒动、座无虚席，会场后方甚至挤满了站立听道的渴慕人群；由于涌入的听众实在太多，教会不得不支搭起巨型帆布大帐篷以容纳溢出的会众。这些查经奋兴大会无论在十九世纪的俄国门诺殖民地，还是在随后的北美门诺弟兄会堂会中，都深受欢迎，成为了全会众的属灵盛宴。
+
+最后，我们看见教会正为某些深奥经文的精确诠释而经历着激烈的思想角力与痛苦挣扎。圣经摊开在桌前，与会者的面庞因内心的极度紧张而紧绷。面对崇拜自由尺度的难题，起初的圣经研讨并未如预期般瞬间带来完全的共识；极端的长老甚至专断地对其他同工实施了绝罚除名。在某些时刻，圣经的诠释一方面应许着属天的深层合一，另一方面却似乎激化着肢体间的摩擦张力。这要求信徒付上更深的代价，继续携手深入研经、彼此倾听。最终，在德高望重的敬虔长老带领下，全教会无论男女老幼全体成员共同在圣道面前展开深入的“信仰共同体集体辨析”（Community Discernment），圣灵奇妙地开启照亮了整个属灵家庭的悟性，最终达成了满有平安、喜乐与合一的深刻共识！
+
+这些源自历史深处的珍贵画卷，至今依然在当代门诺弟兄会的堂会生活中不断重现。
+
+全心委身于研读并绝对顺服上帝的话语，构成了我们身份认同的至深核心。本章旨在深入反思我们属灵大家庭的这一宝贵特质：我们对圣经的理解具有哪些鲜明特征？在圣经诠释方面，我们与其他福音派教会拥有哪些广泛的共同根基？又有哪些独特的视角真正属于重洗派与门诺弟兄会的特色？
+
+#### 福音派与敬虔主义的影响 (Evangelical Pietist Influences)
+
+门诺弟兄会与马丁·路德等十六世纪抗罗宗教改先驱完全共享“唯独圣经、唯独信心”（*sola scriptura, sola fide*）的核心神学公式。早期重洗派坚决主张：以罗马教皇为首的教阶体制权威，绝对无权擅自颁布任何违背圣经的人为教义。如同路德一样，早期重洗派学者大多精通希伯来文与希腊文圣经原文，并坚定主张圣经必须被翻译成普通平民妇孺皆懂的母语方言。门诺弟兄会虽然缺乏路德那样繁琐的经院学术外衣，但完全继承了改教家对圣经作为“信仰与生活唯一权威准则”的磐石般信心，并欣然接纳了包含66卷书的抗罗修正典全书。
+
+在门诺弟兄会对圣经的使用历程中，多种神学潮流的交织影响显而易见。门诺弟兄会自诞生之日起，便展现出对外界纯正神学思潮格外开放接纳的胸襟。这在很大程度上与其诞生的特殊历史语境息息相关：十九世纪中叶原本相对封闭自守的俄国门诺社会，正逐步向外界的技术、教育、文学以及宗教思潮大门敞开；这种时代的开放，恰好与信徒内心深处对经历上帝更深同在的迫切渴望相撞击。
+
+在深刻塑造门诺弟兄会圣经诠释进路的思潮中，主要包括了：十六世纪激进重洗派传统、十九世纪欧洲敬虔主义运动（Pietism）、以及主流福音派神学（含基要主义、浸信会神学以及灵恩运动）。相比于大多数其他门诺宗派分支，门诺弟兄会受保守福音派神学资源的滋养尤为深厚。这种开放胸襟在极大地坚固信徒忠贞作门徒的同时，也在一定程度上给自身特质带来了挑战与张力。
+
+路德宗敬虔派牧师爱德华·维斯特为十九世纪俄国门诺大觉醒做出了不可磨灭的历史贡献，而敬虔主义的深远影响在此后一个半世纪中始终伴随着门诺弟兄会。在此有必要对“敬虔主义”（Pietism）这一术语作一番澄清：“敬虔”（Piety）通常是一个饱含褒义的词汇，用以描绘纯洁圣洁的生活；而“伪善的敬虔”（Piousness）则带有贬义色彩，往往令人联想到法利赛人自以为义的虚伪嘴脸；“敬虔主义”则是一场深切强调个人内在真实宗教生命体验的属灵运动，它坚信内住的圣灵当下正真实临在、大能运行，并持续在信徒生命中结出属灵成长的硕果。
+
+在权威专著《唯有圣灵的宝剑》（*Only the Sword of the Spirit*, 1997）中，雅各布·洛温（Jacob Loewen）与韦斯利·普里布（Wesley Prieb）精辟梳理了门诺弟兄会深蒙敬虔主义滋养的七大宝贵恩泽：
+1. 重视个人与家庭小型查经祈祷小组；
+2. 切切呼召人必须在清晰意识下做出信靠救恩的明确个人决志；
+3. 渴望在心灵深处经历与上帝面对面的真实相遇；
+4. 充满温暖融洽的基督徒肢体相交团契；
+5. 高度聚焦于白白的救赎恩典、基督荣耀再临、个人传福音见证以及跨宗派基督徒在主里的合一；
+6. 确信上帝对个人参与教会教牧领袖服事的清楚呼召。
+
+从教会历史上看，浸信会（Baptist）对门诺弟兄会的影响既可被视作一支独立的外部力量，亦可被归入这一广阔的敬虔潮流之中。正如敬虔派一样，德国浸信会之所以迅速被俄国门诺信徒所接纳，是因为双方完全共享德意志语言与文化底色，且同样极力倡导个人重生、深入研经与火热布道。此外，浸信会对门诺弟兄会的影响尤为深远：它直接影响了门诺弟兄会建立全会众参与的堂会治理模型；曾为早期弟兄会提供了一份非正式采纳的权威信仰宣言蓝本；并进一步坚固确立了门诺弟兄会将全身浸礼作为圣经唯一合宜洗礼方式的神学决定。
+
+在当代，那些坚定强调重生得救、圣经绝对权威、基督十架代赎大功、以及热心投身慈惠关怀与福音宣教的基督徒，被通称为“福音派”（Evangelicals）。门诺弟兄会与广义福音派在个人布道热忱、保守稳健的圣经诠释、崇尚个人敬虔生活以及唯独恩典得救等核心教义上完全同气连枝。我们通过积极加入全美及全球福音派联会、普世宣教差会以及各类跨宗派福音机构，大力推动福音派大家庭的深入合作。
+
+此外，门诺弟兄会历史上对生命经历体验与圣灵持续作工的看重，也使得部分堂会自然敞开接纳了现代灵恩运动的某些积极成分：许多堂会在当代敬拜赞美诗歌与神学思考中吸收了灵恩派的养分，对圣灵的恩赐彰显、信主后圣灵更新的生命经历、以及属灵争战等议题保持着探求兴趣。门诺弟兄会内部至今仍在持续展开坦诚神学对话，辨析这些思潮与我们独特的重洗派神学底色之间的契合与张力。
+
+然而，客观而言，敬虔主义与福音派思潮并非在所有层面上都对门诺弟兄会产生全然正面的促进。正如洛温与普里布所警示的几大潜在弊端：
+- **过分强调特定日期的个人决志时刻**：容易过度催化情绪主义，而忽视了许多人归信基督实际上是一个长期潜移默化的渐进生命历程。
+- **过度聚焦于个人内省灵性**：容易将信仰私密化（Private Faith），进而无形中侵蚀瓦解了重洗派最为核心的新约教会观——即顺服与作门徒必须牢牢根植于看得见的教会信徒团契共同体之中。
+- **与早期浸信会的部分交往**：在历史上曾引发门诺弟兄会与其他传统门诺弟兄宗派之间某些不必要的伦理与教义摩擦。
+- **德国浸信会及部分敬虔派对世俗军国主义的妥协接纳**：在根本上与门诺派对于耶稣非抵抗和平教导的执守背道而驰。
+
+#### 重洗派对圣经的诠释 (The Anabaptist Interpretation of Scripture)
+
+门诺弟兄会由衷认同并深切感激敬虔主义与保守福音派对其圣经理解的塑造；但与此同时，门诺弟兄会始终坚定坚称：自己的圣经进路具有极其鲜明的独特性，因为我们完整承袭并持守了重洗派独树一帜的**圣经诠释学（Hermeneutic）**！这一独特特质尤为体现在我们看待圣经全书的宏观架构、以及坚持在“信仰共同体”中集体诠释圣经的实践之上。
+
+在圣经观的宏观架构上，早期重洗派开创性地实践了**“基督聚焦的正典观”（Focused Canon）**，这与传统上僵化的**“平面正典观”（Flat Canon）**形成了极其鲜明的对比（洛温与普里布语）。
+
+所谓“平面正典观”，主张既然整本圣经的每一句话都是上帝神圣默示的真道，那么经文中的每一个字句、每一处历史记载在指导基督徒今日生活时，都应当被赋予绝对同等的权威分量。持有这种平面进路的人往往得出结论：旧约圣经主要是针对古代地缘政治国家而写，因此旧约中神许可以色列动用刀剑军队征战的记载，在今天依然可以成为现代基督徒支持国家发动世俗战争与动用死刑的神圣借口；同时，该进路将新约圣经仅仅简化为针对个人私德的道德指导，进一步助长了个人主义式的灵修避世倾向。平面正典观的致命硬伤，在于它未能将耶稣基督活生生的生平言行与十字架榜样作为整本圣经正典的终极圆心，并且严重歪曲或彻底忽视了旧约圣经中对于圣约伦理关系、公义公平以及怜悯关顾寄居异客的核心呼声！
+
+与此截然相反，门诺弟兄会坚决奉行**“基督聚焦的正典观”**！这种神圣进路绝非将圣经的某些部分贬低为次要，而是精准揭示了整本圣经大救赎信息的完美合一性：**基督正是这全部启示的心脏与锚点！**在诠释圣经的过程中，没有任何一卷正典书卷被忽视遗漏，但整本圣经从创世记到启示录的全部字句含义，唯有通过耶稣基督的生平、受死、复活与十字架圣训，才能真正被正确理解与终极照亮！
+
+此外，门诺弟兄会全然承袭了重洗派著名的**“共同体释经学”（Community Hermeneutics / 信仰社群集体辨识）**。这意味着：我们对圣经权威真道的正确诠释，绝非取决于某个主教阶层的专断权威，亦非取决于某个神学名家的闭门造车，而是完全取决于全体神家里的人作为属灵大家庭，在圣灵的光照下一同诵读、共同辨明神的心意！
+
+共同体释经在激进宗教改革破晓时分以及门诺弟兄会诞生的关键时刻，均扮演了决定性的角色。想当年，正是因为共同体释经的核心分歧，导致了格列伯等人与瑞士改教大师慈运理的公开决裂：慈运理屈从于苏黎世世俗市议会的政治权势，允许世俗政客限制并阉割教会对新约圣经真理的践行；而重洗派先驱坚决主张：唯有蒙恩得救的信仰共同体，才有资格一同查考圣经，并必须毫不妥协地将共同体所领会的圣经真理在每日生活中彻底付诸实践！同样，十九世纪五十年代俄国门诺殖民地的伟大复兴，正是从一户户信徒围坐在一起的家庭查经小组中破土而出的。早期门诺弟兄会化解一切重大神学争议的法则，从来不是某个权威领袖的个人一言堂，而是整个信仰共同体一同在圣道面前深切研讨祈祷，限制任何个人的绝对权力，最终孕育出一批批全员积极参与的查经大会。
+
+#### 门诺弟兄会的圣经诠释原则 (MB Principles of Interpretation)
+
+在正式颁布的《门诺弟兄会信仰宣言》（MB Confession of Faith）第二条中，我们庄严确立了指导圣经诠释的三大核心神学原则：
+1. **全本圣经皆是圣灵所神圣默示的**；
+2. **同一位保惠师圣灵亲自引导信仰共同体正确诠释这默示的圣经文本**；
+3. **主耶稣基督是诠释并遵行整本圣经的终极透镜与绝对权威**。
+
+让我们对照《门诺弟兄会信仰宣言》第二条的庄严条文，深入领会这三大原则：
+
+##### 原则一：圣经是上帝完全可靠的话语，是信仰与生活的权威指南
+> “我们信全部圣经都是上帝藉着圣灵所默示的……我们接纳圣经为上帝完全可靠（infallible）的话语，是基督徒信仰与生活的权威指南。”（马太福音 5:17-20；提摩太后书 3:14-17）
+
+当我们宣告圣经是神圣默示时，我们所宣告的正是圣经至高无上的神圣权威。圣经之所以成为我们一生的绝对指南，完全因为它是永活上帝亲自向我们所说的话语。门诺弟兄会欣然采纳大公教会传统的经典范畴来描述上帝的启示：我们承认上帝借着受造的浩瀚宇宙、历史中的公义审判与奇妙恩典、以及人类内心的道德良知向全人类说话，这被称为“普遍启示”；然而，唯有通过上帝的“特殊启示”，我们才能得知上帝主动在历史中借着亚伯拉罕、摩西、大卫、耶利米等先知与以色列立下圣约；更是借着这一特殊启示，上帝在道成肉身的耶稣基督身上，将其自身的本体全然向世人显明！而这写成文字的圣道——圣经——正是上帝使这无价的特殊启示世代长存、白白赐予我们的属天宝库。
+
+在二十世纪七十年代北美福音派爆发的关于“圣经无误论”（Inerrancy）的激烈神学论战中，门诺弟兄会学者与教牧领袖曾深入探求最合乎圣经本意的精确措辞。支持“无误论”字眼的人主张，圣经原稿在科学、地理与历史细节上同样字字绝对无误；而另一批门诺弟兄会学者则严谨指出：圣经最初的原本手稿早已不复存在，且圣经本身的著书主旨从来不是为了充当现代自然科学或地理学的权威教科书，圣经作者在记叙宇宙时完全采用了其所处历史时代的日常表达方式。
+
+经过深思熟虑与共同辨识，门诺弟兄会在《信仰宣言》中最终确立了两个更为深邃、平衡且扎实的圣经要点：
+- 首先，圣经是**“上帝完全可靠无谬的话语”（the infallible Word of God）**。这一神圣宣告坚固了我们的信心：圣经在引领我们认识上帝拯救旨意与圣洁心意上，绝不可能误导我们，它是向上帝儿女启示真理的完全值得信赖的源泉！
+- 其次，圣经是**“信仰与生活的权威指南”（authoritative guide for faith and practice）**。我们的焦点绝非仅仅停留在拥有教义上的“纯正信条”（Orthodoxy，正统信仰），更是全力聚焦于在每日生活中活出“纯正的顺服践行”（Orthopraxis，正道实践）！圣经拥有至高权柄呼召基督徒天天舍己跟从耶稣的十字架道路；基督生平与教训的神圣权威，赋予了教会按马太福音18章实施救赎性教会纪律的神圣使命。圣经正是这蒙救赎圣约共同体活出忠心见证的永恒灯塔。
+
+##### 原则二：圣灵亲自引导信仰共同体共同辨识并诠释圣经
+> “我们信同一位圣灵亲自引导信仰共同体去诠释圣经。”
+
+如前所述，共同体释经是我们圣经观中不可或缺的灵魂所在。在具体的教牧实践中，门诺弟兄会的共同体释经展现为：我们热烈鼓励每一位信徒在个人灵修和小组团契中勤勉研读圣经。那些长期委身于信徒团契生活、因熟练掌握圣经原文语言与文学体裁等释经工具而具备恩赐的圣经教师与学者，在诠释过程中提供专业的辅助；然而，任何教师绝不因其拥有高深的神学学位而享有凌驾于全教会之上的专断霸权，他们乃是与全教会所有忠心贡献恩赐的弟兄姊妹一同平等服事！
+
+当某个神学或伦理实践议题过于复杂或在地方堂会引发争议时，我们绝不擅自独断，而是主动虚心寻求更广泛的弟兄姊妹的智慧。我们极力效法《使徒行传》15章的历史典范——当年外邦人加入教会的资格引发剧烈争端时，使徒与长老齐聚耶路撒冷大会同心商议。门诺弟兄会历来设立由德高望重的教牧同工组成的专责委员会（历史上曾称为“信仰与生命委员会”或“咨询与建议委员会”），负责梳理需要全教会深入交通的重大议题。该委员会潜心研究后，会正式召集全教区性质的“神学研讨研读大会”（Study Conference），广邀全教会代表通过专题论文、讲道阐释以及小组研讨，共同在神面前查考圣经。委员会随后汇集全会众所达成的广泛圣灵感动共识，将其凝练为决议提案，提交给全体堂会正式代表大会（Convention）进一步审议表决，最终确立为全宗派共同恪守的指引。
+
+这种神圣的共同体释经运作于四大基本神学前提之上：
+1. **圣灵的光照**：我们深信保惠师圣灵此时此刻真实内住在每一位信徒心里，大能开启我们明白经文真意；我们虽不求任何脱离圣经之外的“新启示”，但切切等候圣灵对既有圣经话语所赐下的全新洞见与照亮。
+2. **以经解经与群体检验**：整个属灵共同体有神圣责任，将一切个人所领受的感动或洞见，置于整本圣经的光照下严格检验——它是否完全合乎耶稣基督的教导？是否与新约书信及圣经全书的启示和谐一致？
+3. **在爱心与互信中接纳差异**：在共同体释经的探索中，观点分歧在所难免；真正的释经考验往往爆发于观点碰撞之时。正如保罗在哥林多前书11章19节所指出的，良性的观点碰撞有时能使经得起考验的人显明出来；而在这一切过程中，肢体间的交通必须始终充溢着基督舍己的圣爱与深沉的彼此信任。
+4. **以生活结出的果子作为终极检验**：共同体释经绝非满足于推导出漂亮的抽象教条，它的终极落脚点乃是忠心的生命实践——检验一个群体是否真正归正于圣经的试金石，正是他们每日所活出的道德与门徒生活！
+
+##### 原则三：耶稣基督是诠释整本圣经的核心透镜与最高峰
+> “我们信上帝在耶稣基督里将自己至高无上地全然启示出来，正如新约圣经所明确记载的。”
+
+在此，《信仰宣言》振聋发聩地提醒我们：门诺弟兄会毫不动摇地持守重洗派神学的定海神针——**“以基督为中心”（Christ-centered）的圣经诠释进路！**
+
+耶稣基督的位格、生平、十字架舍命与荣耀教训，将不可见之独一真神的丰盛完完全全彰显无遗！因此，**耶稣基督本身就是诠释整本圣经的唯一终极透镜，也是信徒顺服遵行圣经的至高权威！**
+
+这一神圣原则在神学上常被称为“渐进启示”（Progressive Revelation）。某些世俗自由派学者曾曲解此词，将其套用为宗教进化的达尔文假说（宣称早期以色列人的上帝观念极其粗鄙野蛮，后随文明演进而逐步完善）；这绝非门诺弟兄会的立场！我们坚信：整本圣经是一部上帝在历史中展开宏伟救赎大工的宏大救恩史诗；随着救赎历史的不断推进，人类对上帝永恒神圣旨意的认识日益清晰圆满。从创世之初，上帝就是唯一的创造主与救赎主；随着上帝在历史中的作为层层展开，我们得以更加精准透彻地领会祂的计划。而在道成肉身的基督耶稣身上，我们获得了洞察上帝心肠的最荣耀、最透亮的新洞见！这活泼的道——耶稣基督——使我们终于能够豁然开朗地读懂旧约圣经中那些先前幽暗不明的段落！
+
+因此，门诺弟兄会确信，阅读与诠释整本圣经的正确起点，乃是主耶稣亲自颁布的**“登山宝训”（马太福音 5–7章）**及其平行经文。我们深信，登山宝训绝非某种遥不可及、留待遥远未来所谓“千年天国”才去履行的乌托邦空想，而是耶稣向**当下活在地上的今日教会**所发出的极其现实、迫切且必须履行的神圣门徒训令！
+
+在耶稣所宣告并呼召我们全力投身的神国统治中，祂着重展开了三大震动世界的核心主题：
+1. **赐福给贫穷人：彻底的慷慨简朴**  
+   耶稣的开篇宣告，便是天国的福音首先要传给贫穷无告之人（路加福音 4:18-19）。耶稣反复叮咛门徒要从对世俗物质财富的贪恋缠累中彻底脱释出来，放胆活出激进的舍己奉献与慷慨周济。将“简朴的生活”作为“基督舍己之爱”的自然流露，正是重洗派以基督为中心释经学的鲜明标识。
+2. **呼召门徒作和平缔造者：爱与非抵抗**  
+   当我们认罪悔改归主时，我们便在基督里与上帝和好，得享真实的属天平安；而这内心的深沉平安，强力驱动我们竭力与身旁的众人追求和平与和睦——从我们的至亲骨肉家庭开始，扩展到我们所在的社区邻舍，甚至毫不保留地延伸到逼迫我们的仇敌身上！我们坚定视其为基督徒作门徒生涯不可分割的核心命脉。
+3. **呼召建立圣约共同体：彼此相属的神圣家庭**  
+   耶稣深刻教导：要在这个堕落世道中活出登山宝训那看似“不可能完成的崇高伦理”，唯一的可能途径就是与我们在基督里的弟兄姊妹同心携手、并肩前行！作世上的盐、世上的光，绝非个人英雄主义式的孤胆游侠号召，而是主向我们发出的神圣请柬——邀请我们全身心融入一个看得见的圣约共同体：永生神的教会家庭！
+
+门诺弟兄会的圣经诠释战略无时无刻不在提醒着我们：查考圣经的崇高终点，绝非仅仅为了满足头脑知识的积累或神学概念的思辨，而是为了在圣灵的大能中，完完全全、甘心乐意地效法顺服耶稣基督的圣洁榜样！我们在圣经每一页文字中与基督深情相遇，欣然领会祂向我们所呼召的舍己大爱、慷慨慈惠、缔造和平的生命圣道；并万分感恩地置身于一个热烈教导并忠心践行这种天国生活方式的属灵大家庭之中！
+
+
+---
+
+### English Original Text
+
+# Chapter 4: People of the Word
+
+
+<!-- Page 43 -->
+
+
+### CHAPTER 4
+
+
+### People of the Book
+
+Mennonite Brethren have been “people of the Book.” Study of the Bible sparked the renewal movement that birthed the Mennonite Brethren church. Envisioning those earliest days of Mennonite Brethren life, various scenes come to mind. First, one sees small groups of people in some of the Mennonite villages of southern Russia meeting in homes for Bible study and prayer. There is a lively give-and- take around the selected Scripture texts. Discussions are informed by reading materials provided by the Christian Literature Society organized by schoolmaster Tobias Voth. Issues that prompt further study include evangelism, world mission and a growing personal relationship with Christ. The writings of Menno Simons instruct the study. There is a decidedly intellectual stimulus, but the Bible study is not merely academic. It leads to repentance, conversion, revival. Next, one sees two Mennonite Brethren ministers meeting in the fields as they go about their farming. A controversial question is troubling the young church. How
+
+
+<!-- Page 44 -->
+
+will they find direction? The two ministers lean against a fence post and reach into bulging coat pockets to retrieve their New Testaments. There are no WWJD (What Would Jesus Do) bracelets on their wrists, but both assume that the practical solution to a real problem will be found in this book. What Jesus teaches through his life and the Sermon on the Mount is the starting point for their search for direction. Later, we see Bible conferences. Here dynamic preachers expound the Scriptures. High excitement is evidenced by standing-room-only attendance. Tents are erected to contain overflow crowds. The Bible conferences are popular, not only in the Russian colonies but in the Mennonite Brethren congregations of North America. Finally, we see the church struggling for clear interpretation of biblical passages. Bibles are open, and faces are taut with tension. Biblical study has not produced the expected consensus over the difficult question of freedom in worship. Elders have banned other leaders. Interpretation of Scripture promises unity even as it seems to provoke disintegration. Further study, further work together, is required. Eventually, it is community discernment in the Word, led by respected elders but including all members, that produces consensus, unity and satisfaction that the Spirit has illumined the church community’s understanding. These scenes from the past continue to be replayed in contemporary settings in the Mennonite Brethren church.
+
+
+<!-- Page 45 -->
+
+Commitment to studying and obeying the Word of God is at the core of who we are. This chapter reflects on this important quality of our family life. What characterizes our understanding of the Bible? What do we have in common with other evangelical churches regarding biblical interpretation? What perspectives are distinctly Anabaptist and Mennonite Brethren? Mennonite Brethren share with Protestant reformers like Martin Luther the formula sola scriptura, sola fide : the Bible alone, faith alone. The early Anabaptists agreed that a hierarchical church authority, headed by the pope in Rome, had no right to decree Christian doctrine. Like Luther, early Anabaptist Bible students were experts in reading the Bible in their original languages, and they agreed that the Bible should be translated into the common language of the people. Mennonite Brethren, while lacking the academic sophistication of Luther, shared the reformer’s confidence in the Bible as the only guide for faith and life. They also accepted the Protestant canon of 66 books. Several influences are evident in the Mennonite Brethren use of Scripture. The Mennonite Brethren have been particularly open to outside theological influences. Perhaps this is due to the circumstances of their birth.
+
+
+<!-- Page 46 -->
+
+The relatively closed Mennonite society of mid-century Russia was opening to a larger world of technology, education, literature and religious ideas. This opening coupled with an intense desire for a deeper experience of God marked early Mennonite Brethren experience. Among the movements that have affected Mennonite Brethren interpretation are 16th century Anabaptism, 19th century European Pietism and mainstream evangelicalism (including fundamentalism, Baptist theology and charismatic movements). More than most other Anabaptist-Mennonite groups, the Mennonite Brethren have been influenced by conservative Christian sources. This openness has both strengthened faithful discipleship and threatened it. Eduard Wuest, a Lutheran Pietist, contributed significantly to the religious awakening among Mennonites in Russia, and Pietism continues to influence the Mennonite Brethren experience one-and-a-half centuries later. An explanation about the term “Pietism” is in order. Piety, usually a word with positive connotations, describes holy living. Piousness, on the other hand, has negative overtones and is associated with Pharisaic self-righteous hypocrisy. Pietism is a movement that emphasizes the personal religious experience. It carries the expectation that the Holy Spirit is present, active and powerful in producing spiritual growth. In their book, Only the Sword of the Spirit (1997), Jacob Loewen and Wesley Prieb summarize the positive themes
+
+
+<!-- Page 47 -->
+
+for which Mennonite Brethren are indebted to the Pietist movement. They include personal and small group Bible study; the call for a conscious and personal decision to accept salvation; a deeply-felt encounter with God; warm Christian fellowship; an emphasis on grace, Christ’s return, personal evangelism and Christian unity; and a personal sense of God’s call to congregational leadership. Historically, the Baptist influence on Mennonite Brethren can be identified as a separate force. Theologically, however, the Baptists hold enough in common with the Pietists that their influence can be included under that broad stream. Like the Pietists, the German Baptists were accepted because they shared the German language and culture with the Mennonites. Like the Pietists, they encouraged personal conversion, Bible study and evangelism. The Baptists were also important to Mennonite Brethren for influencing a congregational model of church governance, supplying an early confession of faith (that was informally accepted for a time) and reinforcing the decision to institute immersion as the mode of baptism. Today, Christians who stress conversion, the authority of Scripture, atonement through the cross and ministries of care and evangelism are called “evangelicals.” Mennonite Brethren share with evangelicals a concern for personal evangelism, conservative biblical interpretation, personal piety and salvation by grace. We promote evangelical cooperation by joining national evangelical
+
+
+<!-- Page 48 -->
+
+and mission organizations. We cooperate in broader evangelistic outreach and parachurch agencies. The historical emphasis on experiential faith and the ongoing work of the Holy Spirit has also opened Mennonite Brethren to continuing charismatic influences. Many Mennonite Brethren churches have adopted much of the music and theology of these movements. Charismatic sign gifts, post-conversion experiences of the Holy Spirit and spiritual warfare have attracted interest. Mennonite Brethren continue to converse with one another about the compatibility of these influences with our particular theological perspective. Not all aspects of Pietism and evangelicalism have positively influenced the Mennonite Brethren church. Loewen and Prieb, for example, identify the following concerns. Emphasis on a personal conversion experience at a specific date intensifies the emotions involved and misunderstands the fact that coming to faith usually involves a process. Emphasis on personal spirituality suggests a private faith and erodes Anabaptist understandings of the New Testament, which places obedience and discipleship within the church community. Historically, the Mennonite Brethren church’s Baptist connections created various ethical and doctrinal tensions between Mennonite Brethren and other Mennonites. Finally, the militaristic orientation of the German Baptists and some of the Pietists is alien to the Mennonite understanding of Jesus’ teaching.
+
+
+<!-- Page 49 -->
+
+The Anabaptist Interpretation of Scripture Mennonite Brethren recognize and appreciate that Pietism and conservative evangelicalism have shaped their interpretation of the Bible. But Mennonite Brethren also hold that their approach to Scripture is distinctive because they retain an Anabaptist “hermeneutic” or method of interpretation. This is seen particularly in their approach to the Bible and in interpreting Scripture as a faith community. The early Anabaptists practiced a “focused canon,” in contrast to a “flat canon” (Loewen and Prieb). The flat canon argues that, since the Bible is the Word of God, every word must be given equal weight. This approach therefore concludes that the Old Testament primarily addresses nation states and sanctions the use of military force. The same approach sees the New Testament as addressing primarily individuals and reinforces the pietistic emphasis on individual encounter with God. The flat canon fails to give primary weight to the life and teachings of Jesus, who is seen by Anabaptists as the canon’s center. The flat canon also distorts or misses the Old Testament emphasis on covenant relations, justice and concern for the stranger. Mennonite Brethren follow the focused canon approach. This practice does not relegate parts of the Bible to secondary status; rather, it reveals the unity of the biblical message. Christ is at the heart of this message.
+
+
+<!-- Page 50 -->
+
+Nothing in the canon is ignored in the interpretive process, but the meaning of all parts is understood through the life of Jesus. Mennonite Brethren also accept the Anabaptist notion of “community hermeneutics,” also known as “community interpretation.” This means that our interpretation of Scripture depends on the process of reading and discerning the Bible together as a Christian family. Community hermeneutics was important in the early days of the Anabaptist reformation and in the birth of the Mennonite Brethren church. It was the issue that caused the Anabaptists to split with the reformer Ulrich Zwingli in the Swiss reformation of the early 16th century. Zwingli allowed civil authorities to limit the church’s practice of, and understanding of, the New Testament. The Anabaptists insisted that the community of faith should read the Bible together, then put its understanding of the Bible into practice. Similarly, the 1850s renewal in the Russian Mennonite communities was born of Bible study in small groups. The early Mennonite Brethren settled controversial questions by deliberating together as a community of faith and limiting the authority of individuals, even if they were leaders. They developed the practice of Bible study conferences, in which biblical texts were explained and studied together.
+
+
+<!-- Page 51 -->
+
+MB Principles of Interpretation The MB Confession of Faith recognizes three specific principles of biblical interpretation. First, the entire Bible is Spirit-inspired. Second, the Holy Spirit guides the community of faith to interpret the Spirit-inspired text. Third, Jesus is the lens through which all Scripture is to be interpreted. Let us consider these three principles by referring to the MB Confession of Faith (Article 2). 1. “We believe that the entire Bible was inspired by God through the Holy Spirit…. We accept the Bible as the infallible Word of God and the authoritative guide for faith and practice” (Matthew 5:17-20; 2 Timothy 3:14- 17). When we confess that the Bible is inspired, we are speaking about the authority of Scripture. The Bible is our guide because it is God’s Word to us. Mennonite Brethren accept traditional, orthodox categories to describe the revelation of God. We recognize that God speaks through creation, God’s judgments and grace and human conscience; this is called general revelation. But only through God’s special revelation do we learn that God initiated a covenant relationship with Israel through Abraham, Moses, David, Jeremiah and others. Through special revelation, God communicated the very being of God in the person of Jesus Christ. The written Word, the Bible, makes God’s special revelation available to us.
+
+
+<!-- Page 52 -->
+
+Mennonite Brethren have struggled to find the proper terminology to describe their high view of Scripture. In the fundamentalist evangelical debate of the 1970s, some argued for use of the phrase “inerrancy of the Bible.” For most of those favoring this term, inerrancy described the original documents (as penned by the biblical authors) as including truth about science, geography and history, in addition to theological truth. Other Mennonite Brethren argued in favor of a different terminology. They pointed out that the original documents are no longer available to us. They noted that the Bible does not claim authority in matters such as science and geography. In fact, biblical authors seemed to adopt the conventions of their day in speaking about the universe Mennonite Brethren have settled on the language in our Confession of Faith to make two emphases. First, the Bible is “the infallible Word of God.” This term supports the understanding that the Bible cannot mislead us regarding God’s will. It is a completely reliable source for revealing God’s Word to us. Second, the Bible is “the authoritative guide for faith and practice.” Our emphasis is not simply on right doctrine (orthodoxy) but on faithful obedience (orthopraxis) as well. The Bible has the authority to call Christians to follow the way of Jesus. The authority of Christ’s life and teaching is passed to the church as a call to church discipline (Matthew 18:15-20). The Bible guides the faithful practice of the redeemed community.
+
+
+<!-- Page 53 -->
+
+2. We believe that “the same Spirit guides the community of faith in the interpretation of Scripture.’’ As stated earlier, community hermeneutics is a central and distinctive element in our understanding of Scripture. In practical terms, Mennonite Brethren community hermeneutics means that Christians are encouraged to study the Bible in personal reading and in small groups. Teachers who have learned to discern God’s will by living in the community of believers and who have received interpretive tools—such as an understanding of biblical languages and literary styles—assist in the interpretation process. However, teachers do not have greater authority because of their academic preparation; they serve the community together with all who contribute their God- given gifts. When an issue becomes too complex or divisive to resolve in a local congregation, we consult our brothers and sisters. We try to follow the model of Acts 15, where delegates gathered in Jerusalem to discuss the entrance requirements into the church. Mennonite Brethren have traditionally depended on a group of leaders (called by various names in the past such as Board of Faith and Life or Board of Reference and Counsel) to identify issues in need of broader discussion. The board members study the issue and then call for a study conference, where members are invited to study the Bible through small group discussions, written papers and spoken messages. The board then discerns a consensus, which they present as a
+
+
+<!-- Page 54 -->
+
+resolution to delegates from all churches at a convention, where the resolution undergoes further discussion, leading to a decision. Community hermeneutics operates with several assumptions. First, we assume that the Holy Spirit is active within believers to illumine the Scriptures. We do not expect new revelation or a new authoritative word from God, but we do expect illumination and fresh insights. Second, we believe it is the role of the community to test illumination against Scripture. Is it consistent with Jesus’ teaching, the New Testament, the Bible as a whole? Third, we can expect differences of opinion. Community hermeneutics is tested in times of conflict. While conflict may be healthy (1 Corinthians 11:19), communication in these situations must be characterized by charity and mutual trust. Fourth, community hermeneutics calls for faithful practice, not simply true doctrine. The test of a biblical people is their lifestyle. 3. We believe that “God revealed Himself supremely in Jesus Christ, as recorded in the New Testament.” Here our Confession reminds us that we hold to a Christ-centered interpretive strategy, one of the convictions of Anabaptist theology. Jesus’ person, life and teaching reveal God, and thus Jesus is the lens through which all Scripture is to be interpreted, and the authority by which it is to be obeyed. This interpretive principle has sometimes been called “progressive revelation.” Some scholars use this term to mean that religion generally, and Israelite religion
+
+
+<!-- Page 55 -->
+
+specifically, began with crude ideas about God that were refined through an evolutionary process. This is not the view of Mennonite Brethren. Rather, we see the Bible as the story of God’s work in the world. As the story progresses, so does our understanding of God’s purpose. From the beginning, God works as Creator and Redeemer. As God’s work unfolds, we are better able to interpret God’s purposes. In the person of Christ, we gain significant new insight into God’s will. This new Word, Jesus Christ, enables us to make better sense of parts that were formerly unclear. We understand that the place to begin biblical interpretation is Jesus’ Sermon on the Mount (Matthew 5-7) and its parallel texts. We take these texts as Jesus’ challenge to the church today, not as an idealistic program for some future kingdom of heaven. Jesus develops three themes in his proclamation of the kingdom of God in which we participate. First, he blesses the poor. Jesus’ message is that God’s rule is good news for the poor (Luke 4:18-19). He speaks frequently about freedom from the attachment to things. He calls for radical generosity. Generosity as an expression of simplicity is one of the themes of Anabaptist Christ-centered interpretation. Second, Jesus calls his followers to peacemaking. When we confess our sins, we have peace with God. That inner peace motivates us to pursue peaceful relationships with those around us, beginning with our families, our
+
+
+<!-- Page 56 -->
+
+communities and even extending to our enemies. We see this as a vital part of Christian discipleship. Third, Jesus calls for community. Jesus teaches that the only way to practice his impossible ethic is together with our brothers and sisters. Being salt and light in the world is not a call to radical, rugged individualism. It is an invitation to a covenant community, the church family. The Mennonite Brethren interpretive strategy reminds us that the end of Bible study is not simply knowledge or understanding, but faithful obedience to the example of Jesus. We meet Jesus in the text and discover he asks for extravagant generosity. He models life-giving peacemaking. He invites us to be part of a family that teaches and practices this kingdom lifestyle.
+
+
+---
+
+# 第五章：新约教会
+## *Chapter 5: The New Testament Church*
+
+> **归属分部**：第二部分：家族的特质 (Part Two: Characteristics of the Family)
+
+### 中文译文
+
+# 第 5 章：新约教会 (Chapter 5: The New Testament Church)
+
+### 第 5 章：新约教会 (The New Testament Church)
+
+在当今科技时代，追溯家族谱系变得前所未有的便捷。通过各类家谱寻根网站，任何人都可以轻松查阅远祖亲属的出生证明与跨洋移民档案。在家谱寻根已成为风靡北美的普遍爱好的今天，作为门诺弟兄会的信徒，我们同样由衷热爱追溯我们属灵大家庭的古老根脉。
+
+我们坚定将公元一世纪的新约初代教会，视为我们信徒共同体生活的神圣典范。我们细致研读《使徒行传》与使徒保罗的书信，从中寻觅维系属灵大家庭关系的宝贵原则；四福音书更是引领我们聆听我们的长兄——主耶稣基督——对于属灵家庭生活的亲切训诲。
+
+对新约起源的探寻，自然点燃了另一项深沉的关切：我们该如何在当下的地方堂会中，与最亲密的属灵家人彼此相待？在本章中，我们将深入反思新约教会的圣经模型，以及那些将门诺弟兄会紧紧维系在一起的家庭优良传统。正如某些血亲家族因共有的一头红发或非凡的音乐天赋而格外引人注目一样，门诺弟兄会同样以一系列极其鲜明、甚至独树一帜的属灵家庭价值观而享誉世界。
+
+#### 家庭的扩增：全人宣教与生命重生 (Growing the Family)
+
+新约圣经深刻教导：健康美好的属灵家庭生活，是信徒与天父维系亲密生命关系的不可或缺之沃土。正如初生婴孩唯有诞生在一个充满爱与关怀的家庭中才能获得最健康的哺育一样，在属灵层面上，传福音与生命重生同样是整个属灵大家庭的集体圣工。
+
+我们的《信仰宣言》第七条（“教会的使命”）精准指出了关于福音宣教的两大并立真理：
+- 首先，传福音是每一位信徒不可推卸的个体使命：“圣灵赐大能给每一个基督徒，为上帝的救恩作见证。”
+- 其次，传福音是我们作为大家庭日常生活的自然流露：“教会作为一个整体身体，在世上见证上帝的掌权统治。借着自身作为一个蒙救赎且从世俗罪恶中分别出来的圣洁共同体，教会向全世界彰显了上帝拯救的浩瀚旨意。”
+
+新约时代的教会，是一间极富宣教烈火的教会。《使徒行传》一再惊人地记载了成千上万的人悔改归主、认罪受洗、并欣然加入上帝荣耀大家庭的壮丽盛况。五旬节——这“教会的诞辰日”——本质上正是一场全会众齐心合力的大能集体见证（使徒行传 2:2, 14）。
+
+正如我们在前文所见，十六世纪的重洗派教会拥有炽热无比的宣教心志；十九世纪孕育出门诺弟兄会的俄国门诺大复兴，同样完全浸润在宣教的烈焰之中。今天的门诺弟兄会继续将福音布道作为全教会的核心焦点：充满健康活力的门诺弟兄会地方堂会，持续通过友谊布道、特殊福音盛会、儿童与青少年培育事工、以及在自己影响所及的社区开展慈惠关怀服务，向有需要的人倾注基督的爱；而在更广泛的宗派总会层面上，门诺弟兄会更是携手在北美及全球各地大举拓植建立崭新的教会！
+
+#### 救赎性的教会纪律 (Redemptive Discipline)
+
+在新约教会这个属灵大家庭中，充满爱心的管教与纪律，是维系属灵肢体之间、以及肢体与上帝之间健康生命的必要保障。我们的《信仰宣言》第六条深入阐明了门诺弟兄会对“教会纪律”的独到理解：**其至高目的，绝非为了定罪惩罚或冷酷排挤，而是为了以牺牲舍己的爱，将跌倒走迷的软弱弟兄姊妹重新挽回、拥抱进圣洁的相交团契之中**（马太福音 18:15-20）。
+
+早期重洗派先驱将积极实践教会纪律，视作将真教会从死板堕落的国家教会中彻底分别出来的核心标志之一。十九世纪门诺弟兄会的复兴先贤，同样高度看重这一圣洁实践：他们曾痛心疾首地规劝门诺老母会，责备其竟对教牧同工与普通教友的酗酒放荡和公开不忠熟视无睹、放弃戒规。门诺弟兄会坚决主张：唯有那些甘愿生活在信实守约中的信徒，方可同领主的圣餐。
+
+自十九世纪六十年代建会以来，门诺弟兄会一直在努力探求教会纪律实践的合宜平衡。早期总会会议记录表明，全教区年会常常需要严肃处理具体的道德伦理实践问题。在早先岁月中，总会曾明令禁止信徒购买商业人寿保险、禁止成员间轻浮戏谑、禁止出入世俗马戏团与戏院、严禁观看世俗电视节目、以及禁止姊妹在公共敬拜中不蒙头。在今天的现代人看来，早期的许多禁令难免带有一些律法主义的色彩；然而，它们无可辩驳地彰显出历代门诺弟兄会先贤对于天国圣洁呼召所抱有的无比肃穆与严谨敬畏！
+
+门诺弟兄会至今依然坚定持守对基督门徒相称行为的崇高期待。我们的《信仰宣言》第十二条明确禁止信徒宣誓起誓（马太福音 5:33-38；雅各书 5:12）、严禁加入任何秘密会社（如共济会等），并抵制一切“威胁玷污基督徒纯全品格”的世俗行为。尽管此类准则在世人眼中看似严苛，但它们时刻警醒每一位信徒：决不可效法这个世界的沉沦风俗！正如一位杰出门诺学者所庄严宣告的：**跟从耶稣，意味着在世人面前活出一种激进的社会非同化（Radical Social Nonconformity）——彻底拒绝与世俗罪恶同流合污！**
+
+今天，身处一个崇尚体制化暴力、物欲横流与纵欲享乐的世俗社会中，门诺弟兄会正竭力探索如何更有力地为和平的福音作美好见证。我们与其他保守福音派信徒一样，坚决反对堕胎杀婴、坚决抵制任何放纵的性革命浪潮；同时，我们也在死刑废除、消除种族不公、男女同工在教会领导层中的服事配搭、以及基督徒财富积累与管家责任等现实议题上，持续在圣经光照下寻求深层的群体共识。
+
+#### 洗礼与主的晚餐：两项神圣记号 (Baptism and the Lord’s Supper)
+
+每一个家庭都有其界定家庭成员身份的神圣礼仪与人生里程碑。门诺弟兄会坚定持守并隆重庆祝两项神圣的礼仪——洗礼与主的晚餐（圣餐）；我们在神学上审慎地称其为**“礼仪”（Ordinances）**或**“记号”（Signs）**。
+
+使用“记号”（Sign）这一严谨的圣经概念，将门诺弟兄会与那些认为礼仪本身能机械传递客观救恩典礼的传统宗派（如天主教的圣礼主义 Sacramentalism）清晰区分开来；同时也使我们区别于那些将礼仪仅仅贬低为毫无属灵实质的“纯主观内心象征”的极端主观派。“记号”是深具圣经渊源的词汇，它既大能指向永活上帝在历史中所施行的客观救赎大功（出埃及记 10:1；使徒行传 4:16），又生动包含着蒙恩罪人以身心相许的真诚顺服回应（出埃及记 12:13）。简言之：**洗礼是信徒向基督终生全人委身的神圣记号；而主的晚餐则是全教会对圣约持守绝对忠诚的圣洁记号！**
+
+#### 洗礼 (Baptism)
+
+自新约教会诞生之日起，便有一项公开的举动，向全宇宙正式宣告一个人已被神圣领养进入上帝的大家庭：信徒在悔改认罪、公开认信耶稣之后领受洗礼，并被正式“加添入”当地可见的地方堂会之中。洗礼是跨入圣约共同体的神圣成人礼！主耶稣颁布的大使命（马太福音 28:19-20）包含着唯一的根本动词命令：“使万民作我的门徒”；而紧随其后的两个修饰从句精准界定了门徒造就的神圣路径：“奉父、子、圣灵的名给他们施洗”，并且“凡我所吩咐你们的，都教训他们遵守”。
+
+为什么洗礼如此至关重要？
+1. **洗礼是借着地方堂会加入基督身体的记号**（《信仰宣言》第八条）。圣经生动描绘洗礼是“归入基督”（罗马书 6:3；加拉太书 3:27；哥林多前书 10:2-4），并受洗“成了一个身体”（哥林多前书 12:13）。“归入基督”意味着实实在在地融入以基督为元首的活泼群体之中——一切旧有的阶级仇恨、种族歧视与性别隔阂都被彻底粉碎抹去；洗礼将原本背景迥异甚至曾势不两立的人，奇迹般融为一个全新的合一体。在五旬节那天，凡听从福音的人“就受了洗；那一天，门徒约添了三千人”；《使徒行传》2章42–47节描绘了随后生机勃勃的教会生活：“主将得救的人天天加给他们”（47节）。新约经文一再将“洗礼”与“加入教会”紧密捆绑：**人绝不可能脱离有形的教会而孤立属于基督；人绝不能只空谈归属于所谓‘宇宙无形教会’，却对眼前有血有肉的地方可见堂会拒绝做出实质的委身委身！**
+2. **洗礼是罪得彻底洁净的圣洁记号**。正如《信仰宣言》所认信的：“洗礼标志着一个人的罪恶已被宝血彻底洗净；表明其人已向神真诚悔改己罪、蒙受了赦罪之恩、并在基督里向着罪彻底死去……”对于那些借着洗礼已被彻底洗净、全然成圣的人而言，任何不道德的放荡生活都是绝对不相称的（哥林多前书 6:11）。基督已洗净了教会，要使她荣耀圣洁、毫无瑕疵（以弗所书 5:26）；洗礼所彰显的十字架大能，彻底斩断了信徒效法旧俗的退路。
+3. **洗礼象征着承受天国永生的大能新生命**。“我们深信，当人们领受上帝拯救的恩赐时，他们应当受洗……在基督里一举一动满有新生的样式！”洗礼与天国大能、基督里的丰盛生命以及出死入生的属天荣耀紧密相连（歌罗西书 2:12）——我们与基督一同埋葬，并与祂一同复活，满怀圣洁的新生力量昂首前行！
+
+在今天后现代世俗文化中，洗礼在多个层面上极其“冒犯”世俗的敏锐感：
+- 首先，它是一项看似古老格格不入的传统仪式，往往被世俗人误解为某种落伍陈旧的形式；
+- 其次，洗礼标志着与过去生活方式的**断然决裂**！在那些基督徒面临残酷宗教迫害的国度里，正是“公开受洗”这一举动界定了信仰委身的彻底转变——许多异教社会可以容忍一个人私下做一段“请耶稣进我心”的心灵祷告，但一旦他公开走入水中受洗归入基督身体，便会瞬间引来全家族的孤立驱逐甚至杀身之祸！
+- 第三，洗礼引发世俗激辩，因为它要求人必须毫无保留地委身于耶稣在地上有形的教会家庭！在北美许多缺乏扎实洗礼真理教导的社区中，正是这种对具体地方堂会的终生委身常常令人望而却步——许多人宁可对抽象飘渺的“无形教会”说好，却千方百计逃避对现实生活中具体、有缺点的基督徒身体做出扎实问责。然而，正如复活后的基督拥有可摸可触的真实肉身一样，基督在地上的身体永远是由一群有血有肉的真实信徒所构成的弟兄姊妹团契！
+
+从历史上看，重洗派先贤为了持守这一纯正圣经真理，付出了极其惨烈的血腥代价。追随罗马天主教的陈规，主流公认的改教教派依然推行婴儿洗礼，试图以此洗除原罪并将无知的婴孩强行绑入社会圣约建制之中。重洗派虽然完全赞同洗礼是加入圣约团契的必经门槛，但坚决否定父母的代求或教会的功德足以使婴儿受洗具有任何真实的救恩效力！重洗派泣血高呼：唯有每一个人在圣灵感动下，亲自对耶稣基督做出悔改重生的公众信仰告白，方能得救并加入受救赎的真信徒教会！
+
+十九世纪门诺弟兄会的改革先驱，正是由于坚决回归信徒洗礼而掀起了划时代的复兴。尽管俄国门诺老教会当时并未实行婴儿洗，但他们却将社会公民特权与受洗会籍捆绑，沦为了背诵死要理问答的形式主义。门诺弟兄会毅然确立：**洗礼唯独为“那些口里承认、心里相信耶稣基督为主和救主，立志舍己跟从基督……能够真正明白洗礼的神圣涵义、甘愿向基督和教会彼此问责、并完全出于个人自愿渴求受洗的人”而设立**（《信仰宣言》第八条）！
+
+受洗候选人必须主动提出受洗申请；教会随后对其进行系统扎实的真理栽培辅导，使其彻底明了受洗对加入地方堂会的圣洁责任；受洗归主的新生信徒庄严立誓，自愿置身于彼此问责、圣洁顺服的弟兄团契之中。
+
+在洗礼的适宜年龄上，门诺弟兄会主张应当鼓励青少年信徒耐心等候，直到他们心智成熟、能够作为真正负有责任的教会成员参与教会生活时再行受洗（通常认为少年早期为较合宜的负责年龄）。
+
+而在**洗礼的方式（Mode of Baptism）**上，门诺弟兄会确立了新约原文字义上的**全身浸礼（Immersion）**。克里米亚门诺弟兄会（Krimmer MB）在历史上曾拥有面向前浸水三次的独特传统。今天，门诺弟兄会完全享有在任何最合宜的水域中施浸的自由——无论是在庄严肃穆的室内洗礼池，还是在清澈奔流的江河湖泊，抑或是户外储水槽与泳池之中。在洗礼礼成之后，全教会通常会为新受洗成员举行隆重的欢迎接纳礼拜，并一同欢然领受主的圣餐。
+
+#### 主的晚餐 (The Lord’s Supper)
+
+主的晚餐（圣餐）是门诺弟兄会所恪守的第二大神圣礼仪记号。正如洗礼一样，主餐被深深理解为一个神圣的**圣约事件（Covenant Event）**：如果说洗礼是跨入圣约共同体的门槛记号，那么主的晚餐则是全教会作为基督奥秘身体、永保合一团契的忠贞记号！
+
+正如洗礼一样，主餐的真理在激进宗教改革破晓及随后门诺弟兄会诞生的过程中，起到了至关重要的枢纽作用。瑞士重洗派先贤与门诺·西蒙斯完全一致确信：圣餐中的饼与杯，乃是基督身体与宝血的圣洁记号。他们毫不妥协地彻底摒弃了天主教关于饼酒瞬间化为基督实质血肉的“化质说”（Transubstantiation），同时也拒绝了路德宗主张饼酒之中带有基督物理临在的“同质说”（Consubstantiation）。
+
+在1860年的沙皇俄国，门诺弟兄会先贤在教堂之外于民宅中庄严同守主餐，这一惊世骇俗的举动直接成为了他们与传统母会彻底决裂、创建门诺弟兄会的导火索。弟兄们坚信：主的圣餐是专门为忠心作门徒的得救圣徒所预备的属天筵席，决不可与那些公开纵情罪中、毫无敬虔生活见证的挂名教友同吃同喝！他们切切渴慕在家庭中以更为频繁、亲密且纯全无伪的方式守主餐。
+
+一系列恢宏深邃的圣经真理，塑造了门诺弟兄会对主餐的理解：
+1. **饼与杯大能彰显了耶稣在十字架上的彻底舍命代赎**。门诺弟兄会领会基督的代赎之死，既是无罪圣洁的代罪羔羊为我们偿清了死亡的罪债，更是基督在十字架上彻底粉碎幽暗魔鬼权势的伟大得胜，也是信徒在世舍己效法的终生榜样！
+2. **“新约的杯”牢牢聚焦于圣约的主题**（马太福音 26:26-29；哥林多前书 11:23-26）。正如基督肉身的身体唯独是一个，这个圣约共同体同样构成了一个不可分割的身体。与基督、与众肢体之间水乳交融的亲密团契交通（Koinonia），正是上帝属灵子民的鲜明印记；**主的晚餐是全教会至死合一的圣洁象征！**
+3. **主餐满怀盼望地前瞻着未来的荣耀凯旋**——即在基督荣耀再临时，基督与祂所救赎的圣洁新妇在天国弥赛亚婚筵上的大团圆！正如使徒保罗在哥林多前书11章所叮咛的：“你们每逢吃这饼，喝这杯，是宣告主的死，直等到祂来！”
+
+关于何人有资格领受圣餐，在历史上曾经历过诸多神学探讨。早期门诺弟兄会主要实行严格的“闭门圣餐”（Closed Communion，仅限已受全身浸礼的门诺弟兄会会友领受）；而在二十世纪八十与九十年代，面对更广泛的福音派弟兄姊妹的融入，门诺弟兄会堂会逐渐向一切真心认信耶稣为主的重生成徒敞开怀抱。
+
+今天，《门诺弟兄会信仰宣言》第九条极其稳健平衡地阐明：主餐的参与资格广泛向**“凡真正明白主餐神圣意义、在言语和日常生活中公开认信耶稣基督为主、甘心向其所在堂会彼此问责、并在神在人面前活在纯全和睦关系之中的一切信徒”**敞开！同时，宣言严肃确认新约圣经的标准典范乃是“先受洗归主，后同领圣餐”。每次走向主餐桌前，必须伴随着诚实无伪的省察己心；当教会内部出现人际摩擦或罪恶破口时，全会众有责任先在彼此认罪、真诚悔改与爱中和睦之后，方可同赴圣席。
+
+关于守圣餐的频率，门诺弟兄会并无死板硬性的法令，通常各堂会依惯例按月度或季度举行；而在近年来，许多堂会深感主餐对滋养信徒属灵生命具有无与伦比的重要性，已逐步调整为隔周甚至每周举行。门诺弟兄会坚决不赞同新婚夫妇在婚礼仪式上举行私密性的“两人小圣餐”，因为圣餐在本质上是一项唯属于整个教会大家庭的圣约盛事！
+
+此外，另一项与主餐紧密相连的古老圣约礼仪——**洗脚礼（Footwashing）**——在门诺弟兄会的历史长河中留下了不可磨灭的深情印记。尽管在今天的部分堂会中已不再例行举行，但在青年一代信徒中，洗脚礼作为彰显彼此相爱与合一的象征正在强势复兴。洗脚礼是一个极其动人的敬拜时刻，它深刻提醒着神家里的每一个人：“必须在教会肢体关系中，时刻彰显基督那降卑自己、舍己服事、以及洗净彼此尘劳的舍己大爱”（《信仰宣言》第六条）！
+
+#### 过肢体相爱的家庭生活：恩赐与作门徒 (Living as a Family)
+
+每一个家庭都有其周而复始的日常生活规律与温馨传统。对于门诺弟兄会这个大家庭而言，**生命在作耶稣基督忠贞门徒中的健康成长，是我们的至高终极目标！**
+
+门诺弟兄会坚信：门徒生命的成长，唯有置身于活生生的教会圣徒共同体中方能得到最完全的滋养。教会存在的首要宗旨，就是全力牧养培育我们的每一位成员，活出忠信跟从耶稣的圣洁一生。崇拜赞美、团契相交、深研真道与外展宣教，共同交织促进着整个门徒共同体的生生不息。
+
+为了装备圣徒各尽其职，上帝借着保惠师圣灵将丰富多彩的属灵恩赐满溢地赏赐给我们。门诺弟兄会坚信：新约圣经中所列出的一切属灵恩赐，在今天的世代中依然真实大能地运作运行！我们更深信，新约圣经所记录的恩赐清单并非封闭穷尽的，圣灵在今天同样能将音乐、艺术创作等现代才干转化为大能造就教会的属灵恩赐。使用一切恩赐（尤其是方言、医病与先知预言等神迹性记号恩赐）的绝对检验标准，在于它们是否完完全全为了**造就、坚固并建造整个基督身体大家庭**！
+
+#### 会众治理体制与跨堂会联会架构 (Congregational Polity)
+
+在教会体制上，门诺弟兄会并未推行死板划一的中央集权结构，各地方堂会有权根据自身处境确立合乎圣经的领袖领导架构。绝大多数门诺弟兄会堂会由敬虔的长老会（Elder Board）或堂会理事会（Church Council）负责教牧治理与属灵守望；而在一切重大关乎教会方向的重大决策上，全体会众均享有充分发言与投票表决的神圣权利。
+
+在门诺弟兄会诞生之初，先贤们为了坚决抵制老教会中教职阶层的专横独裁与属灵瞎眼，基于**“信徒皆祭司”（Priesthood of all believers）**的圣经真理，极其谨慎地防止任何个别传道人垄断绝对权力。门诺弟兄会深切领会：强有力且满有属天智慧的教牧领导，必须与全会众的广泛积极参与保持健康的张力平衡！
+
+与此同时，先贤们以卓越的属灵远见，迅速确立了各地方堂会绝不能各自为政、孤军奋战的原则，将众多地方堂会紧密联合为大区及全国性的**“教区联会”（Conferences）**。各地方堂会拥有充分的自主权开展本地牧养事工；而在植堂开拓、普世宣教、高等神学教育、全教区青少年培灵盛会、教牧领袖培育、以及教牧圣职按立与资质认证等重大战略圣工上，全国家庭则心怀同一异象，倾注全力携手同工！
+
+在个人主义与堂会地方孤立主义甚嚣尘上的当代浪潮中，我们必须更加警醒守护这一历经数百年风雨淬炼的宝贵家庭联合传统，使我们在基督里始终同心合意、奔向标杆！
+
+
+---
+
+### English Original Text
+
+# Chapter 5: The New Testament Church
+
+
+<!-- Page 57 -->
+
+
+### CHAPTER 5
+
+
+### The New Testament Church
+
+Tracing family trees is easier than ever. Through ancestry.com or FamilySearch.org individuals can access distant relatives’ birth and immigration records. Genealogy has grown so popular as a hobby that in parts of North America it is second only to gardening. As Mennonite Brethren, we too like to trace our family back to its roots. We see the first-century church as the model for our life together as believers. We study the book of Acts and Paul’s letters for clues about family relations. The Gospels also direct us to what Jesus, our eldest brother, has to tell us about family life. Interest in our New Testament origins sparks a second interest. How are we related to our closest church family members? In this chapter, we want to reflect on the New Testament church model and some of the family traditions that tie us together as Mennonite Brethren. Just as some biological families stand out because they share the trait of red hair or unusual musical talents, so we as Mennonite Brethren are known for family values that are prominent, perhaps even unique.
+
+
+<!-- Page 58 -->
+
+Growing the Family The New Testament teaches that good family life is essential for a healthy relationship with the Father. Just as babies are nurtured best when they are born into a family, so evangelism and conversion are family affairs spiritually. Our Confession of Faith (Article 7, “Mission of the Church”) points to twin truths regarding evangelism. First, evangelism is the responsibility of every believer: “The Holy Spirit empowers every Christian to witness to God’s salvation.” Second, evangelism is a function of our life as a family. “The church as a body witnesses to God’s reign in the world. By its life as a redeemed and separated community the church reveals God’s saving purposes to the world.” The New Testament church was an evangelistic church. The book of Acts repeatedly records astonishing numbers of people who repent, believe, are baptized and join the family of God. Pentecost, “the birthday of the church,” was an event of corporate witness (Acts 2:2, 14). The 16th century Anabaptist church, as we saw earlier, was keenly evangelistic. The 19th century Russian Mennonite awakening which produced the Mennonite Brethren church was evangelistic in character. The contemporary Mennonite Brethren church continues to make evangelism a focus. Healthy Mennonite Brethren congregations continue to plan local outreach through friendship evangelism, special events, children and youth
+
+
+<!-- Page 59 -->
+
+programs and ministries to people in need in their circles of influence. As a larger family, Mennonite Brethren plant churches in North America and around the world.
+
+
+### Redemptive Discipline
+
+In the New Testament church family, discipline nurtured healthy relationships between spiritual siblings and with God. Our Confession of Faith (Article 6) describes the Mennonite Brethren interpretation of church discipline: its purpose is to win the erring sibling back into fellowship (Matthew 18:15-20). The early Anabaptists described active church discipline as one act that distinguished them from the state church. The 19th century revivalists also were active in the practice of discipline. They chided the “mother church” for failing to discipline pastors and other members for drunkenness and other public expressions of unfaithfulness. Mennonite Brethren limited the celebration of the Lord’s Supper to those who were willing to live within a covenant of faithfulness. Since the 1860s, the Mennonite Brethren church has struggled to find balance in the practice of church discipline. Church records show that conference proceedings often dealt with questions of ethical practice. In the early years, the conference prohibited things such as carrying life insurance, joking and jesting among members, attending circuses and theatres, viewing television and
+
+
+<!-- Page 60 -->
+
+permitting women to worship without proper head covering. Many issues of earlier times appear legalistic to contemporary observers, but they demonstrate the seriousness with which Mennonite Brethren have taken the call to holiness. The Mennonite Brethren church continues to hold expectations about behavior that fits a follower of Christ. Our Confession of Faith (Article 12) forbids the swearing of oaths (Matthew 5:33-38; cf. James 5:12), participation in secret societies and behaviors “which threaten to compromise Christian integrity.” While rules such as these may seem to border on legalism, they also serve as a reminder that the believer is not to conform to the world. One Mennonite scholar declared that following Jesus means imitating Christ in one, and only one, dimension: radical social nonconformity. Today, Mennonite Brethren struggle with knowing how to be witnesses to the gospel of peace in a society that values institutional violence, affluence and self-gratification. Rejection of abortion and sexual license are values Mennonite Brethren share with other evangelical Christians. We continue to struggle toward consensus on issues such as capital punishment, racism, sharing leadership as men and women and the accumulation of wealth.
+
+
+<!-- Page 61 -->
+
+Baptism and the Lord’s Supper Every family has rites and passages that define membership. The Mennonite Brethren church celebrates two rites—baptism and the Lord’s Supper, which we call “ordinances” or “signs.” Using the term “sign” distinguishes Mennonite Brethren from those who emphasize only God’s mediating grace in these acts. Mennonite Brethren are also distinguished from those who emphasize that these rites symbolize only an internal reality. The notion of “sign” is a biblical term, pointing to God’s saving acts (Exodus 10:1; Acts 4:16) and to human action (Exodus 12:13). Baptism is a sign of commitment, and the Lord’s Supper is a sign of covenant loyalty.
+
+
+### Baptism
+
+From the beginning of the New Testament church, one act publicly identified those who had been adopted into the family of God. Believers were baptized upon confession of faith and were “added to the number” of those who composed the local congregation. Baptism is the rite of passage into the covenant community. The Great Commission (Matthew 28:19-20) has a single command: “make disciples of all nations.” Two explanatory phrases define disciple making: “baptizing them” and “teaching them to obey my commands.” Why is baptism so important?
+
+
+<!-- Page 62 -->
+
+First, baptism is “a sign of incorporation into the body of Christ as expressed in the local church” (Confession of Faith, Article 8). Biblically, baptism is described as “into Christ” (Romans 6:3; Galatians 3:27; 1 Corinthians 10:2- 4) and “into one body” (1 Corinthians 12:13 NRSV). The phrase “into Christ” describes incorporation into the community of which Jesus is the head. Old distinctions of class, race and gender are erased. Baptism unites very different people, even former enemies, into one body. On Pentecost, those who accepted the evangelistic message “were baptized and added to their number.” Acts 2:42-47 describes church life following Pentecost: “...the Lord added to their number daily those who were being saved” (v. 47). Both references link baptism to inclusion in the church. One cannot belong to Christ without belonging to the church. One cannot belong to an invisible, universal church without a simultaneous commitment to a local, visible congregation. Second, baptism means cleansing. In the words of the confession, “Baptism is a sign of having been cleansed from sin. That a person has repented of sins, received forgiveness of sins, died with Christ to sin...” Immoral behavior is inappropriate for those who have been washed and sanctified through baptism (1 Corinthians 6:11). Christ has cleansed the church to make her pure, holy and without blemish (Ephesians 5:26). The cleansing power of the cross, which is significant in baptism, turns believers away from their old way of life.
+
+
+<!-- Page 63 -->
+
+Third, baptism symbolizes the new life of salvation. “We believe that when people receive God’s gift of salvation, they are baptized [They have been] raised to newness of life.” Baptism is associated with new life, life in the kingdom of God and fullness of life in Christ (Colossians 2:12). We are buried with Christ in his death and raised with him to newness of life. Baptism is offensive to modern sensibilities in several ways. First, it is an ancient rite. Baptism was a common first century marker for conversion to Christianity, Judaism and other religions and may seem like a holdover today. Second, baptism marks a clear break from the past. In regions where Christians are persecuted, it is baptism that defines the change of commitment. Some people of other religions have accepted the fact that someone prayed a “Jesus-in-my-heart” prayer, yet have ostracized, perhaps even persecuted, someone for being baptized into the community of Christ’s followers. Third, baptism provokes controversy because it demands commitment to the family of Jesus. In North American communities that lack clear teaching about baptism, it is the commitment to a specific church family that sparks controversy. Some prefer to say yes to Jesus and his universal, invisible body but to say no to the body of Christ in a specific community. Just as the resurrection body of Christ had real physicality, so the body of believers is always a community of real flesh-and-blood people.
+
+
+<!-- Page 64 -->
+
+Historically, for Anabaptists, this biblical understanding was very costly. Following the Roman Catholic lead, mainline Reformation churches baptized infants to wash away original sin and to bring them within the covenant community. Anabaptists agreed that baptism was the rite of incorporation into the covenant community. But they disagreed that the faith of the parents or the church was sufficient for the event to have meaning. Instead, the Anabaptists taught that each member needed to make a public confession of faith in Jesus to be saved and to join the community of the redeemed. As we have seen in chapter 1, this view of baptism led to bloody persecution. The 19th century Mennonite Brethren reformers insisted on a return to believers baptism. Even though the Mennonite church in the colonies did not baptize infants, citizenship was restricted to baptized church members. Mennonite Brethren reformers were critical of other Mennonite churches that prioritized reciting memorized catechisms to the neglect of “a genuine, loving faith” brought about by the Holy Spirit. The birth of the Mennonite Brethren church forced the community to develop its own baptismal practices. How would the new church practice believers baptism? The issue of eligibility was of first and foremost concern. They concluded that baptism is for “those who confess Jesus Christ as Lord and Savior and commit themselves to follow Christ,…for those who understand its meaning,
+
+
+<!-- Page 65 -->
+
+are able to be accountable to Christ and the church, and voluntarily request it...” (Article 8). Candidates for baptism must take the initiative in requesting baptism. The one requesting baptism is given instruction regarding its meaning and the ensuing commitment to the local church. Newly baptized believers commit themselves to the practice of mutual accountability for disciplined obedience. Baptism is seen as a commitment to the lordship of Christ. Mennonite Brethren congregations have struggled, at times, with the appropriate age for baptism. There is no hard-and-fast rule, but the wording of our confession is meant to encourage young believers to wait for baptism until they can function as accountable church members. Generally, early adolescence has been seen as the age of accountability. By the time they reach adolescence, most prospective baptismal candidates can understand the concepts inherent in baptism and can legitimately confess that they will renounce allegiance with the world in return for membership in God’s family. Another question for the emerging Mennonite Brethren church was that of baptismal mode. Mennonite Brethren settled on immersion. The Krimmer Mennonite Brethren branch had the distinction of baptizing forwards (usually in running water). Today Mennonite Brethren churches are free to immerse in water that best suits the purpose of the event. Some congregations use baptisteries; others find lakes or rivers; some employ tanks, tubs or swimming
+
+
+<!-- Page 66 -->
+
+pools. Most congregations follow baptism with formal reception of the newly baptized members into the church and with the celebration of the Lord’s Supper.
+
+
+### The Lord’s Supper
+
+The Lord’s Supper is the second ordinance or sign practiced by the Mennonite Brethren church. Like baptism, the Lord’s Supper is understood to be a covenant event. If baptism is the sign of entry into the covenant community, the Lord’s Supper is the sign of unity with the body of Christ. Like baptism, the meaning of the Lord’s Supper played a significant role in the origins of Anabaptism and, later, of the Mennonite Brethren church. The Swiss Anabaptists and Menno Simons agreed that the bread and the cup were signs of Christ’s body and blood. They rejected the Roman Catholic belief that the bread and the cup were changed into Christ’s body and blood (transubstantiation) and the Lutheran doctrine that the elements contained the spiritual presence of Christ (consubstantiation). In Russia in 1860, the celebration of the Lord’s Supper outside a church building was an act of defiance that eventually led participants toward separation from the Mennonite church and the founding of the Mennonite Brethren. The Mennonite Brethren held that the Lord’s Supper is an event reserved for faithful disciples and should not be celebrated with those who rejected a
+
+
+<!-- Page 67 -->
+
+godly lifestyle. Further, they requested communion in their homes in order to celebrate more frequently, more intimately and in a context of greater faithfulness. A series of biblical themes informs Mennonite Brethren understanding of the Lord’s Supper. First, the bread and the cup point to Jesus’ sacrificial death on the cross. Mennonite Brethren understand Jesus’ atoning death as the payment of the death penalty by the innocent victim, as Christ’s defeat of the enemy at the cross and as a model for how Christians are to live. Second, the phrase “the cup of the new covenant” centers on the covenant theme (Matthew 26:26-29; Mark 14:22-25; Luke 22:14-22; 1 Corinthians 11:23-26). As Christ’s physical body is one, so the covenant community forms a single body. Fellowship, the product of intimate relationships with Christ and with one another, marks the people of God. The Lord’s Supper symbolizes unity. Third, the Supper anticipates the future, that is, the fulfillment of the reign of God at the messianic banquet celebrated with his redeemed church. In 1 Corinthians 11, Paul reminds the church that “you proclaim the Lord’s death until he comes” with the Supper. The Supper looks forward to the great marriage supper of the Lamb at the end of the age. The question of who should be allowed to participate in communion has often been controversial. Are only baptized believers eligible? Only those baptized as
+
+
+<!-- Page 68 -->
+
+Mennonite Brethren? Do Mennonite Brethren hold to “closed” or “open” communion? In the 1980s and 1990s, many Mennonite Brethren congregations began offering communion to anyone who confessed Jesus as Savior. The new openness reflected an interest in including believers who had not yet formalized their membership, believers who had been baptized as infants but were unwilling to be rebaptized and children too young for baptism. Recognizing the practice of the church, the Confession of Faith speaks of extending participation in the Lord’s Supper to “all those who understand its meaning, confess Jesus Christ as Lord in word and life, are accountable to their congregation and are living in right relationship with God and others” (Article 9). Our confession also acknowledges that the typical New Testament pattern was that baptism preceded participation in the Lord’s Supper. Application of this biblical principal calls for parents and church leaders to work together to ensure faithful participation in this covenant act. The invitation to participation must always be coupled with a call to self-examination. The church is responsible to practice discipline, repentance, confession and renewal when there is a breach in relationships within the congregation. The Mennonite Brethren church has no established directive regarding frequency of communion. Practice generally varies from quarterly to monthly commemoration. In the past, Mennonite Brethren
+
+
+<!-- Page 69 -->
+
+shied away from weekly participation lest the event become superficial and hurried. Now, however, some congregations are celebrating communion every other week or even weekly because of its great significance in the church’s life with Christ. Mennonite Brethren believe that the private celebration of the Lord’s Supper by bridal couples to symbolize the marriage union is inconsistent with communion’s meaning as a uniquely church event. The New Testament practice of breaking bread together daily and weekly in homes was a powerful witness to their intimate fellowship. The need to balance the New Testament emphasis on the Lord’s Supper as a church event and the first century pattern of house churches suggests further reflection together on how the church can best remember the Lord’s death, recognize the Lord’s body and anticipate the Lord’s return. One other covenant event—footwashing—has historically been associated with Mennonite Brethren church life. Although it is no longer regularly practiced in most Mennonite Brethren congregations, the rite is increasingly popular among younger members as an expression of unity. Footwashing can be a worship event reminding family members “of the humility, loving service and personal cleansing that is to characterize the relationship of members within the church” (Article 6).
+
+
+<!-- Page 70 -->
+
+Living as a Family Every family develops routines and traditions. These include weekly household chores, Christmas preparations and family vacations. We have been looking at the traditions associated with the special family events, but now we turn to our understanding of how the church is nurtured from day-to-day and week-to-week. For the Mennonite Brethren family, growth as disciples of Jesus is our primary aim. Mennonite Brethren hold that discipleship is nurtured within the church community. The primary purpose of church life, we believe, is to nurture our members to live as faithful followers of Jesus. Worship, fellowship, Bible study and outreach all contribute to the growth of the community of disciples. God equips us for service by empowering us with the gifts of the Holy Spirit. Mennonite Brethren believe that the spiritual gifts listed in the New Testament continue to be operative today. We also believe that, since no New Testament list is complete, the Spirit may empower the use of other abilities, such as music or drama, as spiritual gifts. The key to using all the gifts, especially the so- called charismatic or sign gifts (speaking in tongues, healing and prophecy), is that they build up the family as a whole. While some Mennonite Brethren encourage the development of tongues as a personal prayer language, more emphasis is usually placed on other gifts.
+
+
+<!-- Page 71 -->
+
+Congregational Polity Mennonite Brethren do not have a prescribed congregational structure. Local bodies choose their own form of leadership structure. An elder board or a church council governs most Mennonite Brethren churches. The congregation is also given a voice in major decisions. Increasingly, larger congregations look to the pastoral staff for initiative in planning. At its birth, the Mennonite Brethren church reacted against what it perceived to be arbitrary and unspiritual pastoral leadership in the mother church. Insisting on the priesthood of all believers, the church was cautious about giving pastors too much authority. Mennonite Brethren recognized the need for wise, strong leadership balanced by congregational participation. They also quickly recognized the need to unite in larger inter-congregational groups, called conferences. Congregations set their own direction for local ministry, but they work together in these regional and national conferences to do church planting, world mission, higher education, larger youth events, pastoral leadership development, nurture and credentialing. Currently, the values of localism and individualism are challenging that healthy tradition. Commitment to the larger family groupings will demand continued vigilance by church leaders and fellowshipping congregations.
+
+
+---
+
+# 第六章：缔造和平
+## *Chapter 6: Peacemaking*
+
+> **归属分部**：第二部分：家族的特质 (Part Two: Characteristics of the Family)
+
+### 中文译文
+
+# 第 6 章：缔造和平 (Chapter 6: Peacemaking)
+
+### 第 6 章：缔造和平 (Peacemaking)
+
+不朽巨著《殉道者之镜》（*Martyrs Mirror*）泣血记载了八百多位重洗派先贤为了坚守福音真道而英勇殉道的悲壮史诗。其中最动人心魄的见证之一，当属迪克·威廉斯（Dirk Willems）。威廉斯因坚守重洗派信仰被捕下狱并被判处死刑；在仅靠粗劣面包和清水维生而骨瘦如柴的绝境中，他奇迹般从二楼牢房破窗脱逃。一名荷枪实弹的狱卒在后紧追不舍，威廉斯拼尽全力踏过一片结了薄冰的池塘奔向自由。身材魁梧、衣食优渥的狱卒随后追赶，却瞬间压碎薄冰掉入刺骨的冰窟之中，发出绝望的濒死求救呼号。
+
+此时，已成功踏上对岸安全之地的威廉斯，是这荒野中唯一听见呼救的人。在基督那舍己之爱的强烈催逼之下，威廉斯毫不犹豫地毅然转身踏上薄冰，冒着生命危险将溺水的死敌从冰窟深渊中救拔上岸！而这名捡回性命的狱卒在长官的严令下，最终恩将仇报地将威廉斯重新逮捕。不久之后，这位满怀基督舍己之爱的义人，被残酷地绑上火刑柱活活烧死（《殉道者之镜》，741–742页）。
+
+一个发生在更近现代、以基督舍己之爱坦然面对暴力枪口的真实见证，发生在刚果民主共和国首都金沙萨。1997年的一个主日清晨，门诺弟兄会领袖帕基萨·奇米卡（Pakisa Tshimika）在教会遇见了青年贝特朗（Bertrand）。贝特朗当时刚从中非共和国九死一生逃亡而来，他在母国因勇敢揭露选举舞弊而惨遭无辜下狱。当时刚果军政府正暗中密谋绑架贝特朗，企图将其秘密遣返回国执行死刑。
+
+当帕基萨获悉这一险恶阴谋后，他与全家人毅然决然决定：在家中为贝特朗提供庇护之所！他们深知，一旦贝特朗在此被搜出，全家必遭株连灭门。果不其然，数日后，全副武装的总统府秘密特工气势汹汹地包围了帕基萨的住所，用枪口顶住他的胸膛发出死亡威胁。面对荷枪实弹的特工，帕基萨平静微笑着邀请这位手持冲锋枪的特工进屋喝热茶。
+
+在屋内，帕基萨坦然向特工分享了耶稣基督舍己大爱的信息，却坚决拒绝交出藏身屋内的贝特朗。帕基萨从容地对特工说：“请转告差遣你前来的长官——他们若想带走贝特朗，除非先踏过我帕基萨的尸体！”在随后的数周时间里，特工每天都上门拔枪恐吓帕基萨及其家人；而帕基萨一家始终以基督丰盛的款待与爱心相迎。最终，上帝奇妙开路，贝特朗安全脱险并成功逃往一个友好的西非国家。
+
+威廉斯与帕基萨的英雄见证，淋漓尽致地诠释了门诺弟兄会关于**“缔造和平”（Peacemaking）**的神圣神学认信：
+- **缔造和平是积极主动、满怀福音烈火、且完完全全以耶稣基督为绝对圆心的！**
+- 它绝非消极懦弱的妥协退让，而是对一切暴力报复的断然弃绝！
+- 它的神圣起点，始于我们在基督里得享与上帝和好的属天平安；
+- 对于每一个生活在彼此扶持的信仰共同体中的信徒而言，缔造和平是一条极其现实、大有能力的生命活路！
+
+主耶稣深切呼召我们加入“和平缔造者”的神圣家族。在祂宣告天国大宪章的“登山宝训”开篇，耶稣宣告了著名的“八福”（马太福音 5:3-12）。在八福之中，主耶稣亲自赐福给和平的缔造者：“使人和睦的人有福了！因为他们必称为神的儿子。”通过赋予他们“神的儿子”这一崇高称谓，耶稣宣告：**和平缔造者在性情与作为上最像上帝自己！**
+
+紧接着，主耶稣提供了一系列生活案例，生动阐明祂如何借着一种“更高的义”来成全律法。那六段震撼人心的“只是我告诉你们”的对比教导（马太福音 5:17-48），深刻展现了耶稣如何将死板字句的律法，升华转变为积极缔造和平的活泼之义。
+
+耶稣关于彻底弃绝暴力报复的圣训，构成了重洗派数百年和平信念的基石。尽管外界习惯于将这一立场贴上“和平主义”（Pacifism）或“非抵抗”（Nonresistance）的标签，但耶稣在这里所呼召的，实则是一种极其刚强的“抗争”！然而正如神学家沃尔特·温克（Walter Wink）在其经典论文《第三条道路》（*The Third Way*）中所精辟剖析的：**耶稣所开辟的道路，是以“非暴力”去彻底抵制、征服并瓦解罪恶！**
+
+耶稣的原话最准确的领会应当是：“绝不要用暴力去回应暴力！”或者说：“绝不要在对抗邪恶的争战中使用邪恶的手段！”
+
+若能深刻明白耶稣讲道时的中东文化语境，我们便能洞察祂所举范例的无穷智慧：当耶稣教导我们“有人打你的右脸，连左脸也转过来由他打”时，祂所倡导的是一种彻底超越“迎头拼命”或“懦弱逃跑”两极的非暴力智慧战略！在古代社会，打人的右脸必须是用右手手背击打——这是上等人对下等人施加的极具侮辱性的羞辱耳光。如果受辱者动武还手，无异于以卵击石、自寻死路；如果低头任人宰割，则是怯懦妥协；耶稣对这两者皆予以否决！耶稣命令那受辱的下等人挺直腰板、“把左脸也转过来”——这神圣的举动瞬间在道德上将施暴者逼入绝境：因为要打左脸，施暴者必须握紧拳头平视击打，这无形中迫使施暴者不得不将受害者视作与自己完全平等的尊严之人！在这一范例及随后的教导中，耶稣呼召门徒运用属天的幽默、创意、胆识与生命厚度，以爱去吸收化解暴力，从而彻底击溃暴力的邪恶权势！
+
+在第六段对比教导中（马太福音 5:43-48），积极缔造和平的呼召达到了最高潮。耶稣彻底颠覆了世俗所谓的“当爱你的邻舍，恨你的仇敌”的陈规，发出震动宇宙的神圣挑战：“只是我告诉你们，要爱你们的仇敌，为那逼迫你们的祷告！”耶稣在这里描绘的是一种宏大的福音宣教战略：跟从基督的人，旨在借着舍己的爱，将世俗的仇敌彻底转化为基督里的挚友！这种生活方式虽然充满风险、要求极高、且必须付上牺牲的代价，但这就是基督自己的十字架道路！
+
+要让这种激进缔造和平的神圣呼召真正融入基督徒的实际生活，唯一的途径就是上帝的大家庭共同立约，在生活中携手并肩作和平的使者。新约使徒深刻领会：缔造和平是构建上帝子民共同体的至高指南。耶稣道成肉身降世，正是为了修复人与上帝之间早已破裂的仇敌关系；耶稣将原本世代血战仇杀的各方族群，在基督里重塑为一个崭新的合一家庭（加拉太书 3:26-28）；祂拆毁了阻隔在人与人之间中间隔断的墙，使原本的仇敌在基督的宝血中与神和好、彼此和睦，成为永生神家里的弟兄与姊妹（以弗所书 2:11-22）。
+
+新约书信生动地将信徒共同体的成员描绘为“使人与神和好的使者”：他们以爱服事仇敌（罗马书 12:20；13:8-10）、以善报恶（罗马书 12:17, 21；彼得前书 3:9）、竭力与众人和睦（罗马书 12:18；彼得前书 3:11），并至死效法那位在受苦时“口不出恶言、绝不还手报复”的基督榜样（彼得前书 2:21-25）。唯有置身于这和平的圣约团契之中，信徒方能领受元首基督与圣灵所赐下的大能，完满履行这“使人与神和好的神圣职分”（哥林多后书 5:11-21）。
+
+#### 第三千禧年的和平缔造者 (Third Millennium Peacemakers)
+
+《门诺弟兄会信仰宣言》第十三条庄严宣告：
+> **“我们效法基督的榜样并遵行祂爱上帝、爱邻舍甚至爱仇敌的命令，在一切人际关系中积极追求和平与和好……作为和平缔造者，我们竭力缓解苦难、化解争端、促进公义，并努力终结一切暴力与战争，使世人能清晰得见基督舍己大爱的真实彰显！”**
+
+门诺弟兄会将基督关于缔造和平的训诲，生动践行在极为广阔的现实处境中：
+
+**首先，缔造和平始于我们的骨肉家庭**。教会必须身先士卒，将基督的属天和平带入每一个家庭宅邸，挺身而出成为遭受家暴虐待的配偶与受虐儿童的刚强保护者，教导信徒在家庭冲突中坚决摈弃一切言语与肢体暴力，以圣经真理在爱中和解。门诺弟兄会坚决反对针对整个人类群体中任何脆弱肢体的暴力侵害。在《信仰宣言》第十四条中，我们庄严宣告：“胎儿、残障人士、贫困者、衰老者以及临终者，在面对社会不公时尤为脆弱无助；基督至圣地呼召我们必须全力关顾保护这些无力自卫的弱小群体！”在加利福尼亚州弗雷斯诺（Fresno），门诺弟兄会走在全社会最前沿，领导创办了“中央谷地正义联盟”（Central Valley Justice Coalition），营救了无数深陷现代人口贩卖与性奴役深渊的绝望受害者。
+
+**其次，面对堂会内部的摩擦**，门诺弟兄会深刻认识到自己同样无法天然免疫于人际冲突。教会受召必须作和平的避风港，在诚实、健康、充满爱心的坦诚交通中化解分歧、达成深层和睦。各堂会建立了明确的圣约守则，倡导坦率诚恳的爱心对话，坚决抵制任何背后毁谤与论断；同时为教牧同工制定了极为严谨的职业性道德守则，彻底杜绝任何形式的教牧权力滥用与情感剥削。
+
+**在更广泛的社会层面**，门诺弟兄会各堂会忠心效法基督，积极投身于调解邻里纠纷、缓和种族矛盾冲突、以及推动犯罪受害者与加害者之间的“恢复性司法”（Restitution and Reconciliation）。2018年，美国门诺弟兄会总会（USMB）全国正式代表大会以压倒性多数通过严正决议案，呼吁美国联邦政府立即废除在边境执法过程中强行将移民骨肉家庭拆散的残忍政策。大批门诺弟兄会平信徒投身于专业调解机构，促成深层和解；大力推进监狱探访、服刑人员属灵重生与回归社会的改造事工。
+
+在全宗派层面上，门诺弟兄会更是深度参与并主导了多个著名的跨门诺和平事工机构：
+- **门诺中央委员会（MCC）**在北美及全球各大洲，通过系统性的和平教育培训、国际冲突调解斡旋、心理创伤医治、跨宗教桥梁搭建与正义呼吁，持久深耕和平土壤；
+- **门诺灾害救助服务处（MDS）**则在飓风、洪水、火灾等特大自然灾害后，迅速组织数以万计的基督徒志愿者奔赴灾区，为贫困受灾家庭无偿重建家园。
+
+这种源自基督的和平之光，由内而外层层扩散：始于我们个人与上帝关系的修复，继而进入至亲家人与挚友，随后辐射至职场与邻舍，最终坦然面对整个世界的风云变幻！
+
+#### 面对战争与国家军役的神圣抉择 (Responding to War & Military Service)
+
+当和平的波纹触及世界地缘政治时，必然引发门诺弟兄会对于“基督徒当如何回应战争”的根本考量。门诺弟兄会坚信：耶稣关于“爱仇敌”的神圣命令，绝非某种在天下太平时高谈阔论、在战争爆发时便随手抛弃的装饰品；**和平是基督徒终生不可妥协的生命存在方式！**以爱报恨的神圣能力，完全源于我们在基督里领受的新造生命；圣灵借着神家里弟兄姊妹的同心守望，赐予我们在狂澜中坚守信仰的超然胆量。
+
+早期重洗派毫不含糊地教导：“挥舞刀剑杀戮，与基督的教训绝对水火不容！”他们坚决反对国家政权使用武力强加任何宗教信仰。门诺·西蒙斯曾亲眼目睹德国农民战争与明斯特狂热分子企图以武力建立政权而惨遭血洗的灭顶之灾，这一惨痛历史促使他毕生带领信徒毫不动摇地走基督和平的十字架道路。
+
+俄国门诺弟兄会历史上同样在“刀剑”问题上经历过泣血的惨痛教训：在1917年十月革命后的恐怖内战与土匪屠戮中，少数信徒擅自组建了武装自卫民兵（Selbstschutz），结果招致了更具毁灭性的报复浩劫。历史学家约翰·A·托伊斯沉痛记录道，后来的教会总会会议对这一举动进行了严正斥责，将其定性为“不仅在战术上是一场自取灭亡的灾难性大错，更在神学上严重践踏背叛了重洗派数百年纯正的圣经非抵抗原则，必须永远被视为门诺历史上的一处深沉墨黑的伤痛污点”（托伊斯，108–109页）。
+
+面对当代北美门诺弟兄会信徒中关于军役和警务服役的多元现实看法，2013年美国门诺弟兄会总会（USMB）信仰与生命委员会专门召开了全国专题神学研讨大会，深入考量圣经和平教训的当代应用；并于2014年正式通过了全面修订后的《信仰宣言》第十三条。修订后的条文在坦诚面对现实多元处境的同时，毫不含糊地重申了我们对圣经和平信仰的历史性终生委身：
+> “作为和平缔造者，我们竭力缓解苦难、化解争端、促进公义，并努力终结一切暴力与战争，使世人能清晰得见基督舍己大爱的真实彰显。如同其他传统和平教会（Historic Peace Churches）一样，**我们当中的许多人坚定选择不参与任何军事作战，而是全身心投身于各类非军事的替代役爱心服事！**”
+
+门诺弟兄会由衷感谢全能上帝，北美国家政权在法律上正式设立了“良心拒服兵役者”（Conscientious Objectors, CO）的合法权利，并为那些在信仰良心上拒绝拿枪杀人的青年提供了广泛的社会“替代性服役”（Alternative Service）。全宗派教牧同工明确受召：“必须循循善诱地辅导青年一代信徒，将他们的青春与才智甘心奉献于缓解人间苦难、化解世间争端的慈爱服事之中，而绝不要在刀光剑影的军事冲突中拿起毁灭生灵的武器！”（《信仰宣言注释与教牧应用》，150–151页）。
+
+缔造和平更包含了恒切祷告的神圣呼召：跟从耶稣的人天天为那些逼迫仇恨我们的人代祷（马太福音 5:44），为君王和一切在位的世俗掌权者献上恳求与祝祷（提摩太前书 2:2），并切切祈求上帝赐下胆量，使和平的福音在这动荡世代得以放胆广传（歌罗西书 4:4）。祷告正是信徒全副属灵军装中不可或缺的利刃，赋能我们在与这幽暗世界执政掌权者的属灵空前争战中，坚立不摇、得胜有余（以弗所书 6:10-18）！
+
+#### 面对“积极缔造和平”的三大严峻质疑与神圣回应 (Challenges to Active Peacemaking)
+
+在现实世界中，常常有人对将“拒绝参与杀戮”作为上帝家庭的生活方式提出三大尖锐质疑：
+- **质疑一：难道旧约圣经没有明确记载上帝命令以色列民族国家使用刀剑军队发动战争吗？**
+- **质疑二：在真实的现实世界中，这种激进的和平道路真的行得通吗？有任何令人信服的实际见证吗？**
+- **质疑三：当无辜软弱的邻舍面临凶残暴力的生命威胁时，基督徒难道不应当动用致命武力进行保护吗？**
+
+##### 质疑一的神圣回应：旧约争战与新约启示
+有人认为，旧约上帝命令以色列剿灭迦南仇敌的记载，是反对重洗派和平观的铁证。对此，门诺弟兄会给予了四重深邃的圣经回应：
+1. **以基督为圣经诠释的最高峰**：门诺弟兄会阅读圣经的起点是道成肉身的耶稣基督，而非旧约以色列的神权国家政治！耶稣的话语是上帝向人类发出的最清晰、最权威的启示，整本旧约圣经唯有在耶稣基督的生平与十字架光照下才能被正解。耶稣毫无保留地命令门徒必须爱仇敌；对基督而言，每一个神国子民的首要天国国籍唯在天上，在爱仇敌的原则上基督没有向任何交战国国民开出任何豁免特权！
+2. **生命与死亡的终极主权唯独在神手中**：重洗派深刻注意到，上帝与以色列建国的首要神迹作为，正是全权施行大能救赎他们出埃及、过红海（出埃及记 12–15章）。以色列在此过程中完全是被动见证上帝审判与拯救的旁观者；暴虐的埃及法老所遭受的灭顶之灾，完全是上帝公义审判其背叛神圣主权的作为，绝非出于以色列人自己的血气刀剑之功。
+3. **旧约自身深藏着和平的至高轨迹**：诗篇一再歌颂上帝打折弓、断绝枪、焚烧战车的和平救赎（诗篇 37:14-15；46:9）；先知书更是满怀盼望地眺望那万国将刀打成犁头、把枪打成镰刀、不再学习战事的荣耀末世，宣告以色列的终极使命是作列国万邦的和平之光（以赛亚书 2:4；60:1-3）。
+4. **旧约战争的作战模式完全违背任何现代世俗战争的逻辑**：在旧约特定战争记载中，争战胜败完全取决于对神的信靠与吹响号角，而非世俗精良武器（约书亚记 6章；士师记 6–7章；历代志下 20章）；战利品中的战车马匹甚至被神命令直接废除毁坏（约书亚记 11:9；撒母耳记下 8:4），这与现代毁灭性的机械化国家战争有着本质的区别。
+
+值得深思的是，作为替代非抵抗原则的主要基督教伦理——传统“正义战争理论”（Just War Theory）——其初衷同样是立足于新约对和平的渴慕，试图通过设定极其严苛的道德门槛（如严禁杀害非战斗平民、仅作为迫不得已的极刑手段）来极力限制暴力的蔓延，它本身就承认了战争绝非基督徒的崇高理想，而是堕落受造界在两恶相权取其轻时的无奈叹息。
+
+##### 质疑二的神圣回应：和平之道在现实中能行得通吗？
+有些人嘲弄：和平教会的立场难道不是不切实际的空想吗？和平之道在枪口下真的管用吗？
+
+门诺弟兄会由衷感恩在移居国所享受的自由与庇护；然而，真正的非抵抗信仰，坚信**我们的安全保障来自全能的上帝，绝非来自冰冷的枪炮！**
+
+正如当年面对烈火窑炉时断然拒绝跪拜巴比伦帝国金像的但以理三位好友所掷地有声宣告的：“我们所事奉的神能将我们从烈火的窑中救出来……**即或不然**，王啊，你当知道我们决不事奉你的神，也不拜你所立的金像！”（但以理书 3:17-18）。
+
+对门诺弟兄会而言，**对上帝的圣洁忠诚，永远高于苟全性命的世俗自由；顺服上帝的旨意，远比肉体生命本身更为崇高！**因此，我们的伦理抉择从来不取决于世俗的所谓“实用功利效果”；我们之所以躬行和平，绝不是因为这样做能确保我们飞黄腾达、名利双收。
+
+然而，在人类历史上，以爱化解仇恨所结出的奇妙果实数不胜数。让我们见证两个震撼人心的真实历史典范：
+
+**典范一：美国独立战争时期的彼得·米勒**  
+在美国独立战争期间，宾夕法尼亚州一位亲英效忠派分子迈克尔·威特曼（Michael Wittman），曾公然当众将浓痰唾沫啐在门诺教会德高望重的领袖彼得·米勒（Peter Miller）脸上。米勒默默擦干面庞，未发一言，绝不还手报复。数日之后，威特曼因叛国罪被乔治·华盛顿将军的大军抓获并被判处绞刑。米勒获悉消息后，不顾年迈体衰，徒步在严寒中跋涉整整70英里赶赴福吉谷军营，跪倒在华盛顿将军面前恳求赦免死囚威特曼的性命。华盛顿将军大为震惊，问道：“这个威特曼究竟为你做过什么大恩大德，竟值得你甘愿徒步70英里来挽救你朋友的性命？”米勒平静答道：“朋友？报告将军，他是普天之下视我为眼中钉、恨我入骨的至死死敌！”华盛顿将军被这浩瀚的基督之爱深深震撼，热泪盈眶地说道：“既然如此，我谨以总司令的名义签署特赦令——条件是将威特曼全权交由你亲自照料！”米勒与威特曼并肩踏上归途，死敌从此化为了生死挚友！
+
+**典范二：刚果内战中的萨法里·穆塔贝沙**  
+在刚果残酷的现代内战中，年幼的萨法里·穆塔贝沙（Safari Mutabesha）亲眼目睹残暴的反叛军武装分子破门而入，当着全家人的面极其残忍地残杀了他的牧师父亲。在辗转流亡卢旺达与布隆迪后，萨法里在马拉维的难民营中参与服事，加入了一个践行和平、认罪与舍己之爱的青年门诺小组。
+
+一天，当年那位亲手枪杀他父亲的叛军指挥官竟然也流落到了这个难民营！周围所有认出凶手的人因惊恐万分四散奔逃，唯独年轻的萨法里浑身战兢地独自一人穿过空地，缓缓走向这位双手沾满鲜血的刽子手。
+
+萨法里伸出颤抖的双手，泪流满面却深情地说道：“我的弟兄，你好吗？你还记得我吗？我就是当年被你亲手枪杀的那位牧师的亲生儿子……然而，我的弟兄，上帝创造的你是美好的；杀人的不是真正的你，而是潜藏在你里面那个魔鬼的罪性！请来我家住吧，现在正是你领受基督赦免与救恩的神圣时刻！”
+
+这位杀人不眨眼的叛军头目当场扑通跪倒在泥地上失声痛哭！他接受了萨法里的真诚邀请，在萨法里家中同住同吃整整三年之久，生命彻底被基督更新翻转。今天，这位曾经的双手沾满血腥的凶犯，已经成长为**国际门诺弟兄会的一位全职牧师**，向全非洲放胆见证这和解的和平福音！萨法里感慨万千地作证：“正是借着这样的活见证，和平的信息才真正深深扎下了根！世人亲眼看到这福音是有血有肉、带着牙齿的大能真理！全能的上帝正在使用我们，教会正在不断扩张，成千上万的失丧灵魂正在回转归信耶稣基督！”
+
+##### 质疑三的神圣回应：以暴力保护无辜邻舍是爱的体现吗？
+在2013年全美神学研讨大会上，许多教牧同工最深沉的心理关切，正是当无辜弱小遭受残暴袭击时该如何应对。部分信徒认为，为了保护至亲舍己，有时可能不得不动用致命武力制止行凶；而另一批重洗派信徒则切切呼召全教会坚信上帝必有其超然手段约束邪恶、看顾无辜，信徒当甘心效法受苦基督的心志，甚至准备好与无辜受害者一同受难。
+
+二战时期一位老牧师的真实对话，生动揭示了这种处境的深邃厚度：
+当时，美国联邦调查局特工深入调查一位刚从苏联大屠杀逃难至美的门诺弟兄会老牧师。当被逼问其对美国的效忠忠诚度时，老牧师深情答道：“我深爱这片土地。它赐予了我们前所未有的信仰自由。为了这片土地上的人民，我随时甘愿舍弃自己的性命！”
+特工紧追不舍地设下道德陷阱：“那么，倘若暴徒冲进你家，企图当着你的面屠杀你的全家、凌辱你的妻子和女儿，你难道还会坚持所谓‘非抵抗’而不拔枪开火吗？！”
+老牧师饱经风霜的目光穿透特工的灵魂，平静答道：“在那个恐怖的瞬间我究竟会如何做，我无法在此时凭血气空夸海口……但是，尊敬的长官，您是否愿意静下心来，听我向您详细述说——**上一次那场一模一样的惨剧真实发生在我身上时，我究竟是如何走过来的？！**”
+特工顿时目瞪口呆、哑口无言，默默收起卷宗，满怀敬畏地离开了老牧师的家。
+
+#### 教会与国家政权 (Church and State)
+
+与和平神学紧密相连的，是基督徒如何看待国家政权。新修订的《信仰宣言》第十三条庄严宣告：**“因为耶稣基督是唯一的至高之主，祂的神圣榜样与天国诫命，绝对凌驾于世俗狭隘的民族主义与一切人类世俗政权的强制命令之上！”**
+
+虽然门诺弟兄会万分感恩历代世俗政府在法律层面上赐予我们信仰自由与良心豁免，但在《信仰宣言》第十二条中，我们宣告：**我们最首要的公民身份与至死效忠，唯独属于基督永恒的国度，而绝非属于任何地上的世俗国家或社会建制！**
+
+我们承认世俗政府在普遍启示中是上帝维护人类社会基本秩序的神圣设立（罗马书 13:1-5）；在政府促进社会福祉、维护公平法治的范围内，它是在履行神所赋予的职责。然而，一旦世俗政权的命令与上帝的圣洁诫命发生根本冲突时，基督徒义不容辞的圣经责任就是：**“顺从神，不顺从人，是应当的！”**（使徒行传 5:29）。
+
+在传统上，重洗派对世俗政权抱持着清醒的“分别态度”（Separationist Attitude）。这深深植根于1527年《施莱特海姆宣言》所确立的“两重国度秩序”——“一重在基督的完全之内，另一重则在基督的完全之外”。传统观点认为，世俗政府是为这个未蒙救赎的堕落世界而设立的，国家政权必然以强制力、刀剑和暴力来维持恶性平衡，基督徒绝不能介入这种暴力机器的运作。
+
+然而，在当代多元民主社会中，门诺弟兄会日益以更积极的方式参与到各级社区与社会正义的服事之中。《信仰宣言》第十二条明确叮咛我们：“基督徒应当在社会中与众人携手同工，**捍卫弱小者的权益、关顾赤贫之人、促进公义、正直与真理……并放胆在世人面前见证抵制一切贪污腐败、歧视与不公！**”
+
+上帝对我们的呼召，绝不仅限于消极地作一名良心拒服兵役者，而是拥有更宏大的先知性见证胸怀：
+- 在种族张力日益加剧的社会中，我们受召放胆抵制种族歧视、性别歧视与阶级压迫；
+- 在门诺弟兄会宗派内部，我们热烈拥抱日益蓬勃增长的新移民族裔教会，主动打破传统单一特权，与各族裔弟兄姊妹平等分享领导职分与属灵资源；
+- 牢记我们在世上不过是客旅与寄居的属灵“异乡人”，以基督敞开的怀抱热情接待一切移民与寄居的弱势群体（申命记 24:17-18；马太福音 25:31-46；希伯来书 13:1-2）；
+- 深刻省察并坚决抵制那种将“本国世俗经济优渥特权”凌驾于全球其他地区赤贫人口生死之上的拜偶像贪婪诱惑！
+
+最后，门诺弟兄会深信圣经所教导的个人内在诚实与“拒绝起誓”之间有着不可分割的神圣纽带。几个世纪以来，门诺信徒在世俗商界与社会上赢得了“说真话的百姓”的崇高美誉。我们字面遵行主耶稣与雅各使徒关于严禁起誓的圣训（马太福音 5:33-37；雅各书 5:12）——坚决拒绝在世俗公堂或社团中对天发誓！因为我们确信：无论是否在誓言之下，基督徒在任何时刻、任何处境中，口中的言语都必须绝对诚实无伪，是就说是，不是就说不是；以此向全宇宙见证我们对上帝天国的绝对赤诚与忠贞！
+
+
+---
+
+### English Original Text
+
+# Chapter 6: Peacemaking
+
+
+<!-- Page 72 -->
+
+
+### CHAPTER 6
+
+
+### Peacemaking
+
+Martyrs Mirror tells the stories of 800 Anabaptists who died because of their commitment to the good news. One of these, Dirk Willems, was imprisoned for his faith, condemned to death and emaciated by a diet of bread and water, yet escaped from his second story cell. Pursued by a prison guard, Willems raced across a frozen pond to freedom. The guard, well fed and well clothed, fell through the thin ice. He cried out for help. Since Willems alone heard the cry, he felt constrained by the love of Christ to rescue his foe. Willems was subsequently rewarded for his merciful act by being recaptured and burned at the stake (Bragt, 741-42). A more recent story of meeting violent threats with the good news of Jesus took place in Kinshasa, Congo. Pakisa Tshimika met Bertrand in church one morning in 1997. Bertrand had recently escaped from his homeland, the Central African Republic, where he had been unjustly imprisoned for contesting election fraud. The military government in Congo plotted to kidnap Bertrand and return him to his country for execution. When Pakisa
+
+
+<!-- Page 73 -->
+
+became aware of the plot, he and his family decided to provide Bertrand safe haven in their home, knowing that if Bertrand were found, they would also be incriminated. One day, the presidential secret service showed up at Pakisa’s house, threatening violence. Pakisa invited the agent, armed with a machine gun, into his house for tea. Pakisa shared the message of Jesus’ love with the agent but refused to release Bertrand. Pakisa asked the agent to inform the people who sent him that they would have to kill Pakisa first before they could have Bertrand. Agents came to the house every day for weeks to threaten Pakisa and his family. Pakisa responded with loving hospitality. Finally, God opened the door for Bertrand to escape to a friendly West African country. Willems and Pakisa illustrate what Mennonite Brethren believe about peacemaking. Peacemaking is active, evangelistic and Jesus-centered. It is rejection of violent retaliation. It begins when we find peace with God. Peacemaking is a realistic alternative for those who live within the supportive context of the faith community. Jesus calls us to join the peacemaker family. He opens his State of the Kingdom address (the Sermon on the Mount) with the Beatitudes (Matthew 5:3-12). In the Beatitudes, Jesus blesses peacemakers. By calling them “children of God,” Jesus announces that peacemakers are particularly like God. He then offers a series of case studies to illustrate how he came to fulfill the law through a “greater righteousness.” The six contrasting statements
+
+
+<!-- Page 74 -->
+
+show how Jesus transforms a legalistic interpretation of the Law into the active righteousness of peacemaking (Matthew 5:17-48). Jesus’ words against violent retaliation have been the foundation of Anabaptist commitment to peacemaking. Although his strategy has been commonly labeled “pacifism” or “nonresistance,” Jesus does call for resistance. But, as Walter Wink points out in his article, “The Third Way,” Jesus’ form of resistance is the nonviolent resistance of evil. Jesus’ words are best interpreted, “Do not react to violence with violence,” or “Do not use evil in your fight against evil.” Understanding the cultural context of Jesus’ sermon gives fresh insight to Jesus’ examples. When Jesus teaches us to turn the other cheek, he is commending a nonviolent strategy of resistance that avoids either extreme of fight or flight. To strike on the right cheek involves an insulting backhand administered by a superior to an inferior. Violent reaction would be suicidal. No reaction would be cowardly. Jesus commends neither. Instead, Jesus calls the insulted, lower-ranking person to “turn the other cheek.” This has the effect of forcing the aggressor to treat the victim of violence as an equal. In this example, and in those that follow, Jesus calls for the use of humor and creativity—as well as strength—to absorb the violence, to defeat violent evil. Active peacemaking is underscored in the sixth contrasting statement (Matthew 5:43-48). Jesus overturns
+
+
+<!-- Page 75 -->
+
+the conventional principle “love your neighbors but hate your enemies” by challenging us to love even our enemies. Jesus is describing an evangelistic strategy. Pray for your persecutors, Jesus says, reminding us that the Beatitudes are tied closely to the contrasting statements that follow. Peacemaking seeks to fulfill Christ’s mission for the church, to fulfill our Lord’s command to make disciples of all nations (Matthew 28:18-20). Followers of Christ try to turn enemies into friends. This lifestyle is risky, demanding and sacrificial, but it is the way of Christ. The only way that the call to radical peacemaking can become a practical part of the Christian life is for the family of God to covenant to be active peacemakers together. The apostles recognized that peacemaking was the fundamental guiding principle for forming the family of God. Jesus came to restore the broken relationship between God and humanity. Jesus created a new family out of formerly warring factions (Galatians 3:26-28). He tore down the barriers that divide people and created a new family in which enemies have been reconciled to live as brothers and sisters in Christ (Ephesians 2:11-22). The New Testament letters describe members of the believing community as ministers of reconciliation. They serve their enemies (Romans 12:20; 13:8-10), return good for evil (Romans 12:17, 21; 1 Peter 3:9), pursue peace with all people (Romans 12:18; 1 Peter 3:11) and follow the example of the one who refused to retaliate (1 Peter 2:21-25). It is only by living within the community of
+
+
+<!-- Page 76 -->
+
+peace that members are empowered by the Lord and Spirit of the community to fulfill their ministry of reconciliation (2 Corinthians 5:11-21).
+
+
+### Third Millennium Peacemakers
+
+The MB Confession of Faith declares that “We actively pursue peace and reconciliation in all relationships by following Christ’s example and His command to love God, neighbors and even enemies…. As peacemakers we alleviate suffering, reduce strife, promote justice and work to end violence and war, that others may see a demonstration of Christ’s love.” Mennonite Brethren apply Christ’s teachings on peacemaking in many contexts. Peacemaking begins at home. The church is to take the lead in bringing peace to homes and families, to be an advocate on behalf of victims of spousal and child abuse, to foster reconciliation by teaching families to resolve conflict without violence. Mennonite Brethren oppose violence against vulnerable members of the human race. In Article 14, we confess that “the unborn, disabled, poor, aging and dying are particularly vulnerable to...injustices. Christ calls [us] to care for the defenseless.” An example of peacemaking at home is found in Fresno, California, where Mennonite Brethren are at the forefront of the Central Valley Justice Coalition to free those trapped by human trafficking.
+
+
+<!-- Page 77 -->
+
+Mennonite Brethren are not immune to church conflict. The church is called to be a community of peace where the healthy exchange of differences brings reconciliation. MB churches have at times established covenants that encourage the practice of honest, loving exchanges and renounce gossip. MB pastors are guided by a sexual ethics policy that aims to do away with exploitation. MB churches are faithful to Christ by showing leadership in helping to resolve neighborhood disputes, racial tensions and animosity between victims of crimes and their offenders. In 2018, delegates to the USMB National Convention passed a statement calling on the U.S. government to abolish the practice of separating families as part of its border policing. Many Mennonite Brethren work in mediation services to bring people together for restitution and reconciliation. We encourage prison visitation programs as well as rehabilitation and re- entry of prisoners into society. Active peacemaking is also the aim of several inter- Mennonite agencies in which Mennonite Brethren participate. Mennonite Central Committee (MCC) fosters peace in North America and around the world through peace education training, conflict resolution and mediation, trauma healing, inter-faith bridge building and advocacy. Mennonite Disaster Service (MDS) works at peacemaking by serving communities that have faced natural disasters. The story of these agencies is told in chapter 11.
+
+
+<!-- Page 78 -->
+
+Peacemaking begins with restoring our relationship with God, then with our intimate family and friends and moves in ever widening circles: through acquaintances, our workplaces, to the world at large. This leads us to consider how Mennonite Brethren respond to war. Mennonite Brethren believe Jesus’ call to love the enemy requires that we make peacemaking a way of life. Nonresistance is not an awkward accessory that we pull out in times of war. The power to return love for hate comes from our new nature in Christ. The Spirit enables us to live faithfully by providing a supportive community of believers within the family of God. The early Anabaptists taught that “the use of the sword” was contrary to the teachings of Christ. They opposed the use of force by the state to enforce particular Christian beliefs. The Anabaptists recognized that nations had a legitimate duty to use the sword for police action. Menno Simons witnessed the tragedy of the Peasant Revolt in which early radical reformers were crushed after seeking to defend an independent state; that event helped convince him to lead the Dutch Anabaptists in the way of Christ. Mennonite Brethren in Russia also struggled with the issue of “the sword.” In the terror-filled chaos following the 1917 revolution, Russian Mennonites organized a self-defense force. There were heavy losses. According to historian John A. Toews, subsequent church conferences condemned the action as “not only a tactical blunder, but
+
+
+<!-- Page 79 -->
+
+also a gross violation of historic biblical nonresistance. It must always be regarded as a dark blot on the pages of Mennonite history” (Toews, 108-9). Given the present-day diversity of opinion regarding military and police service within USMB churches, in 2013 the USMB Board of Faith and Life convened a study conference to consider contemporary application of biblical teaching on peace. In 2014 a revised Article 13 was adopted that recognizes both current diversity and the historic commitment to peace. The revision of Article 13 addresses the issue of military involvement as follows: “As peacemakers we alleviate suffering, reduce strife, promote justice and work to end violence and war, that others may see a demonstration of Christ’s love. As in other Peace Churches, many of us choose not to participate in the military but rather in alternative forms of service.” Mennonite Brethren are grateful to God that governing authorities in North America have provided alternative service for those who choose not to enter military service. The MB church is called “to counsel youth to offer themselves in loving service to reduce strife and alleviate suffering rather than take up arms in military conflict” (Confession of Faith Commentary and Pastoral Application, 150-51). Peacemaking includes a call to prayer. Followers of Jesus pray for their enemies (Matthew 5:44) and for government officials and those in authority (1 Timothy
+
+
+<!-- Page 80 -->
+
+2:2).We pray for bold proclamation of the good news of peace (Colossians 4:4). Prayer is part of the believer’s spiritual armor, enabling us to take our stand in the great conflict with the principalities and powers of this evil world (Ephesians 6:10-18).
+
+
+### Challenges to Active Peacemaking
+
+Three objections have been raised to military nonparticipation as God’s way for God’s family. First, doesn’t the Old Testament teach that God endorses the use of violence by nation-states? Second, can anyone point to modem examples of this type of radical peacemaking, even on a small scale? Third, should Christians use violence to defend the powerless when threatened by powerful evil forces? Objection 1: Old Testament War and Peace For some, God’s command to destroy Israel’s enemies seems an ironclad objection to the Anabaptist interpretation of Jesus’ words. If God orders war in the Old Testament, isn’t Jesus simply referring to personal relations? God surely has not changed his mind about war, has he? First, as Mennonite Brethren, we begin with Jesus not the Old Testament. We understand that Jesus speaks the clearest word from God, and we interpret the rest of Scripture in light of what he said and did. Jesus clearly calls us to love our enemies. For Jesus, our primary
+
+
+<!-- Page 81 -->
+
+citizenship is in the kingdom of heaven, and he offers no exceptions for citizens of warring nations. Second, we as Anabaptists note that in the Bible, life and death are in God’s hands. God’s first act with the nation of Israel was the miraculous deliverance from Egypt through the Red Sea. According to Exodus 12-15, Israel was called to witness God’s deliverance and judgment. Egypt, the aggressor and oppressor, received the judgment due their rebellion against God. Third, the Old Testament includes a tradition in which God’s ways are the way of peace. The Psalms speak of God’s act of delivering Israel and destroying the weapons of war (Psalm 37:14-15; 46:9). The prophets look forward to a day when war will cease, and Israel will fulfill its role of being a light to the nations (Isaiah 2:4; 60:1-3). Fourth, when the Old Testament attributes to God the commands to go to war, the battle plans are unconventional by any modern standard. Trumpets and faith count more than weapons (Joshua 6; 10; Judges 6-7; 2 Chronicles 20). Weapons gained as spoils of war are destroyed as part of God’s policy (Joshua 11:9; 2 Samuel 8:4). Old Testament wars differ significantly from modern warfare. This review suggests some of the ways Mennonite Brethren have responded to the objection that the Old Testament seems to approve war. It is noteworthy that the just war theory, a primary Christian alternative to nonresistance, is based on New Testament peace teachings
+
+
+<!-- Page 82 -->
+
+rather than reference to Old Testament war stories. This just war theory seeks to limit violence by protecting noncombatants. Just war theory is a strategy of last resort, deemed necessary as the lesser of two evils in a fallen world. Objection 2: Can Christians Live in the Way of Peace? Some may object: Isn’t the Peace Church’s interpretation of Jesus’ words impractical? Does the way of peace work? Mennonite Brethren have always been grateful for the freedoms we’ve received in the nations where we have lived as pilgrims and strangers (1 Peter 2:11). True nonresistance, however, depends on God, not guns, for protection. In the spirit of the three Hebrew youths who refused to worship the image of the empire in Daniel 3, we confess that “the God we serve is able to deliver us,… but even if he does not,…we will not serve your gods or worship the image.” Faithfulness is a higher value than freedom. Obedience to God ranks higher than human life itself. So, our ethics are not determined by how well they work. We do not practice peacemaking because it makes us successful. On the other hand, reports abound of how peacemaking produces good results. Consider these two stories—one from the American Revolutionary War and a second from the recent internal conflict in Congo.
+
+
+<!-- Page 83 -->
+
+Michael Wittman, a British loyalist from Pennsylvania, spat in the face of Mennonite church leader Peter Miller. Miller refused to retaliate. A few days later, Miller received word that Wittman had been sentenced to be hanged for treason by General Washington. Miller walked to Valley Forge to beg for Wittman’s life. Washington asked Miller what Wittman had done for him that would impel him to walk 70 miles to save his friend’s life. “Friend? He counts himself my bitterest enemy,” Miller replied. “In that case,” Washington said, “I issue a pardon on the condition that Wittman is charged to your care.” Miller and Wittman returned home, no longer as enemies but as friends. Safari Mutabesha witnessed the violent murder of his father when terrorists invaded their home in Congo. After fleeing to Rwanda and Burundi, Safari was ministering in a refugee camp in Malawi, part of a self-designated “Menno Group” that practiced peace, repentance and love. One day a rebel military commander appeared, and everyone but Safari fled. Trembling, Safari approached the man. “My brother, how are you?” Safari said. “Do you remember me? I’m the son of the pastor you killed. But, my brother, you are good. It’s not you that killed, it’s the thing inside you that is bad. Come to my house. It’s your time to receive Christ.”
+
+
+<!-- Page 84 -->
+
+The rebel accepted, lived with Safari for three years and is now a Mennonite Brethren pastor, giving testimony to the gospel of peace. Safari says, “Because of this testimony the message of peace is now grounded. People see it has teeth. God is using us, the church is continuing, and people are accepting Jesus Christ.” Objection 3: Does love for the unprotected neighbor permit the use of violent force? One of the primary concerns voiced at the 2013 Study Conference on contemporary peacemaking was concern for unprotected neighbors under violent threat. The position expressed defended the use of violence in personal situations threatening family members and, by extension, to just military action to defend powerless nations. For some Christians, the willingness to give one’s life to protect another suggests that they may need to take life to defend another. Others call us to trust God to provide a means to restrain evil and to protect the innocent and to suffer with innocent victims of violence. One anecdote indicates the difficulty of such dire circumstances. During World War 2, federal agents investigated the convictions of a Mennonite Brethren pastor immigrant from the Russian terrors of the 1920s. When questioned about his loyalty, the pastor replied, “I love this country. It has given us freedom. I would gladly give my life for America.”
+
+
+<!-- Page 85 -->
+
+The agent persisted. “What would you do if violent people would threaten to kill your family and rape your wife and daughters?” The pastor’s reply sent the speechless agent on his way. “I don’t know what I would do in that circumstance,” the pastor said. “Would you like me to tell what I did the last time that happened?”
+
+
+### Church and State
+
+Closely related to the question of peacemaking is the issue of the Christian’s relationship to the state. The revised Article 13 concludes with the statement that “Because Jesus is Lord, His example and teaching take priority over nationalism and the demands of human authorities.” While Mennonite Brethren have been grateful to God for governments that have allowed them freedom of conscience in Article 12 of the Confession of Faith, we confess that our primary citizenship and allegiance belong to Christ’s Kingdom, not the state or society. We see the government as part of God’s plan to give order to society. God has instituted government structures (“principalities and powers” of Ephesians 6:12; Romans 13:1-5) to reward good and restrict evil. To the extent that government promotes well-being and maintains law and order, it is acting within its God-given mandate. When governmental demands contradict God’s will, our
+
+
+<!-- Page 86 -->
+
+responsibility as Christians is to “obey God rather than human beings” (Acts 5:29). Traditionally, Mennonites have held a separationist attitude toward government. This attitude grows out of the notion, expressed in the Schleitheim Confession of 1527, of two orders, “one inside the perfection of Christ and the other outside the perfection of Christ.” According to separationists, government exists for the world. The state uses coercion and violence to keep evil in check. Christians cannot be involved in such actions. Increasingly, however, Mennonite Brethren have become active in local, state and national governments. Article 12 of our Confession of Faith reminds us that as Christians we are to “cooperate with others in society to defend the weak, care for the poor and promote justice, righteousness and truth.... [And to] witness against corruption, discrimination and injustice.” We have already addressed the call to be conscientious objectors to military service. What other issues demand a faithful witness? God calls us to have a broader vision for our corporate witness. In an increasingly diverse society, we are challenged to witness against racism, sexism and classism. We are called to share power within denominational structures with other ethnic groups, whose membership is growing among Mennonite Brethren. We are challenged to respond compassionately to immigrant brothers and sisters, keeping in mind that as spiritual “foreigners” in this world, we are to show hospitality to strangers
+
+
+<!-- Page 87 -->
+
+(Deuteronomy 24:17-18; Matthew 25:31-46; Hebrews 13:1-2). We are challenged to recognize and resist the idolatrous temptation to put our own economic security ahead of those experiencing overwhelming poverty in other parts of the world. We believe the Bible teaches that there is a close relationship between social relationships and the issue of integrity and the oath. Mennonites have enjoyed a reputation as people who speak the truth. Mennonites take literally the prohibition against swearing of oaths (Matthew 5:33-37; James 5:12). Refusing to take an oath is a witness to our commitment to speak the truth at all times, whether we are under oath or not and to our primary allegiance to the kingdom of God.
+
+
+---
+
+# 第七章：门徒即宣教士
+## *Chapter 7: Disciples are Missionaries*
+
+> **归属分部**：第二部分：家族的特质 (Part Two: Characteristics of the Family)
+
+### 中文译文
+
+# 第 7 章：门徒即宣教士 (Chapter 7: Disciples are Missionaries)
+
+### 第 7 章：门徒即宣教士 (Disciples Are Missionaries)
+
+她毅然站立了起来。
+
+那是2003年在美国科罗拉多州埃斯特斯公园（Estes Park）举行的全国青少年大会，现场聚集了1,420名热血青年。当讲台发出呼召，邀请青年人全人委身于一生背起十字架跟从耶稣时，年轻的乔安娜·查帕（Joanna Chapa）从人群中毅然起立响应。“在聚会的某一刻，讲员深情呼召：凡甘愿为耶稣活出激进圣洁的一生、不论代价几何立志背起自己的十字架跟从救主的人，请从座位上站立起来，”乔安娜回忆道，“在那神圣的瞬间，我内心深处清楚地知道——这正是我一生所渴求的方向！当时我其实并不完全清楚这究竟意味着什么，更不知道前路漫漫主会带领我走向何方。”
+
+正如乔安娜的见证所昭示的：跟从耶稣，意味着在日常岁月中一步一个脚印地忠心向前。当时乔安娜是德克萨斯州拉格鲁利亚恩典点教会（GracePoint Church in La Grulla）的敬拜主领。她回忆说，当现场一千多名青年人在埃斯特斯公园同声高唱敬拜上帝时，一股神圣的敬畏震颤掠过她的全身。“在绝大多数聚会中，我坐在那里，心中深深向主祷告，梦想着有朝一日自己能亲自参与主领全国青年大会的敬拜，或参与筹备这样的属灵盛宴，”她说，“殊不知，那正是圣灵亲自在我心灵深处栽种下的先知性异象与属天呼召！”
+
+随后，乔安娜与其敬拜团队受邀主领了一场早间崇拜，并在大会闭幕聚会上作了感人至深的结束祷告。“我清楚记得自己站在浩大的讲台上，放眼望向台下成百上千张年轻的面庞，内心深切感到上帝将继续引领我进入更多如此被主使用、令人敬畏降卑的侍奉禾场。”乔安娜随后受邀担任了接续三届全国大会的筹备核心成员；2007年在阿纳海姆大会上，她再次主领全场敬拜。她说，世上没有任何一种满足与荣耀，能超越上帝亲手赐下异象并亲手将之荣耀成全！
+
+乔安娜一往无前地跟从上帝的呼召。从门诺弟兄会著名的塔伯尔学院（Tabor College）毕业后，她全职加入了全球宣教差会 Multiply，担任地区宣教动员主任，并毅然立下终生海外宣教誓约，作为 Multiply 的长期宣教士远赴南美洲秘鲁服事。如今，她与 Multiply 秘鲁团队的同工们紧密配搭，深入秘鲁当地门诺弟兄会教区各堂会，在门徒训练战略制定、青年领袖全方位装备培植等关键事工上全力扶持。“我最深沉的愿景，就是竭力装备并造就当地教会领袖，使他们真正成为能够‘倍增造就门徒’的忠心门徒；带领他们的堂会与家庭与造物主建立更为深邃的亲密关系，无论救主呼召他们往何处去，都在那里活出大能的宣教使命！”
+
+乔安娜的生命历程，生动见证了门诺弟兄会历代坚守的信念：**跟从耶稣，不仅意味着从上帝白白领受永生救恩，更意味着必须毫不保留地将上帝的浩瀚大爱与世人分享！**神家里的每一位成员，都有神圣职责热情邀请世人融入上帝永恒的信仰大家庭。
+
+主耶稣颁布的至高训令——“所以，你们要去，使万民作我的门徒”（马太福音 28:19-20）——正是门诺弟兄会思考救恩神学的终极出发点。耶稣降世，亲自揭开了上帝天国统治的历史序幕，向普世宣告：“日期满了，神的国近了！你们当悔改，信福音！”（马可福音 1:15）。随后，祂直接向具体的个人发出呼召：“来跟从我！”（马可福音 1:17）。
+
+门诺弟兄会深信：跟从耶稣的神圣呼召，始终始于个人生命的悔改归正。而生命重生的终极宏大语境，正是上帝的“天国”与“主权统治”。在福音书的众多比喻中，耶稣清晰阐明：天国正是由那群甘心顺服上帝圣洁旨意的蒙救赎共同体所构成的。而上帝的旨意，向来具有逆世俗潮流的先知性特质，是对既有堕落社会秩序的一场彻底的神圣决裂！
+
+#### 成为门徒：归信、悔改与终生救恩 (Becoming a Disciple)
+
+主耶稣呼召人的第一个命令动词，正是**“悔改”（Repent）**。悔改不仅是一种内心情感的自责，更是思想范式的彻底重置与崭新行动的实际开启。对于古代以色列人而言，耶稣宣告神国统治，意味着上帝正在跨越任何狭隘的血统与国族界限，呼召出一个由万民汇聚而成的崭新圣约子民；而对今天的我们而言，悔改意味着我们的生命目的发生了翻天覆地的彻底转变：**我们从昔日以自我为中心的自私沉沦中彻底回转，走向全心全意爱神爱人、舍己服事他人的奉献人生！**“回转”（Turn）这一词汇，深刻彰显了悔改主题那极富行动力的一面。
+
+门诺弟兄会历来使用**“归信 / 重生”（Conversion）**这一词汇，来精确描绘一个人从罪恶中彻底抽身、全人转向永活上帝的神圣历程。当年爱德华·维斯特在俄国点燃的伟大灵性复兴（为后来门诺弟兄会的建立铺平了道路），最核心的呼喊正是生命的真实归信。在维斯特看来，归信是对在基督耶稣里享有确实、亲密的个人救恩体验的神圣邀请，这与当时俄国老教会中沦为形式主义的“死记硬背式信仰”形成了天壤之别！真实归信彻底将罪人从负罪感的枷锁中释放出来，赐予人与神和好的深沉属天平安，并带来坚不可摧的得救确据。
+
+在历史上，对于那些已然在头脑中熟知福音教义、却迫切需要将真道在个人生命中融会贯通的成年人而言，强调经历一次明确的个人归信时刻具有极高的属灵纯全度：内心经历深切的罪恶挣扎与撕裂，随后靠着信心经历奇妙的属灵突破与全新委身，这完全切合他们的历史语境。归信是广阔宏大救恩历程中的关键里程碑：凡真心归信基督的人，必在每日生活中结出生命被翻转的悔改果子，随后接受全身浸礼，正式被接纳加入地方堂会。
+
+在门诺弟兄会敬虔家庭中长大的年轻一代的见证中，许多孩子往往在家庭餐桌旁、礼拜堂讲台前或暑期青少年营会中的某一关键时刻，“敞开心门接纳耶稣进驻心怀”；而另一些人则在成年之后经历信仰飞跃。有些人经历惊心动魄的圣灵强烈责罪与瞬间荣耀翻转；而对另许多人而言，走向信仰与其说是一场突发的危机事件，不如说是一个春风化雨般水到渠成的漫长生命历程——这些人在漫长岁月中耳濡目染身边基督徒朋友忠贞圣洁的日常生活、深入观察信仰共同体的彼此相爱、一次又一次聆听神道真理的详尽阐释，最终在不知不觉中，早已全心将自己的一生忠诚归顺于主基督，而未必能精准指出某年某月某日那场惊心动魄的所谓“危机时刻”。
+
+在今天，由传统奋兴布道会所刻意营造的某种戏剧化“危机归信”模式已不再被绝对化推崇；然而，门诺弟兄会始终毫不妥协地坚称：**活泼、亲密且真实可感的个人鲜活信心，永远是检验真归信的不可磨灭的标志！**我们谨遵圣经启示，庄严宣告我们在加入这个信仰大家庭时真正经历了“圣灵重生”，被永恒上帝正式领养为祂宝贵的儿女！
+
+由此，让我们梳理清晰这一系列的救恩范畴：
+- **“归信”（Conversion）**：是一个人转变为基督跟从者的神圣生命体验与历程；
+- **“悔改”（Repentance）**：是从一切罪恶彻底转向圣洁上帝的坚决决志，伴随着甘心顺服神国统治的全新思想心智；
+- **“救恩”（Salvation）**：是全能上帝白白赐予绝望罪人的浩瀚恩典作为。救恩完美涵盖了归信、悔改、信心、受洗归主以及融入教会大家庭的全部维度。救恩包含了上帝在信徒**最初归信时所成就的称义大功**，包含了上帝借着内住圣灵在信徒一生岁月中**持续进行、使我们越来越效法基督圣洁模样的成圣大工**，更包含了在末世荣耀再临时、主亲自将我们接入永恒荣耀新天新地之中的**终极圆满成全**！
+
+门诺弟兄会尤其着重强调：上帝的伟大拯救，绝非将我们塑造成孤芳自赏的属灵游侠，而是**直接将我们紧紧连接在神圣的信仰共同体之中！**在身体彼此问责、彼此守望的团契中，我们的门徒生命方能茁壮成长；我们既在神家里的哺育中蒙受造就，更在投身舍己服事世人的过程中迈向成熟！
+
+#### 全球宣教的悲壮与荣耀历程 (Global Mission)
+
+从诞生之日起，门诺弟兄会便深刻确信：忠贞的基督门徒，必须同时在世上充当“世上的盐”与“世上的光”（马太福音 5:13-14）。作门徒的忠信生命，必然在本地社区与普世地极的广阔见证中全然彰显！在大使命中，基督以至高权柄呼召我们要使万民作祂的门徒。
+
+正如已故门诺弟兄会杰出属灵领袖J.B.托伊斯（J.B. Toews）所精辟总结的：**门诺弟兄会本质上正是一场以属灵复兴为源动力的普世宣教运动！**自十九世纪九十年代起，门诺弟兄会便持续不断向全球各地差派了大批宣教士。
+
+在名著《信仰的朝圣之路》（*A Pilgrimage of Faith*）中，托伊斯深情讲述了北美门诺弟兄会首位海外宣教士彼得·韦德尔（Peter Wedel）感人至深的英雄悲歌：
+彼得·韦德尔原本是北美大草原上一位极富恩膏的杰出巡回布道家。在1884年南达科他州举行的全美总会年会上，韦德尔走上讲台，向全体大会代表倾心吐意，分享了他内心日夜燃烧、对海外远方未得之民灵魂的深沉重担。全会代表泪流满面地苦苦哀求韦德尔留在北美继续他卓有成效的拓荒布道，竭力劝阻他不要远赴非洲西部的喀麦隆——在那个时代，由于气候恶劣、致命的黑水热（恶性疟疾）肆虐，喀麦隆被世人惊恐地公认为“白人宣教士的坟场”！
+那天深夜，韦德尔独自一人在会场外的茫茫玉米地里通宵踱步，呼天抢地向神求问旨意。清晨，全身被冰冷朝露湿透的韦德尔步伐坚定地重返大会讲台，向全体会众发出了那句响彻教会历史的誓言：
+> **“顺服上帝的呼召，绝对凌驾于世间一切其他的良机之上！我别无选择，我必须去喀麦隆！”**
+
+启程赴非后不到两年，年轻的韦德尔便染上致命的黑水热，在非洲丛林中英勇殉道、安息主怀！
+
+然而，韦德尔的壮烈殉道非但没有吓退后人，反而在整个门诺弟兄会青年群体中彻底引爆了一场席卷全宗派的海外宣教献身狂潮！无数热血青年沿着韦德尔的血迹奋勇前行，不仅奔赴非洲黑暗大陆，更义无反顾地远渡重洋深入印度与中国腹地！韦德尔当年的神圣顺服，成为了门诺弟兄会海外普世宣教事业永不磨灭的奠基石（托伊斯，97页）。
+
+从历史上看，门诺弟兄会之所以在全宗派体制层面上紧密组织起来，其最根本的驱动力正是为了确保以我们独特的门诺弟兄会纯正信仰特质去开展宣教。这一宣教神学深深植根于我们福音派重洗派的深厚沃土：
+1. **纯全的福音布道动机**：不遗余力地以言以行、放胆宣扬耶稣基督救赎的纯正福音；
+2. **完全以教会为根基**：宣教既从地方圣约共同体中孕育、辨识、差派、代祷与供给，其终极神圣目标同样是在异邦万民中建立起扎根圣经、忠贞作门徒的健康本土地方教会；
+3. **以上帝的天国为导向的全人关怀事工**：当负责救济二战俄国难民的“慈惠福利委员会”与“宣教差会”正式合并时，教会的组织架构完美契合了其神学内核——在门诺弟兄会历史上最大规模的宣教工场拓展中，福音反响最热烈、教会增长最迅猛的，始终是那些身处社会最底层、饱受苦难煎熬的赤贫人群！
+
+在二十世纪上半叶，北美门诺弟兄会积极向刚果、印度与中国差派了大批宣教士。而在第二次世界大战之后，随着教会逐步由讲德语转向英语，加之青年人在战时替代役中深入参与公共精神卫生等社会救助，促使全教会对本土社会的宣教需要有了空前清醒的认识，各大教区随即掀起了大规模的本土植堂浪潮。
+
+回顾北美门诺弟兄会的国际宣教拓荒史：1899年，首批由总会正式差派的宣教士N.N.海伯特（N.N. Hiebert）与苏茜（Susie Hiebert）夫妇远赴印度泰卢固语人群中服事，开创了宏大的印度宣教工场。早期国际宣教洋溢着一种深厚真挚的“属灵家庭亲情”：后方差派母会与前线宣教士亲如一家；主日学教师与敬虔父母日夜祷告求主呼召自己的儿女献身海外宣教；姊妹们自发组织妇女宣教团契，定期禁食祷告、给宣教士写信慰问、缝制棉被衣物寄往灾区并倾囊奉献；宣教士动辄在工场上忠心扎根数十年，舍弃世俗财富、牺牲健康甚至献出年轻生命。
+
+正是在如此泣血的奉献中，一间间充满生机的教会拔地而起！当年宣教士流泪撒种的印度与刚果民主共和国两大最早工场，今天门诺弟兄会的会友人数已分别激增至**20万人**与**10万人**以上，远远超越了北美母会的人数规模！二战之后，福音版图进一步辐射至巴拉圭、哥伦比亚、巴西、秘鲁、日本、墨西哥、埃塞俄比亚、德国、奥地利与巴拿马；到了二十世纪五十年代，北美门诺弟兄会常驻海外的宣教士总数高达279人！
+
+#### 本土化浪潮、伙伴关系与 Multiply 的诞生 (Transformation & Indigenization)
+
+二十世纪中叶，全球政治风云变幻，反殖民独立运动席卷亚非拉大地。在杰出宣教总干事J.B.托伊斯等领袖的高瞻远瞩引领下，门诺弟兄会宣教政策果断迎来了具有划时代意义的**“本土化”（Indigenization）**深刻转型：原本由西方宣教士一手包办主导的宣教工场，以惊人的魄力全权交接托付给当地本土教会领袖自主治理！
+
+在那场深刻的历史反思中，北美教会彻底摒弃了居高临下的属灵家长制心态，不再将海外新兴教会视作需要庇护的“婴孩”，而是深情接纳其为在基督里完全平等的“弟兄与姊妹”！原本不对等的宗派管辖关系，升华演变成一种成熟、相互尊重的**跨国属灵伙伴关系（Partnership）**。
+
+随着宣教异象的不断深化，总会宣教机构的名称经历了历史性的演变：从早期的“海外宣教与服务部”（BOMAS），更名为“国际门诺弟兄会宣教与服务差会”（MBMSI）；2011年至2018年更名为“MB Mission”；**2018年1月，MB Mission 正式与加拿大专注于本土植堂的 C2C Network 大能合并，并于2019年以崭新的全方位全球宣教差会品牌——Multiply（倍增宣教差会）全新启航！**
+
+今天，在各大洲已成熟建立的门诺弟兄会全国总会，完全独立自主确立本地宣教战略，并按需邀请北美同工以伙伴身份协同作战。据 Multiply 官方统计：在遍布全球的宣教网络中，差会与近百位全球宣教士及近百位各国本土领袖紧密携手，仅一年内便在68个国家见证了近400间崭新堂会的拓植建立，数千人受洗归主，数百位青年领袖接受了高阶门徒与宣教装备！
+
+#### 当代宣教的前沿实践与战略反思 (Contemporary Mission Work)
+
+Multiply 在中美洲巴拿马的事工，完美诠释了当代门诺弟兄会宣教的多边伙伴协作本质：早在二十世纪五十年代，宣教士便在哥伦比亚和巴拿马建立了教会；自二十一世纪初以来，哥伦比亚门诺弟兄会自身成熟后，主动差派自己的宣教士前往巴拿马，深入当地边缘落后的沃纳安原住民族群（Wounaán）中开展门徒培训、领袖装备与社区综合发展。近年来，巴拿马本土信徒更是反向与哥伦比亚同工携手，深入哥伦比亚偏远的乔科雨林地区，向那里尚未得闻福音的沃纳安原住民部落同胞联合开展跨国宣教与植堂！这种波澜壮阔的图景生动印证了当今全球宣教的新格局：**“宣教已彻底打破单向流动，转变为从全地走向全地（From Everywhere to Everywhere）！”**
+
+在当今国际宣教战略中，最重要的焦点聚集在被称为**“10/40 之窗”**的核心地带（即赤道以北纬度10度至40度之间的亚非欧广大腹地）。这片广袤区域居住着超过40亿人类，占全球人口半数以上，其中90%的人口处于福音未得状态，更有约16亿人此生从未听闻过一次耶稣基督的圣名！在这片区域涵盖的56个国家中，Multiply 已在其中13个国家派驻了长期宣教团队与本土福音工匠。
+
+另一项极具代表性的创举是“2000团队”（Team 2000）：三对年轻夫妇及其子女立下长达十年的圣约委身，深入泰国都市未得之民中拓荒植堂，不仅在全泰建立了众多充满活力的堂会，更将福音火种大举拓殖至邻近的缅甸、老挝与柬埔寨！
+
+在跨入二十一世纪的今天，门诺弟兄会的宣教战略正面临三大时代性的深刻考量：
+1. **全球化将未得之民送到了我们的家门口**：今天在北美本土，已蓬勃涌现出阿拉伯语、华语、埃塞俄比亚语、克木语、旁遮普语、斯拉夫语等数十个不同族裔背景的门诺弟兄会堂会！日本门诺弟兄会甚至反向向美国加州差派宣教士建立教会！宣教的资源不再单单局限于北美内部，Multiply 宣教工场的前沿同样不再仅仅局限在海外远方。宣教绝非“本地与海外”的二选一，而是**“既在本地、又在万邦”的兼备战略！**
+2. **本土化与多元伙伴协作机制**：如何在全力激发地方堂会本地福音外展主动性的同时，继续坚固大区与全美大家庭联合开展普世宣教的凝聚力，是摆在当代教牧领袖面前的现实课题。
+3. **短期宣教与长期深耕的忠心管家职分**：在现代交通通讯极其飞速的时代，短期访宣人数已大幅超越长期常驻宣教士。短宣固然为激发信徒宣教热忱、亲身体验普世宣教前沿提供了极佳视窗；然而，真正扎实有深度的福音外展，必须以长期建立深厚信任关系、熟练掌握当地语言文化、以及甘心长年扎根为代价。全教会必须以清醒的属灵智慧履行财务与时间管家职分，警惕避免因盲目追求热闹昂贵的短宣而挤占了前线最需要长久深耕的战略宣教资金，确保一切宣教举措真正服事于普世教会的长期健康与生命倍增！
+
+今天的门诺弟兄会已然成长为一个遍布全地五大洲的普世信仰宗族。我们心怀同一个荣耀异象：耶稣正以至高权柄在普世各国各方各民中呼召失丧灵魂认罪悔改归信基督，融入彼此守望的圣洁门徒共同体，向这世界穷乏绝望的人群放胆倾注天国的和平福音！
+
+
+---
+
+### English Original Text
+
+# Chapter 7: Disciples are Missionaries
+
+
+<!-- Page 88 -->
+
+
+### CHAPTER 7
+
+
+### Disciples Are Missionaries
+
+She stood. One of 1,420 youth attending the 2003 National Youth Convention in Estes Park, Colorado, Joanna Chapa stood in response to an invitation to choose a life of following Jesus. “There was a session that we were invited to stand from our chairs if we were willing to live radical lives for Jesus and pick up our crosses to follow him, no matter what the cost,” she says. “I remember in that moment I knew I wanted to be about this. I didn’t really know what that meant, much less what was ahead and what he would invite me to.” As Joanna testifies, following Jesus is about being faithful, one step at a time. Joanna was a worship leader at GracePoint Church in La Grulla, Texas, at the time. She says chills came over her as more than 1,000 people sang at Estes. “I sat there most sessions and dreamt of the day that I could help lead worship and/or help plan a National Youth Convention,” she says. “Little did I know, that was actually
+
+
+<!-- Page 89 -->
+
+the Spirit of God placing in me a prophetic calling or dream into what he was going to invite me into.” Joanna and her church worship team were asked to lead a morning worship service, and she closed the last session in prayer. “I remember standing on that stage, looking out to everyone there and sensing within me that God was going to keep inviting me to more opportunities like this in which I would be humbled and in awe of what he does,” she says. Joanna served on the planning team for the next three conventions, also joining the worship team at Anaheim in 2007, where she says she realized nothing is more satisfying and fulfilling than when God gives and fulfills dreams. Joanna has continued to follow God’s call. After graduating from Tabor College, she worked with Multiply as a regional mobilizer and has committed to serve as a long-term missionary with Multiply in Peru. She and other members of Multiply’s Peru team are coming alongside the Peruvian MB conference churches in discipleship strategies and the training and equipping of young leaders in a variety of ways. “My desire is to help train and equip the local church leaders to be disciples that make disciples, that call their churches and families to a deeper intimacy with their Creator and to be missional wherever the Lord invites them.”
+
+
+<!-- Page 90 -->
+
+Joanna has experienced what Mennonite Brethren believe: to follow Jesus means not only receiving salvation from God but also sharing God’s love with others. Members of the family invite others to become part of God’s household of faith. Jesus’ command, “Go and make disciples of all nations” (Matthew 28:19-20), is the starting point for Mennonite Brethren thinking on salvation. Jesus inaugurated the reign of God, saying, “The kingdom of God has come near. Repent and believe the good news!” (Mark 1:15). Then he directed the call to specific individuals. “Come,” he said, “follow me” (Mark 1:17). Mennonite Brethren believe that the call to follow Jesus begins with a call to personal conversion. The context for conversion is “the kingdom” or “reign” of God. In his parables, Jesus interprets the kingdom as the community of those who do God’s will. The will of God is countercultural, a radical departure from the established order.
+
+
+### Becoming a Disciple
+
+Jesus’ first word of command is “repent.” Repentance involves a new way of thinking, new action. For Israel, Jesus’ announcement of the rule of God meant God was calling out a new people irrespective of nationality or ethnicity. For us, it means getting our minds around the
+
+
+<!-- Page 91 -->
+
+idea that our purpose has changed. We turn from being centered on self to serving others. The word “turn” points to the action side of the repentance theme. Mennonite Brethren have used the word “conversion” to describe the turning from sin and turning to God. The earliest revival of Eduard Wuest in Russia, which paved the way for the founding of the MB church, emphasized the importance of conversion. Conversion was an invitation to a sure and personal experience of salvation in Jesus Christ, as opposed to simply a “memorized faith,” as had become the church tradition among Russian Mennonites. Conversion freed the seeker from guilt, granted peace with God and promised the assurance of salvation. The emphasis on a specific experience of conversion had great integrity when applied to adults who understood the theological principles of the gospel but needed to appropriate it to their own lives. A psychological struggle with guilt and the breakthrough to a new commitment fit their context. Conversion was an event in the larger experience of salvation. Those who converted to Christ gave evidence of a changed life, were baptized by immersion and were accepted into the membership of the congregation. Most testimonies of those raised in Mennonite Brethren homes tell of children who “accept Jesus into their heart” in a crisis moment at home, church or summer camp. Others accept Christ later in life. Some come to a moment
+
+
+<!-- Page 92 -->
+
+of conviction and are gloriously transformed. For others, coming to faith is more of a process than a single event. These adults often witness the faithful life of a Christian acquaintance, explore the life of the faith community, hear repeated explanations of the gospel and find themselves confessing their own allegiance to Christ without being aware of a crisis of conversion. The emphasis on a crisis conversion experience, as fostered by revivalism, is not as strong today. Mennonite Brethren continue to insist on a personal, living faith as a mark of conversion. We use biblical language to say that we are “born again” as we join the family of faith. We are adopted as God’s children. So, in review: “conversion” is the experience or process by which a person becomes a follower of Christ. “Repentance” is turning from sin to God, an act accompanied by a new mindset that accepts God’s rule. “Salvation” is what God does in giving grace to a sinner. Salvation describes conversion, repentance, faith, baptism and inclusion in the church. Salvation is what God has done at conversion, what God continues to do in transforming us to be like Christ and what God will finish when he receives us into his presence as part of the new creation. Salvation includes the growth in Christ that comes as the Holy Spirit indwells the believer, producing the fruit of the new life. Mennonite Brethren emphasize that God’s saving act joins us to the community of faith. We grow in discipleship
+
+
+<!-- Page 93 -->
+
+as we experience the accountability of the body. Our aim is to grow to be like Christ. We grow both as we are nurtured and as we serve others. (See chapter 5 for a more complete description of the way we encourage family members to grow as disciples.)
+
+
+### Global Mission
+
+From the start, Mennonite Brethren have perceived faithful disciples to be both “salt” and “light” (Matthew 5:13-14). Faithful discipleship expresses itself in a life of witness, locally and globally. In the Great Commission, Jesus calls us to make disciples of all nations. According to the late Mennonite Brethren church leader J.B. Toews, the Mennonite Brethren church is a renewal missionary movement. Since the 1890s, Mennonite Brethren have sent missionaries around the world. In A Pilgrimage of Faith , Toews tells the story of the first North American Mennonite Brethren missionary. Peter Wedel was an effective itinerant evangelist in North America. At the 1884 General Conference in South Dakota, Wedel shared with the delegates his growing burden for unreached people in other lands. The conference pleaded with Wedel to continue his evangelistic ministry rather than go to Cameroon, a country known as a westerner’s graveyard because of its treacherous climate and raging black fever.
+
+
+<!-- Page 94 -->
+
+Wedel spent the night walking the cornfields and seeking an answer from God. Wet with the morning dew, he announced to the convention, “Obedience supersedes all other opportunities. I cannot but go to Cameroon.” Just short of two years from his departure, Wedel was dead, a victim of black fever. His death sparked a dramatic movement. Others followed, going not only to Africa, but to India and China as well. Wedel’s act of obedience became a cornerstone of Mennonite Brethren foreign missions (Toews, 97). Historically, Mennonite Brethren organized in a denominational or institutional sense out of the desire for Mennonite Brethren convictions to characterize the way we do mission. These convictions reflect the MB church’s evangelical Anabaptist roots. First, Mennonite Brethren mission is inspired by an evangelistic motivation—to proclaim, in word and deed, the good news of Jesus Christ. Second, the effort is church based, both in its sending and in its goal. The covenant community discerns, calls out, sends, supports and receives missionaries. The purpose is to plant Bible-believing churches. Third, mission is kingdom-oriented, centered on holistic ministry to the poor. When the Board of General Welfare (charged with assisting Mennonite Brethren refugees from Russia) combined with the Board of Missions, organization was following theology. In our largest mission efforts, the most receptive response has come from the poorest segment of society.
+
+
+<!-- Page 95 -->
+
+At first, it was easier for Mennonite Brethren to evangelize in other cultures than among closer neighbors. Mennonites migrated to Russia with an explicit agreement not to proselytize Russian Orthodox Church members. Mennonite Brethren in Russia sent their first missionaries to India, but they also began to evangelize closer neighbors. In the first half of the twentieth century in North America, Mennonite Brethren did evangelistic work among German- and Russian-speaking neighbors. Apart from a mission to the Comanche people in Oklahoma and several city mission projects in the United States and Canada, Mennonite Brethren did little witnessing among English-speaking neighbors. They were much more purposeful in sending missionaries to other countries, principally DR Congo, India and China. Since World War 2, Mennonite Brethren have been much more active in domestic church planting. During and after the war, congregations moved away from using the German language to avoid identification with the Nazi regime. Many engaged in North American life during the war through their alternative service activities which helped them become aware of social needs, especially in public mental health. Today, both national and district conferences have active programs for launching new churches. The international mission program of North American Mennonite Brethren began in 1898. Peter Wedel, accompanied by his wife, Martha, and Henry and Maria
+
+
+<!-- Page 96 -->
+
+Enns had paved the way with their mission work with the Baptists in Cameroon. The first Mennonite Brethren conference-appointed missionaries, N.N. and Susie Hiebert, left to serve among the Telugu-speaking people of India in 1899. Although forced to return because of ill health, N.N. Hiebert became a leader of Mennonite Brethren mission efforts. Early international mission has been characterized as having a “family spirit.” Sending churches knew their missionaries personally. Congregations were well informed about missionary activities and organized church life to promote missions. Sunday school teachers and parents prayed that their children would be called into ministry. Women formed missionary societies to pray, correspond with missionaries, gather supplies for the poor and raise funds. The church called out its most gifted leaders to administer the mission efforts. Missionaries served extended terms of service, sacrificing family, wealth, health and even life itself. As a result, churches were established. India and DR Congo, the earliest mission fields with the largest missionary staffs, now number more than 200,000 and 100,000 Mennonite Brethren church members, respectively. After World War 2, mission outreach proliferated, with new fields opening in Paraguay and Colombia, then Brazil, Peru, Japan, Mexico, Ethiopia, Germany, Austria and Panama. By the 1950s, North American missionaries totaled 279.
+
+
+<!-- Page 97 -->
+
+The middle decades of the 20th century brought turmoil to missions. Revolutions swept out colonial governments. Beginning with the leadership of board director J.B. Toews, indigenization characterized Mennonite Brethren mission policy. Missionary-led fields were turned over to indigenous leaders. At that time, “with the growing international rejection of all colonial imperialism, there [had] also arisen a principal rejection of the missionary-centered gospel ministry.” Under this emerging attitude, North Americans no longer saw themselves as caring for infants and children but sharing with sisters and brothers. The family relationship matured into a policy of partnership. The name of the denominational mission agency changed from the original Board of Missions and Services (BOMAS) to Mennonite Brethren Missions and Services International (MBMSI), and from 2011 to 2018 was called MB Mission. In January 2018, MB Mission merged with C2C Network, a church planting agency that began as a British Colombia provincial ministry. The new ministry was launched in 2019 as Multiply. Today, where national conferences are established, they determine direction and invite North American partnership as needed. In 2020, Multiply reported that the mission agency saw 377 churches planted and 5,560 people baptized in 68 nations as reported by 89 global workers and 91 national leaders. Multiply also saw 463 people participate in mission and discipleship training,
+
+
+<!-- Page 98 -->
+
+12 global partnership video calls with an average of 58 participants and 279 churches involved in global missions through Multiply.
+
+
+### Contemporary Mission Work
+
+Multiply’s involvement in Panama illustrates the cooperative nature of contemporary Mennonite Brethren missionary work. The MB Board of Missions and Services began churches in Colombia in the 1940s and in Panama in the late 1950s. Since the early 2000s, Colombian Mennonite Brethren missionaries have been serving among the Wounaán people of Panama in discipleship, leadership training, children’s outreach and community development. For many years, Einer and Girlesa Zuluaga of Colombia were the only Mennonite Brethren missionaries in Panama. They have now been joined by a North American worker. Recently, the Panamanians have begun partnering with the Colombians in the remote Chocó region of Colombia to evangelize, disciple and plant churches among the unreached Wounaán people of that region of Colombia. Increasingly, MB mission efforts are “from everywhere to everywhere.” The growing focus for international mission work has been the “10/40 window,” between 10 degrees latitude north and 40 degrees latitude north of the equator, currently home to more than four billion people; 90 percent are unevangelized. Some 1.6 billion of them
+
+
+<!-- Page 99 -->
+
+have not heard the message of Jesus even once. Of the 56 countries in this region, Multiply is at work in 13, through both long-term missionaries and national workers. Another Multiply initiative is Team 2000. It started in 2000 when six people and their young families made a 10-year commitment to church planting among unreached people in an urban center of Thailand. Since then, this team has been instrumental in planting numerous churches in Thailand and nearby Myanmar. The three couples are now serving on teams made up of both national leaders and missionaries, with gospel influence extending to Thailand, Laos, Myanmar and Cambodia. In recent years, Multiply has shifted its focus from sending out North American missionaries as the pioneer church planters to supporting national leaders and their teams of church planters. This support involves a combination of North American workers helping the national leaders, assisting temporarily with finances and mobilizing prayer. Examples of this shift are now developing in Malawi, the Philippines and Turkey. Several issues stand at the forefront of Multiply. First, globalization has brought many unreached people groups to our own doorstep. There are now Arabic, Chinese, Ethiopian, Khmu, Punjabi and Slavic (among numerous others) Mennonite Brethren congregations in North America. Japan has sent missionaries to plant churches in Thailand and also in California. Multiply regional directors in Europe and Central Asia and Central and
+
+
+<!-- Page 100 -->
+
+South America hail from the areas that they direct. The resources for mission are no longer exclusively inside of North America nor is the reach of Multiply exclusively outside of North America. Second, localization has precipitated changes in partnerships. The North America General Conference structure which previously owned Multiply has been dissolved. Local congregations find priorities that compete with denominational mission efforts. Some congregations have turned their focus from the world to their own neighborhood. Multiply is seeking ways to encourage local evangelistic initiative while continuing to help the larger North American family cooperate to reach the world. Increasingly, the language of “both-and” replaces that of “either-or”: mission is both local and global. Third, “participation” has an entirely new meaning. In a world where it takes only milliseconds to communicate with someone across the globe, second-hand mission reports lose luster next to first-hand mission experiences. Short-term mission travelers outnumber long-term missionaries. Short-term ministry offers opportunities for a closer look at the international church, exposure to international church planters and the direct challenge to give more generously or to consider personal long-term ministry. But there are also dangers in relying on short-term missions. Usually, evangelizing with integrity requires time to build relationships, familiarity with the culture and
+
+
+<!-- Page 101 -->
+
+facility for the local language. A quick, up-close study may in fact provide less perspective than a thoughtful report from far away. Stewardship is also an issue. Are funds diverted from effective, economical long-term projects for exciting but expensive short-term trips? Or, more positively, do mission trips to difficult Majority World situations replace luxury vacations to tropical resorts? Short-term mission endeavors require thoughtful vigilance to ensure that they contribute to long-term church health. The Mennonite Brethren family is a worldwide clan now. We share a common vision. Jesus calls people in all parts of the globe to be converted, to become members of the discipling community and to proclaim Jesus’ good news for the poor.
+
+
+---
+
+# 第八章：齐心同工
+## *Chapter 8: Working Together*
+
+> **归属分部**：第三部分：茁壮成长的家庭 (Part Three: A Growing Family)
+
+### 中文译文
+
+# 第八章：齐心同工
+
+### 第三部分
+
+### 茁壮成长的家庭
+
+### 第八章
+
+### 齐心同工
+
+我们常以“神的家”（家庭）这一语言来描述门诺弟兄会的群体特质。家庭总是在变迁与成长之中：因着新生与联姻，新成员受到热烈欢迎；当家人离世时，我们同声哀悼。一个属灵的大家庭同样会经历欢庆与哀伤、得着与失去的时刻。北美门诺弟兄会曾经历的一次重大割舍发生在2002年——当时美国与加拿大两国的门诺弟兄会，正式结束了长达一个多世纪、被称为“北美总会”（General Conference）的跨国协同事工。
+
+1999年，来自美加两国的代表投票表决解散北美总会，并将其下属事工分别移交给美国总会和加拿大总会。一个移交工作小组就涉及的事工达成了谅解备忘录；2002年7月25日至27日，两国总会的最后一次联合大会在不列颠哥伦比亚省的阿伯茨福德（Abbotsford, British Columbia）举行。对某些人而言，这场标榜为“感恩庆典”的三日聚会，其氛围更像是一场庄严的葬礼。有些人选择缺席，而那些出席的人心中亦充满着难言的伤感。
+
+在闭幕庆典之夜，北美总会执行秘书马文·海因（Marvin Hein）面对1500多名会众坦言，他深切体会到众人心中所承受的失落感。“但是，”海因微笑着说，“当挚爱的亲人离世时，我们绝不会抵制葬礼。我们很少乐意面对肉体离开这个世界的现实，但我们仍会参加追思礼拜，缅怀故人，为他们一生走过的道路感谢上帝，并分担家人的哀伤。我们既要紧紧持守那份美好的回忆，也要懂得释怀放手。当我们向北美总会挥手作别时，所需要的正是这种精神。我们需要放手释怀那段曾经充满蓬勃活力、如今将由全新形式所承继的神国事工。”
+
+### 与加拿大的协同事工
+
+在长达123年的岁月里，美加两国的门诺弟兄会在普世宣教、文字出版、神学院教育以及神学信仰引导等领域紧密同工。北美总会始创于1879年，即第一批门诺弟兄会移民从俄国抵达北美五年之后。它是这批初来乍到的门诺弟兄会移民建立的首个跨区域组织架构。1900年，北美门诺弟兄会正式采纳了首份《门诺弟兄会信仰宣言》，确立了自身作为一个独立宗派的身份，并清晰阐明了核心信仰教义。
+
+到1909年，北美总会划分为三个大区——南部区、中部区，以及囊括整个加拿大地区的北部区。1912年，加利福尼亚州、华盛顿州和俄勒冈州的各堂会联合组建了太平洋区。在随后的四十余年间，北美总会的架构始终由这四大区构成。1954年，加拿大和美国分别成立了各自的全国性总会（National Conferences），下设各地区区会，但双方依然在北美总会的旗帜下紧密合作，共同支持并运作多项跨国联合事工。
+
+2002年北美总会解散时，双方共有的四大事工为：门诺弟兄会普世宣教与服侍部（MB Missions/Services International，现名 Multiply 加倍宣教部）、信仰与生活委员会（Board of Faith and Life）、涵盖亲族出版社（Kindred Productions）在内的资源事工委员会（Board of Resource Ministries），以及门诺弟兄会圣经神学院（Mennonite Brethren Biblical Seminary）。如今，尽管我们仍在普世宣教领域并肩作战，但神学教育与信仰生活层面的治理已转由两国各自的全国总会承担。亲族出版社转为加拿大门诺弟兄会总会（CCMBC）的事工分支。今天，美加两国的门诺弟兄会主要在两大核心领域继续紧密同工：全球宣教与历史文献典藏。
+
+**门诺弟兄会历史委员会（MB Historical Commission）**
+由美国门诺弟兄会总会（USMB）与加拿大门诺弟兄会总会（CCMBC）共同拥有的历史委员会，致力于促进美加两国乃至全球门诺弟兄会教会对自身历史传统的理解与传承。该委员会协同运作由四个档案中心组成的网络——两个位于加拿大，两个位于美国。自1969年成立以来，委员会协助统筹门诺弟兄会珍贵历史档案的收集、保存与诠释工作，包括堂会议事录、大会会议纪要、个人手稿书信、期刊杂志及历史照片。
+
+除了为各地堂会提供丰富的文献资源外，历史委员会还编辑出版《门诺信仰人物谱》（*Profiles of Mennonite Faith*），这是一套记录重洗派与门诺会杰出信徒在各样境遇中践行基督忠心见证的系列传记。截至2021年，该丛书已出版70篇，每半年发行一次，免费分发给门诺弟兄会各堂会。
+
+历史委员会设立了四项常设项目——三项研究资助金和一项实习计划。“门诺弟兄会研读资助金”（MB Study Grants）每年颁发，旨在推动符合门诺弟兄会神学与历史关怀的研究、创意作品与学术报告。“凯蒂·芬克·维贝研究资助金”（Katie Funk Wiebe Research Grant）专门支持关于全球门诺弟兄会女性历史与贡献的学术研究。一年一度的“档案发展资助金”（Archival Development Grant）则资助世界各地门诺会档案馆的软硬件建设。此外，历史委员会每年夏季还为美加两国的高校或神学院学生提供暑期档案实习机会，使他们能在北美门诺弟兄会各档案机构中获取实际的档案管理与研究经验。
+
+### 加倍宣教部（Multiply）
+
+正如本书各处所记载的，宣教始终位于门诺弟兄会身份认同的核心。在长达120年的岁月里，宣教一直是北美总会各项工作与全体大会的核心议题。从1880年到1948年，总会全体会议议程上的第一项事务永远是宣教——涵盖布道、本土拓植与海外差传。门诺弟兄会各堂会给予宣教事工的经济奉献，历来远远超过对其他任何事工的投入。自1880年代以来，北美门诺弟兄会绝大多数的重要领袖，都在其公共事奉生涯的某个阶段担任过宣教士、布道家、植堂牧者或宣教差会董事。
+
+北美门诺弟兄会的普世宣教差传机构在历史上曾使用过不同名称，目前定名为“加倍宣教部”（Multiply）。Multiply 于2019年由原本的 MB Mission 与加拿大门诺弟兄会总会的本土植堂事工机构 C2C Network 合并而成。这一合并源于一项全新的宣教异象——盼望北美门诺弟兄会信徒能在地方社区、全国范围乃至全球工场活出全方位的使命人生。Multiply 由此作为一项跨宗派事工正式启动，旨在促进本地、全国与全球层面的教会拓植。
+
+然而，这次合并并未取得预期的顺遂效果。仅仅六个月后，Multiply 便剥离了其事工中跨宗派教会拓植的相关板块。由 USMB 与 CCMBC 选举产生的代表及董事会任命成员组成的 Multiply 董事会，提请美加两国总会对该项事工进行全面评估。在专业咨询顾问的协助下完成的这项评估，促成了一系列至今仍在深化的改革。2020年新组建的 Multiply 董事会正积极物色新任总干事。曾促使 Multiply 与 C2C 分立的部分财务忧虑现已得到妥善解决。Multiply 继续致力于培训并差派长期与短期同工，在未得之民中开展全人整全的教会拓植事工。
+
+**在美国本土的协同事工**
+今天，美国门诺弟兄会不仅与加拿大属灵家庭成员在事工上密切合作，在美国本土各堂会与区会之间亦保持着深度的携手同行。这些共享的事工中，有些曾是全国性或跨国性的伙伴关系，而有些则是专为服事美国门诺弟兄会而设立的。
+
+**高等教育**
+抵临北美不久，门诺弟兄会先辈便深切体会到为教会领袖提供高等教育的迫切需要。1908年，在当地门诺弟兄会领袖的主导下，位于堪萨斯州希尔斯伯勒（Hillsboro, Kansas）的泰博学院与预备中学（Tabor College and Academy）创立，开始提供基督教博雅教育。已故教会历史学家约翰·A·托斯（John A. Toews）曾写道，泰博学院作为“教会领袖的核心培养基地”，其“对门诺弟兄会教育与宣教事业产生的属灵影响力，无论怎样高度评价都绝不过分”（引自《门诺弟兄会历史》，第273页）。
+
+1930至1940年代美国堂会从平信徒义务传道向受薪全职牧者转型的浪潮，以及加拿大在随后十年间出现的类似转变，催生了宗派内部对专业教牧神学培育的迫切诉求。区域与全国性需求的多元化，打破了泰博学院作为美加两国宗派唯一高等教育提供者的格局。1944年，又有两所神学教育机构（后来均发展为大学）相继开学：位于加州弗雷斯诺的太平洋圣经学院（Pacific Bible Institute），以及位于曼尼托巴省温尼伯的门诺弟兄会圣经学院（Mennonite Brethren Bible College）。
+
+1954年，美加跨国高等教育体系正式走向本土化分工。美国总会接管了泰博学院与太平洋圣经学院（现弗雷斯诺太平洋大学，Fresno Pacific University，简称 FPU）。
+
+如今，泰博学院由中部区会、东部区会、拉丁美洲门诺弟兄会区会以及南部区会共同拥有。每个区会在泰博学院董事会中均派有代表。截至2020年，该校约500名住校学生来自全美38个州和全球15个国家。泰博学院提供29个学士学位项目、4个硕士学位项目及8个在线学位课程。众多学子积极参与艺术活动、20个学生自治社团以及19支校级运动代表队。
+
+弗雷斯诺太平洋大学由太平洋区会全权拥有。除位于弗雷斯诺东南部的大学主校区及在线教育项目外，学校还在中央山谷地区设有四个区域教学中心——北弗雷斯诺、贝克斯菲尔德（Bakersfield）、默塞德（Merced）及维塞利亚（Visalia）。FPU 为本科生提供30多门主修专业及100多个研究方向，并设立了45个极具特色的研究生学位项目。全校在读学生约4000人，涵盖传统全日制本科生、成人进修学历提升生及研究生。此外，每年有6000多名教育界与商界专业人士修读其继续教育课程。该校许多学生是其家族中第一代大学生。校体育代表队“太阳鸟队”（Sunbird）在15项体育赛事中竞技角逐。
+
+2010年，弗雷斯诺太平洋大学正式接管了门诺弟兄会圣经神学院（MBBS），该院现更名为弗雷斯诺太平洋圣经神学院（Fresno Pacific Biblical Seminary）。美国总会于1955年创办了 MBBS，最初由太平洋圣经学院和泰博学院派出资深教授担任教席与行政领导。1960年代在 J.B. 托斯（J.B. Toews）院长的带领下，神学院确立了自身作为重洗派神学学术重镇的地位，尤其强调圣经神学与堂会实践服事的结合。自1975年起的二十年间，MBBS 由美加两国总会联合协办，在此期间为来自美加本土及全球各地的门诺弟兄会培养了大量教牧领袖。
+
+1995年，面对牧者人才培养需求的激增，加之许多潜在神学生希望就近求学的愿望，MBBS 相继在加拿大阿伯茨福德和温尼伯设立了教学中心。1999年，MBBS 成为坐落于不列颠哥伦比亚省兰里市西三一大学校园内的加拿大神学院联合会（ACTS）的正式成员。至2010年，受招生人数下降和预算吃紧的双重压力影响，各方评估认为弗雷斯诺独立校区已难以单独维系。因此，2010年6月，弗雷斯诺的神学院校产与办学权正式移交给了弗雷斯诺太平洋大学。今天，弗雷斯诺太平洋圣经神学院不仅颁发道学硕士学位（M.Div.），还开设婚姻与家庭治疗、基督教事工、旧约、新约、神学以及城市宣教等文学硕士（M.A.）学位。神学院下设三大独具特色的研究与培训中心：社区转型中心、重洗派研究中心，以及驻地心理咨询辅导中心。
+
+**门诺弟兄会基金会（MB Foundation）**
+三十而立，对许多人而言是一个里程碑式的年龄节点。有些人视其为青春的终结，另一些人则将其看作走向成熟成年的开端。对于门诺弟兄会基金会而言，正是后者。美国门诺弟兄会的这一管家事工机构在2020年迎来了其依法注册成立30周年的庆典。
+
+尽管该管家事工实体于1990年依法注册成立，但为门诺弟兄会大家庭管理属灵与物质资源的忠心服侍，早在1880年便已启航。“三十年彰显了成熟稳健；而一百四十年的渊源则体现了基业的长青与深厚底蕴——这正是受托人所必须具备的核心品质，”门诺弟兄会基金会总裁兼首席执行官乔恩·维贝（Jon Wiebe）在当时的专访中如此表示。
+
+门诺弟兄会资源管家事工的源头可追溯至1880年。当时初到美国的移民开始在各堂会筹集奉献，以支持北美本土及普世各地的布道圣工。到1898年，总会确立了将“宣教基金”扩充至5万美元永久基金的目标。1904年，总会收到了第一笔计划性奉献——一块80英亩的农田。随着北美总会的日益发展壮大，其通过汇集资金、稳健投资与提供贷款来支持宣教与教育事工的努力亦同步扩展。1908年，总会设立受托人董事会（Board of Trustees），专门处理法律与资产事宜。在受托人董事会下设立了财务行政委员会，该委员会于1933年改组为管家委员会（Stewardship Committee），负责看管向宣教基金以及1924年设立的教育发展基金所作的奉献款项。
+
+长期的持续发展促使受托人董事会于1972年正式设立管家事工部（Stewardship Department），以开发面向美加两国信徒的计划性奉献教育项目。至1987年，事实证明因地制宜的本地化管理能更好地服务各自国家的总会。因此，美国门诺弟兄会组建了“门诺弟兄会管家事工部”，提供奉献规划、管家教育、遗产规划、财务管理、基金管理、投资方案及堂会贷款等全套专业服务。不久之后，管家事工部的同工和董事会开始探讨转型为独立基金会的可行性。经过深入细致的研讨与磋商，美国总会批准了该项决议。
+
+1990年门诺弟兄会基金会正式注册成立时，拥有1600万美元总资产、1050万美元贷款规模、1280万美元投资凭单，仅有5名全职员工。而到了其成立30周年之际，门诺弟兄会基金会已成长为一个总资产达2.51亿美元、拥有20名专业员工的宏大专业机构。
+
+门诺弟兄会基金会的崇高使命，是为门诺弟兄会群体中的个人、堂会及机构提供符合圣经原则的财务管家解决方案，予以支持和赋能。除提供各类全面的金融与信托服务外，基金会还通过“新一代领袖基金”（Leadership Generation Fund，简称 LeadGen）设立奖学金，扶持正在探索全职奉献道路的青年才俊；并举办面向婴儿潮一代、教会建设者及空巢长者的“欢庆华年”（Celebrate!）全国研讨聚会。2020年4月，基金会设立了“COVID-19 堂会纾困基金”，在疫情肆虐期间为门诺弟兄会各堂会提供急难救助。该纾困基金于2021年底功成身退，剩余善款按原定计划全数转入教会拓植项目。
+
+
+---
+
+### English Original Text
+
+# Chapter 8: Working Together
+
+
+<!-- Page 102 -->
+
+
+### PART THREE
+
+
+### A Growing Family
+
+
+<!-- Page 103 -->
+
+
+### CHAPTER 8
+
+
+### Working Together
+
+We use the language of family to talk about ourselves as Mennonite Brethren. Families change and grow. New members are welcomed thanks to births and marriages. We mourn the loss of family members when they die. A spiritual family also experiences times of celebration and sadness, gains and losses. One loss North American Mennonite Brethren experienced was in 2002, when the United States and Canada officially concluded more than a century of cooperative ministry known as the General Conference. In 1999, delegates from Canada and the U.S. voted to dissolve the General Conference and transfer its ministries to the U.S. and Canadian conferences. A transfer team negotiated memorandums of understanding for the affected ministries, and a final gathering of the binational conference was held July 25-27, 2002, in Abbotsford, British Columbia. For some, the three-day event, billed as a celebration, was more like a funeral. There were some who chose not to attend, and others who attended did so with great sadness.
+
+
+<!-- Page 104 -->
+
+On the final night of the celebration, Marvin Hein, General Conference executive secretary, told the audience of more than 1,500 that he empathized with the sense of loss many were experiencing. “But,” Hein said with a grin, “we do not boycott funerals when loved ones die. We rarely welcome the idea of a departure from this earth, but we attend memorial services to remember the departed, thank God for the life lived and share in the family’s sadness. We both hold on, remembering, and we let go. It is something of that spirit we need when we bid farewell to the General Conference. We need to let go of what was once a very vibrant part of the kingdom work and now will be replaced by the new.”
+
+
+### Ministry with Canada
+
+For 123 years, Mennonite Brethren in the U.S. and Canada worked together in missions, publishing, seminary education and theological guidance. The General Conference began in 1879, five years after the first Mennonite Brethren immigrants from Russia arrived in North America. It was the first organized conference body for the newly arrived Mennonite Brethren immigrants. Mennonite Brethren in North America accepted the first Mennonite Brethren Confession of Faith in 1900, which defined them as a separate denomination and clarified their beliefs.
+
+
+<!-- Page 105 -->
+
+By 1909 the General Conference was divided into three districts—the Southern District, Central District and Northern District, which included all of Canada. In 1912, the congregations in California, Washington and Oregon formed the Pacific District. For the next four decades, the General Conference structure consisted of these four districts. Then in 1954, Canada and the U.S. formed their own national conferences, each with regional conferences, but they continued partnering together as the General Conference, supporting and operating a number of binational ministries. When the General Conference was dismantled in 2002, the four joint ministries were MB Missions/ Services International (now Multiply), Board of Faith and Life, Board of Resource Ministries, including Kindred Productions, and Mennonite Brethren Biblical Seminary. While we continue to work together in global mission, theological education and issues of faith and life have shifted to the national conferences. Kindred Productions became a ministry of the Canadian Conference of MB Churches (CCMBC). Today, U.S. and Canadian Mennonite Brethren work together in two areas: global missions and historical preservation.
+
+
+<!-- Page 106 -->
+
+MB Historical Commission The Mennonite Brethren Historical Commission, owned jointly by USMB and CCMBC, fosters historical understanding and appreciation of the Mennonite Brethren church in Canada, the U.S. and globally. The commission works with a network of four archival centers—two in Canada and two in the U.S. Since it was formed in 1969, the commission has helped to coordinate the collection, preservation and interpretation of Mennonite Brethren archival records: congregational meeting minutes, conference proceedings, personal papers, periodicals and photographs. In addition to providing a variety of congregational resources, the Historical Commission publishes Profiles of Mennonite Faith, a series of biographies about Anabaptists and Mennonites who in various ways exemplified Christian faithfulness. These biographies, 70 as of 2021, are published semiannually and are distributed free of charge to Mennonite Brethren congregations. The commission sponsors four activities—three grants and one internship. MB Study Grants are awarded annually to promote research, creative productions and presentations of theological and historical interest to Mennonite Brethren. The Katie Funk Wiebe Research Grant promotes research on the history and contributions of Mennonite Brethren women around the world. The annual Archival Development Grant supports the
+
+
+<!-- Page 107 -->
+
+development of Mennonite archives around the world. The Historical Commission also sponsors a summer archival internship for a U.S. or Canadian college or seminary student to gain practical archival experience at the North American Mennonite Brethren archival institutions.
+
+
+### Multiply
+
+As recorded elsewhere in this book, mission is at the center of Mennonite Brethren identity. It was the dominant theme in the work and meetings of the General Conference for 120 years. From 1880 to 1948, the first item of business on the conference agenda was always mission—evangelism, home mission and foreign mission. Mission always received a greater amount of financial support from Mennonite Brethren churches than any other cause. Since the 1880s, most of the major Mennonite Brethren leaders in North America have at some time in their public ministry been missionaries, evangelists, church planters or mission board members. The North American global mission efforts have been known by various names and is currently called Multiply. Multiply was formed in 2019 when MB Mission merged with C2C Network, the CCMBC church planting ministry. The merger was part of a new mission vision that North American Mennonite Brethren would live on mission locally, nationally and globally. Multiply was launched as a
+
+
+<!-- Page 108 -->
+
+cross-denominational ministry that would facilitate church planting locally, nationally and globally. The merger did not go well and after six months Multiply released the multi-denominational church planting aspects of its ministry. The Multiply Board of Directors, which consists of representatives elected by USMB and CCMBC and members appointed by the board, requested that CCMBC and USMB conduct a review of the ministry. That review, completed with the help of a consultant, led to several changes that continue to unfold. The Multiply Board, newly appointed in 2020, is currently searching for a new Multiply general director. Financial concerns that, in part, led to the de-merger of Multiply and C2C have been addressed. Multiply continues to train and send both long- and short-term workers to engage in holistic church planting among the least reached. Working together in the U.S. Today, U.S. Mennonite Brethren not only cooperate in ministry with our Canadian family members but also with one another here in the United States. Some of these shared ministries were once national or binational partnerships while others were initiated to specifically serve Mennonite Brethren in the U.S.
+
+
+<!-- Page 109 -->
+
+Higher Education Soon after their arrival in North America, Mennonite Brethren sensed the need to provide college education for church leadership. In 1908, with local MB leadership, Tabor College and Academy in Hillsboro, Kansas, began to offer Christian liberal arts education. The late historian John A. Toews writes that Tabor’s “spiritual impact on the educational and missionary endeavors of the MB conference can hardly be overestimated” in its role as “the chief training ground for church leadership” (MB History, 273). The shift from lay ministers to professional pastors in the 1930s and 40s in the U.S. and in Canada within the next decade precipitated a concern for denominational pastoral training. Regional and national needs led to changes in Tabor College’s role as the sole provider of higher education for the denomination in Canada and the U.S. In 1944, two more schools (which eventually evolved into universities) began offering classes: Pacific Bible Institute in Fresno, California, and Mennonite Brethren Bible College in Winnipeg, Manitoba. In 1954, the binational MB higher education program was nationalized. The U.S. Conference took responsibility for Tabor College and Pacific Bible Institute (now Fresno Pacific University.) Today, Tabor College is owned by the Central District Conference, Eastern District Conference, Latin America MB Conference and Southern District Conference. Each
+
+
+<!-- Page 110 -->
+
+district conference has a representative on the Tabor College Board of Directors. As of 2020, 38 states and 15 countries were represented on the residential campus of about 500 students. Tabor College offers 29 bachelor’s degree programs, four master’s degree programs and eight online programs. Many students are involved in the fine arts, 20 student-led organizations and 19 varsity sports teams. Fresno Pacific University is owned by the Pacific District Conference. In addition to the main campus in southeast Fresno and an online program, the university has four additional centers in the Central Valley—North Fresno, Bakersfield, Merced and Visalia. FPU offers undergraduate students more than 30 degree options and more than 100 areas of study as well as 45 distinctive graduate programs. About 4,000 traditional-age undergraduate, adult degree completion and graduate students are enrolled at FPU. More than 6,000 education and business professional take continuing education courses. Many students are the first in their families to attend college. Sunbird athletic teams compete in 15 sports. In 2010, Fresno Pacific University took ownership of Mennonite Brethren Biblical Seminary (MBBS), now Fresno Pacific Biblical Seminary. The U.S. Conference (USMB) founded MBBS in 1955, and Pacific Bible Institute and Tabor College provided senior faculty members as teachers and administrators. In the 1960s,
+
+
+<!-- Page 111 -->
+
+during the presidency of J.B. Toews, the seminary established itself as an Anabaptist learning center, emphasizing biblical theology and practical congregational ministry. For 20 years, beginning in 1975, MBBS was sponsored by both CCMBC and USMB. During this time, the Fresno seminary served Mennonite Brethren from Canada, the U.S. and around the world. In 1995, the need for an increase in the number of trained pastors, coupled with the desire of many potential seminary students to study closer to home, resulted in the launch of MBBS teaching centers in Abbotsford and Winnipeg. In 1999, MBBS became a full member of the Association of Canadian Theological Seminaries (ACTS) located on the campus of Trinity Western University in Langley, British Columbia. By 2010, declining enrollments and budget constraints had led to the conclusion that the Fresno campus was no longer viable on its own. So, in June 2010, the seminary property in Fresno was transferred to Fresno Pacific University. Today Fresno Pacific Biblical Seminary offers an M.Div. degree as well as M.A. degrees in marriage family therapy, Christian ministries, Old Testament, New Testament, theology and urban mission. Three centers within the seminary provide unique training: Center for Community Transformation, Center for Anabaptist Studies and On-Site Counseling Center.
+
+
+<!-- Page 112 -->
+
+MB Foundation Turning 30 is a significant milestone for many people. For some, it marks the end of youth, while others see it as the beginning of adulthood. For MB Foundation, it was the latter. The stewardship ministry of U.S. Mennonite Brethren celebrated the 30th anniversary of its incorporation in 2020. While the stewardship ministry was incorporated in 1990, the work and ministry of stewarding resources for the Mennonite Brethren family began in 1880. “Thirty years reflects maturity; 140 years reflects longevity and strength—additional important attributes for a fiduciary to have,” said Jon Wiebe, MB Foundation president and CEO, in an interview at the time. The early roots of Mennonite Brethren stewardship date back to 1880 when immigrants to the U.S. began gathering funds from churches to support evangelistic work in North America and around the world. By 1898 the conference set a goal of increasing the Mission Fund to a $50,000 endowment. In 1904 the conference received its first planned gift of 80 acres of farmland. As the North American General Conference grew, so did its efforts to support mission efforts and education by collecting, investing and loaning funds. In 1908 the Board of Trustees was created to focus on legal and property issues. Working under the Board of Trustees was the Financial Administrative Committee that in 1933 became
+
+
+<!-- Page 113 -->
+
+the Stewardship Committee, charged with caring for money donated to the Mission Fund and the Educational Endowment Fund, created in 1924. Continued growth prompted the Board of Trustees in 1972 to create an official Stewardship Department to develop a planned giving program geared toward educating constituents in the U.S. and Canada. By 1987 it became apparent that localized management would better serve the respective conferences. And so, in the U.S., MB Stewardship Ministries was formed to provide gift planning, stewardship education, estate planning, financial management, endowment fund management, an investment program and loans. Soon after, Stewardship Ministries staff and board began to explore forming a foundation. After many meetings and discussions, the U.S. Conference approved the move. When MB Foundation was incorporated in 1990, it did so with $16 million in assets, $10.5 million in loans, $12.8 million in certificates and five staff members. At the time of its 30th anniversary, MB Foundation was a $251 million corporation with a staff of 20. The mission of MB Foundation is to encourage and assist individuals, congregations and ministries in the Mennonite Brethren community with biblical financial stewardship solutions. In addition to offering a variety of financial services, MB Foundation serves USMB through the Leadership Generation Fund (LeadGen) to provide scholarships to young adults who are exploring ministry
+
+
+<!-- Page 114 -->
+
+opportunities and through Celebrate!, national gatherings designed for boomers, builders and empty-nesters. MB Foundation established the COVID-19 Church Relief Fund in April 2020 to assist Mennonite Brethren churches during the pandemic. The fund was closed at the end of 2021 and remaining funds were directed to church planting, as originally planned.
+
+
+---
+
+# 第九章：美国的门诺弟兄会
+## *Chapter 9: Mennonite Brethren in the U.S.*
+
+> **归属分部**：第三部分：茁壮成长的家庭 (Part Three: A Growing Family)
+
+### 中文译文
+
+# 第九章：美国的门诺弟兄会
+
+### 第九章
+
+### 美国的门诺弟兄会
+
+家庭成员的增多与生活的变迁，往往会催生许多家庭的房屋改建工程。改建房屋总是免不了纷扰杂乱——墙体被拆除，空间被重新布局，新的居室被加建出来。有些改造工程会遭遇意想不到的阻碍而走弯路，而且由于不可预见的开支，预算往往屡屡超支。然而，当一切尘埃落定——整洁恢复如初、搬迁的物件各归其所之时——全家人都会由衷赞赏这些改变为居家生活带来的品质提升与温馨体验。
+
+在2000年代初，美国门诺弟兄会对其“属灵家园”——美国门诺弟兄会总会（United States Conference of Mennonite Brethren Churches，简称 USMB）进行了一场深刻的重组与革新。虽然容纳各项事工的组织架构发生了深刻变革，但致力于促使教会增长与栽培信徒门徒的坚定委身始终未变。从这个意义上说，这些改变并非一次颠覆信仰传统的“极端”翻新。
+
+强化全国性总会的努力始于2000年，当时 USMB 与加拿大门诺弟兄会总会（CCMBC）正式开启了解散跨国“北美总会”的程序。当时，加拿大总会的全国组织架构已相当成熟完备，而 USMB 的全国性事工则相对薄弱，长期处于实力雄厚的北美跨国总会的遮蔽之下。USMB 领袖深刻意识到，亟需确立全新的异象与坚强的领导核心，以回答“下一步该往何处去？”这一历史性追问。
+
+早在1980年代末，教会便曾提出过同样的追问。1988年，USMB 制定了开拓新教会并物色、装备新植堂领袖的量化战略目标——“2000年异象”（Vision 2000）。其目标是盼望到2000年，USMB 能增长至25,000名会友及180间堂会。具体规划为：激励地方堂会实现自体增长；各大区会在全国总会的协力下，每年植立5间新教会，其中30间将开拓在不同的族裔群体之中。
+
+新教会的建立必然需要大量领袖。因此，总会呼吁已建成的成熟堂会，发掘并培育相当于其会友总数2%的人才，以承担教牧事奉与差传宣教的领袖职分。为了落实这些宏伟目标，两项核心事工应运而生。由洛亚尔·芬克（Loyal Funk）领航的新倡议——“统合事工”（Integrated Ministries），专注于与新兴移民社区中建立的教会建立有机联结。得益于统合事工的推动，USMB 大家庭迅速拓宽，迎来了斯拉夫/俄语、韩语、西班牙语、日语、埃塞俄比亚语以及华语等多元族裔堂会的加入。
+
+1996年，“美国宣教部”（Mission USA）正式创立，专注于新堂开拓、既有教会更新以及领袖领导力培育。在执行总监埃德·博施曼（Ed Boschman）的带领下，新教会在亚利桑那州、犹他州、内布拉斯加州、俄克拉荷马州等地相继植立。步入21世纪之际，“2000年异象”设定的各项量化指标圆满达成：USMB 麾下堂会增至180间，会友总数达26,219人；正式接纳了45间跨文化族裔堂会，远超原定30间的目标。
+
+当 USMB 领袖展望未来时，又确立了三大核心目标：物色一位全职全国执行总干事；由 Mission USA 在全美各大都会中心统筹协调植堂事工，力争到2005年开拓20间新教会；聘请一支兼职区域资源拓展团队，为 Mission USA 及其他事工（包括从北美总会移交至全国总会的工作）筹集发展基金。2000年 USMB 全国大会的与会代表热烈拥抱了这一宏大异象，并全票通过了近100万美元的全国预算。
+
+看起来，USMB 的“房屋改建”正朝着理想的方向大步迈进。然而，事态的发展并未如预期般顺遂。出席2002年大会的代表们获悉：全国总会执行总干事未能如期聘就，预期的筹款策略亦未能达到预期成效。受此影响，包括 Mission USA 在内的多项全国事工被迫压缩规模、紧缩编制。
+
+### 治理架构与异象重塑
+
+正如许多家庭在经济上难免遭遇艰难时刻一样，这对于美国门诺弟兄会而言也是一段充满试炼的艰难时期。随着 USMB 领袖审慎评估解散跨国总会带来的深远冲击，深入考察宗派内部奉献模式的变化，以及门诺弟兄会信徒奉献时间与志愿服务方式的转变，他们开始探索一套全新的治理机制。
+
+教会事工委员会（Board of Church Ministries）建议放弃以往由多个独立委员会分立运作的模式，转而组建一个集约化的“超级”领导董事会（Leadership Board），并推行以专业同工为主导驱动的治理模式。这个由9名成员组成的领导董事会，在五大区会之间保持均衡代表性，统筹管理以往受托人董事会、信仰与生活委员会、传媒委员会以及 Mission USA 的各项职能。同时，设立一年一度的“全美机构董事峰会”（Institutional Board Summit），将领导董事会执行委员会与来自各区会、门诺弟兄会基金会、两所高校及神学院，以及加倍宣教部（Multiply）的代表汇聚一堂，共同提供资源支持并拟定 USMB 的核心议程。各类专项工作团队则视实际需要灵活委派。
+
+该治理模型于2004年正式通过，查克·布勒（Chuck Buller）获聘为首任全职 USMB 全国执行总监。唐·莫里斯（Don Morris）随后加入团队，出任 Mission USA 主任。
+
+虽然 USMB 迄今仍由单一董事会统辖领导，但对这一治理模式的微调与优化从未间断。例如，实践很快表明，领导董事会由于事务繁杂，无法充分顾及深层的神学教义议题；因此，全美“信仰与生活委员会”（Board of Faith and Life）于2006年正式恢复设立。
+
+2014年物色新任全国执行总监的过程，推动了一场更为深远的体制机制革新。自2007年起担任该职的埃德·博施曼宣布退休意向，领导董事会敏锐地意识到，这不仅是交接领导棒的契机，更是全盘检视 USMB 组织架构、核心异象与战略目标的良机。
+
+在组织咨询专家乔治·布拉德（George Bullard）的协助下，一项历时两年的事工与架构全面评估展开，约40位深具洞见的 USMB 牧长领袖共同参与，为未来绘制总体发展方向。他们的研究成果由一个写作小组汇聚提炼，随后交由战略工作团队进一步打磨精进。在此过程中，领导董事会与全美峰会的与会者深入审议了各项草案并提出宝贵意见。
+
+最终形成的纲领性文献明确确立了三大核心委身：本地、全国与全球层面的教会倍增/植堂/布道传福音；刻意门徒训练；领袖培育。USMB 的一切事工与活动，都将以“赋能地方教会发挥其全部事奉潜能”为基准来进行检验。异象宣言描绘了一幅生动蓝图：各门诺弟兄会堂会将围绕这一项或多项核心委身，形成富有生机的有机联络网络。这份名为《未来故事》（*The Future Story*）的十年异象愿景，巧妙地以一位身处2025年的人回溯过去的视角写就，生动描绘了 USMB 各项事工在过去十年间所经历的蜕变与飞跃。
+
+这项新异象的其他关键要素包括：结束“全美机构董事峰会”的运作机制，组建专注于战略领导力议题的“全国战略团队”（National Strategy Team），并将 USMB 首席行政同工的职衔确立为“全国总监”（National Director）。由于这一新战略并未改动 USMB 的章程细则，2014年大会代表并未就该战略提案进行法定表决，但代表们齐声确认并签署了该异象与战略，以此作为指引 USMB 直至2025年的前进航标。
+
+### 三大核心委身
+
+USMB 的崇高异象，是赋能每一间地方门诺弟兄会堂会，在我们的福音派与重洗派独特信仰底色之内，完全发挥上帝所赐予的事工潜能。为实现这一目标，USMB 采纳了一项关键战略：建立坚强有力的全国统筹服务机制，在宣教与事工层面为地方堂会及各大区会提供激励、支持与全方位资源；专注于教会与领袖之间的生机性联络网络，全力深耕三大核心委身：
+
+- **教会倍增与布道传福音**（Church multiplication and evangelism）
+- **刻意门徒训练**（Intentional disciple-making）
+- **领袖培育**（Leadership development）
+
+这三大核心委身，构成了展望2025年美国门诺弟兄会堂会群体风貌的基石与灵魂。虽然这些委身并非凭空而生，但在全国同工团队与各门诺弟兄会事工分支中，却涌动着全新的活力与饱满的热忱，全力激励并装备各堂会。
+
+**教会倍增与布道传福音**，是美国门诺弟兄会使命与事工不可或缺的生命线。在埃德·博施曼（1996–2001）和唐·莫里斯（2004–2016）的先后领导下，Mission USA 作为 USMB 的植堂与教会更新事工服侍了整整二十年。在此期间，Mission USA 广泛借鉴整合了各类植堂机构的优势资源，其中包括加拿大总会的植堂事工机构 C2C Network。
+
+随着 USMB 领导董事会深入探讨如何最佳落实对教会倍增与布道的新一轮聚焦，2015年 USMB 领袖探寻 C2C 是否能作为 USMB 的植堂执行机构。这一提议促使 C2C 探索将其服侍工场拓宽至加拿大国境之外；同时也与 MB Mission（加倍宣教部前身）领袖日益清晰的异象产生共鸣——即认定宣教应被定义为本地、全国与全球层面的统一体，且必须深植于每间地方教会、区会及全国总会的异象、战略与架构核心。
+
+因此，2016年，Mission USA 功成身退，美国本土的植堂事工全面与 C2C 携手展开。MB Mission 与 C2C Network 的合并计划持续推进；2019年1月，Multiply 正式宣告诞生，作为一家植根于门诺弟兄会传统的差传机构，开展跨宗派服侍，以促进本地、全国及全球的教会植立。
+
+然而，USMB 与 C2C/Multiply 之间的这一合作模式仅维持了三年。2019年10月，Multiply 宣布终止其在美国本土的植堂运营板块。面对骤变，全国总会与各大区会迅速接盘，为羽翼未丰的新植堂点提供托底支持，但随之而来的领导真空急需制度化填补。
+
+这一职责由 USMB 新设立的“植堂理事会”（Church Planting Council）承接，由“植堂动员主任”（Church Planting Mobilizer）统筹主持。植堂动员主任与各区会植堂委员会密切同工，并与 USMB 各堂会构建协同网络，以孕育推进植堂项目。动员主任同时统辖由 USMB 五个区会各派代表组成的植堂理事会。植堂理事会密切追踪各区会乃至全国范围内的一切植堂动态，扶持并激励牧者与教会网络植立新堂点及拓展分堂，并协同推进教会更新振兴项目。此外，由一批门诺弟兄会牧者自发创立的“网络倡议”（The Network），亦为各地植堂者提供项目统筹管理与全方位牧养关怀支持。
+
+**领袖教育与发展倡议（LEAD Initiatives）**
+为地方堂会牧者与同工提供针对性专业资源，全面深耕“刻意门徒训练”与“领袖培育”两大核心委身。门徒与领袖绝非自然而然一蹴而就。无论我们在基督里的属灵“年资”几何，所有的基督徒都需要得到持续的滋养与装备，以便在上帝的国度中尽展恩赐与才干。LEAD 倡议为牧者与领袖奠定了扎实基石，帮助他们在深化个人信仰生命的同时，提升教牧事奉成效，建立紧密的同工网络。
+
+LEAD 培育体系涵盖但不限于以下核心板块：
+- **LEAD 教练陪伴（LEAD Coaching）**：由经验丰富的认证教练网络为教牧同工与领袖提供一对一生命陪伴式辅导，促进个人灵命成长与服事生命境界的提升；
+- **LEAD 研学同侪群（LEAD Cohorts）**：为渴望深入探讨特定专题的同行者提供线上微型研讨平台，全员免费参与；
+- **LEAD 播客（LEAD Pods）**：USMB 官方定期推出的灵命成长与领导力培育专属播客节目。
+
+### USMB 的事工运作模式
+
+鉴于 USMB 采纳的是以全职专业同工驱动的治理模式，全美各项事工高度依托一支由全职与兼职同工组成的团队。他们统一向全国总监汇报，全国总监则对领导董事会直接负责。除全国总监外，目前的常设全职同工包括行政秘书/财务主管，以及植堂动员主任；兼职专业同工则涵盖行政助理、《基督徒领袖》杂志主编、副主编、网站主管、社交媒体协调员以及全美领袖动员督导等。
+
+领导董事会由全美双年度代表大会（即 USMB Gathering 大会）选举产生的9位理事组成。此外，董事会还设有9位当然理事（ex-officio members）：包括来自 USMB 五大区会的区总牧（District Ministers）、门诺弟兄会基金会和加倍宣教部的首席负责人，以及来自 USMB 青年事工部和太平洋区会西语理事会的代表。
+
+**全国战略团队（National Strategy Team，简称 NST）** 的成立旨在就战略领导力重大议题向领导董事会提供咨询洞见，并促进跨机构协同，以达成《未来故事》异象所确立的各项远景目标。虽然 NST 的核心成员由各区总牧、全国总监以及门诺弟兄会基金会与加倍宣教部的负责人组成，但该团队会定期邀请其他重要领袖参与，就特定前沿议题进行深入研讨与专项咨询。例如，在与刚果民主共和国及埃塞俄比亚移民建立的各堂会领袖举行深入座谈后，NST 于2019年主办了两次专题峰会，并设立了专门特别工作组，深入规划如何卓有成效地服侍并接纳渴望正式加入 USMB 大家庭的刚果与埃塞俄比亚堂会。
+
+**USMB 信仰与生活委员会（Board of Faith and Life，简称 BFL）** 由4名全美特选理事，以及5位区总牧与全国总监作为当然理事共同组成。该委员会承担全宗派的教义教导监督职责，统管神学校约与教牧政策规约。在其日常职守中，BFL 编辑出版面向21世纪教会现实挑战的系列牧养专题手册，主办双年度的“全国新牧者入职培训导向营”（National Pastors' Orientation），并根据时代需要召集专题教义研讨大会（Study Conferences）。
+
+自2006年恢复以来，BFL 已召集了两次重要的教义研讨大会：2013年的首届专题大会聚焦《信仰宣言》第12条（社会与国家）与第13条（爱与非抵抗/缔造和平），有力推进了第13条条文与注释的重大修订历程；2019年的专题大会则以“圣经与教牧职分中的女性”为题，在长达20年的沉寂之后，重新在宗派内部开启了关于女性参与教牧事奉的坦诚、严谨的圣经对话。
+
+### 装备下一代
+
+美国门诺弟兄会历来将青年人的福音布道与门徒造就置于优先地位。在地方堂会层面，主日学、周间活动、青年团契、假期圣经学校（VBS）以及各类夏令营会，持续呼召青年一代归向基督，活出作主门徒的荣美生命。USMB 各区会主办丰富多彩的青少年夏令营、秋冬季研习营，并资助青年事奉实习计划。
+
+历史上曾有专门的全国委员会统筹协调全美青年事工。即便后来该委员会被精简并入其他治理架构，USMB 对新世代青年的庄严委身亦从未减退。
+
+1975年，首届“全美青年大会”（National Youth Conference，简称 NYC）在新墨西哥州歌罗瑞塔浸信会大会中心（Glorieta Baptist Conference Center）隆重举行，共有1,395名青年、青年导师与服事同工出席。这项每四年举办一次的青年盛会，选址于设施完备的高山营地，参会规模节节攀升——1999年创下了1,796人的历史新高；活动内容亦不断丰富，不仅包含多位重磅主题讲员与敬拜音乐会，还涵盖才艺展示以及由泰博学院和弗雷斯诺太平洋大学联合主办的高中毕业生毕业早餐会。
+
+2003年，大会在下午的自由活动时段首次融入了社区服侍环节。学生们搭乘大巴从科罗拉多州埃斯特斯公园（Estes Park）的落基山青年会营地前往博尔德市（Boulder），接受挑战在闹市街头实践“出人意表、不求回报的善行”。
+
+提供兼具深刻服侍体验的全国性盛会，成为2007年 NYC 策划团队的核心考量。为此，他们将大会场地移至加利福尼亚州阿纳海姆（Anaheim）的一家大型会议酒店。依托大都会成熟的社区网络，当地丰富的基于信仰的慈善与服侍机构足以让每一位参会青年亲身投入服侍实践。随后的“圣安东尼奥2011”大会以及在丹佛举办的“Named 2015”大会，继续为学子们提供兼具社会服侍、全场敬拜大会、专题工作坊挑战以及与全美门诺青年建立深厚友谊的宝贵机会。
+
+2019年，全美青年大会重返新墨西哥州歌罗瑞塔冒险营地，以“YouthCon 2019”的崭新面貌亮相。策划团队清醒意识到，此前酒店式会议环境的一大缺憾在于缺乏自然社群互动的空间；他们深切盼望年轻人体会围坐聚餐的亲密，拥有充裕的非正式漫谈空间，而山野营地的环境完美满足了这一渴望。营会鼓励年轻人下载 USMBYouth 专属手机应用。策划团队摒弃了仅依靠一两位名讲员的传统做法，起用了一支多元讲员团队，信息层层递进——从呼召青年成为上帝宏大叙事的一部分，直至激励他们对耶稣基督跟随与事奉的召唤坚定回应“我愿意”。
+
+YouthCon 2019 由 USMB 全国青年事工委员会（通称 USMB Youth）统筹策划，广泛招募了在各项专业领域深具专长的志愿同工。在2015年大会之后，USMB Youth 推出了全新异象战略：通过“网络倡议”赋能青年事工工作者；为高中生举办全国盛会；并通过“服侍计划”（Project:Serve）持续深化社会服侍传统，为各地青年团契服务本地社区的创意项目提供专项资助。
+
+YouthCon 2019 闭幕后，USMB Youth 重新审视其异象战略并作出了果断调整。除了继续通过“网络倡议”联络并赋能基层青年牧者外，基于对多方实际情况的综合考量，USMB Youth 决定告别长达数十年、每四年在学期中举行一次全国大会的旧模式，转向每年夏季举办名为“登峰营”（Ascent）的全国性夏令营。
+
+首届“登峰”全美夏令营于2021年6月在歌罗瑞塔冒险营地开营。尽管当时全球 COVID-19 疫情的各项防控规定对营会规模和活动开展带来了一定限制，但 USMB Youth 坚信，无论在营员人数还是活动深度上，该营会都必将迎来稳健增长。
+
+USMB 青年事工的第三大战略重心，是从单纯倡导志愿服侍，深化为通过“领袖输送通道”（The Leadership Pipeline）发掘并造就新一代领袖人才。自2022年起，一支兼职领袖动员团队正式启动运转，专门物色并培育有志于全职服事的优秀青年。该计划依托专属网站平台，地方堂会可在其上发布教牧实习岗位，青年实习生亦可展示个人事工档案，实现供需精准对接。
+
+USMB 青年还享有其他丰富的领导力造就与事奉契机：泰博学院设立的“信仰前沿”（Faith Front）项目，致力于激励基督徒青年锤炼事工领导力，尤为侧重教牧服事及其他教会全职圣工的准备；太平洋区会的“新一代领导力委员会”为青年提供宝贵的教牧实习岗位；Multiply 差会为青年提供多项跨文化短期宣教实践机会；门诺弟兄会基金会则通过其“新一代领袖基金”，为有志于在本地或全球服侍门诺弟兄会大家庭的高中生至神学院研究生提供丰厚的奖学金资助。
+
+### 《基督徒领袖》杂志（Christian Leader）
+
+您是否知道，当《基督徒领袖》（*Christian Leader*）于1937年创刊时，它最初竟是一份专为那些迅速从德语转向英语的年轻信徒量身定制的青年刊物？
+
+门诺弟兄会历来积极善用各种传媒载体传播福音佳音，尤为重视文字印刷出版。历史上，在俄国殖民聚居区广泛分发基督教属灵书籍与单张，正是催生门诺弟兄会灵性复兴的核心催化剂之一。在门诺弟兄会移民离开俄国抵美十年后，领袖们迫切渴望拥有一份定期刊物，以便与散居各地的堂会保持交通联络。
+
+1884年，他们创办了德语刊物《锡安信使》（*Zionsbote* / Messenger of Zion）。直至1951年，这份德语期刊始终是北美门诺弟兄会的官方权威刊物。1951年，《基督徒领袖》正式接棒成为北美门诺弟兄会的官方旗舰出版物，共同服侍美加两国的信徒；直到1955年加拿大总会创办了自己的会刊《门诺先锋报》（*MB Herald*）。2019年，《门诺先锋报》全面转型为纯数字化线上刊物，使得《基督徒领袖》成为目前整个北美门诺弟兄会仅存的纸质印刷期刊。
+
+自1955年以来，《基督徒领袖》将内容重心聚焦于美国门诺弟兄会所关切的时代议题与各样事工动态。2010年，该杂志进行了全面改版，紧密贴合 USMB 的使命与异象。随后的数次版面升级，进一步强化了对 USMB 核心委身——植堂与布道、门徒训练及领袖培育的深度报道。
+
+2021年进行的一项全方位读者调研评估建议，《基督徒领袖》应继续坚持纸质印刷版与网络数字化版双轨并行发行。USMB 领导董事会批准了一项重要建议：正式设立“编辑委员会”，协助主编遴选时代课题并物色优秀的教义神学撰稿人；同时设立“审读委员会”，严把神学教义质量关。
+
+USMB 各堂会的所有会友和经常聚会者均可免费订阅《基督徒领袖》纸质版杂志。杂志绝大部分精彩内容亦可在官方网站查阅。此外，双周发行的免费电子资讯简报《C-Link》持续向信徒传递最新的要闻动态。
+
+### 五大区会（District Conferences）
+
+USMB 依据地理区划由五个地方区会组成。每个区会各自承担教牧监督关怀、本区域信仰与生活重大议题指引以及地方教会植堂拓植之责。
+
+**中部区会（Central District Conference，简称 CDC）**
+辖区幅员辽阔，涵盖爱荷华州、印第安纳州、内布拉斯加州、南达科他州、北达科他州、蒙大拿州、明尼苏达州及威斯康星州。CDC 麾下的39间堂会星罗棋布于广袤乡村、内城街区与城市近郊。除英语堂会外，还汇聚了西语、埃塞俄比亚语、拉科塔原住民（Lakota）、刚果以及斯拉夫语等多元族裔堂会。区会每年举办教牧退修会、青年大会及信徒大会，聘有一位全职区总牧及一位兼职教牧同工。
+
+**东部区会（Eastern District Conference，简称 EDC）**
+2019年，鉴于东部地区蕴藏的巨大发展潜力，原北卡罗来纳区会正式更名为东部区会。2020年，区会启动了正式接纳分布于佐治亚州、肯塔基州、缅因州、俄亥俄州、田纳西州及弗吉尼亚州等地刚果裔教会的历史进程。一百多年前，门诺弟兄会宣教士来到北卡罗来纳州的埃尔克帕克（Elk Park），委身服侍当地非裔美国人社区。EDC 正是这批宣教先驱百折不挠、克服难以想象的重重阻力、建立跨种族多民族教会的结晶。今天，这些堂会展现出独一无二的多元文化融合魅力，正以崭新蓬勃的姿态茁壮成长。2013年，位于北卡勒诺尔（Lenoir）的一间西语堂会正式加入 EDC。东部区会设有信仰与生活委员会以及基督教教育委员会，通过“城市事工研修院”（The Urban Ministry Institute）提供系统神学装备。该区会目前辖有9间堂会，由一位区总牧忠心牧养。
+
+**拉丁美洲门诺弟兄会区会（Latin America MB District Conference，简称 LAMB）**
+这是一个主要由西语裔信徒组成的区会，其前身是南部区会当年在得克萨斯州里奥格兰德山谷（Rio Grande Valley）开拓扎根的宣教圣工。虽然 LAMB 麾下堂会通常以西班牙语进行崇拜，但各堂会正积极增设英语聚会，以深入触及新一代年轻群体。LAMB 现辖11间堂会，每年举行联合敬拜与团契大会，由一位区总牧统筹服侍。
+
+**太平洋区会（Pacific District Conference，简称 PDC）**
+辖区横跨亚利桑那州、加利福尼亚州、内华达州、俄勒冈州、犹他州及华盛顿州，麾下共有122间堂会，按堂会数量计是全美规模最大的大区。全职区总牧与 PDC 信仰与生活委员会、本土宣教委员会、新一代领导力委员会以及西语理事会同心协力，众志成城，所成就的圣工远超单打独斗之所能，竭力践行主耶稣“去使万民作门徒”的大使命。
+
+**南部区会（Southern District Conference，简称 SDC）**
+涵盖阿肯色州、科罗拉多州、堪萨斯州、密苏里州以及俄克拉荷马州的41间堂会。区会聘有一位全职区总牧及一位青年事工牧师。由青年、管家、信仰与生活、教会拓展与布道四大委员会以及执行理事会共同领航，致力于实现三大战略目标：点燃植堂伙伴关系、动员关怀世界的年轻一代、深耕充满属灵活力的生机堂会。SDC 拥有底蕴深厚的小学、初中及高中青少年夏令营营会传统，并每年为初高中青年举办盛大的年度联合大会。
+
+
+---
+
+### English Original Text
+
+# Chapter 9: Mennonite Brethren in the U.S.
+
+
+<!-- Page 115 -->
+
+
+### CHAPTER 9
+
+
+### Mennonite Brethren
+
+in the U.S. Growth and change within a family prompt many a home remodeling project. Remodeling is messy, as walls are knocked down, spaces reconfigured and rooms added. Some remodeling projects are detoured by unexpected obstacles and more times than not the price tag increases thanks to unforeseen expenses. But when all is said and done—when tidiness is restored and displaced belongings have found a home—the family appreciates the ways in which the changes have improved or enhanced their home. In the early 2000s, U.S. Mennonite Brethren significantly revamped their “home” — the United States Conference of Mennonite Brethren Churches (USMB). While the structure that housed ministries changed, the commitment to grow the church and disciple believers remained the same. In this sense, the changes did not represent an “extreme” makeover. Efforts to strengthen the national conference were initiated in 2000 as USMB and the Canadian Conference
+
+
+<!-- Page 116 -->
+
+of MB Churches (CCMBC) began the process of dissolving the binational General Conference. While CCMBC’s national structure was well developed, USMB ministries were less so and stood in the shadow of a strong binational conference. USMB leaders recognized the need for a new vision and new leadership to help answer the question, “What’s next?” That same question was raised in the late 1980s, and in 1988, USMB adopted numeric goals for planting new churches and calling out and preparing leaders for these new churches. The goals of “Vision 2000” were to see USMB grow to 25,000 members and 180 congregations by the year 2000. Specifically, local congregations were challenged to grow, and the districts, with the help of the national conference, would establish five new churches per year with 30 of these churches being started among different ethnic peoples. Leaders would be needed for these new churches. Established congregations were asked to call out and help prepare two percent of their membership for leadership roles in pastoral ministry and missions. Two ministries emerged to meet these goals. Integrated Ministries, a new effort led by Loyal Funk, connected with churches formed among immigrant communities. As a result of Integrated Ministries, the USMB family grew to include Slavic/Russian, Korean, Hispanic, Japanese, Ethiopian and Chinese congregations.
+
+
+<!-- Page 117 -->
+
+Mission USA was formed in 1996 to focus on planting new churches and renewing existing churches as well as leadership development. Mission USA executive director Ed Boschman led the effort and new churches were planted in Arizona, Utah, Nebraska, Oklahoma and elsewhere. Coming into the 21st century, the numeric goals of Vision 2000 had been met. USMB numbered 180 congregations with a total membership of 26,219. Forty-five transcultural congregations were welcomed, exceeding the goal of 30. As USMB leaders considered the future, three goals emerged: securing a full-time national executive director, coordinated church planting by Mission USA in metro centers around the U.S. with the goal of planting 20 new churches by 2005 and hiring a team of part-time regional fundraisers to solicit funds for Mission USA and other ministries, including work done by the General Conference that would move to the national level. Delegates to the 2000 USMB convention embraced this energetic vision and affirmed a national budget of nearly $1 million. It appeared that the USMB “remodel” was going in the right direction. But things did not develop as planned. Delegates to the 2002 convention learned that a national conference executive director had not been hired and that the funding strategy had not worked as hoped. Consequently, ministries were downsized, including Mission USA.
+
+
+<!-- Page 118 -->
+
+Governance and Vision Most families go through some tough times financially, and this was one of those times for U.S. Mennonite Brethren. As USMB leaders considered the impact of dissolving the General Conference and explored denominational giving patterns and shifts in the way Mennonite Brethren volunteer their time, they began to look at a new form of governance. Instead of continuing with a multiple-board model, the Board of Church Ministries recommended forming one “super” board and using a model that would be staff driven. The nine-member Leadership Board would represent a balance among the five districts and would manage the functions of the Boards of Trustees, Faith and Life and Communication as well as Mission USA. An annual Institutional Board Summit would bring together the Leadership Board executive committee and representatives from the district conferences, MB Foundation, the two colleges and seminary and MBMS International, now Multiply, for support and to identify agenda for USMB. Project teams would be appointed as needed. This model was approved in 2004, and Chuck Buller was hired as the first fulltime USMB executive director. Don Morris joined the USMB staff as the Mission USA director. While a single board continues to lead USMB, adjustments to the single board governing model have
+
+
+<!-- Page 119 -->
+
+been ongoing. For example, it quickly became clear that the Leadership Board was not able to adequately address theological matters, so in 2006 the national Board of Faith and Life was reinstated. A significant renovation was prompted by the search for a new USMB executive director in 2014. Ed Boschman, who had served in this role since 2007, had announced his intention to retire, and the Leadership Board felt this was an appropriate occasion to review not only the USMB structure but also its vision and goals. The two-year ministry and structure review was led by consultant George Bullard and involved 40-some USMB individuals who set a general direction for the future. Their conclusions were developed by a writing team whose work was then refined by a strategy team. Along the way, Leadership Board and National Summit participants reviewed the various documents and gave their input. The summary document identified three core commitments: local, national and global church multiplication/church planting/evangelism; intentional disciple-making and leadership development. All USMB activities would be measured in terms of helping local churches reach their full ministry potential. The vision statement envisioned networks of MB churches formed around one or more of the core commitments. The 10- year vision statement, called “The Future Story,” was written from the perspective of someone in 2025 looking
+
+
+<!-- Page 120 -->
+
+back and describing how USMB ministries had changed and developed during the preceding decade. Other elements of this new vision included retiring the Institutional Board Summit, forming a National Strategy Team to focus on strategic leadership issues and giving the USMB lead staff member the title of national director. Because this new strategy did not alter USMB bylaws, delegates to the 2014 convention were not asked to vote on the proposed strategy. But they did affirm this vision and strategy to guide USMB until 2025.
+
+
+### Core Commitments
+
+The USMB vision is to empower each local Mennonite Brethren church to reach its full, God-given ministry potential within the framework of our evangelical and Anabaptist distinctives. To achieve this goal, USMB adopted a strategy of building a strong national presence to encourage, support and help resource local churches and districts for mission and ministry, focusing on organic networking of churches and leaders and zeroing in on three core commitments. These three core commitments are: · Church multiplication and evangelism, · Intentional disciple-making and · Leadership development. These three core commitments are central to the vision of what will characterize U.S. Mennonite Brethren
+
+
+<!-- Page 121 -->
+
+churches in 2025. While these core commitments are not new, there is a renewed energy and enthusiasm among national staff members and Mennonite Brethren ministries to encourage and equip congregations. Church multiplication and evangelism are essential to the mission and ministry of U.S. Mennonite Brethren. Under the direction of Ed Boschman (1996-2001) and then Don Morris (2004-2016), Mission USA served as the USMB church planting and church renewal ministry for 20 years. During this time, Mission USA drew on resources provided by a variety of church planting agencies, including C2C Network, the Canadian Conference church planting ministry. As the USMB Leadership Board discussed how best to carry out its renewed focus on church multiplication and evangelism, in 2015 USMB leaders asked if C2C could serve as the USMB church planting arm. This request prompted C2C to explore expanding its ministry beyond Canada and dovetailed with a growing vision among MB Mission leaders that mission would be defined as local, national and global and would be central to the vision, strategy and structure of every local church and district and national conference. So, in 2016, Mission USA was retired, and U.S. church planting was done in connection with C2C. Plans for the merger of MB Mission and C2C Network moved forward, and in January 2019, Multiply was launched as a Mennonite Brethren-based mission agency that serves
+
+
+<!-- Page 122 -->
+
+cross denominationally to facilitate church planting locally, nationally and globally. The relationship between USMB and C2C/Multiply lasted just three years and in October 2019, Multiply ceased church planting operations in the U.S. The national and district conferences stepped in to support fledgling church plants, but the sudden loss of leadership needed to be addressed. That void was filled by USMB’s Church Planting Council, which will be directed by the church planting mobilizer. The church planting mobilizer will collaborate with district church planting committees and networks with USMB churches to develop church plant projects. The mobilizer will also oversees the Church Planting Council, comprised of representatives from each of the five USMB districts. The Church Planting Council keeps current of all church planting happenings within districts and nationally, supports and encourages networks of pastors and churches for planting new churches and campuses and can assist with church renewal projects. In addition, The Network, formed by a group of Mennonite Brethren pastors, will provide project management and church planter support. Leadership Education And Development (LEAD) Initiatives offer local church pastors and leaders resources designed to address the core commitments of intentional disciple-making and leadership development. Disciples and leaders don’t just happen. Regardless of our spiritual
+
+
+<!-- Page 123 -->
+
+“age,” all Christians need to be nourished and equipped to put our gifts and talents to use in God’s kingdom. LEAD Initiatives provide a foundation for pastors and leaders to enhance their ministry and connect with others while also growing their own faith. The LEAD program includes, but is not limited to: LEAD Coaching, life-on-life coaching provided to pastors and leaders by a network of certified coaches for personal growth and life enhancement; LEAD Cohorts, online meeting places for small groups of individuals interested in learning more about a specific topic that are free to all participants; and LEAD Pods, the official USMB podcast devoted to spiritual growth and leadership development.
+
+
+### USMB Ministry Model
+
+Because the USMB governance model is staff driven, national ministries rely on a team of full- and part-time staff that report to the national director who in turn is responsible to the Leadership Board. In addition to the national director, current staff include a fulltime administrative secretary/bookkeeper and church planting mobilizer. Part-time staff include an administrative assistant, Christian Leader editor, Christian Leader associate editor, webmaster, social media coordinator and national leadership mobilizers.
+
+
+<!-- Page 124 -->
+
+The Leadership Board is comprised of nine members elected by delegates to the biennial national conventions, known as USMB Gathering. There are also nine ex-officio members of the Leadership Board: district ministers from the five USMB district conferences, lead staff members of MB Foundation and Multiply and a representative from USMB Youth and the Pacific District Conference Hispanic Council. The National Strategy Team (NST) is formed to advise the Leadership Board on strategic leadership issues and to encourage collaboration to fulfilling the goals outlined in the Future Story vision. While the district ministers, national director and lead staff members from MB Foundation and Multiply form the NST, the team regularly invites other leaders to educate and advise them on specific issues. For example, after meeting with leaders of congregations comprised of immigrants from DR Congo and Ethiopia, in 2019 the NST hosted two summits and formed a task force to strategize how to effectively serve and integrate the Congolese and Ethiopian congregations that want to become part of USMB. The USMB Board of Faith and Life (BFL) includes four members at large and the five district ministers and national director as ex-officio members. This board provides doctrinal oversight and is responsible for covenants and policies. Included in its duties, BFL publishes a pamphlet series addressing issues of
+
+
+<!-- Page 125 -->
+
+significance to the 21st century church, hosts the biennial National Pastors’ Orientation and convenes study conferences as needed. Since 2006, BFL has hosted two study conferences. The first study conference, in 2013, focused on Articles 12 (Society and State) and 13 (Love and Nonresistance) of the Confession of Faith and was convened to aid the process of revising Article 13. The subject of the 2019 was “The Bible and Women in Pastoral Ministry.” This study conference was intended to resume the conversation around women in pastoral ministry after a 20-year hiatus.
+
+
+### Equipping the Next Generation
+
+U.S. Mennonite Brethren have prioritized evangelizing and discipling young people. In local congregations, Sunday school, midweek programs, youth groups and vacation Bible school and summer camps invite youth to follow Christ and live as his disciples. USMB district conferences host summer camps and fall and winter conventions and sponsor internships. For a time, a U.S. Conference board coordinated national youth ministry efforts. But even when that board was eliminated and its responsibilities were assumed by other boards, a commitment to USMB youth remained. In 1975, the first National Youth Conference (NYC) was held in New Mexico at the Glorieta Baptist Conference Center. A total of 1,395 youth, sponsors and event staff attended.
+
+
+<!-- Page 126 -->
+
+The every-four-year event, held in a mountain setting at a full-service conference setting, grew in attendance—a high of 1,796 in 1999—and scope, including multiple keynote speakers and concerts as well as a talent show and seniors’ breakfast hosted by Tabor College and Fresno Pacific University. In 2003, a service component was added as an afternoon free-time option. Students were bused from the YMCA of the Rockies conference center in Estes Park, Colorado, to Boulder and were challenged to carry out “random acts of senseless kindness.” Offering a national event with a strong service component was a priority of the NYC 2007 planning team. So, they shifted the venue to a hotel in Anaheim, California. The large urban setting provided enough faith-based ministries that each NYC attendee could serve in some way. San Antonio 2011 and Named 2015 in Denver, Colorado, continued to provide students with the opportunity to serve as well as worship in general sessions, be challenged in workshops and connect with other USMB youth. In 2019, NYC returned to New Mexico and Glorieta Adventure Camps for YouthCon 2019. The 2019 planning team had determined that one of the weaknesses of the hotel setting was the lack of space for natural community. The team wanted youth to have meals together and plenty of places to gather informally, and the camp setting allowed for that. Participants were encouraged to download the USMBYouth app to their phones. Rather
+
+
+<!-- Page 127 -->
+
+than one or two speakers, the organizers chose a team of speakers, and their messages progressed from an invitation to be part of God’s story to saying yes to Jesus’ call to follow and serve him. YouthCon 2019 was planned by members of the USMB National Youth Commission, known as USMB Youth, who recruited volunteers with expertise in specific areas needed to pull off a national event. USMB Youth had launched a new vision following NYC 2015 that focused on supporting youth workers via The Network, providing a national gathering for high school students and continuing an emphasis on service through Project:Serve which would help fund projects created by youth groups to serve their community. Following YouthCon 2019, USMB Youth re-evaluated its vision and strategy and adjusted. They continue to connect and resource youth workers via The Network. A variety of factors led USMB Youth to move away from a national youth event held every four years during the school year in favor of an annual summer camp called Ascent. The first national summer camp was held at Glorieta Adventure Camps in June 2021. Restrictions and protocols in place due to the COVID-19 global pandemic impacted camp attendance and available activities, but USMB Youth anticipate the camp will increase in terms of campers and activities. The third USMB focus shifted from promoting service to calling out and training new leaders through
+
+
+<!-- Page 128 -->
+
+The Leadership Pipeline. A team of part-time leadership mobilizers began working in 2022 to identify and train young people for ministry. Their efforts will be supported by a Leadership Pipeline website where local churches can post openings for internships and interns can post profiles. Additional information about USMB Youth is available on the USMB website. Other leadership training and ministry opportunities available to USMB youth include Faith Front, a Tabor College program designed to encourage Christian youth to develop competencies for ministry leadership with special emphasis on pastoral ministry and other church vocations. The Pacific District Conference Next Generation Leadership Board offers internship opportunities for young adults, while Multiply offers young adults several short-term, cross-cultural ministry options. Through its Leadership Generation Fund, MB Foundation offers scholarships to high school through graduate students interested in serving the Mennonite Brethren family locally or globally.
+
+
+### Christian Leader
+
+Did you know that when the Christian Leader was first published in 1937, it was a youth publication designed to serve a constituency that was fast switching from German to English?
+
+
+<!-- Page 129 -->
+
+Mennonite Brethren have actively communicated the good news through various media, especially print. Christian literature distributions in the Russian colonies were one catalyst for the renewal that produced the Mennonite Brethren church. A decade after Mennonite Brethren left Russia and arrived in the U.S., leaders wanted a periodical to communicate with their scattered churches. In 1884 they began publishing Zionsbotefi (Messenger of Zion). This German-language publication was the official periodical of North American Mennonite Brethren until 1951. That year Christian Leader became the official publication of the North American Mennonite Brethren, and it served both U.S. and Canadian Mennonite Brethren until 1955 when the Canadian Conference developed its own publication, MB Herald . The MB Herald became an online-only publication in 2019, making Christian Leader the only print periodical serving Mennonite Brethren in North America. Since 1955, Christian Leader has focused its content on the issues and activities of U.S. Mennonite Brethren. In 2010, the magazine underwent a thorough redesign which included an intentional focus on the USMB mission and vision. Subsequent redesigns have emphasized USMB’s commitment to church planting and evangelism, discipleship and leadership development. In 2021, a comprehensive review recommended that Christian Leader continue to be offered both in print
+
+
+<!-- Page 130 -->
+
+and online. The USMB Leadership Board affirmed the recommendation that an Editorial Committee be formed to assist the editors in selecting topics and identifying writers for theological content and that a Review Committee look over this content. A free subscription to Christian Leader is available to all members and attendees of USMB churches. Most of the magazine content is available online. C-Link, a free e-news digest, is published biweekly.
+
+
+### District Conferences
+
+USMB is comprised of five district conferences organized along geographic lines. Each district is responsible for pastoral oversight, local faith and life issues and church planting. The Central District Conference (CDC) covers a large territory: Iowa, Indiana, Nebraska, South Dakota, North Dakota, Montana, Minnesota and Wisconsin. The CDC’s 39 churches are located in rural, inner city and suburban communities. In addition to English-speaking congregations, CDC congregations include Hispanic, Ethiopian, Lakota, Congolese and Slavic congregations. The district hosts an annual pastors’ retreat, youth conference and adult conference and employs one full- time and an additional part-time district minister. In 2019 the North Carolina District Conference was renamed the Eastern District Conference (EDC) in
+
+
+<!-- Page 131 -->
+
+recognition of potential growth. In 2020, the district began the process of welcoming Congolese churches in Georgia, Kentucky, Maine, Ohio, Tennessee and Virginia. More than 100 years ago, Mennonite Brethren missionaries came to work with the African American community in Elk Park, North Carolina. The EDC is a result of the perseverance of these men and women who overcame great odds and developed multi-racial congregations. Today these churches are a unique blend of cultures that are growing in fresh new ways. In 2013 a Hispanic congregation in Lenoir, North Carolina, joined the EDC. The EDC has a Board of Faith and Life and Christian Education Board that provides theological training through The Urban Ministry Institute. The district of nine congregations is served by a district minister. The Latin America District Conference (LAMB) is a predominantly Hispanic group born from mission work initiated by the Southern District Conference in the Rio Grande Valley. While LAMB congregations typically hold services in Spanish, congregations are adding English services to reach younger people. The 11 LAMB congregations meet annually for worship and fellowship and are served by a district minister. Comprised of 122 congregations in Arizona, California, Nevada, Oregon, Utah and Washington, the Pacific District Conference (PDC) is the largest regional conference in terms of member churches. A full-time
+
+
+<!-- Page 132 -->
+
+district minister works with the PDC Board of Faith and Life, Home Missions Board, Next Generation Leadership Board and Hispanic Council to accomplish more together than they could individually as they seek to fulfill Jesus’ command to go and make disciples. The 41 churches of the Southern District Conference (SDC) are located in Arkansas, Colorado, Kansas, Missouri and Oklahoma. The district employees a full-time district minister and youth minister. Four commissions—Youth, Stewardship, Faith and Life and Church Extension and Evangelism—and an Executive Council guide the district’s goals of igniting church planting partnerships, mobilizing world engaging generations and cultivating vital congregations. The SDC has a strong summer camping program for elementary, junior high and high school students and holds an annual convention for junior and senior high youth.
+
+
+---
+
+# 第十章：门诺弟兄会国际大家庭
+## *Chapter 10: The International MB Family (ICOMB)*
+
+> **归属分部**：第三部分：茁壮成长的家庭 (Part Three: A Growing Family)
+
+### 中文译文
+
+# 第十章：门诺弟兄会国际大家庭（ICOMB）
+
+### 第十章
+
+### 门诺弟兄会国际大家庭
+
+您是否曾参加过一次格外圆满的家族大团圆？来自天南地北的亲友齐聚一堂，重叙久违的骨肉深情，结识新添的家族成员。在基督徒的家族聚会中，大家一起数算恩典、分享见证、开展活动、同心颂赞与祈祷。有时我们起初可能还在犹豫是否成行，但聚会结束时，每个人都会为自己当初付诸行动而满心欢喜。
+
+**门诺弟兄会国际共同体（International Community of Mennonite Brethren，简称 ICOMB）** 就是这样一个不断茁壮成长的属灵大家庭。在我们这一大家庭中，成长之所以成为常态，是因为我们是一间投身于上帝神圣宣教使命的教会。每当有人跨出安舒区，走向未曾听闻耶稣基督福音的偏远之地，属灵的新生儿便在此诞生；历经岁月的耕耘与浇灌，当地一群群萌芽的地方教会便正式注册成为一个崭新的门诺弟兄会教会团体。
+
+2017年，一次激动人心的 ICOMB 大家庭盛会在泰国隆重举行，汇聚了来自全球36个国家的约240名代表。通常情况下，ICOMB 每年举行一次全球峰会，由22个正式成员国家总会的领袖聚集在一起，进行深度的见证分享、同工装备与灵性勉励。而这一次，ICOMB 与加倍宣教部（Multiply）携手，特邀了另外15个新兴国家教会团体的领袖共襄盛举。2017年泰国峰会是 ICOMB 主办的第五次全球专题磋商会（前四次分别为：1999年在堪萨斯州威奇托举行的全球统合磋商会；2007年在加州弗雷斯诺以及2011年在曼尼托巴省温尼伯举行的两届高等教育磋商会；以及2009年在刚果举行的基督教教育磋商会）；这也是自1988年加倍宣教部前身在巴西库里蒂巴（Curitiba ’88）催生 ICOMB 以来，首次举行的以普世差传宣教为核心主题的全球盛会。
+
+ICOMB 的崇高宗旨，是促进各成员国家总会之间的深度团契联结与事工协同，以期在作主门徒与福音见证上结出更加丰硕的果子。可以说，ICOMB 就是门诺弟兄会的“全球联合总会”，将包括美国门诺弟兄会总会（USMB）在内的所有已成熟建制的地方性国家总会紧密凝聚在一起。ICOMB 致力于通过属灵共同体、跨国集会，以及远程教练指导、各大洲同侪研学网络等丰富资源，赋能并激励各国教会领袖。
+
+ICOMB 由所有成员国家总会共同出资维护。它没有庞大的财政预算，也不搞繁复的机构项目；其无可比拟的属灵权能，深植于全球肢体间真挚的生命联结与普世信仰认同之中。
+
+2004年，经过一个国际工作团队历时三年的集体研讨与推敲，《国际门诺弟兄会信仰宣言》（*International Confession of Faith*）正式获批通过，成为指引所有成员教会的纲领性告白。它与美国总会的《信仰宣言》及各国既有的门诺弟兄会信仰宣言高度契合融通。在表述风格上，它兼融“东西方思维之美”，将生动的救赎叙事与清晰的要点概括巧妙融合。
+
+它首先通过全景梳理从《创世记》到《启示录》的圣经宏大叙事，深刻回答了“上帝如何在世界中施行作为？”这一根本问题；随后，以五个凝练而深刻的维度回答了“门诺弟兄会信徒当如何回应？”：
+1. **圣道之民（People of the Bible）**
+2. **崭新生活样式之民（People of a New Way of Life）**
+3. **圣约共同体之民（People of a Covenant Community）**
+4. **和好与和平之民（People of Reconciliation）**
+5. **盼望之民（People of Hope）**
+
+2008年，一部由各大洲教会领袖共同撰写的辅导研读课本正式出版，以深化信徒对该宣言的理解与践行。截至2017年，该信仰宣言及其研学读本已被翻译为15种语言。每一个新申请加入的成员（即国家教会总会）都必须庄严认同这一国际信仰宣言。他们既可直接采纳原文，亦可将其作为基准蓝本，融入契合本土处境的特定教义侧重。
+
+基督教神学教育始终是 ICOMB 关注的重中之重。它设立并运作“全球奖学金基金”（Global Scholarship Fund），为那些学成后将在本国教会投身领袖培养的国家级教牧骨干提供深造资助。此外，ICOMB 还主导为刚果民主共和国300多所门诺会中小学校（涵盖1至12年级）编撰了基于重洗派核心价值观的成套统编教材。这套课程完全由刚果本土学者在 ICOMB 的资助下自主研发编写，有力重振了当地服侍近75,000名在校学子的门诺会教会教育系统。
+
+简而言之，ICOMB 就是属于您的国际大家庭。如果您正在研读本书，您很可能正在探索门诺弟兄会大家庭的信仰底蕴，或是正在担任门诺弟兄会的教牧领袖，亦或正在考虑接受信徒洗礼加入会友行列。请坚信，您绝非孤身一人！您深植于一间提供门徒造就与属灵呵护的地方堂会；这间地方堂会隶属于一个地方区会，区会隶属于美国门诺弟兄会全国总会（USMB），而 USMB 则是 ICOMB 全球共同体不可分割的一员。
+
+在世界每一个角落，您都拥有同气连枝的门诺弟兄会弟兄姊妹。他们当中，有人身处贫困窘境；有人饱受腐败专制政权的漠视与压制；有人正经历着严酷的信仰逼迫；亦有人生活在物质丰饶的国度。
+
+我们的第一身份，始终锚定在我们的主与救主耶稣基督里。
+其次，我们在认信身份上属于门诺弟兄会：我们坚信圣经是上帝无误的圣言；我们坚信唯独悔改并信靠耶稣基督方能得救；我们坚信圣灵带来的生命复兴；我们坚信教会是基督临在世界的身体；我们坚信和好——一份关乎全人生命、带来人与神和好以及人与人和睦的整全福音；我们坚信上帝的国度“既已临到，尚未完全”，基督的再临必按上帝的时间与旨意成全万有。
+第三，我们是一间负有差传使命的教会：我们竭力在地方社区、全国范围乃至地极全地，传扬耶稣基督救赎的福音好消息。
+
+在席卷全球的 COVID-19 疫情期间，身处世界各地的家庭成员因着地域环境的差异经历了不同程度的冲击。大家庭学会了更加感恩现代科技在维系彼此交通中所发挥的纽带作用。全球门诺弟兄会大家庭同样如此。2020年和2021年，ICOMB 年度峰会转战线上举行。2020年，共有80位代表参加了两次全球全体大会和四场大洲区域会议。尽管日本已是夜间10点，而温哥华尚是清晨6点，跨越相距达11,500英里的物理阻隔，各国代表依然能在线上彼此倾诉、同心祷告，并在各自屏幕前同领主餐圣餐。
+
+以下简要巡礼我们全球门诺弟兄会大家庭的生动版图——既涵盖 ICOMB 的正式成员，亦包括正在蓬勃孕育中的未来新伙伴。
+
+### 非洲：安哥拉、刚果民主共和国、马拉维及其他地区
+
+**安哥拉门诺弟兄会福音教会（IEIMA）**
+其历史肇始于1980年代初。当时，一位在刚果服事的宣教士差遣受训领袖重返安哥拉开拓宣教与植堂。这些安哥拉信徒此前为躲避长达30年的惨烈内战（1975–2005）逃往刚果，并在那里与刚果门诺弟兄会相遇归主。然而，在残酷暴力动荡中诞生的教会难免背负沉重的历史创伤——深深的相互猜忌与内部纷争曾长期困扰着他们，领袖们发现很难化解彼此间大大小小的分歧。加之战争的浩劫使绝大多数民众极度贫困，至今整个国家仍在艰辛重建之中。
+
+即便如此，一所圣经学院通过去中心化的流动教学模式持续培养传道人，教学网络从首都罗安达一直延伸至靠近刚果边境的信徒密集区。这间拥有75个堂会、8,000名会友的教会，在历史上从未有过常驻的外籍宣教士提供现成护航，完全依靠本土信徒在圣灵引导下自立成长。ICOMB 通过教练陪伴、定期走访以及在其选举新领袖的全国代表大会上担任观察员，给予 IEIMA 持续的扶持。
+
+2020年，因缺乏完备的建筑物硬件基础设施，该国17间地方教会遭到政府勒令关闭。教会领袖正积极筹措资金以期早日重开堂点，并在基层牧者间重建深厚的同工纽带。受疫情冲击，信徒无法外出打工，严峻的经济形势导致严重粮荒。总会大力倡导信徒在房前屋后自种蔬菜以渡过难关，并严抓公共卫生防线。信徒们纷纷在家庭中设立祈祷聚会，委身个人研经，并放胆向邻舍传扬福音。
+
+**刚果民主共和国门诺弟兄会教会共同体（CEFMC）**
+拥有约500间堂会、近100,000名洗礼会友，是一座历经百年沧桑的历史名会。门诺弟兄会同工最早于1913年联合门诺会差会进入刚果工场。1922年，门诺弟兄会差会正式决议深耕刚果，并植立了第一间门诺弟兄会堂会。在短短二十年间，教会便创办了约200所学校，福音主要在广袤的农村聚落扎根蔓延。当时的大城市普遍被视为不易结出福音果子的刚硬之地。
+
+1960年刚果宣告独立，政治风云剧变迫使所有西方宣教士在一夜之间仓促撤离；无论本土领袖是否做足准备，刚果弟兄们毅然挑起了教会治理的千斤重担。由于此前缺乏系统的深造培训，初期在治理能力上面临巨大断层。随着外籍宣教士后来陆续重返，出于人身安全考量，他们选择驻扎在大城市。自那时起，教会开始在乡村与都会双向蓬勃并进，尤其在首都金沙萨（Kinshasa），如今已星罗棋布着约50间极具活力的门诺弟兄会堂会。
+
+基督教教育迄今仍是 CEFMC 最为耀眼的服事实践。在刚果，教会承担着替国家普及国民教育的法定使命。地方门诺弟兄会堂会统辖运作着约125所涵盖1至12年级的中小学校，造就35,000名莘莘学子。四所坐落于不同乡村社区的圣经学院，持续培训平信徒与全职教牧骨干。金沙萨更设有两所大专院校级别的神学院与医护培训学校。
+
+当前，CEFMC 正将福音的触角坚定延伸至深山密林中饱受欺凌压迫的巴特瓦（Batwa，即俾格米人）群体。刚果门诺弟兄会更树立起向毗邻刚果的9个周边邻国拓展差传的宏大宣教异象。在局势极度凶险动荡的刚果东部前线，一个由半打新兴教会构成的网络正坚韧挺立。
+
+尽管按人均收入计算，刚果民主共和国位列全球最贫困的十个国家之列，但 CEFMC 在几乎没有任何外援依傍的境遇下自主稳健运转。他们全面推行“基于本乡本土现有资产的社区发展模式”（Asset-Based Community Development），紧紧立足于手中现有的微薄资源开拓生机。在刚果、安哥拉乃至整个非洲大陆，门诺弟兄会教堂里永远回荡着高亢欢腾的赞美乐章与热烈持久的祷告祈求。地方堂会普遍通过诗班来造就青少年与成年信徒——诗班所吟唱的皆是朗朗上口的圣经经文与救赎叙事，这构成了他们最为锐利有效的福音布道利器。
+
+**马拉维门诺弟兄会（MBCM）**
+在2020年 ICOMB 举行的首届线上全球峰会上，马拉维门诺弟兄会被正式接纳为全权正成员。来自全球的数十位门诺领袖在洋溢着属天喜乐的庆典中，向他们致以最热烈的欢迎、祷告与祝福。
+
+MBCM 的传奇肇始于一位名叫巴哈蒂（野生/Safari）·穆塔贝沙（Safari Mutabesha）的年轻人。在亲眼目睹家人在刚果东部种族屠杀中惨遭杀害后，他九死一生仓皇出逃，最终沦落至马拉维多瓦（Dowa）附近的扎莱卡（Dzaleka）难民营。然而在这片逼仄的难民聚居区，他所面对的依然是绝望的种族敌视与人性的无尽黑暗。绝望之中，他忆起自己曾在刚果门诺弟兄会中所受的门徒训练，以及上帝赋予他传福音的特殊恩赐。于是，他放胆传扬“和平的福音”，指引那些深陷族群仇杀的难民归向真正的“和平之君”。
+
+2009年，难民营中第一间教会拔地而起。蒙神丰盛恩待，野生·穆塔贝沙与同工们迅速跨出难民营的高墙，深入周边马拉维本土的城镇与村庄拓植教会。2015年，为了给这场迅猛发展的属灵运动寻找长远战略伙伴，MBCM 通过官方网站主动联络了加倍宣教部（Multiply）。双方的同工关系迅猛升温，并在教牧培训、社区发展与整全植堂上结出了累累硕果。至2020年，MBCM 已迅速扩充至37间堂会、14,000名洗礼会友。
+
+在非洲大陆的其他角落，更多新兴的门诺网络正在破土而出，我们恒切祈求它们早日成长为独立的国家或区域总会：
+- 在**布基纳法索（Burkina Faso）**，福音派门诺会（EMC）的先驱同工开创了面向纳内里格族（Nanerige）的圣经翻译圣工；如今 Multiply 同工接续深耕，一个兼具门诺弟兄会与 EMC 双重渊源的新兴教会群落正在孕育。
+- 在**布隆迪（Burundi）**，一个新兴信徒团体全面认同 ICOMB 信仰宣言，正积极申请正式加入。
+- 在**纳米比亚（Namibia）**，因着 Multiply 短期跨文化门徒造就团队（DMI）的开拓，一间母会带着多个分堂已生根发芽。
+- 在**乌干达（Uganda）**，一个由30多间教会组成的新兴区会正翘首期盼与 ICOMB 建立正式盟约。
+- 在**北非地区**，尽管面临极端宗教势力的严密盯防与残酷压制，仍有大批地下基督徒家庭教会如雨后春笋般归向基督。在摩洛哥、毛里塔尼亚、阿尔及利亚、突尼斯、埃及、沙特阿拉伯以及也门，都可以寻见这些微小却坚韧的群羊——其中也门的重洗派信徒更幽默风趣地自称“也门诺派”（Yemennonites）。
+
+### 亚洲：印度、日本、克木人差传及其他工场
+
+**印度门诺弟兄会总会（Conference of the Mennonite Brethren Churches in India）**
+是我们历史最为悠久、会友规模最为庞大的国家总会。第一批门诺弟兄会海外宣教士从俄国（现乌克兰境内）远赴海得拉巴（Hyderabad），并在纳尔贡达（Nalgonda）建立了第一间堂会。如今，印度门诺弟兄会坐拥约1,000间地方堂会，洗礼会友高达近200,000人！
+
+历史上，印度教会是通过建立宣教“基地”（mission stations）或综合院落拓殖起来的。早期门诺弟兄会与浸信会差会携手，在海得拉巴东部购置了大片地产。然而在那个宣教时代，“宣教区划和睦协定”（Comity Agreement，源自威廉·克里为避免不同差会争夺灵魂而提倡的工场划分原则）占据主导地位。于是，门诺弟兄会与浸信会达成了一项“基地置换”协议：门诺弟兄会将东部的新基地让渡给浸信会，换取了海得拉巴以南的数处成熟基地。因此，今天的印度门诺弟兄会主要集中在海得拉巴城内及其南部广大乡村地区。人们至今仍能走访这些历史基地原址——它们如今已发展为大型综合学府，其中两处更孕育出拥有数千名会友的庞大堂会。
+
+昔日的宣教院落集礼拜堂、医院、学校、农场以及宣教士寓所于一体，全心聚焦于服侍处于社会最底层的赤贫“不可接触者”（达利特人，Dalits）。到1970年，差会政策的革新与印度本土民族意识的高涨相互激荡，推动印度门诺弟兄会实现了完全的自治与本土化治理。
+
+今天，印度教会按“以堂会为中心的事工单元”组织运转。实力雄厚的大教会纷纷组建并差派巡回布道队，产生倍增拓殖效应。教会拓展同工与牧者由坐落于海得拉巴近郊繁华小镇沙姆沙巴德（Shamshabad）的“门诺弟兄会百年圣经学院”（MB Centenary Bible College）负责悉心培养。学院在校本部实行英语授课，并在贴近基层教牧工人的多个区域教学点推行泰卢固语（Telugu）延伸神学教育。
+
+尽管 COVID-19 疫情带来了巨大的伤痛与生离死别，但教会近期的感恩庆典依然见证了复兴——切尼帕杜（Chennipadu）新教堂落成献堂礼拜便是一例。这场历时三天的感恩盛会汇聚了盛大的爱筵聚餐，整个村庄周围扎满了欢庆的帐篷，邻近各堂会纷纷送上属天的丰盛祝福。
+
+**日本门诺弟兄会（Mennonite Brethren Church in Japan）**
+诞生于1950年，源于北美门诺弟兄会差派宣教士的拓荒服侍。以国际大都市大阪为轴心，日本门诺弟兄会组织极为严密完备，自主运作独立神学院、青少年营会事工，并在其麾下绝大多数堂会（共29间）实现了全职受薪牧者的常态化牧养。
+
+在2015年隆重庆祝建会65周年之后，日本信仰与生活委员会开启了将《ICOMB 国际信仰宣言》进行深度本土处境化诠释的历程——尤其针对日本政界推动修改和平宪法、建立国防正规军的社会浪潮。修宪在日本社会引发了极大的争议。这一时代挑战促使日本教会在自身的文化与政治语境中，围绕和平神学开展深度的“自主神学反思”（self-theologizing）。
+
+此外，国家与教会双重老龄化的加剧，以及社会文化向“后现代”、“后佛教”世俗化心态的剧烈转变，构成了日本教会面对的另一大严峻现实，迫使教会深刻反思其福音见证与门徒培育的路径。
+
+2020年，日本门诺弟兄会总会为全新的综合会议中心兼神学院——“门诺弟兄会宣教中心”（MB Mission Center）举行了感恩献堂礼。同年晚些时候，疫情严重阻碍了实体教会活动，尤其是街头与公众布道；但各堂会迅速转战线上，并在全球网络中与普世肢体紧密相连。疫情亦促使日本总会将70周年感恩庆典移至线上隆重举行。
+
+**老挝克木人差传（Khmu Mission）**
+于2012年正式被接纳为 ICOMB 成员，是国际大家庭中最年轻的成员之一。1990年代初，老挝境内的本土牧者辗转联络到了居住在加州的克木族基督徒彭·考·克奥维莱（Phone Keo Keovilay）。克奥维莱因在越战期间的贡献而获得美国国籍。在门诺弟兄会圣经神学院（现弗雷斯诺太平洋圣经神学院）攻读学位期间，克奥维莱定期冒险返回老挝，暗中坚固扶持这些本土牧者。后来，出于安全考虑，他和妻子选择定居于泰国北部，在湄公河畔建立了一座跨国培训中心，隔河接待并装备老挝境内的教会领袖。
+
+如今，克木人差传已发展出350个教会团契，其中约半数拥有“正式建成的独立教堂”，其余则以家庭教会形式聚会。此外，通过牧者与信徒的奋力布道，福音还辐射至众多乡村“讲道据点”。在老挝，公开传教虽属违法，但基督教信仰受到官方承认，信徒被允许向有血缘关系的亲属分享信仰。克木族信徒于是详尽梳理自己的家族族谱，借探亲访友之机全力传福音——这彻底改写了传统北美门诺人寻找远亲的“门诺游戏”定义！
+
+由于泛灵论巫术传统在当地根深蒂固，受洗候选人在受洗前会被本土领袖（绝非外籍宣教士）严肃要求当场摘除身上的护身手镯与各类辟邪符咒，以此作为彻底决裂黑暗势力、单单委身基督的坚决宣告。有时村民会对教会充满敌意，甚至将村里的灾祸归咎于不再向山林精怪祭祀献牲的基督徒。
+
+尽管总会命名为“克木人差传”，其会友构成早已超越了单一的克木族：约五分之一的会友是苗族（Hmong），另有相当比例来自其他少数民族。加倍宣教部（Multiply）虽在资金与人力上提供长效支持，但克木人差传已具备健全的组织治理体系，由成熟的地方区会领袖统管各大片区，并怀揣着向整个东南亚（如缅甸、中国、越南、柬埔寨）克木族及其近亲族群传扬福音的远大国度抱负。
+
+亚洲同非洲一样，是门诺弟兄会未来生机与增长的核心阵地。我们的大家庭正在多个亚洲国家孕育新的群羊：
+- **缅甸（Myanmar）** 的宣教由三股力量汇聚推动：印度门诺弟兄会总会全额资助其神学院培养的本土宣教士常驻开荒；克木人差传借助其跨境族群网络拓植聚会点；以及一位由缅甸外劳成长为牧者的弟兄，在加拿大宣教士的协助下，不仅在曼谷近郊植立了面向缅甸劳工的堂会群，更将教会拓植回缅甸本土。
+- **菲律宾门诺弟兄会（Kapatirang Menonite Ng Pilipinas Incorporated）** 是一个由分布在不同大区的8间地方堂会、约670名会友组成的新兴总会。面对疫情，他们迅速运用 Facebook 与 YouTube 维持敬拜与团契；2021年9月，该会欣喜迎来17位初信者受洗（部分是由 Multiply 短期青年队领信归主的果子）。教会还在巴拉望州立大学开展校园宣教，并在布鲁克斯角（Brooke’s Point）营地举办了面向90位领袖的密集神学培训。
+- **中国（China）** 曾是北美门诺弟兄会历史上最大的海外宣教工场，派驻的宣教士人数超过其他任何地区。历经历史风云与沧桑变迁，今日极少数耄耋之年的老信徒仍依稀记得当年西方宣教士的音容；然而更重要的是，一间忠心服事基督的教会在艰辛岁月中生根发芽，在流动民工群体中涌现出全新的植堂见证。Multiply 同工正持续赋能本土教会领袖开拓植堂。
+- 在**印度尼西亚（Indonesia）**，我们历史上曾通过教牧培育与穆里亚教会会议（Muria Synod）保持深厚交通。1970年代，毕业于门诺弟兄会圣经神学院的阿迪·苏坦托（Adi Sutanto）创立了号角基金会，由此孕育了印尼基督徒会友联合会（JMB / JKI）。JKI 是一场追求圣灵更新的跨国教会网络，在全球（包括美国、澳洲和荷兰）拥有超过45,000名会友。当今全球单间规模最大的门诺会超级堂会正是位于印尼三宝垄（Semarang）的 JKI 圣山堂，其会友规模达20,000人之巨！
+
+### 欧洲：奥地利、德国、立陶宛、葡萄牙及前线见证
+
+在流散北美四个世纪之后，16世纪重洗派运动的精神后裔——北美门诺人以宣教士的全新姿态重返欧洲故土。二战硝烟甫定，他们作为和好使者与救济干事，随门诺会中央委员会（MCC）奔赴德国、奥地利及西欧重灾区开展战后人道主义救济，这为日后门诺弟兄会的布道植堂叩开了历史的大门。
+
+**奥地利门诺自由教会（Mennonitischer Freikirche Oesterreich）**
+植堂始于上奥地利州首府林茨（Linz）近郊。战后初期，当地20个难民营里聚集了约30,000名绝望的难民。奥地利曾是16世纪天主教反宗教改革运动最为严酷的重镇，直到21世纪，国教政权传统依然极力压制独立自由教会的发展。历经数十载忠心而缓慢的拓荒，如今建立起由5间堂会、400多名会友构成的教区，在高度世俗化、物欲横流的现代社会中活出深邃而热切的灵性追求。
+
+**德国：三大总会交相辉映（AMBD、VMBB、BTG）**
+在莱茵河畔的新维德（Neuwied am Rhein），来自波兰与前苏联的门诺弟兄会难民携手成立了西欧本土第一间门诺弟兄会堂会，这标志着**德国门诺弟兄会联合会（AMBD）** 的诞生。今天，新维德教会积极向来自叙利亚及中东各国的难民敞开怀抱，传扬基督的大爱。历经数十年开拓，同工将事工网络扩展至柏林以及前东德的德累斯顿。在疫情前，AMBD 麾下13间堂会拥有1,500多名会友；在疫情期间，其人数逆势增长，至2021年底已达1,700人。
+
+与此同时，早年在奥地利植堂的北美宣教士亦将福音触角延伸至邻近的德国巴伐利亚各城镇。最初这是一个跨越国境的单一联合网络；1970至1993年间，在渴望灵命复兴的路德宗信徒群体中相继建立了8间堂会。后来，由于地理阻隔与文化差异，巴伐利亚群体从 AMBD 独立出来，成立了**巴伐利亚门诺弟兄会联合会（VMBB）**。然而时过境迁，该联合会目前仅存4间堂会。回首反思，历史表明教会应当倾注更多心血去深耕认信身份，珍惜呵护滋养这一身份的核心信仰共同体。
+
+1987年苏联放宽出境限制法案的实施，引爆了德裔移民涌入德国的狂潮；1989年苏联的轰然解体更使这一移民洪流达到顶峰。他们被称为“归国定居者”（Aussiedler）。在德国政府统归于“其他认信派别”的约50万归国定居者中，包含了约30万浸信会与门诺会（统称“福音派自由教会”）信徒。大体而言，这批历经苏联严酷考验的归侨发现，自己很难融入德国本土西化、学术化的既有自由教会之中。于是，他们按在俄国长期形成的家庭聚会传统，自主创建了一批极具生命力的聚会。
+
+由于苏联体制下官方仅承认浸信会而取缔门诺会，使得这批归侨的宗派标签交织重叠。在德国建立的诸多归侨教会联盟中，**重洗派浸礼会联盟（BTG）** 聚集了最高比例的门诺弟兄会信徒，是全德归侨教会中最稳健、最具规模的联合会。据 BTG 主席海因里希·克拉森（Heinrich Klassen）介绍，BTG 始于1989年的6间教会，如今已发展为拥有50间堂会、12,000名受洗会友的宏大宗派。BTG 自主运作一所圣经神学院及四大海外差会；拥有9支由近50人组成的巡回教牧事奉团队，在全德各堂会开展研讨会、植堂督导、神学建设及教牧关怀。BTG 各堂会还全力投身难民事工，将主日崇拜实时同传翻译为波斯语、土耳其语、阿拉伯语、俄语等多种语言，并在特大洪灾中派遣庞大义工团队运送救济物资、见证基督的大爱。
+
+**立陶宛自由基督教会（LLKB）** 于2014年正式加入 ICOMB。在戈尔巴乔夫时代，为靠近德国，部分乌克兰与俄国门诺信徒迁居立陶宛克莱佩达，建立了自由基督教会。随着苏联解体与立陶宛独立，北美与欧洲门诺学者应立陶宛首任教育部长之邀创办了**立陶宛基督教大学（LCC International University）**，现已成为立陶宛高等教育的璀璨明珠（现任校长玛琳·沃尔为美国门诺弟兄会教育家）。依托 LCC 的学术平台，北美与德国同工展开了扎实的宣教。如今7间堂会、200多名会友向社会作见证，开展日托中心、青少年夏令营，并已向海外（如巴西）差派宣教士。
+
+**葡萄牙门诺弟兄会（IIMP）** 于2004年加入大家庭。北美宣教士于1980年代开拓，后与安哥拉弟兄同工，建立了融合葡萄牙本土与非洲移民的堂会；1990年代德国 BTG 亦差派同工到里斯本服侍俄语移民。2020年，该会正式获得国家法定宗教法人资格，现辖6间堂会、约200名会友。
+
+**乌克兰（Ukraine）——门诺弟兄会的发源地**
+历史在二十世纪末完成了奇妙的圆满循环。1990年代中期，门诺弟兄会重返其发祥地乌克兰开启宣教。如今，乌克兰本土已植立了25间堂会（外加被兼并的克里米亚半岛上的2间）。面对顿巴斯前线的战火硝烟，教会每周组织救济车队冒着炮火深入交火冲突区，为失去一切的难民运送粮食与救命药品；许多新堂直接在炮火连天的前线地带拔地而起。信徒勇敢地向前线官兵传福音，带领许多在数日后便壮烈捐躯的战士归主。**乌克兰门诺弟兄会总会（AMBCU）** 即将正式成为 ICOMB 的正式一员。
+
+在**吉尔吉斯斯坦（Kyrgyzstan）**，二战后流放的中亚德裔门诺人虽在冷战后大部迁往德国，但宣教士海因里希与安妮·伦佩尔夫妇（Heinrich & Annie Rempel）毅然重返中亚未得之民工场深耕30年。由他们开拓的新兴总会“门徒教会联盟”（Maschayaktyn Jamatty）已发展出5间堂会、2个新植堂点及众多家庭团契；在托克马克（Tokmok）建立的教会是该国历史上首间门诺弟兄会教堂，开设有疫情救济、戒毒康复中心、青年中心及盲人事工。
+
+在**西班牙**，巴塞罗那保留有一间忠心传扬基督的堂会；而在**土耳其**，因着一位宣教士与一位当地基督徒司机的奇妙偶遇，开启了北美与欧洲同工进驻该国的全新宣教篇章。
+
+### 拉丁美洲：巴西、哥伦比亚、墨西哥、巴拿马、巴拉圭、秘鲁、乌拉圭及其他地区
+
+**巴西门诺弟兄会福音教会全国大会（COBIM）**
+始于1930年因逃避苏联迫害而迁徙至巴西原始亚热带丛林拓荒的门诺弟兄会难民。随着移民源源不断涌入，教会迅速拓展。1948年，巴西与巴拉圭的门诺弟兄会联合组建了“南美门诺弟兄会区会”，并整体挂靠作为北美门诺弟兄会总会的一个大区。
+
+1960年，巴西教会毅然跨越语言藩篱，放胆向讲葡萄牙语的巴西本土民众传福音并拓植教会，由此诞生了第二个本土教会联合会。随着南美大区职能的历史性淡化，以及巴西境内德语教会与葡语教会文化鸿沟的消弭，两派于1995年正式合二为一，组建了今天的 COBIM。
+
+该教会始终坚持活出整全的福音见证——关怀孤儿弃儿、扶助赤贫阶层、拯救吸毒成瘾者，创办高水准的中小学校，开展完备的教牧培训与野营营会。如今，COBIM 拥有80多间堂会、10,800名洗礼会友。近年来，领袖们厉行禁食祈祷与属灵复兴，催生了在巴西各新兴大区的爆发式植堂浪潮。COBIM 更主动差派跨文化宣教士前往安哥拉及非洲其他葡语国家宣教宣教。
+
+**哥伦比亚门诺弟兄会教会联合会**
+哥伦比亚是南美洲第一个迎来北美门诺宣教士的国家——早在1945年同工便深入乔科省（Chocó）印第安原住民部落开荒。此后，教会相继在卡利、麦德林和波哥大等核心都会扎根。反政府武装叛乱与贩毒集团肆虐带来的血腥暴力，反倒为教会播撒基督和平的福音开辟了宽阔通道。如今该联合会拥有44间堂会、2,500名会友，创办有一所高级中学与非正规教牧学院，长期与门诺会中央委员会（MCC）紧密合作开展社区重建。2020年，其专属宣教差会“我在这里”（Heme Aqui）正式获政府法人认可，并成功举办了联通哥伦比亚、乌拉圭、巴拉圭、巴西、巴拿马、墨西哥与秘鲁的跨国线上宣教峰会。
+
+**墨西哥基督徒和平教会（ICPM）**
+始于1950年代的宣教拓荒，截至2018年在3座城市拥有7间堂会、346名会友，2019年见证了31位信徒受洗。在科利马州阿尔瓦雷斯城，卡洛斯·奥尔特加牧师（Carlos Ortega）长期服侍少年犯及被贩毒集团收买充当职业杀手的边缘青少年。“他们大多是孤儿，自十二三岁起便被毒贩集团招募，试图在帮派中寻找失去的家庭归属感，”奥尔特加牧师通过足球运动与一对一门徒辅导舍命关怀他们。加倍宣教部在此设立的“马太培训中心”，为整个南美门诺弟兄会的年轻人提供门徒造就与宣教实战预备。
+
+**巴拿马联合福音教会——门诺弟兄会**
+独具特色：其麾下13间地方堂会、600名会友全部由乌瑙安族（Wounaán）和恩贝拉族（Emberá）印第安原住民构成！1950年代语言学家深入当地开展识字事工。差会从一开始便极力避免西方家长主义心态，深信原住民最适合在自己的同胞中结出果子，宣教士仅作为教练与顾问提供赋能。许多信徒是技艺精湛的手工艺大师，编织博物馆典藏级手工篮、雕刻珍贵玫瑰木与象牙果，成为教会自立的重要经济支柱。
+
+**巴拉圭：双峰并立的门诺见证**
+1930至1940年代逃离苏联的难民与早先来自加拿大的门诺人汇合，在巴拉圭开辟了五个德语聚落。巴拉圭教会积极向原住民和首都亚松森布道，最终形成了两大平行的门诺弟兄会总会：
+- **德语巴拉圭门诺弟兄会联合会**：大力兴办中小学教育及“亚松森圣经学院”，该院已成为辐射整个南美洲的门诺神学重镇。其5所中学亦是极为锐利的植堂阵地，广播电视传媒事工深具影响力。尤为震撼的是其在亚松森最高戒备重犯监狱内部建立的“自由堂”（La Libertad）——外面的教会协助修缮监舍，为约500名重刑犯设立规范，并在高墙电网内建立起一间完全由服刑囚犯自主担任领袖、开展门训、敬拜、施洗与会友治理的“高墙内教会”！
+- **西语巴拉圭门诺弟兄会总会**：2021年隆重庆祝建会50周年，拥有60多间堂会、3,766名会友（疫情前经常聚会者达7,500人），确立了在未来开拓50间新教会的雄心，已有14个新植堂点正在转为正式堂会。两大会议并肩携手，在巴拉圭全境为基督作无畏的见证。
+
+**秘鲁门诺弟兄会总会** 始于1950年克里默门诺弟兄会（KMB）深入阿沙宁卡印第安部落的开拓；面对“光辉道路”游击队的残酷杀戮，外籍同工于1990年代撤离，本土教会自立挺立。1982年北部皮乌拉与苏拉纳特大洪灾中，加倍宣教部开展紧急救济，开启了沿海都会的植堂浪潮；2020年特鲁希略教会全面推行“培训与倍增”（Train & Multiply）门徒拓植体系。
+
+在**乌拉圭**，1948年10月22日在航行于大西洋的荷兰籍“沃尔伦丹号”（Volendam）客轮甲板上，18位逃亡的门诺难民创立了乌拉圭教会，如今拥有7间西语堂会；在**委内瑞拉**，加拿大卑诗省的华人门诺弟兄会于1991年差派宣教士进驻，植立了两间服侍华人移民的门诺弟兄会堂会；在**阿根廷**，亦有一间由巴拉圭门诺差传建立的堂会。
+
+### 北美洲：加拿大与美国
+
+北美门诺弟兄会于1879年召开了首届“门诺弟兄会总会”（General Conference）代表大会。1909年，划分为北部区（加拿大全境）与南部、中部、太平洋三大区（美国全境）。四区信徒携手同心，共同支持海外宣教、神学院、大学与圣经学校、布道奋兴、基督教教育及文字出版事工。
+
+1945年，因门诺移民潮而规模迅速超越美国三区总和的加拿大北部区，正式注册成立了**加拿大门诺弟兄会总会（CCMBC）**。1959年，美国各区会投票正式组建了**美国门诺弟兄会总会（USMB）**。
+
+这一崭新的双轨架构，将教会增长、福音布道、青年事工、基督教教育、资源管家以及文理大学等权责划归各自全国总会；而普世差传、信仰生活大政、神学院造就以及核心刊物出版等，则作为两国共同的事务，由双方派代表组建联合董事会共同运作。两国定期举行联合代表大会，商讨关乎共同前途的重大圣工。
+
+然而岁月流转，这一层床架屋的双重架构逐渐显得沉重繁琐。1999年，跨国北美总会正式表决解散；自此，美加两国总会作为独立的自治实体各自独立运转。两国总会如今在 ICOMB 均享有正式席位，并有权自主修订1999年北美总会通过的《信仰宣言》（例如 USMB 于2014年修订了第13条和平条款，而 CCMBC 于2021年审议了第8条洗礼条款）。二十多年来，两国总会均将布道植堂、门徒造就与领袖培育列为重中之重。
+
+**加拿大门诺弟兄会总会（CCMBC）**
+2017年拥有分布于7个省区会的250间堂会、50,000多名会友。20世纪波澜壮阔的移民潮重塑了加拿大教会的骨骼：1920年代从俄国逃入加拿大的20,000名门诺人，以及二战后涌入的7,000名新移民，为加拿大教会注入了源源不断的灵力与挑战。
+
+如果说移民塑造了20世纪的加拿大门诺弟兄会，那么加拿大更广泛的福音派阵营则深刻指引了其21世纪的国度异象。加拿大是一个幅员辽阔而人口相对稀疏的世俗化国度，这种国情促使各福音派教会之间选择携手同工而非彼此竞争。这一精神深切感染了门诺弟兄会。
+
+从“全国布道部”到后来的“关键城市倡议”，加拿大门诺弟兄会不断探索植堂模式。2011年，C2C Network 崛起成为其专属植堂先锋，并于2018年与 MB Mission 联合成立加倍宣教部（Multiply）。尽管该合并仅维持一年，植堂权责重新回归各省区会，但加拿大总会的国度使命始终坚如磐石。
+
+2011年全加审议确立了崭新的使命宣言：“**倍增以基督为中心的教会，得见加拿大因耶稣基督的福音而经历全然更新转型**”。2018年，CCMBC 进一步推出了以省区会为根基的“全新协同治理模式”（Collaborative Model），将奉献机制与核心决策权下沉赋予各省区会，全国总监则作为协同枢纽，代表加拿大门诺弟兄会走向 ICOMB 等普世团契，并肩奔赴神国的大使命！
+
+
+---
+
+### English Original Text
+
+# Chapter 10: The International MB Family (ICOMB)
+
+
+<!-- Page 133 -->
+
+
+### CHAPTER 10
+
+
+### The International
+
+Mennonite Brethren Family Have you been part of a successful family gathering? Relatives come together from far and wide to catch up on old friendships and expand connections to new family members. Christian clans tell stories, do activities, sing and pray. Sometimes we’re not sure we want to go, but at the end, everyone is happy they put in the effort. The International Community of Mennonite Brethren (ICOMB) is a family that continues to grow. In our case, it’s because we are a church on God’s mission. New members are born because someone reached out to a region where the gospel of Jesus is not known. After some time, a cluster of local churches registers as a new Mennonite Brethren body. In 2017, an exciting ICOMB family gathering occurred in Thailand, bringing together some 240 delegates from 36 countries. Normally, ICOMB summits occur annually when leaders of the 22-member national churches gather for sharing, equipping and spiritual
+
+
+<!-- Page 134 -->
+
+encouragement. This time, ICOMB invited leaders of another 15 emerging national church bodies in partnership with Multiply. Thailand 2017 was the fifth ICOMB- sponsored consultation (the others were the general global consultation in 1999 in Wichita, Kansas; higher education consultations in 2007 in Fresno, California, and in 2011 in Winnipeg, Manitoba; and a Congo-based education consultation in 2009), but it was the first global mission- focused consultation since 1988, when Curitiba ’88, sponsored by Multiply, gave birth to ICOMB. The purpose of ICOMB is to facilitate the relationships and ministries of its member national churches (conferences) for greater fruit in discipleship and witness. One could say that ICOMB is the international Mennonite Brethren conference, bringing together all the established national Mennonite Brethren churches, including the U.S. Conference of MB Churches (USMB). ICOMB equips and inspires national leaders through community, events and resourcing through long-distance coaching, continental cohort meetings, etc. ICOMB is supported by all national churches. It doesn’t have a big budget, nor many programs. Rather, its power lies in relationships and global identity. In 2004, after a three-year process guided by an international team, the International Confession of Faith was accepted as the guiding Confession for all members. It is compatible with the USMB Confession and all existing
+
+
+<!-- Page 135 -->
+
+Mennonite Brethren Confessions. In an “east-meets-west” style, it combines narrative and point form. It answers the question, “How does God work in the world?” by summarizing the biblical story from Genesis to Revelation. It then answers the question, “How do Mennonite Brethren respond?” in five easy-to-remember points: We are People of the Bible; People of a New Way of Life; People of the Covenant Community; People of Reconciliation; and People of Hope. In 2008, a lesson book, written by leaders from every continent, was published to enhance engagement with the confession. By 2017, the confession and the lesson book had been translated into 15 languages. Every new member (i.e., national church) must adhere to the International Confession of Faith. They may accept it as is or use it as a template to write some of their own confessional emphases. Education is important to ICOMB. It operates the Global Scholarship Fund, giving grants toward study expenses of national leaders who will leverage advanced education for leadership training within their own national church. ICOMB also facilitated the development of a curriculum based on Anabaptist values for more than 300 Mennonite schools (Grades 1-12) in DR Congo. The curriculum was designed and written by Congolese, with funding from ICOMB, to revitalize the Mennonite-run school system there, serving nearly 75,000 students.
+
+
+<!-- Page 136 -->
+
+In summary, ICOMB is your international family. If you are reading this, you are likely exploring the Mennonite Brethren family, serving as a Mennonite Brethren pastor or considering baptism and membership. You are not alone! You are part of a local church that provides discipleship and nurture in your faith. Moreover, your local church is part of a district church, which is part of the USMB national church. And USMB is part of ICOMB. You have Mennonite Brethren sisters and brothers in every part of the world. Some of them live in poverty. Some are neglected by corrupt or despotic governments. Some undergo active persecution. Some live where resources are plentiful. Our first identity is in Jesus Christ our Lord and Savior. Second, we are Mennonite Brethren in confessional identity. We believe the Bible is the Word of God. We believe that we must confess and believe on Jesus Christ for salvation. We believe in renewal. We believe in the church, which is Christ’s body in the world. We believe in reconciliation—a holistic gospel for the whole person, bringing peace with God and peace among humankind. We believe that the kingdom is here—and not yet; that Christ’s coming will resolve everything in God’s timing and purposes. And third, we are a church on mission. We share the good news of the gospel of Jesus locally, nationally and globally.
+
+
+<!-- Page 137 -->
+
+During the global COVID-19 pandemic, family members have been impacted in slightly different ways because of where they live. And families have learned to appreciate the ways in which technology kept them connected with one another. The same is true for the global Mennonite Brethren family. In 2020 and 2021, the annual ICOMB summits were held online. A total of 80 people participated in two global and four regional meetings in 2020. In Japan it was 10:00 p.m. and in Vancouver it was 6:00 a.m., but delegates were still able to share with and pray for one another and to have communion even though some representatives were 11,500 miles apart. What follows is a brief description of the global Mennonite Brethren family, both current members of ICOMB and potential future members.
+
+
+### Africa: Angola, DR Congo, Malawi and beyond
+
+Igreja Evangélica dos Irmãos Menonitas em Angola (IEIMA, Evangelical Churches of Mennonite Brethren in Angola), began in the early 1980s when a missionary to Congo commissioned leaders to return to Angola to evangelize and plant churches. These Angolans had fled the 30-year civil war (1975-2005) and connected with the Mennonite Brethren church in Congo. The unfortunate legacy of a church born during such violent times was deep mistrust and internal
+
+
+<!-- Page 138 -->
+
+conflict. Leaders found it hard to resolve major and minor differences. Moreover, the devastation of the war impoverished most of the population. They are still recovering. Nevertheless, a Bible school trains pastors in a decentralized model, reaching from the capital city of Luanda out to the majority membership located near the Congo border. This church of 8,000 members in 75 congregations never had a foreign missionary presence to guide them. ICOMB supports IEIMA through coaching, visits and observing their general assemblies when they elect new leaders. In 2020, 17 local churches were closed by the government because of a lack of infrastructure, specifically church buildings. Church leaders are raising funds to reopen the churches and to build relationships among local pastors. Because of COVID-19, church members are not able to travel, and the economic situation has led to a significant lack of food. The conference is encouraging members to grow vegetables to have something to eat and are emphasizing hygiene and handwashing. Members are meeting in their homes for prayer meetings, are engaged in personal Bible study and are evangelizing their neighbors. Communauté des Églises des Frères Mennonites au Congo (CEFMC, Community of MB Churches of Congo) numbers about 100,000 members in some 500 congregations. This church is around 100 years old.
+
+
+<!-- Page 139 -->
+
+Mennonite Brethren workers went to Congo under the Mennonite mission board in 1913. In 1922, the MB Mission board finally agreed we should engage in Congo, and the first Mennonite Brethren congregation was planted then. Within 20 years, some 200 schools were operating, and the church grew primarily in the rural areas. The cities were not regarded as fertile for the gospel. In 1960, independence dramatically pushed all missionaries out; the Congolese took over church leadership, ready or not. There were major gaps in ability because of a lack of training. As missionaries gradually returned, they located in the cities, for security. Since then, the church has thrived in both rural and urban regions, particularly in Kinshasa, the capital, with around 50 Mennonite Brethren congregations. Education still is a major feature of CEFMC. The churches of Congo were mandated to run the schools. Local Mennonite Brethren churches and groups operate about 125 schools for grades 1-12, serving 35,000 students. Four Bible schools, located in various rural communities, train lay and pastoral leaders. Two college- level schools operate in Kinshasa, offering pastoral and medical training. CEFMC currently reaches out to the oppressed Batwa (pygmy) people deep in the forests. The Congolese MB church has a vision to reach the nine countries bordering DR Congo. A network of half a dozen churches is found in the challenging region of Eastern Congo. CEFMC
+
+
+<!-- Page 140 -->
+
+operates with very little foreign assistance, even though its earnings per capita locate DR Congo among the 10 poorest nations on earth. They employ Asset-Based Community Development, working with resources already in hand. The church in Congo and Angola—indeed in most African regions—is alive with loud, exuberant worship and fervent prayer. Local congregations disciple youth and adults through choirs, which typically sing Scripture texts and stories. These choirs also are an effective outreach tool. The Mennonite Brethren Church in Malawi (MBCM) was welcomed as a full member of ICOMB in 2020 during ICOMB’s first ever online summit. Dozens of Mennonite Brethren leaders from around the world offered words of welcome, prayers and blessings in a joyful celebration. The story of MBCM begins with a young man, Bahati (Safari) Mutabesha, fleeing for his life after seeing his family killed in eastern DR Congo due to ethnic conflict. Safari ended up in the Dzaleka Refugee Camp, near Dowa, Malawi. However, here, too, he finds ethnic conflict and a near hopeless situation. He remembered his discipling in an MB church and his gifting as an evangelist. So, he began sharing the Gospel of Peace and pointed conflicted refugees to the Prince of Peace. And in 2009, a church was planted in the refugee camp. With God’s blessing on them, Safari and fellow workers began planting churches outside the refugee camp among
+
+
+<!-- Page 141 -->
+
+nearby Malawian towns and villages. In 2015, in search of partnerships for their growing movement, the MBCM contacted MB Mission (now Multiply) through their website. This partnership grew rapidly and has resulted in further growth in training, community development and church planting. In 2020, MBCM counted 37 churches and 14,000 members. Elsewhere in Africa are other emerging networks and we pray these will become new national or regional churches. In Burkina Faso, Evangelical Mennonite Conference (EMC) workers began a Bible translation project with Nanerige people. Multiply workers have continued the work. An emerging church connects to both the Mennonite Brethren and EMC international church communities. In Burundi, an emerging group has embraced the ICOMB Confession of Faith and is seeking membership. In Namibia, one church with various satellites has grown out of the witness of Multiply’s short-term Disciple Making International (DMI) teams. An emerging conference of more than 30 churches in Uganda is interested in linking with ICOMB. In North Africa, significant numbers of underground groups are coming to Christ amid suspicion and opposition from radical Muslims. Small groups are found in Morocco, Mauritania, Algeria, Tunisia, Egypt, Saudi Arabia and Yemen—the latter colloquially call themselves “Yemennonites.”
+
+
+<!-- Page 142 -->
+
+Asia: India, Japan, Khmu Mission and beyond The Conference of the Mennonite Brethren Churches in India is one of our oldest national churches and the largest. The first MB missionaries went from Russia (now Ukraine) to Hyderabad and organized the first church in Nalgonda. Today India’s Mennonite Brethren church numbers around 200,000 members in some 1,000 congregations. Originally, the church was established in India through mission “stations” or compounds. The Mennonite Brethren bought several large properties in the region east of Hyderabad in cooperation with the Baptist missions. But during that period, comity held sway. This was William Carey’s idea of working in discrete fields to avoid direct “competition for souls.” Therefore, the Mennonite Brethren and the Baptists arranged a “swap”: the Mennonite Brethren ceded the new stations to the Baptists and received several stations south of Hyderabad. And so today, the India MB church is found in Hyderabad and rural districts to the south. One can still visit the original sites which have been turned into large schools and in two cases, Baptist congregations of several thousand members. The station compounds included churches, hospitals, schools, farming operations and missionary residences. They focused on reaching poverty-stricken “untouchables” (Dalits). By 1970, changing mission policy and rising
+
+
+<!-- Page 143 -->
+
+nationalism combined to allow the India Mennonite Brethren church to emerge into autonomous self- governance. Today, the church is organized into congregation- centered ministry units. Larger local churches sponsor outreach teams, creating a multiplying effect. Church extension workers and pastors are trained through MB Centenary Bible College in Shamshabad, a bustling village near Hyderabad. The college teaches in English on campus and in Telugu in extension course programs in various centers closer to the pastoral workers. Despite the sorrows brought by COVID-19, recent celebrations included a successful dedication of the Chennipadu church building. The three-day celebration included large group meals, tents erected around the village and gifts of blessing from surrounding churches. The Mennonite Brethren church in Japan was born in 1950 because of the ministry of missionaries sent by Mennonite Brethren churches in North America. Centered in the metropolis of Osaka, the Japanese MB church is well organized, operating its own seminary, youth and camping programs and supporting full-time pastors in most of the 29 congregations. After celebrating its 65th anniversary in 2015, the Japanese Board of Faith and Life embarked on contextualizing the ICOMB International Confession of Faith in light of the government’s push to create a standing army. This is a constitutional change and
+
+
+<!-- Page 144 -->
+
+controversial for many in Japan. This push is challenging the church to “self-theologize” on the question of peace in their context. Other major challenges are found in the aging of both country and church, coupled with a strong post-modern, post-Buddhist shift in the culture. These are calling the church to rethink its approach to witness and discipleship. In 2020, the Japanese MB Conference dedicated the MB Mission Center, a new conference center and seminary. Later that year, all church activities were severely restricted due to COVID-19, especially impacting evangelistic activities. But churches continued to minister online and were able to connect with Christians around the world. The pandemic also forced the Japan MB Conference to move their 70th anniversary celebration online. Accepted in 2012, the Mennonite Brethren church in Laos , Khmu Mission, is one of the newer members of ICOMB. In the early 1990s, pastors in the country contacted Phone Keo Keovilay, a Khmu Christian from Laos, living in California, who had earned a U.S. passport due to his contributions during the Vietnam War. Keovilay periodically returned to Laos to support these pastors during his studies at MB Biblical Seminary, now Fresno Pacific Biblical Seminary. Eventually he and his wife moved into northern Thailand (rather than Laos, for security reasons) and established a training center on the
+
+
+<!-- Page 145 -->
+
+Mekong River, accessible to leaders in the growing church on the Laos side of the river. Today, there are 350 Khmu Mission church fellowships, approximately half with “built churches” and the rest meeting in homes. There are many more “preaching point” villages reached by the evangelistic efforts of pastors and others. While it is illegal to proselytize, Christianity is recognized, and people are permitted to share the faith with relatives. Khmu believers comb their family trees for opportunities to share the gospel—redefining the “Mennonite game” of discovering one’s relatives. The animistic worldview is still prevalent. Therefore, baptism candidates are asked (by local leaders, not expatriate missionaries) to remove bracelets or other amulets as an expression of faith and total commitment. Villagers may be hostile to a church because they may interpret bad experiences to be the fault of Christians who no longer make merit or provide daily offerings to the powers that be. Although the conference is called “Khmu Mission,” its membership reaches beyond the Khmu. Perhaps one-fifth of the members are Hmong and another small percentage are from various tribal origins. While Multiply continues to provide support through workers and finance, Khmu Mission has good structures, capable leaders over regionally organized groups of churches and a strong mission vision to reach Khmu and related groups in
+
+
+<!-- Page 146 -->
+
+South East Asia (such as Myanmar, China, Vietnam and Cambodia). Asia will, like Africa, be an area of interest and growth for Mennonite Brethren. Our family is developing groups of churches in various countries. Outreach to Myanmar (Burma) comes from three sources. The India Mennonite Brethren church supports a worker who trained at their college. Khmu Mission has developed congregations through its expanding network. And finally, a Burmese migrant worker-cum- pastor is leading, together with Canadian missionaries, an expanding group of churches that he has planted near Bangkok, Thailand, as well as within his home country. Kapatirang Menonite Ng Pilipinas Incorporated (Mennonite Brethren of the Philippines) is an emerging conference composed of eight local churches in different regions of the country, with a total of about 670 members. In-person home Bible studies, visitations, campus outreaches and other ministries were put on hold because of COVID-19. Despite limited technology, the conference quickly pivoted to online services and used Facebook and YouTube to connect with their congregations with services, prayer meetings and chat groups. In September 2021, the group celebrated the baptism of 17 individuals. Some of these new believers were introduced to the gospel by Multiply TREK teams. The churches have a ministry on the Palawan State University campus and anticipate renovating their center, Brooke’s
+
+
+<!-- Page 147 -->
+
+Point, once classes resume. The center was the site of two leadership training modules attended by a total of 90 pastors, church leaders and youth leaders. China was once our largest mission field. More North American Mennonite Brethren missionaries spent time there than in any other location. The Cultural Revolution removed all these missionaries and forced the church to go underground. Today, a tiny handful of very old Christians still remember some missionaries. More important is the growth of a church faithfully serving God in a hostile environment. Also, there is an emerging new work among migrant workers. Multiply workers are facilitating and supporting Chinese leaders who are planting churches. In the past, we have had close relations in Indonesia with the Mennonites of the Muria Synod through pastoral development. In the 1970s, MB Biblical Seminary (now Fresno Pacific Biblical Seminary) graduate Adi Sutanto founded the Sangkakala Foundation, which spawned the Jemaat Kristen Indonesia. JKI is a renewal-oriented family of churches of more than 45,000 members in a variety of countries, including the U.S., Australia and the Netherlands. The largest Mennonite church in the world is the JKI church, in Semarang, Indonesia, with some 20,000 members (Lapp, 104-116).
+
+
+### Europe: Austria, Germany, Lithuania, Portugal
+
+
+<!-- Page 148 -->
+
+and beyond After four centuries, Mennonites from North America— spiritual heirs of 16th century Anabaptists—returned to Europe on a mission. They came to Germany, Austria and other Western European nations as agents of reconciliation and ministers of relief with Mennonite Central Committee after World War 2. This opened the door for evangelism and church planting by Mennonite Brethren. The Mennonite Brethren national church in Austria is known as Mennonitischer Freikirche Oesterreich (Mennonite Free Church of Austria). Church planting began near Linz, the capital of Upper Austria, where some 30,000 refugees dwelt in 20 camps after the war. Austria was the site of aggressive Counter-Reformation efforts in the 1500s. Until the 21st century, the magisterial church resisted the development of free churches. Slow faithful growth has resulted in a conference of five congregations and more than 400 members, with heartfelt spirituality and longing to reach a post-churched, materialistic society. Germany has three conferences—AMBD, VMBB and BTG. In Neuwied am Rhein, refugees from Poland and the Soviet Union who had been Mennonite Brethren members united to form the first Mennonite Brethren congregation in Western Europe. This was the beginning of the AMBD conference (Arbeitsgemeinschaft Mennonitischer Brüdergemeinden in Deutschland). Today the Neuwied
+
+
+<!-- Page 149 -->
+
+church reaches out faithfully to new immigrants coming to Germany from Syria and other Middle Eastern countries. Over time, mission workers from Germany and North America extended the AMBD fellowship, reaching to Berlin and former East Germany’s Dresden. Prior to COVID-19 AMBD’s 13 local churches had more than 1500 members. AMBD has grown during the pandemic, reaching 1,700 people by the end of 2021. “We are very grateful that, in addition to the online offerings, most churches still held presence services throughout the pandemic,” reported AMBD in the January 2022 ICOMB newsletter. “Churches often enjoy greater freedom than other sectors of society during this time. That is a reason to be very grateful.” AMBD hoped to gather in 2022 for its regular Pentecost conference. Meanwhile, North American missionaries planting churches in Austria had the opportunity to reach out to Bavarian towns. At first this was one network, straddling the border. From 1970 to 1993, eight local churches were founded in Bavaria among Lutherans looking for renewal. The Bavaria group felt distant geographically and culturally from the AMBD group, so the VMBB (Verband Mennonitischer Brüdergemeinden in Bayern) was formed. Today, only four churches remain. Two closed and two withdrew from the fellowship. Upon reflection, greater care could have been taken to cultivate our confessional identity and to love the primary community which nurtures that identity.
+
+
+<!-- Page 150 -->
+
+In 1987, a new Soviet law governing exits came into effect, triggering a flood of migrants into Germany. The breakup of the Soviet Union in 1989 simply added to this effect. They are called Aussiedler (resettlers). While AMBD’s original members were Aussiedler, the German government officially grouped some half-million Aussiedler under the heading “Other Confessions.” Included among them were about 300,000 Baptists and Mennonites, also known as “evangelical free churches.” Broadly speaking, they discovered they were not at home among the AMBD or other established Mennonite churches founded through mission efforts. Therefore, they created their own congregations more reflective of their church experience in Russia. Also reflective of their Soviet experience was the challenge of identity when the government only recognized certain Christian labels. Baptist was recognized; Mennonite was not. Through the decades, many different alignments occurred. Therefore, as church networks and associations were established in Germany, some groups held more Mennonite Brethren individuals than others. The BTG (Bund Taufgesinnter Gemeinden) has the largest percentage of Mennonite Brethren among these associations and is one of the more stable and developed unions of Aussiedler congregations. Heinrich Klassen, chairman of the BTG, reports that the German Anabaptist Churches started to work together in 1989. BTG started with six churches. Today,
+
+
+<!-- Page 151 -->
+
+50 churches belong to BTG (with 12,000 members). BTG runs a Bible seminary and four mission agencies. At the start of 2022 they reported nine traveling ministry teams comprised of almost 50 people from various churches and partner ministries. The teams organize seminars, plan for church plants, work on theology, train leaders and offer pastoral care seminars for congregations. The BTG congregations are also engaged in refugee work and translate their worship services into Farsi, Turkish, Arabic, Russian and so on. BTG congregations are responding to recent floods by sending volunteers to meet practical needs and to share the love of Jesus. The Lithuania Free Christian Church (LLKB) joined ICOMB in 2014. In the Gorbachev era, Mennonites from Ukraine and Russia settled in Lithuania to be near Germany. They formed a church known as the Free Christian Church. When the Soviet Union broke up, herculean effort by Lithuanians achieved national independence in 1991. This paved the way for Mennonites interested in education to respond to a call from the new Minister of Education to establish a university. Today, LCC University is a major contributor to the Lithuanian educational scene. LCC President Marlene Wall is a MB educator from the United States. The establishment of LCC triggered mission efforts from North America and Germany. Today seven local churches with more than 200 members witness to Christ. Local congregations have a variety of local ministries,
+
+
+<!-- Page 152 -->
+
+including a daycare, and together host summer camps for children and teens. They are also involved in church planting and have sent missionaries to other countries, most recently Brazil. Portugal is another one of ICOMB’s newer members; they joined in 2004. North American missionaries began leading outreach efforts there in the 1980s, later joined by Angolan leaders, resulting in several churches of Portuguese and African members. Joining them in the 1990s, BTG sent missionaries from Germany to work with Russian resettlers in Lisbon. The conference was legally recognized as a religious entity in 2020. Today there are six congregations with a total membership around 200 in the Igreja dos Irmaos Menonitas de Portugal (IIMP). Since achieving this recognition, IIMP is restructuring with the goal of enriching church relationships and unifying mission, ministries and vision. Leaders are building systems of pastoral care and developing strategies toward building financial health. The Mennonite Brethren movement has come full circle to its birthplace, Ukraine. Mission effort began in the mid-1990s. Today, there are 25 churches, plus two in Crimea, which became Russian after annexation. Individuals and churches from North America and Europe support programs for orphans and widows, and for an alternative education approach for teenagers and young adults.
+
+
+<!-- Page 153 -->
+
+These approaches are the backbone of church planting, along with weekly relief trips into the conflict zone of East Ukraine to deliver food and medicine to people who have lost everything due to shelling. Churches have started very near to and inside the conflict zone. The church actively shares the gospel with Ukrainian troops, sometimes only days before they are killed in combat. The Association of the MB Churches of Ukraine (AMBCU) expects to become a member of ICOMB very soon. An ICOMB conference is also emerging in Kyrgyzstan. After World War 2, Kyrgyzstan became a place of refuge for many forcibly displaced Germans, including German Mennonites. However, missionary outreach among the indigenous population was slow, beginning only 20 years later. By the end of the 1980s, almost all ethnic Germans had emigrated to Germany. Just a few years later, missionaries like Heinrich and Annie Rempel, originally from nearby Tajikistan, returned to the region to plant churches among the people of Central Asia, among the least reached in the world. The Rempels have worked in the area for 30 years, 14 of them in-country. Their vision is to start new church planting efforts and to help scattered churches work together. Their ministry has recently been enhanced by their relationship with Kyrgyz Evangelical Alliance leaders. The emerging conference, named Maschayaktyn Jamatty (Disciples of Churches), includes five churches, two church plants and home groups that wish to become
+
+
+<!-- Page 154 -->
+
+churches. The church in Tokmok, planted by Timurlan and Irina Abdyldaev, is the first-ever MB church in the country. Some of their ministries include pandemic relief, a rehabilitation center, youth work and a ministry to the blind. In Spain, church planting efforts in the 1980s went very slowly, and MB Mission (now Multiply) pulled out, leaving a single local church that still carries witness to Christ in Barcelona. And in Turkey, work began through a “chance” encounter between a Mennonite Brethren missionary and a Christian van driver. This has fostered a new initiative in Turkey, sending a significant number of North American and European workers into that country.
+
+
+### Latin America: Brazil, Colombia, Mexico, Panama,
+
+Paraguay, Peru, Uruguay and beyond The Mennonite Brethren national church in Brazil is referred to as COBIM: Convenção Brasileira das Igrejas Evangélicas Irmãos Menonitas (Brazilian Convention of Evangelical MB Churches). COBIM began as Mennonite Brethren migrated from Russia (Ukraine) to settle in virgin subtropical forests in 1930. Many more churches were established as Mennonite migration continued. In fact, similar migration into Paraguay led the Mennonite Brethren in both countries to form the South American MB Conference in 1948, which then in turn requested and
+
+
+<!-- Page 155 -->
+
+became a district of the General Conference of the MB Church of North America. In 1960, the Brazil conference assertively engaged in reaching out to and planting churches among Portuguese- speaking Brazilians, ultimately forming a second association. Over time, the functionality of a South American district faded; and, within Brazil, the differences in language and culture between German and Portuguese churches waned. So in 1995, the two entities merged to form COBIM. The church has consistently offered holistic witness— serving orphans, people in need and individuals caught in the drug culture—by providing quality schools for children and youth, pastoral training, camps and more. Today, COBIM numbers more than 80 congregations and 10,800 members. In the last few years, leaders have committed to prayer, fasting and renewal. Rapid growth and visionary church planting in new regions of the country are the result. COBIM is also sending missionaries to Angola and other Portuguese-speaking countries in Africa. Colombia was the first South American country to receive a North American missionary—in 1945 among the indigenous Choco. Since then, churches have been established in Cali, Medellin and Bogota. In every area, the violent effects of numerous anti-government forces plus drug cartels have given the church opportunities to bring the gospel of peace. Today, Asociación de Iglesias Hermanos Menonitas de Colombia numbers 44 local
+
+
+<!-- Page 156 -->
+
+congregations and 2,500 members. It has a high school, non-formal pastor training institutes and a legacy of working closely with Mennonite Central Committee to address many local needs. In 2020, the conference mission agency, Heme Aqui (Here I Am), was recognized by the government as a legal entity. That year they also hosted an online mission conference for pastors and mission leaders. A pre- conference online study was held in October followed by a three-day conference using YouTube and small group Zoom calls. Leaders from Colombia as well as Uruguay, Paraguay, Brazil, Panama, Mexico and Peru attended. “The congress is a first step in a strategy to mobilize the church toward fulfilling our mission,” says Jose Manual Prada Bernal. “With gratitude we can see ourselves in Latin America united in one desire: to understand and carry out the Great Commission of our Lord Jesus Christ.” In Mexico , mission work begun in the 1950s has produced Iglesia Cristiana de Paz en México, (Christian Peace Church in Mexico). As of 2018, ICPM is a family of 346 members in seven local congregations located in three cities. In 2019 they reported baptizing 31 individuals. Pastor Carlos Ortega, of Villa de Alvarez in Colima, works with juvenile offenders, including young people working for drug traffickers as hired killers. “Most are orphans who are recruited by the cartels at an early age (12 and older) to fill the void of not having a family,” he says. Ortega ministers through soccer and personal or
+
+
+<!-- Page 157 -->
+
+group discipleship. Working with these young people is difficult, says Ortega since he and others volunteers do not see much outward change. The Matthew Training Center, operated by Multiply, serves young adults in discipleship and mission preparation through a non-formal program. Students also come from other Mennonite Brethren national churches in South America. Panama ’s Iglesia Evangélica Unida—Hermanos Menonitas (United Evangelical Church – MB) is unique: all its 600 members (in 13 local churches) are indigenous, coming from either the Wounaán or Emberá tribes. Literacy work began in the mid-1950s by visiting linguists. MB Mission (now Multiply) involvement centered on helping the indigenous people retain and enhance their culture and identity. Every attempt was made to limit paternalism—the missionaries’ approach was ahead of its time. From the beginning, they assumed the locals were best equipped to work among their own people, so missionaries came and went, focusing on coaching and consulting. Many members are artisans weaving museum- quality baskets and carving rosewood and tagua nuts for tourist trade and income for the church. In Paraguay , Mennonite refugees from Russia during the 1930s and 1940s joined earlier Mennonite immigrants from Canada to establish five German-speaking colonies. The Paraguayan MB church has been active in evangelism among indigenous tribes and in the capital city of
+
+
+<!-- Page 158 -->
+
+Asunción. The result has been the formation of two MB groups—one using German and the other Spanish. The German Vereinigung der Mennoniten Brüder Gemeinden Paraguays (Association of Paraguayan MB Churches) has invested in primary and secondary schools and in higher education. Instituto Biblico Asunción is becoming a training center for Mennonite Brethren throughout South America. The five secondary schools are also church planting sites, since they reach out to non- Christian students and their parents. Media ministries in television and radio are also a major investment. Perhaps the most unique investment of resources is La Libertad, a church within the walls of a maximum-security prison in Asuncion. The “outside church” has renovated cell blocks, devised an admittance protocol for about 500 inmates and set up a fully functioning “inside church” with leadership (all inmates), discipleship, worship, baptism and membership. The Spanish Convención Hermanos Mennonitas die Paraguay (Mennonite Brethren Convention of Paraguay) celebrated its 50th anniversary in 2021. The conference has more than 60 churches and 3,766 members and reported total church attendance of 7,500 before the pandemic. Leaders have an assertive church planting vision and have set a goal of planting 50 new churches in response to God’s faithfulness during the past 50 years. At the time of their anniversary celebration, there were already 14 missionary points about to become churches,
+
+
+<!-- Page 159 -->
+
+with people being baptized and involved in ministry. The conference also hopes to establish a Bible institute to train pastors. The Spanish language is predominant among the congregants of the two Paraguayan national churches. So, they work closely together to faithfully witness to Christ in Paraguay, though there is no plan to merge like the churches in Brazil. Conferencia Peruana Hermanos Menonitas, the MB church in Peru , began among Ashaninca Indians with Krimmer Mennonite Brethren workers in 1950. The Mennonite Brethren merged with KMB in 1960 and assumed responsibility. Because of Shining Path, a violent guerrilla group, foreign workers left in the 1990s, and the church assumed an independent identity. In late 1982, 2,500 mm of rain fell in five to six months, flooding the northern Peru coastal cities of Piura and Sullana. MB Mission (now Multiply) responded with emergency relief and subsequent to that, with a steady stream of mission workers to plant churches, including a missionary couple from Colombia. While the MB church admits to too much dependency on foreign support, it is gradually taking on complete responsibility. Periodic El Nino situations continue to cause much damage to churches and members’ homes, so that foreign aid is needed for recovery. The ICOMB family in various parts of the world participates in love through prayer and donations when this happens.
+
+
+<!-- Page 160 -->
+
+In 2020, the Trujillo congregation initiated a practical leadership apprenticeship program called Train & Multiply. This new model includes beginning new house churches. The Uruguay MB church was founded by 18 Mennonite Brethren members aboard the Dutch ship Volendam on the Atlantic Ocean, October 22, 1948. They were part of a small wave of Mennonite refugees who settled in Uruguay. During the ensuing years, efforts to evangelize local Spanish people succeeded in establishing more churches. In 1979, the German conference officially ceased to exist and the Spanish conference (Consejo de las Congregaciones de los Hermanos Menonitas en Uruguay) took over. Today there are seven churches with around 200 members. Mennonite Brethren have congregations in two other South American countries. Venezuela has two Mennonite Brethren churches, planted in 1991 by Chinese Mennonite Brethren churches in British Columbia. They sent missionaries to Venezuela to establish a witness among Chinese immigrants. While the Venezuela churches have experienced limited growth, they are part of the family, as is the single Mennonite Brethren congregation in Argentina, planted by Paraguayan Mennonite Brethren mission efforts.
+
+
+<!-- Page 161 -->
+
+North America: Canada and the United States Mennonite Brethren in North America conducted their first convention as the General Conference of the Mennonite Brethren Church in 1879. In 1909, Mennonite Brethren were subdivbided into four district conferences: Northern (Canada) and Southern, Central and Pacific (U.S.) Congregations in these regions worked together to support foreign missions, a seminary, college and Bible schools, evangelism, Christian education and publication. (See chapter 8). In 1945, the Northern District, which had reached about the size of the other three combined because of Mennonite immigration to Canada, incorporated itself into what is now the Canadian Conference of MB Churches (CCMBC). In 1959, the districts in the U.S. voted to organize the U.S. Conference of MB Churches (USMB). This new structure made church growth and evangelism, youth work, Christian education concerns, stewardship and Bible and liberal arts colleges the responsibility of the national conferences. Foreign missions, faith and life matters, seminary training and resource publication became, for the most part, binational concerns, and boards to guide these ministries were formed with representatives from both Canada and the U.S. congregations sent delegates to regularly scheduled
+
+
+<!-- Page 162 -->
+
+conventions to discuss and decide the future of their shared ministries. Eventually, some viewed this arrangement as cumbersome and suggested that one level of organization needed to be removed. So, in 1999, the binational General Conference dissolved, and since then, the two national conferences have functioned independently. Both conferences now have a seat at the ICOMB table and are free to adapt the Confession of Faith that was approved by General Conference delegates in 1999. In 2014, USMB revised Article 13 on peacemaking, and in 2021 CCMBC considered revisions to Article 8: Christian Baptism. For the past 20-plus years, both CCMBC and USMB have emphasized evangelism and church planting as well as discipleship and leadership development, although the methods of organizing their structures to meet these goals have changed—and continue to change.
+
+
+### Canada
+
+In 2017, CCMBC reported more than 50,000 members in 250 congregations in seven provincial conferences. The Canadian conference experienced growth in spurts during the 20th century because of waves of Mennonite immigration into Canada. Many Mennonite Brethren were among some 20,000 Mennonites from Russia who entered Canada in the 1920s. Another wave of some 7,000
+
+
+<!-- Page 163 -->
+
+Mennonites entered Canada after World War 2. Both times, Canadian MB churches were impacted, bringing both positive energy and challenges to the existing Canadian MB family. If immigration shaped CCMBC for much of the 20th century, the wider evangelical community of Canada strongly influenced its vision for the 21st century. Canada is a fundamentally secular country whose large size and small population have encouraged its evangelical churches to cooperate rather than compete. This cooperation rubbed off on Mennonite Brethren in the areas of evangelism and church planting. Several church planting and church health initiatives have characterized CCMBC mission practice in the past decades. The Board of Evangelism and then Evangelism Canada, including the Key Cities Initiative, provided leadership. Until 2010, each provincial conference had its own board to oversee church planting efforts in that region. Then in 2011, C2C Network became the Canadian conference church-planting arm. In 2018, C2C merged with MB Mission, the North American MB mission agency. That merger lasted one year, and currently church planting is again the responsibility of provincial conferences. CCMBC conducted a national review in 2011 that led to a revised mission statement—“to multiply Christ- centered churches to see Canada transformed by the good news of Jesus Christ”—and a ministry model that
+
+
+<!-- Page 164 -->
+
+emphasized partnerships with the provincial conferences in order to serve in four areas: building community, resourcing ministry, developing leaders and multiplying churches. In 2018, CCMBC proposed a new Collaborative Model to assist the conference to better achieve its mission to serve churches and transform Canada. This new model combines church giving to the provincial and national conferences and moves decision-making to the provincial conferences. A national director helps to facilitate collaboration between provincial and national conferences and to represent Canada to international groups such as the International Community of Mennonite Brethren.
+
+
+---
+
+# 第十一章：门诺会各支派间的合作纽带
+## *Chapter 11: Inter-Mennonite Connections*
+
+> **归属分部**：第三部分：茁壮成长的家庭 (Part Three: A Growing Family)
+
+### 中文译文
+
+# 第十一章：门诺会各支派间的合作纽带
+
+### 第十一章
+
+### 门诺会各支派间的合作纽带
+
+身处门诺弟兄会大家庭，意味着我们本身就是更为宏大的重洗派属灵家谱上的一根繁茂枝条。“我们的属灵大家庭，是上帝用来深切呵护我们的一种方式”——这句在信徒间耳熟能详的温情喟叹，用以形容整个广义门诺会大家庭再恰当不过。
+
+作为门诺弟兄会的一员，我们深知：当这个庞大宗族中的任何一位成员遭遇患难灾祸时，重洗派家族的其他肢体必会倾囊相助、施以援手。我们更深知：这份源源不断的爱心与援助，绝不仅局限于宗派内部的家人，更是“奉基督的名”（In the Name of Christ），毫无保留地白白倾倒给那些素昧平生、身处绝境的贫寒之人。
+
+自1941年起，“奉基督的名”这行庄严的字样，便被清晰地印制或缝缀在门诺会中央委员会（Mennonite Central Committee，简称 MCC）所分发的每一批救济物资之上。作为历史最为悠久的跨门诺派联合救济机构，在第二次世界大战期间及战后废墟中，MCC 的博爱圣工跨越了整个欧洲大陆，救助了成千上万在战火中家破人亡的贫苦家庭。
+
+在英国伦敦，MCC 同工艾琳与约翰·考夫曼夫妇（Eileen and John Coffman）正在将 MCC 运来的衣物分发给那些房屋被炸毁、蜷缩在地下防空洞中的难民家庭。1941年4月，夫妇俩致信 MCC 总会领袖，提议在每一件捐赠衣物上都附上一枚特制标签，印上一句“简短却有力的口号，诸如‘奉基督的名’——这将极大拓展基督的圣工，因为我们分发的是由我们信徒亲手缝制并甘心奉献的衣物。”
+
+很快，“奉基督的名”不仅出现在每一件御寒衣物上，更广泛印制在温暖的百家被（comforters）、圣诞礼物包以及各类高营养肉类罐头上。通过这句纯朴而深沉的宣告，MCC 的核心身份与存在基石触及了全球数以百万计的生灵——不仅在欧洲，更深入非洲、亚洲、拉丁美洲以及中东大地的每一个苦难角落。
+
+### 携手服事众人
+
+北美各派门诺人的首次跨宗派空前大联合，发生在整整一个世纪前的1920年。当时，一个来自苏俄的门诺会特别代表团远渡重洋抵达北美。由于俄国国内剧烈的政治动荡、内战浩劫与毁灭性的大饥荒，那里的门诺弟兄姊妹正面临着濒临绝境的极端苦难。他们向北美大陆的同宗骨肉发出了撕心裂肺的求救呼吁。
+
+北美各派门诺人以两种切实行动迅速作出了历史性回应：筹集紧急人道主义救济，以及全力协助难民海外移民。
+
+全美重洗派各教会迅速合力创建了一家联合救济机构——门诺会中央委员会（MCC）。来自堪萨斯州希尔斯伯勒的门诺弟兄会牧长 P.C. 海因伯特（P.C. Hiebert）众望所归，被推选为这家初创救济机构的首任主席。在 MCC 的统筹协调下，美加两国的重洗派信徒迅速筹集了100万美元巨款，并紧急派出三位美国同工，冒着枪林弹雨将救命的救援物资运送至俄国与乌克兰的门诺村落。他们就地开设了免费施粥厨房，并运去大量粮食良种与现代拖拉机，协助乡亲们在焦土上重耕家园。
+
+二战爆发期间，美加两国的跨门诺派协同合作拓展到了一个全新的历史舞台。两国青年信徒普遍面临国家的战时兵役征召。得益于历史和平教会（门诺会、贵格会、弟兄会）领袖们不懈的奔走与法理陈情，良心拒服兵役者（Conscientious Objectors，简称 COs）获得了从事“具有国家重要性”的非军事实体替代役（Civilian Alternative Service）的法定选择权。
+
+在加拿大，全国10,851名良心拒服兵役者中，约有7,500人是门诺会信徒；在美国，申请良心拒服兵役身份的12,000名青年中，门诺人占据了38%（共4,665人）。虽然绝大多数门诺良心拒服兵役青年更渴望作为非武装战地医护兵奔赴前线，或深入战乱国家从事纯粹的人道救援，但当时的国家政策直至战后很久才允许此类选择。
+
+“平民公共服务营”（Civilian Public Service，简称 CPS）的运转采纳了一种政企协约机制：美国联邦政府负责指派具体劳动工程项目，而教会机构则全权承担营地日常食宿运转及青年在工余时间的精神与灵性牧养。负责门诺派 CPS 营地的教会机构正是 MCC，它总共统筹管理了23处大型基地营地。
+
+首批替代役营地于1941年正式启动。这批坚守和平信念的 CPS 青年投身于惊心动魄的森林灭火第一线，开山辟路，筑坝截流，植树造林，在广袤农田中构筑等高梯田保护水土；他们甘愿在医学与科学前沿人体实验中充当“小白鼠”测试新疗法；深入饱受钩虫病肆虐的贫民窟建造公共卫生设施；并在恶劣的收容所中悉心护理精神病患者与边缘失足少年。
+
+这种让来自不同背景的青年同吃同住、并肩苦干的深刻经历，对整整一代年轻人的生命轨迹产生了难以估量的深远塑造。“这批来自门诺派各个细分宗派的年轻男子（以及志愿奉献的年轻姊妹）投身服务营地的宏大运动，对北美门诺人产生的深远塑造，或许超过了历史上任何单一的经历，”自1986年至1998年担任门诺灾难服侍处主任的罗威尔·德特威勒（Lowell Detweiler）动情地总结道，“以往被称为‘地上安静之民’的门诺人，自此开始昂首走出狭隘的族群藩篱，放眼向外开展全方位的服事事工。”
+
+这些青年重返家园时，带回了扎实的劳动技能、跨宗派的深厚友谊，以及对基督徒舍己服侍价值的坚定信念。他们激励自己的母会社区积极支持开创全新的服事实践，深信基督徒不仅应当在战时见证和平，在和平年代同样应当全心服事；向更广袤的世界舍己服事，正是活出基督徒生命样式的题中之义。
+
+这一良心拒服兵役的苦难历程，直接催生了日后名垂教会史册的“门诺灾难服侍处”（MDS）、“门诺志愿服侍团”（MVS）以及“门诺和平志愿队”（PAX）。许多参与过 CPS 的门诺弟兄会青年退役后考入圣经神学院深造，日后成为了门诺弟兄会宗派的中流砥柱与资深牧长。
+
+更为震撼的是，由于 CPS 营员的亲身体验，精神心理健康在二战后成为了北美门诺人合力攻坚的核心社会议题。在战争期间，被指派到州立公立精神病院从事繁重看护工作的 CPS 营员们，震惊地目睹了病房内非人道、甚至绝望残酷的生存惨状。最终，在全美22个州的公立精神病院中服役的门诺良心拒服兵役者，联合将他们的实地见闻公之于众，以期推动彻底的社会人道体制改革。
+
+基于这批 CPS 青年历时四年默默收集的大量第一手确凿文献记录，1946年5月6日出版的美国《生活》（*Life*）杂志刊登了一篇轰动全美的长篇调查报道，彻底揭露了精神病院触目惊心的悲惨现实。报道直言不讳地指出：“由于公共舆论的漠视与立法机构在预算拨款上的极度吝啬，一个又一个州任由其看护和治疗精神疾病患者的公共医疗机构，堕落演变为近乎贝尔森（Belsen）纳粹集中营样式的非人炼狱！”
+
+在许多机构中，CPS 青年通过实际行动推动并改革了州立医院的护理规范。但在更多情况下，州立医院的人们长久铭记门诺 CPS 护理队员的原因，不是因为他们刻意宣讲改革，而是因为这群年轻人每天勤勤恳恳、任劳任怨地干着最脏最苦的重活，且对每一位身心备受摧残的病患倾注了发自肺腑的真诚关怀与尊严尊重。
+
+“在第二次世界大战期间，没有任何一个基督教教会群体像美国门诺人那样，对精神疾病领域有过如此密集而深度的切身体验，”曾担任 CPS 志愿者、后来直至去世一直担任一所门诺精神康复医院首席执行官的埃尔默·M·埃迪格（Elmer M. Ediger）深刻指出，“在整整四年时间里，1,500名门诺青年‘零距离、亲力亲为’地投身于精神疾病看护第一线，并将这些震撼经历毫无保留地带回母会分享。他们形成了一套前瞻性的崇高异象：如果能将纯正出于基督之爱的动机与专业的精神病学护理结合起来，必将在苦难人群中成就何等宏大的善工！”
+
+1947年，MCC 正式启动了自己的精神健康事工计划。至1967年，MCC 已在美国兴建了7所高水准精神专科医院，并在加拿大兴建了1所；随后成立了专门的附属机构“门诺心理健康服务中心”进行统一统筹。如今，这些医疗中心已发展为独立的社区公共服务实体，而“门诺健康服务处”（MHS）更将其专业网络拓宽至北美各类精神卫生中心、养老退休社区以及智力与发育障碍康复项目，并在这些专业机构与门诺会、门诺弟兄会及基督弟兄会等教会之间搭建起紧密合作的桥梁。
+
+### 门诺会中央委员会（MCC）步入百年华诞
+
+MCC 是一家全球性的非营利基督教组织，致力于通过**紧急救济、社会发展与缔造和平**（Relief, Development, Peacebuilding），彰显并传递上帝的救赎大爱与怜悯心肠。在所开展的一切项目中，MCC 始终坚持与本土合作伙伴和当地教会建立深厚伙伴关系——当地最真实的需要，永远是确立 MCC 事工优先次序的唯一准绳。
+
+作为一个深植于重洗派信仰土壤的机构，MCC 竭力将“缔造和平”融入其所做的一切事工细胞之中：在应对突发天灾人祸时，它协同本土组织公平公正地分发救援物资，最大限度遏制因争抢资源可能引发的族群冲突；在长期社区发展项目中，MCC 深入听取社区民众的心声，确保援助举措真正解决民众的切身生计痛点；MCC 亦在国际公共领域大声疾呼，倡导并推动有助于促成全球持久和平的公义政策。
+
+若要定义今日 MCC 的博大事工版图，恰如“盲人摸象”寓言中的七位盲人——身体的每一个部位都独具特色且不可或缺，而整体的力量则远远超越了个体器官的总和：MCC 既是印度烈日下指导农耕技术的水稻农艺师，也是美国法庭与社区中践行修复性司法的和解同工；既是在尼泊尔高山村落传授妇女调配高营养“超级营养面粉”以确保幼儿健全成长的培训导师，也是在刚果民主共和国丛林诊所中协助抗击 COVID-19 致命疫情的白衣使者。
+
+MCC 创立于1920年，这意味着2020年是该机构的百岁诞辰。MCC 原本筹备在2020年举行盛大的百年庆典，但受全球新冠疫情阻隔，线下实体盛会大多被迫取消或转至云端举行。
+
+回溯该救济机构走过的整整一个世纪的风雨历程，自2010年至2020年执掌 MCC 的执行总干事 J·罗恩·拜勒（J Ron Byler）感慨万千：“在 MCC 跨越百年的光辉历程中，面对接踵而至的艰难险阻，MCC 的全体同工与全球合作伙伴始终展现出非凡的开拓韧性与智慧才干。2020年亦是如此，我们与合作伙伴在全球疫情大流行的肆虐之下，全力奔赴各地去满足最苦难人群的燃眉之急。然而上帝始终以无比的信实恩待我们，在过去的岁月里步步引领看顾，使我们能在重重危机之中‘奉基督的名’广施上帝的慈爱与恩典。为此，我们唯有向神献上满腔的感恩！”
+
+MCC 在黎巴嫩紧急危机中的果断作为，生动展现了该机构在疫情围困中开展服事所面临的严峻考验。2020年1月，黎巴嫩首都贝鲁特的人民生活在水深火热之中：2019年爆发的全国性大规模民众抗议，暴露了社会对政府治理的极度不满；学校大面积停课，货币断崖式贬值，恶性通货膨胀吞噬着民生。随后而至的新冠疫情更是雪上加霜，店铺关门歇业，就业岗位荡然无存，医疗系统几近瘫痪。寄居当地的叙利亚与巴勒斯坦难民，以及陷入赤贫的黎巴嫩底层民众，所能获取的生活物资比以往任何时候都更加匮乏。
+
+然而灾难并未止步。2020年8月4日，贝鲁特港口因违规存放的2,750吨硝酸铵发生惊天特大爆炸，瞬间造成数百人罹难、数千人伤残，大半个城市的建筑物沦为瓦砾废墟。其中包括紧邻港口的卡兰蒂娜（Karantina）贫民区——那里聚居着大量难民、外来劳工与赤贫的黎巴嫩家庭。
+
+与妻子一同担任 MCC 黎巴嫩、叙利亚与伊拉克事务代表的加里·梅休（Garry Mayhew）在爆炸次日深入灾区勘验废墟时痛心地说：“这里看起来宛如被重型火炮反复犁过的战火焦土！”在这场前所未有的复合型危机中，前行的道路充满了未知与迷雾。
+
+黎巴嫩绝非孤例。在 MCC 开展圣工的全球数十个国家，新冠疫情使得医疗健康与粮食救济的需求呈现爆发式剧增；而与此同时，MCC 同工及其合作伙伴团队自身的人身安全与健康亦面临着致命威胁。更为严峻的是，疫情初期对 MCC 的资金链造成了重创——捐赠者的经济状况普遍受损，一年一度的线下救济义卖会全部取消，全美各地的二手慈善义卖店（Thrift shops）亦被迫阶段性停业关门。
+
+即便如此，MCC 展现出惊人的应变力，迅速调整工作部署，继续“奉基督的名”服事实体人群：
+- 在贝鲁特，MCC 与当地伙伴重新设计了粮食救济分发流程——推行精准预约制、强制佩戴防护口罩、严格保持社交距离以守护受助者的生命健康；紧接着迅速启动受损民居与小微商铺的修缮重建工程，并为心灵遭受重创的儿童提供长效心理与情感抚慰支持；
+- 在全球各地，MCC 全面强化公共卫生防疫工程，普及防疫抗疫科学常识，搭建移动卫生洗手消毒站，开凿并提供清洁安全的饮用水源；和平倡导、医护健康以及农业科技培训全面转战线上虚拟课堂，或在开阔的户外场所有序分散进行；
+- 2020年在美国本土分发的优质肉类罐头数量创下历史新高，以救助那些深陷经济泥潭的赤贫家庭；
+- MCC 联合门诺灾难服侍处（MDS）与 Everence 金融管家机构，设立专项扶持救助金，重点向因疫情陷入困境的有色人种重洗派教会倾斜，协助他们按时发放教牧工资并救助贫困会友。
+
+MCC 的圣工之所以能在狂风骤雨中稳健挺立，离不开其忠心支持群体的大力托举——信徒们同样展现出极强的适应力，将一年一度的传统实物救济义卖会搬上网络进行线上慈善拍卖，为家庭设立全新的筹款倡议，个人捐款额更是不降反升。不可否认，如同许多全球慈善组织一样，疫情使 MCC 的运转遭遇了沉重挑战，被迫精简预算开支、冻结部分岗位并暂缓启动新项目，但其服事的脚步却从未停歇。
+
+门诺弟兄会信徒以丰富多样的方式全力支持 MCC 的圣工：
+- 广大信徒志愿申请成为 MCC 短期或长期海外服事同工；
+- 积极参与发起、创办并志愿运营**MCC 二手慈善义卖店（MCC Thrift Shops）**——通过义卖二手捐赠物资为 MCC 全球救济筹集善款。自1972年首店创立以来，MCC Thrift 已成长为一个横跨北美大陆、拥有近100家连锁门店的庞大网络，在深度赋能本土社区的同时全力托举国际差传。在疫情前的2019年，美加两国的 MCC Thrift 义卖店每月创收平均突破120万美元！
+- 投身于 MCC 旗下的公平贸易社会企业——**“一万个村庄”（Ten Thousand Villages）**。该机构通过在北美展卖全球弱势手工艺人的精美手工作品，讲述作品背后的生命故事，为这些身处贫困、若非此便无工可做的手工艺人提供体面而长效的稳定收入，帮助千家万户摆脱贫困、负担子女教育、医疗与住房；
+- 各堂会定期为全球难民与贫寒学童收集组装学校学习包、婴儿护理包、卫生清洁包以及家庭救济应急包；
+- 各堂会信徒与各地物资资源中心的志愿者聚在一起，一针一线地缝制精美的百家被与保暖毛毯，为深陷战争与天灾绝境的人们送去基督的温暖；
+- 每年在美加两国举办的40场大型 MCC 救济拍卖会（Relief Sales），筹集善款常年稳定突破600万美元！
+
+门诺弟兄会各社区还别出心裁地开辟了独特的支持模式。在部分地区，门诺男高音与男低音们联合组建了声乐诗班，借高水准的巡回音乐会提升公众知晓度并募集救济善款。例如，位于加州的“西海岸门诺男声合唱团”（West Coast Mennonite Men’s Chorus）已连续倾情献唱超过40年，累计为 MCC 筹集了逾50万美元的宝贵善款。
+
+### 门诺灾难服侍处（MDS）：北美救灾急先锋
+
+创立于1950年的**门诺灾难服侍处（Mennonite Disaster Service，简称 MDS）**，或许是所有跨门诺派联合机构中最接地气、最富草根生机的实干组织。作为一个跨越美加两国的双国籍实体，MDS 代表广泛的门诺派及相关重洗派教会，直接奔赴美加本土遭受飓风、洪水、龙卷风、野火等重大自然灾害的第一线开展灾后重建与人道救援。
+
+除了位于宾夕法尼亚州阿克隆（Akron）的精干总部以及位于曼尼托巴省温尼伯的区域办事处的少数专职行政人员外，这支庞大救援网络的骨干与血肉完全是由成千上万名无私奉献的志愿义工铸就而成。地方基层分队按区域统筹编组，每个大区均由经验丰富的志愿者领袖挂帅执掌。MDS 与美国红十字会、救世军（The Salvation Army）等主流教会与专业灾难救援组织保持着深度的战略合作，更与美国联邦应急管理署（FEMA）及其各州应急机构、加拿大应急响应组织保持着制度化协同。
+
+在所有跨门诺派联合实体中，MDS 被公认为拥有最为宽广的宗派代表性与支持面：从恪守传统马车出行的“旧秩序门诺派”（Old Order Mennonites）、比奇阿米什人（Beachy Amish），到门诺教会（Mennonite Church）、门诺弟兄会（MB）、基督弟兄会（Brethren in Christ）以及保守门诺派（Conservative Mennonites）……当灾难来临之时，他们纷纷穿上印有 MDS 鲜明标识的工作服，并肩挥汗如雨。
+
+担任 MDS 西海岸行动协调员的史蒂夫·维斯特（Steve Wiest）是加州金斯堡一间美国门诺弟兄会堂会（Hope Kingsburg）的资深会友，在 MDS 和 MCC 拥有长达数十载的服事阅历。2021年，维斯特全身心投入到了加州天堂镇（Paradise）的灾后重建前线——那里在2018年爆发的“坎普特大野火”（Camp Fire）中化为焦土，超过13,000栋民宅在一夜之间被火海吞噬。这是加利福尼亚州历史上最具破坏力、亦是整个美国一个世纪以来伤亡损失最惨重的特大山火。
+
+历经近三年时光，天堂镇居民心头的心理创伤依然血肉模糊。“凡是亲身经历过那场炼狱大火、不得不从滔天火舌中仓皇逃命、甚至冒死穿透火海逃生的人，这一辈子都将背负难以抹去的心理创伤，”维斯特深有感触地说道。
+
+正是由于洞悉这一灵魂深处的苦痛，MDS 的义工们在挥锤建房的同时，始终愿意停下手中的活计，耐心倾听每一位灾后业主的倾诉。维斯特指出，MDS 所做的事工中，有极大一部分是重燃人们心头的盼望，陪伴他们走过心灵医治的死荫幽谷。“我们花大量的时间安静坐下来，听他们倾诉那场浩劫中的生死故事，”维斯特说，“在天堂镇，你根本不需要刻意去寻找悲剧——在杂货店收银台前，或者在路边的卷饼餐车旁随便跟人寒暄几句，扑面而来的全都是字字泣血的浩劫创伤。”
+
+当 MDS 义工们在天堂镇挥汗如雨修缮三年前被毁的家园时，2021年加州爆发的新一轮野火再度肆虐。截至2021年9月1日，全州已有超过3,600栋建筑被烈焰焚毁。其中2021年最大的一场山火——“迪克西山火”（Dixie Fire），其起火点与2018年坎普山火几乎重合，只是蔓延方向相反。在短短一天之内，迪克西山火几乎将具有悠久淘金热历史的格林维尔历史古镇（Greenville）夷为平地。
+
+2021年8月，正当 MDS 施工队奋力施工时，坎普火场周边的火势仍在失控蔓延，5,000多名专业消防员鏖战火海。MDS 义工有时能直接望见50英里外冲天而起的巨大烟柱。“你能清晰闻到空气中浓烈的刺鼻烟味，常常清晨起来看见车身覆盖着一层厚厚的火山灰，”维斯特回忆道。
+
+天堂镇的重建工作还因疫情肆虐而愈加错综复杂。随着当地新冠确诊病例的激增，MDS 不得不在2021年9月按防疫要求阶段性暂停了现场施工，并在6栋已经破土动工的房屋完工前将外地义工疏散返乡。但所有人坚定承诺：风暴过后，他们必将重返前线，善始善终完成未竟的家园重建！
+
+在经历灾难打击的社区中，MDS 的身影往往是“最先到达、最后撤离”的存在；义工们全力以赴攻坚社会中最贫弱孤寡家庭悬而未决的住房刚需。在施工建造中，凡是条件允许，MDS 义工修建和加固的房屋在抗震、抗风、防火标准上均达到高规格，足以抵御未来的风暴洗礼。在此过程中，业主们往往与这群帮助他们重返家园的素衣义工结下了跨越一生的生死情谊。
+
+2020年，超级飓风“劳拉”（Hurricane Laura）横扫墨西哥湾沿岸，正面袭击了 MDS 在2005年“丽塔飓风”（Hurricane Rita）过后为灾民修造的一批坚固民宅。长期担任 MDS 志愿项目主管的卡尔·杜贝（Carl Dube）与同工专程赶往现场回访，探查房屋是否经受住了风暴考验。“灾民的保险理赔勘察员目瞪口呆地直言，按照常理，在如此狂暴的飓风正面直击下，这栋房子根本没有任何理由还能完好无损地矗立在那里，”杜贝动情地说，“当业主们紧紧拥抱当年亲手修建这栋房屋的施工者时，激动得热泪盈眶——正是这群工匠的手艺，让这栋房子傲然顶住了时速高达150英里的毁灭性狂风，以及高出室内地板整整两英尺的汹涌风暴潮！”
+
+门诺人、阿米什人以及一切志同道合的重洗派基督徒，拥有一种深刻扎根于圣经的真道洞见——坚信真正的信仰必然体现为一个彼此深切相爱、全心呵护邻舍的活泼共同体。16世纪的重洗派先驱用生命去爱护身边的苦难之人；而作为其血脉后裔的门诺人，百年来从未背离这一神圣的属灵产业。在欧洲、在北美、在世界每一个角落，门诺人一次又一次庄严立约，誓要“奉耶稣的名”舍己服事众人。
+
+这究竟是为什么？因为我们门诺人坚信：**真实的基督信仰，必须在生命每一个现实维度中活出馨香的见证！**
+
+重洗派教父门诺·西蒙斯（Menno Simons）生前反复宣讲的一大核心主题，正是真信仰必结出仁义的善果。在他那篇名垂青史的经典论述中，西蒙斯写道：
+> “真正属福音的信仰……绝不可能沉睡不醒，而是必然在一切公义的行为与仁爱的话语中全然彰显出来：……它给赤身者穿上衣裳；给饥饿者吃饱饭食；安慰心中忧伤哀恸之人；给颠沛流离、无家可归者提供温暖的遮蔽之所；它扶助并宽慰每一个悲戚绝望的生灵！”
+
+### 门诺会世界大会（MWC）：同一个信仰大家庭
+
+每隔六年，当来自五大洲四大洋的重洗派信徒汇聚在世界某一座城市，开展为期一周的在基督里骨肉至亲的大团圆庆典时，人们便能领略到整个广义门诺会大家庭无比恢宏的全景画卷。
+
+总部设于加拿大安大略省基奇纳（Kitchener）与哥伦比亚波哥大（Bogotà）的**门诺会世界大会（Mennonite World Conference，简称 MWC）**，正是这一普世家庭大团圆的统筹组织者。首届 MWC 大会于1925年在瑞士巴塞尔举行，汇聚了来自北美、荷兰、法国与德国的代表。2022年第17届全球代表大会在印尼三间本土门诺宗派（爪哇福音教会、印尼穆里亚基督教会、印尼基督徒会友联合会）的热忱邀请下在印尼举行，因疫情采取线上线下混合形式召开。
+
+以美国门诺弟兄会为代表的美国重洗派大家庭，于2015年在宾夕法尼亚州 Harrisburg 荣耀主办了第16届 MWC 全球代表大会（简称 PA 2015）。该届大会吸引了来自全球77个国家的8,454名注册代表齐聚一堂；令人扼腕的是，另有数百位海外代表因未获美国签证而未能成行——例如来自肯尼亚的伊斯特利团契诗班（Eastleigh Fellowship Choir），全团30位成员中仅有5人最终侥幸获得签证，在大会第三晚代表全团献诗。
+
+“极其热衷于追溯家谱与家族姓氏的北美门诺人，总喜欢在新结识的朋友间玩一种‘门诺游戏’（Mennonite game）——不停地追问‘你是否认识某某……？’直到最终找出两人共有的某个远房亲戚，”MWC 官方刊物《信使报》（*Courier*）主编卡拉·布劳恩（Karla Braun）在2015年10月的社论中风趣地写道，“然而，当来自全球77个国家的门诺会与基督弟兄会信徒汇聚在宾州时……这一‘门诺游戏’早已彻底超越了肉体血缘的局限。来自世界天涯海角的弟兄姊妹，不出三言两语便能找到彼此深邃的生命交集：MCC 的一线海外义工服事经历、彼此代祷名单上的宣教士名字、参与‘国际青年志愿交流项目’（IVEP）或‘青年重洗派门诺交流网络’（YAMEN）的往昔岁月，以及各大宗派联合机构……都成了发掘属灵‘亲属’的肥沃土壤！”
+
+布劳恩动情地记述道：“在 PA 2015 的每一次相遇中，我们血脉相连的骨肉深情都在不断升华：我们用彼此的母语同声歌唱赞美，我们携手为穷人搭建木屋，我们一起装配蔬菜罐头，我们穿针引线缝制百家被，我们在手腕上绘制海娜纹饰，我们在绿茵场上同场竞技踢足球——这一切，都是我们‘同心合一’共同度过的美好时光！”
+
+全球重洗派大家庭日益展现的多元融合，生动体现在大会核心领导层的构成上——迎来了 MWC 历史上首位来自全球南方（Global South）的总干事：**塞萨尔·加西亚（César García，来自哥伦比亚门诺弟兄会的优秀教牧学者）**；与他并肩配搭的有主席 J·纳尔逊·克雷比尔（J. Nelson Kraybill，美国）、副主席丽贝卡·奥西罗（Rebecca Osiro，肯尼亚）、司库苏诺科·林（Sunoko Lin，美国/印尼）以及候任主席亨克·斯滕弗斯（Henk Stenvers，荷兰）。
+
+“我们全球属灵共同体的同心合一，绝非人类自身血气努力所能达成，亦非我们凭借任何组织手腕所能制造出来的产物，”总干事加西亚深刻指出，“这是上帝无偿赐予我们的神圣恩赐，是圣灵今日在我们中间亲自运行结出的善果。真正的圣徒相通与灵里契合，绝非依靠冰冷的机构章程或繁文缛节所能维系，而是单单奠基于基督在十字架上的流血舍命——在那里，上帝亲自创造了一支全新的子民，涵盖了世界上千姿百态的文化、种族、部落与方言！”
+
+每六年一次的全球全体大会大团圆，绝非 MWC 的全部职能。MWC 于2009年设立了四大常设专业委员会——**信仰与生活委员会、和平委员会、执事委员会以及宣教委员会**——它们被誉为 MWC 维系全球共同体的“心脏四大心室”，将全球重洗派教会网络在团契相交、敬拜颂赞、谦卑服事与福音见证中紧密脉动相连。每个委员会由8至10位由执行委员会严格遴选的各大洲杰出代表与专业学者组成：
+- **信仰与生活委员会**：就基督信仰与实践提供教牧神学咨询，代表重洗派传统参与普世神学前沿对话；
+- **和平委员会**：搭建和平议题的国际交流平台，全力声援扶持正在和平试炼中苦苦挣扎的成员教会，与探索和平身份认同的堂会深入对话，并为全球教会每年一度的“和平主日”（Peace Sunday）研发敬拜资源；
+- **宣教委员会**：为 MWC 各成员教会提供普世差传与海外服事的资源交流平台，汇聚了全球120多家重洗派跨文化差会与海外服事机构；
+- **执事委员会**：专注于 MWC 成员教会的福祉，尤其在成员身处严酷患难逼迫与人道危机之时，为处于患难中的总会提供倾听、代祷、慰藉与切实支援。例如自2017年起，执事委员会全力投入应对刚果民主共和国开赛省（Kasai）叛军叛乱引发的惨烈人道主义灾难。
+
+“要构建一个与当代世俗政治权柄迥然不同的‘另类属灵共同体’，必须依托于一个跨越国界、跨越文化、生动活出彼此依存、舍己之爱与人人平等的全球性基督身体，”塞萨尔·加西亚由衷疾呼，“唯有这样一种充满圣洁生机的共同体，才能向世人雄辩地证明：因着基督的爱，人类完全有能力跨越极端民族主义与狭隘族群中心主义的重重鸿沟！”
+
+MWC 各大区巡回代表积极在本区域各教会之间穿针引线。这些兼职志愿同工负责联络、深耕并支持 MWC 正式成员教会、准成员教会、潜在意向教会、地方基层堂会以及 MWC 各协同伙伴机构。此外，MWC 还通过协同运作 MCC 的 YAMEN 青年交流网络、推动“全球重洗派历史名录”建设、编纂重洗派历史与神学权威出版物，以及指导“青年重洗派委员会”（YABs），持续促进各成员国青年面对面的生命碰撞与配搭服事实践。
+
+在 PA 2015 举行的“全球青年峰会”上，年轻人纷纷挥笔致信慰问李相民（Sang-Min Lee）——这位韩国历史上首位因拒绝服兵役而身陷囹圄的门诺派良心拒服兵役青年。在热忱写下鼓励便条的青年中，便有一位来自哥伦比亚的良心拒服兵役者奥斯卡·苏亚雷斯（Oscar Suarez），他后来荣任 YABs 青年委员会拉丁美洲区域总代表。
+
+在哥伦比亚，年满18岁的青年男子必须强制服役1至3年，退伍后方能获得服役结业证书；在现实社会中，若没有这份军方证书，找寻体面工作将举步维艰。“我的家人对我没有这张退伍证书的未来充满了忧虑，但他们和我的母会全力支持我的信仰抉择，”这位主修音乐的大三学子坦言道。他对哥伦比亚“公正和平组织”（Justapaz）及其他维权团体的奔走深怀盼望。自2009年起，部分良心拒服兵役者得以依据宪法信仰自由条款免除兵役，且拒服兵役者无需完成兵役亦获准从大学顺利毕业；然而，每一位良心拒服兵役者仍必须在法庭上孤身进行旷日持久的法律拉锯战。
+
+苏亚雷斯的决绝选择在母会的青少年团契中掀起了巨大波澜。“年轻人对重洗派和平教导展现出前所未有的浓厚兴趣，好几位青少年正极其严肃地考虑拒绝服兵役，”他说。教会亦全面走入社区，向公众宣讲良心拒服兵役的和平福音真道。“弟兄姊妹的全然托举坚固了我的心志。这一严峻的试炼，反而将我的家庭、我的教会与整个社区紧紧凝聚在了一起！”
+
+借由 MWC 的普世网络，基督徒在遭受逼迫、误解与阻力的幽暗时刻，能够寻见守望相助的坚实后盾，并肩践行重洗派的和平与生命团契见证。
+
+“随着重洗派全球信徒的大多数不可逆转地向‘全球南方’转移，MWC 各成员教会之间以及教会内部的丰富多样性持续攀升——不仅体现在种族、文化、语言与神学思潮上，更深刻体现在贫富经济鸿沟之上，”自1990年至2012年掌舵 MWC 长达22年的总干事拉里·米勒（Larry Miller）深刻反思道，“巨大的贫富悬殊，构成了重洗派-门诺会信仰大家庭中实现‘彼此祝福、相互赋能’最为根本的现实挑战。”
+
+建立全球南北教会之间更加深度的互惠互通、平等相待，是整个重洗派大家庭未来面对的世纪大考。MWC 正携手各大差传服务机构，竭力引领这一神圣的历史进程。
+
+“能真切地知道我们绝非孤身一人前行，这是何等美好的属天确据！”担任 MWC 南部非洲区域总代表的门诺弟兄会姊妹弗朗西斯卡·伊班达（Francisca Ibanda）动情地由衷赞叹。正如 MWC 资深编辑卡拉·布劳恩所总结的那样：“**只要对耶稣基督的纯正信仰成为凝聚我们的属灵黏合剂，那么普天之下，人人皆是骨肉至亲！**”
+
+### 全球重洗派信徒版图与会友统计
+
+《2018年门诺会世界大会全球名录》权威数据显示：遍及全球86个国家和地区的重洗派关联教会受洗会友总数已达 **2,131,199人**！相较于2000年名录所载（63个国家、197个宗派实体、1,203,995名受洗信徒），实现了惊人的历史性大跨越。
+
+**各大洲受洗信徒人数增长趋势表（2000–2018）**
+
+| 大洲 / 区域 | 2000年 | 2015年 | 2018年 |
+| :--- | :---: | :---: | :---: |
+| **非洲（Africa）** | 405,979 | 736,801 | 776,562 |
+| **亚洲与太平洋（Asia/Pacific）** | 184,049 | 431,313 | 438,671 |
+| **拉丁美洲与加勒比海（Latin America & Caribbean）** | 112,128 | 199,912 | 202,603 |
+| **北美洲（North America）** | 443,918 | 582,559 | 649,903 |
+| **欧洲（Europe）** | 57,912 | 64,610 | 63,360 |
+
+在2018年，受洗会友人数突破30,000人的其他国家包括：坦桑尼亚（66,350人）、泰国（63,518人）、津巴布韦（50,287人）、德国（47,492人）、巴拉圭（36,009人）、肯尼亚（35,575人）、墨西哥（34,041人）以及安哥拉（30,555人）。
+
+**全球受洗门诺会与基督弟兄会信徒人数排名前六位的国家：**
+
+| 排名与国家 | 2000年 | 2015年 | 2018年 |
+| :--- | :---: | :---: | :---: |
+| **1. 埃塞俄比亚（Ethiopia）** | 73,219 | 255,493 | **510,912** |
+| **2. 美国（USA）** | 319,768 | 538,839 | **500,481** |
+| **3. 印度（India）** | 90,006 | 256,611 | **257,029** |
+| **4. 刚果民主共和国（DR Congo）** | 183,040 | 235,852 | **225,581** |
+| **5. 加拿大（Canada）** | 124,150 | 143,720 | **149,422** |
+| **6. 印度尼西亚（Indonesia）** | 87,802 | 111,372 | **102,761** |
+
+### 跨门诺派联合机构权威指南
+
+跨门诺派机构在日常交流中多以英文缩写简称呈现。以下收录了门诺弟兄会深度参与协同运作的主要跨门诺派联合机构名录（本名录并非穷尽列举）：
+
+- **CIM（Council of International Anabaptist Ministries / 国际重洗派宣教委员会）**：汇聚北美重洗派宣教差会及其海外关联事工的联合协同平台。
+- **Everence**：北美重洗派专属的金融与信仰资源管家专业服事机构。
+- **Meetinghouse（宣道社团）**：由门诺会与基督弟兄会主流期刊主编与文字出版人构成的专业新闻传媒协作组织。
+- **MCC（Mennonite Central Committee / 门诺会中央委员会）**：北美门诺会与基督弟兄会联合创办的救济、服侍与缔造和平旗舰机构。
+- **MDS（Mennonite Disaster Service / 门诺灾难服侍处）**：立足北美的草根专业自然灾难紧急应对与灾后重建救援机构。
+- **MEDA（Mennonite Economic Development Associates / 门诺经济发展促进会）**：通过具有商业智慧与市场机制的可持续发展模式，服侍赋能全球低收入群体的专业机构。
+- **MHS（Mennonite Health Services / 门诺健康服务处）**：通过将医疗健康机构与门诺会、基督弟兄会深度联结，提供医疗管理与照护赋能的专业服事网络。
+- **MWC（Mennonite World Conference / 门诺会世界大会）**：凝聚全球五大洲门诺会与基督弟兄会各总会教会的普世圣徒团契大家庭。
+
+
+---
+
+### English Original Text
+
+# Chapter 11: Inter-Mennonite Connections
+
+
+<!-- Page 165 -->
+
+
+### CHAPTER 11
+
+
+### Inter-Mennonite
+
+Connections To be part of the Mennonite Brethren family is to be part of the larger Anabaptist family tree. “Our family is God’s way of taking really good care of us,” is a familiar sentiment and one that fits the larger Mennonite family. To be Mennonite Brethren is to know that when calamity strikes a member of this extended family, the rest of the Anabaptist family will come to your aid. It is to know, further, that assistance is extended not only to other family members but also to needy strangers “in the name of Christ.” Since 1941, this phrase, “In the name of Christ,” has been stamped or affixed to relief supplies distributed by Mennonite Central Committee, the oldest inter- Mennonite agency. During and after World War 2, MCC’s work stretched across Europe and aided thousands of families devastated by war. In London, England, MCC workers Eileen and John Coffman were sharing clothing
+
+
+<!-- Page 166 -->
+
+from MCC with families who had lost their homes and were living in underground shelters. In April 1941, the couple wrote to MCC leaders suggesting that a label be included on donated clothing with a “little slogan such as, ‘In the Name of Christ’ (that would) be useful in promoting the cause of Christ, as we administer the clothing which is made and donated by our people.” Soon, “in the name of Christ” began to appear not only on clothing but also on relief supplies such as comforters, Christmas bundles and cans of meat. Through this simple phrase, MCC’s identity and reason for being has reached millions of people—not only in Europe, but in countries throughout Africa, Asia, Latin America and the Middle East.
+
+
+### Working Together to Serve Others
+
+North American Mennonites first rallied together 100 years ago in 1920 when a delegation of Mennonites from Russia visited North America. Mennonites in Russia were facing extreme hardships from the political upheaval and extreme famine in their country, and they appealed to their brothers and sisters on this continent for assistance. North American Mennonites responded in two ways: providing relief and assisting with immigration. Anabaptists in the U.S. formed a united relief agency, Mennonite Central Committee. A Mennonite Brethren
+
+
+<!-- Page 167 -->
+
+from Hillsboro, Kansas, P.C. Hiebert, was chosen to lead the fledgling agency. Under MCC, Anabaptists in Canada and the U.S. raised $1 million and sent three American workers to deliver aid to Russian and Ukrainian villages. Food kitchens were established, and seeds and tractors were sent to help with land cultivation. Inter-Mennonite cooperation embraced a new cause in Canada and the U.S. during World War 2. Mennonites in both countries had to face conscription. Thanks to the efforts of leaders from the historic peace churches, conscientious objectors (COs) were given the option to perform civilian alternative service work of “national importance.” In Canada, about 7,500 of the 10,851 conscientious objectors were Mennonites. In the U.S., 38 percent (4,665) of the 12,000 men who requested CO status were Mennonites. Many Mennonite COs would have preferred to do relief work in war-torn countries or on the battleground as medics, but national policy did not allow for these options until much later. The administration of Civilian Public Service was a cooperative arrangement in which the U.S. government assumed responsibility for the work projects, while church agencies assumed responsibility for camp life and the nonworking time of the men. The church agency responsible for Mennonite CPS camps was MCC, which operated a total of 23 base camps. The first alternative service camps were opened in 1941. CPS workers fought forest fires, built roads,
+
+
+<!-- Page 168 -->
+
+constructed dams, planted trees, built contour strips on farms, served as “guinea pigs” for medical and scientific research, built sanitary facilities for hookworm-ridden communities and cared for people with mental illnesses and juvenile delinquents. The experience of strangers forced to live and work together had a profound impact on the young men. “This movement of young men (and volunteer women) from a wide variety of Mennonite groups into service camps has probably had a more profound effect on North American Mennonites than any other single experience,” says Lowell Detweiler, Mennonite Disaster Service director from 1986 until 1998. “Once the ‘quiet in the land,’ Mennonites began to look outward for service ministries (Detweiler, 32). The men came home with new skills, new friendships and a belief in the value of service. They rallied their home communities to support new forms of service, believing they needed to serve not only in wartime but in peacetime too. Service to the wider world was part of what it meant to be Christian. The CO experience spawned Mennonite Disaster Service, Mennonite Voluntary Service and Mennonite PAX service. Many Mennonite Brethren participants found their way to Bible school or Bible college and became leaders in the MB church. Because of their CPS experience, mental health became a rallying cause among Mennonites after
+
+
+<!-- Page 169 -->
+
+World War 2. During the war, CPS workers assigned to mental health institutions found the hospital situations desperate. Eventually, American conscientious objectors who had worked in the hospitals of 22 states shared their observations with the public to help effect reform. Based on the documentary evidence gathered over four years by CPS men, the May 6, 1946, issue of Life magazine exposed the deplorable state of affairs. The article said: “Through public neglect and legislative penny-pinching, state after state has allowed its institutions for the care and cure of the mentally sick to degenerate into little more than concentration camps on the Belsen pattern.” In some situations, CPS men influenced practices at state hospitals by reforming them. In most cases, the Mennonite CPS units in a state hospital are not remembered for their focus on reforms, but as people who did an honest day’s work and had a genuine interest in the patient. “No other church group had ever had such a concentrated experience with mental illness as the American Mennonites during World War 2,” says Elmer M. Ediger, a former CPS volunteer who went on to serve as CEO of a Mennonite mental health hospital before his death. “During a four-year period, 1,500 Mennonites had a ‘hands on’ involvement with mental illness, which they shared freely with their home congregations. They developed a vision of what might be done with
+
+
+<!-- Page 170 -->
+
+rightly motivated psychiatric aids and mental health professionals.” In 1947, MCC began its own mental health program. By 1967, MCC had established seven mental hospitals in the U.S. and one in Canada, and Mennonite Mental Health Services was formed as a subsidiary of MCC to oversee these institutions. Today these hospitals are independent community services, and Mennonite Health Services supports not only mental health centers but also retirement communities and developmental disabilities programs in North America and helps to link these agencies to Mennonite, Mennonite Brethren and Brethren in Christ churches.
+
+
+### MCC Turns 100
+
+MCC is a global, non-profit organization that strives to share God’s love and compassion through relief, development and peacebuilding. In all its programs, MCC is committed to relationships with local partners and churches—their needs guide MCC’s priorities. As an Anabaptist organization, MCC strives to make peace a part of everything it does. When responding to disasters, it works with local groups to distribute resources to minimize conflict. In its development work, MCC consults with communities to make sure projects meet their needs. MCC also advocates for policies that will lead to a more peaceful world.
+
+
+<!-- Page 171 -->
+
+Defining the ministry of MCC today is like the seven blind men who tried to describe an elephant by feeling a different part of its body—every part is unique and important, but the sum of the animal is greater than the individual parts. MCC is an agricultural worker in India and a restorative justice worker in the U.S. It is teaching women in Nepal to make super flour so that their families will get the nutrients they need and supporting health clinics in DR Congo in their response to the COVID-19 pandemic. MCC was organized in 1920, making 2020 the agency’s 100th birthday. MCC intended to celebrate its centennial in 2020, but in-person centennial celebrations were canceled or became virtual due to the coronavirus pandemic. Reflecting on the relief agency’s anniversary, J Ron Byler, MCC executive director from 2010 to 2020, says: “Throughout MCC’s 100 years, MCC’s staff and partners have had to be creative and resourceful in spite of challenges they encountered. This year (2020) has been no different, as we and our partners meet people’s needs in the midst of the coronavirus pandemic. But God has been faithful over all these years, helping us and guiding us as we share God’s love and compassion in the name of Christ in the midst of crisis. For this we are thankful.” MCC’s response to a crisis in Lebanon is one example of the challenges MCC faced in its ministry during the pandemic. In January 2020, people in Beirut, Lebanon,
+
+
+<!-- Page 172 -->
+
+were struggling. Massive political demonstrations in 2019 revealed the Lebanese people’s dissatisfaction with their government. Schools closed, and the value of Lebanese currency dropped as inflation rose. The COVID-19 pandemic made matters worse, causing shops to close, employment opportunities to dry up and health needs to increase. Syrian and Palestinian refugees and Lebanese people who were living in poverty had even fewer resources than before. And then, on Aug. 4, 2020, an improperly stored supply of ammonium nitrate exploded in the city’s port, causing death, injuries and devastation of property throughout the city. This included the Karantina neighborhood, where many refugees, migrant workers and impoverished Lebanese people live. Garry Mayhew, who serves with his wife as an MCC representative for Lebanon, Syria and Iraq, surveyed the damage the next day. “It looks like a war zone,” he said. The way forward in responding to the needs of the Lebanese people in this new crisis wasn’t clear. And Lebanon wasn’t the only place where MCC needed to determine and adapt its response. In countries around the world where MCC works, COVID-19 increased the need for health care and food while MCC and partner organization staff needed to protect their own health. At the same time, the pandemic initially affected MCC’s funding sources as donors’ finances were impacted, relief sales were canceled and thrift shops were
+
+
+<!-- Page 173 -->
+
+temporarily closed. Nevertheless, MCC adjusted and continued to meet needs in the name of Christ. In Beirut, MCC and its partners adapted their food distribution system by setting up appointments, using masks and physically distancing to protect the health of the recipients. Plans to rebuild homes and small businesses were made and children received support for their emotional and social health. Around the world, MCC’s health programs were strengthened through teaching COVID-19 prevention techniques, distributing hygiene and sanitation stations and making clean water available. Trainings for peacebuilding, healthcare and farming techniques went virtual where possible or took place individually or in outdoor group settings where people could spread apart. More canned meat was distributed in 2020 than usual in the U.S. to help people who were struggling financially. MCC, along with Mennonite Disaster Service and Everence Financial, funded grants to Anabaptist churches, often churches of color, that needed help to pay their staff or assist their members. MCC’s work continued with the support of its constituents who also adapted to COVID-19 by turning relief sales into virtual auctions, creating new fundraisers for families and increasing individual donations. COVID-19 made MCC’s work more challenging, as was true for many organizations, with budget and staff positions cuts and suspension of new projects.
+
+
+<!-- Page 174 -->
+
+Mennonite Brethren support MCC in a variety of ways. Mennonite Brethren volunteer as MCC workers for both short- and long-term assignments. We have been involved in initiating and staffing thrift shops that sell recycled goods to raise funds for MCC. Since its inception in 1972, MCC Thrift has grown into a network of nearly 100 shops across North America, supporting local communities and international ministry. In 2019, prior to COVID-19, MCC Thrift shops in Canada and the U.S. averaged more than $1.2 million a month in revenue. Mennonite Brethren also use their gifts to serve at Ten Thousand Villages, MCC U.S.’s Fair Trade social enterprise. Ten Thousand Villages provides vital, fair income by selling handicrafts and telling the stories of the people who made them. Ten Thousand Villages works with artisans who would otherwise be unemployed or underemployed. This income helps pay for food, education, health care and housing. Mennonite Brethren also collect items for school, infant care, hygiene and relief kits that are distributed to vulnerable individuals around the world. And we come together with other volunteers at Material Resource Centers to stitch quilts and sew blankets to provide comfort to people who are facing crises. More than $6 million is raised annually through 40 MCC relief sales across Canada and the U.S.
+
+
+<!-- Page 175 -->
+
+Mennonite Brethren have devised unique ways to support MCC. In some communities, Mennonite men have banded together to sing and use their concerts to raise awareness and funds for the cause. For example, the West Coast Mennonite Men’s Chorus in California has been performing for more than 40 years and has raised more than half a million dollars for MCC.
+
+
+### MDS: North American Disaster Response
+
+Established in 1950, Mennonite Disaster Service (MDS) is probably the most grassroots of all inter-Mennonite agencies. MDS is a bi-national (Canada and the U.S.) agency that responds to disasters in these two countries on behalf of many Mennonite and related groups. Except for a small staff at headquarters in Akron, Pennsylvania, and a regional office in Winnipeg, Manitoba, volunteers make up the entire network. Local units are grouped into regions and each region has its volunteer leadership. MDS cooperates with other church and disaster response groups including the American Red Cross and The Salvation Army. MDS works in close cooperation with the Federal Emergency Management Agency and its state counterparts in the U.S. and the Emergency Measures Organization in Canada. MDS is recognized among inter-Mennonite agencies as having the widest diversity of constituent support. Old Order Mennonites, Beachy Amish, Mennonite Church,
+
+
+<!-- Page 176 -->
+
+Mennonite Brethren, Brethren in Christ, Conservative Mennonites and others wear the MDS badge. Steve Wiest, MDS West Coast operations coordinator and a member of Hope Kingsburg, a USMB congregation in Kingsburg, California, has a history of working with MDS and MCC. In 2021, Wiest was involved with MDS’s work in Paradise, California, rebuilding some of the 13,000 homes destroyed in 2018 by the Camp Fire. The Camp Fire was the most destructive wildfire in California history and the worst in the U.S. in a century. Nearly three years later, the trauma was still raw for Paradise residents. “People that live through a fire and had to run from the flames or run through the flames will suffer for the rest of their lives,” Wiest says. That’s why MDS volunteers take time to listen to the homeowners they are working with. Wiest says a big part of what MDS does is give people hope and help them heal. “We spend time listening to them tell their story,” Wiest says. With respect to the Paradise community, Wiest says, “It doesn’t take much to go around town and hear the stories of trauma. You talk to the checkout clerk at the grocery store or somebody you meet at the taco truck, and there are the stories.” While MDS volunteers were in Paradise to rebuild homes destroyed three years ago, the 2021 fires added to California’s losses. As of Sept. 1, 2021, more than 3,600 buildings had been destroyed in 2021. The largest fire of the 2021 California wildfire season was the Dixie Fire,
+
+
+<!-- Page 177 -->
+
+which started in about the same place as the 2018 Camp Fire but moved in the opposite direction. In one day, the Dixie Fire destroyed nearly all of the historic Gold Rush town of Greenville. As of August 2021, as the MDS crew worked, the Camp Fire was still growing, despite the efforts of more than 5,000 firefighters. MDS volunteers could sometimes see smoke clouds from wildfires 50 miles away. “You could smell the smoke, and sometimes see the cars covered with ash,” Wiest says. MDS’s work in Paradise was complicated by COVID-19. As COVID-19 cases continued to grow in the Paradise area, MDS paused its work there in September 2021 and sent volunteers home before they were able to complete the six homes they had started. But they will be back to finish what they started. Often the last to leave a disaster-affected community, MDS volunteers work to address unmet needs for the most vulnerable in the community. Whenever possible, homes built and repaired by MDS volunteers are constructed to withstand future disasters. In the process, homeowners often build long lasting relationships with the MDS volunteers who helped them recover and return home. In 2020, Hurricane Laura crossed over homes MDS built after Hurricane Rita in 2005. Carl Dube, long time MDS volunteer project director, and others checked in with homeowners to see how the houses had fared. “Their insurance adjuster said that there was no reasonable expectation for that house to still be there,”
+
+
+<!-- Page 178 -->
+
+Dube says. “They were excited to meet some of the people responsible for this house that withstood the 150-mph winds and storm surge two feet higher than the floor.” Mennonites, Amish and like-minded Christians have a biblical understanding of faith that embraces a community of caring for each other and our neighbors. The Anabaptists of the sixteenth century cared for others. Their descendants, the Mennonites, have never been able to escape this heritage. In Europe, in North America and around the world, Mennonites have committed themselves again and again to service in Jesus’ name. Why? Because we Mennonites believe that authentic faith is expressed in every dimension of life. One recurring theme of Menno Simons was that true faith should “bear fruit.” In his classic words, “True evangelical faith...cannot lie dormant, but manifests itself in all righteousness and words of love:…it clothes the naked; it feeds the hungry; it comforts the sorrowful; it shelters the destitute; it aids and comforts the sad.”
+
+
+### MWC: A Family of Faith
+
+A significant snapshot of the larger Mennonite community is taken every six years when Anabaptists from around the globe gather in one location for a week-long celebration of kinship in Christ. Mennonite World Conference (MWC), a community of Anabaptist-related churches with offices in
+
+
+<!-- Page 179 -->
+
+Kitchener, Ontario, and Bogotà, Colombia, organizes the global family reunion. The first MWC gathering was in Basel, Switzerland, in 1925, and drew representatives from North America, Holland, France and Germany. The 17th Assembly will be in Indonesia in 2022 at the invitation of the three Indonesian Mennonite denominations: Gereja Injili Di Tanah Jawa, Gereja Kristen Muria Indonesia and Sinode Jemaat Kristen Indonesia. Due to the global pandemic, the 2022 gathering will be a hybrid event. U.S. Anabaptist groups, including U.S. Mennonite Brethren, hosted the 16th assembly, held in Pennsylvania in 2015. PA 2015 drew 8,454 registrants from 77 countries, and several hundred more were denied visas to enter the country. For example, Eastleigh Fellowship Choir from Kenya, who performed on the third evening of Assembly, was represented by only five of its 30 members due to denied visas. “North American Mennonites keenly interested in genealogy and family names love to play ‘the Mennonite game’ by asking new acquaintances, ‘Do you know...?’ until they find a relative in common,” writes MWC Courier editor Karla Braun in her October 2015 editorial. “But as Mennonites and Brethren in Christ from 77 countries gathered in Pennsylvania…the Mennonite game wasn’t only about bloodlines. From all corners of the globe, it didn’t take long before we could find a connection: Mennonite Central Committee service workers,
+
+
+<!-- Page 180 -->
+
+missionary prayer lists, participants in the International Volunteer Exchange Program (IVEP) or Young Anabaptist Mennonite Exchange Network (YAMEN) exchanges and denominational bodies provided fertile ground for finding ‘relatives,’” writes Braun. “Our sense of kinship grew with every encounter at PA 2015: we sang in each other’s languages, built a house, canned vegetables, stitched quilts and comforters, were inked with henna designs, played football—together.” The growing diversity of the global Anabaptist family is reflected in the officers, including the first general secretary from the Global South, César García (a Mennonite Brethren from Colombia) – along with J. Nelson Kraybill (president, USA), Rebecca Osiro (vice- president, Kenya), Sunoko Lin (treasurer, USA/Indonesia) and Henk Stenvers (president-elect, Netherlands). “The unity of our global community has not been the result of human effort or something that we are able to produce,” says García. “It is a gift of God that we can enjoy today through the work of the Holy Spirit in our midst. True communion is made possible not by institutional laws and formalities, but by the work of Christ on the cross, where God created a new people including many cultures, races, tribes, and languages.” The grand family reunion experience of Assemblies is not the only function of MWC. Formed in 2009, four commissions—Faith and Life, Peace, Deacons and Mission—are “chambers of the heart,” linking the global
+
+
+<!-- Page 181 -->
+
+community of Anabaptist-related churches for fellowship, worship, service and witness. Each commission consists of eight to 10 members selected by the Executive Committee for continental representation or specialist capacity. The Faith and Life Commission receives and provides counsel on Christian faith and practice and represents Anabaptist perspectives in global conversations. The Peace Commission provides a forum for peace-related issues: supporting member churches facing peace struggles, conversing with churches asking questions about a peace identity and producing an annual worship resource for Peace Sunday. The Mission Commission provides MWC member churches with resources and a forum for dialogue on global witness and service. It brings together more than 120 Anabaptist global service and mission agencies. The Deacons Commission focuses on the welfare of the churches within MWC, particularly in times of duress, and offers member conferences listening, prayer, encouragement and support in times of need. For example, since 2017, the Deacons Commission has responded to the humanitarian disaster in DR Congo caused by a rebel group in Kasai province. “An alternative community to the political powers of today requires a transnational, cross-cultural, global community that lives out the Christian values of interdependency, love and equality,” says César García. “That kind of community is the only way of showing the
+
+
+<!-- Page 182 -->
+
+world that it is possible to overcome nationalisms and ethnocentrisms.” MWC regional representatives build fraternal connections with churches in their region. These part- time volunteer staff are responsible for developing and supporting relationships with MWC member, associate-member and potential-member churches; local congregations; and MWC-related partners and agencies. MWC also facilitates face-to-face fellowship, personal encounters and cooperative experiences among its members through collaboration in MCC’s YAMEN (Young Anabaptist Mennonite Exchange Network), participation in the Global Anabaptist History profile, publications on Anabaptist history and theology, and the Young Anabaptists (YABs) committee. At the Global Youth Summit at PA 2015, young adults wrote encouragements to Sang-Min Lee, the first Mennonite conscientious objector in South Korea, who was imprisoned for refusing to serve in South Korea’s military. Among the note writers was Oscar Suarez, a CO from Colombia, who has since been named Latin American representative to the YABs committee. In Colombia, every 18-year-old man must complete one to three years of military service and earn a certificate of completion, without which, it is very hard to find employment. “My family is worried for my future because I don’t have this certificate, but they and my church are supportive of my decision,” the third-year music student
+
+
+<!-- Page 183 -->
+
+says. He is hopeful about the work of Justapaz and other advocacy groups. Since 2009, some COs have been able to avoid military service on the grounds of faith. Also, objectors are now able to graduate from university without completing military service. However, each CO is still required to legally fight for these rights. Suarez’s choice has started a discussion with the youth in his congregation. “Young people are more interested in learning about the Anabaptist teaching of peace, and some teenagers are seriously considering not serving in the military,” he says. The church is also becoming more involved in sharing in the community about the message of conscientious objection. “Their support has strengthened my resolve. This challenge has brought my family, my church and the community together,” he says. Through MWC, Christians find solidarity and support to live out their Anabaptist values of peace and community amid hardship or resistance. “As the Anabaptist-related majority moved to the global South, diversity between and within MWC member churches continued to increase, not only ethnically, culturally, linguistically and theologically, but also economically,” writes Larry Miller, MWC’s general secretary from 1990-2012. “Disparity of wealth is one of the most basic obstacles to mutual blessing in the Anabaptist-Mennonite family of faith.” Developing a greater mutuality between the churches of the North and South is the challenge facing the
+
+
+<!-- Page 184 -->
+
+Anabaptist family. MWC, together with other agencies, is attempting to guide the process. “It’s good to know that we are not alone,” says Francisca Ibanda, MWC regional representative for southern Africa and a Mennonite Brethren. “Where our faith in Jesus Christ is the binding agent,” says MWC’s Braun, “everyone is family.”
+
+
+### Worldwide Membership
+
+The 2018 Mennonite World Conference world directory shows that the number of baptized members in Anabaptist-related congregations in 86 countries now stands at 2,131,199, a huge increase from the 2000 directory that showed 1,203,995 baptized believers in 197 bodies in 63 countries. Continent 2000 2015 2018 Africa 405,979 736,801 776,562 Asia/Pacific 184,049 431,313 438,671 Latin America & Caribbean 112,128 199,912 202,603 North America 443,918 582,559 649,903 Europe 57,912 64,610 63,360 In 2018, the other countries with more than 30,000 members were Tanzania (66,350), Thailand (63,518), Zimbabwe (50,287), Germany (47,492), Paraguay (36,009), Kenya (35,575), Mexico (34,041) and Angola (30,555).
+
+
+<!-- Page 185 -->
+
+The six countries with the most baptized Mennonite and Brethren in Christ members: 2000 2015 2018 Ethiopia 73,219 255,493 510,912 USA 319,768 538,839 500,481 India 90,006 256,611 257,029 DR Congo 183,040 235,852 225,581 Canada 124,150 143,720 149,422 Indonesia 87,802 111,372 102,761
+
+
+### Guide to Inter-Mennonite Agencies
+
+Inter-Mennonite agencies are often referred to by acronyms. Here is a list of some of the inter-Mennonite agencies in which Mennonite Brethren are involved. This list is not exhaustive. Council of International Anabaptist Ministries (CIM): North American Anabaptist mission agencies and affiliated overseas ministries Everence : an Anabaptist stewardship ministry Meetinghouse : a cooperating group of Mennonite and Brethren in Christ editors Mennonite Central Committee (MCC): the relief, service and peace agency of North American Mennonite and Brethren in Christ churches Mennonite Disaster Service (MDS): a North American disaster relief agency
+
+
+<!-- Page 186 -->
+
+Mennonite Economic Development Associates (MEDA): serves low-income people around the world through a business-oriented approach to development Mennonite Health Services (MHS): supports health care agencies by connecting them to Mennonite and Brethren in Christ development Mennonite World Conference (MWC): a fellowship of Mennonite and Brethren in Christ churches around the world
+
+
+---
+
+# 第十二章：未来的挑战
+## *Chapter 12: The Challenge for the Future*
+
+> **归属分部**：第四部分：面向未来的家庭纽带 (Part Four: Family Ties for the Future)
+
+### 中文译文
+
+# 第十二章：未来的挑战
+
+### 第四部分
+
+### 面向未来的家庭纽带
+
+### 第十二章
+
+### 未来的挑战
+
+1960年代那部风靡一时的科幻老剧《迷失太空》（*Lost in Space*）在2018年被重新翻拍上映。无论是当年的原版还是崭新的重置版，剧中罗宾逊一家都在一个陌生未知的新世界中竭力经受生存技能的严峻考验。
+
+在某些引人深思的层面上，门诺弟兄会大家庭与《迷失太空》中那个身处异星的家庭颇有几分神似。我们今天正置身于未来学哲学家们所称的“后现代世界”（The Postmodern World）。后现代语境之所以极具挑战性，恰恰在于人们发现它几乎无法被贴上固定的标签（它本身就是“现代主义之后”的时代代名词），并且难以被简单勾勒描摹。正如莱昂纳德·斯威特（Leonard Sweet）所精辟指出的那样：“如果说谷登堡时代的［现代］世界是一场对秩序、规制、稳固、单一性与确定性的狂热执念；那么谷歌时代的［后现代］世界则是一场对混沌、不确定性、差异性、开放度、多元化与剧烈变革的狂热追逐。”
+
+门诺弟兄会大家庭同样在其宗派体制结构内部面临着深刻的裂变与重组。本书的初版是由“门诺弟兄会北美总会”（General Conference）编撰出版的，而这一组织实体在旧千年的最后一年通过民主表决，体面地结束了自身的历史使命，将其下属事工全面交由各主权国家总会承担。本书的美国修订版出版之际，正值美国门诺弟兄会总会（USMB）积极扩充专业同工团队、组建全新的植堂理事会，以扎实推进其面向2025年远景目标的关键时刻。
+
+面对未来，我们对门诺弟兄会教会当怀有怎样的期许？在新世纪的航道中，我们需要具备怎样的属灵生存技能？我们面对的新现实究竟是什么？因 COVID-19 全球疫情所引发的剧烈变迁，又将如何深远地重塑未来的教会事工格局？
+
+“后现代主义”这一概念在哲学层面上建立于解构主义大师雅克·德里达（Jacques Derrida）的理论之上。根据德里达及当代传播学理论家的观点，客观的“终极实在”（Ultimate Reality）在认识论上被认为是无法确知穷尽的；每一个文化群体都在使用自己的词汇、通过讲述各自的故事来主观“建构”自身的现实。如果我们将这种学术语汇转借到基督信仰语境中，或许可以说：人类对“终极实在”（即我们所认识信靠的独一上帝）的终极寻索，唯有在我们于上帝的“终极叙事”（Ultimate Story——即上帝藉着耶稣基督成就的十字架救赎大能）中找寻到属于自己的位置时，方能得到全然的满足与安息。基督信仰的宏大叙事无可辩驳地宣告：太初有道的**圣言道成肉身——耶稣基督**，亲自将作为终极实在的三一真神完全启示显明了出来。
+
+作为门诺弟兄会的一员，我们讲述着属于我们自己未完待续的生命故事，以此作为在现实中真切经历“上帝乃是终极实在”的生动见证。我们热忱邀请世人一同将这份救赎叙事接纳为他们自身的生命故事。
+
+在漫长的历史岁月里，门诺弟兄会大家庭曾艰难摸索如何精准定义我们生命的核心叙事主线。我们曾一度极易陷入借用源自俄国历史传统的民族文化纽带（包括我们引以为豪的低地德语文化遗产）来定义自我；然而，当面对一个汇聚了印度泰卢固语信徒以及刚果民主共和国法语信徒的普世大家庭时，这种单一狭隘的族群标签显然苍白无力、毫无说服力。
+
+唯有那些融合了福音派属灵滋养与重洗派信仰根基的神学特质，才为我们生命故事的主线提供了真正的灵魂底色。或许，界定我们身份故事最为凝练精当的表述，就是将我们这个大家庭描述为：**一场活在圣灵复兴之中的普世宣教差传运动（a renewal missionary movement）**。
+
+我们在圣灵里经历的生命复兴，与我们对新约圣经所启示的“作门徒的圣约共同体”模式的全然委身密不可分。我们在上帝神圣使命中的崇高角色，就是呼召普世万民来到主耶稣基督至高无上的公义主权之下生活。门诺弟兄会信徒正是那群将这一伟大叙事内化为自身生命、欣然接受被上帝收养接纳进入这个以天父为家长的神圣家庭之中的儿女。
+
+门诺弟兄会的故事，正如我们身处其中摸索前行的后现代世界一样，是完全开放未完的。未来的世纪大考严峻地要求我们：必须深刻审视那些塑造我们故事的时代变量，并由衷发问：“**我们的家庭纽带，当如何赋予我们属灵的能力，去向世人呈现一个充满信服力与感召力的生命故事？**”
+
+**首先，我们面临的第一大挑战，是以一种既具宽广包容性、又具鲜明纯正信仰特质的方式，讲述我们家族的生命故事。**
+作为当代的门诺弟兄会信徒，我们由衷感恩今天已不再由某种特定的外在方言腔调或古板服饰规条来定义我们的身份。我们欣喜地看到，我们的各堂会正以前所未有的宽广胸怀，张开双臂欢迎来自不同肤色与民族背景的新成员。我们在次要神学壁垒上作出了健康的拆毁——主餐圣餐不再仅仅向本宗派受洗的信徒封闭，而是向所有公开认信归入耶稣基督名下的圣徒完全敞开。我们竭尽所能，绝不让任何狭隘的“重洗派怪癖”将任何慕道渴慕之人拒之门外。当我们懂得避免让非本质的次要琐事疏远身旁共同敬拜的弟兄姊妹时，我们便行在了美善的道中。
+
+然而，主耶稣却严厉告诫我们切不可盲目迎合世俗社会的悦纳与赞誉。祂亲自宣告：那些为顺服遵行上帝的公义国度而甘受逼迫的人是有福的（马太福音 5:11）。要想在这个价值相对、泥沙俱下的多元化世俗世界中拥有一个真正值得向世人诉说的故事，我们必须坚持将我们的故事**永远聚焦锚定在十字架的救赎大爱之上**！我们将义无反顾地跟随耶稣——哪怕必须以牺牲我们的世俗声誉、社会地位与世人喝彩为代价。在历史的长河中，门诺人始终将“跟从耶稣”理解为一声呼召信徒向世俗随波逐流进行彻底决裂与反潮流（radical social nonconformity）的神圣天职。我们面向未来的最大考验，正是坚定拣选并躬身学习那条通往永生的“窄路”生命样式！
+
+**其次，我们的大家庭亟需一批充满属灵远见的宣讲者，能够引领我们清晰描绘、准确阐明并在日常生活中全然活出上帝统治的国度叙事。**
+坚决委身于“**颠倒天国**”（Upside-down Kingdom，由著名学者唐纳德·克雷比尔所倡导的经典概念）神圣价值观的教牧领导力，对于得着这个后现代世界至关重要。教会必须向自身群体中最优秀、最具才智的弟兄与姊妹发出号召，挑战他们践行自我牺牲的仆人式领袖风范——并且教会必须以宽广的胸襟由衷接纳他们承担领袖重任。重洗派传统的教会领导力以“彼此互惠、相互依存”（mutuality）为鲜明标记，倡导全教会共同体与教牧团组建深度同工团队并肩服事。
+
+全教会同心合意的聚集敬拜，是使我们生命被这一国度叙事所塑造陶造的关键圣礼实践。当我们归荣耀于三一真神时，我们便在建造属灵共同体，在筑牢坚贞信仰。在极其注重切身体验与全身心投入的后现代语境中，我们的崇拜既要保持对传统圣道礼仪的庄严承继，亦需焕发契合当下的鲜活体验。敬拜不断重塑并坚固我们的集体认信身份，赋予我们与永生上帝及信仰大家庭至关重要的属灵相通——而绝不向那些逼迫教会沦为追求新奇噱头、随波逐流、受商业市场逻辑驱动的世俗“塞壬海妖之歌”妥协屈膝！
+
+**第三，家庭纽带必须通过独特超凡的人际生命关系彰显于世。**
+主耶稣曾明言：世人之所以能够认出我们是祂的家人与门徒，正是由于我们彼此之间拥有那份超乎寻常的舍己相爱（约翰福音 13:35）。一个满有圣灵复兴的宣教差传运动，必定通过体贴入微的彼此相顾来彰显这份圣爱。门诺弟兄会运动若要在未来继续焕发生机活力，就必须烙刻上**牺牲性慷慨施予**的鲜明烙印。
+
+正如之前的现代世界一样，当今后现代世界在骨子里依然奉行实用功利主义与“底线思维”。一个人对金钱与物质财富的实际运用，赤裸裸地暴露了他灵魂深处最核心的价值取向。面对大批身处极端贫困苦难之中的全球属灵家人，坐拥西方丰沛物质资源的我们，必须毫无保留地对神国公义大肆投资，向饱受欺压痛苦的人群放胆宣告福音的好消息！
+
+**最后，我们这个大家庭未来的生命形态，取决于我们如何悉心维系并深耕我们的家庭纽带。**
+爱，必定在一个不断向外扩展的同心圆团契中倾倒出来。上帝呼召我们彻底跨越狭隘孤立的个人敬虔主义藩篱，义无反顾地融入作为基督有形身体的“圣约共同体”——圣洁的教会之中。地方堂会之间在区域差传宣教中应当结为生死与共的战略同盟。整整一代怀揣炽热国度异象、对门诺弟兄会普世大家庭满怀赤子之心的领袖正在被神兴起，他们必将引领我们与其他主权国家总会一道，迈入彼此平等、互尊互助、同气连枝的全新伙伴关系纪元！
+
+三十多年前，资深重洗派神学家霍华德·勒温（Howard Loewen）曾为门诺弟兄会构建家庭纽带勾勒了一幅恢宏的异象蓝图。那些掷地有声的话语在今天依然振聋发聩。他向全教会发出了五重神圣呼召：
+1. **对我们所承继的“重洗派—敬虔派”基督信仰神圣根基，保持日益觉醒与深刻体认；**
+2. **向世上贫穷困苦之人，全力宣讲耶稣基督天国救赎的福音好消息；**
+3. **借由严谨专注的属灵操练，持续滋养圣灵重生的活泼生命；**
+4. **以整本圣经为绝对依归，全然聚焦于顺服遵行跟从主耶稣基督；**
+5. **在心灵深处与上帝普世的至亲大家庭，建立骨肉相连的至深交通！**
+
+重洗派属灵教父门诺·西蒙斯（Menno Simons）生前在他所有神学著作的扉页上，始终亲手工整题写着同一句圣经经文。对于今天审视这支承载着他尊贵名号的属灵大家庭的我们而言，这句经文正是最完美、最神圣的劝勉与祝祷：
+
+> **“因为那已经立好的根基就是耶稣基督，此外没有人能立别的根基。”**  
+> ——《哥林多前书》3章11节
+
+
+---
+
+### English Original Text
+
+# Chapter 12: The Challenge for the Future
+
+
+<!-- Page 187 -->
+
+
+### PART FOUR
+
+
+### Family Ties
+
+for the Future
+
+
+<!-- Page 188 -->
+
+
+### CHAPTER 12
+
+
+### The Challenge for the Future
+
+The quirky 1960s television show about a family “Lost in Space” got a reboot in 2018. In both the original and the remake, the Robinson family tests their survival skills in a strange new world. The Mennonite Brethren family resembles the “Lost in Space” TV family in some striking ways. We live in what futurist philosophers are calling “The Postmodern World.” The postmodern environment is particularly challenging because it has proven impossible to label (it is the age after “modernism”) and difficult to describe. As Leonard Sweet writes, “If the Gutenberg [modern] world was a rage for order, regulation, stability, singularity and fixity, the Google [postmodern] world is a rage for chaos, uncertainty, otherness, openness, multiplicity and change.” The Mennonite Brethren family also faces significant change within our denominational structures. This book was first published by the General Conference of Mennonite Brethren churches, a structure that voted itself out of existence in the last year of the old millennium
+
+
+<!-- Page 189 -->
+
+and shifted its ministries to the national conference. This book’s United States revision is being published during a time when USMB is expanding staff and forming a new Church Planting Council to effectively move forward with its goals for 2025. What can we anticipate for the Mennonite Brethren church of the future? What kind of survival skills will we need for this new century? What is the new reality? How will the shifts we experienced because of COVID-19 significantly shape ministry going forward? The notion of postmodernism rests on a philosophy suggested by deconstructionist Jacques Derrida. According to Derrida and other communication theorists, ultimate reality is impossible to know. Each culture “constructs” its own reality by using words, by telling stories. If we as Christians use this terminology, we might say that the search for Ultimate Reality (whom we know as God) can be satisfied by finding our place in the “Ultimate Story’’ (God’s saving act through Jesus Christ). The Christian story makes the claim that the Word Jesus Christ reveals God as the Ultimate Reality. As Mennonite Brethren, we tell our own unfinished story as one expression of the search to truly experience God as the Ultimate Reality. We invite others to claim this narrative as their own story. In the past, the Mennonite Brethren family struggled to define our central storyline. We were tempted to use ethnic cultural ties from our Russian past that included
+
+
+<!-- Page 190 -->
+
+our Low German heritage, but that descriptor was not persuasive in a family that includes Telegu speakers in India and French speakers in DR Congo. Theological distinctives, including both evangelical influences and Anabaptist roots, provide clues for the storyline. Perhaps the most succinct way of identifying our story is to speak of the family that lives as a renewal missionary movement. Our renewal by the Holy Spirit is bound up with a commitment to a New Testament model of the discipling community. Our role in God’s mission is to invite the world to live under the sovereign rule of Jesus the Lord. Mennonite Brethren are among those who make this story their own, those who accept adoption into this family with God as our parent. The MB story, like the postmodern world in which we seek to find our way, is open-ended. The challenge of the future demands that we consider factors which shape our story and then ask, “How will our family ties empower us to offer a story that others will find compelling?” Our first challenge is to tell the family story in a way that is both inclusive and distinct. As Mennonite Brethren we are pleased that a particular dialect or way of dressing can no longer identify us. We are glad that our churches increasingly welcome members from many ethnicities. We have lowered some theological barriers. The Lord’s Supper is open to all who claim faith in Jesus, not just baptized believers. We’ve done our best not to let our “Anabaptist quirks” keep anyone away. We are doing well when
+
+
+<!-- Page 191 -->
+
+we avoid letting nonessentials distance us from fellow worshipers. Yet, Jesus warns against seeking social acceptance. He says that those who face persecution for their commitment to God’s rule are blessed (Matthew 5:11). To have a story worth telling in our pluralistic world, we will need to continue to center our story on the cross. We will follow Jesus—even at the cost of the death of our reputations and popularity. Historically, Mennonites have understood following Jesus as a call to radical social nonconformity. Our greatest challenge for the future is to choose and learn the lifestyle of the narrow way. Second, our family will need proclaimers who can lead us into visualizing, describing and living out the story of God’s rule. Leadership committed to “upside-down Kingdom” values (a term popularized by Donald Kraybill) will be essential to reach the postmodern world. The church must issue the challenge of self-sacrificial servant leadership to its best and brightest women and men—and be open to having them lead. Anabaptist church leadership is marked by mutuality, involving the community in ministry teams with its pastors. Worshipping together is a vital practice for being shaped by the story. As we glorify God, we build community, and we build faith. Experience and participation are important values in the postmodern world, so our worship must balance fresh experience with tradition. Worship reinforces our corporate identity, offering vital communion with God
+
+
+<!-- Page 192 -->
+
+and the family of faith without succumbing to the siren song that compels us to seek to be novel, innovative and market-driven. Third, family ties are demonstrated through distinctive relationships. Jesus said that his family would be identified by the remarkable love they have for each other (John 13:35). A renewal missionary movement expresses love through mutual care. If the Mennonite Brethren movement is to remain vital, it must be marked by sacrificial generosity. Like the modern world before it, the postmodern world lives by the bottom line. Use of money and possessions reveals our most deeply held values. With a global family that is desperately poor, we with Western wealth must invest profoundly in the kingdom proclamation of good news for the oppressed. Finally, the future shape of our family will be determined by how well we maintain our family ties. Love is expressed by fellowship in ever-expanding circles. We are invited to move beyond individual piety to become part of the covenant community that is the church. Congregations partner with others in regional mission. A generation of visionary leaders with a burning passion for the Mennonite Brethren global family will lead us into a new partnership of equals with other national conferences. More than 30 years ago theologian Howard Loewen outlined the Mennonite Brethren vision for building family ties. His words still ring true today. He called for:
+
+
+<!-- Page 193 -->
+
+(1) a growing awareness of our Anabaptist-pietist Christian roots; (2) good news proclamation of Jesus’ Kingdom for the poor; (3) spiritual rebirth nurtured by spiritual discipline; (4) biblical focus on obediently following Jesus; and (5) kinship with the global family of God. The Bible verse that Menno Simons placed on the title pages of all his writings is an appropriate benediction for this look at the family that bears his name: “For no one can lay any foundation other than the one already laid, which is Jesus Christ” (1 Corinthians 3:11).
+
+
+---
+
+# 附录：推荐阅读与引用书目
+## *Appendix: Recommended Reading & Works Cited*
+
+> **归属分部**：文献索引与书目 (Bibliography)
+
+### 中文译文
+
+# 推荐阅读与引用书目
+
+### 推荐阅读书目
+
+- **Becker, Palmer.** 《重洗派精粹：独特基督信仰的十大记号》（*Anabaptist Essentials: Ten Signs of a Unique Christian Faith*）. Harrisonburg, VA: Herald Press, 2017.
+- **Bender, Harold S.** 《门诺·西蒙斯全集》（*The Complete Works of Menno Simons*）. Scottdale, PA: Herald Press, 1956.
+- **Bragt, Thielman J. van.** 《殉道者之镜》（*Martyrs Mirror*）. Compiled by Menno Saute, 1944.
+- **U.S. Conference of Mennonite Brethren Churches.** 《门诺弟兄会信仰宣言》（*Confession of Faith of the Mennonite Brethren*）, 2014.
+- **Board of Faith and Life.** 《门诺弟兄会信仰宣言：注释与教牧应用》（*Confession of Faith Commentary and Pastoral Application*）. Winnipeg, MB: Kindred Productions, 2000.
+- **Detweiler, Lowell.** 《铁锤敲击盼望：门诺灾难服侍处五十年图文实录》（*The Hammer Rings Hope: Photos and Stories from Fifty Years of Mennonite Disaster Service*）. Scottdale, PA: Herald Press, 2000.
+- **Dueck, Abe J.** 《庆祝150周年：遍布全球的门诺弟兄会》（*Celebrating 150 Years: The Mennonite Brethren Church Around the World*）. Winnipeg, MB: Kindred Productions, 2010.
+- **Dueck, Abe J., Bruce L. Guenther, and Doug Heidebrecht, eds.** 《重塑身份与使命：门诺弟兄会150周年沉思录》（*Renewing Identity and Mission: Mennonite Brethren Reflections After 150 Years*）. Winnipeg, MB: Kindred Productions, 2011.
+- **Geddert, Timothy J.** 《如今安好：在伦理困境中寻求共识》（*All Right Now: Finding Consensus on Ethical Questions*）. Waterloo, ON and Scottdale, PA: Herald Press, 2008.
+- **Keim, Albert.** 《平民公共服务营的故事：图解民事替代役史》（*The CPS Story: An Illustrated History of Civilian Public Service*）. Intercourse, PA: Good Books, 1990.
+- **Loewen, Jacob A., and Wesley J. Prieb.** 《唯独圣灵的宝剑》（*Only the Sword of the Spirit*）. Winnipeg, MB: Kindred Productions, 1997.
+- **Murray, Stuart.** 《赤诚的重洗派：激进信仰的核心基石》（*The Naked Anabaptist: The Bare Essentials of a Radical Faith*）. Scottdale, PA: Herald Press, 2010.
+- **Neufeld, Vernon H.** 《若我们懂得去爱：门诺心理健康服事实录》（*If We Can Love: The Mennonite Mental Health Story*）. Newton, KS: Faith and Life Press, 1983.
+- **Oyer, John S. and Robert S. Krieder.** 《殉道者之镜精选简编》（*Mirror of the Martyrs*）. Intercourse, PA: Good Books, 1990.
+- **Roth, John D.** 《溯源故事：门诺人如何形成》（*Stories: How Mennonites Came to Be*）. Scottdale, PA: Herald Press, 2006.
+- **Thiessen, Brad, ed.** 《破开静默：21世纪活出基督徒生命的挑战》（*Out of the Strange Silence: The Challenge of Being Christian in the 21st Century*）. Winnipeg, MB and Hillsboro, KS: Kindred Productions, 2005.
+- **Toews, John A.** 《门诺弟兄会历史：朝圣者与拓荒先驱》（*A History of the Mennonite Brethren Church: Pilgrims and Pioneers*）. ed. A. J. Klassen. Fresno, CA: Mennonite Brethren Board of Christian Literature, 1975.
+- **Toews, J.B.** 《信仰的朝圣之旅》（*A Pilgrimage of Faith*）. Winnipeg, MB: Kindred Press, 1993.
+- **Toews, John B.** 《危难征程：俄国门诺弟兄会（1860–1910）》（*Perilous Journey: The Mennonite Brethren in Russia 1860-1910*）. Winnipeg, MB: Kindred Press, 1988.
+- **Toews, Paul, ed.** 《跨越激流：二十世纪中叶的门诺弟兄会》（*Bridging Troubled Waters: The Mennonite Brethren at Mid-Twentieth Century*）. Winnipeg, MB: Kindred Productions, 1995.
+- **Toews, Paul and Kevin Enns-Rempel, eds.** 《凡事皆有定期：北美门诺弟兄会简史（1874–2002）》（*For Everything a Season: Mennonite Brethren in North America, 1874-2002: An Informal History*）. Winnipeg, MB: Kindred Productions, 2002.
+- **Toews, Paul.** 《门诺会与浸信会：持续的对话》（*Mennonites and Baptists: A Continuing Conversation*）. Winnipeg, MB: Kindred Press, 1993.
+- **Wiens, Victor, ed.** 《宣教中的教会：全球门诺弟兄会关于21世纪差传的透视》（*The Church in Mission: Perspectives of Global Mennonite Brethren on Mission in the 21st Century*）. Winnipeg, MB: Kindred Productions, 2015.
+
+---
+
+### 各章引用文献
+
+#### 引言
+- **Capon, Robert Farrar.** 《天国、恩典、审判：耶稣比喻中的吊诡、震撼与伸冤》（*Kingdom, Grace, Judgment: Paradox, Outrage, and Vindication in the Parables of Jesus*）. Grand Rapids, MI: Eerdmans, 2002.
+
+#### 第一章
+- **Bender, Harold Stauffer.** “门诺·西蒙斯生平简传”（“A Brief Biography of Menno Simons”），收录于《门诺·西蒙斯著作全集》（*The Complete Writings of Menno Simons*）. Scottdale, PA: Herald Press, 1956, 第4–29页.
+- **Bragt, Thielman J. van.** 《殉道者之镜》（*Martyrs Mirror*）. Compiled by Menno Saute, 1944.
+
+#### 第三章
+- **Toews, John A.** 《门诺弟兄会历史》（*A History of the Mennonite Brethren Church*）. ed. A.J. Klassen. Fresno, CA: Mennonite Brethren Board of Christian Literature, 1975.
+
+#### 第四章
+- **Loewen, Jacob A. and Wesley J. Prieb.** 《唯独圣灵的宝剑》（*Only the Sword of the Spirit*）. Winnipeg, MB: Kindred Productions, 1997.
+
+#### 第六章
+- **Bragt, Thielman J. van.** 《殉道者之镜》（*Martyrs Mirror*）. Compiled by Menno Saute, 1944.
+- **Toews, John A.** 《门诺弟兄会历史》（*A History of the Mennonite Brethren Church*）. ed. A.J. Klassen. Fresno, CA: Mennonite Brethren Board of Christian Literature, 1975.
+
+#### 第七章
+- 乔安娜·查帕（Joanna Chapa）的宣教见证原载于《基督徒领袖》（*Christian Leader*）杂志。
+
+#### 第八章与第九章
+- 相关资讯与历史数据整理自《基督徒领袖》（*Christian Leader*）杂志相关专题报道及美国门诺弟兄会总会（USMB）官方档案。
+
+#### 第十章
+- 第十章 ICOMB 普世篇章由 ICOMB 执行总干事大卫·维贝（David Wiebe）于2017年主持修订，并由康妮·费伯（Connie Faber）依据 ICOMB 官方通报进行增补更新。
+- **Dueck, Abe J., ed.** 《遍布全球的门诺弟兄会：庆祝150周年》（*The Mennonite Brethren Church Around the World: Celebrating 150 Years*）. Kitchener, ON: Pandora Press and Winnipeg, MB: Kindred Productions, 2010.
+
+#### 第十一章
+- 门诺会中央委员会（MCC）与门诺灾难服侍处（MDS）的一线服事实况选录自各机构官方新闻通报与档案纪要。
+
+#### 第十二章
+- **Kraybill, Donald.** 《颠倒的天国》（*The Upside-down Kingdom*）. Updated Edition. Harrisonburg, VA: Herald Press, 2011.
+- **Loewen, Howard.** 论述引自凯蒂·芬克·维贝所著《谁是门诺弟兄会？》（*Who are the Mennonite Brethren?* by Katie Funk Wiebe）. Winnipeg, MB and Hillsboro, KS: Kindred Press, 1991.
+- **Sweet, Leonard.** 《流水型教会2.0：引领当今流体文化下的教会》（*AquaChurch 2.0: Piloting Your Church in Today’s Fluid Culture*）. Colorado Springs, CO: David C. Cook, 1999.
+
+
+---
+
+### English Original Text
+
+# Recommended Reading & Works Cited
+
+
+<!-- Page 194 -->
+
+
+### RECOMMENDED READING
+
+Becker, Palmer. Anabaptist Essentials: Ten Signs of a Unique Christian Faith. Harrisonburg, VA: Herald Press, 2017. Bender, Harold S. The Complete Works of Menno Simons. Scottdale, PA: Herald Press, 1956. Bragt, Thielman J. van. Martyrs Mirror. Compiled by Menno Saute, 1944. Confession of Faith of the Mennonite Brethren. U.S. Conference of Mennonite Brethren Churches, 2014. Confession of Faith Commentary and Pastoral Application. Winnipeg, MB: Kindred Productions, 2000. Detweiler, Lowell. The Hammer Rings Hope: Photos and Stories from Fifty Years of Mennonite Disaster Service . Scottdale, PA: Herald Press, 2000. Dueck, Abe J. Celebrating 150 Years: The Mennonite Brethren Church Around the World. Winnipeg, MB: Kindred Productions, 2010. Dueck, Abe J., Bruce L. Guenther, and Doug Heidebrecht, eds. Renewing Identity and Mission: Mennonite Brethren Reflections After 150 Years. Winnipeg, MB: Kindred Productions, 2011.
+
+
+<!-- Page 195 -->
+
+Geddert, Timothy J. All Right Now: Finding Consensus on Ethical Questions. Waterloo, ON and Scottdale, PA: Herald Press, 2008. Keim, Albert. The CPS Story: An Illustrated History of Civilian Public Service. Intercourse, PA: Good Books, 1990. Loewen, Jacob A., and Wesley J. Prieb. Only the Sword of the Spirit. Winnipeg, MB: Kindred Productions, 1997. Murray, Stuart. The Naked Anabaptist: The Bare Essentials of a Radical Faith. Scottdale, PA: Herald Press, 2010. Neufeld, Vernon H. If We Can Love: The Mennonite Mental Health Story. Newton, KS: Faith and Life Press, 1983. Oyer, John S. and Robert S. Krieder. Mirror of the Martrys. Intercourse, PA: Good Books, 1990. Roth, John D. Stories: How Mennonites Came to Be. Scottdale, PA: Herald Press, 2006. Thiessen, Brad, ed. Out of the Strange Silence: The Challenge of Being Christian in the 21st Century. Winnipeg, MB and Hillsboro, KS: Kindred Productions, 2005. Toews, John A. A History of the Mennonite Brethren Church: Pilgrims and Pioneers. ed. A. J. Klassen. Fresno, CA: Mennonite Brethren Board of Christian Literature, 1975.
+
+
+<!-- Page 196 -->
+
+Toews, J.B. A Pilgrimage of Faith. Winnipeg, MB: Kindred Press, 1993. Toews, John B. Perilous Journey: The Mennonite Brethren in Russia 1860-1910. Winnipeg, MB: Kindred Press, 1988. Toews, Paul, ed. Bridging Troubled Waters: The Mennonite Brethren at Mid-Twentieth Century. Winnipeg, MB: Kindred Productions, 1995. Toews, Paul and Kevin Enns-Rempel, eds., For Everything a Season: Mennonite Brethren in North America, 1874-2002: An Informal History. Winnipeg, MB: Kindred Productions, 2002. Toews, Paul. Mennonites and Baptists: A Continuing Conversation. Winnipeg, MB: Kindred Press, 1993. Wiens, Victor, ed. The Church in Mission: Perspectives of Global Mennonite Brethren on Mission in the 21st Century. Winnipeg, MB: Kindred Productions, 2015.
+
+
+<!-- Page 197 -->
+
+
+### WORKS CITED
+
+
+### Introduction
+
+Capon, Robert Farrar. Kingdom, Grace, Judgment: Paradox, Outrage, and Vindication in the Parables of Jesus. Grand Rapids, MI: Eerdmans, 2002.
+
+
+### Chapter 1
+
+Bender, Harold Stauffer. “A Brief Biography of Menno Simons,” The Complete Writings of Menno Simons. Scottdale, PA: Herald Press, 1956, 4-29. Bragt, Thielman J.van. Martyrs Mirror. Compiled by Menno Saute, 1944.
+
+
+### Chapter 3
+
+Toews, John A. A History of the Mennonite Brethren Church. ed A.J. Klassen. Fresno, CA: Mennonite Brethren Board of Christian Literature, 1975.
+
+
+### Chapter 4
+
+Loewen, Jacob A. and Wesley J. Prieb, Only the Sword of the Spirit. Winnipeg, MB: Kindred Productions, 1997.
+
+
+### Chapter 6
+
+Bragt, Thielman J.van. Martyrs Mirror. Compiled by Menno Saute, 1944.
+
+
+<!-- Page 198 -->
+
+Toews, John A. A History of the Mennonite Brethren Church. ed A.J. Klassen. Fresno, CA: Mennonite Brethren Board of Christian Literature, 1975.
+
+
+### Chapter 7
+
+Joanna Chapa’s story originally published in Christian Leader
+
+
+### Chapters 8 & 9
+
+Information gathered from Christian Leader articles and the USMB website.
+
+
+### Chapter 10
+
+ICOMB chapter revised in 2017 by ICOMB executive director David Wiebe with updates by Connie Faber using ICOMB newsletters. Dueck, Abe J., ed. The Mennonite Brethren Church Around the World: Celebrating 150 Years. Kitchener, ON: Pandora Press and Winnipeg, MB: Kindred Productions, 2010.
+
+
+### Chapter 11
+
+MCC and MDS stories gathered from agency news stories
+
+
+### Chapter 12
+
+Kraybill, Donald. The Upside-down Kingdom. Updated Edition. Harrisonburg, VA: Herald Press, 2011.
+
+
+<!-- Page 199 -->
+
+Loewen, Howard, quoted in Who are the Mennonite Brethren? by Katie Funk Wiebe. Winnipeg, MB and Hillsboro, KS: Kindred Press, 1991. Sweet, Leonard. AquaChurch 2.0: Piloting Your Church in Today’s Fluid Culture. Colorado Springs, CO: David C. Cook, 1999.
+
+
+---
+

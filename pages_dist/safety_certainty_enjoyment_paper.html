@@ -1,0 +1,2515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>《救・知・乐》实体书仿真阅读版 - Safety, Certainty and Enjoyment ｜ Evan's Thinking 典藏文库</title>
+  <meta name="description" content="《救・知・乐》（Safety, Certainty and Enjoyment）实体书仿真阅读版。真实纸质书触感、全屏自适应、中文优先、一屏一页零纵向滚动、左右滑动翻页。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Reading Studio Ambient */
+      --studio-bg: #141312;
+      --studio-radial: radial-gradient(ellipse at 50% 40%, #24211D 0%, #151311 65%, #0B0A09 100%);
+      
+      /* Theme 1: 象牙道林纸 (Ivory Cream - Default) */
+      --paper-bg: #FAF7F0;
+      --paper-alt: #F2EBDE;
+      --text-main: #2A2520;
+      --text-muted: #7A7064;
+      --accent-gold: #9C6E2E;
+      --accent-subtle: rgba(156, 110, 46, 0.12);
+      --border-spine: rgba(42, 37, 32, 0.09);
+      --book-edge: #EBE2D2;
+      
+      --book-shadow: 0 30px 85px -15px rgba(0, 0, 0, 0.65), 0 12px 30px -8px rgba(0, 0, 0, 0.4), 0 0 1px rgba(0, 0, 0, 0.6);
+      --page-curl-l: inset -24px 0 28px -14px rgba(0, 0, 0, 0.22), inset -2px 0 6px rgba(0, 0, 0, 0.08);
+      --page-curl-r: inset 24px 0 28px -14px rgba(0, 0, 0, 0.22), inset 2px 0 6px rgba(0, 0, 0, 0.08);
+      
+      /* Typography */
+      --font-serif-zh: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", "STSong", serif;
+      --font-serif-en: "Playfair Display", "Baskerville", "Georgia", "Times New Roman", serif;
+      --font-kai: "Kaiti SC", "STKaiti", "楷体", serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", Roboto, sans-serif;
+      --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      
+      --body-fs: 18px;
+      --body-lh: 1.78;
+      --hud-h: 46px;
+    }
+
+    /* Theme 2: 羊皮复古纸 (Vintage Sepia) */
+    body.theme-sepia {
+      --studio-bg: #1B1713;
+      --studio-radial: radial-gradient(ellipse at 50% 40%, #292119 0%, #17130F 65%, #0B0907 100%);
+      --paper-bg: #EFE4D0;
+      --paper-alt: #E4D5BE;
+      --text-main: #33261C;
+      --text-muted: #7F6B56;
+      --accent-gold: #966126;
+      --accent-subtle: rgba(150, 97, 38, 0.14);
+      --border-spine: rgba(51, 38, 28, 0.12);
+      --book-edge: #DECDB3;
+    }
+
+    /* Theme 3: 沉浸曜石黑 (Dark Ebony) */
+    body.theme-dark {
+      --studio-bg: #090909;
+      --studio-radial: radial-gradient(ellipse at 50% 40%, #161514 0%, #0A0A0A 70%, #050505 100%);
+      --paper-bg: #1C1A18;
+      --paper-alt: #161412;
+      --text-main: #E2DBD0;
+      --text-muted: #8E867B;
+      --accent-gold: #D6A45E;
+      --accent-subtle: rgba(214, 164, 94, 0.16);
+      --border-spine: rgba(255, 255, 255, 0.08);
+      --book-edge: #141210;
+      --book-shadow: 0 30px 85px -15px rgba(0, 0, 0, 0.95), 0 12px 30px -8px rgba(0, 0, 0, 0.75);
+      --page-curl-l: inset -24px 0 28px -14px rgba(0, 0, 0, 0.7), inset -2px 0 6px rgba(0, 0, 0, 0.4);
+      --page-curl-r: inset 24px 0 28px -14px rgba(0, 0, 0, 0.7), inset 2px 0 6px rgba(0, 0, 0, 0.4);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--studio-radial);
+      font-family: var(--font-ui);
+      color: var(--text-main);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: pan-y pinch-zoom;
+    }
+
+    /* ========================================================
+       TOP FLOATING ISLAND HUD (Apple Dynamic Island Inspired)
+       ======================================================== */
+    .hud-top {
+      position: fixed;
+      top: 14px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      padding: 0 16px;
+      z-index: 1000;
+      transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    .hud-top.hud-hidden {
+      transform: translateY(-80px);
+      opacity: 0;
+    }
+
+    .hud-capsule {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: var(--hud-h);
+      padding: 0 12px 0 14px;
+      background: rgba(22, 20, 18, 0.85);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 9999px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 96vw;
+    }
+
+    .hud-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hud-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 32px;
+      padding: 0 10px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #EDE8DF;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+
+    .hud-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+      color: #FFFFFF;
+    }
+
+    .hud-btn:active {
+      transform: scale(0.97);
+    }
+
+    .hud-btn-gold {
+      background: rgba(201, 151, 87, 0.22);
+      border-color: rgba(226, 184, 116, 0.4);
+      color: #E2B874;
+    }
+
+    .hud-btn-gold:hover {
+      background: #C99757;
+      color: #171412;
+      border-color: #E2B874;
+    }
+
+    .hud-icon {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    .hud-divider {
+      width: 1px;
+      height: 18px;
+      background: rgba(255, 255, 255, 0.15);
+      margin: 0 2px;
+    }
+
+    .hud-title-zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 280px;
+      padding: 0 4px;
+      cursor: pointer;
+    }
+
+    .hud-book-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #F5EFE6;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .hud-chapter-name {
+      font-size: 11px;
+      color: #B5A898;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    /* Lang Segmented Toggle */
+    .hud-lang-seg {
+      display: flex;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .hud-lang-btn {
+      height: 28px;
+      padding: 0 9px;
+      border-radius: 9999px;
+      border: none;
+      background: transparent;
+      color: rgba(237, 232, 223, 0.75);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .hud-lang-btn.active {
+      background: #C99757;
+      color: #171412;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(201, 151, 87, 0.35);
+    }
+
+    /* ========================================================
+       MAIN READING STAGE & BOOK SPREAD
+       ======================================================== */
+    .stage-container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 58px 32px 58px 32px;
+      perspective: 2000px;
+      touch-action: pan-y pinch-zoom;
+    }
+
+    .book-spread {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1260px;
+      height: 100%;
+      max-height: 840px;
+      background: var(--paper-bg);
+      border-radius: 6px;
+      box-shadow: var(--book-shadow);
+      border: 1px solid var(--border-spine);
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+
+    /* Stack thickness edge effect (Desktop only) */
+    .book-spread::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      bottom: -3px;
+      right: -4px;
+      width: 4px;
+      background: repeating-linear-gradient(to right, var(--book-edge) 0px, var(--border-spine) 1px, var(--book-edge) 2px);
+      border-radius: 0 3px 3px 0;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+    }
+
+    /* Book Page Leaf */
+    .book-leaf {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 28px 40px 22px 40px;
+      position: relative;
+      user-select: text;
+      -webkit-user-select: text;
+      overflow: hidden; /* STRICT: No vertical scrollbars inside reading page */
+    }
+
+    .leaf-left {
+      box-shadow: var(--page-curl-l);
+    }
+
+    .leaf-right {
+      box-shadow: var(--page-curl-r);
+    }
+
+    /* 3D Spine Gutter Crease */
+    .book-gutter {
+      width: 14px;
+      height: 100%;
+      background: linear-gradient(to right, 
+        rgba(0,0,0,0.2) 0%, 
+        rgba(0,0,0,0.06) 30%, 
+        rgba(255,255,255,0.06) 50%, 
+        rgba(0,0,0,0.06) 70%, 
+        rgba(0,0,0,0.2) 100%);
+      flex-shrink: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* Running Header (Top Clean Strip) */
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 11.5px;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      height: 24px;
+    }
+
+    body.theme-dark .page-header {
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .page-header-title {
+      font-family: var(--font-serif-zh);
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 78%;
+    }
+
+    .page-num {
+      font-family: var(--font-serif-en);
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-size: 13px;
+    }
+
+    /* Page Content Typography (Maximized vertical capacity) */
+    .page-body {
+      flex: 1 1 0;
+      min-height: 0;
+      font-family: var(--font-serif-zh);
+      font-size: var(--body-fs);
+      line-height: var(--body-lh);
+      color: var(--text-main);
+      text-align: justify;
+      text-justify: inter-ideograph;
+      hyphens: auto;
+      overflow: hidden; /* ZERO SCROLL: Content is measured and fitted */
+      box-sizing: border-box;
+    }
+
+    #measure-leaf {
+      color: var(--text-main);
+      text-align: justify;
+      text-justify: inter-ideograph;
+      hyphens: auto;
+    }
+    #measure-leaf p {
+      text-indent: 2em;
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+    #measure-leaf p.p-continue,
+    .page-body p.p-continue {
+      text-indent: 0 !important;
+    }
+    #measure-leaf .ch-first-header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px double rgba(0, 0, 0, 0.12);
+    }
+    #measure-leaf .ch-label-num {
+      font-family: "Cinzel", var(--font-serif-en);
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      color: var(--accent-gold);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    #measure-leaf .ch-headline {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--text-main);
+    }
+    #measure-leaf .subheading-banner {
+      margin: 12px 0 8px 0;
+      font-size: 1em;
+      font-weight: 700;
+      color: var(--accent-gold);
+      text-align: left;
+      border-left: 3px solid var(--accent-gold);
+      padding-left: 8px;
+      line-height: 1.35;
+      text-indent: 0 !important;
+    }
+
+    .ch-first-header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px double rgba(0, 0, 0, 0.12);
+    }
+
+    body.theme-dark .ch-first-header {
+      border-bottom-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .ch-label-num {
+      font-family: "Cinzel", var(--font-serif-en);
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      color: var(--accent-gold);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .ch-headline {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--text-main);
+    }
+
+    .subheading-banner {
+      margin: 12px 0 8px 0;
+      font-size: 1em;
+      font-weight: 700;
+      color: var(--accent-gold);
+      text-align: left;
+      border-left: 3px solid var(--accent-gold);
+      padding-left: 8px;
+      line-height: 1.35;
+      text-indent: 0 !important;
+    }
+
+    /* Classical Drop Cap */
+    .drop-cap {
+      float: left;
+      font-size: 3em;
+      line-height: 0.82;
+      padding-top: 2px;
+      padding-right: 6px;
+      padding-bottom: 2px;
+      font-family: var(--font-serif-zh);
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .page-body p {
+      text-indent: 2em;
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+
+    .page-body.en-font p {
+      text-indent: 1.5em;
+      margin-bottom: 8px;
+    }
+
+    /* ========================================================
+       BOOK HOME PAGE (书籍首页 · 封面与卷目总览)
+       Matches user's reference mockup:
+       - 3D Cover, author/era badge, category badge
+       - Title, subtitle, synopsis paragraph
+       - Action buttons (Start Reading, Study Reader, Return Home)
+       - Complete Chapter Directory cards grid
+       ======================================================== */
+    .book-home-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-right: 4px;
+    }
+
+    /* Desktop Left Leaf: Book Cover Hero Showcase */
+    .home-hero-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px 14px;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .home-cover-box {
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .home-cover-img {
+      width: 170px;
+      max-width: 60%;
+      border-radius: 8px;
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45), 0 4px 12px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .home-cover-img:hover {
+      transform: scale(1.02);
+    }
+
+    .home-author-badge {
+      margin-top: 8px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .home-cat-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--accent-gold);
+      background: var(--accent-subtle);
+      border: 1px solid rgba(156, 110, 46, 0.25);
+      padding: 3px 12px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .home-book-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      font-family: var(--font-serif-zh);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    .home-book-subtitle {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      font-family: var(--font-serif-en);
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .home-synopsis {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--text-main);
+      text-align: justify;
+      text-justify: inter-ideograph;
+      margin-bottom: 20px;
+      max-width: 480px;
+      opacity: 0.92;
+    }
+
+    .home-action-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .home-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 22px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      background: var(--accent-gold);
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(156, 110, 46, 0.35);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .home-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(156, 110, 46, 0.45);
+      filter: brightness(1.08);
+    }
+
+    .home-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--accent-gold);
+      background: transparent;
+      border: 1px solid rgba(156, 110, 46, 0.4);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .home-btn-outline:hover {
+      background: var(--accent-subtle);
+      border-color: var(--accent-gold);
+      transform: translateY(-1px);
+    }
+
+    /* Desktop Right Leaf: Complete Chapter Directory (全书卷目总览) */
+    .home-dir-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    .home-dir-header {
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    body.theme-dark .home-dir-header {
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .home-dir-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 3px;
+      font-family: var(--font-serif-zh);
+    }
+
+    .home-dir-subtitle {
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-family: "Cinzel", var(--font-serif-en);
+    }
+
+    .home-dir-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .home-dir-card {
+      background: rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    body.theme-dark .home-dir-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .home-dir-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-gold);
+      background: var(--accent-subtle);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .home-card-badge {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      background: var(--accent-subtle);
+      padding: 1px 7px;
+      border-radius: 9999px;
+      width: fit-content;
+      margin-bottom: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    .home-card-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+      line-height: 1.35;
+    }
+
+    .home-card-en {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-family: var(--font-serif-en);
+    }
+
+    .home-card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Mobile Single Page Home Layout */
+    .mobile-home-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 30px;
+    }
+
+    .mobile-home-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px 0 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    body.theme-dark .mobile-home-hero {
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Floating Turn Arrows */
+    .turn-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(30, 26, 23, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #EDE8DF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 50;
+      transition: all 0.22s ease;
+      opacity: 0.35;
+    }
+
+    .turn-arrow:hover {
+      background: #C99757;
+      color: #161310;
+      border-color: #E2B874;
+      opacity: 1;
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .turn-arrow-left { left: -22px; }
+    .turn-arrow-right { right: -22px; }
+
+    /* ========================================================
+       BOTTOM FLOATING SCRUBBER DOCK
+       ======================================================== */
+    .hud-bottom {
+      position: fixed;
+      bottom: 14px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      padding: 0 16px;
+      z-index: 1000;
+      transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    .hud-bottom.hud-hidden {
+      transform: translateY(80px);
+      opacity: 0;
+    }
+
+    .hud-bottom-capsule {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: var(--hud-h);
+      padding: 0 16px;
+      background: rgba(22, 20, 18, 0.88);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 9999px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+      width: 580px;
+      max-width: 94vw;
+    }
+
+    .hud-nav-ch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 10px;
+      border-radius: 9999px;
+      background: transparent;
+      border: none;
+      color: rgba(237, 232, 223, 0.8);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .hud-nav-ch-btn:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .scrubber-track-box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 0 4px;
+    }
+
+    .scrubber-range {
+      width: 100%;
+      height: 4px;
+      accent-color: #C99757;
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .scrubber-label {
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+      color: rgba(237, 232, 223, 0.85);
+      white-space: nowrap;
+      min-width: 130px;
+      text-align: right;
+    }
+
+    .label-pct {
+      color: #E2B874;
+      margin-left: 4px;
+      font-weight: 600;
+    }
+
+    /* ========================================================
+       Aa TYPOGRAPHY & PREFERENCES MODAL
+       ======================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .settings-popover {
+      position: fixed;
+      top: 68px;
+      right: 32px;
+      width: 320px;
+      max-width: calc(100vw - 32px);
+      background: rgba(26, 24, 22, 0.95);
+      backdrop-filter: blur(30px) saturate(200%);
+      -webkit-backdrop-filter: blur(30px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+      padding: 20px;
+      color: #EDE8DF;
+      z-index: 2001;
+      transform: translateY(-8px) scale(0.96);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.open .settings-popover {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .settings-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .settings-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #E2B874;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-close-modal {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .settings-section {
+      margin-bottom: 18px;
+    }
+
+    .settings-label {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 8px;
+    }
+
+    .theme-selector {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .theme-opt {
+      height: 38px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .theme-opt.active {
+      border-color: #E2B874;
+      box-shadow: 0 0 10px rgba(226, 184, 116, 0.5);
+    }
+
+    .theme-opt-cream { background: #FAF7F0; color: #2A2520; }
+    .theme-opt-sepia { background: #EFE4D0; color: #33261C; }
+    .theme-opt-dark  { background: #1C1A18; color: #E2DBD0; border-color: rgba(255,255,255,0.15); }
+
+    .font-size-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-step-fs {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #FFFFFF;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fs-preview-num {
+      flex: 1;
+      text-align: center;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #E2B874;
+    }
+
+    .seg-pills {
+      display: flex;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .seg-pill-btn {
+      flex: 1;
+      height: 28px;
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .seg-pill-btn.active {
+      background: #C99757;
+      color: #161310;
+      font-weight: 600;
+    }
+
+    /* Share isolated link box */
+    .share-link-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-share-isolated {
+      width: 100%;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid rgba(226, 184, 116, 0.4);
+      background: rgba(201, 151, 87, 0.15);
+      color: #E2B874;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-share-isolated:hover {
+      background: rgba(201, 151, 87, 0.28);
+      border-color: #E2B874;
+      color: #FFFFFF;
+    }
+
+    /* ========================================================
+       SEARCHABLE TABLE OF CONTENTS DRAWER
+       ======================================================== */
+    .toc-drawer {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 380px;
+      max-width: 88vw;
+      background: rgba(26, 24, 22, 0.96);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 16px 0 50px rgba(0, 0, 0, 0.7);
+      z-index: 2001;
+      transform: translateX(-100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      color: #EDE8DF;
+    }
+
+    .modal-backdrop.open .toc-drawer {
+      transform: translateX(0);
+    }
+
+    .toc-header {
+      padding: 20px 20px 14px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-search-box {
+      padding: 12px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .toc-search-input {
+      width: 100%;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(0, 0, 0, 0.3);
+      color: #FFFFFF;
+      padding: 0 12px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .toc-search-input:focus {
+      border-color: #C99757;
+    }
+
+    .toc-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px 12px 40px 12px;
+      list-style: none;
+    }
+
+    .toc-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 4px;
+    }
+
+    .toc-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .toc-item.active {
+      background: rgba(201, 151, 87, 0.2);
+      border-left: 3px solid #E2B874;
+    }
+
+    .toc-item-title {
+      font-size: 13.5px;
+      color: #EDE8DF;
+      font-weight: 500;
+    }
+
+    .toc-item.active .toc-item-title {
+      color: #E2B874;
+      font-weight: 700;
+    }
+
+    .toc-item-page {
+      font-size: 11.5px;
+      color: #B5A898;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 84px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(22, 20, 18, 0.95);
+      border: 1px solid rgba(226, 184, 116, 0.4);
+      color: #E2B874;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 3000;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Page Turn Animation */
+    @keyframes pageInAnimation {
+      0% { opacity: 0.35; transform: scale(0.996); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .anim-turn {
+      animation: pageInAnimation 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* ========================================================
+       RESPONSIVE MATRIX: STRICT MOBILE & PORTRAIT PERFECTION
+       ======================================================== */
+    @media screen and (max-width: 960px), screen and (orientation: portrait), screen and (max-aspect-ratio: 1/1) {
+      :root {
+        --body-fs: 18px;
+        --body-lh: 1.78;
+        --hud-h: 44px;
+      }
+
+      /* Full Bleed Reading Stage */
+      .stage-container {
+        position: fixed !important;
+        inset: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        perspective: none !important;
+      }
+
+      /* Force Single Page Spread Box */
+      .book-spread {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        max-height: 100% !important;
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        flex-direction: column !important;
+        background: var(--paper-bg);
+      }
+
+      .book-spread::after {
+        display: none !important;
+      }
+
+      .book-gutter {
+        display: none !important;
+      }
+
+      .leaf-right {
+        display: none !important;
+      }
+
+      .leaf-left {
+        flex: 1 1 100% !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        box-shadow: none !important;
+        padding: calc(44px + env(safe-area-inset-top, 0px)) 18px calc(14px + env(safe-area-inset-bottom, 0px)) 18px !important;
+        overflow: hidden !important; /* ZERO VERTICAL SCROLL: Fitted to screen */
+      }
+
+      /* Mobile Book Home Page allows smooth scrolling to see all chapters */
+      .leaf-left.is-home-page {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: calc(52px + env(safe-area-inset-top, 0px)) 18px calc(68px + env(safe-area-inset-bottom, 0px)) 18px !important;
+      }
+
+      .leaf-left.is-home-page .page-header {
+        display: none !important;
+      }
+
+      .turn-arrow {
+        display: none !important;
+      }
+
+      .hud-top {
+        top: calc(8px + env(safe-area-inset-top, 0px));
+        padding: 0 8px;
+      }
+
+      .hud-capsule {
+        gap: 6px;
+        padding: 0 10px;
+        width: calc(100vw - 16px);
+        max-width: 100vw;
+        justify-content: space-between;
+      }
+
+      .hud-btn-home .hud-btn-text,
+      .hud-btn-study .hud-btn-text,
+      .hud-btn-bookhome .hud-btn-text {
+        display: none;
+      }
+
+      .hud-title-zone {
+        display: none;
+      }
+
+      .hud-bottom {
+        bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+        padding: 0 8px;
+      }
+
+      .hud-bottom-capsule {
+        width: calc(100vw - 16px);
+        max-width: 100vw;
+        gap: 6px;
+        padding: 0 10px;
+      }
+
+      .hud-nav-ch-btn .btn-ch-text {
+        display: none;
+      }
+
+      .scrubber-label {
+        min-width: 80px;
+        font-size: 11px;
+      }
+
+      .settings-popover {
+        top: auto;
+        bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+        right: 10px;
+        left: 10px;
+        width: auto;
+      }
+
+      .home-book-title {
+        font-size: 24px;
+      }
+
+      .home-cover-img {
+        width: 140px;
+      }
+    }
+  </style>
+</head>
+<body class="theme-cream">
+
+  <!-- TOP DYNAMIC ISLAND HUD -->
+  <header class="hud-top" id="hud-top">
+    <div class="hud-capsule">
+      <div class="hud-group">
+        <!-- Site Home Button: only visible on Book Home (Page 0) and NEVER in standalone mode -->
+        <a href="index.html" class="hud-btn hud-btn-home" id="btn-home" title="返回网站主页">
+          <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+          <span class="hud-btn-text">主页</span>
+        </a>
+
+        <!-- Book Home Button: Jumps to Book Cover & Directory -->
+        <button class="hud-btn hud-btn-bookhome hud-btn-gold" id="btn-bookhome" onclick="goToBookHome()" title="书籍首页与卷目总览">
+          <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+          <span class="hud-btn-text">书籍首页</span>
+        </button>
+
+        <!-- Chapter TOC Drawer Button -->
+        <button class="hud-btn" id="btn-toc" onclick="openTocModal()" title="全书目录 (T)">
+          <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+          <span class="hud-btn-text">卷目</span>
+        </button>
+
+        <!-- Retained Study Reader Mode Button -->
+        <a href="safety_certainty_enjoyment_reader.html" class="hud-btn hud-btn-study" id="btn-study" title="切换到网页版">
+          <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h6a1 1 0 100-2H7zm0 4a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+          <span class="hud-btn-text">网页版</span>
+        </a>
+      </div>
+
+      <div class="hud-divider"></div>
+
+      <!-- Center Title Clickable to Book Home -->
+      <div class="hud-title-zone" onclick="goToBookHome()" title="点击返回书籍首页">
+        <span class="hud-book-name">《救・知・乐》</span>
+        <span class="hud-chapter-name" id="hud-chapter-name">书籍首页 · 卷目总览</span>
+      </div>
+
+      <div class="hud-divider"></div>
+
+      <!-- Right Controls: Language & Typography Settings -->
+      <div class="hud-group">
+        <div class="hud-lang-seg">
+          <button class="hud-lang-btn active" id="btn-lang-zh" onclick="setLanguage('zh')">中</button>
+          <button class="hud-lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+        </div>
+
+        <button class="hud-btn" id="btn-settings" onclick="openSettingsModal()" title="排版偏好 (Aa)">
+          <span style="font-weight:700; font-size:13.5px; font-family:serif;">Aa</span>
+        </button>
+
+        <button class="hud-btn" id="btn-fs" onclick="toggleFullscreen()" title="全屏阅读 (F)">
+          <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l3.293 3.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-3.293 3.293a1 1 0 11-1.414-1.414L13.586 5H12a1 1 0 01-1-1zm-7 8a1 1 0 011 1v1.586l3.293-3.293a1 1 0 011.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4a1 1 0 011-1zm11 0a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-3.293-3.293a1 1 0 011.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN READING STAGE -->
+  <main class="stage-container" id="stage">
+    <!-- Desktop Left Arrow -->
+    <button class="turn-arrow turn-arrow-left" onclick="prevView()" title="上一页 (←)">❮</button>
+
+    <div class="book-spread" id="book-spread">
+      <!-- Left Page Leaf -->
+      <div class="book-leaf leaf-left" id="leaf-left">
+        <div class="page-header" id="header-left">
+          <span class="page-num" id="page-num-left"></span>
+          <span class="page-header-title" id="page-title-left">《救・知・乐》 · 佐治·卡亭 (George Cutting)</span>
+        </div>
+        <div class="page-body" id="body-left">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 3D Spine Gutter Crease (Desktop Landscape only) -->
+      <div class="book-gutter" id="book-gutter"></div>
+
+      <!-- Right Page Leaf -->
+      <div class="book-leaf leaf-right" id="leaf-right">
+        <div class="page-header" id="header-right">
+          <span class="page-header-title" id="page-title-right">救・知・乐</span>
+          <span class="page-num" id="page-num-right"></span>
+        </div>
+        <div class="page-body" id="body-right">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Right Arrow -->
+    <button class="turn-arrow turn-arrow-right" onclick="nextView()" title="下一页 (→)">❯</button>
+  </main>
+
+  <!-- Bottom Floating Scrubber Dock -->
+  <footer class="hud-bottom" id="hud-bottom">
+    <div class="hud-bottom-capsule">
+      <button class="hud-nav-ch-btn" onclick="prevChapter()" title="上一章 ([)">
+        <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z"/></svg>
+        <span class="btn-ch-text">上一章</span>
+      </button>
+
+      <div class="scrubber-track-box">
+        <input type="range" class="scrubber-range" id="spread-slider" min="0" max="100" value="0" oninput="jumpToView(this.value)">
+      </div>
+
+      <button class="hud-nav-ch-btn" onclick="nextChapter()" title="下一章 (])">
+        <span class="btn-ch-text">下一章</span>
+        <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M11.555 5.168A1 1 0 0010 6v2.798L4.555 5.168A1 1 0 003 6v8a1 1 0 001.555.832L10 11.202V14a1 1 0 001.555.832l6-4a1 1 0 000-1.664l-6-4z"/></svg>
+      </button>
+
+      <div class="scrubber-label">
+        <span id="lbl-cur-spread">书籍首页</span> / <span id="lbl-total-spreads"></span>
+        <span class="label-pct" id="lbl-pct">0%</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Backdrop for TOC and Settings -->
+  <div class="modal-backdrop" id="modal-backdrop" onclick="closeAllModals()">
+    <!-- Table of Contents Drawer -->
+    <div class="toc-drawer" id="toc-drawer" onclick="event.stopPropagation()">
+      <div class="toc-header">
+        <span style="font-weight:700; font-size:15px; color:#E2B874;">全书目录</span>
+        <button class="btn-close-modal" onclick="closeAllModals()">✕</button>
+      </div>
+      <div class="toc-search-box">
+        <input type="text" class="toc-search-input" id="toc-search-input" placeholder="搜索章节标题..." oninput="filterToc(this.value)">
+      </div>
+      <ul class="toc-list" id="toc-list">
+        <!-- Rendered by JS -->
+      </ul>
+    </div>
+
+    <!-- Aa Preferences Popover -->
+    <div class="settings-popover" id="settings-popover" onclick="event.stopPropagation()">
+      <div class="settings-header">
+        <span class="settings-title">
+          <span>排版与阅读偏好</span>
+        </span>
+        <button class="btn-close-modal" onclick="closeAllModals()">✕</button>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label">纸张色调</div>
+        <div class="theme-selector">
+          <div class="theme-opt theme-opt-cream active" id="th-cream" onclick="setTheme('cream')">象牙白</div>
+          <div class="theme-opt theme-opt-sepia" id="th-sepia" onclick="setTheme('sepia')">羊皮纸</div>
+          <div class="theme-opt theme-opt-dark" id="th-dark" onclick="setTheme('dark')">曜石黑</div>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label">正文字号</div>
+        <div class="font-size-row">
+          <button class="btn-step-fs" onclick="adjustFontSize(-1)">A-</button>
+          <span class="fs-preview-num" id="fs-preview-val">17.5 px</span>
+          <button class="btn-step-fs" onclick="adjustFontSize(1)">A+</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label">字体选择</div>
+        <div class="seg-pills">
+          <button class="seg-pill-btn active" id="ff-song" onclick="setFontFamily('song')">宋体/衬线</button>
+          <button class="seg-pill-btn" id="ff-kai" onclick="setFontFamily('kai')">楷体</button>
+          <button class="seg-pill-btn" id="ff-sans" onclick="setFontFamily('sans')">无衬线</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label">行间间距</div>
+        <div class="seg-pills">
+          <button class="seg-pill-btn" id="lh-compact" onclick="setLineHeight(1.62)">紧凑</button>
+          <button class="seg-pill-btn active" id="lh-normal" onclick="setLineHeight(1.76)">适中</button>
+          <button class="seg-pill-btn" id="lh-relaxed" onclick="setLineHeight(1.92)">舒缓</button>
+        </div>
+      </div>
+
+      <div class="share-link-box">
+        <button class="btn-share-isolated" onclick="copyIsolatedShareLink()">
+          <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/></svg>
+          <span>复制本书专属阅读链接</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden off-screen measurement sandbox leaf for pagination calculation -->
+  <div id="measure-leaf" style="position:fixed; top:-9999px; left:-9999px; width:450px; visibility:hidden; pointer-events:none; z-index:-1; height:auto !important; min-height:0 !important; max-height:none !important;"></div>
+
+  <!-- Toast message pop -->
+  <div class="toast-msg" id="toast-msg">已复制专属链接</div>
+
+  <script>
+    /* ========================================================
+       BOOK DATA INJECTION
+       ======================================================== */
+    const BOOK = {"meta": {"id": "safety_certainty_enjoyment", "title_zh": "救・知・乐", "title_en": "Safety, Certainty and Enjoyment", "author": "佐治·卡亭 (George Cutting)", "author_meta": "佐治·卡亭 著 · 普利茅斯弟兄会传世经典", "category_badge": "EVANGELICAL CLASSIC · 得救确据经典", "cover_img": "safety_certainty_cover.jpg", "synopsis": "逾百年来全球发行数千万册的救恩确据经典。以纯正简明、如刀剖木般的圣经话语，清晰分辨“得救的根基（基督的宝血）”、“得救的证实（神的话语）”与“得救的快乐（顺服圣灵）”，彻底粉碎信徒对救恩稳定性的虚妄疑惑。", "reader_url": "safety_certainty_enjoyment_reader.html", "paper_url": "safety_certainty_enjoyment_paper.html"}, "chapters": [{"num": 1, "id": "chap-01", "badge_label": "CHAPTER 1", "title_zh": "引言与列车之问：世上有三等人", "title_en": "Introduction: Which Class Are YOU Traveling?", "desc": "这世上的人都是行路的人 ─ 从今世走到永世里去，他们却分作三等：\n            （一）第一等：已经得救的，并且知道自己是得救的。...", "blocks": [{"sub_zh": "", "sub_en": "", "zh_paras": ["这世上的人都是行路的人 ─ 从今世走到永世里去，他们却分作三等：\n            （一）第一等：已经得救的，并且知道自己是得救的。\n            （二）第二等：不确知自己得救了没有，却极盼望得救。\n            （三）第三等：没有得救，并且对于“得救”漠不关心。请问：你是那一等行路的人呢？", "如果你是第三等行路的人，那么，一天，当你进入那危险的结局中，你就要看见平日你对于你灵的“得救”漠不关心，是何等的愚痴！", "有一次，有一人急急跑进车站，上了车，正坐下预备喘气，车就开了。乘客中有一位就说：“你跑得好！”他喘着气回答说：“不错，但是我因着这一跑，就省了四小时，所以也就值得跑了。”", "因此我就反复的自言自语：“省四小时！四小时，竟然值得那样的竭力奔跑，那么永世呢？永世值得多少呢？”今日岂不是有许多精明而有远识的人，非常注意自己在今生的利益，对于摆在他们前头的永世，却眼瞎如石吗？", "在加略山所显明神对悖逆之人无限的大爱，神对罪恶断然的憎恶，人生在世年日的短少，死后审判的严厉可畏，以及最后落在阴间深渊那一面永远痛苦悔恨的悲惨可能——人却依然仓促奔向那凄惨的结局，麻木不仁，宛如没有神、没有死亡、没有审判、没有天堂、也没有地狱一样！", "如果你是这样的人，但愿神在此刻可怜你，使你的眼睛明亮，得以看见自己是处在最危险的情形中，正如站在无穷祸患的危崖上一样。朋友，无论你信与不信，你的光景实属万分危急！请你对你永世的问题不要迟延着不理会。要知道，迟延就如同那借此欺骗你的魔鬼一样——不仅是个“窃贼”，更是一个“谋杀犯”。", "西班牙人有一句俗语说的实在不错：“迟延路引进不到城。”（The road of 'By-and-by' leads to the town of 'Never.'）我请求你，未曾谋面的读者，不要再行在这条迟延路上。“看哪，现在正是悦纳的时候；现在正是拯救的日子”（林后六2）。", "也许有人要说：“我对灵魂的得救并不是漠不关心，我心中深沉的痛苦在于另一个词——‘不确知’（Uncertainty）；我正是你所说第二等的乘客。”", "读者阿，我告诉你，漠不关心与不确知，其实都出自同一个母腹——“不信”（Unbelief）。前者是因为不信人已经沉沦败坏的真相；后者是因为不信神为世人所预备独一、至高且有效的救法。本书正是特特为着那些在神面前切慕全然、确凿知道自己得救的人而写的。我能深深体会你心灵深处的焦渴，并且深信，你对这至关重要的事越认真，你的干渴就越大，直到你确切知道自己真的永远得救了。“人若赚得全世界，赔上自己的生命，有什么益处呢？”（可八36）。", "一位慈爱的父亲，独生子出海远航。忽然传来噩耗，船在异国海岸触礁沉没。在没有从最可靠的权威渠道确知孩子平安无恙之前，谁能测度那父亲心中的悬念与剧痛？", "又比方说，在一个寒冷漆黑的冬夜，你离家甚远，前路全然生疏。你站在岔路口上，问过路的人该走哪条路才能到你所要去的城。他却告诉你，他“想”某条路也许是对的，“盼望”你能平安到达。这些“想”、“也许”、“盼望”能使你满意吗？断乎不能！你必须切实确知哪条路是对的，否则你所走的每一步都只会加增你心中的忧虑。当灵魂永远的安全在天平上摇晃不定时，难怪有人甚至寝食难安！", "亲爱的读者，现在我靠着圣灵的帮助，要向你阐明三件极其重大的真理，若用圣经的话来说，就是：\n            1. 得救的方法（The Way of Salvation，徒十六17）\n            2. 得救的知识（The Knowledge of Salvation，路一77）\n            3. 得救的喜乐（The Joy of Salvation，诗五十一12）", "我们将要看见，这三者虽然紧密相连，却各自建立在不同的根基之上；因此，一个人完全可能知道了得救的方法，自己却没有确知自己得救的知识；或者，一个人知道了自己已经得救，却没有时时拥有伴随这知识而来的得救喜乐。"], "en_paras": ["WHAT AN OFT-REPEATED QUESTION! Let me put it to you, my reader: for traveling you most certainly are — traveling from Time into Eternity and who knows how very, very near you may be at this moment to the GREAT TERMINUS?\n            Let me ask you then in all kindness, \"Which class are you traveling?\" There are but three. Let me describe them that you may put yourself to the test as in the presence of \"Him with whom we have to do.\"\n            First Class — Those who are saved and who know it.\n            Second Class — Those who are not sure of salvation, but anxious to be sure.\n            Third Class — Those who are not only unsaved, but totally indifferent about it.\n            Again I repeat my question — \"Which class are you traveling?\"", "Oh, the madness of indifference when eternal issues are at stake!", "A short time ago, a man came rushing into the railway station and while scarcely able to gasp for breath took his seat in one of the carriages just on the point of starting. \"You've run it fine,\" said a fellow-passenger. \"Yes,\" replied he, breathing heavily after every two or three words, \"but I've saved four hours, and that's well worth running for.\"", "\"Saved four hours!\" I couldn't help repeating to myself — \"four hours\" well worth that earnest struggle! What of eternity? What of eternity? Yet are there not thousands of shrewd, farseeing men today, who look sharply enough after their own interests in life, but who seem stone blind to the eternity before them?", "In spite of the infinite love of God to helpless rebels, told out at Calvary; in spite of His pronounced hatred of sin; in spite of the known brevity of man's history here; in spite of the terrors of judgment after death, and of the solemn probability of waking up at last with the unbearable remorse of being on hell's side of a \"fixed\" gulf, man hurries on to the bitter, bitter end, as careless as if there were no God, no death, no judgment, no heaven, no hell!", "If the reader of these pages be such an one, may God this very moment have mercy upon you, and while you read these lines, open your eyes to your most perilous position, standing as you may be on the slippery brink of an endless woe. Oh friend, believe it or not, your case is truly desperate! Put off the thought of eternity no longer. Remember that procrastination is like him who deceives you by it — not only a \"thief,\" but a \"murderer.\"", "There is much truth in the Spanish proverb which says, \"The road of 'By-and-by' leads to the town of 'Never.'\" I beseech you, unknown reader, to travel that road no longer. \"Behold, NOW is the accepted time; behold, NOW is the day of salvation\" (2 Corinthians 6:2).", "\"But,\" says one, \"I am not indifferent as to the welfare of my soul. My deep trouble lies wrapped up in another word — UNCERTAINTY; I am among the second-class passengers you speak of.\"", "Well, reader, both indifference and uncertainty are the offspring of one parent — unbelief. The first results from unbelief as to the sin and ruin of man, the other from unbelief as to God's sovereign remedy for man. It is especially for souls desiring before God to be fully and unmistakably SURE of their salvation that these pages are written. I can in a great measure understand your deep soul-trouble, and am assured that the more you are in earnest about this all important matter, the greater will be your thirst, until you know for certain that you are really and eternally saved. \"For what shall it profit a man, if he shall gain the whole world, and lose his own soul?\" (Mark 8:36).", "The only son of a devoted father is at sea. News comes that his ship has been wrecked on some foreign shore. Who can tell the anguish of suspense in that father's heart until, upon the most reliable authority, he is assured that his boy is safe and sound?", "Or, again, you are far from home. The night is dark and wintry, and your way is totally unknown. Standing at a point where two roads diverge, you ask a passer-by the way to the town you desire to reach, and he tells you he thinks that such and such a way is the right one, and hopes you will be all right if you take it. Would \"thinks,\" and \"hopes,\" and \"may be's\" satisfy you? Surely not. You must have certainty about it, or every step you take will increase your anxiety. What wonder, then, that men have sometimes neither been able to eat nor sleep when the eternal safety of the soul has been trembling in the balance!", "Now, dear reader, there are three things I desire, by the Holy Spirit's help, to make clear to you, and to put them into scriptural language, they are these:\n            1. The Way of Salvation (Acts 16:17)\n            2. The Knowledge of Salvation (Luke 1:77)\n            3. The Joy of Salvation (Psalm 51:12)", "We shall, I think, see that though intimately connected, they each stand upon a separate basis; so that it is quite possible for a soul to know the way of salvation without having the certain knowledge that he himself is saved; or, again, to know that he is saved, without possessing at all times the joy that ought to accompany that knowledge."]}]}, {"num": 2, "id": "chap-02", "badge_label": "CHAPTER 2", "title_zh": "第一要点：得救的方法（安全）", "title_en": "Point I: The Way of Salvation (Safety)", "desc": "首先，让我简要地谈谈：得救的方法（THE WAY OF SALVATION）请翻开你的圣经，仔细阅读出埃及记十三章十三节。在那里，你可以听到从耶和华口...", "blocks": [{"sub_zh": "", "sub_en": "", "zh_paras": ["首先，让我简要地谈谈：得救的方法（THE WAY OF SALVATION）请翻开你的圣经，仔细阅读出埃及记十三章十三节。在那里，你可以听到从耶和华口中所出的话语：\n            “凡头生的驴，你要用羊羔代赎；若不代赎，就要打折它的颈项。凡你儿子中头生的，你都要赎出来。”", "现在，请同我一同在思想中回到三千年前的一个假想场景中。有两个人（一位神的祭司和一个贫穷的以色列人）正在极其认真地交谈。让我们征得他们的同意，站在一旁倾听。两人的动作与神情都流露出对某件极为重大之事的关切，不难看出，他们谈论的主角正是身边站着的一只瑟瑟发抖的小驴。", "“我来此是想恳求，”那贫穷的以色列人说，“看看这次能否对我法外开恩。这柔弱的小生命是我母驴头生的。虽然我深知神的律法如何规定，但我仍盼望能蒙怜悯，饶过这头小驴的性命。我在以色列中不过是个穷汉，实在承受不起失去这匹驴驹的损失。”", "“然而，”祭司坚定地回答道，“耶和华的律法清楚确凿，无可更改：‘凡头生的驴，你要用羊羔代赎；若不代赎，就要打折它的颈项。’羊羔在哪里呢？”（出十三13）\n            “唉，先生，我根本没有羊羔。”\n            “那就去买一只回来，否则这头驴的颈项必须被打折。要么羊羔死，要么驴子死！”\n            “天哪！那我所有的指望都破灭了，”他痛哭道，“因为我太穷了，根本买不起羊羔。”", "正在交谈之际，第三个人走近他们。听完了这穷苦人的悲伤倾诉后，他转过身，仁慈地对他说：“放心吧，我能满足你的需要。”接着他说：“在我们山顶的家里，有一只在我们炉旁养大的小羊羔，‘毫无斑点、毫无瑕疵’。它从未离开过家，在全家人眼中都享有极高的宠爱（也是它配得的）。我这就去把它取来。”说着他便急步奔上山去。不一会儿，你便看见他温柔地领着这只美丽的纯白小生灵走下山坡，很快，羊羔与小驴便并肩立在一起。", "随后，羊羔被拴在祭坛上，它的血流了出来，烈火将它吞灭。公义的祭司这时转向那穷人说：“你现在可以平平安安、欢欢喜喜地把你的小驴牵回家了；它的颈项决不会被打折了。羊羔已经代替了小驴而死，因此这小驴公公义义地自由了。这都要感谢你的朋友！”", "苦恼不安的灵魂啊，难道你在这幅图画中，看不出神亲自向罪人描绘的救赎图景吗？神对你罪恶的公义要求，正是“打折颈项”——即公义的审判必须倾倒在你这有罪之人的头上，唯一的出路，就是有一位蒙神认可的代替者替你受死！然而，你无论如何也找不出满足这要求的供物；但感谢神！在祂独生爱子的位格里，神亲自预备了那只羊羔！当施洗约翰举目看见那圣洁无暇的一位时，便对门徒呼喊道：“看哪！神的羔羊，除去世人罪孽的！”（约一29）。", "祂走向各各他，“像羊羔被牵到宰杀之地”（赛五十三7）。在那边，在那时，“祂曾一次为罪受苦，就是义的代替不义的，为要引我们到神面前”（彼前三18）；“耶稣被交给人，是为我们的过犯；复活，是为叫我们称义”（罗四25）。所以，神在称信耶稣的不敬虔罪人为义（即宣告其无罪释放）时，对罪的圣洁公义要求没有丝毫的妥协与削减（罗三26）。赞美神，赐给我们这样一位救主，这样奇妙的救恩！“你信神的儿子吗？”", "“是的，”你回答说，“我作为一个被定罪的罪人，已经在祂里面找到了一位我能绝对信靠的救主。我确确实实信靠祂。”那么我可以告诉你：基督牺牲受死的全备价值，按照神对它的完全估价，神已经毫无保留地归在你身上，就像这一切全是你自己亲自成就的一样！", "哦，这是何等奇妙的得救之法！这是何等伟大、庄严、神圣——完全配得过神自己！神自己慈爱心愿的满足、祂宝贵爱子的荣耀，以及罪人的得救，全都紧紧联结在这浩大的恩典与荣耀中！愿颂赞归给我们主耶稣基督的父神，祂定意使祂独生爱子亲自成就一切工作，得着一切称赞；又使你和我这可怜有罪的人，因信祂，不仅得着一切福祉，并且永永远远享受与祂同在！“你们和我当称耶和华为大，一同高举祂的名”（诗三十四3）。"], "en_paras": ["First then, let me speak briefly of:\n            THE WAY OF SALVATION\n            Please open your Bible and read carefully the 13th verse of the 13th chapter of Exodus; there you find these words from the lips of Jehovah —\n            \"And every firstling of an ass thou shalt redeem with a lamb; and if thou wilt not redeem it, then thou shalt break his neck: and all the firstborn of man among thy children shalt thou redeem.\"", "Now, come back with me in thought to a supposed scene of three thousand years ago. Two men (a priest of God and a poor Israelite) stand in earnest conversation. Let us stand by, with their permission, and listen. The gestures of each bespeak deep earnestness about some matter of importance, and it is not difficult to see that the subject of conversation is a little ass that stands trembling beside them.", "\"I am come to inquire,\" says the poor Israelite, \"if there cannot be a merciful exception made in my favour this once. This feeble little thing is the firstling of my ass, and though I know full well what the law of God says about it, I am hoping that mercy will be shown, and the ass's life spared. I am but a poor man in Israel, and can ill afford to lose the colt.\"", "\"But,\" answers the priest firmly, \"the law of the Lord is plain and unmistakable: 'Every firstling of an ass thou shalt redeem with a lamb, and if thou wilt not redeem it, then thou shalt break his neck.' Where is the lamb?\" (Exodus 13:13)\n            \"Ah, sir, no lamb do I possess.\"\n            \"Then go purchase one and return, or the ass's neck must surely be broken. The lamb must die or the ass must die.\"\n            \"Alas! then all my hopes are crushed,\" he cries, \"for I am far too poor to buy a lamb.\"", "While this conversation proceeds, a third person joins them, and after hearing the poor man's tale of sorrow, he turns to him and says kindly, \"Be of good cheer, I can meet your need,\" and thus he proceeds: \"We have in our house on the hill top yonder, one little lamb brought up at our very hearthstone, which is 'without spot or blemish.' It has never once strayed from home, and stands (and rightly so) in highest favour with all that are in the house. This lamb will I fetch.\" And away he hastens up the hill. Presently you see him gently leading the fair little creature down the slope, and very soon both lamb and ass are standing side by side.", "Then the lamb is bound to the altar, its blood is shed, and the fire consumes it.\n            The righteous priest now turns to the poor man, and says, \"You can freely take home your little colt in safety; no broken neck for it now. The lamb has died in the ass's stead, and consequently the ass goes righteously free. Thanks to your friend.\"", "Now, poor troubled soul, can you not see in this God's own picture of a sinner's salvation? His claims as to your sin demanded \"a broken neck,\" that is, righteous judgment upon your guilty head, the only alternative being the death of a divinely approved substitute. Now, you could not find the provision to meet your case; but in the Person of His beloved Son, God Himself provided the Lamb. \"Behold the Lamb of God,\" said John to his disciples as his eyes fell upon that blessed spotless One. \"Behold the Lamb of God, which taketh away the sin of the world\" (John 1:29).", "Onward to Calvary He went, \"as a lamb to the slaughter,\" (Isaiah 53:7) and there and then He \"once suffered for sins, the just for the unjust, that He might bring us to God\" (1 Peter 3:18). He \"was delivered for our offenses, and was raised again for our justification\" (Romans 4:25). So that God does not abate one jot of His righteous, holy claims against sin when He justifies (i.e., clears from all charge of guilt) the ungodly sinner who believes in Jesus (Romans 3:26). Blessed be God for such a Saviour, such a salvation! \"Dost thou believe on the Son of God?\"", "\"Well,\" you reply, \"I have, as a condemned sinner, found in Him one that I can safely trust. I do believe in Him.\" Then I can tell you that the full value of His sacrifice and death, as God estimates it, He makes as good to you as though you had accomplished it all yourself.", "Oh, what a wondrous way of salvation is this! Is it not great and grand and godlike — worthy of God Himself? The gratification of His own heart of love, the glory of His precious Son, and the salvation of a sinner, all bound up together. What a bundle of grace and glory! Blessed be the God and Father of our Lord Jesus Christ, who has so ordered it that His own beloved Son should do all the work and get all the praise, and that you and I, poor guilty things, believing on Him, should not only get the blessing, but enjoy the blissful company of the Blesser for ever and ever. \"O magnify the LORD with me, and let us exalt His name together\" (Psalm 34:3)."]}]}, {"num": 3, "id": "chap-03", "badge_label": "CHAPTER 3", "title_zh": "第二要点：得救的知识（确据）", "title_en": "Point II: The Knowledge of Salvation (Certainty)", "desc": "现在也许你会急切地发问：“既然我真的已经不倚靠自己和自己的工作，而是完全依赖基督和基督的工作，为什么我还不能确确实实地知道我到底得救了没有呢？如果我的...", "blocks": [{"sub_zh": "", "sub_en": "", "zh_paras": ["现在也许你会急切地发问：“既然我真的已经不倚靠自己和自己的工作，而是完全依赖基督和基督的工作，为什么我还不能确确实实地知道我到底得救了没有呢？如果我的感觉今天让我觉得得救了，明天往往又把所有的希望扫荡一空，以致我像一只未抛锚的船在狂风巨浪中颠簸飘荡，毫无定处。”", "唉！这正是你的症结所在。你何时听过哪位船长停船时，是把锚抛在船舱里面的？决不！永远是抛在船的外面！你可能十分清楚：唯有基督的受死赐给人“安全”（SAFETY）；但你却误以为，是你自己的感觉赐给你“确据”（CERTAINTY）。", "现在请再次拿起你的圣经，因为我要你从神自己的话语中，看看祂是如何赐给人：得救的知识（THE KNOWLEDGE OF SALVATION）在翻到那节阐明信徒如何“知道”自己有永生的经文之前，且让我照着人常有的错误想象把它念一遍：“我将这些快乐的感觉赐给你们信奉神儿子之名的人，要叫你们知道自己有永生。”现在打开圣经，当你将这虚妄的想象与神永不改变的真道对照时，愿神使你打心底同大卫一起呼喊：“虚妄的意念我甚恨恶，但你的律法我甚喜爱”（诗一一九113）。约壹五章十三节原是这样说的：\n            “我将这些话写给你们信奉神儿子之名的人，要叫你们知道自己有永生。”", "在逾越节和埃及遭审判的那个庄严之夜，以色列成千上万的长子是凭着什么确知自己是安全的呢？让我们一同走进其中的两户人家，听听他们各自怎么说。", "我们跨进的第一家，全家老小都在因恐惧和悬念而发抖。这满屋的苍白和战兢背后究竟有何隐秘？我们上前询问，那长子告诉我们，灭命的天使正在埃及遍地巡行，而他实在不敢确知在那庄严可怕的时刻，自己将会如何。“当灭命的天使越过我们家、审判的长夜过去之后，我才会知道自己是否平安，”他说，“但在那一刻来到之前，我怎能确知呢？我听说隔壁人家确信他们已经得救了，但我们觉得那未免太狂妄自大了。我所能做的，只有在这漫长阴森的夜里祈求好运。”\n            “但是，”我们问，“以色列的神岂没有为祂的百姓预备避难之法吗？”\n            “有的，”他答道，“我们确实照着办了。那无斑点、无瑕疵的一岁羊羔的血，已经用牛膝草端端正正涂在门楣和左右门框上了，但我们心里还是不敢完全确定。”", "让我们离开这些满腹疑虑、惊恐不安的人，走进隔壁的人家。呈现在我们眼前的是何等强烈的对比！平安洋溢在每个人的脸上。只见他们腰间束带，脚上穿鞋，手中拿杖，安然享用着火烤的羊羔。在这严厉可畏的审判之夜，如此的从容镇定究竟从何而来？“啊，”他们异口同声地说，“我们正在等候耶和华出发行军的命令，一旦号令下达，我们就要永远告别督工残酷的鞭笞与埃及一切的苦役了！”\n            “且慢！难道你们忘了今晚是审判全埃及的夜晚吗？”\n            “我们深知这一点；但我们的长子是平安的。因为血已经照着我们神的心愿涂抹上了。”\n            “可是隔壁也涂了血啊，”我们回答说，“但他们却满怀愁苦，因为无法确定自己是否安全。”\n            “啊！”那长子坚定有力地回答说：“但我们不仅拥有涂抹的血，我们更有神关于这血无误的话语！神亲口宣告：‘我一见这血，就越过你们去’（出十二13）。神在外面看见血，祂就满足了；我们在里面听见神的话，我们就安息了！”", "亲爱的读者，如果你渴望切实确知自己的福分，切莫听凭里面变幻不定的情绪见证，而要完全投靠神话语那绝对真确、永不动摇的见证：“我实实在在的告诉你们，信的人有永生”（约六47）。", "且让我用日常生活中的一个简单比喻作说明。乡下有一位农夫，因为牲畜草料不足，看中了领主家附近一块正在招租的优良草场，便向领主提出了租赁申请。过了许久，领主一直没有回信。一天，一位邻居走进来对他说：“我敢打包票你一定能租到那块地。你忘了去年圣诞节领主特意差人送给你野味？前几天他驾车经过时，还十分亲切地向你点头致意呢！”这些话让农夫心中充满了美好的盼望。然而第二天，另一位邻居遇见他，在谈话中却说：“我看你租到那块草场的希望十分渺茫。某某先生也申请了，你又不是不知道他是领主眼前的红人，经常出入领主府邸……”农夫那美好的盼望瞬间跌入谷底，如肥皂泡般破灭。今天满怀盼望，明天又满腹狐疑。", "正在此时，邮差敲响了门。当农夫看到信封上的字迹正是领主亲笔时，他的心怦怦直跳。撕开火漆封印，只见随着一遍又一遍的阅读，他脸上的焦虑不安瞬间化为无法掩饰的狂喜！\n            “这下彻底定规了！”他向妻子欢呼道，“再也不用患得患失了！领主在信里亲笔写道：只要我需要，这块地就以极其优惠的条件租给我！这就足够了！我现在根本不在乎别人怎么议论，领主的话一锤定音！”", "世上有多少苦恼可怜的灵魂，正如这位饱受折磨的农夫一样——被人的各样议论，或是自己诡诈不可靠的心思感觉弄得心神不定、左右摇摆！唯有当一个人将神的话当作神自己的话语领受时，确定才取代了一切疑虑与揣测。当神说话时，必定是千真万确的定论！“耶和华啊，你的话安定在天，直到永远”（诗一一九89）；对于单纯信靠的人，祂的话平息了一切争端！“祂说话岂不照着行呢？祂发言岂不要成就呢？”（民二十三19）。", "“可是，我怎么确知自己拥有的是真正的信心呢？”对于这个问题，答案只有一个：“你所信靠的那位，是对的那一位吗？你是否将信心安放在神荣耀的儿子身上？”这根本不是你信心的“分量”多少的问题，而是你所信赖的那个位格是否“绝对可靠”的问题。一个人信靠基督，就像一个即将淹死的人拼尽全力死死抓住救命恩人；另一个人信靠基督，却仅仅如同患血漏的妇人颤抖着摸了摸祂的衣裳繸子。难道前者比后者更得救吗？不！绝不！两人的安全毫无分别！因为他们都彻底放弃了对自己的指望，全心全意投靠了神的儿子基督，完全信靠祂的话，平静安息在祂所成就工作的永远功效里。这就是“信祂”的真谛。“我实实在在的告诉你们，信的人有永生”（约六47）。", "因此，务要确知：你的信心绝不是寄托在你行为的改良、宗教规条的遵守、敬虔气氛下的情绪波动、或是自幼所受的道德熏陶上！你纵然对这些有极大的信心，结局仍是永远沉沦。绝不要被肉体任何表面虚浮的光鲜所欺骗。对基督哪怕最微弱的信靠，也能带来永远的拯救；而对除祂以外任何事物的最大热忱，不过是自欺的产物——只是仇敌铺设在永远沉沦陷坑上面的美丽枝叶而已。", "神在福音里，只单单向你引荐主耶稣基督，说：“这是我的爱子，我所喜悦的”（太三17）。祂告诉你：“你可以全心全意信赖祂的心肠，虽然你绝不能信靠你自己。”何等蒙福的主耶稣，谁能不信靠祢，谁能不称颂祢的圣名！", "一天，一位面带愁容的姑娘对我说：“我确实信靠祂，但当别人问我是否得救时，我不敢说‘是’，生怕自己是在说谎撒谎。”这位年轻姑娘是英格兰中部一个小镇屠夫的女儿。那天恰逢集市，她父亲尚未赶集归来。于是我对她说：“设想一下，等你父亲回家，你问他今天买了多少只羊，他回答说‘十只’。过了一会儿，有人来店里问：‘你父亲今天买了几只羊？’你却回答说：‘我不敢说买了十只，生怕我说谎。’”当时站在一旁的母亲立刻义愤填膺地插话道：“要是这样，你岂不是把你自己父亲当成说谎的骗子了吗！”亲爱的读者，你难道看不出，这位本意良好的姑娘，实际上是在把基督当成说谎者吗？她的意思无异于说：“我相信神的儿子，祂也亲口说我有永生，但我不敢说我有，生怕我说谎！”——然而基督自己早已明明宣告：“信我的人有永生！”（约六47）。", "又有人问：“我怎么能确定自己是真的相信呢？我常常往自己里面看，想看看自己到底有没有信心，哪知越看越觉得自己没有。”朋友，你看错方向了！你试图在自己里面“感觉”信心，恰恰证明你走偏了方向。让我再用一个比喻来阐明这个道理。某个宁静的夜晚，你正围坐在炉火旁。忽然有人推门进来对你说，火车站站长今晚在铁轨上被撞身亡了。然而，全镇都知道这个人一贯品质恶劣，是远近闻名、胆大妄为的说谎大王。你会相信他，甚至尝试着去信他吗？“当然不信！”你脱口而出。“为什么？”“因为我太了解他的为人了！”“但请问，你怎么知道自己不信他？是透过查看你里面的‘信心机制’或感觉吗？”“不，”你回答，“是因为告诉我消息的那个人！”", "不一会儿，一位邻居走进来，说：“今晚站长确实被一列货运火车碾过，当场丧命。”邻居走后，我听你谨慎地沉吟道：“嗯，我现在信了一半；因为在我的记忆中，这人从小到大只骗过我一次。”我再次问你：“你这次信了一半，是因为查看了你里面的信心吗？”“不，”你重复道，“是因为报信之人的品格。”这人刚出门，第三个人急步走进来，带来了完全相同的噩耗。但这次你毫不犹豫地说：“约翰，既然是你亲口告诉我，我就完全相信了！”我再次追问你：“你怎么知道自己如此笃定地相信你的朋友约翰呢？”“因为约翰这个人！他从未骗过我，也绝不可能骗我！”", "完全一样！我知道我信了福音，全在于那把这消息带给我的一位！“我们既领受人的见证，神的见证更大；因神的见证，是为祂儿子作的。信神儿子的，就有这见证在他心里；不信神的，就是将神当作说谎的，因不信神为祂儿子作的见证”（约壹五9～10）。“亚伯拉罕信神，这就算为他的义”（罗四3）。", "曾有一位焦虑不安的慕道者对一位主的仆人喊道：“先生，我实在信不来！”传道人平静而智慧地回答道：“请问，你是信不过谁呢？”这句话如醍醐灌顶，瞬间解开了他的心结！原来他一直把信心当作某种必须在自己内心体会到的神秘感受，以为非要体验到那种感觉才能配进天堂；而真正的信心，乃是永远定睛在主耶稣基督这活的位格和祂已完成的工作上，安安静静领受那位信实之神关于基督和祂工作的真确见证！", "是仰望外面的基督，带来了里面的平安！当人面向太阳的时候，他自己的影子就在他的背后；照样，你绝不可能在一边审视自己的同时，又一边仰望那位在天荣耀里的基督！", "至此我们清楚看见：神儿子的圣洁位格赢得了我的信赖；祂已完成的工作使我永远安全；神关于信祂之人所说的话语使我确定无疑！我在基督和祂的工作里找着了得救的途径，在神的话语里得着了得救的知识！"], "en_paras": ["But perhaps your eager inquiry may be, \"How is it that since I do really distrust self and self-work, and wholly rely upon Christ and Christ's work, that I have not the full certainty of my salvation?\" You say, \"If my feelings warrant my saying that I am saved one day, they are pretty sure to blight every hope the next, and I am left like a ship storm-tossed, without any anchorage whatever.\"", "Ah! there lies your mistake. Did you ever hear of a captain trying to find anchorage by fastening his anchor inside the ship? Never. Always outside.\n            It may be that you are quite clear that it is Christ's death alone that gives SAFETY, but you think that it is what you feel that gives you CERTAINTY.", "Now again take your Bible, for I wish you to see from God's Word how He gives a man:\n            THE KNOWLEDGE OF SALVATION\n            Before you turn to the verse which I shall ask you very carefully to look at, which speaks of how a believer is to KNOW that he has eternal life, let me quote it in the distorted way in which man's imagination often puts it. \"These happy feelings have I given unto you that believe on the name of the Son of God; that ye may know that ye have eternal life.\" Now open your Bible, and while you compare this with God's blessed and unchanging Word, may He give you from your very heart to say with David, \"I hate vain thoughts: but Thy law do I love\" (Psalm 119:113). The verse just misquoted is found in 1 John 5:13:\n            \"These things have I written unto you that believe on the name of the Son of God; that ye may KNOW that ye HAVE eternal life...\"", "How did the firstborn sons of the thousands of Israel know for certain that they were safe the night of the Passover and of Egypt's judgment?\n            Let us visit two of their houses and hear what they have to say.", "We find in the first house we enter that they are all shivering with fear and suspense. What is the secret of all this paleness and trembling? We enquire, and the firstborn son informs us that the angel of death is coming around the land, and that he is not quite certain how matters will stand with him at that solemn moment, \"When the destroying angel has passed our house,\" says he, \"and the night of judgment is over, I shall then know that I am safe, but I can not see how I can be quite sure of it until then. I hear they are sure of salvation next door, but we think it very presumptuous. All I can do is to spend the long, dreary night hoping for the best.\"\n            \"But,\" we ask, \"has the God of Israel not provided a way of safety for His people?\"\n            \"True,\" he replies, \"and we have availed ourselves of that way of escape. The blood of the spotless and unblemished first-year lamb has been duly sprinkled with the bunch of hyssop on the lintel and two side-posts, but still we are not fully assured of shelter.\"", "Let us now leave these doubting, troubled ones, and enter next door. What a striking contrast meets our eye at once! Peace rests on every countenance. There they stand, with girded loins and staff in hand, feeding on the roasted lamb.\n            What can be the meaning of all this tranquility on such a solemn night as this? \"Ah,\" say they all, \"we are only waiting for Jehovah's marching orders, and then we shall bid a last farewell to the taskmaster's cruel lash and all the drudgery of Egypt!\"\n            \"But hold! Do you forget that this is the night of Egypt's judgment?\"\n            \"Right well we know it; but our firstborn son is safe. The blood has been sprinkled according to the wish of our God.\"\n            \"But so it has been next door,\" we reply, \"but they are all unhappy, because all uncertain of safety.\"\n            \"Ah!,\" responds the firstborn firmly, \"but we have MORE THAN THE SPRINKLED BLOOD; we have THE UNERRING WORD OF GOD ABOUT IT. God has said: 'When I see the blood, I will pass over you' (Exodus 12:13). God rests satisfied with the blood outside, and we rest satisfied with His Word inside.\"", "If you would be sure of your own blessing, then, dear reader, listen not to the unstable testimony of inward emotions, but to the infallible witness of the Word of God. \"Verily, verily, I say unto you, he that believeth on Me HATH everlasting life\" (John 6:47).", "Let me give you a simple illustration from everyday life. A certain farmer in the country, not having sufficient grass for his cattle, applies for a nice piece of pasture land which he hears is to be let near his own house. For some time he gets no answer from the landlord. One day a neighbour comes in and says, \"I feel quite sure you will get that field. Don't you recollect how that last Christmas he sent you a special present of game and that he gave you a kind nod of recognition the other day when he drove past in the carriage?\" And with such like words the farmer's mind is filled with sanguine hopes.\n            Next day another neighbour meets him, and in course of conversation he says, \"I'm afraid you will stand no chance whatever of getting that grass-field. Mr. _____ has applied for it, and you cannot but be aware what a favourite he is with the Squire — occasionally visiting with him,\" and so on. And the poor farmer's bright hopes are dashed to the ground and burst like soap bubbles. One day he is hoping, the next day full of perplexing doubts.", "Presently the postman calls, and the farmer's heart beats fast as he breaks the seal of the letter, for he sees by the handwriting that it is from the Squire himself. See his countenance change from anxious suspense to undisguised joy as he reads and re-reads that letter.\n            \"It's a settled thing now,\" exclaims he to his wife. \"No more doubts and fears about it; the Squire says the field is mine as long as I require it, on the most easy terms, and that's enough for me. I care for no man's opinion now. His word settles it!\"", "How many a poor soul is in a like condition to that of the poor, troubled farmer — tossed and perplexed by the opinions of men, or the thoughts and feelings of his own treacherous heart! And it is only upon receiving the Word of God as the Word of God, that certainty takes the place of doubts and peradventures. When God speaks there must be certainty, whether He pronounces the damnation of the unbeliever, or the salvation of the believer. \"For ever, O LORD, Thy word is settled in heaven\" (Psalm 119:89); and to the simple-hearted believer HIS WORD SETTLES ALL. \"Hath He said, and shall He not do it? or hath He spoken, and shall He not make it good?\" (Numbers 23:19).", "\"But how may I be sure that I have the right kind of faith?\" Well, there can be but one answer to that question. \"Have you placed your confidence in the right Person, in the blessed Son of God?\"\n            It is not a question of the amount of your faith, but of the trustworthiness of the person you repose your confidence in. One man takes hold of Christ, as it were, with a drowning man's grip. Another but touches the hem of His garment, but the sinner who does the former is not a bit safer than the one who does the latter. They have both made the same discovery, namely, that while all of self is totally untrustworthy, they may safely confide in Christ, calmly rely on His Word, and confidently rest in the eternal efficacy of His finished work. That is what is meant by believing on Him. \"Verily, verily, I say unto you, He that believeth on ME HATH everlasting life\" (John 6:47).", "Make sure of it then, my reader, that your confidence is not reposed in your works of amendments, your religious observances, your pious feelings when under religious influences, your moral training from childhood, and the like. You may have the strongest faith in any or all of these, and perish everlastingly. Do not deceive yourself by any \"fair show in the flesh.\" The feeblest faith in Christ eternally saves, while the strongest faith in aught beside is but the offspring of a deceived heart — but the leafy twigs of your enemy's arranging over the pitfall of eternal perdition.", "God, in the Gospel, simply introduces to you the Lord Jesus Christ, and says: \"This is my beloved Son, in whom I am well pleased (Matthew 3:17).\" \"You may,\" He says, \"with all confidence trust His heart, though you cannot with impunity trust your own.\" Blessed, thrice blessed Lord Jesus, who would not trust Thee, and praise Thy Name?", "\"I do really believe on Him,\" said a sad-looking soul to me one day, \"but yet, when asked if I am saved, I don't like to say yes, for fear I should be telling a lie.\" This young woman was a butcher's daughter in small town in the Midlands [central counties of England]. It happened to be a market day, and her father had not then returned from market. So I said, \"Now, suppose when your father comes home you ask him how many sheep he bought today, and he answers 'ten'. After a while a man comes to the shop, and says, 'How many sheep did your father buy today?' and you reply, 'I don't like to say, for fear I should be telling a lie.\" \"But,\" said the mother (who was standing by at the time), with righteous indignation, \"that would be making your father the liar.\"\n            Now, dear reader, don't you see that this well-meaning young woman was virtually making Christ a liar, saying, \"I do believe on the Son of God, and He says I have everlasting life, but I do not like to say I have it, lest I should be telling a lie,\" when Christ Himself has said, \"He that believeth on Me hath everlasting life!\" (John 6:47).", "\"But,\" says another, \"How may I be sure that I really do believe? I have tried often enough to believe, and looked within to see if I had got it, but the more I look at my faith, the less I seem to have.\"\n            Ah, my friend, you are looking in the wrong direction to find that out, and your trying to believe but plainly shows that you are on the wrong track. Let me give you another illustration to explain what I want to convey to you.\n            You are sitting at your quiet fireside one evening, when a man comes in and tells you that the station-master has been killed that night on the railway. Now it so happens that this man had long borne the character in the place for being a very dishonest man, and the most daring, notorious liar in the neighbourhood. Do you believe, or even try to believe, that man? \"Of course not,\" you exclaim. \"Pray, why?\" \"Oh, I know him too well for that!\" \"But tell me how you know that you don't believe him. Is it by looking within at your faith or feelings?\" \"No,\" you reply, \"I think of the man that brings me the message.\"", "Presently a neighbour drops in, and says, \"The station-master has been run over by a freight train tonight and killed on the spot.\" After he has left, I hear you cautiously say, \"Well, I partly believe it now; for to my recollection this man only once in his life deceived me, though I have known him from boyhood.\" But again I ask, \"Is it by looking at your faith this time that you know you partly believe it?\" \"No,\" you repeat, \"I am thinking of the character of my informant.\"\n            Well, this man has scarcely left your room before a third person enters and brings you the same sad news as the first. But this time you say, \"Now, John, I believe it. Since you tell me, I can believe it.\" Again I press my question, \"How do you KNOW that you so confidently believe your friend John?\" \"Because of who and what John is,\" you reply. \"He never has deceived me, and I don't think he ever will.\"", "Well, then, just in the same way, I know that I believe the Gospel because of the One who brings me the news. \"If we receive the witness of men, the witness of God is greater: for this is the witness of God which He hath testified of His Son. He that believeth on the Son of God hath the witness in himself: he that BELIEVETH NOT GOD HATH MADE HIM A LIAR; because he believeth not the record that God gave of His Son\" (1 John 5:9,10). \"Abraham believed God, and it was counted unto him for righteousness\" (Romans 4:3).", "An anxious soul once said to a servant of Christ, \"Oh, sir, I can't believe!\" To which the preacher wisely and quietly made reply, \"Indeed, WHO is it that you cannot believe?\" This broke the spell. He had been looking at faith as an indescribable something he must feel within himself in order to be sure he was all right for heaven, whereas faith ever looks outside to a living Person and His finished work, and quietly listens to the testimony of a faithful God about both.", "It is the outside look that brings the inside peace.\n            When a man turns his face towards the sun, his own shadow is behind him. You cannot look at self and a glorified Christ in heaven at the same moment.", "Thus we have seen that the blessed Person of God's Son wins my confidence. HIS FINISHED WORK makes me eternally safe. GOD'S WORD about those who believe on Him makes me unalterably sure. I find in Christ and His work the way of salvation, and in the Word of God the knowledge of salvation."]}]}, {"num": 4, "id": "chap-04", "badge_label": "CHAPTER 4", "title_zh": "第三要点：得救的喜乐（享受）", "title_en": "Point III: The Joy of Salvation (Enjoyment)", "desc": "也许你要问：“但是，如果我是已经得救的人，为什么我的经历常常是起伏不定的呢？我常常失去所有的喜乐与安慰，并且还忧愁悲苦，如同在我没有得救的时候一样。”...", "blocks": [{"sub_zh": "", "sub_en": "", "zh_paras": ["也许你要问：“但是，如果我是已经得救的人，为什么我的经历常常是起伏不定的呢？我常常失去所有的喜乐与安慰，并且还忧愁悲苦，如同在我没有得救的时候一样。”这就引出了我们的第三个要点：得救的喜乐（THE JOY OF SALVATION）", "你若查考圣经教训，就会发现：虽然你是因着基督的工作而得救，因着神的话语而确知，但你在心灵深处的安慰与喜乐，却是由住在每一位得救之人里面的圣灵所维系的。", "你必须时刻牢记：在每一个得救的人里面，仍然存留着“肉体”（the flesh）——也就是我们从老亚当生来就有的堕落天性（这天性甚至在尚是母亲怀中吃奶的婴孩身上就会显露出来）。内住在信徒里面的圣灵抵挡肉体，并且因着肉体在动机、言语或行为上的每一次活动而担忧。当你“行事为人对得起主”的时候，圣灵就在你灵魂深处结出祂荣耀的果子——“仁爱、喜乐、和平……”（加五22）。当你顺从肉体和世俗而行时，圣灵就在你里面担忧，这些属灵的果子也就随之缺损了。", "让我为真心信靠神儿子的人归纳成两条极其清澈的法则：基督的工作与你的得救 ── 同存共亡！你的行事为人与你的喜乐 ── 同存共亡！如果基督的工作会崩塌（赞美神，这工作永不坍塌！），你的得救才会随之崩塌；当你的行事为人发生亏欠堕落时（务要警醒，因为这是完全可能的），你的喜乐享受才会随之沉没。", "圣经论到初期的门徒时说，他们“凡事敬畏主，蒙圣灵的安慰”（徒九31）；又说：“门徒满心喜乐，又被圣灵充满”（徒十三52）。你蒙恩得救之后的属灵喜乐，与你行事为人的属灵光景完全成正比。", "现在你看出自己的盲点了吗？你一直把“享受”与“安全”这两件截然不同的事混为一谈了！当你因放纵自己、脾气发作、贪恋世俗等叫圣灵担忧而失去喜乐时，你竟以为是自己的得救安全被动摇了！让我再次向你重申：你的安全，维系于基督为你成就的工作（FOR you）；你的确据，维系于神向你亲口说的话语（TO you）；你的喜乐，维系于你没有叫住在你里面的圣灵担忧（IN you）！", "作为神的儿女，只要你作了任何使神的圣灵担忧的事，你与父并祂儿子耶稣基督的实际交通就立时中断；唯有当你省察自责、向神认罪悔改时，交通的喜乐才会恢复。", "比方说，你的孩子犯了过失，他的脸上显出明显的不对劲。就在半小时前，他还兴高采烈地同你在花园里散步，欣赏你所欣赏的花木，享受你所享受的美景；换言之，他与你亲密相交，他的心跳与你的心跳完全共鸣。但现在一切都变了。作为一个顽劣悖逆的孩子，他孤零零地站在墙角抽泣，满脸凄凉。虽然你向他保证，只要痛悔认错就必蒙饶恕，但他因着心中的骄傲与刚愎，执意不肯认错。半小时前的喜乐去哪儿了？荡然无存！为什么？因为你与他之间的交通中断了！", "然而，半小时前你与他那神圣的父子关系到哪里去了呢？难道那关系也消失、破裂或中断了吗？断乎没有！他的“父子关系”取决于他的出生；他的“亲密交通”取决于他的表现！过了一会儿，孩子带着彻底破碎的意志与悔悟的心走出墙角，向你全盘坦白认错。你看得出他同你一样痛恨那过犯，你便一把将他搂在怀里，与他亲嘴。此刻，他的喜乐完全复原了——因为他与你的交通重新恢复了！", "当大卫在拔示巴的事上犯下极其可怖的罪恶时，他在忏悔诗中并未祈求说：“求你恢复我的救恩”，而是痛苦呼求说：“求你使我仍得救恩之乐”（诗五十一12）！", "再把这个比喻推进一层：设想一下，当你的孩子正因犯错站在墙角哭泣时，家中突然警铃大作，响起“着火了！”的凄厉呼喊，这时孩子会面临怎样的结局？难道你会把他丢在火海与倒塌的房屋中任其被焚毁吗？绝对不可能！十有八九，他会是你冲上前去一把抱出火海的第一个人！是的，你心里清清楚楚：血浓于水的骨肉关系是一回事，亲密无间的交流享受完全是另一回事！", "照样，当信徒犯罪时，他与神的交通立时受阻，喜乐丧失，直到他带着忧伤痛悔的心来到天父面前，诚实认自己的罪。接着，信靠神信实的话语，他确知自己已得赦免，因为神的话明明宣告：“我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义”（约壹一9）。", "如果你心中被阴云笼罩，失去了喜乐，务要谦卑俯伏在神面前，省察你的行为。一旦查出了偷走你喜乐的窃贼，立刻把它拖到亮光中，向你的天父彻底认罪，为你那不警醒、不谨慎以致让盗贼乘虚而入的疏忽状态毫不留情地责备自己。但永远、永远、永远不要把你的“安全”与你的“喜乐”混为一谈！", "但千万不要误以为，神的公义对信徒的罪就会比对不信者的罪网开一面。神在司法审判上绝无两套标准，祂决不能无视信徒的罪而不加惩罚，正如祂断不能对拒绝祂爱子之人所犯的罪不加审判一样。但两者之间存在一个天渊之别的根本差异：信徒一生所有的罪孽，神早已全然知晓，并且在各各他的十字架上，已经全部倾倒在祂亲自预备的神圣羔羊身上！在那里，信徒一切的罪责案卷已经彻底结案，“祂被挂在木头上，亲身担当了我们的罪”（彼前二24）。", "拒绝基督的人必须在火湖里以自己的身躯永远承受自己的罪刑；但当信徒软弱失败时，罪的“死刑刑事问题”绝不会在他身上重新立案，因为审判官自己在两千年前的十字架上已经永远结案了！然而，“交通问题”却会在信徒里面由圣灵一次又一次被唤醒，直到他叫圣灵担忧的事被彻底对付。", "最后，请容我再讲一个极其生动的比喻。在一个美丽的月圆之夜，皓月当空，清辉洒遍大地。一人正俯身凝视着一口深幽清澈的古井，井水如明镜般倒映着圆月。他情不自禁地对身旁的旅伴赞叹道：“看哪，今晚的月亮多么圆润、多么皎洁！它在夜空中运行得何等安详庄严！”话音未落，他的同伴忽然拾起一颗小石子，丢进了井水深处。他顿时惊叫起来：“哎呀！月亮全被打得粉碎，残片晃动得不成样子了！”\n            “真是荒唐透顶！”同伴哑然失笑，“抬头看天上吧，朋友！天上的月亮丝毫未变，连一点一画都没有动摇；改变的只是这口返照月光的井水而已！”", "信徒啊，请把这幅图画应用在你的心上吧！你的心就是这口井。当你不容让罪恶时，神的圣灵就在你里面将基督的荣美与可贵启示给你，使你满享甘甜的安慰与喜乐；但当你心里怀着一个不洁的动机，或是口中冒出一句不谨慎的闲话时，圣灵就在井里掀起波澜，你原本喜乐的经验瞬间被震得粉碎，你里面纷乱如麻，不得安宁，直到你在神面前心碎自责，彻底认清并对付了那块搅扰平静的石头，你与神交通中那平静甘美的喜乐才重新复原！", "但当你的内心翻江倒海、全无安息之时，请问：基督的工作改变了吗？没有，绝没有！那么，你的得救丝毫没有改变！神的话语改变了吗？断乎没有！那么，你得救的确据丝毫没有受到任何动摇！那么，到底是什么改变了呢？是你里面圣灵的运行状态改变了！圣灵本来乐意将基督的尊荣丰满启示给你，现在却因担忧而不得不放下这令人喜悦的职事，转而使你深刻认识自己的败坏与罪愆！祂从你收回喜乐与安慰，直到你与祂同心恨恶罪恶、弃绝罪恶。", "主啊，使我们越发敬畏自守，免得叫神的圣灵担忧；我们原是受了祂的印记，等候得赎的日子来到（弗四30）！"], "en_paras": ["\"But, if saved,\" you may say, \"How is it that I have such a fluctuating experience — so often losing all my joy and comfort, and getting as wretched and downcast as I was before my conversion?\" Well, this brings us to our third point:\n            THE JOY OF SALVATION", "You will find in the teaching of Scripture, that while you are saved by Christ's work and assured by God's Word, you are maintained in comfort and joy by the Holy Spirit who indwells every saved one's body.", "Now you must bear in mind that every saved one has still \"the flesh\" within him, that is, the evil nature he was born with as a natural man, and which perhaps showed itself while still a helpless infant on his mother's lap. The Holy Spirit in the believer resists the flesh, and is grieved by every activity of it, in motive, word or deed. When he is walking \"worthy of the Lord,\" the Holy Spirit will be producing in his soul His blessed fruits — \"love, joy, peace ...\" (see Galatians 5:22). When he is walking in a carnal, worldly way, the Spirit is grieved, and these fruits are wanting in greater or less measure.", "Let me put it thus for you who do believe on God's Son:\n            \n            Christ's Work and Your Salvation > stand or fall together.\n            Your Walk and Your Enjoyment > stand or fall together.\n            \n            If Christ's work could break down (and, blessed be God it never will), your salvation will break down with it. When your walk breaks down (and be watchful, for it may), your enjoyment will break down with it.", "Thus it is said of the early disciples (Acts 9:31), that they were \"walking in the fear of the Lord, and in the comfort of the Holy Ghost.\" And again in Acts 13:52: \"And the disciples were filled with joy, and with the Holy Ghost.\" My spiritual joy will be in proportion to the spiritual character of my walk after I am saved.", "Now do you see your mistake? You have been mixing up enjoyment and your safety — two widely different things. When, through self-indulgence, loss of temper, worldliness, etc., you grieved the Holy Spirit and lost your joy, you thought your safety was undermined. But again I repeat it —\n            \n            Your safety hangs upon Christ's work FOR you.\n            Your assurance upon God's Word TO you.\n            Your enjoyment upon not grieving the Holy Spirit IN you.", "When as a child of God, you do anything to grieve the Holy Spirit of God, your communion with the Father and the Son is for the time practically suspended; and it is only when you judge yourself and confess your sins, that the joy of communion is restored.", "Your child has been guilty of some misdemeanour. He shows upon his countenance the evident mark that something is wrong with him. Half an hour before this he was enjoying a walk with you around the garden, admiring what you admired, enjoying what you enjoyed. In other words, he was in communion with you, his feelings and sympathies were in common with yours.\n            But now all this is changed, and as a naughty, disobedient child he stands in the corner, the very picture of misery. Upon penitent confession of his wrong-doing you have assured him of forgiveness, but his pride and self will keep him sobbing there. Where is now the joy of half an hour ago? All gone. Why? Because communion between you and him has been interrupted.", "What has become of the relationship that existed between you and your son half an hour ago? Is that gone too? Is that severed or interrupted? Surely not. His relationship depends upon his birth; his communion depends upon his behaviour.\n            But presently he comes out of the corner with broken will and broken heart confessing the whole thing from first to last, so that you see he hates the disobedience and naughtiness as much as you do, and you take him in your arms and cover him with kisses. His joy is restored because communion is restored.", "When David sinned so grievously in the matter of Uriah's wife, he did not say, \"Restore unto me Thy salvation,\" but \"Restore unto me the joy of Thy salvation\" (Psalm 51:12).", "But to carry our illustration a little farther. Supposing while your child is in the corner there should be a cry of \"House on fire!\" throughout your dwelling, what would become of him then? Left in the corner to be consumed with the burning, falling house? Impossible! Very probably he would be the very first person you would carry out. Ah, yes, you know right well that the love of relationship is one thing, and the joy of communion quite another.", "Now, when the believer sins, communion for the time is interrupted, and joy is lost until, with a broken heart, he comes to the Father and confesses his sins. Then, taking God at His Word, he knows he is forgiven, for His Word plainly declares that \"if we confess our sins, He is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness\" (1 John 1:9).", "If you are troubled with a cloudy half-hour, get low before God, consider your ways. And when the thief that has robbed you of your joy has been detected, drag him at once to the light, confess your sin to God your Father, and judge yourself most unsparingly for the unwatchful careless state of soul that allowed the thief to enter unchallenged. But never, never, NEVER, confound your safety with your joy.", "Do not imagine, however, that the judgment of God falls a whit more leniently on the believer's sin than on the unbeliever's. He has not two ways of dealing judicially with sin, and He could no more pass by the believer's sin without judging it, than He could pass by the sins of a rejecter of His precious Son. But there is this great difference between the two, namely, that the believer's sins were all known to God, and all laid upon His own provided Lamb when He hung upon the cross at Calvary, and that there and then, once and for ever, the great \"criminal question\" of his guilt was raised and settled — judgment falling upon the blessed Substitute in the believer's stead, \"Who His own self bare our sins in His own body on the tree\" (1 Peter 2:24).", "The Christ-rejecter must bear his own sins in his own person in the lake of fire for ever. But, when a believer fails, the \"criminal question\" of sin cannot be raised against him, the Judge Himself having settled that once for all on the cross; but the communion question is raised within him by the Holy Spirit as often as he grieves the Spirit.", "Allow me, in conclusion, to give you another illustration. It is a beautiful moonlight night. The moon is full, and shining in more than ordinary silvery brightness. A man is gazing intently down a deep, still well, where he sees the moon reflected, and thus remarks to a friendly bystander, \"How beautifully fair and round she is tonight! How quietly and majestically she rides along!\" He has just finished speaking when suddenly his friend drops a small pebble into the well, and he now exclaims, \"Why, the moon is all broken to pieces and the fragments are shaking together in the greatest disorder!\"\n            \"What gross absurdity!\" is the astonished rejoinder of his companion. \"Look up, man! The moon hasn't changed one jot or tittle. It is the condition of the well that reflects the moon that has changed.\"", "Now, believer, apply the simple figure yourself. Your heart is the well. When there is no allowance of evil the blessed Spirit of God takes of the glories and preciousness of Christ, and reveals them to you for your comfort and joy. But the moment a wrong motive is cherished in the heart, or an idle word escapes the lips unjudged, the Holy Spirit begins to disturb the well, your happy experiences are smashed to pieces, and you are all restless and disturbed within, until in brokenness of spirit before God you confess your sin (the disturbing thing) and thus get restored once more to the calm, sweet joy of communion.", "But when your heart is thus all unrest, need I ask, Has Christ's work changed? No, no. Then your salvation is not altered.\n            Has God's Word changed? Surely not. Then the certainty of your salvation has received no shock.\n            Then, what has changed? Why, the action of the Holy Spirit in you has changed, and instead of taking of the glories of Christ, and filling your heart with the sense of His worthiness, He is grieved at having to turn aside from this delightful office to fill you with the sense of your sin and unworthiness. He takes from you your present comfort and joy until you judge and resist the evil thing that He judges and resists. When this is done, communion with God is again restored.", "The Lord make us to be increasingly jealous over ourselves lest we grieve \"the Holy Spirit of God, whereby ye are sealed unto the day of redemption\" (Ephesians 4:30)."]}]}, {"num": 5, "id": "chap-05", "badge_label": "CHAPTER 5", "title_zh": "总结要点与永不改变的磐石", "title_en": "Summary & The Unalterable Foundation", "desc": "亲爱的读者，无论你的信心多么微弱，请笃信这一无可动摇的事实：神的儿子本身吸引我相信，祂所完成的工作使我永远得救；神论到信祂之人的话，使我确实知道自己是...", "blocks": [{"sub_zh": "", "sub_en": "", "zh_paras": ["亲爱的读者，无论你的信心多么微弱，请笃信这一无可动摇的事实：神的儿子本身吸引我相信，祂所完成的工作使我永远得救；神论到信祂之人的话，使我确实知道自己是得救的；而我的行事为人不致于使那内住的圣灵担忧时，我就能维持得救的喜乐。", "总而言之：我在基督和祂的工作里，找着了得救的“方法”（安全）；我在神信实的话语里，找着了得救的“知识”（确据）；我在圣灵所结的果子里，找着了得救的“喜乐”（享受）！", "我再次向你宣明：你的“得救”──是凭着基督替你成全的工作；你的“确实知道自己是得救的”──是凭着神对你说的话；你的“喜乐”──是凭着你的行事为人不使那位住在你里面的圣灵担忧！", "哦！吸引我相信的那位是永不改变的！──“耶稣基督，昨日，今日，一直到永远是一样的”（来十三8）。祂所完成的工作也永不改变！──“神一切所作的，都必永存。无所增添，无所减少”（传三14）。而祂所说的话语更永不改变！──“草必枯干，花必凋谢，惟有主的道（就是‘话’）是永存的”（彼前一24～25）。因此，我所信靠的对象、我得救的根基，以及我确知得救的凭据，全都永远不可动摇，绝无改变！", "既然“基督的工作”丝毫没有改变，那么，你的“得救”就绝无改变！既然“神的话语”丝毫没有改变，那么，你的“确知得救”就绝无动摇！那么究竟是什么在改变呢？是你的行为和圣灵在你里面的运作在改变！本来圣灵在你里面以基督的可贵启示你，使你看见基督的荣美；如今，圣灵却因你的亏欠在你里面担忧，使你看见自己的罪恶与不堪。圣灵从你收回了喜乐与安慰，直到你同祂一样痛恨罪恶、抵挡罪恶，随后你与神的甘甜交通才重新复原。", "神严肃地告诫我们谨守己心，免得叫神的圣灵担忧；我们原是受了祂的印记，等候得赎的日子来到（弗四30）。", "最后，让我怀着深切的爱心再次向你发问：\n            “你是乘坐哪一等列车的行路人？”", "“我将这些话写给你们信奉神儿子之名的人，要叫你们知道自己有永生。”", "── 约翰一书五章十三节 ──"], "en_paras": ["Dear reader, however weak your faith may be, rest assured of this, that the blessed One who has won your confidence will never change.\n            The Son of God Himself wins my confidence. His finished work makes me safe. God's Word about those who believe on Him makes me sure. And walking so as not to grieve the indwelling Spirit maintains my joy.", "In summary:\n            \n            I find in Christ and His work the WAY of Salvation (Safety);\n            I find in the Word of God the KNOWLEDGE of Salvation (Certainty);\n            I find in the fruit of the Holy Spirit the JOY of Salvation (Enjoyment)!", "Once again I declare it to you:\n            Your \"Safety\" hangs upon Christ's finished work FOR you;\n            Your \"Assurance\" upon God's unchanging Word TO you;\n            Your \"Enjoyment\" upon not grieving the Holy Spirit IN you!", "The blessed One who has won your confidence will never change: \"Jesus Christ the same yesterday, and to day, and FOR EVER\" (Hebrews 13:8).\n            The work He has accomplished will never change: \"Whatsoever God doeth, it shall be FOR EVER: nothing can be put to it, nor any thing taken from it\" (Ecclesiastes 3:14).\n            The word He has spoken will never change: \"The grass withereth, and the flower thereof falleth away: But the word of the Lord endureth FOR EVER\" (1 Peter 1:24,25).\n            Thus the object of my trust, the foundation of my safety, and the ground of my certainty, are alike ETERNALLY UNALTERABLE!", "Since Christ's work has not changed, your salvation has not altered!\n            Since God's Word has not changed, your assurance has received no shock!\n            Then, what has changed? The action of the Holy Spirit in you has changed! Instead of filling you with the glories of Christ, He is grieved and fills you with the sense of your sin and unworthiness until you judge and resist the evil thing. When this is done, communion with God is again restored.", "The Lord make us to be increasingly jealous over ourselves lest we grieve \"the Holy Spirit of God, whereby ye are sealed unto the day of redemption\" (Ephesians 4:30).", "Once more, let me ask with all affection:\n            \"WHICH CLASS ARE YOU TRAVELING?\"", "\"These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life...\"", "── 1 John 5:13 ──"]}]}, {"num": 6, "id": "chap-app", "badge_label": "CHAPTER 6", "title_zh": "附录：佐治・卡亭生平与本书历史考据", "title_en": "Appendix: George Cutting & Historical Context", "desc": "生卒年：1843年 – 1934年（享年91岁，部分资料作 1834–1934）籍贯：英国诺福克郡（Norfolk, England）服事背景：英国弟...", "blocks": [{"sub_zh": "", "sub_en": "", "zh_paras": ["生卒年：1843年 – 1934年（享年91岁，部分资料作 1834–1934）籍贯：英国诺福克郡（Norfolk, England）服事背景：英国弟兄会（Brethren）布道家与传道人", "一、著作渊源与普世影响佐治・卡亭所著的《救・知・乐》（Safety, Certainty and Enjoyment），初版约问世于十九世纪末（约1880–1900年间）。该书篇幅虽小，却极具属灵洞察力与福音穿透力。在二十世纪初的数十年间，除《圣经》以外，本书是全英语世界印行数量最广、流传最普及的基督教福音与造就读物之一，总印量据保守估计超过数千万册。", "二、神学脉络与特色本书的核心贡献在于，极其清晰地将信徒在救恩中常犯的“感觉”与“事实”、“安全”与“喜乐”之混淆，以第一性原理的神学透视剥离出来：\n            1. 得救之法（安全 Safety）：根植于客观的基督受死与十字架赎罪（For Us）；\n            2. 得救之知（确据 Certainty）：根植于客观的神的话语与应许（To Us）；\n            3. 得救之乐（享受 Enjoyment）：维系于信徒与内住圣灵的交通与顺服（In Us）。这一经典的三分法，直接扫除了百年来数以百万计信徒内心的猜疑、恐慌与律法主义束缚。", "三、在华人教会中的传播与倪柝声的推崇二十世纪初，本书由西方传教士带入中国并翻译出版，迅速成为各大宣教差会、各处地方教会以及中国本土复兴运动中初信造就的必读手册。著名中国属灵领袖倪柝声（Watchman Nee）在早期的讲道与文字事工中，曾多次极力推崇并引用《救・知・乐》中的生动比喻（如“把锚抛在船外”、“深井碎月”、“父子关系与亲密交通”等），成为近代中国基督徒生命塑造的重要基石。"], "en_paras": ["Lifespan: 1843 – 1934 (Aged 91; some sources record 1834–1934)Origin: Norfolk, EnglandMinistry: Evangelist and Bible Teacher among the Christian Brethren"]}]}]};
+
+    /* State Variables */
+    let currentLang = 'zh'; // 'zh' or 'en'
+    let currentTheme = 'cream';
+    let currentFontSize = 18;
+    let currentFontFamily = 'song';
+    let currentLineHeight = 1.78;
+
+    // View state: 0 = Book Home Page (书籍首页), 1..N = reading pages
+    let currentPageIdx = 0; 
+    let currentSpreadIdx = 0; 
+    let PAGES = []; // Computed client-side
+    let isPaginating = false;
+
+    /* Initialize Application */
+    function init() {
+      applyResponsiveScale();
+      const urlParams = new URLSearchParams(window.location.search);
+      const isStandalone = urlParams.has('standalone') || urlParams.has('isolated') || urlParams.has('focus') || urlParams.has('share') || window.location.hash.includes('standalone');
+
+      if (isStandalone) {
+        // Point 4: Always start at Book Home Page (Page 0) for exclusive share links!
+        currentPageIdx = 0;
+        currentSpreadIdx = 0;
+      } else {
+        loadSavedState();
+      }
+
+      paginateAndRender();
+      setupKeyboard();
+      setupGestures();
+      setupIdleTimer();
+      setupAutoFullscreen();
+    }
+
+    /* Detect single-page mobile/portrait mode */
+    function isSinglePageMode() {
+      return window.innerWidth <= 960 || window.innerHeight > window.innerWidth;
+    }
+
+    /* ========================================================
+       DYNAMIC CLIENT-SIDE PAGE FITTING ENGINE
+       Integer line height quantization + binary search split.
+       Zero line clipping, dense filling, no wasted space!
+       ======================================================== */
+    function paginateAndRender() {
+      if (isPaginating) return;
+      isPaginating = true;
+
+      const savedChNum = getActiveChapterNum();
+      const leafL = document.getElementById('leaf-left');
+      const bodyL = document.getElementById('body-left');
+      const headerL = document.getElementById('header-left');
+      const single = isSinglePageMode();
+
+      // Available dimensions
+      let targetWidth = bodyL ? bodyL.clientWidth : 0;
+      if (!targetWidth || targetWidth < 100) {
+        targetWidth = single ? (window.innerWidth - 36) : 480;
+      }
+
+      // Calculate exact available height for reading body text from physical leaf container
+      let availHeight = 0;
+      if (leafL) {
+        const cs = window.getComputedStyle(leafL);
+        const padTop = parseFloat(cs.paddingTop) || (single ? 44 : 28);
+        const padBottom = parseFloat(cs.paddingBottom) || (single ? 14 : 22);
+        const headerH = 32; // 22px height + 10px margin-bottom
+        const innerLeafH = leafL.clientHeight - padTop - padBottom;
+        availHeight = innerLeafH - headerH;
+      }
+      if (!availHeight || availHeight < 150) {
+        availHeight = single ? (window.innerHeight - 90) : 460;
+      }
+
+      // Integer line height quantization: strictly prevent partial line clipping!
+      const fs = currentFontSize;
+      const lh = currentLineHeight;
+      const lineH = fs * lh;
+      const maxLines = Math.max(4, Math.floor(availHeight / lineH));
+      const targetHeight = (maxLines * lineH) - 3;
+
+      const measure = document.getElementById('measure-leaf');
+      measure.style.width = targetWidth + 'px';
+      measure.style.fontSize = currentFontSize + 'px';
+      measure.style.lineHeight = currentLineHeight;
+      if (currentFontFamily === 'kai') {
+        measure.style.fontFamily = 'var(--font-kai)';
+      } else if (currentFontFamily === 'sans') {
+        measure.style.fontFamily = 'var(--font-sans)';
+      } else {
+        measure.style.fontFamily = 'var(--font-serif-zh)';
+      }
+      measure.style.textAlign = 'justify';
+      measure.style.textJustify = 'inter-ideograph';
+      measure.style.wordBreak = 'break-word';
+
+      PAGES = [];
+      const chapters = BOOK.chapters;
+
+      for (const ch of chapters) {
+        const chStartPage = PAGES.length + 1;
+        ch.startPage = chStartPage;
+        let isChFirst = true;
+        let curHtml = '';
+
+        const headerHtml = `
+          <div class="ch-first-header">
+            <div class="ch-label-num">— ${ch.badge_label} —</div>
+            <div class="ch-headline">${currentLang === 'en' && ch.title_en ? ch.title_en : ch.title_zh}</div>
+          </div>
+        `;
+
+        curHtml = headerHtml;
+
+        for (const block of ch.blocks) {
+          const subTitle = (currentLang === 'en' && block.sub_en) ? block.sub_en : block.sub_zh;
+          if (subTitle) {
+            const subHtml = `<div class="subheading-banner">${subTitle}</div>`;
+            measure.innerHTML = curHtml + subHtml;
+            if (measure.scrollHeight > targetHeight && curHtml !== headerHtml) {
+              PAGES.push({
+                chapterNum: ch.num,
+                chapterTitle: ch.title_zh,
+                chapterTitleEn: ch.title_en,
+                isChFirst,
+                html: curHtml
+              });
+              isChFirst = false;
+              curHtml = subHtml;
+            } else {
+              curHtml += subHtml;
+            }
+          }
+
+          const paras = (currentLang === 'en' && block.en_paras && block.en_paras.length > 0) ? block.en_paras : block.zh_paras;
+          for (let pIdx = 0; pIdx < paras.length; pIdx++) {
+            let p = paras[pIdx];
+            let isParaStart = true;
+
+            while (p.length > 0) {
+              let pFormatted = '';
+              if (isChFirst && curHtml === headerHtml && isParaStart && p.length > 0) {
+                const firstChar = p.charAt(0);
+                const rest = p.slice(1);
+                pFormatted = `<p><span class="drop-cap">${firstChar}</span>${rest}</p>`;
+              } else if (isParaStart) {
+                pFormatted = `<p>${p}</p>`;
+              } else {
+                pFormatted = `<p class="p-continue">${p}</p>`;
+              }
+
+              measure.innerHTML = curHtml + pFormatted;
+              if (measure.scrollHeight <= targetHeight) {
+                curHtml += pFormatted;
+                p = '';
+              } else {
+                // Overflows: binary search maximum fitting prefix
+                let low = 1;
+                let high = p.length;
+                let bestFit = 0;
+
+                while (low <= high) {
+                  const mid = Math.floor((low + high) / 2);
+                  let testFrag = '';
+                  if (isChFirst && curHtml === headerHtml && isParaStart && mid > 0) {
+                    testFrag = `<p><span class="drop-cap">${p[0]}</span>${p.slice(1, mid)}</p>`;
+                  } else if (isParaStart) {
+                    testFrag = `<p>${p.slice(0, mid)}</p>`;
+                  } else {
+                    testFrag = `<p class="p-continue">${p.slice(0, mid)}</p>`;
+                  }
+
+                  measure.innerHTML = curHtml + testFrag;
+                  if (measure.scrollHeight <= targetHeight) {
+                    bestFit = mid;
+                    low = mid + 1;
+                  } else {
+                    high = mid - 1;
+                  }
+                }
+
+                if (bestFit >= 20) {
+                  const prefix = p.slice(0, bestFit);
+                  const punctMatch = prefix.search(/[，。！？；、：“”‘’（）《》][^，。！？；、：“”‘’（）《》]*$/);
+                  if (punctMatch !== -1 && punctMatch >= bestFit - 14) {
+                    bestFit = punctMatch + 1;
+                  }
+
+                  let fitHtml = '';
+                  if (isChFirst && curHtml === headerHtml && isParaStart) {
+                    fitHtml = `<p><span class="drop-cap">${p[0]}</span>${p.slice(1, bestFit)}</p>`;
+                  } else if (isParaStart) {
+                    fitHtml = `<p>${p.slice(0, bestFit)}</p>`;
+                  } else {
+                    fitHtml = `<p class="p-continue">${p.slice(0, bestFit)}</p>`;
+                  }
+
+                  curHtml += fitHtml;
+                  PAGES.push({
+                    chapterNum: ch.num,
+                    chapterTitle: ch.title_zh,
+                    chapterTitleEn: ch.title_en,
+                    isChFirst,
+                    html: curHtml
+                  });
+                  isChFirst = false;
+                  curHtml = '';
+                  p = p.slice(bestFit);
+                  isParaStart = false;
+                } else {
+                  if (curHtml.trim().length > 0) {
+                    PAGES.push({
+                      chapterNum: ch.num,
+                      chapterTitle: ch.title_zh,
+                      chapterTitleEn: ch.title_en,
+                      isChFirst,
+                      html: curHtml
+                    });
+                    isChFirst = false;
+                    curHtml = '';
+                  }
+                  curHtml = pFormatted;
+                  p = '';
+                }
+              }
+            }
+          }
+        }
+
+        if (curHtml.trim().length > 0) {
+          PAGES.push({
+            chapterNum: ch.num,
+            chapterTitle: ch.title_zh,
+            chapterTitleEn: ch.title_en,
+            isChFirst,
+            html: curHtml
+          });
+        }
+      }
+
+      // Restore position or keep at Book Home (0)
+      const urlParams = new URLSearchParams(window.location.search);
+      const isStandalone = urlParams.has('standalone') || urlParams.has('isolated') || urlParams.has('focus') || urlParams.has('share') || window.location.hash.includes('standalone');
+
+      if (isStandalone) {
+        currentPageIdx = 0;
+        currentSpreadIdx = 0;
+      } else if (currentPageIdx > 0 && savedChNum > 1) {
+        const targetCh = BOOK.chapters.find(c => c.num === savedChNum);
+        if (targetCh && targetCh.startPage) {
+          currentPageIdx = targetCh.startPage;
+          currentSpreadIdx = Math.ceil(currentPageIdx / 2);
+        }
+      } else if (currentPageIdx > 0) {
+        currentPageIdx = Math.max(1, Math.min(currentPageIdx, PAGES.length));
+        currentSpreadIdx = Math.ceil(currentPageIdx / 2);
+      } else {
+        currentPageIdx = 0;
+        currentSpreadIdx = 0;
+      }
+
+      isPaginating = false;
+      renderCurrentView();
+      renderToc();
+    }
+
+    function getActiveChapterNum() {
+      if (currentPageIdx === 0) return 1;
+      const curP = isSinglePageMode() ? PAGES[currentPageIdx - 1] : PAGES[(currentSpreadIdx * 2) - 2];
+      return curP ? curP.chapterNum : 1;
+    }
+
+    /* ========================================================
+       RENDER BOOK HOME (Hero Card + Chapter Directory)
+       ======================================================== */
+    function renderBookHomeHeroHtml() {
+      const meta = BOOK.meta;
+      const isStandalone = window.location.search.includes('standalone=1') || window.location.hash.includes('standalone');
+      const studyUrl = meta.reader_url + (isStandalone ? (meta.reader_url.includes('?') ? '&' : '?') + 'standalone=1' : '');
+      const homeLinkStyle = isStandalone ? 'display:none !important;' : '';
+
+      return `
+        <div class="home-hero-card">
+          <div class="home-cover-box">
+            <img src="${meta.cover_img}" alt="《${meta.title_zh}》封面" class="home-cover-img" loading="eager">
+            <div class="home-author-badge">${meta.author_meta}</div>
+          </div>
+          <div class="home-cat-badge">${meta.category_badge}</div>
+          <h1 class="home-book-title">${meta.title_zh}</h1>
+          <div class="home-book-subtitle">${meta.title_en}</div>
+          <p class="home-synopsis">${meta.synopsis}</p>
+          <div class="home-action-row">
+            <button class="home-btn-primary" onclick="startReadingBook()">
+              <span>开始阅读 (纸质版)</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <a href="${studyUrl}" class="home-btn-outline" title="切换到网页版">
+              <span>📖 网页版</span>
+            </a>
+            <a href="index.html" class="home-btn-outline" style="${homeLinkStyle}" title="返回文库首页">
+              <span>返回文库首页</span>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderChapterDirectoryHtml() {
+      const chapters = BOOK.chapters;
+      let cards = '';
+      for (const ch of chapters) {
+        cards += `
+          <div class="home-dir-card" onclick="goToChapter(${ch.num})">
+            <div class="home-card-badge">${ch.badge_label}</div>
+            <div class="home-card-title">${ch.title_zh}</div>
+            <div class="home-card-en">${ch.title_en}</div>
+            <div class="home-card-desc">${ch.desc}</div>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="home-dir-wrapper">
+          <div class="home-dir-header">
+            <div class="home-dir-title">全书卷目总览</div>
+            <div class="home-dir-subtitle">COMPLETE CHAPTER DIRECTORY</div>
+          </div>
+          <div class="home-dir-grid">
+            ${cards}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderMobileHomeHtml() {
+      const hero = renderBookHomeHeroHtml();
+      const dir = renderChapterDirectoryHtml();
+      return `
+        <div class="book-home-wrap mobile-home-container">
+          ${hero}
+          <div style="padding-top: 10px;">
+            ${dir}
+          </div>
+        </div>
+      `;
+    }
+
+    /* ========================================================
+       RENDER CURRENT VIEW (Single Page or Dual Spread)
+       ======================================================== */
+    function renderCurrentView() {
+      const spreadEl = document.getElementById('book-spread');
+      spreadEl.classList.remove('anim-turn');
+      void spreadEl.offsetWidth; // trigger reflow
+      spreadEl.classList.add('anim-turn');
+
+      const isSingle = isSinglePageMode();
+      const leafL = document.getElementById('leaf-left');
+      const leafR = document.getElementById('leaf-right');
+      const bodyL = document.getElementById('body-left');
+      const bodyR = document.getElementById('body-right');
+      const headerL = document.getElementById('header-left');
+      const headerR = document.getElementById('header-right');
+      const gutter = document.getElementById('book-gutter');
+      const pageNumL = document.getElementById('page-num-left');
+      const pageNumR = document.getElementById('page-num-right');
+      const titleL = document.getElementById('page-title-left');
+      const titleR = document.getElementById('page-title-right');
+
+      // Standalone & Home Navigation Controls
+      const homeBtn = document.getElementById('btn-home');
+      const studyBtn = document.getElementById('btn-study');
+      const isStandalone = window.location.search.includes('standalone=1') || window.location.hash.includes('standalone');
+
+      if (isStandalone) {
+        // Standalone mode: HIDE HOME BUTTON EVERYWHERE
+        if (homeBtn) homeBtn.style.display = 'none';
+        if (studyBtn) {
+          studyBtn.style.display = 'inline-flex';
+          studyBtn.href = BOOK.meta.reader_url + (BOOK.meta.reader_url.includes('?') ? '&' : '?') + 'standalone=1';
+        }
+      } else {
+        // Normal mode: Show Home button ONLY on Book Home (Page 0)
+        const isAtBookHome = isSingle ? (currentPageIdx === 0) : (currentSpreadIdx === 0);
+        if (homeBtn) homeBtn.style.display = isAtBookHome ? 'inline-flex' : 'none';
+        if (studyBtn) {
+          studyBtn.style.display = 'inline-flex';
+          studyBtn.href = BOOK.meta.reader_url;
+        }
+      }
+
+      // --- CASE 1: BOOK HOME PAGE (INDEX 0) ---
+      if ((isSingle && currentPageIdx === 0) || (!isSingle && currentSpreadIdx === 0)) {
+        if (isSingle) {
+          // Mobile Book Home Page
+          gutter.style.display = 'none';
+          leafR.style.display = 'none';
+          leafL.style.display = 'flex';
+          leafL.classList.add('is-home-page');
+          headerL.style.display = 'none';
+
+          bodyL.innerHTML = renderMobileHomeHtml();
+          pageNumL.textContent = '';
+          titleL.textContent = '';
+          document.getElementById('hud-chapter-name').textContent = '书籍首页 · 卷目总览';
+
+          document.getElementById('lbl-cur-spread').textContent = '书籍首页';
+          document.getElementById('lbl-total-spreads').textContent = `共 ${PAGES.length} 页`;
+          document.getElementById('lbl-pct').textContent = '0%';
+          const slider = document.getElementById('spread-slider');
+          slider.min = 0;
+          slider.max = PAGES.length;
+          slider.value = 0;
+        } else {
+          // Desktop Dual Spread Book Home Page (Left: Cover Hero, Right: Chapter Directory)
+          gutter.style.display = 'block';
+          leafL.style.display = 'flex';
+          leafR.style.display = 'flex';
+          leafL.classList.remove('is-home-page');
+          headerL.style.display = 'none';
+          headerR.style.display = 'none';
+
+          bodyL.innerHTML = renderBookHomeHeroHtml();
+          bodyR.innerHTML = renderChapterDirectoryHtml();
+          pageNumL.textContent = '';
+          pageNumR.textContent = '';
+          titleL.textContent = '';
+          titleR.textContent = '';
+          document.getElementById('hud-chapter-name').textContent = '书籍首页 · 卷目总览';
+
+          const totalSpreads = Math.ceil(PAGES.length / 2);
+          document.getElementById('lbl-cur-spread').textContent = '书籍首页';
+          document.getElementById('lbl-total-spreads').textContent = `共 ${PAGES.length} 页`;
+          document.getElementById('lbl-pct').textContent = '0%';
+          const slider = document.getElementById('spread-slider');
+          slider.min = 0;
+          slider.max = totalSpreads;
+          slider.value = 0;
+        }
+
+        updateTocActive();
+        saveState();
+        resetIdleTimer();
+        return;
+      }
+
+      // --- CASE 2: BODY READING PAGES (INDEX >= 1) ---
+      headerL.style.display = 'flex';
+      headerR.style.display = 'flex';
+      leafL.classList.remove('is-home-page');
+
+      if (isSingle) {
+        // Mobile / Portrait Single Page
+        gutter.style.display = 'none';
+        leafR.style.display = 'none';
+        leafL.style.display = 'flex';
+
+        const curPage = PAGES[currentPageIdx - 1];
+        if (curPage) {
+          bodyL.innerHTML = curPage.html;
+          pageNumL.textContent = currentPageIdx;
+          titleL.textContent = `《${BOOK.meta.title_zh}》 · ${curPage.chapterTitle}`;
+          document.getElementById('hud-chapter-name').textContent = `${curPage.chapterNum}. ${curPage.chapterTitle}`;
+        }
+
+        document.getElementById('lbl-cur-spread').textContent = `第 ${currentPageIdx} 页`;
+        document.getElementById('lbl-total-spreads').textContent = `共 ${PAGES.length} 页`;
+        const pct = Math.round((currentPageIdx / PAGES.length) * 100);
+        document.getElementById('lbl-pct').textContent = `${pct}%`;
+        const slider = document.getElementById('spread-slider');
+        slider.min = 0;
+        slider.max = PAGES.length;
+        slider.value = currentPageIdx;
+      } else {
+        // Desktop Landscape Dual Spread
+        gutter.style.display = 'block';
+        leafL.style.display = 'flex';
+        leafR.style.display = 'flex';
+
+        const totalSpreads = Math.ceil(PAGES.length / 2);
+        const leftPageNum = (currentSpreadIdx * 2) - 1;
+        const rightPageNum = currentSpreadIdx * 2;
+
+        const pageLeft = PAGES[leftPageNum - 1];
+        const pageRight = PAGES[rightPageNum - 1];
+
+        if (pageLeft) {
+          bodyL.innerHTML = pageLeft.html;
+          pageNumL.textContent = leftPageNum;
+          titleL.textContent = `《${BOOK.meta.title_zh}》 · ${BOOK.meta.author}`;
+          document.getElementById('hud-chapter-name').textContent = `${pageLeft.chapterNum}. ${pageLeft.chapterTitle}`;
+        } else {
+          bodyL.innerHTML = '';
+          pageNumL.textContent = '';
+          titleL.textContent = '';
+        }
+
+        if (pageRight) {
+          bodyR.innerHTML = pageRight.html;
+          pageNumR.textContent = rightPageNum;
+          titleR.textContent = `${pageRight.chapterTitle}`;
+        } else {
+          bodyR.innerHTML = '<div style="text-align:center; padding: 60px 0; color:var(--text-muted); font-style:italic;">— 本书完结 谨献恩典之主 —</div>';
+          pageNumR.textContent = '';
+          titleR.textContent = '';
+        }
+
+        document.getElementById('lbl-cur-spread').textContent = `第 ${leftPageNum}${pageRight ? '-' + rightPageNum : ''} 页`;
+        document.getElementById('lbl-total-spreads').textContent = `共 ${PAGES.length} 页`;
+        const pct = Math.round((currentSpreadIdx / totalSpreads) * 100);
+        document.getElementById('lbl-pct').textContent = `${pct}%`;
+        const slider = document.getElementById('spread-slider');
+        slider.min = 0;
+        slider.max = totalSpreads;
+        slider.value = currentSpreadIdx;
+      }
+
+      updateTocActive();
+      saveState();
+      resetIdleTimer();
+    }
+
+    /* ========================================================
+       PAGE NAVIGATION & INTERACTION
+       ======================================================== */
+    function goToBookHome() {
+      currentPageIdx = 0;
+      currentSpreadIdx = 0;
+      renderCurrentView();
+    }
+
+    function startReadingBook() {
+      currentPageIdx = 1;
+      currentSpreadIdx = 1;
+      renderCurrentView();
+    }
+
+    function goToChapter(chNum) {
+      closeAllModals();
+      const targetCh = BOOK.chapters.find(c => c.num === chNum);
+      if (targetCh && targetCh.startPage) {
+        currentPageIdx = targetCh.startPage;
+        currentSpreadIdx = Math.ceil(currentPageIdx / 2);
+        renderCurrentView();
+      }
+    }
+
+    function nextView() {
+      if (isSinglePageMode()) {
+        if (currentPageIdx < PAGES.length) {
+          currentPageIdx++;
+          renderCurrentView();
+        }
+      } else {
+        const totalSpreads = Math.ceil(PAGES.length / 2);
+        if (currentSpreadIdx < totalSpreads) {
+          currentSpreadIdx++;
+          currentPageIdx = (currentSpreadIdx * 2) - 1;
+          renderCurrentView();
+        }
+      }
+    }
+
+    function prevView() {
+      if (isSinglePageMode()) {
+        if (currentPageIdx > 0) {
+          currentPageIdx--;
+          renderCurrentView();
+        }
+      } else {
+        if (currentSpreadIdx > 0) {
+          currentSpreadIdx--;
+          currentPageIdx = currentSpreadIdx === 0 ? 0 : (currentSpreadIdx * 2) - 1;
+          renderCurrentView();
+        }
+      }
+    }
+
+    function jumpToView(val) {
+      val = parseInt(val, 10);
+      if (isSinglePageMode()) {
+        currentPageIdx = val;
+      } else {
+        currentSpreadIdx = val;
+        currentPageIdx = val === 0 ? 0 : (val * 2) - 1;
+      }
+      renderCurrentView();
+    }
+
+    function nextChapter() {
+      const curNum = getActiveChapterNum();
+      if (curNum < BOOK.chapters.length) {
+        goToChapter(curNum + 1);
+      }
+    }
+
+    function prevChapter() {
+      const curNum = getActiveChapterNum();
+      if (curNum > 1) {
+        goToChapter(curNum - 1);
+      } else {
+        goToBookHome();
+      }
+    }
+
+    /* ========================================================
+       TABLE OF CONTENTS DRAWER
+       ======================================================== */
+    function renderToc() {
+      const listEl = document.getElementById('toc-list');
+      if (!listEl) return;
+      let html = '';
+
+      // First entry is Book Home Page
+      html += `
+        <li class="toc-item ${currentPageIdx === 0 ? 'active' : ''}" onclick="goToBookHome()">
+          <span class="toc-item-title">📖 书籍首页 · 封面与卷目总览</span>
+          <span class="toc-item-page">首页</span>
+        </li>
+      `;
+
+      for (const ch of BOOK.chapters) {
+        const isAct = getActiveChapterNum() === ch.num && currentPageIdx > 0;
+        const pageLabel = ch.startPage ? `第 ${ch.startPage} 页` : '';
+        html += `
+          <li class="toc-item ${isAct ? 'active' : ''}" onclick="goToChapter(${ch.num})" data-title="${ch.title_zh.toLowerCase()} ${ch.title_en.toLowerCase()}">
+            <span class="toc-item-title">${ch.badge_label}：${ch.title_zh}</span>
+            <span class="toc-item-page">${pageLabel}</span>
+          </li>
+        `;
+      }
+      listEl.innerHTML = html;
+    }
+
+    function updateTocActive() {
+      const items = document.querySelectorAll('.toc-item');
+      const curCh = getActiveChapterNum();
+      items.forEach((item, idx) => {
+        if (idx === 0) {
+          item.classList.toggle('active', currentPageIdx === 0);
+        } else {
+          item.classList.toggle('active', currentPageIdx > 0 && curCh === idx);
+        }
+      });
+    }
+
+    function filterToc(keyword) {
+      const q = keyword.trim().toLowerCase();
+      const items = document.querySelectorAll('.toc-list .toc-item');
+      items.forEach((item, idx) => {
+        if (idx === 0) {
+          item.style.display = (q === '' || '书籍首页封面卷目'.includes(q)) ? 'flex' : 'none';
+          return;
+        }
+        const text = item.getAttribute('data-title') || '';
+        item.style.display = text.includes(q) ? 'flex' : 'none';
+      });
+    }
+
+    function openTocModal() {
+      closeAllModals();
+      document.getElementById('modal-backdrop').classList.add('open');
+      document.getElementById('toc-drawer').style.transform = 'translateX(0)';
+      document.getElementById('toc-search-input').focus();
+    }
+
+    function openSettingsModal() {
+      closeAllModals();
+      document.getElementById('modal-backdrop').classList.add('open');
+      document.getElementById('settings-popover').style.opacity = '1';
+      document.getElementById('settings-popover').style.pointerEvents = 'auto';
+    }
+
+    function closeAllModals() {
+      document.getElementById('modal-backdrop').classList.remove('open');
+      document.getElementById('toc-drawer').style.transform = 'translateX(-100%)';
+      document.getElementById('settings-popover').style.opacity = '0';
+      document.getElementById('settings-popover').style.pointerEvents = 'none';
+    }
+
+    /* ========================================================
+       PREFERENCES & TYPOGRAPHY
+       ======================================================== */
+    function setTheme(th) {
+      currentTheme = th;
+      document.body.className = `theme-${th}`;
+      document.querySelectorAll('.theme-opt').forEach(el => el.classList.remove('active'));
+      const activeBtn = document.getElementById(`th-${th}`);
+      if (activeBtn) activeBtn.classList.add('active');
+      savePreferences();
+    }
+
+    function adjustFontSize(delta) {
+      const newFs = Math.max(14, Math.min(24, currentFontSize + delta));
+      if (newFs !== currentFontSize) {
+        currentFontSize = newFs;
+        document.documentElement.style.setProperty('--body-fs', currentFontSize + 'px');
+        document.getElementById('fs-preview-val').textContent = currentFontSize + ' px';
+        savePreferences();
+        paginateAndRender();
+      }
+    }
+
+    function setFontFamily(ff) {
+      currentFontFamily = ff;
+      document.querySelectorAll('.seg-pills .seg-pill-btn').forEach(b => {
+        if (b.id && b.id.startsWith('ff-')) b.classList.remove('active');
+      });
+      const act = document.getElementById(`ff-${ff}`);
+      if (act) act.classList.add('active');
+      const bodyL = document.getElementById('body-left');
+      const bodyR = document.getElementById('body-right');
+      const ffVar = ff === 'kai' ? 'var(--font-kai)' : (ff === 'sans' ? 'var(--font-sans)' : 'var(--font-serif-zh)');
+      if (bodyL) bodyL.style.fontFamily = ffVar;
+      if (bodyR) bodyR.style.fontFamily = ffVar;
+      savePreferences();
+      paginateAndRender();
+    }
+
+    function setLineHeight(lh) {
+      currentLineHeight = lh;
+      document.querySelectorAll('.seg-pills .seg-pill-btn').forEach(b => {
+        if (b.id && b.id.startsWith('lh-')) b.classList.remove('active');
+      });
+      const tag = lh <= 1.65 ? 'compact' : (lh >= 1.9 ? 'relaxed' : 'normal');
+      const act = document.getElementById(`lh-${tag}`);
+      if (act) act.classList.add('active');
+      document.documentElement.style.setProperty('--body-lh', currentLineHeight);
+      savePreferences();
+      paginateAndRender();
+    }
+
+    function setLanguage(lang) {
+      if (currentLang === lang) return;
+      currentLang = lang;
+      document.getElementById('btn-lang-zh').classList.toggle('active', currentLang === 'zh');
+      document.getElementById('btn-lang-en').classList.toggle('active', currentLang === 'en');
+      const bodyL = document.getElementById('body-left');
+      const bodyR = document.getElementById('body-right');
+      if (bodyL) bodyL.classList.toggle('en-font', currentLang === 'en');
+      if (bodyR) bodyR.classList.toggle('en-font', currentLang === 'en');
+      savePreferences();
+      paginateAndRender();
+    }
+
+    /* ========================================================
+       SHARE & STANDALONE ISOLATION CONTROLLER
+       ======================================================== */
+    function copyIsolatedShareLink() {
+      const base = window.location.origin + window.location.pathname;
+      const shareUrl = `${base}?standalone=1`;
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        showToast('已复制本书专属阅读链接！');
+      }).catch(() => {
+        prompt('请复制以下专属链接：', shareUrl);
+      });
+    }
+
+    function showToast(text) {
+      const t = document.getElementById('toast-msg');
+      t.textContent = text;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2400);
+    }
+
+    /* ========================================================
+       KEYBOARD, SWIPE GESTURES & FULLSCREEN
+       ======================================================== */
+    function setupKeyboard() {
+      window.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+          e.preventDefault();
+          nextView();
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          prevView();
+        } else if (e.key === 't' || e.key === 'T') {
+          openTocModal();
+        } else if (e.key === 'Escape') {
+          closeAllModals();
+        } else if (e.key === 'f' || e.key === 'F') {
+          toggleFullscreen();
+        } else if (e.key === 'h' || e.key === 'H') {
+          goToBookHome();
+        }
+      });
+    }
+
+    function setupGestures() {
+      let touchStartX = 0;
+      let touchStartY = 0;
+      const stage = document.getElementById('stage');
+
+      stage.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      stage.addEventListener('touchend', (e) => {
+        if (e.changedTouches.length === 1) {
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          const dy = e.changedTouches[0].clientY - touchStartY;
+          // In Book Home on mobile, vertical scrolling takes precedence
+          if (currentPageIdx === 0 && isSinglePageMode()) {
+            if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+              if (dx < 0) nextView(); // Swipe left opens Chapter 1
+            }
+            return;
+          }
+
+          // Horizontal swipe to turn page
+          if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx < 0) nextView();
+            else prevView();
+          } else if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+            // Tap center to toggle HUD
+            toggleHud();
+          }
+        }
+      }, { passive: true });
+    }
+
+    /* Auto-hide HUD on idle reading */
+    let idleTimer = null;
+    function setupIdleTimer() {
+      window.addEventListener('mousemove', resetIdleTimer);
+      window.addEventListener('touchstart', resetIdleTimer, { passive: true });
+    }
+
+    function resetIdleTimer() {
+      document.getElementById('hud-top').classList.remove('hud-hidden');
+      document.getElementById('hud-bottom').classList.remove('hud-hidden');
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => {
+        // Auto-hide HUD only when reading body text, not on Book Home
+        if (currentPageIdx > 0 && currentSpreadIdx > 0) {
+          document.getElementById('hud-top').classList.add('hud-hidden');
+          document.getElementById('hud-bottom').classList.add('hud-hidden');
+        }
+      }, 5000);
+    }
+
+    function toggleHud() {
+      const top = document.getElementById('hud-top');
+      const bot = document.getElementById('hud-bottom');
+      const isHidden = top.classList.contains('hud-hidden');
+      if (isHidden) {
+        top.classList.remove('hud-hidden');
+        bot.classList.remove('hud-hidden');
+        resetIdleTimer();
+      } else {
+        top.classList.add('hud-hidden');
+        bot.classList.add('hud-hidden');
+      }
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+
+    function setupAutoFullscreen() {
+      // Double tap top area on mobile triggers clean fullscreen
+      let lastTap = 0;
+      document.addEventListener('touchend', (e) => {
+        const now = Date.now();
+        if (now - lastTap < 300 && e.clientY < 60) {
+          toggleFullscreen();
+        }
+        lastTap = now;
+      });
+    }
+
+    function applyResponsiveScale() {
+      const single = isSinglePageMode();
+      if (single) {
+        // Standard optimal mobile reading font size (WeChat Read & Apple Books standard: 18px, 1.78)
+        document.documentElement.style.setProperty('--body-fs', '18px');
+        document.documentElement.style.setProperty('--body-lh', '1.78');
+        currentFontSize = 18;
+        currentLineHeight = 1.78;
+      }
+    }
+
+    /* Persistence State */
+    function saveState() {
+      try {
+        localStorage.setItem('safety_certainty_enjoyment_paper_page', currentPageIdx);
+        localStorage.setItem('safety_certainty_enjoyment_paper_spread', currentSpreadIdx);
+      } catch (e) {}
+    }
+
+    function savePreferences() {
+      try {
+        localStorage.setItem('safety_certainty_enjoyment_paper_theme', currentTheme);
+        localStorage.setItem('safety_certainty_enjoyment_paper_fs', currentFontSize);
+        localStorage.setItem('safety_certainty_enjoyment_paper_ff', currentFontFamily);
+        localStorage.setItem('safety_certainty_enjoyment_paper_lh', currentLineHeight);
+        localStorage.setItem('safety_certainty_enjoyment_paper_lang', currentLang);
+      } catch (e) {}
+    }
+
+    function loadSavedState() {
+      try {
+        const p = localStorage.getItem('safety_certainty_enjoyment_paper_page');
+        if (p !== null) currentPageIdx = parseInt(p, 10);
+        const s = localStorage.getItem('safety_certainty_enjoyment_paper_spread');
+        if (s !== null) currentSpreadIdx = parseInt(s, 10);
+
+        const savedTh = localStorage.getItem('safety_certainty_enjoyment_paper_theme');
+        if (savedTh) setTheme(savedTh);
+
+        const savedFs = localStorage.getItem('safety_certainty_enjoyment_paper_fs');
+        if (savedFs) adjustFontSize(parseFloat(savedFs) - currentFontSize);
+
+        const savedFf = localStorage.getItem('safety_certainty_enjoyment_paper_ff');
+        if (savedFf) setFontFamily(savedFf);
+
+        const savedLh = localStorage.getItem('safety_certainty_enjoyment_paper_lh');
+        if (savedLh) setLineHeight(parseFloat(savedLh));
+
+        const savedLang = localStorage.getItem('safety_certainty_enjoyment_paper_lang');
+        if (savedLang) {
+          currentLang = savedLang;
+          document.getElementById('btn-lang-zh').classList.toggle('active', currentLang === 'zh');
+          document.getElementById('btn-lang-en').classList.toggle('active', currentLang === 'en');
+        }
+      } catch (e) {}
+    }
+
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        paginateAndRender();
+      }, 150);
+    });
+
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

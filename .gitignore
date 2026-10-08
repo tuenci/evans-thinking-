@@ -1,0 +1,17 @@
+# OS and Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Cloudflare & Node runtime
+.wrangler/
+node_modules/
+
+# Scratch & Temporary Folders
+scratch/
+Google云端硬盘上传发布包/
+*.original_backup
+
+# Large archive packages (>50MB)
+*.zip

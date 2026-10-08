@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evan's Thinking · 思考教会，实践牧会</title>
+<meta name="description" content="Evan's Thinking：思考教会，实践牧会。立足北美华人教会，记录牧会实践，探索教会建造，分享课程与培训。Church · Ministry · Formation · Resources">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+  :root {
+    /* 核心色彩系统：纸墨神学与典籍微光 (Heritage Ink & Paper Palette) */
+    --color-ink: #181B1B;             /* 主墨色：沉稳典雅的思想黑 */
+    --color-ink-muted: #555D5B;       /* 次级墨灰：舒适耐看，适合长篇阅读 */
+    --color-ink-light: #7E8684;       /* 辅助浅墨：标注与微信息 */
+    --color-bronze: #9E7422;          /* 典籍古铜金：微光沉淀，对比度充足 */
+    --color-bronze-dark: #7D5B18;     /* 深古铜金：悬浮与强调 */
+    --color-bronze-soft: rgba(158, 116, 34, 0.08); /* 极浅金铜底色 */
+    --color-bronze-border: rgba(158, 116, 34, 0.22);
+    
+    /* 纸张与表面层次 */
+    --bg-page: #F7F7F5;               /* 典藏纸白底色 */
+    --bg-card: #FFFFFF;               /* 洁净白卡片 */
+    --bg-hero: #161A19;               /* 主视觉深邃墨黑 */
+    --bg-card-subtle: #FBFBFA;        /* 微灰底色 */
+    --border-light: rgba(24, 27, 27, 0.08); /* 极细发丝线 */
+    --border-hover: rgba(24, 27, 27, 0.16);
+    
+    /* 文字色彩 */
+    --text-primary: #181B1B;
+    --text-secondary: #555D5B;
+    --text-tertiary: #7E8684;
+    --text-inverse: #FFFFFF;
+    --text-inverse-muted: rgba(255, 255, 255, 0.78);
+    
+    /* 字体系统：现代无衬线 + 人文经文衬线 */
+    --font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --font-serif: "Noto Serif SC", "Songti SC", "Source Han Serif SC", "STSong", Georgia, "Times New Roman", serif;
+    
+    /* 空间与阴影 */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 9999px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.03);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.06);
+    --shadow-dropdown: 0 16px 36px rgba(0, 0, 0, 0.08);
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-page);
+  }
+
+  body {
+    font-family: var(--font-ui);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 顶部全宽导航栏 (Top Navigation Bar) - 极简毛玻璃白底 */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-light);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
+  }
+  .header-inner {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--color-ink);
+  }
+  .brand-logo-seal {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--color-ink);
+    color: #FAF9F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .brand-text-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--color-ink);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .brand-tagline {
+    font-size: 11.5px;
+    color: var(--color-ink-muted);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  /* 导航栏与下拉菜单系统 */
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 64px;
+  }
+  .nav-item-dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .nav-link-item {
+    color: var(--color-ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 8px;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.18s ease;
+    cursor: pointer;
+  }
+  .nav-link-item:hover,
+  .nav-item-dropdown:hover .nav-link-item {
+    color: var(--color-bronze);
+  }
+  .nav-chevron {
+    font-size: 10px;
+    transition: transform 0.2s ease;
+    opacity: 0.55;
+  }
+  .nav-item-dropdown:hover .nav-chevron {
+    transform: rotate(180deg);
+    opacity: 0.9;
+    color: var(--color-bronze);
+  }
+
+  /* 下拉菜单面板 - 典雅纯白悬浮卡片 (消除黑底突兀感) */
+  .nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-dropdown);
+    border-radius: var(--radius-md);
+    padding: 6px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1050;
+  }
+  .nav-item-dropdown:hover .nav-dropdown-menu,
+  .nav-item-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    color: var(--color-ink);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+  }
+  .nav-dropdown-item:hover {
+    background: rgba(0, 0, 0, 0.03);
+    color: var(--color-bronze);
+  }
+  .dropdown-item-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.4;
+  }
+  .dropdown-divider {
+    height: 1px;
+    background: var(--border-light);
+    margin: 5px 0;
+  }
+
+  /* 移动端汉堡切换按钮 */
+  .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--color-ink);
+    cursor: pointer;
+    padding: 6px;
+    line-height: 1;
+  }
+
+  /* 主视觉大横幅 (Contemplative Editorial Hero Banner) */
+  .home-banner {
+    background: linear-gradient(180deg, #151818 0%, #1D2221 100%);
+    color: #FFFFFF;
+    position: relative;
+    padding: 72px 24px 76px 24px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(158, 116, 34, 0.25);
+  }
+  .banner-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(229, 184, 105, 0.1);
+    border: 1px solid rgba(229, 184, 105, 0.28);
+    color: #E5B869;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 4px 16px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 22px;
+  }
+  .banner-title {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+    margin: 0 0 14px 0;
+    color: #FFFFFF;
+  }
+  .banner-tagline {
+    font-size: 23px;
+    font-weight: 600;
+    color: #E5B869;
+    margin: 0 0 22px 0;
+    letter-spacing: 0.02em;
+  }
+  .banner-desc {
+    font-size: 15.5px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto 28px auto;
+    font-weight: 400;
+  }
+  .banner-pillars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+  }
+  .pillar-dot {
+    color: rgba(229, 184, 105, 0.65);
+    font-size: 10px;
+  }
+
+  /* 经文金句条 (Scripture Banner) - 人文衬线体与典藏温润白 */
+  .scripture-strip {
+    background: #FAF9F6;
+    border-bottom: 1px solid var(--border-light);
+    padding: 26px 24px;
+    text-align: center;
+  }
+  .scripture-container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .scripture-quote {
+    font-family: var(--font-serif);
+    font-size: 17.5px;
+    font-weight: 600;
+    color: var(--color-ink);
+    line-height: 1.7;
+    margin: 0 0 5px 0;
+    letter-spacing: 0.02em;
+  }
+  .scripture-quote span.gold {
+    color: #8C6418;
+    font-weight: 600;
+  }
+  .scripture-ref {
+    font-size: 12px;
+    color: var(--color-ink-muted);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin: 0;
+  }
+
+  /* 内容容器 */
+  .content-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 48px 24px 80px 24px;
+  }
+
+  /* 极简栏目标题与引言 (Section Headers) */
+  .section-block {
+    margin-bottom: 68px;
+    scroll-margin-top: 80px;
+  }
+  .section-header {
+    margin-bottom: 22px;
+  }
+  .section-label {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-bronze);
+    margin-bottom: 6px;
+  }
+  .section-main-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-ink);
+    margin: 0 0 6px 0;
+    letter-spacing: -0.015em;
+  }
+  .section-sub-desc {
+    font-size: 13.5px;
+    color: var(--color-ink-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* 栏目一：典藏书籍图片展台 (Pure Image Showcase) */
+  .books-pure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    align-items: start;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .book-pure-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .book-pure-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1024 / 848;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    background: transparent !important;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .book-pure-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+    border-color: rgba(158, 116, 34, 0.3);
+  }
+  .book-pure-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1024 / 848;
+    object-fit: cover;
+    display: block;
+    border: none !important;
+  }
+  .book-pure-cta {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+  .btn-read-pure {
+    background: #F1F2F2;
+    color: #181B1B;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+    letter-spacing: normal;
+  }
+  .btn-read-pure:hover {
+    background: #E5E7E7;
+    color: #000000;
+    border-color: rgba(0, 0, 0, 0.16);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  .btn-read-paper {
+    background: rgba(201, 138, 44, 0.1);
+    color: #9E7422;
+    border: 1px solid rgba(201, 138, 44, 0.28);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+    letter-spacing: normal;
+  }
+  .btn-read-paper:hover {
+    background: rgba(201, 138, 44, 0.2);
+    color: #805B15;
+    border-color: rgba(201, 138, 44, 0.45);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(201, 138, 44, 0.2);
+  }
+
+  /* 栏目二：诗歌宝藏纯立体书影展台 (Pure 3D Book Showcase) */
+  .hymn-single-pure-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .hymn-single-book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+  }
+  .hymn-single-book-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 741 / 1024;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+  }
+  .hymn-single-book-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16);
+    border-color: rgba(158, 116, 34, 0.35);
+  }
+  .hymn-single-book-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 741 / 1024;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* 栏目三：讲台影音 - 纯视频画面极简陈列 (Pure Video Screens) */
+  .video-pure-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: start;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .video-pure-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #000000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .video-pure-frame:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    border-color: rgba(158, 116, 34, 0.35);
+  }
+  .video-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+  .video-pure-frame:hover .video-cover-img {
+    transform: scale(1.03);
+  }
+  .video-play-overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease;
+  }
+  .video-pure-frame:hover .video-play-overlay {
+    background: rgba(0, 0, 0, 0.12);
+  }
+  /* 极简纯粹播放键：仅呈现独立三角形播放键（去圆环线框，100%零遮挡画面） */
+  .video-custom-play-btn {
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .video-custom-play-btn svg {
+    width: 34px;
+    height: 34px;
+    fill: rgba(255, 255, 255, 0.95);
+    stroke: rgba(255, 255, 255, 0.95);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7));
+    transition: all 0.25s ease;
+  }
+  .video-pure-frame:hover .video-custom-play-btn {
+    transform: scale(1.15);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    filter: none;
+  }
+  .video-pure-frame:hover .video-custom-play-btn svg {
+    fill: #E5B869;
+    stroke: #E5B869;
+    filter: drop-shadow(0 4px 14px rgba(229, 184, 105, 0.65));
+  }
+  .video-pure-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  @media (max-width: 900px) {
+    .video-pure-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  /* 栏目四与五：专栏文章与门训课程 (Articles & Courses) */
+  .grid-three-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+  }
+  .bol-article-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.22s ease;
+  }
+  .bol-article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--border-hover);
+  }
+  .card-top-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .status-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--color-bronze-soft);
+    color: var(--color-bronze-dark);
+    letter-spacing: 0.02em;
+  }
+  .topic-tag {
+    font-size: 11.5px;
+    color: var(--color-ink-light);
+    font-weight: 500;
+  }
+  .card-heading {
+    font-size: 16.5px;
+    font-weight: 600;
+    color: var(--color-ink);
+    margin: 0 0 10px 0;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+  .card-excerpt {
+    font-size: 13px;
+    color: var(--color-ink-muted);
+    line-height: 1.7;
+    margin: 0 0 18px 0;
+    flex: 1;
+  }
+  .course-syllabus-box {
+    background: #F9F9F8;
+    border-left: 2px solid var(--color-bronze);
+    padding: 8px 12px;
+    margin-bottom: 18px;
+    font-size: 11.5px;
+    color: var(--color-ink-muted);
+    line-height: 1.6;
+    border-radius: 0 6px 6px 0;
+  }
+  .syllabus-label {
+    font-weight: 600;
+    color: var(--color-ink);
+    margin-bottom: 2px;
+  }
+  .bol-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--color-bronze);
+    text-decoration: none;
+    transition: all 0.18s ease;
+  }
+  .bol-more-link:hover {
+    color: var(--color-bronze-dark);
+    transform: translateX(2px);
+  }
+
+  /* 网站底栏 (Minimalist Sophisticated Dark Footer) */
+  .site-footer {
+    background: #141716;
+    color: #FFFFFF;
+    padding: 52px 24px 32px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+  }
+  .footer-inner {
+    max-width: 680px;
+    margin: 0 auto 36px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-brand-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.01em;
+  }
+  .footer-brand-sub {
+    font-size: 13px;
+    color: #E5B869;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .footer-brand-desc {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.75;
+    margin: 0 0 16px 0;
+  }
+  .footer-pillars-tag {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(229, 184, 105, 0.85);
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+  }
+  .footer-social-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .social-icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .social-icon-btn:hover {
+    background: #E5B869;
+    color: #141716;
+    transform: translateY(-2px);
+  }
+  .footer-bottom-bar {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+  }
+  .footer-bottom-bar span.gold {
+    color: #E5B869;
+    font-weight: 500;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .site-header {
+      height: 56px;
+    }
+    .header-inner {
+      padding: 0 16px;
+    }
+    .mobile-menu-btn {
+      display: block;
+    }
+    .header-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-light);
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px 16px 16px 16px;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+      display: none;
+      height: auto;
+    }
+    .header-nav.mobile-open {
+      display: flex;
+    }
+    .nav-item-dropdown {
+      flex-direction: column;
+      align-items: stretch;
+      height: auto;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 4px 0;
+    }
+    .nav-item-dropdown:last-child {
+      border-bottom: none;
+    }
+    .nav-link-item {
+      padding: 12px 0;
+      justify-content: space-between;
+      font-size: 14.5px;
+      width: 100%;
+    }
+    .nav-dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border-radius: 8px;
+      margin: 4px 0 10px 0;
+      background: #F8F9FA;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+    .home-banner {
+      padding: 44px 16px 50px 16px;
+    }
+    .banner-title {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .banner-tagline {
+      font-size: 19px;
+      margin-bottom: 16px;
+    }
+    .banner-desc {
+      font-size: 14.5px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+    .banner-pillars {
+      font-size: 11.5px;
+      gap: 8px;
+    }
+    .content-wrapper {
+      padding: 32px 16px 60px 16px;
+    }
+    .books-pure-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .footer-bottom-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- 顶部全宽导航栏 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="site-brand">
+      <div class="brand-logo-seal">E</div>
+      <div class="brand-text-group">
+        <span class="brand-title">Evan's Thinking</span>
+        <span class="brand-tagline">思考教会 · 实践牧会</span>
+      </div>
+    </a>
+    <ul class="header-nav" id="header-nav">
+      <!-- 典藏文献 下拉菜单 -->
+      <li class="nav-item-dropdown">
+        <a href="#books" class="nav-link-item">
+          <span>典藏文献</span>
+          <span class="nav-chevron">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="reader.html" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>《门诺弟兄会信仰宣言》</span>
+            </div>
+          </a>
+          <a href="family_matters_reader.html" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>《属灵家事：走近门诺弟兄会》</span>
+            </div>
+          </a>
+          <a href="normal_christian_life_reader.html" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>《正常的基督徒生活》</span>
+            </div>
+          </a>
+          <a href="safety_certainty_enjoyment_reader.html" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>《救・知・乐》</span>
+            </div>
+          </a>
+          <a href="regeneration_reader.html" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>《重生真意》</span>
+            </div>
+          </a>
+          <a href="grace_abounding_reader.html" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>《丰盛的恩典》</span>
+            </div>
+          </a>
+          <a href="pilgrims_progress_reader.html" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>《天路历程》</span>
+            </div>
+          </a>
+        </div>
+      </li>
+
+      <!-- 诗歌宝藏 导航入口 -->
+      <li class="nav-item-dropdown">
+        <a href="hymns.html" class="nav-link-item">
+          <span>诗歌宝藏</span>
+        </a>
+      </li>
+
+      <!-- 讲台影音 下拉菜单 -->
+      <li class="nav-item-dropdown">
+        <a href="#media" class="nav-link-item">
+          <span>讲台影音</span>
+          <span class="nav-chevron">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="#media" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>主日讲道实录（精选视频）</span>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="https://open.spotify.com/show/1JXIWbMmNn9S9UCA8CKcYT" target="_blank" rel="noopener noreferrer" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>Spotify 播客《水深之处》 ↗</span>
+            </div>
+          </a>
+          <a href="https://youtube.com/@brother-tu?si=fcbqTzn-R8Y8G6yB" target="_blank" rel="noopener noreferrer" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>YouTube 影音频道 ↗</span>
+            </div>
+          </a>
+        </div>
+      </li>
+
+      <!-- 专栏文章 下拉菜单 -->
+      <li class="nav-item-dropdown">
+        <a href="#articles" class="nav-link-item">
+          <span>专栏文章</span>
+          <span class="nav-chevron">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="#articles" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>真理思考与神学随笔</span>
+            </div>
+          </a>
+          <a href="#articles" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>北美华人牧会前瞻</span>
+            </div>
+          </a>
+        </div>
+      </li>
+
+      <!-- 门训课程 下拉菜单 -->
+      <li class="nav-item-dropdown">
+        <a href="#courses" class="nav-link-item">
+          <span>门训课程</span>
+          <span class="nav-chevron">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="#courses" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>系统门徒培训体系</span>
+            </div>
+          </a>
+          <a href="#courses" class="nav-dropdown-item">
+            <div class="dropdown-item-title">
+              <span>同工团队建造专题</span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="展开导航菜单">☰</button>
+  </div>
+</header>
+
+<!-- 主视觉大横幅 (Contemplative Editorial Hero Banner) -->
+<section class="home-banner">
+  <div class="banner-inner">
+    <div class="banner-eyebrow">
+      <span>✦</span>
+      <span>EVAN'S THINKING · 个人思想空间</span>
+    </div>
+    <h1 class="banner-title">Evan's Thinking</h1>
+    <h2 class="banner-tagline">思考教会，实践牧会</h2>
+    <p class="banner-desc">
+      立足北美华人教会，<br>
+      记录牧会实践，探索教会建造，分享课程与培训。
+    </p>
+    <div class="banner-pillars">
+      <span>CHURCH · 教会</span>
+      <span class="pillar-dot">✦</span>
+      <span>MINISTRY · 牧会</span>
+      <span class="pillar-dot">✦</span>
+      <span>FORMATION · 门训</span>
+      <span class="pillar-dot">✦</span>
+      <span>RESOURCES · 典籍</span>
+    </div>
+  </div>
+</section>
+
+<!-- 经文金句条 (Scripture Banner) -->
+<section class="scripture-strip">
+  <div class="scripture-container">
+    <p class="scripture-quote">
+      「 <span class="gold">这样，你们不再作外人和客旅，是与圣徒同国，是神家里的人了。</span> 」
+    </p>
+    <p class="scripture-ref">以弗所书 2:19 · 圣经和合本</p>
+  </div>
+</section>
+
+<!-- 主内容区域 -->
+<div class="content-wrapper">
+
+  <!-- 栏目一：典藏文献 -->
+  <section class="section-block" id="books">
+    <div class="section-header">
+      <span class="section-label">Theological Heritage · 典藏文献</span>
+      <h2 class="section-main-title">信仰典藏与核心文献</h2>
+      <p class="section-sub-desc">系统译介与权威研读，提供原版注释、中英双语对照与教牧实践指引</p>
+    </div>
+
+    <!-- 典藏书籍图片展台（纯图片呈现，尺寸一致） -->
+    <div class="books-pure-grid">
+      <!-- 书籍一：《门诺弟兄会信仰宣言》 -->
+      <div class="book-pure-item">
+        <a href="reader.html" class="book-pure-link" title="点击开启《门诺弟兄会信仰宣言》在线研读">
+          <img src="mb_confession_book_cover.jpg" alt="门诺弟兄会信仰宣言：原版注释与教牧应用全集" class="book-pure-img" width="1024" height="848" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="reader.html" title="网页版">
+            💻 网页版
+          </a>
+          <a class="btn-read-paper" href="confession_paper.html" title="纸质版">
+            📖 纸质版
+          </a>
+        </div>
+      </div>
+
+      <!-- 书籍二：《属灵家事：走近门诺弟兄会》 -->
+      <div class="book-pure-item">
+        <a href="family_matters_reader.html" class="book-pure-link" title="点击开启《属灵家事：走近门诺弟兄会》在线研读">
+          <img src="family_matters_cover.jpg" alt="属灵家事：走近门诺弟兄会（美国修订版）" class="book-pure-img" width="1024" height="848" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="family_matters_reader.html" title="网页版">
+            💻 网页版
+          </a>
+          <a class="btn-read-paper" href="family_matters_paper.html" title="纸质版">
+            📖 纸质版
+          </a>
+        </div>
+      </div>
+
+      <!-- 书籍三：《正常的基督徒生活》 -->
+      <div class="book-pure-item">
+        <a href="normal_christian_life_reader.html" class="book-pure-link" title="点击开启《正常的基督徒生活》在线研读">
+          <img src="normal_christian_life_cover.jpg" alt="正常的基督徒生活：中英双语典藏版" class="book-pure-img" width="1024" height="848" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="normal_christian_life_reader.html" title="网页版">
+            💻 网页版
+          </a>
+          <a class="btn-read-paper" href="normal_christian_life_paper.html" title="纸质版">
+            📖 纸质版
+          </a>
+        </div>
+      </div>
+
+      <!-- 书籍四：《救・知・乐》 -->
+      <div class="book-pure-item">
+        <a href="safety_certainty_enjoyment_reader.html" class="book-pure-link" title="点击开启《救・知・乐》在线研读">
+          <img src="safety_certainty_book_cover.jpg" alt="救・知・乐：中英双语权威典藏版" class="book-pure-img" width="1024" height="848" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="safety_certainty_enjoyment_reader.html" title="网页版">
+            💻 网页版
+          </a>
+          <a class="btn-read-paper" href="safety_certainty_enjoyment_paper.html" title="纸质版">
+            📖 纸质版
+          </a>
+        </div>
+      </div>
+
+      <!-- 书籍五：《重生真意》 -->
+      <div class="book-pure-item">
+        <a href="regeneration_reader.html" class="book-pure-link" title="点击开启《重生真意》在线研读">
+          <img src="regeneration_cover.jpg" alt="重生真意：中英双语权威典藏版 · 王明道" class="book-pure-img" width="1024" height="768" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="regeneration_reader.html" title="网页版">
+            💻 网页版
+          </a>
+          <a class="btn-read-paper" href="regeneration_paper.html" title="纸质版">
+            📖 纸质版
+          </a>
+        </div>
+      </div>
+
+      <!-- 书籍六：《丰盛的恩典》 -->
+      <div class="book-pure-item">
+        <a href="grace_abounding_reader.html" class="book-pure-link" title="点击开启《丰盛的恩典》在线研读">
+          <img src="grace_abounding_cover.jpg" alt="丰盛的恩典：中英双语权威典藏版 · 约翰·本仁" class="book-pure-img" width="1024" height="768" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="grace_abounding_reader.html" title="网页版">
+            💻 网页版
+          </a>
+          <a class="btn-read-paper" href="grace_abounding_paper.html" title="纸质版">
+            📖 纸质版
+          </a>
+        </div>
+      </div>
+
+      <!-- 书籍七：《天路历程》 -->
+      <div class="book-pure-item">
+        <a href="pilgrims_progress_reader.html" class="book-pure-link" title="点击开启《天路历程》在线研读">
+          <img src="pilgrims_progress_cover.jpg" alt="天路历程：中英双语权威典藏版 · 约翰·本仁" class="book-pure-img" width="1024" height="768" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="pilgrims_progress_reader.html" title="网页版">
+            💻 网页版
+          </a>
+          <a class="btn-read-paper" href="pilgrims_progress_paper.html" title="纸质版">
+            📖 纸质版
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：诗歌宝藏 · 华人教会传唱诗歌选集 -->
+  <section class="section-block" id="hymns">
+    <div class="section-header">
+      <span class="section-label">Hymns &amp; Worship · 诗歌宝藏</span>
+      <h2 class="section-main-title">诗歌宝藏 · 华人教会传唱诗歌选集</h2>
+      <p class="section-sub-desc">精选适合华人教会、团契、诗班代代传唱的经典、现代诗歌。收录高清简谱、逐节大字歌词与纯正敬拜原声。</p>
+    </div>
+
+    <!-- 纯立体书籍展台：点击直达《诗歌宝藏》 -->
+    <div class="hymn-single-pure-showcase">
+      <div class="hymn-single-book-card">
+        <a href="hymns.html" class="hymn-single-book-link" title="点击开启《诗歌宝藏》在线研读与敬拜">
+          <img src="hymns_3d_cover.jpg" alt="诗歌宝藏：华人教会传唱诗歌选集" class="hymn-single-book-img" width="741" height="1024" loading="lazy">
+        </a>
+        <div class="book-pure-cta">
+          <a class="btn-read-pure" href="hymns.html">
+            在线研读 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：讲台影音 -->
+  <section class="section-block" id="media">
+    <div class="section-header">
+      <span class="section-label">MEDIA &amp; BROADCAST · 影音专区</span>
+      <h2 class="section-main-title">讲台影音</h2>
+    </div>
+
+    <!-- 纯视频画面极简展台（去红色图标 · 点击原位即时播放） -->
+    <div class="video-pure-grid">
+      <!-- 视频 1: 讲台信息｜总要救些人 -->
+      <div class="video-pure-frame" onclick="playPureVideo(this, 'eGWah1PMMRY', '讲台信息｜总要救些人')" title="点击播放：讲台信息｜总要救些人">
+        <img src="video_cover_1.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/eGWah1PMMRY/sddefault.jpg'" class="video-cover-img" alt="讲台信息｜总要救些人" loading="lazy">
+        <div class="video-play-overlay">
+          <div class="video-custom-play-btn" aria-label="播放视频">
+            <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"></polygon></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 视频 2: 讲台信息｜在比较中能否活出豁达 -->
+      <div class="video-pure-frame" onclick="playPureVideo(this, '7QiOpTWtYj8', '讲台信息｜在比较中能否活出豁达')" title="点击播放：讲台信息｜在比较中能否活出豁达">
+        <img src="video_cover_2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/7QiOpTWtYj8/sddefault.jpg'" class="video-cover-img" alt="讲台信息｜在比较中能否活出豁达" loading="lazy">
+        <div class="video-play-overlay">
+          <div class="video-custom-play-btn" aria-label="播放视频">
+            <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"></polygon></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 视频 3: 同工建造｜认识主的所是：你的膏油馨香 -->
+      <div class="video-pure-frame" onclick="playPureVideo(this, 'GYSB8VfdJY0', '同工建造｜认识主的所是：你的膏油馨香')" title="点击播放：同工建造｜认识主的所是：你的膏油馨香">
+        <img src="video_cover_3.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/GYSB8VfdJY0/sddefault.jpg'" class="video-cover-img" alt="同工建造｜认识主的所是：你的膏油馨香" loading="lazy">
+        <div class="video-play-overlay">
+          <div class="video-custom-play-btn" aria-label="播放视频">
+            <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"></polygon></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：专栏文章与牧会前瞻 -->
+  <section class="section-block" id="articles">
+    <div class="section-header">
+      <span class="section-label">Articles &amp; Reflections · 真理思考</span>
+      <h2 class="section-main-title">专栏文章与牧会前瞻</h2>
+      <p class="section-sub-desc">扎根圣经的系统神学思考、现实处境中的门徒生命与教牧随笔</p>
+    </div>
+
+    <div class="grid-three-col">
+      <!-- Article Card 1 -->
+      <div class="bol-article-card">
+        <div class="card-top-badge">
+          <span class="status-tag">撰拟中</span>
+          <span class="topic-tag">神学释经 · 基督中心</span>
+        </div>
+        <h3 class="card-heading">道成了肉身：从文本字句到现实生活的信仰落地</h3>
+        <p class="card-excerpt">
+          福音不仅停留在观念和道理中，而是真实进入人的家庭、婚姻、关系与日常生活，使人在现实处境中经历基督生命的更新与掌权。
+        </p>
+        <div class="bol-more-link">文稿审定中 · 即将上线 →</div>
+      </div>
+
+      <!-- Article Card 2 -->
+      <div class="bol-article-card">
+        <div class="card-top-badge">
+          <span class="status-tag">撰拟中</span>
+          <span class="topic-tag">教牧反思 · 圣徒相通</span>
+        </div>
+        <h3 class="card-heading">在喧嚣世代建造主荣耀的教会：北美华人教会的牧养反思</h3>
+        <p class="card-excerpt">
+          这里所关注的，不只是知识与人数的增加，更是生命真实的改变；不只是个人属灵追求，更是教会群体的真实建造。
+        </p>
+        <div class="bol-more-link">文稿审定中 · 即将上线 →</div>
+      </div>
+
+      <!-- Article Card 3 -->
+      <div class="bol-article-card">
+        <div class="card-top-badge">
+          <span class="status-tag">撰拟中</span>
+          <span class="topic-tag">教会历史 · 门徒见证</span>
+        </div>
+        <h3 class="card-heading">和平、门徒生涯与信徒团体：重访再洗礼派信仰遗产</h3>
+        <p class="card-excerpt">
+          结合门诺弟兄会信仰宣言研读，探讨当代基督徒如何在社会与世俗环境中，活出纯粹、坚毅的和平非抵抗与门徒见证。
+        </p>
+        <div class="bol-more-link">文稿审定中 · 即将上线 →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：培训课程与门徒体系 -->
+  <section class="section-block" id="courses">
+    <div class="section-header">
+      <span class="section-label">Training &amp; Formation · 门徒装备</span>
+      <h2 class="section-main-title">培训课程与门徒体系</h2>
+      <p class="section-sub-desc">体系化信徒造就、同工装备与提摩太培育计划</p>
+    </div>
+
+    <div class="grid-three-col">
+      <!-- Course Card 1 -->
+      <div class="bol-article-card">
+        <div class="card-top-badge">
+          <span class="status-tag">筹备中</span>
+          <span class="topic-tag">基础门训系列</span>
+        </div>
+        <h3 class="card-heading">初信扎根与门徒生涯实操</h3>
+        <p class="card-excerpt">
+          面向初信圣徒与受洗学员的系统门徒训练，建立稳固的信仰基石与属灵生命习惯。
+        </p>
+        <div class="course-syllabus-box">
+          <div class="syllabus-label">课程大纲规划：</div>
+          救恩确据与重生 · 读经祷告之道 · 圣灵生活与试探 · 彼此相爱与团契 · 遵主使命与见证
+        </div>
+        <div class="bol-more-link">教案筹备中 · 敬请期待 →</div>
+      </div>
+
+      <!-- Course Card 2 -->
+      <div class="bol-article-card">
+        <div class="card-top-badge">
+          <span class="status-tag">筹备中</span>
+          <span class="topic-tag">系统释经系列</span>
+        </div>
+        <h3 class="card-heading">以基督为中心的圣经全景释经</h3>
+        <p class="card-excerpt">
+          贯穿新旧约 66 卷书的救赎历史脉络，帮助信徒掌握以基督为中心解经与实际应用的钥匙。
+        </p>
+        <div class="course-syllabus-box">
+          <div class="syllabus-label">课程大纲规划：</div>
+          创世与堕落 · 盟约与律法 · 先知与盼望 · 福音书基督 · 书信真理与终末得胜
+        </div>
+        <div class="bol-more-link">教案筹备中 · 敬请期待 →</div>
+      </div>
+
+      <!-- Course Card 3 -->
+      <div class="bol-article-card">
+        <div class="card-top-badge">
+          <span class="status-tag">筹备中</span>
+          <span class="topic-tag">同工领袖装备</span>
+        </div>
+        <h3 class="card-heading">提摩太培训：圣经教导与教牧陪伴</h3>
+        <p class="card-excerpt">
+          面向教会核心同工与小组长的体系化培育，强调生命品格、圣经真理阐述与牧养陪伴。
+        </p>
+        <div class="course-syllabus-box">
+          <div class="syllabus-label">课程大纲规划：</div>
+          同工品格与生命 · 圣经教导能力 · 属灵陪伴辅导 · 团队配搭服事 · 门徒倍增实践
+        </div>
+        <div class="bol-more-link">教案筹备中 · 敬请期待 →</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- 网站底栏 (Ultra-Minimalist Sophisticated Dark Footer) -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand-title">Evan's Thinking</div>
+    <div class="footer-brand-sub">思考教会 · 实践牧会</div>
+    <p class="footer-brand-desc">
+      立足北美华人教会，记录牧会实践，探索教会建造，分享课程与培训。
+    </p>
+    <div class="footer-pillars-tag">CHURCH · MINISTRY · FORMATION · RESOURCES</div>
+    <div class="footer-social-row">
+      <a class="social-icon-btn" href="https://open.spotify.com/show/1JXIWbMmNn9S9UCA8CKcYT" target="_blank" rel="noopener noreferrer" title="Spotify 播客">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.524 4.477 10 10 10s10-4.476 10-10c0-5.523-4.477-10-10-10zm4.586 14.424c-.18.295-.563.387-.857.207-2.35-1.435-5.308-1.76-8.793-.963-.335.077-.67-.133-.746-.469-.077-.334.132-.67.467-.747 3.808-.87 7.076-.496 9.721 1.117.295.18.388.563.208.855zm1.226-2.723c-.227.369-.714.484-1.083.256-2.69-1.653-6.79-2.132-9.972-1.166-.413.126-.851-.107-.977-.52-.126-.413.107-.852.52-.977 3.633-1.103 8.147-.568 11.256 1.324.369.227.484.714.256 1.083zm.106-2.835C14.692 8.95 9.375 8.775 6.297 9.71c-.494.15-1.016-.129-1.166-.623-.15-.494.129-1.016.623-1.166 3.532-1.072 9.404-.866 13.115 1.338.445.264.59.838.327 1.282-.264.444-.838.59-1.282.326z"/></svg>
+      </a>
+      <a class="social-icon-btn" href="https://youtube.com/@brother-tu?si=fcbqTzn-R8Y8G6yB" target="_blank" rel="noopener noreferrer" title="YouTube 频道">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <div>© 2026 Evan's Thinking. All rights reserved. <span class="gold">思考教会 · 实践牧会</span></div>
+    <div>Cloudflare Pages 全球 CDN 加速部署 · 专属永久空间: evans-thinking.pages.dev</div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav() {
+    const nav = document.getElementById('header-nav');
+    if (nav) nav.classList.toggle('mobile-open');
+  }
+
+  function playPureVideo(container, videoId, title) {
+    container.innerHTML = `<iframe
+      src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1"
+      title="${title}"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; display:block;">
+    </iframe>`;
+    container.style.cursor = 'default';
+    container.onclick = null;
+  }
+</script>
+
+</body>
+</html>

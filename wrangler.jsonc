@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "evans-thinking",
+  "pages_build_output_dir": "pages_dist",
+  "compatibility_date": "2026-09-28"
+}
