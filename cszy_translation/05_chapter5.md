@@ -44,7 +44,7 @@ Because many devout believers do not clearly grasp this truth, they bring upon t
 ---
 
 ### 【中文】
-如果他们听过什么人讲道说:「得了重生的人一定不能再犯罪。」他们更会信自己是末曾得重生了。他们既然以为自己末得重生(其实他们已经得了重生)，自然要再去追求重生的经验。他们再去悔改，再去信主，再恳切的在神面前为罪自卑。他们想现在他们得重生了，今后可以不再犯罪了。不料过了一些日子他们又犯了罪。到这时他们真觉得莫名其妙。他们想自己到底有没有得了重生呢？若说没有，自己真有过重生的经验；若说有，怎么到如今还能犯罪呢？一个信徒走到这种地步是最容易失望跌倒的，或者他竟会完全疑惑他所信的道理来也未可知。
+如果他们听过什么人讲道说:「得了重生的人一定不能再犯罪。」他们更会信自己是末曾得重生了。他们既然以为自己未得重生(其实他们已经得了重生)，自然要再去追求重生的经验。他们再去悔改，再去信主，再恳切的在神面前为罪自卑。他们想现在他们得重生了，今后可以不再犯罪了。不料过了一些日子他们又犯了罪。到这时他们真觉得莫名其妙。他们想自己到底有没有得了重生呢？若说没有，自己真有过重生的经验；若说有，怎么到如今还能犯罪呢？一个信徒走到这种地步是最容易失望跌倒的，或者他竟会完全疑惑他所信的道理来也未可知。
 
 ### 【English】
 If they have listened to preachers who proclaim, "A born-again person can never sin again," they become all the more convinced that they have never experienced the new birth. Imagining that they are still unregenerate (when in truth they have already been born again), they naturally set out once more to seek the experience of regeneration. They repent anew, they believe anew, and they humble themselves before God in deep contrition for their sins. They think to themselves, "Now at last I am born again, and from now on I will never sin again!" But alas, after a while, they fall into sin once more. At this point, they are completely bewildered. They wonder in agony: "Am I born again or not? If I say no, I have truly tasted the undeniable experience of the new birth; if I say yes, how is it that I am still capable of sinning?" When a believer reaches such a crisis, he is on the brink of despair and ruin, and may even end up doubting the very faith he has embraced.
@@ -68,7 +68,7 @@ How do the Holy Scriptures answer this question?
 ---
 
 ### 【中文】
-「我们若谎自己无罪，便是自欺，真理不在我们心里了。我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义。」(约壹一8～9)
+「我们若说自己无罪，便是自欺，真理不在我们心里了。我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义。」(约壹一8～9)
 
 ### 【English】
 "If we say we have no sin, we deceive ourselves, and the truth is not in us. If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness." (1 John 1:8–9)
@@ -84,7 +84,7 @@ Who are the "we" spoken of in this passage? This epistle of John was written not
 ---
 
 ### 【中文】
-往下他又告诉我们一个得洁净的方法，「我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义。」这里约翰说我们知道我们有罪，但不必绝望，不必畏惧，只要我们能认自己的罪，就必得看赦免和洗净。
+往下他又告诉我们一个得洁净的方法，「我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义。」这里约翰说我们知道我们有罪，但不必绝望，不必畏惧，只要我们能认自己的罪，就必得着赦免和洗净。
 
 ### 【English】
 Proceeding further, he reveals the divine remedy for cleansing: "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness." Here John tells us that although we recognize sin within ourselves, we need not plunge into despair or terror; if only we confess our sins, we will surely receive forgiveness and cleansing.
@@ -292,7 +292,7 @@ Let us now turn from the First Epistle of John and read several passages from th
 ---
 
 ### 【中文】
-「人应当自己省察，然后吃这饼、喝这坏。因为人吃喝，若不分辨是主的身体，就是吃喝自己的罪了。因此，在你们中间有好些顿弱的与患病的，死(原文是睡)的也不少。」(林前一一28－30)
+「人应当自己省察，然后吃这饼、喝这杯。因为人吃喝，若不分辨是主的身体，就是吃喝自己的罪了。因此，在你们中间有好些软弱的与患病的，死(原文是睡)的也不少。」(林前一一28－30)
 
 ### 【English】
 "Let a person examine himself, then, and so eat of the bread and drink of the cup. For anyone who eats and drinks without discerning the body eats and drinks judgment on himself. That is why many of you are weak and ill, and some have died [literally: fallen asleep]." (1 Corinthians 11:28–30)
@@ -324,7 +324,7 @@ Let us read several passages from yet another epistle:
 ---
 
 ### 【中文】
-「奉神旨意，作基督耶稣使徒的保罗，写信给在以弗所的圣徒，就是在基督耶稣里有忠心的人。」(弗一l)
+「奉神旨意，作基督耶稣使徒的保罗，写信给在以弗所的圣徒，就是在基督耶稣里有忠心的人。」(弗一1)
 
 ### 【English】
 "Paul, an apostle of Christ Jesus by the will of God, To the saints who are in Ephesus, and are faithful in Christ Jesus." (Ephesians 1:1)
@@ -340,7 +340,7 @@ Let us read several passages from yet another epistle:
 ---
 
 ### 【中文】
-保罗称以弗所的信徒为圣徒，为基督耶稣里有忠心的人，足证这些人不但已经得了重生，而且他们属灵的程度还很高。就是对这些人保罗写了上文所引的一大段教训。他劝他们「要弃绝谎言，各人与邻舍说实话」、「生气却不要犯罪」、「不可给魔鬼留地步」、「不要再偷」、「污秽的言语一句不可出口」、「不要啡神的圣灵担忧」。他又劝他们除掉「一切苦毒、恼恨、愤怒、嚷闹、毁谤，并一切的恶毒」。
+保罗称以弗所的信徒为圣徒，为基督耶稣里有忠心的人，足证这些人不但已经得了重生，而且他们属灵的程度还很高。就是对这些人保罗写了上文所引的一大段教训。他劝他们「要弃绝谎言，各人与邻舍说实话」、「生气却不要犯罪」、「不可给魔鬼留地步」、「不要再偷」、「污秽的言语一句不可出口」、「不要叫神的圣灵担忧」。他又劝他们除掉「一切苦毒、恼恨、愤怒、嚷闹、毁谤，并一切的恶毒」。
 
 ### 【English】
 Paul designates the Ephesian believers as "saints" and "faithful in Christ Jesus"—conclusive evidence that they were not only born again, but had attained a high degree of spiritual maturity. Yet it was to these very believers that Paul addressed the extended exhortation quoted above! He urges them: "Put away falsehood, let each one speak the truth with his neighbor," "Be angry and do not sin," "Give no opportunity to the devil," "Let the thief no longer steal," "Let no corrupting talk come out of your mouths," and "Do not grieve the Holy Spirit of God." He further exhorts them to put away "all bitterness, wrath, anger, clamor, slander, and malice."
@@ -356,7 +356,7 @@ If a person who is born again were incapable of committing sin, would not Paul's
 ---
 
 ### 【中文】
-我们不用劝诚一个哑巴儿童说:「不要说谎，不要骂人。」因为哑巴不会说话，他不能说谎，也不能骂人。我们也不用劝诫一个瞎眼的人说:「不要看淫秽的小说和引人犯罪的电影。」因为瞎子什么都看不见，根本不能看小说和电影。如果得了重生的人不能犯罪，保罗写这一大段教训不是和教训哑巴不要说谎、骂人，教训瞎子不要看诲淫的电影、小说一样的毫无意义了吗？
+我们不用劝诫一个哑巴儿童说:「不要说谎，不要骂人。」因为哑巴不会说话，他不能说谎，也不能骂人。我们也不用劝诫一个瞎眼的人说:「不要看淫秽的小说和引人犯罪的电影。」因为瞎子什么都看不见，根本不能看小说和电影。如果得了重生的人不能犯罪，保罗写这一大段教训不是和教训哑巴不要说谎、骂人，教训瞎子不要看诲淫的电影、小说一样的毫无意义了吗？
 
 ### 【English】
 We never need to admonish a mute child: "Do not tell lies; do not use profanity," for a mute cannot speak, and therefore cannot utter lies or curses. Nor do we need to warn a blind man: "Do not read lewd novels or watch corrupting films," for a blind man can see nothing, and is incapable of reading novels or watching films. If a born-again person were incapable of sinning, would not Paul's earnest admonitions be just as meaningless as commanding a mute not to swear, or ordering a blind man not to gaze at lustful images?
@@ -404,7 +404,7 @@ Let us now examine a passage recounting Paul's own personal experience:
 ---
 
 ### 【中文】
-无疑的，保罗这一段话是述说他重生以后所经过的一种战争的经验。他已经得了重生，他里面有一个新人。那个由神而生的里面的人喜欢神的律。「因为按着我里面的人，我是喜欢神的律。」但他「觉得肢体中另有个律」和他「心中的律交战，把他掳去」，叫他「附从那肢体中犯罪的律」。他陷在一种非常苦痛的境况中，这种境况是他在末得重生以前所末曾经历过的。他定意要为善，但是竟做不到，他决心离弃恶事，但他竟离弃不了，他不愿意随从那肢体中犯罪的律，但他竟被它掳去。他失去了自由，他惑到不可名状的苦痛和失望，以致他呼喊说:「我真是苦啊！谁能救我脱离这取死的身体呢？」
+无疑的，保罗这一段话是述说他重生以后所经过的一种战争的经验。他已经得了重生，他里面有一个新人。那个由神而生的里面的人喜欢神的律。「因为按着我里面的人，我是喜欢神的律。」但他「觉得肢体中另有个律」和他「心中的律交战，把他掳去」，叫他「附从那肢体中犯罪的律」。他陷在一种非常苦痛的境况中，这种境况是他在未得重生以前所未曾经历过的。他定意要为善，但是竟做不到，他决心离弃恶事，但他竟离弃不了，他不愿意随从那肢体中犯罪的律，但他竟被它掳去。他失去了自由，他惑到不可名状的苦痛和失望，以致他呼喊说:「我真是苦啊！谁能救我脱离这取死的身体呢？」
 
 ### 【English】
 Undoubtedly, this passage recounts the intense warfare experienced by Paul after he was born again. He was already regenerate; he possessed a new man within. That inner man, born of God, delighted in the law of God: "For I delight in the law of God, in my inner being." But at the same time, he possessed an old man—the flesh. The old man was contrary to the law of God, and continually dragged him into captivity to the law of sin, plunging him into agonizing distress.
@@ -460,7 +460,7 @@ Some cite this passage and say: "Does it not plainly state that 'no one born of 
 ---
 
 ### 【中文】
-一个人得了重生以后，那外面的人并末曾死去，乃是仍然存在那里，不过他里面却多了一个被神所生的「里面的人」。两个性情相反的人住在一处真是一件不幸的事。他们常常惹起争端，常常吵闹，这就是保罗所说:「因为按着我里面的人，我是喜欢神的律，但我觉得肢体中另有个律和我心中的律文战，把我掳丢，啡我附从那肢体中犯罪的律。」
+一个人得了重生以后，那外面的人并未曾死去，乃是仍然存在那里，不过他里面却多了一个被神所生的「里面的人」。两个性情相反的人住在一处真是一件不幸的事。他们常常惹起争端，常常吵闹，这就是保罗所说:「因为按着我里面的人，我是喜欢神的律，但我觉得肢体中另有个律和我心中的律交战，把我掳去，叫我附从那肢体中犯罪的律。」
 
 ### 【English】
 When a person is born again, his outer man does not drop dead; he remains right there. But within him there is now added an "inner man" brought forth by God. For two individuals of completely opposite natures to dwell under one roof is indeed a troublesome situation! They will inevitably engage in perpetual conflict.
@@ -468,7 +468,7 @@ When a person is born again, his outer man does not drop dead; he remains right 
 ---
 
 ### 【中文】
-一个得了重生的人是有两个人的——一个是外面的，一个是里面的。外面的人是从肉身生的，是污秽的、喜爱犯罪的，里面的人是从圣灵生的，是圣洁的、恨恶罪的，正是因为这个缘故，许多得了重生的人常惑到保罗在罗马书第七章所说的那种困难:「立志为善由得我，只是行出来由不得我，故此，我所愿意的善，我反不做，我所不愿意的恶，我倒去做。」
+一个得了重生的人是有两个人的——一个是外面的，一个是里面的。外面的人是从肉身生的，是污秽的、喜爱犯罪的，里面的人是从圣灵生的，是圣洁的、恨恶罪的，正是因为这个缘故，许多得了重生的人常感到保罗在罗马书第七章所说的那种困难:「立志为善由得我，只是行出来由不得我，故此，我所愿意的善，我反不做，我所不愿意的恶，我倒去做。」
 
 ### 【English】
 A born-again person possesses two distinct beings: one is outer, and one is inner. The outer man is born of the flesh—polluted and loving sin; the inner man is born of the Holy Spirit—holy and abhorring sin. Precisely for this reason, the moment a person is born again, the curtain rises on an intense, relentless civil war within his soul: "For the desires of the flesh are against the Spirit, and the desires of the Spirit are against the flesh, for these are opposed to each other, to keep you from doing the things you want to do." (Galatians 5:17).
@@ -476,7 +476,7 @@ A born-again person possesses two distinct beings: one is outer, and one is inne
 ---
 
 ### 【中文】
-许多实在得了重生的人因为不明白这个极大的真理，便陷在一种怀疑失望的苦境里。他们在悔改信主的时候，是那样的为罪忧伤痛悔，是那样破釜沉舟的定志要永远与罪断绝关系。他们想自己既然得了重生，有了新生命，并且又立定这样坚决的心志，从此一定可以完全脱离罪的束缚，作一个自由自在、圣洁无疵的人了。谁想到过了不多时竟遇着这样剧烈的战争，而且屡屡的遭遇异常苦痛的失败，这时他们真好似陷在五里雾中。他们心想若说自己未曾重生呢，却清清楚楚的有悔改得救的经验；若说自己得了重生呢，怎么现在竟会有这种剧烈的战争，而且又遭遇这种苦痛的失败呢？当他们陷在这种苦境中的时候，极容易受撒但的攻击，或是失丢信心，或是跌倒退后。只有真理的光能帮助他们看明白这究竟是怎么一回事。
+许多实在得了重生的人因为不明白这个极大的真理，便陷在一种怀疑失望的苦境里。他们在悔改信主的时候，是那样的为罪忧伤痛悔，是那样破釜沉舟的定志要永远与罪断绝关系。他们想自己既然得了重生，有了新生命，并且又立定这样坚决的心志，从此一定可以完全脱离罪的束缚，作一个自由自在、圣洁无疵的人了。谁想到过了不多时竟遇着这样剧烈的战争，而且屡屡的遭遇异常苦痛的失败，这时他们真好似陷在五里雾中。他们心想若说自己未曾重生呢，却清清楚楚的有悔改得救的经验；若说自己得了重生呢，怎么现在竟会有这种剧烈的战争，而且又遭遇这种苦痛的失败呢？当他们陷在这种苦境中的时候，极容易受撒但的攻击，或是失去信心，或是跌倒退后。只有真理的光能帮助他们看明白这究竟是怎么一回事。
 
 ### 【English】
 Many who are genuinely born again, because they do not comprehend this profound truth, sink into a pit of doubt and despair. When they first repented and believed, they mourned over their sins with such grief, burning all their bridges behind them to sever ties with iniquity forever. They assumed that having hated sin so fiercely and having embraced Christ so wholeheartedly, they would never stumble again. Yet after a season, they find themselves falling into sin once more, and when they sin, their agony is beyond words. Thereupon, they begin to question: "Was my repentance genuine? Did I truly receive the new birth? If I am born again, why do I still commit sin?"
@@ -484,7 +484,7 @@ Many who are genuinely born again, because they do not comprehend this profound 
 ---
 
 ### 【中文】
-我们若明白这新人与旧人交战的事，便晓得信徒有这种剧烈的战争不但不足以证明他们末得重生，反倒证明他实在是得了重生。
+我们若明白这新人与旧人交战的事，便晓得信徒有这种剧烈的战争不但不足以证明他们未得重生，反倒证明他实在是得了重生。
 
 ### 【English】
 If we understand this conflict between the new man and the old, we will realize that the presence of this fierce warfare within a believer, far from proving that he is unregenerate, serves as the most powerful proof that he is truly born again!
@@ -516,7 +516,7 @@ The unregenerate person not only sins, but loves to sin! Living in sin brings hi
 ---
 
 ### 【中文】
-大约我们都看见过羊与猪这两种家畜吧。这两种家畜中间有一种极显见的分别——前老喜爱洁净，后者喜爱污秽。因为羊的性情喜爱洁净，所以它愿意住在洁净的地方，吃洁净的食物，喝洁净的水。因为猪的性情喜爰污秽，所以它愿意住在污秽的地方，吃污秽的食物，喝污秽的水。
+大约我们都看见过羊与猪这两种家畜吧。这两种家畜中间有一种极显见的分别——前者喜爱洁净，后者喜爱污秽。因为羊的性情喜爱洁净，所以它愿意住在洁净的地方，吃洁净的食物，喝洁净的水。因为猪的性情喜爱污秽，所以它愿意住在污秽的地方，吃污秽的食物，喝污秽的水。
 
 ### 【English】
 We have all observed sheep and pigs. Between these two domestic animals there is a glaring, fundamental distinction of nature: the former loves cleanliness, while the latter delights in filth. Because the sheep's innate nature loves cleanliness, it seeks clean pasture, drinks clear water, and keeps its fleece white and pure.
@@ -548,7 +548,7 @@ With the pig, however, it is entirely the opposite! The pig loves the mud hole. 
 ---
 
 ### 【中文】
-得了重生的人与末得重生的人所有的一个大分别就是这个。一个得了重生的人好象一只羊，他有神的性情，所以他喜欢洁净，不过，他住在这样一个处处都是泥坑、陷阱的罪恶世界中，稍有不慎，便会落到罪恶的泥坑里，沾染上一些罪恶。但一个得了重生的人落在罪恶里正像一只羊落在泥坑里一般，他会感到不可名状的痛苦，不住 地从里面发出求救的呼声，他渴望从罪恶中得着释放和解救。一个末得重生的人就不是这样。他寻找机会去犯罪，以犯罪为乐。他在罪恶中正像一只猪在泥坑里一般的得意，如果有人哀怜他，设法救他脱离罪恶，他不但不乐意受那人的帮助，反倒以为那人要害他，是要羞辱他，是要损害他的利益和名誉，因此怒目相向，与那人为敌。这种情形我们不是屡次的看见吗？
+得了重生的人与未得重生的人所有的一个大分别就是这个。一个得了重生的人好像一只羊，他有神的性情，所以他喜欢洁净，不过，他住在这样一个处处都是泥坑、陷阱的罪恶世界中，稍有不慎，便会落到罪恶的泥坑里，沾染上一些罪恶。但一个得了重生的人落在罪恶里正像一只羊落在泥坑里一般，他会感到不可名状的痛苦，不住 地从里面发出求救的呼声，他渴望从罪恶中得着释放和解救。一个未得重生的人就不是这样。他寻找机会去犯罪，以犯罪为乐。他在罪恶中正像一只猪在泥坑里一般的得意，如果有人哀怜他，设法救他脱离罪恶，他不但不乐意受那人的帮助，反倒以为那人要害他，是要羞辱他，是要损害他的利益和名誉，因此怒目相向，与那人为敌。这种情形我们不是屡次的看见吗？
 
 ### 【English】
 Here lies the immense, unbridgeable gulf between the regenerate and the unregenerate! A born-again person is like a sheep: he possesses the divine nature of God, and therefore loves purity and holiness. However, dwelling in this fallen, sinful world full of pitfalls and snares, if he grows careless, his feet will slip into the muddy ditch of sin. When he falls, he suffers intense agony, bleats in sorrow to his Shepherd, and struggles to get out; having been cleansed, he exercises vigilance never to fall into that ditch again.
@@ -564,7 +564,7 @@ In former years, when I did not understand these truths, I naively assumed that 
 ---
 
 ### 【中文】
-察验一个人是否得了重生，不要只看他是否犯罪，更要紧的是看他对罪的态度如何。得了重生的人能犯罪，然而他们断不能喜爱犯罪。末得重生的人不但能犯罪，而且喜爱犯罪。这就是这两种人中间最大的一个分别。
+察验一个人是否得了重生，不要只看他是否犯罪，更要紧的是看他对罪的态度如何。得了重生的人能犯罪，然而他们断不能喜爱犯罪。未得重生的人不但能犯罪，而且喜爱犯罪。这就是这两种人中间最大的一个分别。
 
 ### 【English】
 In testing whether a person is truly born again, do not look merely at whether he has stumbled into sin; look far more at his attitude toward sin! A regenerate person can stumble into sin, but under no circumstances can he love sin. An unregenerate person not only sins, but revels in sin and makes it his home. This is the supreme criterion that divides the sheep from the swine.
@@ -572,7 +572,7 @@ In testing whether a person is truly born again, do not look merely at whether h
 ---
 
 ### 【中文】
-不引领人到基督面前使他悔改信主得看重生，只去改良一下他的环境，帮助他去掉一些外面的坏习惯嗜好，盼望他从此以后，可以作好人不再犯罪，这正像把一只猪从泥坑里拉出来，为它用净水洗浴，然后预备一间清洁的屋子，叫它住在里面一样。当这只猪住在这间清洁的屋子里的时候，它的外面实在变清洁了。但有一日看守的人忘记将门关好，这只猪便立时逃出去，一直跑回它从前所躺卧的泥坑中，恢复了它从前的污秽生活。
+不引领人到基督面前使他悔改信主得着重生，只去改良一下他的环境，帮助他去掉一些外面的坏习惯嗜好，盼望他从此以后，可以作好人不再犯罪，这正像把一只猪从泥坑里拉出来，为它用净水洗浴，然后预备一间清洁的屋子，叫它住在里面一样。当这只猪住在这间清洁的屋子里的时候，它的外面实在变清洁了。但有一日看守的人忘记将门关好，这只猪便立时逃出去，一直跑回它从前所躺卧的泥坑中，恢复了它从前的污秽生活。
 
 ### 【English】
 To refrain from leading a sinner to Christ for repentance, faith, and regeneration, and merely attempt to improve his outward environment, strip away a few bad habits, and hope that he will become a good man and sin no more—this is precisely like dragging a pig out of the mud, scrubbing it clean, and perfuming it. You have changed its outward appearance, but you have not changed its inward swine nature!

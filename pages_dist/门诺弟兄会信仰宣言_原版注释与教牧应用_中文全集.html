@@ -1985,7 +1985,7 @@
   <div class="top-toolbar" id="top-toolbar">
     <a class="tool-btn tool-portal-btn" href="index.html" title="返回 Evan's Thinking 首页">🏠 首页</a>
     <span class="toolbar-divider"></span>
-    <a href="confession_paper.html" class="tool-btn" title="切换至纸质书仿真实体阅览模式" style="background: rgba(201, 138, 44, 0.12); color: #C98A2C; border: 1px solid rgba(201, 138, 44, 0.35); font-weight: 600;">📖 纸质书版</a>
+    <a href="confession_paper.html" class="tool-btn" title="切换至纸质书仿真实体阅览模式" style="background: rgba(201, 138, 44, 0.12); color: #C98A2C; border: 1px solid rgba(201, 138, 44, 0.35); font-weight: 600;">📖 纸质版</a>
     <span class="toolbar-divider"></span>
     <button class="tool-btn" onclick="toggleSidebar()" title="展开/收起侧栏目录">☰ 目录</button>
     <div class="toolbar-divider"></div>
@@ -2019,7 +2019,7 @@
         </div>
         <div class="cover-quick-actions" style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
           <a href="#art-01" class="cover-btn cover-btn-primary" style="padding: 10px 22px; background: #C98A2C; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">开始研读全书 →</a>
-          <a href="confession_paper.html" class="cover-btn cover-btn-outline" style="padding: 10px 22px; border: 1px solid #C98A2C; color: #C98A2C; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; background: rgba(201, 138, 44, 0.08);">📖 纸质书排版版</a>
+          <a href="confession_paper.html" class="cover-btn cover-btn-outline" style="padding: 10px 22px; border: 1px solid #C98A2C; color: #C98A2C; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; background: rgba(201, 138, 44, 0.08);">📖 纸质版</a>
           <a href="index.html" class="cover-btn cover-btn-outline" style="padding: 10px 22px; border: 1px solid rgba(0,0,0,0.15); color: inherit; border-radius: 8px; text-decoration: none; font-size: 0.95rem;">返回文库首页</a>
         </div>
       </div>
@@ -7506,7 +7506,7 @@
 <ul>
 <li><strong>无障碍设施建设</strong>：对教会设施进行无障碍改造以便利肢体残障人士，是对他们在堂会大家庭中应有席位的实质认可与尊重。</li>
 <li><strong>特殊群体服事</strong>：为聋哑人及听障人士购置并维护辅助收听设备，能对这一常常被忽视的群体形成极其关键的服事纽带。</li>
-<li><strong>警惕排斥心态</strong>：若教会反对要求设置轮椅无障碍通道的建筑法规，这不仅在社区面前留下了极为负面的见证，甚至暗示出教会只欢迎身体“健全健全”的人。同理，如果在讲台上大声疾呼反对堕胎，却未能为主日学里的残疾儿童提供接纳的席位与专门的照护课程，就暴露了我们并未真正愿意在每一个人身上尊崇上帝的形象。蓄意将特定群体排除在教会事工的关照之外，在渴望万人都认识基督的上帝眼中，乃是严重的亏欠与罪过。</li>
+<li><strong>警惕排斥心态</strong>：若教会反对要求设置轮椅无障碍通道的建筑法规，这不仅在社区面前留下了极为负面的见证，甚至暗示出教会只欢迎身体“健全”的人。同理，如果在讲台上大声疾呼反对堕胎，却未能为主日学里的残疾儿童提供接纳的席位与专门的照护课程，就暴露了我们并未真正愿意在每一个人身上尊崇上帝的形象。蓄意将特定群体排除在教会事工的关照之外，在渴望万人都认识基督的上帝眼中，乃是严重的亏欠与罪过。</li>
 </ul>
 <p>教会的讲台与教导事工，是塑造会众对待他人态度的极为重要的契机。我们在讲道中所使用的故事与例证必须格外审慎敏锐。拿女性、青少年、老年人或任何族群与社会阶层作为取笑揶揄的对象，通常是极不合宜的，并且必定会被会众敏锐地察觉。生命的尊严应当无偏袒地普及至所有人。然而，我们也应当对当代社会过度执迷于“个人权利”（rights of the individual）的世俗思潮保持清醒。人存在的崇高尊严是由上帝所赋予的，而非人自我标榜或强加的；我们热情邀请所有人在上帝的大家庭中积极领受恩典与身份。</p>
           </div>
@@ -9578,6 +9578,31 @@
 
   document.querySelectorAll('.article-section').forEach(sec => observer.observe(sec));
 </script>
+
+
+  <!-- Standalone Mode Isolation Controller: Only this book, no home exit, links preserve ?standalone=1 -->
+  <script id="standalone-isolate-script">
+  (function() {
+    const p = new URLSearchParams(window.location.search);
+    const isStandalone = p.has('standalone') || p.has('isolated') || p.has('focus') || p.has('share') || window.location.hash.includes('standalone');
+    if (isStandalone) {
+      // 1. Hide all links back to website home or external navigation
+      document.querySelectorAll('a[href*="index.html"]').forEach(el => {
+        el.style.display = 'none';
+        if (el.parentElement && el.parentElement.classList.contains('toolbar-divider')) {
+          el.parentElement.style.display = 'none';
+        }
+      });
+      document.querySelectorAll('.article-back-home, .article-nav-sep:first-of-type').forEach(el => el.style.display = 'none');
+      // 2. Propagate ?standalone=1 to all paper book links
+      document.querySelectorAll('a[href*="_paper.html"], a[href*="paper.html"]').forEach(el => {
+        if (!el.href.includes('standalone=1')) {
+          el.href = el.href + (el.href.includes('?') ? '&' : '?') + 'standalone=1';
+        }
+      });
+    }
+  })();
+  </script>
 
 </body>
 </html>

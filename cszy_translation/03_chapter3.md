@@ -44,7 +44,7 @@ A person being born of the Holy Spirit is an objective reality; yet, like the bl
 ---
 
 ### 【中文】
-一个人平日在思想、言语、行为上充满了罪恶，非但不以为苦，反觉十分高兴。他以为损人可以自己得利，弄诡诈可以发财……可庆幸的是，一夕之间，他忽然完全改变了态度，他深深地痛恨罪恶，他以犯罪为世上最苦的事。他看弄诡诈损人所得来的利益如同蛇蝎，如同毒药，必须立时弃掉方能安心。以前罪恶好象他的好友、他的情人，但现在他看罪恶好象不共戴天的仇敌，他恨不得立时与罪恶完全断绝了关系，永不再见面！我们看见这种现象必要感觉希奇，其实这并不是什么希奇的事，这乃是因为这个人得了重生，得了神的生命，所以有这种奇异的改变。
+一个人平日在思想、言语、行为上充满了罪恶，非但不以为苦，反觉十分高兴。他以为损人可以自己得利，弄诡诈可以发财……可庆幸的是，一夕之间，他忽然完全改变了态度，他深深地痛恨罪恶，他以犯罪为世上最苦的事。他看弄诡诈损人所得来的利益如同蛇蝎，如同毒药，必须立时弃掉方能安心。以前罪恶好像他的好友、他的情人，但现在他看罪恶好像不共戴天的仇敌，他恨不得立时与罪恶完全断绝了关系，永不再见面！我们看见这种现象必要感觉希奇，其实这并不是什么希奇的事，这乃是因为这个人得了重生，得了神的生命，所以有这种奇异的改变。
 
 ### 【English】
 In former days, a person's thoughts, words, and deeds were saturated with iniquity; far from grieving over his sins, he took delight in them. He imagined that exploiting others was the way to self-advancement, and that resorting to deceit was the road to wealth. But wonder of wonders! Virtually overnight, his attitude undergoes a complete reversal: he begins to abhor sin from the depths of his soul; he comes to regard committing sin as the most excruciating misery on earth. He now views ill-gotten gains derived from fraud and exploitation as deadly scorpions and venomous poison, feeling he cannot rest until he has utterly renounced and cast them away. Previously, sin was like his bosom companion, his beloved mistress; but now he regards sin as a mortal, sworn enemy, longing to sever all ties with it once and for all, never to behold its face again! When we witness such a phenomenon, we cannot help but marvel. Yet in truth there is nothing mysterious here: it has occurred simply because this man has been born again and has received the divine life of God, bringing forth this miraculous transformation.
@@ -52,7 +52,7 @@ In former days, a person's thoughts, words, and deeds were saturated with iniqui
 ---
 
 ### 【中文】
-一个人平日总是遮掩自己的罪恶，显扬自己的善行。听见人讲道论到罪恶，责备犯罪的人，立时掩耳疾走，甚至攻击逼迫那讲论罪恶的人。如果有什么人把他的罪说出来，劝告他、规责他，那更了不得了，他要立时老羞成怒，挺身起来，以为别人是有意羞辱他、反对他，他总不肯承认自己有什么罪恶。一夕之间，他忽然完全改变了态度，他极乐意听别人将他的罪恶告诉他。他看这样的人是他的好友；他不再遮掩自己的罪，他承认自已是极坏的人。他不再吹捧自己、夸耀自己；他厌恶自己，在尘土和炉灰中懊悔。我们看见这种改变便知道这人是得了重生。
+一个人平日总是遮掩自己的罪恶，显扬自己的善行。听见人讲道论到罪恶，责备犯罪的人，立时掩耳疾走，甚至攻击逼迫那讲论罪恶的人。如果有什么人把他的罪说出来，劝告他、规责他，那更了不得了，他要立时老羞成怒，挺身起来，以为别人是有意羞辱他、反对他，他总不肯承认自己有什么罪恶。一夕之间，他忽然完全改变了态度，他极乐意听别人将他的罪恶告诉他。他看这样的人是他的好友；他不再遮掩自己的罪，他承认自己是极坏的人。他不再吹捧自己、夸耀自己；他厌恶自己，在尘土和炉灰中懊悔。我们看见这种改变便知道这人是得了重生。
 
 ### 【English】
 In former days, a person continually cloaked his sins while boasting of his supposed virtues. Whenever he heard a preacher expose sin and rebuke sinners, he would instantly plug his ears and rush away in anger, or even revile and persecute the preacher who spoke against wickedness. If anyone dared to point out his personal sins and gently admonish or reprove him, he would fly into a furious rage, jumping up in indignation and accusing the other of intentionally humiliating and opposing him; under no circumstances would he ever acknowledge his guilt. But suddenly, his attitude is totally reversed: he becomes genuinely grateful to hear others point out his faults. He now looks upon those who reprove him as his truest friends. He no longer hides his transgressions, but openly confesses that he is a wretched, wicked sinner. He ceases all self-adulation and vain boasting; instead, he despises himself and repents in dust and ashes. When we see such a change, we know that this person has been born again.
@@ -60,7 +60,7 @@ In former days, a person continually cloaked his sins while boasting of his supp
 ---
 
 ### 【中文】
-一个人平日总是自私自利，他思索、说话、行事、作工，总是要求自已的好处；凡事为自已谋求富贵、荣华、安逸、宴乐。他的眼中没有看到他人的痛苦、缺乏、伤心、眼泪，他以为那是与他毫无关系的事。叫他去爱人、帮助人，那真无异乎与虎谋皮。一夕之间，他忽然完全改变了态度。他的心似乎充满了爱，他似乎忘记了他自己，事事想要帮助别人，使别人得益处。他甘心为别人的缘故舍弃自己的利益、金钱、安逸、宴乐、名誉、尊荣，有时甚至损伤自己的身家性命也毫无顾惜。他看见别人缺乏就尽力济助他们；看见别人伤心就设法安慰他们，看见别人跌倒就伸手将他们扶起；看见别人没有得着他们应得着的好处，就尽心竭力的帮助他们，要叫他们也能得着。这种改变也是一个人得重生的一种表现。
+一个人平日总是自私自利，他思索、说话、行事、作工，总是要求自己的好处；凡事为自己谋求富贵、荣华、安逸、宴乐。他的眼中没有看到他人的痛苦、缺乏、伤心、眼泪，他以为那是与他毫无关系的事。叫他去爱人、帮助人，那真无异乎与虎谋皮。一夕之间，他忽然完全改变了态度。他的心似乎充满了爱，他似乎忘记了他自己，事事想要帮助别人，使别人得益处。他甘心为别人的缘故舍弃自己的利益、金钱、安逸、宴乐、名誉、尊荣，有时甚至损伤自己的身家性命也毫无顾惜。他看见别人缺乏就尽力济助他们；看见别人伤心就设法安慰他们，看见别人跌倒就伸手将他们扶起；看见别人没有得着他们应得着的好处，就尽心竭力的帮助他们，要叫他们也能得着。这种改变也是一个人得重生的一种表现。
 
 ### 【English】
 In former days, a person lived entirely for selfish gain. Whatever he thought, spoke, planned, or performed, he aimed exclusively at his own advantage, striving relentlessly for wealth, prestige, comfort, and luxury. His eyes were utterly blind to the agony, poverty, sorrow, and tears of others, regarding their plight as none of his concern. To ask him to love his neighbor or offer assistance to the needy was like asking a tiger for its hide. Yet suddenly, his entire posture is revolutionized: his heart is overflowing with love, and he seems to have forgotten himself altogether! In all things he seeks to serve others and advance their well-being. For the sake of his fellow men, he willingly sacrifices his personal interests, his money, his ease, his pleasures, and his social standing; indeed, he would not even spare his own life if love required it. When he sees someone in want, he strains every nerve to relieve them; when he sees a soul brokenhearted, he seeks to comfort them; when he sees a brother stumble, he reaches out his hand to lift him up; when he sees others deprived of what they rightly need, he spares no effort to help them obtain it. Such a profound transformation is likewise a clear evidence of the new birth.
@@ -132,7 +132,7 @@ From loving sin—to abhorring sin; from craving the flattery of men—to welcom
 ---
 
 ### 【中文】
-这些乃是更重要的改变，乃是里面的改变，乃是生命上的改变，唯独这些改变方能证明一个人真正得了重生。明白圣经、唱赞美诗、祈祷、捐款、到礼拜堂去敬拜神，这些事是可以学习的。无论信的人或是不信的人，得了重生的人或是末得重生的人，稍用一些工夫都可以学会，这些都只是属于外面的。所以只会这些事并不足证明一个人是得了重生。唯独有了那些生命上的改变，方能证明一个人是得了新的生命，是被圣灵所生。
+这些乃是更重要的改变，乃是里面的改变，乃是生命上的改变，唯独这些改变方能证明一个人真正得了重生。明白圣经、唱赞美诗、祈祷、捐款、到礼拜堂去敬拜神，这些事是可以学习的。无论信的人或是不信的人，得了重生的人或是未得重生的人，稍用一些工夫都可以学会，这些都只是属于外面的。所以只会这些事并不足证明一个人是得了重生。唯独有了那些生命上的改变，方能证明一个人是得了新的生命，是被圣灵所生。
 
 ### 【English】
 These are the far weightier changes! These are internal transformations! These are transformations of life itself! These alone can prove that a person is genuinely born again. Acquiring biblical knowledge, singing hymns, reciting prayers, contributing funds, and sitting in church pews—all these things can be outwardly learned through human effort. Whether a person is a true believer or an unbeliever, whether regenerated or unregenerate, anyone who applies himself a little can easily master these religious practices. All of them belong merely to the outward realm. Therefore, merely performing these external religious duties is not the slightest proof that a person is born again. Only when these inward transformations of life are present does a man possess undeniable evidence that he has received a new life and has been born of the Holy Spirit.

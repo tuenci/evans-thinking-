@@ -68,7 +68,7 @@ Thus our question—How can one be born again?—receives right here a crystalli
 ---
 
 ### 【中文】
-必有人说:「得重生的方法既是这样筒单，那么所有基督徒必是都已经得重生了。但照前一章所提的一个人得重生以后所有的改变看来，却证明在基督徒当中有许多人是未得重生的，这究竟是怎么一回事呢？」
+必有人说:「得重生的方法既是这样简单，那么所有基督徒必是都已经得重生了。但照前一章所提的一个人得重生以后所有的改变看来，却证明在基督徒当中有许多人是未得重生的，这究竟是怎么一回事呢？」
 
 ### 【English】
 Some will surely say: "If the way to receive the new birth is so exceedingly simple, then surely everyone who is called a Christian must already be born again! Yet according to the life-transforming evidences set forth in the preceding chapter, it is evident that vast multitudes among professing Christians have never been born again at all. How do you account for this?"
@@ -108,7 +108,7 @@ Second, the bitten man had to know how utterly terrifying the consequence of tha
 ---
 
 ### 【中文】
-第三，那个被蛇所咬的人必须知道他自己没有一点方法能救自己。假使他想他手中有一种善治毒虫咬伤的良药，或是他想他精通医术，可以治疗自已的创伤，或是他想起他朋友曾介绍过一种解毒的偏方，他决不会跑去望杆子上的铜蛇。必等到他用尽了一切的方法，受尽了一切的痛苦，发见自己实在绝望的时候，他方肯来望铜蛇。
+第三，那个被蛇所咬的人必须知道他自己没有一点方法能救自己。假使他想他手中有一种善治毒虫咬伤的良药，或是他想他精通医术，可以治疗自己的创伤，或是他想起他朋友曾介绍过一种解毒的偏方，他决不会跑去望杆子上的铜蛇。必等到他用尽了一切的方法，受尽了一切的痛苦，发见自己实在绝望的时候，他方肯来望铜蛇。
 
 ### 【English】
 Third, the stricken man had to know that he possessed no earthly remedy within himself to effect his own cure. If he imagined he held in his hands some potent antidote for snake venom, or flattered himself that his medical skill could dress the wound, or remembered some folk remedy recommended by a friend, he would never run to look at the bronze serpent on the pole. Only when he had exhausted every human remedy, tasted the agony of despair, and discovered himself utterly helpless would he turn in earnest to look upon the bronze serpent.

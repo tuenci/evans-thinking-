@@ -68,7 +68,7 @@ The "water" spoken of here is not physical water, but refers to the Word of God.
 ---
 
 ### 【中文】
-「我亲爱的弟兄们，不要看错了。各样美善的恩赐和各样全备的赏赐都是从上头来的，从众光之父那里降下来的；在祂并没有改变，也没有转动的影儿。祂按自己的旨意，用真道生了我们，叫我们在祂所造的万物中好象初熟的果子。」(雅一16-18)
+「我亲爱的弟兄们，不要看错了。各样美善的恩赐和各样全备的赏赐都是从上头来的，从众光之父那里降下来的；在祂并没有改变，也没有转动的影儿。祂按自己的旨意，用真道生了我们，叫我们在祂所造的万物中好像初熟的果子。」(雅一16-18)
 
 ### 【English】
 "Do not be deceived, my beloved brothers. Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change. Of His own will He brought us forth by the word of truth, that we should be a kind of firstfruits of His creatures." (James 1:16–18)
@@ -92,7 +92,7 @@ The first birth is of the flesh. The flesh is corrupt, polluted, and perishable;
 ---
 
 ### 【中文】
-有人说：「重生这种说法并不是说真有一次生产的事实，不过是一个比喻，表明一个人悔悟以前的罪恶，决定心志要作一个好人，并且他真能洗心革面，痛改前非，这种心志和行为正好象一个人又重新生产了一次一样。先哲所说：『从前种种譬如昨日死，以后种种譬如今日生』，也就是这个意思。」
+有人说：「重生这种说法并不是说真有一次生产的事实，不过是一个比喻，表明一个人悔悟以前的罪恶，决定心志要作一个好人，并且他真能洗心革面，痛改前非，这种心志和行为正好像一个人又重新生产了一次一样。先哲所说：『从前种种譬如昨日死，以后种种譬如今日生』，也就是这个意思。」
 
 ### 【English】
 Some say: "The expression 'born again' does not denote an actual, factual birth; it is merely a metaphor indicating that an individual has repented of his past sins, resolved to become a good person, and genuinely turned over a new leaf. Such a resolve and moral reform are compared to a person being born afresh. This is just what the ancient sages meant when they said: 'Let all things past die as of yesterday, and all things to come be born as of today.'"
@@ -164,7 +164,7 @@ In addition to the verse cited above, two other passages mention this "inner man
 ---
 
 ### 【中文】
-但这「里面的人」也能因着种种原因变为刚强或软弱，所以使徒求神「按着祂丰盛的荣耀，藉看祂的灵」，使信徒「里面的人刚强起来」。(弗三16)
+但这「里面的人」也能因着种种原因变为刚强或软弱，所以使徒求神「按着祂丰盛的荣耀，藉着祂的灵」，使信徒「里面的人刚强起来」。(弗三16)
 
 ### 【English】
 Yet this "inner man" can also become either strong or weak due to various conditions. Therefore, the Apostle prayed that God "according to the riches of His glory may grant you to be strengthened with power through His Spirit in the inner man." (Eph 3:16)

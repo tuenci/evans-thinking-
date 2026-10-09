@@ -772,18 +772,19 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(30, 26, 23, 0.65);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #EDE8DF;
+      background: rgba(26, 23, 20, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(201, 151, 87, 0.4);
+      color: #E2B874;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       z-index: 50;
       transition: all 0.22s ease;
-      opacity: 0.35;
+      opacity: 0.65;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
     }
 
     .turn-arrow:hover {
@@ -792,11 +793,173 @@
       border-color: #E2B874;
       opacity: 1;
       transform: translateY(-50%) scale(1.08);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 6px 20px rgba(201, 151, 87, 0.45);
     }
 
-    .turn-arrow-left { left: -22px; }
-    .turn-arrow-right { right: -22px; }
+    /* Position closely hugging the book spread instead of far screen edges */
+    .turn-arrow-left {
+      left: calc(50% - (min(1260px, 100% - 64px) / 2) - 30px);
+      right: auto;
+    }
+    .turn-arrow-right {
+      right: calc(50% - (min(1260px, 100% - 64px) / 2) - 30px);
+      left: auto;
+    }
+
+    @media screen and (max-width: 1360px) {
+      .turn-arrow-left { left: 10px; }
+      .turn-arrow-right { right: 10px; }
+    }
+
+    
+    /* ========================================================
+       AUDIO TTS FLOATING PLAYER & HIGH-PRECISION HIGHLIGHTING
+       ======================================================== */
+    .hud-btn-tts {
+      background: rgba(201, 151, 87, 0.16);
+      border-color: rgba(201, 151, 87, 0.35);
+      color: #E2B874;
+    }
+
+    .hud-btn-tts:hover, .hud-btn-tts.active {
+      background: #C99757;
+      color: #161310;
+      border-color: #E2B874;
+      box-shadow: 0 0 12px rgba(201, 151, 87, 0.4);
+    }
+
+    /* Paragraph high-contrast reading glow */
+    .tts-reading-active {
+      background: rgba(201, 151, 87, 0.18) !important;
+      border-left: 3.5px solid #C99757 !important;
+      padding-left: 8px !important;
+      border-radius: 4px !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    body.theme-dark .tts-reading-active {
+      background: rgba(201, 151, 87, 0.25) !important;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    /* Floating Audio Player Capsule */
+    .tts-player-capsule {
+      position: fixed;
+      bottom: 68px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120px);
+      z-index: 1005;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 18px;
+      background: rgba(22, 20, 18, 0.92);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(201, 151, 87, 0.45);
+      border-radius: 9999px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+      max-width: 92vw;
+    }
+
+    .tts-player-capsule.open {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .tts-player-title {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #EDE8DF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 140px;
+    }
+
+    .tts-ctrl-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
+      color: #EDE8DF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tts-ctrl-btn:hover {
+      background: rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+      transform: scale(1.05);
+    }
+
+    .tts-ctrl-btn.play-pause {
+      background: #C99757;
+      color: #161310;
+      border-color: #E2B874;
+      width: 38px;
+      height: 38px;
+      box-shadow: 0 2px 10px rgba(201, 151, 87, 0.4);
+    }
+
+    .tts-ctrl-btn.play-pause:hover {
+      background: #dfaa65;
+      transform: scale(1.08);
+    }
+
+    .tts-speed-selector {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #E2B874;
+      border-radius: 9999px;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .tts-close-btn {
+      color: rgba(255, 255, 255, 0.5);
+      background: transparent;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+      padding: 0 4px;
+      transition: color 0.2s ease;
+    }
+
+    .tts-close-btn:hover {
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 960px) {
+      .tts-player-capsule {
+        bottom: calc(54px + env(safe-area-inset-bottom, 0px));
+        gap: 6px;
+        padding: 6px 12px;
+        width: calc(100vw - 24px);
+        max-width: calc(100vw - 24px);
+        justify-content: space-between;
+      }
+      /* Hide standard scrubber dock when TTS player is active on mobile to give full screen focus */
+      body.tts-mode-active .hud-bottom {
+        display: none !important;
+      }
+      .tts-player-title {
+        max-width: 110px;
+        font-size: 11.5px;
+      }
+    }
 
     /* ========================================================
        BOTTOM FLOATING SCRUBBER DOCK
@@ -1412,6 +1575,11 @@
           <button class="hud-lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
         </div>
 
+        <button class="hud-btn hud-btn-tts" id="btn-tts" onclick="toggleAudioReading()" title="智能有声朗读 (Space/Play)">
+          <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"/></svg>
+          <span class="hud-btn-text">朗读</span>
+        </button>
+
         <button class="hud-btn" id="btn-settings" onclick="openSettingsModal()" title="排版偏好 (Aa)">
           <span style="font-weight:700; font-size:13.5px; font-family:serif;">Aa</span>
         </button>
@@ -1482,6 +1650,31 @@
       </div>
     </div>
   </footer>
+
+  <!-- FLOATING AUDIO READING CONTROLLER CAPSULE -->
+  <div class="tts-player-capsule" id="tts-player">
+    <button class="tts-ctrl-btn" onclick="ttsPrevParagraph()" title="上一段">
+      <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z"/></svg>
+    </button>
+    <button class="tts-ctrl-btn play-pause" id="tts-btn-playpause" onclick="ttsTogglePlayPause()" title="播放/暂停">
+      <svg class="hud-icon" id="tts-icon-play" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+      <svg class="hud-icon" id="tts-icon-pause" style="display:none;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+    </button>
+    <button class="tts-ctrl-btn" onclick="ttsNextParagraph()" title="下一段">
+      <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M11.555 5.168A1 1 0 0010 6v2.798L4.555 5.168A1 1 0 003 6v8a1 1 0 001.555.832L10 11.202V14a1 1 0 001.555.832l6-4a1 1 0 000-1.664l-6-4z"/></svg>
+    </button>
+
+    <div class="tts-player-title" id="tts-player-title">正在准备朗读...</div>
+
+    <select class="tts-speed-selector" id="tts-speed" onchange="ttsChangeSpeed(this.value)" title="朗读语速">
+      <option value="0.8">0.8x</option>
+      <option value="1.0" selected>1.0x</option>
+      <option value="1.25">1.25x</option>
+      <option value="1.5">1.5x</option>
+    </select>
+
+    <button class="tts-close-btn" onclick="closeAudioReading()" title="退出朗读">✕</button>
+  </div>
 
   <!-- Modal Backdrop for TOC and Settings -->
   <div class="modal-backdrop" id="modal-backdrop" onclick="closeAllModals()">
@@ -1597,6 +1790,234 @@
       setupGestures();
       setupIdleTimer();
       setupAutoFullscreen();
+      initTTSVoices();
+    }
+
+    
+    /* ========================================================
+       SMART BILINGUAL AUDIO TTS ENGINE
+       Full client-side SpeechSynthesis with paragraph sync & auto-page turn
+       ======================================================== */
+    const TTS_STATE = {
+      active: false,
+      playing: false,
+      rate: 1.0,
+      queue: [],
+      queueIdx: 0,
+      currentUtterance: null,
+      voice: null
+    };
+
+    function initTTSVoices() {
+      if (!('speechSynthesis' in window)) return;
+      function pickVoice() {
+        const voices = window.speechSynthesis.getVoices();
+        if (!voices || voices.length === 0) return;
+        const zhVoices = voices.filter(v => v.lang.startsWith('zh'));
+        // 优先选择高质量神经网络与自然中文音色
+        TTS_STATE.voice = zhVoices.find(v => /Tingting|婷婷|Mei-Jia|Xiaoxiao|Yunxi|Eddy|Natural|Neural/i.test(v.name))
+                       || zhVoices.find(v => v.lang === 'zh-CN')
+                       || zhVoices[0]
+                       || null;
+      }
+      pickVoice();
+      if (window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = pickVoice;
+      }
+    }
+
+    function toggleAudioReading() {
+      if (TTS_STATE.active) {
+        closeAudioReading();
+      } else {
+        openAudioReading();
+      }
+    }
+
+    function openAudioReading() {
+      if (!('speechSynthesis' in window)) {
+        showToast('当前浏览器暂不支持语音朗读');
+        return;
+      }
+      // If currently on Book Home, start reading from Chapter 1
+      if (currentPageIdx === 0) {
+        startReadingBook();
+      }
+
+      TTS_STATE.active = true;
+      document.getElementById('btn-tts').classList.add('active');
+      document.getElementById('tts-player').classList.add('open');
+      document.body.classList.add('tts-mode-active');
+      buildSpreadTTSQueue();
+      ttsPlayCurrentQueue(0);
+      setupTTSMediaSession();
+    }
+
+    function closeAudioReading() {
+      TTS_STATE.active = false;
+      TTS_STATE.playing = false;
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      clearTTSHighlights();
+      document.getElementById('btn-tts').classList.remove('active');
+      document.getElementById('tts-player').classList.remove('open');
+      document.body.classList.remove('tts-mode-active');
+      updateTTSPlayPauseIcons();
+    }
+
+    function buildSpreadTTSQueue() {
+      TTS_STATE.queue = [];
+      const leaves = [document.getElementById('leaf-left'), document.getElementById('leaf-right')];
+      leaves.forEach((leaf) => {
+        if (!leaf || leaf.style.display === 'none') return;
+        const body = leaf.querySelector('.page-body');
+        if (!body) return;
+        const els = Array.from(body.querySelectorAll('.ch-first-header, .subheading-banner, p, blockquote'));
+        els.forEach((el) => {
+          const text = el.innerText.trim();
+          if (text) {
+            TTS_STATE.queue.push({ element: el, text: text });
+          }
+        });
+      });
+    }
+
+    function ttsPlayCurrentQueue(startIdx) {
+      if (!TTS_STATE.active) return;
+      TTS_STATE.queueIdx = startIdx || 0;
+      ttsPlayNext();
+    }
+
+    function ttsPlayNext() {
+      if (!TTS_STATE.active) return;
+      if (TTS_STATE.queueIdx >= TTS_STATE.queue.length) {
+        // 当前页已全部读完！自动翻到下一页
+        clearTTSHighlights();
+        const prevPage = currentPageIdx;
+        const prevSpread = currentSpreadIdx;
+        nextView();
+        setTimeout(() => {
+          if (currentPageIdx !== prevPage || currentSpreadIdx !== prevSpread) {
+            buildSpreadTTSQueue();
+            ttsPlayCurrentQueue(0);
+          } else {
+            // 已读完最后一页
+            showToast('已朗读至全书末尾');
+            closeAudioReading();
+          }
+        }, 600);
+        return;
+      }
+
+      const item = TTS_STATE.queue[TTS_STATE.queueIdx];
+      highlightTTSElement(item.element);
+
+      // 更新播放条标题
+      const snippet = item.text.replace(/\s+/g, ' ').slice(0, 16);
+      document.getElementById('tts-player-title').textContent = snippet + '...';
+
+      const utter = new SpeechSynthesisUtterance(item.text);
+      if (TTS_STATE.voice) utter.voice = TTS_STATE.voice;
+      utter.rate = TTS_STATE.rate;
+      utter.lang = currentLang === 'en' ? 'en-US' : 'zh-CN';
+
+      utter.onend = () => {
+        TTS_STATE.queueIdx++;
+        ttsPlayNext();
+      };
+
+      utter.onerror = (e) => {
+        console.warn('TTS playback error:', e);
+        TTS_STATE.queueIdx++;
+        ttsPlayNext();
+      };
+
+      TTS_STATE.currentUtterance = utter;
+      TTS_STATE.playing = true;
+      updateTTSPlayPauseIcons();
+
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utter);
+    }
+
+    function ttsTogglePlayPause() {
+      if (!TTS_STATE.active) {
+        openAudioReading();
+        return;
+      }
+      if (TTS_STATE.playing) {
+        window.speechSynthesis.pause();
+        TTS_STATE.playing = false;
+      } else {
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+        } else {
+          ttsPlayNext();
+        }
+        TTS_STATE.playing = true;
+      }
+      updateTTSPlayPauseIcons();
+    }
+
+    function ttsPrevParagraph() {
+      if (!TTS_STATE.active) return;
+      window.speechSynthesis.cancel();
+      TTS_STATE.queueIdx = Math.max(0, TTS_STATE.queueIdx - 1);
+      ttsPlayNext();
+    }
+
+    function ttsNextParagraph() {
+      if (!TTS_STATE.active) return;
+      window.speechSynthesis.cancel();
+      TTS_STATE.queueIdx++;
+      ttsPlayNext();
+    }
+
+    function ttsChangeSpeed(val) {
+      TTS_STATE.rate = parseFloat(val) || 1.0;
+      if (TTS_STATE.active && TTS_STATE.playing) {
+        window.speechSynthesis.cancel();
+        ttsPlayNext();
+      }
+    }
+
+    function highlightTTSElement(el) {
+      clearTTSHighlights();
+      if (el) {
+        el.classList.add('tts-reading-active');
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function clearTTSHighlights() {
+      document.querySelectorAll('.tts-reading-active').forEach(e => e.classList.remove('tts-reading-active'));
+    }
+
+    function updateTTSPlayPauseIcons() {
+      const playIcon = document.getElementById('tts-icon-play');
+      const pauseIcon = document.getElementById('tts-icon-pause');
+      if (TTS_STATE.playing) {
+        if (playIcon) playIcon.style.display = 'none';
+        if (pauseIcon) pauseIcon.style.display = 'block';
+      } else {
+        if (playIcon) playIcon.style.display = 'block';
+        if (pauseIcon) pauseIcon.style.display = 'none';
+      }
+    }
+
+    function setupTTSMediaSession() {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: BOOK.meta.title_zh,
+          artist: BOOK.meta.author,
+          album: "Evan's Thinking 典藏文库有声书"
+        });
+        navigator.mediaSession.setActionHandler('play', () => ttsTogglePlayPause());
+        navigator.mediaSession.setActionHandler('pause', () => ttsTogglePlayPause());
+        navigator.mediaSession.setActionHandler('nexttrack', () => ttsNextParagraph());
+        navigator.mediaSession.setActionHandler('previoustrack', () => ttsPrevParagraph());
+      }
     }
 
     /* Detect single-page mobile/portrait mode */
@@ -2007,7 +2428,7 @@
 
         updateTocActive();
         saveState();
-        resetIdleTimer();
+        showHud();
         return;
       }
 
@@ -2084,7 +2505,10 @@
 
       updateTocActive();
       saveState();
-      resetIdleTimer();
+      // On desktop, keep HUD fresh on view change; on mobile, keep HUD stable
+      if (!isSinglePageMode()) {
+        showHud();
+      }
     }
 
     /* ========================================================
@@ -2357,19 +2781,29 @@
     function setupGestures() {
       let touchStartX = 0;
       let touchStartY = 0;
+      let touchStartTime = 0;
       const stage = document.getElementById('stage');
 
       stage.addEventListener('touchstart', (e) => {
         if (e.touches.length === 1) {
           touchStartX = e.touches[0].clientX;
           touchStartY = e.touches[0].clientY;
+          touchStartTime = Date.now();
         }
       }, { passive: true });
 
       stage.addEventListener('touchend', (e) => {
         if (e.changedTouches.length === 1) {
+          // Do not trigger page turns or HUD toggles if tapping interactive controls
+          const target = e.target;
+          if (target && target.closest('button, a, input, select, textarea, .hud-top, .hud-bottom, .modal-backdrop')) {
+            return;
+          }
+
           const dx = e.changedTouches[0].clientX - touchStartX;
           const dy = e.changedTouches[0].clientY - touchStartY;
+          const duration = Date.now() - touchStartTime;
+
           // In Book Home on mobile, vertical scrolling takes precedence
           if (currentPageIdx === 0 && isSinglePageMode()) {
             if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5) {
@@ -2379,48 +2813,55 @@
           }
 
           // Horizontal swipe to turn page
-          if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy)) {
+          if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy) * 1.2) {
             if (dx < 0) nextView();
             else prevView();
-          } else if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
-            // Tap center to toggle HUD
+          } else if (Math.abs(dx) <= 15 && Math.abs(dy) <= 15 && duration < 350) {
+            // Clean tap on screen content toggles HUD and stays visible
             toggleHud();
           }
         }
       }, { passive: true });
     }
 
-    /* Auto-hide HUD on idle reading */
+    /* Auto-hide HUD on idle reading (Desktop mouse moves trigger reveal; touch tap toggles) */
     let idleTimer = null;
     function setupIdleTimer() {
-      window.addEventListener('mousemove', resetIdleTimer);
-      window.addEventListener('touchstart', resetIdleTimer, { passive: true });
+      // On desktop, moving the mouse smoothly reveals HUD and resets idle timer
+      window.addEventListener('mousemove', () => {
+        if (!isSinglePageMode()) {
+          showHud();
+        }
+      }, { passive: true });
     }
 
-    function resetIdleTimer() {
+    function showHud() {
       document.getElementById('hud-top').classList.remove('hud-hidden');
       document.getElementById('hud-bottom').classList.remove('hud-hidden');
       clearTimeout(idleTimer);
+      // Auto-hide after 6 seconds of inactivity when reading body text
       idleTimer = setTimeout(() => {
-        // Auto-hide HUD only when reading body text, not on Book Home
         if (currentPageIdx > 0 && currentSpreadIdx > 0) {
-          document.getElementById('hud-top').classList.add('hud-hidden');
-          document.getElementById('hud-bottom').classList.add('hud-hidden');
+          hideHud();
         }
-      }, 5000);
+      }, 6000);
+    }
+
+    function hideHud() {
+      clearTimeout(idleTimer);
+      document.getElementById('hud-top').classList.add('hud-hidden');
+      document.getElementById('hud-bottom').classList.add('hud-hidden');
     }
 
     function toggleHud() {
       const top = document.getElementById('hud-top');
-      const bot = document.getElementById('hud-bottom');
       const isHidden = top.classList.contains('hud-hidden');
       if (isHidden) {
-        top.classList.remove('hud-hidden');
-        bot.classList.remove('hud-hidden');
-        resetIdleTimer();
+        // When user explicitly taps to show HUD, keep it visible comfortably
+        showHud();
       } else {
-        top.classList.add('hud-hidden');
-        bot.classList.add('hud-hidden');
+        // When tapped while already visible, smoothly dismiss it
+        hideHud();
       }
     }
 
