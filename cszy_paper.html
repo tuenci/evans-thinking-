@@ -1743,9 +1743,9 @@
       <div class="settings-section">
         <div class="settings-label">正文字号</div>
         <div class="font-size-row">
-          <button class="btn-step-fs" onclick="adjustFontSize(-1)">A-</button>
-          <span class="fs-preview-num" id="fs-preview-val">17.5 px</span>
-          <button class="btn-step-fs" onclick="adjustFontSize(1)">A+</button>
+          <button class="btn-step-fs" onclick="adjustFontSize(-1)" title="缩小字号">A-</button>
+          <span class="fs-preview-num" id="fs-preview-val" onclick="resetFontSize()" style="cursor:pointer;" title="点击恢复标准字号 (18px)">18 px (标准)</span>
+          <button class="btn-step-fs" onclick="adjustFontSize(1)" title="放大字号">A+</button>
         </div>
       </div>
 
@@ -1762,7 +1762,7 @@
         <div class="settings-label">行间间距</div>
         <div class="seg-pills">
           <button class="seg-pill-btn" id="lh-compact" onclick="setLineHeight(1.62)">紧凑</button>
-          <button class="seg-pill-btn active" id="lh-normal" onclick="setLineHeight(1.76)">适中</button>
+          <button class="seg-pill-btn active" id="lh-normal" onclick="setLineHeight(1.78)">适中 (标准)</button>
           <button class="seg-pill-btn" id="lh-relaxed" onclick="setLineHeight(1.92)">舒缓</button>
         </div>
       </div>
@@ -2741,12 +2741,29 @@
       savePreferences();
     }
 
+    function updateFsPreview() {
+      const el = document.getElementById('fs-preview-val');
+      if (el) {
+        el.textContent = currentFontSize === 18 ? '18 px (标准)' : `${currentFontSize} px`;
+      }
+    }
+
+    function resetFontSize() {
+      if (currentFontSize !== 18) {
+        currentFontSize = 18;
+        document.documentElement.style.setProperty('--body-fs', '18px');
+        updateFsPreview();
+        savePreferences();
+        paginateAndRender();
+      }
+    }
+
     function adjustFontSize(delta) {
       const newFs = Math.max(14, Math.min(24, currentFontSize + delta));
       if (newFs !== currentFontSize) {
         currentFontSize = newFs;
         document.documentElement.style.setProperty('--body-fs', currentFontSize + 'px');
-        document.getElementById('fs-preview-val').textContent = currentFontSize + ' px';
+        updateFsPreview();
         savePreferences();
         paginateAndRender();
       }
@@ -3011,21 +3028,14 @@
     }
 
     function applyResponsiveScale() {
-      const single = isSinglePageMode();
       const savedFs = localStorage.getItem('regeneration_paper_fs');
       if (!savedFs) {
-        if (single) {
-          // Standard optimal mobile reading font size (WeChat Read & Apple Books standard: 18px, 1.78)
-          document.documentElement.style.setProperty('--body-fs', '18px');
-          document.documentElement.style.setProperty('--body-lh', '1.78');
-          currentFontSize = 18;
-          currentLineHeight = 1.78;
-        } else {
-          document.documentElement.style.setProperty('--body-fs', '19px');
-          document.documentElement.style.setProperty('--body-lh', '1.82');
-          currentFontSize = 19;
-          currentLineHeight = 1.82;
-        }
+        // Golden standard reading typography (WeChat Read & Apple Books standard: 18px, 1.78)
+        document.documentElement.style.setProperty('--body-fs', '18px');
+        document.documentElement.style.setProperty('--body-lh', '1.78');
+        currentFontSize = 18;
+        currentLineHeight = 1.78;
+        updateFsPreview();
       }
     }
 
@@ -3058,7 +3068,14 @@
         if (savedTh) setTheme(savedTh);
 
         const savedFs = localStorage.getItem('regeneration_paper_fs');
-        if (savedFs) adjustFontSize(parseFloat(savedFs) - currentFontSize);
+        if (savedFs) {
+          const parsed = parseFloat(savedFs);
+          if (parsed >= 14 && parsed <= 24) {
+            currentFontSize = parsed;
+            document.documentElement.style.setProperty('--body-fs', currentFontSize + 'px');
+          }
+        }
+        updateFsPreview();
 
         const savedFf = localStorage.getItem('regeneration_paper_ff');
         if (savedFf) setFontFamily(savedFf);
