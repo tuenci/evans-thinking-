@@ -519,6 +519,10 @@
       word-break: break-word;
     }
 
+    .page-body p:last-child {
+      margin-bottom: 0;
+    }
+
     .page-body.en-font p {
       text-indent: 1.5em;
       margin-bottom: 8px;
@@ -2074,11 +2078,17 @@
 
       // Calculate exact available height for reading body text from physical leaf container
       let availHeight = 0;
-      if (leafL) {
+      if (bodyL && bodyL.clientHeight > 100) {
+        availHeight = bodyL.clientHeight;
+      } else if (leafL) {
         const cs = window.getComputedStyle(leafL);
         const padTop = parseFloat(cs.paddingTop) || (single ? 44 : 28);
         const padBottom = parseFloat(cs.paddingBottom) || (single ? 14 : 22);
-        const headerH = 32; // 22px height + 10px margin-bottom
+        let headerH = 36;
+        if (headerL) {
+          const hcs = window.getComputedStyle(headerL);
+          headerH = headerL.offsetHeight + (parseFloat(hcs.marginBottom) || 10);
+        }
         const innerLeafH = leafL.clientHeight - padTop - padBottom;
         availHeight = innerLeafH - headerH;
       }
@@ -2091,7 +2101,7 @@
       const lh = currentLineHeight;
       const lineH = fs * lh;
       const maxLines = Math.max(4, Math.floor(availHeight / lineH));
-      const targetHeight = (maxLines * lineH) - 3;
+      const targetHeight = Math.min(availHeight - 4, (maxLines * lineH) - 4);
 
       const measure = document.getElementById('measure-leaf');
       measure.style.width = targetWidth + 'px';
@@ -2131,7 +2141,7 @@
           if (subTitle) {
             const subHtml = `<div class="subheading-banner">${subTitle}</div>`;
             measure.innerHTML = curHtml + subHtml;
-            if (measure.scrollHeight > targetHeight && curHtml !== headerHtml) {
+            if (measure.scrollHeight > targetHeight && curHtml.trim().length > 0) {
               PAGES.push({
                 chapterNum: ch.num,
                 chapterTitle: ch.title_zh,
@@ -2222,7 +2232,9 @@
                   p = p.slice(bestFit);
                   isParaStart = false;
                 } else {
+                  // Current page doesn't have room for 20 characters
                   if (curHtml.trim().length > 0) {
+                    // Flush current accumulated page to make room for a fresh empty page
                     PAGES.push({
                       chapterNum: ch.num,
                       chapterTitle: ch.title_zh,
@@ -2232,9 +2244,31 @@
                     });
                     isChFirst = false;
                     curHtml = '';
+                    // Keep p as-is! The next iteration will place it on the clean empty page
+                  } else {
+                    // Fallback safety: even a clean empty page cannot fit 20 chars
+                    const take = Math.max(20, bestFit > 0 ? bestFit : 20);
+                    const chunk = p.slice(0, take);
+                    let fitHtml = '';
+                    if (isChFirst && isParaStart) {
+                      fitHtml = `<p><span class="drop-cap">${chunk[0]}</span>${chunk.slice(1)}</p>`;
+                    } else if (isParaStart) {
+                      fitHtml = `<p>${chunk}</p>`;
+                    } else {
+                      fitHtml = `<p class="p-continue">${chunk}</p>`;
+                    }
+                    PAGES.push({
+                      chapterNum: ch.num,
+                      chapterTitle: ch.title_zh,
+                      chapterTitleEn: ch.title_en,
+                      isChFirst,
+                      html: fitHtml
+                    });
+                    isChFirst = false;
+                    curHtml = '';
+                    p = p.slice(take);
+                    isParaStart = false;
                   }
-                  curHtml = pFormatted;
-                  p = '';
                 }
               }
             }
@@ -2545,12 +2579,14 @@
     }
 
     function startReadingBook() {
+      enterFullscreen();
       currentPageIdx = 1;
       currentSpreadIdx = 1;
       renderCurrentView();
     }
 
     function goToChapter(chNum) {
+      enterFullscreen();
       closeAllModals();
       const targetCh = BOOK.chapters.find(c => c.num === chNum);
       if (targetCh && targetCh.startPage) {
@@ -2889,34 +2925,107 @@
       }
     }
 
+    function enterFullscreen() {
+      try {
+        const el = document.documentElement;
+        if (el.requestFullscreen) {
+          el.requestFullscreen().catch(() => {});
+        } else if (el.webkitRequestFullscreen) {
+          el.webkitRequestFullscreen();
+        } else if (el.webkitEnterFullscreen) {
+          el.webkitEnterFullscreen();
+        } else if (el.mozRequestFullScreen) {
+          el.mozRequestFullScreen();
+        } else if (el.msRequestFullscreen) {
+          el.msRequestFullscreen();
+        }
+      } catch (e) {}
+      try {
+        window.scrollTo(0, 1);
+      } catch (e) {}
+    }
+
+    function exitFullscreen() {
+      try {
+        if (document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      } catch (e) {}
+    }
+
+    function isFullscreen() {
+      return !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+    }
+
     function toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(() => {});
+      if (!isFullscreen()) {
+        enterFullscreen();
       } else {
-        if (document.exitFullscreen) document.exitFullscreen();
+        exitFullscreen();
       }
     }
 
+    function updateFullscreenIcon() {
+      const btnFs = document.getElementById('btn-fs');
+      if (!btnFs) return;
+      const fsActive = isFullscreen();
+      if (fsActive) {
+        btnFs.innerHTML = `<svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 8a1 1 0 011-1h1V6a1 1 0 012 0v3a1 1 0 01-1 1H5a1 1 0 01-1-1zm10 0a1 1 0 01-1 1h-3a1 1 0 01-1-1V5a1 1 0 112 0v1h1a1 1 0 011 1zm-9 4a1 1 0 011 1v1h1a1 1 0 110 2H5a1 1 0 01-1-1v-3a1 1 0 011-1zm8 1a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 11-2 0v-1h-1a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>`;
+        btnFs.title = "退出全屏 (Esc)";
+      } else {
+        btnFs.innerHTML = `<svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l3.293 3.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-3.293 3.293a1 1 0 11-1.414-1.414L13.586 5H12a1 1 0 01-1-1zm-7 8a1 1 0 011 1v1.586l3.293-3.293a1 1 0 011.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4a1 1 0 011-1zm11 0a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-3.293-3.293a1 1 0 011.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/></svg>`;
+        btnFs.title = "全屏阅读 (F)";
+      }
+    }
+    document.addEventListener('fullscreenchange', updateFullscreenIcon);
+    document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
+
     function setupAutoFullscreen() {
-      // Double tap top area on mobile triggers clean fullscreen
+      // First tap/click on reading stage automatically activates fullscreen on supported mobile/tablet devices
+      const stage = document.getElementById('stage');
+      if (stage) {
+        stage.addEventListener('click', (e) => {
+          // Avoid triggering if clicked on HUD button
+          if (e.target.closest('.hud-top, .hud-bottom, .modal-backdrop, .tts-player-capsule')) return;
+          if (currentPageIdx > 0 && !isFullscreen()) {
+            enterFullscreen();
+          }
+        }, { passive: true });
+      }
+
+      // Double tap on mobile triggers clean fullscreen toggle
       let lastTap = 0;
       document.addEventListener('touchend', (e) => {
         const now = Date.now();
-        if (now - lastTap < 300 && e.clientY < 60) {
+        if (now - lastTap < 300) {
           toggleFullscreen();
         }
         lastTap = now;
-      });
+      }, { passive: true });
     }
 
     function applyResponsiveScale() {
       const single = isSinglePageMode();
-      if (single) {
-        // Standard optimal mobile reading font size (WeChat Read & Apple Books standard: 18px, 1.78)
-        document.documentElement.style.setProperty('--body-fs', '18px');
-        document.documentElement.style.setProperty('--body-lh', '1.78');
-        currentFontSize = 18;
-        currentLineHeight = 1.78;
+      const savedFs = localStorage.getItem('regeneration_paper_fs');
+      if (!savedFs) {
+        if (single) {
+          // Standard optimal mobile reading font size (WeChat Read & Apple Books standard: 18px, 1.78)
+          document.documentElement.style.setProperty('--body-fs', '18px');
+          document.documentElement.style.setProperty('--body-lh', '1.78');
+          currentFontSize = 18;
+          currentLineHeight = 1.78;
+        } else {
+          document.documentElement.style.setProperty('--body-fs', '19px');
+          document.documentElement.style.setProperty('--body-lh', '1.82');
+          currentFontSize = 19;
+          currentLineHeight = 1.82;
+        }
       }
     }
 
@@ -2967,12 +3076,18 @@
     }
 
     let resizeTimer = null;
-    window.addEventListener('resize', () => {
+    function handleResizeOrOrientation() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
+        applyResponsiveScale();
         paginateAndRender();
-      }, 150);
-    });
+      }, 120);
+    }
+    window.addEventListener('resize', handleResizeOrOrientation);
+    window.addEventListener('orientationchange', handleResizeOrOrientation);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', handleResizeOrOrientation);
+    }
 
     window.addEventListener('DOMContentLoaded', init);
   </script>
