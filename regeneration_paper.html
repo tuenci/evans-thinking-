@@ -1706,6 +1706,7 @@
       <option value="1.5">1.5x</option>
     </select>
 
+    <a id="tts-link-audio-page" href="regeneration_audio.html" class="tts-ctrl-btn" title="切换到专属高保真自然人声有声书专页" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center; font-size:11px; font-weight:600; padding:0 8px; width:auto; border-radius:12px; background:rgba(184,134,11,0.18); color:#b8860b; white-space:nowrap;">有声专页 ↗</a>
     <button class="tts-close-btn" onclick="closeAudioReading()" title="退出朗读">✕</button>
   </div>
 
@@ -2328,6 +2329,7 @@
       const meta = BOOK.meta;
       const isStandalone = window.location.search.includes('standalone=1') || window.location.hash.includes('standalone');
       const studyUrl = meta.reader_url + (isStandalone ? (meta.reader_url.includes('?') ? '&' : '?') + 'standalone=1' : '');
+      const audioUrl = 'regeneration_audio.html' + (isStandalone ? '?standalone=1' : '');
       const homeLinkStyle = isStandalone ? 'display:none !important;' : '';
 
       return `
@@ -2430,6 +2432,8 @@
           studyBtn.style.display = 'inline-flex';
           studyBtn.href = BOOK.meta.reader_url + (BOOK.meta.reader_url.includes('?') ? '&' : '?') + 'standalone=1';
         }
+        const ttsAudioLink = document.getElementById('tts-link-audio-page');
+        if (ttsAudioLink) ttsAudioLink.href = 'regeneration_audio.html?standalone=1';
       } else {
         // Normal mode: Show Home button ONLY on Book Home (Page 0)
         const isAtBookHome = isSingle ? (currentPageIdx === 0) : (currentSpreadIdx === 0);

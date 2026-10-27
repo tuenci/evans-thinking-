@@ -1,0 +1,7 @@
+/*
+  Access-Control-Allow-Origin: *
+
+/audio/*
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *

@@ -1461,6 +1461,7 @@
   <a href="index.html" class="tool-btn" title="返回 Evan's Thinking 首页">🏠 首页</a>
   <span class="toolbar-divider"></span>
   <a href="regeneration_paper.html" class="tool-btn" title="切换至纸质书仿真实体阅览模式" style="background: rgba(201, 138, 44, 0.12); color: #C98A2C; border: 1px solid rgba(201, 138, 44, 0.35); font-weight: 600;">📖 纸质版</a>
+  <a href="regeneration_audio" class="tool-btn" title="专业自然人声朗读版" style="background: rgba(184, 134, 11, 0.12); color: #b8860b; border: 1px solid rgba(184, 134, 11, 0.35); font-weight: 600;">🎙️ 有声版</a>
   <span class="toolbar-divider"></span>
   <div class="view-segmented-control" role="group" aria-label="排版视图切换">
     <button class="seg-btn active" id="btn-view-bilingual" onclick="switchView('bilingual')" title="中英左右对照">🌐 双语</button>
@@ -2719,6 +2720,10 @@
     <span class="dock-icon">📖</span>
     <span class="dock-label">纸质书</span>
   </a>
+  <a href="regeneration_audio" class="dock-btn" style="color: #b8860b;" title="专业自然人声朗读版">
+    <span class="dock-icon">🎙️</span>
+    <span class="dock-label">有声书</span>
+  </a>
   <a href="index.html" class="dock-btn" title="返回首页">
     <span class="dock-icon">🏠</span>
     <span class="dock-label">首页</span>
@@ -2956,7 +2961,7 @@
       });
       document.querySelectorAll('.article-back-home, .article-nav-sep:first-of-type').forEach(el => el.style.display = 'none');
       // 2. Propagate ?standalone=1 to all paper book links
-      document.querySelectorAll('a[href*="_paper.html"], a[href*="paper.html"]').forEach(el => {
+      document.querySelectorAll('a[href*="_paper"], a[href*="paper"], a[href*="_audio"], a[href*="audio"]').forEach(el => {
         if (!el.href.includes('standalone=1')) {
           el.href = el.href + (el.href.includes('?') ? '&' : '?') + 'standalone=1';
         }
