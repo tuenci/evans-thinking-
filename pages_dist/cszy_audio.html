@@ -135,16 +135,33 @@
     }
 
     .hud-title-zone {
-      padding: 0 8px;
+      padding: 0 12px;
       font-size: 13px;
       font-weight: 600;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       color: var(--accent-gold);
       border-left: 1px solid rgba(255, 255, 255, 0.12);
       border-right: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 680px) {
+      .hud-title-zone {
+        display: none !important;
+      }
+      .hud-capsule {
+        padding: 0 10px;
+        gap: 8px;
+        max-width: calc(100vw - 24px);
+      }
+      .hud-btn {
+        padding: 6px 11px;
+        font-size: 12.5px;
+      }
     }
 
     /* ========================================================
@@ -991,6 +1008,15 @@
 
       renderPlaylistItems();
       updateMediaSessionMetadata();
+
+      // Update paper link to carry current chapter
+      const isRegen = window.location.pathname.includes('regeneration');
+      const isStandalone = window.location.search.includes('standalone=1') || window.location.hash.includes('standalone');
+      const btnPaper = document.getElementById('btn-to-paper');
+      if (btnPaper) {
+        const paperBase = isRegen ? 'regeneration_paper.html' : 'cszy_paper.html';
+        btnPaper.href = `${paperBase}?ch=${ch.num}${isStandalone ? '&standalone=1' : ''}`;
+      }
     }
 
     function renderTranscript(ch) {
