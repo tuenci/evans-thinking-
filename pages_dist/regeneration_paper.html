@@ -1685,6 +1685,7 @@
   </footer>
 
   <!-- FLOATING AUDIO READING CONTROLLER CAPSULE -->
+  <audio id="paper-audio-player" preload="auto"></audio>
   <div class="tts-player-capsule" id="tts-player">
     <button class="tts-ctrl-btn" onclick="ttsPrevParagraph()" title="上一段">
       <svg class="hud-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z"/></svg>
@@ -1824,40 +1825,53 @@
       setupGestures();
       setupIdleTimer();
       setupAutoFullscreen();
-      initTTSVoices();
+      initPaperAudio();
     }
 
     
     /* ========================================================
-       SMART BILINGUAL AUDIO TTS ENGINE
-       Full client-side SpeechSynthesis with paragraph sync & auto-page turn
+       BROADCAST NEURAL AUDIOBOOK ENGINE
+       High-fidelity natural human broadcast voice with paragraph sync & auto-page turn
        ======================================================== */
+    const AUDIO_MANIFEST = {"book_id": "regeneration", "title_zh": "重生真意", "title_en": "The True Meaning of Being Born Again", "author": "王明道 (Wang Mingdao)", "voice": "zh-CN-YunyangNeural", "voice_label": "云阳 · 庄重沉稳播音员", "chapters": [{"num": 1, "badge": "PREFACE", "title_zh": "自序：四种称为基督徒的人", "title_en": "Author's Preface: Four Classes of Christians", "audioUrl": "audio/cszy/ch1.mp3", "duration": 309.41, "durationFormatted": "05:09", "fileSize": 1856972, "paragraphs": [{"bIdx": 0, "pIdx": 0, "start": 9.65, "end": 29.96, "text": "「重生」这个名词是大多数称为基督徒的人所熟悉的。但是真明白它的意义的人究竟有多少"}, {"bIdx": 0, "pIdx": 1, "start": 30.31, "end": 55.63, "text": "第一种是明白重生的道理而且有过重生经验的。这种信徒是最好的。他们知道自己所站的地"}, {"bIdx": 0, "pIdx": 2, "start": 55.98, "end": 116.29, "text": "第二种是有过重生的经验，但不明白重生的道理的信徒。这种信徒在以往的一个时期已经得"}, {"bIdx": 0, "pIdx": 3, "start": 116.64, "end": 179.64, "text": "第三种是明白重生的道理，但却未曾有过重生经验的信徒。这种人本不应当称为信徒，因为"}, {"bIdx": 0, "pIdx": 4, "start": 179.99, "end": 197.75, "text": "第四种是不明白重生的道理，也未曾有过重生经验的信徒。这种人本来也不应当称为信徒。"}, {"bIdx": 1, "pIdx": 0, "start": 202.74, "end": 273.59, "text": "在这四种信徒中，无疑第一种是最好的，我们都肯定他们是信徒。第二种信徒虽然不及第一"}, {"bIdx": 1, "pIdx": 1, "start": 273.94, "end": 288.75, "text": "我写这本书的目的固然是要帮助读者明白重生的道理，但更要紧的乃是希望读者明白了重生"}, {"bIdx": 1, "pIdx": 2, "start": 289.1, "end": 304.89, "text": "如果这本书能帮助一些有了重生的经验，却未明白个中道理的读者去明白；又帮助一些未曾"}, {"bIdx": 1, "pIdx": 3, "start": 305.24, "end": 309.06, "text": "王明道序于北平一九三三年三月七日"}]}, {"num": 2, "badge": "CHAPTER 2", "title_zh": "一、重生是什么意思？", "title_en": "What Does It Mean to Be Born Again?", "audioUrl": "audio/cszy/ch2.mp3", "duration": 664.74, "durationFormatted": "11:04", "fileSize": 3989036, "paragraphs": [{"bIdx": 0, "pIdx": 0, "start": 8.91, "end": 16.25, "text": "「耶稣回答说：『我实实在在地告诉你，人若不重生，就不能见神的国。』」(约三3)"}, {"bIdx": 0, "pIdx": 1, "start": 16.6, "end": 24.76, "text": "「耶稣说：『我实实在在地告诉你，人若不是从水和圣灵生的，就不能进神的国。』」 ("}, {"bIdx": 0, "pIdx": 2, "start": 25.11, "end": 83.36, "text": "「重生」是什么意思呢？「重」就是「再」的意思。一个人以前作过一件事，现在他再作，"}, {"bIdx": 0, "pIdx": 3, "start": 83.71, "end": 119.21, "text": "必有人在听见这话以后要十分惊异的问道：「人怎能再生产一次呢？这样大的一个人还能回"}, {"bIdx": 0, "pIdx": 4, "start": 119.56, "end": 147.18, "text": "主耶稣怎样回答尼哥底母这个问题呢？祂说：「我实实在在地告诉你，人若不是从水和圣灵"}, {"bIdx": 0, "pIdx": 5, "start": 147.53, "end": 166.11, "text": "祂叫尼哥底母知道，重生并不是进到母腹中，然后从母腹中再生产一次。这样的生产纵使再"}, {"bIdx": 1, "pIdx": 0, "start": 172.21, "end": 204.41, "text": "这里所说的水不是物质的水，乃是指着神的道。我们都知道一切有生命的物都不能离了水；"}, {"bIdx": 1, "pIdx": 1, "start": 204.76, "end": 226.05, "text": "「我亲爱的弟兄们，不要看错了。各样美善的恩赐和各样全备的赏赐都是从上头来的，从众"}, {"bIdx": 1, "pIdx": 2, "start": 226.4, "end": 249.01, "text": "「你们蒙了重生，不是由于能坏的种子，乃是由于不能坏的种子，是借着神活泼常存的道。"}, {"bIdx": 1, "pIdx": 3, "start": 249.36, "end": 275.54, "text": "第一次的生产是从肉身生的。肉身是污秽的、必朽坏的，所以凡从肉身生的也是污秽的、必"}, {"bIdx": 1, "pIdx": 4, "start": 275.89, "end": 301.0, "text": "有人说：「重生这种说法并不是说真有一次生产的事实，不过是一个比喻，表明一个人悔悟"}, {"bIdx": 1, "pIdx": 5, "start": 301.35, "end": 325.95, "text": "说这种话的人明显有两个极大的错误：第一，他们擅自更改了主耶稣所讲的话。主耶稣未曾"}, {"bIdx": 2, "pIdx": 0, "start": 331.62, "end": 370.11, "text": "假如有人告诉你说，你的一个朋友在昨天晚间生了一个儿子，你便问她说：「这是一个比喻"}, {"bIdx": 2, "pIdx": 1, "start": 370.46, "end": 427.2, "text": "说这种话的人的第二个错误，就是他们完全弄错了「生」的意思。一个小孩子生出来，乃是"}, {"bIdx": 2, "pIdx": 2, "start": 427.55, "end": 449.82, "text": "必有人说，我们承认第一次的生产是一件事实，因为我们看见了那件事实。我们看见一个产"}, {"bIdx": 2, "pIdx": 3, "start": 450.17, "end": 506.74, "text": "真的吗？没有看见过的事便不能是事实吗？我们中间有谁看见过神呢？有谁看见过主耶稣呢"}, {"bIdx": 2, "pIdx": 4, "start": 507.09, "end": 533.73, "text": "又有人要问说，重生既是一件事实，那样必定有一个新生出来的人了，但是那个人在哪里呢"}, {"bIdx": 3, "pIdx": 0, "start": 539.56, "end": 602.9, "text": "这一节经文在中文的译本里有两个错误：第一，这一节经文的希腊原文有一个「人」字，中"}, {"bIdx": 3, "pIdx": 1, "start": 603.25, "end": 651.73, "text": "除去以上所提的一节经文以外，还有两处经文提到这「里面的人」，可惜这两处经文在中文"}, {"bIdx": 3, "pIdx": 2, "start": 652.08, "end": 664.39, "text": "但这「里面的人」也能因着种种原因变为刚强或软弱，所以使徒求神「按着祂丰盛的荣耀，"}]}, {"num": 3, "badge": "CHAPTER 3", "title_zh": "二、为什么人必须重生？", "title_en": "Why Must a Person Be Born Again?", "audioUrl": "audio/cszy/ch3.mp3", "duration": 919.53, "durationFormatted": "15:19", "fileSize": 5517740, "paragraphs": [{"bIdx": 0, "pIdx": 0, "start": 10.2, "end": 15.2, "text": "「我说：『你们必须重生』，你不要以为希奇。」(约三7)"}, {"bIdx": 0, "pIdx": 1, "start": 15.55, "end": 35.75, "text": "我们当注意主耶稣在这里所说的一句话：「你们必须重生」。重生不是一件可有可无的事，"}, {"bIdx": 0, "pIdx": 2, "start": 36.1, "end": 39.8, "text": "可惜多少称为基督徒的人轻忽了这事！"}, {"bIdx": 0, "pIdx": 3, "start": 40.15, "end": 68.73, "text": "多少称为传福音的人也轻忽了这事！他们看重「考道」，看重「记名」，看重「受洗」，看"}, {"bIdx": 0, "pIdx": 4, "start": 69.08, "end": 96.8, "text": "然而「重生」的道理和经验不会因人的轻看、忽略便减轻它的价值。传道的人可以不讲重生"}, {"bIdx": 0, "pIdx": 5, "start": 97.15, "end": 123.15, "text": "为什么人必须重生呢？我们要明白这个问题，必须先彻底认清人类在神面前的真面目。但这"}, {"bIdx": 0, "pIdx": 6, "start": 123.5, "end": 142.86, "text": "按我们自己的性情，不但看不见自己的真相，而且也不愿意看见。我们愿意奉承自己，谄媚"}, {"bIdx": 1, "pIdx": 0, "start": 148.29, "end": 160.41, "text": "感谢神，祂不欺骗我们。祂爱我们。祂爱我们远胜于我们爱自己。祂毫不隐讳的把我们的真"}, {"bIdx": 1, "pIdx": 1, "start": 160.76, "end": 173.77, "text": "「耶和华从天上垂看世人，要看有明白的没有，有寻求神的没有。他们都偏离正路，一同变"}, {"bIdx": 1, "pIdx": 2, "start": 174.12, "end": 179.62, "text": "「在你面前，凡活着的人没有一个是义的。」(诗一四三2)"}, {"bIdx": 1, "pIdx": 3, "start": 179.97, "end": 185.7, "text": "「时常行善而不犯罪的义人，世上实在没有。」(传七20)"}, {"bIdx": 1, "pIdx": 4, "start": 186.05, "end": 222.46, "text": "「我们已经证明：犹太人和希利尼人都在罪恶之下。就如经上所记：没有义人，连一个也没"}, {"bIdx": 1, "pIdx": 5, "start": 222.81, "end": 262.75, "text": "这就是我们的真相，这就是全体人类的真相。「都是偏离正路，一同变为无用。并没有行善"}, {"bIdx": 1, "pIdx": 6, "start": 263.1, "end": 311.19, "text": "「都是偏离正路，一同变为无用。并没有行善的，连一个也没有。」这几句话如果是出于人"}, {"bIdx": 1, "pIdx": 7, "start": 311.54, "end": 345.29, "text": "在我们所认识的那少数的人里面，我们能彻底认识的又有多少呢？许多人是我们所认识的，"}, {"bIdx": 2, "pIdx": 0, "start": 350.47, "end": 393.41, "text": "许多人是这样诡诈，在别人面前作出很诚实清洁、公义端正的样子来，别人看见他们以为他"}, {"bIdx": 2, "pIdx": 1, "start": 393.76, "end": 421.17, "text": "「画虎画皮难画骨，知人知面不知心。」我们对于世上的人所认识的既是这样有限，自然不"}, {"bIdx": 2, "pIdx": 2, "start": 421.52, "end": 487.97, "text": "祂从天上垂看世人几千年之久，留意世界上每一个人；祂细心寻找一个行善的人，结果竟使"}, {"bIdx": 2, "pIdx": 3, "start": 488.32, "end": 548.47, "text": "世人都有罪，这事我们已经看清楚了，再进一步的问题就是「罪是起源于人的外面呢，还是"}, {"bIdx": 2, "pIdx": 4, "start": 548.82, "end": 578.53, "text": "罪恶不是从外面来的，我们已经证明了。那样它是从哪里来的呢？神的话清楚回答了这个问"}, {"bIdx": 2, "pIdx": 5, "start": 578.88, "end": 642.24, "text": "啊！这真是十分清楚、十分彻底的答案！世界上的罪虽有千百种，但无一不是从人的心中发"}, {"bIdx": 2, "pIdx": 6, "start": 642.59, "end": 651.49, "text": "「人心比万物都诡诈，坏到极处，谁能识透呢？」(耶一七9)神所说的这两句话真是确切"}, {"bIdx": 3, "pIdx": 0, "start": 657.26, "end": 683.37, "text": "我们再往下讨论一个问题──「人从多大年岁才有罪？」对于这个问题有人要回答说：「从"}, {"bIdx": 3, "pIdx": 1, "start": 683.72, "end": 693.97, "text": "神的话告诉我们，人不是长大以后才变坏的，乃是本来就是坏的。人犯罪不是学习的，他们"}, {"bIdx": 3, "pIdx": 2, "start": 694.32, "end": 773.73, "text": "从前我不明白这理，我以为小孩子是清洁无罪的，及至他们长大以后，常看他们的父母、家"}, {"bIdx": 3, "pIdx": 3, "start": 774.08, "end": 848.03, "text": "我们现在认清楚人类的真面目了吗？都是罪人！都是从里面坏到外面的！都是生下来就有罪"}, {"bIdx": 3, "pIdx": 4, "start": 848.38, "end": 888.58, "text": "树根若是干了，修理树叶有什么用处呢？泉源若是浊了，要帮助河水变清岂不是徒然的吗？"}, {"bIdx": 3, "pIdx": 5, "start": 888.93, "end": 890.8, "text": "「你们必须重生。」"}, {"bIdx": 3, "pIdx": 6, "start": 891.15, "end": 919.18, "text": "祂的意思是说：「你们的旧生命就是一切罪恶的起源；你们的旧生命永远不能修理得好，永"}]}, {"num": 4, "badge": "CHAPTER 4", "title_zh": "三、人得了重生有什么表现？", "title_en": "What Are the Evidences of Being Born Again?", "audioUrl": "audio/cszy/ch4.mp3", "duration": 1008.37, "durationFormatted": "16:48", "fileSize": 6050828, "paragraphs": [{"bIdx": 0, "pIdx": 0, "start": 10.18, "end": 19.92, "text": "「风随着意思吹，你听见风的响声，却不晓得从哪里来，往哪里去；凡从圣灵生的，也是如"}, {"bIdx": 0, "pIdx": 1, "start": 20.27, "end": 83.78, "text": "风是人人所明白的一个名词；刮风是人人所懂得的一件事情。我们说某日天气炎热，一点风"}, {"bIdx": 0, "pIdx": 2, "start": 84.13, "end": 133.64, "text": "是的，风是眼看不见的东西，刮风是眼看不见的事实。但什么时候发生这件事实，同时必有"}, {"bIdx": 0, "pIdx": 3, "start": 133.99, "end": 188.13, "text": "一个人被圣灵所生是一件事实，但它正如刮风一样，是一件眼看不见的事实。我们未曾看见"}, {"bIdx": 0, "pIdx": 4, "start": 188.48, "end": 238.33, "text": "一个人平日在思想、言语、行为上充满了罪恶，非但不以为苦，反觉十分高兴。他以为损人"}, {"bIdx": 0, "pIdx": 5, "start": 238.68, "end": 289.18, "text": "一个人平日总是遮掩自己的罪恶，显扬自己的善行。听见人讲道论到罪恶，责备犯罪的人，"}, {"bIdx": 0, "pIdx": 6, "start": 289.53, "end": 355.72, "text": "一个人平日总是自私自利，他思索、说话、行事、作工，总是要求自己的好处；凡事为自己"}, {"bIdx": 0, "pIdx": 7, "start": 356.07, "end": 426.29, "text": "一个人平日总是醉心于物质方面的事物，他所追求的不外乎金钱、享用、安逸、娱乐、名誉"}, {"bIdx": 1, "pIdx": 0, "start": 432.75, "end": 497.58, "text": "一个人平日不信圣经、厌恶圣经，轻看笑骂那些信圣经、读圣经的人。他一位热心爱主的朋"}, {"bIdx": 1, "pIdx": 1, "start": 497.93, "end": 569.98, "text": "一个人平日喜欢亲近酒肉世俗的朋友，稍有暇时，便大家聚在一处，嬉戏宴乐，说些粗俗下"}, {"bIdx": 1, "pIdx": 2, "start": 570.33, "end": 626.82, "text": "一个人平日眼中不怕神、远离神、弃绝神、辱骂神、亵渎神，看热心事奉神的人为迷信、为"}, {"bIdx": 1, "pIdx": 3, "start": 627.17, "end": 679.2, "text": "我不能一一细说一个人因得重生所发生的改变。一个自己得了重生的人，必能述说这些现象"}, {"bIdx": 1, "pIdx": 4, "start": 679.55, "end": 753.52, "text": "我说到这里也许有些人要误会我的意思。他们说，是的，我们已经作基督徒许多年，但我们"}, {"bIdx": 1, "pIdx": 5, "start": 753.87, "end": 764.6, "text": "我要回答这些人说，是的，你们有这些改变诚然是好的。但你们所有的改变只是这些吗？还"}, {"bIdx": 1, "pIdx": 6, "start": 764.95, "end": 788.23, "text": "爱罪——变为恨罪；喜欢人的称赞——变为喜欢人劝责；自私自利——变为爱人如己；贪恋"}, {"bIdx": 2, "pIdx": 0, "start": 794.4, "end": 832.99, "text": "这些乃是更重要的改变，乃是里面的改变，乃是生命上的改变，唯独这些改变方能证明一个"}, {"bIdx": 2, "pIdx": 1, "start": 833.34, "end": 852.26, "text": "如果一个人作了基督徒许多时候，学会了祈祷、读经、唱诗、讲道，也戒除了几样不良的嗜"}, {"bIdx": 2, "pIdx": 2, "start": 852.61, "end": 916.23, "text": "从前喜爱犯罪，现在仍是这样；从前不愿意人说他的过失，现在仍是这样；从前一味的自私"}, {"bIdx": 2, "pIdx": 3, "start": 916.58, "end": 942.91, "text": "自然我不是说一个人一旦得了重生，立时就成为一个完全人，也不再有丝毫的过失、缺欠、"}, {"bIdx": 2, "pIdx": 4, "start": 943.26, "end": 969.35, "text": "一个春天的早晨，我同一位朋友坐在一座小山上向四面眺望，看见湖面的水平静得像镜子一"}, {"bIdx": 2, "pIdx": 5, "start": 969.7, "end": 1008.02, "text": "忽然我的朋友开口对我说道：「哎呀！风刮得怎么这样大啊！」我听见这话不禁十二分的惊"}]}, {"num": 5, "badge": "CHAPTER 5", "title_zh": "四、怎样方能得重生？", "title_en": "How Can One Be Born Again?", "audioUrl": "audio/cszy/ch5.mp3", "duration": 723.75, "durationFormatted": "12:03", "fileSize": 4343132, "paragraphs": [{"bIdx": 0, "pIdx": 0, "start": 10.18, "end": 19.35, "text": "「摩西在旷野怎样举蛇，人子也必照样被举起来，叫一切信祂的都得永生。」(约三14—"}, {"bIdx": 0, "pIdx": 1, "start": 19.7, "end": 35.08, "text": "在这一段话中主耶稣指示尼哥底母得重生的方法。祂引用了一件古时以色列人所经历的事实"}, {"bIdx": 0, "pIdx": 2, "start": 35.43, "end": 87.25, "text": "「他们从何珥山起行，往红海那条路走，要绕过以东地。百姓因这路难行，心中甚是烦躁，"}, {"bIdx": 0, "pIdx": 3, "start": 87.6, "end": 118.49, "text": "我们要注意这一段事迹的起源。以色列人被火蛇所咬，乃是因为他们埋怨神。他们所以埋怨"}, {"bIdx": 0, "pIdx": 4, "start": 118.84, "end": 157.5, "text": "请注意：每一个被火蛇所咬的人的生命已经断绝了。虽然被蛇咬以后的几小时或是一两天以"}, {"bIdx": 0, "pIdx": 5, "start": 157.85, "end": 188.88, "text": "主耶稣就是用这件事来教导尼哥底母，将一个人得重生的方法指示他。祂告诉尼哥底母说:"}, {"bIdx": 0, "pIdx": 6, "start": 189.23, "end": 197.08, "text": "因此我们的问题——怎样方能得重生？——在这里便得了一个清楚的答案——信耶稣基督。"}, {"bIdx": 0, "pIdx": 7, "start": 197.43, "end": 215.67, "text": "必有人说:「得重生的方法既是这样简单，那么所有基督徒必是都已经得重生了。但照前一"}, {"bIdx": 0, "pIdx": 8, "start": 216.02, "end": 233.83, "text": "我们要明白这事，须先清楚明白「信耶稣」究竟是怎么一回事。我们以为一切称为基督徒的"}, {"bIdx": 1, "pIdx": 0, "start": 240.48, "end": 249.62, "text": "一个被火蛇所咬的以色列人来望铜蛇是十分容易的事，然而这件十分容易的事却包含了几个"}, {"bIdx": 1, "pIdx": 1, "start": 249.97, "end": 268.77, "text": "第一，那个被蛇所咬的人必须知道他是被蛇咬了，然后他方肯来望铜蛇。假使有一个以色列"}, {"bIdx": 1, "pIdx": 2, "start": 269.12, "end": 295.06, "text": "第二，那个被蛇所咬的人必须知道他被蛇咬的结果是何等可怕。因为被蛇所咬不是疼痛几日"}, {"bIdx": 1, "pIdx": 3, "start": 295.41, "end": 324.16, "text": "第三，那个被蛇所咬的人必须知道他自己没有一点方法能救自己。假使他想他手中有一种善"}, {"bIdx": 1, "pIdx": 4, "start": 324.51, "end": 344.05, "text": "第四，那个被蛇所咬的人必须深信神的话。他信神藉摩西所传达的消息，信他照神所指示的"}, {"bIdx": 1, "pIdx": 5, "start": 344.4, "end": 353.18, "text": "一个因罪而失去生命的罪人来信耶稣也是一件很容易的事，但这件容易的事也包含了相同的"}, {"bIdx": 1, "pIdx": 6, "start": 353.53, "end": 370.24, "text": "第一，一个罪人必须知道自己真是犯了罪。第二，他必须知道犯罪的必要死亡。第三，他必"}, {"bIdx": 1, "pIdx": 7, "start": 370.59, "end": 381.82, "text": "一个被毒蛇咬了的以色列人有了以上四步经验怎样立刻得了医治，照样一个罪人有了以上四"}, {"bIdx": 2, "pIdx": 0, "start": 387.51, "end": 404.65, "text": "现今各地称为基督徒的数目诚然不少，但实在有过以上所提的四步经验的人究竟有多少呢？"}, {"bIdx": 2, "pIdx": 1, "start": 405.0, "end": 430.34, "text": "不是有许多人加入教会是因为生计困难，找事不易，想在教会或教会附属的机关里谋一个吃"}, {"bIdx": 2, "pIdx": 2, "start": 430.69, "end": 451.59, "text": "比这些较好一点的，有些人是因为想耶稣的教训可以造成伟大的人格，所以作了基督徒。有"}, {"bIdx": 2, "pIdx": 3, "start": 451.94, "end": 471.24, "text": "以上所说的这些作基督徒的动机虽然各不相同，但在几样最要紧的事上却毫无差别，就是："}, {"bIdx": 2, "pIdx": 4, "start": 471.59, "end": 493.53, "text": "这些人自己说他们是基督徒，其他人也有承认他们是基督徒，称呼他们为基督徒的。这些人"}, {"bIdx": 2, "pIdx": 5, "start": 493.88, "end": 515.96, "text": "我们切不要以为每一个加入教会自称为基督徒的人便是真信耶稣的人，便是真得了重生的人"}, {"bIdx": 2, "pIdx": 6, "start": 516.31, "end": 532.96, "text": "称为基督徒的人中有许多已经得了重生，这是毫无可疑的事实，但不是所有称为基督徒的都"}, {"bIdx": 2, "pIdx": 7, "start": 533.31, "end": 548.67, "text": "一个人得重生唯一的方法就是知道自己有罪，知道自己的危险，知道自己无法拯救自己，听"}, {"bIdx": 3, "pIdx": 0, "start": 555.23, "end": 579.73, "text": "在这里我们又看出得重生是很快的一件事。那个被蛇所咬的以色列人「一望铜蛇就活了」。"}, {"bIdx": 3, "pIdx": 1, "start": 580.08, "end": 603.22, "text": "一个罪人因信耶稣基督而得重生也是这样。只要这个人真认识了自己，真知道了自己的污秽"}, {"bIdx": 3, "pIdx": 2, "start": 603.57, "end": 625.38, "text": "昨天他还是死人，今日他已经得了生命；昨天他还遍体污秽，今日他已经像雪一样的洁白；"}, {"bIdx": 3, "pIdx": 3, "start": 625.73, "end": 643.97, "text": "按圣经所讲的道理来说，一个人的罪无论怎样大，他的境况无论怎样可怜，只要他真知道自"}, {"bIdx": 3, "pIdx": 4, "start": 644.32, "end": 665.06, "text": "不知道什么缘故，这宝贵的福音竟被人讲得乱七八糟，以致多少人以为得救是极困难的事，"}, {"bIdx": 3, "pIdx": 5, "start": 665.41, "end": 679.83, "text": "要挽救这种可怕的现象，最要紧的就是使人明白真诚悔改信靠耶稣，立时就得重生，就有永"}, {"bIdx": 3, "pIdx": 6, "start": 680.18, "end": 700.58, "text": "是的，主耶稣在十字架上已经完成了救工，不用我们再设什么方法去救自己，也不用我们再"}, {"bIdx": 3, "pIdx": 7, "start": 700.93, "end": 723.4, "text": "你还未这样信吗？现在就信，现在你就能得着重生，得着永生。你已经这样信了吗？你当知"}]}, {"num": 6, "badge": "CHAPTER 6", "title_zh": "五、得了重生的人还能犯罪吗？", "title_en": "Can a Person Who Is Born Again Still Sin?", "audioUrl": "audio/cszy/ch6.mp3", "duration": 2099.54, "durationFormatted": "34:59", "fileSize": 12597788, "paragraphs": [{"bIdx": 0, "pIdx": 0, "start": 10.95, "end": 22.37, "text": "我们现在所要讨论的问题并不是「得了重生的人还可以犯罪吗？」圣经对于这个问题已经给"}, {"bIdx": 0, "pIdx": 1, "start": 22.72, "end": 43.0, "text": "我们的问题也不是「得了重生的人还愿意犯罪吗？」没有一个得了重生的人还愿意犯罪。一"}, {"bIdx": 0, "pIdx": 2, "start": 43.35, "end": 51.18, "text": "我们的问题乃是「得了重生的人还能犯罪吗？」换一句话说就是「得了重生的人还有没有犯"}, {"bIdx": 0, "pIdx": 3, "start": 51.53, "end": 94.29, "text": "许多虔诚的信徒因为不十分明白这一件事，以致自取了多少无谓的惧怕、忧愁、失望和痛苦"}, {"bIdx": 0, "pIdx": 4, "start": 94.64, "end": 143.89, "text": "如果他们听过什么人讲道说:「得了重生的人一定不能再犯罪。」他们更会信自己是未曾得"}, {"bIdx": 0, "pIdx": 5, "start": 144.24, "end": 190.83, "text": "还有些信徒弄出一种比这个更危险的错误来。他们在得了重生以后偶然又犯了罪，便以为他"}, {"bIdx": 1, "pIdx": 0, "start": 197.36, "end": 199.93, "text": "圣经怎样回答这个问题呢？"}, {"bIdx": 1, "pIdx": 1, "start": 200.28, "end": 214.58, "text": "「我们若说自己无罪，便是自欺，真理不在我们心里了。我们若认自己的罪，神是信实的，"}, {"bIdx": 1, "pIdx": 2, "start": 214.93, "end": 244.76, "text": "这段经文中的「我们」是什么人呢？约翰这封信不是写给未得重生的人，乃是写给已经得了"}, {"bIdx": 1, "pIdx": 3, "start": 245.11, "end": 264.26, "text": "往下他又告诉我们一个得洁净的方法，「我们若认自己的罪，神是信实的，是公义的，必要"}, {"bIdx": 1, "pIdx": 4, "start": 264.61, "end": 279.4, "text": "同时我们在这一节经文中又可以看出得了重生的人仍能犯罪，正因为得了重生的人能犯罪，"}, {"bIdx": 1, "pIdx": 5, "start": 279.75, "end": 297.65, "text": "「我小子们哪，我将这些话写给你们，是要叫你们不犯罪。若有人犯罪，在父那里我们有一"}, {"bIdx": 1, "pIdx": 6, "start": 298.0, "end": 318.55, "text": "这一段话也是写给已经得了重生的人的。约翰说他写这话给他们是要叫他们不犯罪。既需要"}, {"bIdx": 1, "pIdx": 7, "start": 318.9, "end": 349.59, "text": "但不幸有人犯了罪将怎样呢？约翰往下说什么呢？他说:「若有人犯罪，就显明这人不是属"}, {"bIdx": 1, "pIdx": 8, "start": 349.94, "end": 357.72, "text": "「若有人犯罪，在父那里我们有一位中保，就是那义者耶稣基督，祂为我们的罪作了挽回祭"}, {"bIdx": 1, "pIdx": 9, "start": 358.07, "end": 381.06, "text": "啊，这是何等宝贵的话！这话是怎样能帮助那些被罪打伤的信徒？怎样能安慰他们，使他们"}, {"bIdx": 1, "pIdx": 10, "start": 381.41, "end": 413.59, "text": "但也许有人以为圣经中有这一段教训真是极不好的，他们想这段经文岂不要使许多信徒有恃"}, {"bIdx": 1, "pIdx": 11, "start": 413.94, "end": 434.56, "text": "上面所说的这种思想是由于不明白圣经的道理而发生的。若是一个信徒真明白重生的道理，"}, {"bIdx": 1, "pIdx": 12, "start": 434.91, "end": 464.79, "text": "比方说我有一次住在一位朋友家中，一天早晨我用剃刀刮脸的时候失手将脸割破了一块。那"}, {"bIdx": 1, "pIdx": 13, "start": 465.14, "end": 476.16, "text": "我的朋友又许诺我，什么时候用完这一瓶药，他还要再送给我。我因为得了这样有用的东西"}, {"bIdx": 1, "pIdx": 14, "start": 476.51, "end": 501.35, "text": "以后我回到自己屋里打开这个瓶子一看，其中的药不少，我估计这瓶药总可以用个几十次，"}, {"bIdx": 1, "pIdx": 15, "start": 501.7, "end": 532.01, "text": "请问如果我这样作起来，看见我的人要说我什么呢？我知道他们一定要说我疯了。但我不会"}, {"bIdx": 1, "pIdx": 16, "start": 532.36, "end": 550.31, "text": "约翰壹书二章一、二节的话正像神给祂的孩子们的一瓶创伤药。祂看见他们有时因不留意以"}, {"bIdx": 1, "pIdx": 17, "start": 550.66, "end": 578.86, "text": "创伤药是为人失手割破皮肉的时候用的，但没有人因为有了药便任意割破自己的皮肉，因为"}, {"bIdx": 1, "pIdx": 18, "start": 579.21, "end": 611.66, "text": "我要将这瓶属灵的创伤药介绍给一切信主的人，我不怕他们因为听了这段教训去犯罪，因我"}, {"bIdx": 1, "pIdx": 19, "start": 612.01, "end": 622.16, "text": "神的应许是为祂的孩子们(已得重生的人)预备的，未曾得重生的假信徒若去妄用神的话，"}, {"bIdx": 1, "pIdx": 20, "start": 622.51, "end": 653.78, "text": "一个信徒犯了罪，正如一个人受了伤一样。人都不愿意受伤，然而人都免不了受伤。我们应"}, {"bIdx": 1, "pIdx": 21, "start": 654.13, "end": 669.83, "text": "如果我们以为必须这样警诚我们的学生、孩子，他们才不敢伤害自己，那么，有一日若他们"}, {"bIdx": 1, "pIdx": 22, "start": 670.18, "end": 691.61, "text": "真得了重生的人都不愿意犯罪，然而人们却难免犯罪。我们那位满有智慧又慈爱的天父，一"}, {"bIdx": 1, "pIdx": 23, "start": 691.96, "end": 721.7, "text": "可怜许多无知的信徒不知道从哪里听来一种道理，竟说信徒得了重生以后如果犯罪必定再不"}, {"bIdx": 2, "pIdx": 0, "start": 727.8, "end": 732.72, "text": "现在我们离开约翰壹书，来读哥林多前书中的几段话:"}, {"bIdx": 2, "pIdx": 1, "start": 733.07, "end": 753.06, "text": "「奉神旨意，蒙召作耶稣基督使徒的保罗，同兄弟所提尼，写信给在哥林多神的教会，就是"}, {"bIdx": 2, "pIdx": 2, "start": 753.41, "end": 763.1, "text": "「你们仍是属肉体的，因为在你们中间有嫉妒、纷争，这岂不是属乎肉体、照着世人的样子"}, {"bIdx": 2, "pIdx": 3, "start": 763.45, "end": 778.84, "text": "「风闻在你们中间有淫乱的事。这样的淫乱连外邦人中也没有，就是有人收了他的继母。你"}, {"bIdx": 2, "pIdx": 4, "start": 779.19, "end": 805.35, "text": "「你们中间有彼此相争的事，怎敢在不义的人面前求审，不在圣徒面前求审呢？……你们竟"}, {"bIdx": 2, "pIdx": 5, "start": 805.7, "end": 823.99, "text": "「人应当自己省察，然后吃这饼、喝这杯。因为人吃喝，若不分辨是主的身体，就是吃喝自"}, {"bIdx": 2, "pIdx": 6, "start": 824.34, "end": 842.1, "text": "请问哥林多的信徒是不是得了重生的人呢？在这封信的起始保罗称他们为在基督耶稣里成圣"}, {"bIdx": 2, "pIdx": 7, "start": 842.45, "end": 870.21, "text": "从保罗所写的话中可以看清楚哥林多的信徒确是得了重生的人。但在这一封书信里，我们看"}, {"bIdx": 2, "pIdx": 8, "start": 870.56, "end": 873.59, "text": "容我们再读另外一封信里的几段话:"}, {"bIdx": 2, "pIdx": 9, "start": 873.94, "end": 883.44, "text": "「奉神旨意，作基督耶稣使徒的保罗，写信给在以弗所的圣徒，就是在基督耶稣里有忠心的"}, {"bIdx": 2, "pIdx": 10, "start": 883.79, "end": 930.93, "text": "「所以，你们要弃绝谎言，各人与邻舍说实话，因为我们是互相为肢体。生气却不要犯罪，"}, {"bIdx": 2, "pIdx": 11, "start": 931.28, "end": 966.29, "text": "保罗称以弗所的信徒为圣徒，为基督耶稣里有忠心的人，足证这些人不但已经得了重生，而"}, {"bIdx": 2, "pIdx": 12, "start": 966.64, "end": 972.5, "text": "如果得了重生的人不能犯罪，保罗写这一大段教训不是完全没有意思了吗？"}, {"bIdx": 2, "pIdx": 13, "start": 972.85, "end": 1002.23, "text": "我们不用劝诫一个哑巴儿童说:「不要说谎，不要骂人。」因为哑巴不会说话，他不能说谎"}, {"bIdx": 2, "pIdx": 14, "start": 1002.58, "end": 1019.62, "text": "岂单是在以弗所书中有这一类的教训呢？在别卷书信里不也有许多这一类教训吗？使徒所写"}, {"bIdx": 2, "pIdx": 15, "start": 1019.97, "end": 1038.81, "text": "不用说普通的信徒，提摩太是保罗所倚重的同工，保罗称他为爱的儿子，就是这样的一位圣"}, {"bIdx": 2, "pIdx": 16, "start": 1039.16, "end": 1046.64, "text": "若是提摩太还须要「逃避少年的私欲」，得了重生的人还能犯罪的真理，不是更加显明了吗"}, {"bIdx": 3, "pIdx": 0, "start": 1052.6, "end": 1055.98, "text": "容我们现在再看一段保罗自己的经验:"}, {"bIdx": 3, "pIdx": 1, "start": 1056.33, "end": 1120.17, "text": "「我们原晓得律法是属乎灵的，但我是属乎肉体的，是已经卖给罪了。因为我所做的，我自"}, {"bIdx": 3, "pIdx": 2, "start": 1120.52, "end": 1171.43, "text": "无疑的，保罗这一段话是述说他重生以后所经过的一种战争的经验。他已经得了重生，他里"}, {"bIdx": 3, "pIdx": 3, "start": 1171.78, "end": 1202.19, "text": "多少真实得了重生的信徒都能从心中响应保罗所说这段话。他们经验过这种战争，遭遇过这"}, {"bIdx": 3, "pIdx": 4, "start": 1202.54, "end": 1244.63, "text": "未得重生的人不喜欢神的律，罪的律也不会掳他，因为他根本是完全服在罪的权下。每一个"}, {"bIdx": 4, "pIdx": 0, "start": 1250.47, "end": 1256.54, "text": "有一段经文常被人误解，被人引用作为得了重生的人不能犯罪的证据:"}, {"bIdx": 4, "pIdx": 1, "start": 1256.89, "end": 1275.18, "text": "「犯罪的是属魔鬼，因为魔鬼从起初就犯罪。神的儿子显现出来，为要除灭魔鬼的作为。凡"}, {"bIdx": 4, "pIdx": 2, "start": 1275.53, "end": 1356.26, "text": "有些人引证这段经文说，这里不是明说「从神生的，就不犯罪了吗？不是又说「他也不能犯"}, {"bIdx": 4, "pIdx": 3, "start": 1356.61, "end": 1402.43, "text": "「凡从神生的，就不犯罪」，「他也不能犯罪」，这是千真万确的真理。神不犯罪，所以神"}, {"bIdx": 4, "pIdx": 4, "start": 1402.78, "end": 1431.2, "text": "一个人得了重生以后，那外面的人并未曾死去，乃是仍然存在那里，不过他里面却多了一个"}, {"bIdx": 4, "pIdx": 5, "start": 1431.55, "end": 1460.92, "text": "一个得了重生的人是有两个人的——一个是外面的，一个是里面的。外面的人是从肉身生的"}, {"bIdx": 4, "pIdx": 6, "start": 1461.27, "end": 1524.08, "text": "许多实在得了重生的人因为不明白这个极大的真理，便陷在一种怀疑失望的苦境里。他们在"}, {"bIdx": 4, "pIdx": 7, "start": 1524.43, "end": 1536.33, "text": "我们若明白这新人与旧人交战的事，便晓得信徒有这种剧烈的战争不但不足以证明他们未得"}, {"bIdx": 4, "pIdx": 8, "start": 1536.68, "end": 1563.71, "text": "他们遭遇苦痛的失败就是因为他们那「里面的人」力量微弱，不足胜过那「外面的人」。他"}, {"bIdx": 5, "pIdx": 0, "start": 1569.33, "end": 1591.19, "text": "或有人说，得了重生的人既然也能犯罪，并且有时还能屡次陷在罪中不能自拔，那样他们与"}, {"bIdx": 5, "pIdx": 1, "start": 1591.54, "end": 1624.33, "text": "未得重生的人不但犯罪，而且喜爱犯罪。他们活在罪中非但不感觉痛苦，反倒引为幸事，他"}, {"bIdx": 5, "pIdx": 2, "start": 1624.68, "end": 1649.23, "text": "大约我们都看见过羊与猪这两种家畜吧。这两种家畜中间有一种极显见的分别——前者喜爱"}, {"bIdx": 5, "pIdx": 3, "start": 1649.58, "end": 1663.67, "text": "羊固然是喜爱洁净的，但它们如果不谨慎，也难免落在猪所喜欢居住的泥坑中，以致弄得全"}, {"bIdx": 5, "pIdx": 4, "start": 1664.02, "end": 1692.53, "text": "虽然这样，羊总是羊，我们决不能因为看见它们落在泥坑中，弄得满身是泥，便说它们是猪"}, {"bIdx": 5, "pIdx": 5, "start": 1692.88, "end": 1722.09, "text": "猪却不是这样了，它喜欢在泥坑里，因此它们四处寻找泥坑，及至遇见这种污秽的地方，便"}, {"bIdx": 5, "pIdx": 6, "start": 1722.44, "end": 1782.84, "text": "得了重生的人与未得重生的人所有的一个大分别就是这个。一个得了重生的人好像一只羊，"}, {"bIdx": 5, "pIdx": 7, "start": 1783.19, "end": 1834.96, "text": "我在不明白这些真理的时候，以为凡品行好的基督徒才是基督徒，品行不好的就是假基督徒"}, {"bIdx": 5, "pIdx": 8, "start": 1835.31, "end": 1854.49, "text": "察验一个人是否得了重生，不要只看他是否犯罪，更要紧的是看他对罪的态度如何。得了重"}, {"bIdx": 5, "pIdx": 9, "start": 1854.84, "end": 1891.87, "text": "不引领人到基督面前使他悔改信主得着重生，只去改良一下他的环境，帮助他去掉一些外面"}, {"bIdx": 5, "pIdx": 10, "start": 1892.22, "end": 1915.16, "text": "里面的性情没有改变，只改变一些外面的事，是没有多少益处的。现在许多传道的人，所讲"}, {"bIdx": 6, "pIdx": 0, "start": 1921.24, "end": 1932.35, "text": "得了重生的人仍能犯罪，不单是因为他们处在污秽邪恶的世界中，随时有试探和陷阱，也是"}, {"bIdx": 6, "pIdx": 1, "start": 1932.7, "end": 1973.12, "text": "一个是属地的，一个是属天的；一个是污秽邪恶的，一个是圣洁良善的；一个是在第一次生"}, {"bIdx": 6, "pIdx": 2, "start": 1973.47, "end": 1996.84, "text": "正是因为这个缘故，保罗写信给以弗所的教会说：「因此，我在父面前屈膝，(天上地上的"}, {"bIdx": 6, "pIdx": 3, "start": 1997.19, "end": 2015.0, "text": "属神的人在世界上生活的时候，常常遭遇三种仇敌的攻击。一个仇敌是他们的肉体，或说外"}, {"bIdx": 6, "pIdx": 4, "start": 2015.35, "end": 2049.46, "text": "从人事一方面看起来，我们真是毫无得胜的指望。这三个仇敌中的一个就足能制服我们有余"}, {"bIdx": 6, "pIdx": 5, "start": 2049.81, "end": 2085.73, "text": "感谢神，我们现在借着祂的话，确实的知道我们虽然处在这种四面受敌的境况中，却仍有得"}, {"bIdx": 6, "pIdx": 6, "start": 2086.08, "end": 2099.19, "text": "那时我们必要像保罗那样说:「所以，我更喜欢夸自己的软弱，好叫基督的能力覆庇我。…"}]}, {"num": 7, "badge": "CHAPTER 7", "title_zh": "六、读者思考与讨论", "title_en": "Reader Reflection & Group Discussion", "audioUrl": "audio/cszy/ch7.mp3", "duration": 405.12, "durationFormatted": "06:45", "fileSize": 2431244, "paragraphs": [{"bIdx": 0, "pIdx": 0, "start": 8.36, "end": 20.04, "text": "（编者附。以下问题为编者所拟，非王明道原文，供个人默想或小组讨论。这些问题是邀请"}, {"bIdx": 0, "pIdx": 1, "start": 20.39, "end": 34.17, "text": "读完这本书，最要紧的不是多明白一些道理，而是像作者在自序里所盼望的：拿这些道理来"}, {"bIdx": 1, "pIdx": 0, "start": 38.64, "end": 56.49, "text": "书中提到：有人把重生理解为悔改自新、决心做好人。书中指出，重生是神借着真道和圣灵"}, {"bIdx": 1, "pIdx": 1, "start": 56.84, "end": 64.07, "text": "请思考：你原来怎么理解\"重生\"？你的信主，更像\"我决定改好\"，还是\"神给了我新生"}, {"bIdx": 2, "pIdx": 0, "start": 68.49, "end": 86.58, "text": "书中提到：罪不是从环境来的，而是从人心里出来的。所以靠教育、道德、改良社会，都改"}, {"bIdx": 2, "pIdx": 1, "start": 86.93, "end": 96.63, "text": "请思考：回想你曾用过什么办法改变自己（努力、立志、换环境、学做好人），结果如何？"}, {"bIdx": 3, "pIdx": 0, "start": 100.93, "end": 123.71, "text": "书中提到（自序）：作者把称为基督徒的人分成四种。① 明白重生的道理，也有重生的经"}, {"bIdx": 3, "pIdx": 1, "start": 124.06, "end": 136.51, "text": "请思考：你觉得自己最像哪一种？你的把握来自\"我知道这些道理\"，还是\"我真的仰望过"}, {"bIdx": 4, "pIdx": 0, "start": 140.14, "end": 161.31, "text": "书中提到（第四章）：书中列举了常见的入教动机：为生计、为婚姻、欣赏耶稣的教训、觉"}, {"bIdx": 4, "pIdx": 1, "start": 161.66, "end": 170.44, "text": "请思考：诚实回想，你的动机里有哪些？有没有一个时刻，你真切地意识到\"我在神面前有"}, {"bIdx": 5, "pIdx": 0, "start": 175.39, "end": 204.12, "text": "书中提到：民数记21章记载，以色列人被火蛇咬，神吩咐摩西做一条铜蛇挂在杆子上，被"}, {"bIdx": 5, "pIdx": 1, "start": 204.47, "end": 213.8, "text": "请思考：这四个认识中，哪一个对你最模糊，或者曾被跳过？你是否曾想\"先把自己变好，"}, {"bIdx": 6, "pIdx": 0, "start": 217.65, "end": 236.18, "text": "书中提到：书中强调\"一望就活\"：人信靠的那一刻就得了生命，不需要等将来，也不是靠"}, {"bIdx": 6, "pIdx": 1, "start": 236.53, "end": 245.86, "text": "请思考：你有平安的时候，和怀疑的时候，各是因为什么？是因为\"我今天表现好或不好\""}, {"bIdx": 7, "pIdx": 0, "start": 250.43, "end": 293.46, "text": "书中提到：书中把变化分成两类。外在、可以学会的：会背圣经书卷、会祷告唱诗、按时聚"}, {"bIdx": 7, "pIdx": 1, "start": 293.81, "end": 304.37, "text": "请思考：对照内在的几项，哪些已经有变化的迹象，哪些几乎没有变化？你过去是否曾把外"}, {"bIdx": 8, "pIdx": 0, "start": 307.42, "end": 322.06, "text": "书中提到：一个人即使能背整本圣经、会讲道、做过长老牧师，如果里面没有生命的改变，"}, {"bIdx": 8, "pIdx": 1, "start": 322.41, "end": 336.52, "text": "请思考：你现在最投入的是什么（研读圣经知识、事奉表现、教会活动）？这些是在喂养\""}, {"bIdx": 9, "pIdx": 0, "start": 341.37, "end": 368.4, "text": "书中提到：很多信徒因为再犯罪，就以为自己没有重生，或以为不能再被赦免。书中指出，"}, {"bIdx": 9, "pIdx": 1, "start": 368.75, "end": 377.1, "text": "请思考：犯罪之后，你的第一反应是什么？是躲开神、陷入绝望，还是痛心，并回到主面前"}, {"bIdx": 10, "pIdx": 0, "start": 381.86, "end": 396.76, "text": "书中提到：作者打了一个比方：朋友送你一瓶创伤药，没有人因为有药，就故意割伤自己。"}, {"bIdx": 10, "pIdx": 1, "start": 397.11, "end": 404.77, "text": "请思考：你有没有想过\"反正会被赦免\"？这种想法和\"恨恶罪\"的新生命，冲突在哪里？"}]}]};
     const TTS_STATE = {
       active: false,
       playing: false,
       rate: 1.0,
-      queue: [],
-      queueIdx: 0,
-      currentUtterance: null,
-      voice: null
+      chapterNum: 1
     };
 
-    function initTTSVoices() {
-      if (!('speechSynthesis' in window)) return;
-      function pickVoice() {
-        const voices = window.speechSynthesis.getVoices();
-        if (!voices || voices.length === 0) return;
-        const zhVoices = voices.filter(v => v.lang.startsWith('zh'));
-        // 优先选择高质量神经网络与自然中文音色
-        TTS_STATE.voice = zhVoices.find(v => /Tingting|婷婷|Mei-Jia|Xiaoxiao|Yunxi|Eddy|Natural|Neural/i.test(v.name))
-                       || zhVoices.find(v => v.lang === 'zh-CN')
-                       || zhVoices[0]
-                       || null;
-      }
-      pickVoice();
-      if (window.speechSynthesis.onvoiceschanged !== undefined) {
-        window.speechSynthesis.onvoiceschanged = pickVoice;
-      }
+    function initPaperAudio() {
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (!paperAudio) return;
+
+      paperAudio.addEventListener('play', () => {
+        TTS_STATE.playing = true;
+        updateTTSPlayPauseIcons();
+      });
+
+      paperAudio.addEventListener('pause', () => {
+        TTS_STATE.playing = false;
+        updateTTSPlayPauseIcons();
+      });
+
+      paperAudio.addEventListener('timeupdate', () => {
+        if (!TTS_STATE.active) return;
+        syncPaperAudioHighlight(paperAudio.currentTime);
+      });
+
+      paperAudio.addEventListener('ended', () => {
+        const curCh = TTS_STATE.chapterNum || getActiveChapterNum();
+        if (curCh < BOOK.chapters.length) {
+          goToChapter(curCh + 1);
+          loadAndPlayChapterAudio(curCh + 1, 0);
+        } else {
+          showToast('全书朗读完毕');
+          closeAudioReading();
+        }
+      });
+
+      setupParagraphClickToSeek();
     }
 
     function toggleAudioReading() {
@@ -1868,30 +1882,36 @@
       }
     }
 
-    function openAudioReading() {
-      if (!('speechSynthesis' in window)) {
-        showToast('当前浏览器暂不支持语音朗读');
-        return;
-      }
+    function openAudioReading(targetBIdx, targetPIdx) {
       // If currently on Book Home, start reading from Chapter 1
       if (currentPageIdx === 0) {
         startReadingBook();
       }
 
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (!paperAudio) return;
+
       TTS_STATE.active = true;
       document.getElementById('btn-tts').classList.add('active');
       document.getElementById('tts-player').classList.add('open');
       document.body.classList.add('tts-mode-active');
-      buildSpreadTTSQueue();
-      ttsPlayCurrentQueue(0);
-      setupTTSMediaSession();
+
+      const chNum = getActiveChapterNum();
+      let startTime = null;
+      if (targetBIdx !== undefined && targetPIdx !== undefined) {
+        const paras = AUDIO_MANIFEST && AUDIO_MANIFEST.chapters[chNum - 1] ? AUDIO_MANIFEST.chapters[chNum - 1].paragraphs : [];
+        const target = paras.find(p => p.bIdx === targetBIdx && p.pIdx === targetPIdx);
+        if (target) startTime = target.start;
+      }
+      loadAndPlayChapterAudio(chNum, startTime);
     }
 
     function closeAudioReading() {
       TTS_STATE.active = false;
       TTS_STATE.playing = false;
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (paperAudio) {
+        paperAudio.pause();
       }
       clearTTSHighlights();
       document.getElementById('btn-tts').classList.remove('active');
@@ -1900,127 +1920,186 @@
       updateTTSPlayPauseIcons();
     }
 
-    function buildSpreadTTSQueue() {
-      TTS_STATE.queue = [];
-      const leaves = [document.getElementById('leaf-left'), document.getElementById('leaf-right')];
-      leaves.forEach((leaf) => {
-        if (!leaf || leaf.style.display === 'none') return;
-        const body = leaf.querySelector('.page-body');
-        if (!body) return;
-        const els = Array.from(body.querySelectorAll('.ch-first-header, .subheading-banner, p, blockquote'));
-        els.forEach((el) => {
-          const text = el.innerText.trim();
-          if (text) {
-            TTS_STATE.queue.push({ element: el, text: text });
+    function loadAndPlayChapterAudio(chNum, seekStartTime) {
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (!paperAudio) return;
+
+      TTS_STATE.chapterNum = chNum;
+      const targetSrc = `audio/cszy/ch${chNum}.mp3`;
+
+      if (!paperAudio.src.endsWith(`ch${chNum}.mp3`)) {
+        paperAudio.src = targetSrc;
+        paperAudio.playbackRate = TTS_STATE.rate;
+        paperAudio.load();
+      }
+
+      if (seekStartTime === undefined || seekStartTime === null) {
+        seekStartTime = getVisibleStartTimestamp(chNum);
+      }
+
+      const startPlay = () => {
+        if (seekStartTime > 0) {
+          try { paperAudio.currentTime = seekStartTime; } catch (e) {}
+        }
+        paperAudio.play().then(() => {
+          if (seekStartTime > 0 && Math.abs(paperAudio.currentTime - seekStartTime) > 1) {
+            try { paperAudio.currentTime = seekStartTime; } catch (e) {}
           }
+          TTS_STATE.playing = true;
+          updateTTSPlayPauseIcons();
+        }).catch(err => {
+          console.log('Audio playback waiting for interaction:', err);
         });
+      };
+
+      if (paperAudio.readyState >= 2) {
+        startPlay();
+      } else {
+        paperAudio.addEventListener('canplay', () => {
+          startPlay();
+        }, { once: true });
+      }
+
+      setupTTSMediaSession();
+    }
+
+    function getVisibleStartTimestamp(chNum) {
+      if (!AUDIO_MANIFEST || !AUDIO_MANIFEST.chapters[chNum - 1]) return 0;
+      const paras = AUDIO_MANIFEST.chapters[chNum - 1].paragraphs;
+      const visibleParas = Array.from(document.querySelectorAll('.page-body [data-ch="' + chNum + '"][data-bidx][data-pidx]'));
+      if (visibleParas.length > 0) {
+        const first = visibleParas[0];
+        const bIdx = parseInt(first.dataset.bidx, 10);
+        const pIdx = parseInt(first.dataset.pidx, 10);
+        const target = paras.find(p => p.bIdx === bIdx && p.pIdx === pIdx);
+        if (target) return target.start;
+      }
+      return 0;
+    }
+
+    function findPageForParagraph(chNum, bIdx, pIdx) {
+      for (let i = 0; i < PAGES.length; i++) {
+        const page = PAGES[i];
+        if (page.chapterNum === chNum && page.html.includes(`data-bidx="${bIdx}" data-pidx="${pIdx}"`)) {
+          return i + 1; // 1-based page number
+        }
+      }
+      return null;
+    }
+
+    function goToPage(pageNum) {
+      if (pageNum < 1 || pageNum > PAGES.length) return;
+      currentPageIdx = pageNum;
+      currentSpreadIdx = Math.ceil(currentPageIdx / 2);
+      renderCurrentView();
+    }
+
+    function syncPaperAudioHighlight(curTime) {
+      const chNum = TTS_STATE.chapterNum || getActiveChapterNum();
+      if (!AUDIO_MANIFEST || !AUDIO_MANIFEST.chapters[chNum - 1]) return;
+      const paras = AUDIO_MANIFEST.chapters[chNum - 1].paragraphs;
+      const active = paras.find(p => curTime >= p.start && curTime < p.end);
+
+      if (!active) return;
+
+      const titleEl = document.getElementById('tts-player-title');
+      if (titleEl) {
+        const snippet = active.text.replace(/\s+/g, ' ').trim().slice(0, 16);
+        titleEl.textContent = snippet + '...';
+      }
+
+      let targetEls = document.querySelectorAll(`[data-ch="${chNum}"][data-bidx="${active.bIdx}"][data-pidx="${active.pIdx}"]`);
+
+      // If active paragraph is not on the current spread, flip automatically!
+      if (targetEls.length === 0) {
+        const targetPage = findPageForParagraph(chNum, active.bIdx, active.pIdx);
+        if (targetPage !== null) {
+          const isSingle = isSinglePageMode();
+          const curStart = isSingle ? currentPageIdx : ((currentSpreadIdx * 2) - 1);
+          const curEnd = isSingle ? currentPageIdx : (currentSpreadIdx * 2);
+          if (targetPage < curStart || targetPage > curEnd) {
+            goToPage(targetPage);
+            targetEls = document.querySelectorAll(`[data-ch="${chNum}"][data-bidx="${active.bIdx}"][data-pidx="${active.pIdx}"]`);
+          }
+        }
+      }
+
+      clearTTSHighlights();
+      targetEls.forEach(el => {
+        el.classList.add('tts-reading-active');
       });
     }
 
-    function ttsPlayCurrentQueue(startIdx) {
-      if (!TTS_STATE.active) return;
-      TTS_STATE.queueIdx = startIdx || 0;
-      ttsPlayNext();
-    }
-
-    function ttsPlayNext() {
-      if (!TTS_STATE.active) return;
-      if (TTS_STATE.queueIdx >= TTS_STATE.queue.length) {
-        // 当前页已全部读完！自动翻到下一页
-        clearTTSHighlights();
-        const prevPage = currentPageIdx;
-        const prevSpread = currentSpreadIdx;
-        nextView();
-        setTimeout(() => {
-          if (currentPageIdx !== prevPage || currentSpreadIdx !== prevSpread) {
-            buildSpreadTTSQueue();
-            ttsPlayCurrentQueue(0);
-          } else {
-            // 已读完最后一页
-            showToast('已朗读至全书末尾');
-            closeAudioReading();
-          }
-        }, 600);
-        return;
-      }
-
-      const item = TTS_STATE.queue[TTS_STATE.queueIdx];
-      highlightTTSElement(item.element);
-
-      // 更新播放条标题
-      const snippet = item.text.replace(/\s+/g, ' ').slice(0, 16);
-      document.getElementById('tts-player-title').textContent = snippet + '...';
-
-      const utter = new SpeechSynthesisUtterance(item.text);
-      if (TTS_STATE.voice) utter.voice = TTS_STATE.voice;
-      utter.rate = TTS_STATE.rate;
-      utter.lang = currentLang === 'en' ? 'en-US' : 'zh-CN';
-
-      utter.onend = () => {
-        TTS_STATE.queueIdx++;
-        ttsPlayNext();
-      };
-
-      utter.onerror = (e) => {
-        console.warn('TTS playback error:', e);
-        TTS_STATE.queueIdx++;
-        ttsPlayNext();
-      };
-
-      TTS_STATE.currentUtterance = utter;
-      TTS_STATE.playing = true;
-      updateTTSPlayPauseIcons();
-
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utter);
-    }
-
     function ttsTogglePlayPause() {
+      const paperAudio = document.getElementById('paper-audio-player');
       if (!TTS_STATE.active) {
         openAudioReading();
         return;
       }
-      if (TTS_STATE.playing) {
-        window.speechSynthesis.pause();
-        TTS_STATE.playing = false;
-      } else {
-        if (window.speechSynthesis.paused) {
-          window.speechSynthesis.resume();
-        } else {
-          ttsPlayNext();
-        }
-        TTS_STATE.playing = true;
-      }
-      updateTTSPlayPauseIcons();
-    }
+      if (!paperAudio) return;
 
-    function ttsPrevParagraph() {
-      if (!TTS_STATE.active) return;
-      window.speechSynthesis.cancel();
-      TTS_STATE.queueIdx = Math.max(0, TTS_STATE.queueIdx - 1);
-      ttsPlayNext();
+      if (paperAudio.paused) {
+        paperAudio.play().then(() => {
+          TTS_STATE.playing = true;
+          updateTTSPlayPauseIcons();
+        });
+      } else {
+        paperAudio.pause();
+        TTS_STATE.playing = false;
+        updateTTSPlayPauseIcons();
+      }
     }
 
     function ttsNextParagraph() {
-      if (!TTS_STATE.active) return;
-      window.speechSynthesis.cancel();
-      TTS_STATE.queueIdx++;
-      ttsPlayNext();
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (!paperAudio || !TTS_STATE.active) return;
+      const chNum = TTS_STATE.chapterNum || getActiveChapterNum();
+      if (!AUDIO_MANIFEST || !AUDIO_MANIFEST.chapters[chNum - 1]) return;
+      const paras = AUDIO_MANIFEST.chapters[chNum - 1].paragraphs;
+      const curTime = paperAudio.currentTime;
+
+      const curIdx = paras.findIndex(p => curTime >= p.start && curTime < p.end);
+      if (curIdx >= 0 && curIdx < paras.length - 1) {
+        const nextP = paras[curIdx + 1];
+        paperAudio.currentTime = nextP.start;
+        syncPaperAudioHighlight(nextP.start);
+      } else if (curIdx === -1 && paras.length > 0) {
+        paperAudio.currentTime = paras[0].start;
+      } else if (chNum < BOOK.chapters.length) {
+        goToChapter(chNum + 1);
+        loadAndPlayChapterAudio(chNum + 1, 0);
+      }
+    }
+
+    function ttsPrevParagraph() {
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (!paperAudio || !TTS_STATE.active) return;
+      const chNum = TTS_STATE.chapterNum || getActiveChapterNum();
+      if (!AUDIO_MANIFEST || !AUDIO_MANIFEST.chapters[chNum - 1]) return;
+      const paras = AUDIO_MANIFEST.chapters[chNum - 1].paragraphs;
+      const curTime = paperAudio.currentTime;
+
+      const curIdx = paras.findIndex(p => curTime >= p.start && curTime < p.end);
+      if (curIdx >= 0) {
+        const curP = paras[curIdx];
+        if (curTime > curP.start + 2.5) {
+          paperAudio.currentTime = curP.start;
+          syncPaperAudioHighlight(curP.start);
+        } else if (curIdx > 0) {
+          paperAudio.currentTime = paras[curIdx - 1].start;
+          syncPaperAudioHighlight(paras[curIdx - 1].start);
+        } else if (chNum > 1) {
+          goToChapter(chNum - 1);
+          loadAndPlayChapterAudio(chNum - 1, 0);
+        }
+      }
     }
 
     function ttsChangeSpeed(val) {
       TTS_STATE.rate = parseFloat(val) || 1.0;
-      if (TTS_STATE.active && TTS_STATE.playing) {
-        window.speechSynthesis.cancel();
-        ttsPlayNext();
-      }
-    }
-
-    function highlightTTSElement(el) {
-      clearTTSHighlights();
-      if (el) {
-        el.classList.add('tts-reading-active');
-        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (paperAudio) {
+        paperAudio.playbackRate = TTS_STATE.rate;
       }
     }
 
@@ -2040,12 +2119,54 @@
       }
     }
 
+    function setupParagraphClickToSeek() {
+      const wrapper = document.getElementById('book-spread');
+      if (!wrapper) return;
+      wrapper.addEventListener('click', (e) => {
+        const p = e.target.closest('[data-bidx][data-pidx]');
+        if (!p) return;
+        const bIdx = parseInt(p.dataset.bidx, 10);
+        const pIdx = parseInt(p.dataset.pidx, 10);
+        const chNum = parseInt(p.dataset.ch, 10) || getActiveChapterNum();
+
+        if (!TTS_STATE.active) {
+          openAudioReading(bIdx, pIdx);
+        } else {
+          seekAudioToParagraph(chNum, bIdx, pIdx);
+        }
+      });
+    }
+
+    function seekAudioToParagraph(chNum, bIdx, pIdx) {
+      const paperAudio = document.getElementById('paper-audio-player');
+      if (!paperAudio) return;
+      if (!AUDIO_MANIFEST || !AUDIO_MANIFEST.chapters[chNum - 1]) return;
+      const paras = AUDIO_MANIFEST.chapters[chNum - 1].paragraphs;
+      const target = paras.find(p => p.bIdx === bIdx && p.pIdx === pIdx);
+      if (target) {
+        if (TTS_STATE.chapterNum !== chNum) {
+          loadAndPlayChapterAudio(chNum, target.start);
+        } else {
+          paperAudio.currentTime = target.start;
+          if (paperAudio.paused) {
+            paperAudio.play();
+          }
+        }
+        syncPaperAudioHighlight(target.start);
+      }
+    }
+
     function setupTTSMediaSession() {
       if ('mediaSession' in navigator) {
+        const chNum = TTS_STATE.chapterNum || getActiveChapterNum();
+        const ch = BOOK.chapters[chNum - 1];
         navigator.mediaSession.metadata = new MediaMetadata({
-          title: BOOK.meta.title_zh,
-          artist: BOOK.meta.author,
-          album: "Evan's Thinking 典藏文库有声书"
+          title: ch ? ch.title_zh : BOOK.meta.title_zh,
+          artist: '王明道 (Wang Mingdao) · 播音：云阳',
+          album: '《重生真意》自然人声播音版',
+          artwork: [
+            { src: 'regeneration_share_sq.jpg', sizes: '600x600', type: 'image/jpeg' }
+          ]
         });
         navigator.mediaSession.setActionHandler('play', () => ttsTogglePlayPause());
         navigator.mediaSession.setActionHandler('pause', () => ttsTogglePlayPause());
@@ -2067,6 +2188,7 @@
     function paginateAndRender() {
       if (isPaginating) return;
       isPaginating = true;
+      try {
 
       const savedChNum = getActiveChapterNum();
       const leafL = document.getElementById('leaf-left');
@@ -2140,7 +2262,8 @@
 
         curHtml = headerHtml;
 
-        for (const block of ch.blocks) {
+        for (let bIdx = 0; bIdx < ch.blocks.length; bIdx++) {
+          const block = ch.blocks[bIdx];
           const subTitle = (currentLang === 'en' && block.sub_en) ? block.sub_en : block.sub_zh;
           if (subTitle) {
             const subHtml = `<div class="subheading-banner">${subTitle}</div>`;
@@ -2167,14 +2290,15 @@
 
             while (p.length > 0) {
               let pFormatted = '';
+              const pAttrs = `data-ch="${ch.num}" data-bidx="${bIdx}" data-pidx="${pIdx}"`;
               if (isChFirst && curHtml === headerHtml && isParaStart && p.length > 0) {
                 const firstChar = p.charAt(0);
                 const rest = p.slice(1);
-                pFormatted = `<p><span class="drop-cap">${firstChar}</span>${rest}</p>`;
+                pFormatted = `<p ${pAttrs}><span class="drop-cap">${firstChar}</span>${rest}</p>`;
               } else if (isParaStart) {
-                pFormatted = `<p>${p}</p>`;
+                pFormatted = `<p ${pAttrs}>${p}</p>`;
               } else {
-                pFormatted = `<p class="p-continue">${p}</p>`;
+                pFormatted = `<p class="p-continue" ${pAttrs}>${p}</p>`;
               }
 
               measure.innerHTML = curHtml + pFormatted;
@@ -2191,11 +2315,11 @@
                   const mid = Math.floor((low + high) / 2);
                   let testFrag = '';
                   if (isChFirst && curHtml === headerHtml && isParaStart && mid > 0) {
-                    testFrag = `<p><span class="drop-cap">${p[0]}</span>${p.slice(1, mid)}</p>`;
+                    testFrag = `<p ${pAttrs}><span class="drop-cap">${p[0]}</span>${p.slice(1, mid)}</p>`;
                   } else if (isParaStart) {
-                    testFrag = `<p>${p.slice(0, mid)}</p>`;
+                    testFrag = `<p ${pAttrs}>${p.slice(0, mid)}</p>`;
                   } else {
-                    testFrag = `<p class="p-continue">${p.slice(0, mid)}</p>`;
+                    testFrag = `<p class="p-continue" ${pAttrs}>${p.slice(0, mid)}</p>`;
                   }
 
                   measure.innerHTML = curHtml + testFrag;
@@ -2216,11 +2340,11 @@
 
                   let fitHtml = '';
                   if (isChFirst && curHtml === headerHtml && isParaStart) {
-                    fitHtml = `<p><span class="drop-cap">${p[0]}</span>${p.slice(1, bestFit)}</p>`;
+                    fitHtml = `<p ${pAttrs}><span class="drop-cap">${p[0]}</span>${p.slice(1, bestFit)}</p>`;
                   } else if (isParaStart) {
-                    fitHtml = `<p>${p.slice(0, bestFit)}</p>`;
+                    fitHtml = `<p ${pAttrs}>${p.slice(0, bestFit)}</p>`;
                   } else {
-                    fitHtml = `<p class="p-continue">${p.slice(0, bestFit)}</p>`;
+                    fitHtml = `<p class="p-continue" ${pAttrs}>${p.slice(0, bestFit)}</p>`;
                   }
 
                   curHtml += fitHtml;
@@ -2255,11 +2379,11 @@
                     const chunk = p.slice(0, take);
                     let fitHtml = '';
                     if (isChFirst && isParaStart) {
-                      fitHtml = `<p><span class="drop-cap">${chunk[0]}</span>${chunk.slice(1)}</p>`;
+                      fitHtml = `<p ${pAttrs}><span class="drop-cap">${chunk[0]}</span>${chunk.slice(1)}</p>`;
                     } else if (isParaStart) {
-                      fitHtml = `<p>${chunk}</p>`;
+                      fitHtml = `<p ${pAttrs}>${chunk}</p>`;
                     } else {
-                      fitHtml = `<p class="p-continue">${chunk}</p>`;
+                      fitHtml = `<p class="p-continue" ${pAttrs}>${chunk}</p>`;
                     }
                     PAGES.push({
                       chapterNum: ch.num,
@@ -2311,9 +2435,11 @@
         currentSpreadIdx = 0;
       }
 
-      isPaginating = false;
       renderCurrentView();
       renderToc();
+      } finally {
+        isPaginating = false;
+      }
     }
 
     function getActiveChapterNum() {
@@ -2846,7 +2972,16 @@
     function setupKeyboard() {
       window.addEventListener('keydown', (e) => {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        if (e.key === ' ' || e.code === 'Space') {
+          e.preventDefault();
+          if (TTS_STATE.active) {
+            ttsTogglePlayPause();
+          } else {
+            nextView();
+          }
+          return;
+        }
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') {
           e.preventDefault();
           nextView();
         } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
