@@ -26,8 +26,6 @@
       --border-focus: #c4b59f;
       --accent-badge: #29573e;
       --accent-badge-bg: #eaf3ed;
-      --accent-ans: #1b6338;
-      --accent-err: #a32222;
       --font-serif: "Songti SC", "Noto Serif CJK SC", "PingFang SC", "Georgia", serif;
       --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", sans-serif;
     }
@@ -56,19 +54,19 @@
     }
 
     .sidebar-header {
-      padding: 22px 20px 16px;
+      padding: 20px 18px 14px;
       border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.45);
     }
 
     .book-badge {
       display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 10.5px;
+      font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--primary);
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .book-title {
@@ -82,7 +80,7 @@
     .book-subtitle {
       font-size: 11.5px;
       color: var(--ink-muted);
-      margin-top: 4px;
+      margin-top: 3px;
       line-height: 1.4;
     }
 
@@ -93,7 +91,17 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 3px;
+    }
+
+    .nav-group-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--primary-dark);
+      padding: 14px 10px 4px;
+      text-transform: uppercase;
+      opacity: 0.85;
     }
 
     .nav-item button {
@@ -101,12 +109,12 @@
       text-align: left;
       background: transparent;
       border: 1px solid transparent;
-      padding: 10px 12px;
-      border-radius: 8px;
+      padding: 8px 10px;
+      border-radius: 7px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
       font-size: 13.5px;
       font-weight: 600;
       color: var(--ink-sub);
@@ -115,7 +123,7 @@
     }
 
     .nav-item button:hover {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.65);
       color: var(--primary-dark);
     }
 
@@ -123,12 +131,12 @@
       background: var(--bg-card);
       color: var(--primary);
       border-color: var(--border);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
       font-weight: 700;
     }
 
     .nav-icon {
-      font-size: 16px;
+      font-size: 15px;
       flex-shrink: 0;
     }
 
@@ -140,6 +148,95 @@
       border-radius: 10px;
       background: var(--primary-light);
       color: var(--primary-dark);
+    }
+
+    /* Hierarchical Chapter Item with Collapsible Subsections */
+    .chapter-parent {
+      display: flex;
+      flex-direction: column;
+      margin: 4px 0;
+    }
+
+    .chapter-main-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      transition: all 0.15s ease;
+    }
+
+    .chapter-main-btn:hover {
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--primary);
+    }
+
+    .chapter-main-btn.active {
+      background: var(--bg-card);
+      border-color: var(--border);
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .chevron {
+      margin-left: auto;
+      font-size: 10px;
+      color: var(--ink-muted);
+      transition: transform 0.2s ease;
+    }
+
+    .chevron.open {
+      transform: rotate(90deg);
+    }
+
+    /* Subsections List under Chapter */
+    .subsections-list {
+      list-style: none;
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin: 4px 0 6px;
+      border-left: 2px solid var(--border);
+      margin-left: 18px;
+    }
+
+    .sub-item button {
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    .sub-item button:hover {
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .sub-item button.active {
+      color: var(--primary);
+      font-weight: 700;
+      background: var(--primary-light);
     }
 
     /* Main Area */
@@ -253,6 +350,11 @@
       border-radius: 12px;
       padding: 48px 52px;
       box-shadow: 0 6px 28px rgba(0, 0, 0, 0.03);
+    }
+
+    /* Section Target Scroll Offset */
+    .section-anchor-target {
+      scroll-margin-top: 24px;
     }
 
     /* Typography inside Reading Sheet */
@@ -757,68 +859,113 @@
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
+  <!-- Sidebar Structured by Book Sequence & Hierarchical Chapters -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <span class="book-badge">Elsevier Official Edition</span>
       <h2 class="book-title">《加拿大支持工作者教材》</h2>
       <p class="book-subtitle">第 5 版 · 中英双语对照精研系统<br>Sorrentino's Canadian Textbook (5th Ed.)</p>
     </div>
-    <ul class="nav-list">
-      <li class="nav-item">
-        <button class="active" onclick="switchSection('sec-ch1', '第 1 章：角色与职责 (Role and Responsibilities)')">
-          <span class="nav-icon">📖</span>
-          <span>第 1 章：角色与职责</span>
-          <span class="nav-tag">无删减全文</span>
+    
+    <div class="nav-list">
+      <!-- 1. 前置导读与全书框架 (Front Matter) -->
+      <div class="nav-group-title">前置导读与全书框架 · Front Matter</div>
+      
+      <div class="nav-item">
+        <button id="nav-sec-cover" onclick="switchSection('sec-cover', '封面、作者与出版声明 (Cover & Notice)')">
+          <span class="nav-icon">🏛️</span>
+          <span>封面与出版声明</span>
         </button>
-      </li>
-      <li class="nav-item">
-        <button onclick="switchSection('sec-ch1-quiz', '第 1 章：全真自测题与临床精解 (12道题库)')">
-          <span class="nav-icon">✍️</span>
-          <span>第 1 章：自测习题库</span>
-          <span class="nav-tag">12道精解</span>
-        </button>
-      </li>
-      <li class="nav-item">
-        <button onclick="switchSection('sec-toc', '全书总目录 (Table of Contents · 48章全览)')">
+      </div>
+
+      <div class="nav-item">
+        <button id="nav-sec-toc" onclick="switchSection('sec-toc', '全书总目录 (Table of Contents · 48章全览)')">
           <span class="nav-icon">📑</span>
           <span>全书总目录</span>
-          <span class="nav-tag">48章</span>
+          <span class="nav-tag">48章全览</span>
         </button>
-      </li>
-      <li class="nav-item">
-        <button onclick="switchSection('sec-student', '学生前言与高效学习指南 (Student Preface)')">
+      </div>
+
+      <div class="nav-item">
+        <button id="nav-sec-instructor" onclick="switchSection('sec-instructor', '教师序言与第5版核心革新 (Instructor Preface)')">
+          <span class="nav-icon">🍎</span>
+          <span>教师序言与核心革新</span>
+        </button>
+      </div>
+
+      <div class="nav-item">
+        <button id="nav-sec-student" onclick="switchSection('sec-student', '学生前言与高效学习指南 (Student Preface)')">
           <span class="nav-icon">🎓</span>
-          <span>学生前言与高效学习</span>
-          <span class="nav-tag">4图解</span>
+          <span>学生前言与学习指南</span>
+          <span class="nav-tag">4大图解</span>
         </button>
-      </li>
-      <li class="nav-item">
-        <button onclick="switchSection('sec-glossary', '核心专业术语汇编 (Core Glossary)')">
+      </div>
+
+      <div class="nav-item">
+        <button id="nav-sec-glossary" onclick="switchSection('sec-glossary', '核心专业术语汇编 (Core Glossary · 国际音标+释义)')">
           <span class="nav-icon">🔤</span>
           <span>核心专业术语表</span>
           <span class="nav-tag">音标/释义</span>
         </button>
-      </li>
-      <li class="nav-item">
-        <button onclick="switchSection('sec-instructor', '教师序言与第5版核心革新 (Instructor Preface)')">
-          <span class="nav-icon">🍎</span>
-          <span>教师序言与核心革新</span>
+      </div>
+
+      <!-- 2. 正文教材研读 · 第一部分 (Part 1) -->
+      <div class="nav-group-title">第一部分：支持工作及其对社会的影响 · Part 1</div>
+
+      <!-- Chapter 1 (with Collapsible Subsections) -->
+      <div class="chapter-parent">
+        <button class="chapter-main-btn active" id="nav-sec-ch1" onclick="handleChapterClick('sec-ch1', '第 1 章：支持工作者的角色与职责')">
+          <span class="nav-icon">📖</span>
+          <span>第 1 章：角色与职责</span>
+          <span class="chevron open" id="ch1-chevron">▶</span>
         </button>
-      </li>
-      <li class="nav-item">
-        <button onclick="switchSection('sec-cover', '封面、作者与法律声明 (Cover & Notice)')">
-          <span class="nav-icon">🏛️</span>
-          <span>封面与出版声明</span>
+        
+        <!-- Subsections List (有章有节) -->
+        <ul class="subsections-list" id="ch1-subsections">
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec1', '1.1 章节导读与学习目标')">1.1 章节导读与学习目标</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec2', '1.2 核心专业术语表')">1.2 核心专业术语表</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec3', '1.3 支持工作的本质与宗旨')">1.3 支持工作的本质与宗旨</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec4', '1.4 全加执业现状与场所')">1.4 全加执业现状与场所</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec5', '1.5 六大核心工作职责')">1.5 六大核心工作职责</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec6', '1.6 真实一日工作实录 (3大案例)')">1.6 一日工作实录 (3大案例)</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec7', '1.7 受助人群全景 (9大类别)')">1.7 受助人群全景 (9大群体)</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec8', '1.8 受监管与非监管从业人员')">1.8 受监管与未受监管从业者</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec9', '1.9 跨学科医疗团队 (Table 1.1)')">1.9 跨学科团队 (Table 1.1)</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec10', '1.10 法定执业范围与授权委派')">1.10 执业范围与授权委派</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec11', '1.11 专业素养与行为守则')">1.11 专业素养与行为守则</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec12', '1.12 DIPPS 核心原则 (Box 1.4)')">1.12 DIPPS 核心原则</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec13', '1.13 批判性思维与解决问题')">1.13 批判性思维与解决问题</button></li>
+          <li class="sub-item"><button onclick="jumpToCh1Sub('ch1-sec14', '1.14 核心要点与案例反思')">1.14 核心要点与案例反思</button></li>
+        </ul>
+      </div>
+
+      <!-- Chapter 1 Dedicated Quiz -->
+      <div class="nav-item">
+        <button id="nav-sec-ch1-quiz" onclick="switchSection('sec-ch1-quiz', '第 1 章：全真自测复习题库 (12道精解)')">
+          <span class="nav-icon">✍️</span>
+          <span>第 1 章：自测习题库</span>
+          <span class="nav-tag">12道精解</span>
         </button>
-      </li>
-      <li class="nav-item">
-        <button onclick="switchSection('sec-guide', '翻译规范与推进路线 (Project Guide)')">
+      </div>
+
+      <!-- Chapter 2 Placeholder -->
+      <div class="nav-item" style="opacity: 0.6;">
+        <button onclick="alert('第 2 章《加拿大医疗卫生保健体系》正在按教材顺序排期逐字翻译中，敬请期待！')">
+          <span class="nav-icon">🔒</span>
+          <span>第 2 章：加拿大医疗保健体系</span>
+        </button>
+      </div>
+
+      <!-- 3. 规划与规范 (Appendix & Roadmap) -->
+      <div class="nav-group-title">规划与项目规范 · Appendix</div>
+      
+      <div class="nav-item">
+        <button id="nav-sec-guide" onclick="switchSection('sec-guide', '翻译规范与推进路线 (Project Guide)')">
           <span class="nav-icon">🗺️</span>
-          <span>项目规范与规划</span>
+          <span>项目规范与推进路线</span>
         </button>
-      </li>
-    </ul>
+      </div>
+    </div>
   </aside>
 
   <!-- Main View -->
@@ -827,7 +974,7 @@
     <header class="topbar">
       <div class="topbar-left">
         <button class="menu-btn" onclick="toggleSidebar()" aria-label="Toggle Navigation">☰ 目录</button>
-        <span class="doc-breadcrumb" id="currentTitle">第 1 章：角色与职责 (Role and Responsibilities)</span>
+        <span class="doc-breadcrumb" id="currentTitle">第 1 章：支持工作者的角色与职责</span>
       </div>
       <div class="topbar-controls">
         <div class="lang-switch">
@@ -841,22 +988,625 @@
 
     <!-- Reading Content Pane -->
     <div class="content-pane" id="contentPane">
-      <!-- Chapter 1 Unabridged (without repetitive quiz questions) -->
+      <!-- 1. Cover & Copyright -->
+      <article class="reading-sheet" id="sec-cover" style="display:none;">
+        <span class="book-badge">Official Copyright & Publishing Info · Pages i–ii</span>
+        <h1>《加拿大支持工作者教材》（第5版）封面、数字化资源与法律声明（中英双语对照）</h1>
+<h2 class="sub-h2">Cover, Digital Learning Resources & Notice</h2>
+<hr class="divider">
+<h2>一、 书名与作者团队 (Title & Authorship)</h2>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Sorrentino's CANADIAN TEXTBOOK for the SUPPORT WORKER</strong> Fifth Edition <br><br><strong>Mary J. Wilk</strong>, RN, GNC(C), BA, BScN, MN <em>Professor, Personal Support Worker Program, Fanshawe College, London, Ontario</em> <br><br><em>Original Author:</em> <strong>Sheila A. Sorrentino</strong>, PhD, RN <em>Contributing Canadian Experts & Advisory Editors across Ontario, British Columbia, Alberta, and Atlantic Canada.</em> <br><br><strong>ELSEVIER</strong> <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>《索伦蒂诺加拿大支持工作者教材》</strong> 第 5 版 <br><br><strong>玛丽·J·维尔克（Mary J. Wilk）</strong> 注册护士（RN）、加拿大老年护理认证专家（GNC(C)）、文学士（BA）、护理学学士（BScN）、护理学硕士（MN） <em>加拿大安大略省伦敦市 范莎学院（Fanshawe College）个人支持工作者项目 教授</em> <br><br><em>原著作者：</em> <strong>席拉·A·索伦蒂诺（Sheila A. Sorrentino）</strong> 博士、注册护士 <em>爱思唯尔（Elsevier Canada）出版公司</em> <br><br></div>
+</div>
+<hr class="divider">
+<h2>二、 Evolve 官方数字化学生学习资源 (Evolve Student Resources)</h2>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Evolve® — YOU'VE JUST PURCHASED MORE THAN A TEXTBOOK!</strong> Enhance your learning with Evolve Student Resources. The companion website for <em>Sorrentino's Canadian Textbook for the Support Worker</em>, 5th edition, offers valuable resources to help you succeed in your course and in clinical practice: - <strong>Audio Glossary:</strong> Pronunciations and definitions for hundreds of medical terms and key vocabulary words. - <strong>Interactive Practice Quizzes:</strong> Chapter-by-chapter multiple-choice quizzes to prepare for exams and provincial certification testing. - <strong>Clinical Skills Video Clips & Animations:</strong> Visual demonstration of complex patient care techniques and body mechanics. - <strong>Body Spectrum Electronic Anatomy Colouring Book:</strong> Interactive anatomical exploration of organ systems. - <strong>Procedure Checklists:</strong> Step-by-step competency evaluation rubrics matching provincial vocational learning outcomes. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>Evolve® 数字化学习平台 —— 您获得的不仅是一本纸质教科书！</strong> 通过 Evolve 学生专属在线资源深化您的专业学习。 《索伦蒂诺加拿大支持工作者教材》（第5版）配套官方学习网站为学员提供在学术课程与临床实习中取得卓越成就的权威辅助资源： - <strong>医学语音词汇表（Audio Glossary）</strong>：数百个常用医学术语与专业核心词汇的纯正英式/加式发音与权威释义。 - <strong>章节互动练习与自测题（Interactive Quizzes）</strong>：各章节配套多项选择题与情境分析题，全面备战学院期末考试与各省 PSW 资格认证评估。 - <strong>临床照护技能视频与三维动画（Clinical Skills Videos）</strong>：直观演示复杂护理技术、机械升降机操作及人体力学防损伤规范。 - <strong>Body Spectrum 人体解剖涂色书（电子版）</strong>：通过互动探索人体各大器官系统构造与生理机能。 - <strong>临床操作考核清单（Procedure Checklists）</strong>：与加拿大各省职业学习成果（Vocational Learning Outcomes, VLOs）完全对齐的逐条操作核查表。 <br><br></div>
+</div>
+<hr class="divider">
+<h2>三、 临床免责与法律声明 (Notice and Clinical Scope Disclaimer)</h2>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Notice:</strong> The content and procedures in this book are based on information currently available. They were reviewed by instructors and practising professionals in various regions of Canada. However, employer policies and procedures may vary from the information and procedures in this book. In addition, research and new information may require changes in standards and practices. <br><br>Standards and guidelines from Health Canada, provincial and territorial ministries of health, and regulatory colleges may change as new information becomes available. Other guidelines, including those from public health agencies and employers, must always be followed in clinical practice. <br><br>The publisher and the author do not assume any responsibility for any injury and/or damage to persons or property arising out of or related to any use of the material contained in this book. It is the responsibility of the treating caregiver or health care worker, relying on independent professional judgment and working within their legal scope of practice under appropriate supervision, to determine the best approach for the client. <br><br>Neither the publisher nor the author is engaged in rendering medical, legal, or other professional services. If medical, legal, or other expert assistance is required, the services of a competent professional person should be sought. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>法律与临床执业免责声明：</strong> 本书所收录之专业内容与操作规程均基于当前现有的循证医学与专业护理资讯编写而成。上述内容已由加拿大各省份的资深护理教育导师及临床一线执业专家进行严格审阅。然而，在实际工作中，各雇主机构（如长期照护院舍、医院、社区居家照护机构）的内部政策、规章制度与操作流程可能与本书所述存在细微差异。此外，随着最新医学科研成果与临床经验的不断更新，行业标准与执业实践亦将随之演进。 <br><br>来自加拿大卫生部（Health Canada）、各省及地区卫生厅以及相关护士与医疗监管学院（Regulatory Colleges）的法定标准与指导方针可能会因新信息的发布而调整。在临床照护实践中，执业人员必须严格遵守公共卫生机构以及当前受雇单位的最新规章制度与照护指引。 <br><br>出版商与作者对于因使用或参考本书所载材料而可能导致的人身伤害、财产损失或法律纠纷，概不承担任何法律责任。照护工作者有责任基于独立的专业谨慎判断，在取得合法授权、处于相应监管督导之下并在自身法定执业范围（Scope of Practice）之内，为服务对象制定并执行最为适宜的照护方案。 <br><br>出版商与作者均不以出版此书的方式从事医疗诊断、法律咨询或其他专业执业行为。如需医疗、法律或其他专科专业援助，务必咨询具备法定资质的合格执业人员。 <br><br></div>
+</div>
+
+      </article>
+
+      <!-- 2. Table of Contents -->
+      <article class="reading-sheet" id="sec-toc" style="display:none;">
+        <span class="book-badge">Full Curriculum · 48 Chapters in 9 Parts</span>
+        <h1>《加拿大支持工作者教材》（第5版）全书总目录（中英双语对照版）</h1>
+<h2 class="sub-h2">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h2>
+<h2>Table of Contents</h2>
+<hr class="divider">
+<h2 class="sub-h2">第一部分：支持工作及其对社会的影响</h2>
+<h2>PART 1: Support Work and Its Impact on Society</h2>
+<h3>第 1 章：支持工作者的角色与职责 (第 1 页)</h3>
+<p><strong>Chapter 1: The Role and Responsibilities of the Support Worker (p. 1)</strong></p>
+<li>全加拿大的支持工作概述 | Support Work Across Canada (p. 3)</li>
+<li>医疗卫生照护团队 | The Health Care Team (p. 10)</li>
+<li>展现专业素养 | Being a Professional (p. 14)</li>
+<li>支持工作的目标：通过以服务对象为中心的照护提升生活质量 | The Goal of Support Work: Improved Quality of Life Through Client-Centred Care (p. 16)</li>
+<li>批判性思维、临床决策与解决问题 | Critical Thinking, Decision Making, and Problem-Solving (p. 17)</li>
+<h3>第 2 章：加拿大医疗卫生保健体系 (第 20 页)</h3>
+<p><strong>Chapter 2: The Canadian Health Care System (p. 20)</strong></p>
+<li>加拿大现行医疗卫生体系概况 | Canada's Current Health Care System (p. 21)</li>
+<li>省与地区政府在医疗卫生中的职能角色 | The Provincial or Territorial Role in Health Care (p. 28)</li>
+<li>医疗保健面临的挑战、补充性服务与发展趋势 | Health Care Challenges, Supplementary Services, and Trends (p. 29)</li>
+<h3>第 3 章：工作场所与照护环境 (第 34 页)</h3>
+<p><strong>Chapter 3: Workplace Settings (p. 34)</strong></p>
+<li>工作场所设置与所提供的服务项目 | Workplace Settings and Services Provided (p. 36)</li>
+<li>在社区居家照护环境中工作 | Working in Community-Based Settings (p. 37)</li>
+<li>在医疗机构/院舍环境中工作 | Working in Facility-Based Settings (p. 38)</li>
+<li>机构工作实务与日常准则 | Working in a Facility (p. 42)</li>
+<h3>第 4 章：职业伦理与道德规范 (第 48 页)</h3>
+<p><strong>Chapter 4: Ethics (p. 48)</strong></p>
+<li>文化对信仰、价值观、道德与伦理的影响 | The Influence of Culture on Beliefs, Values, Morals, and Ethics (p. 49)</li>
+<li>伦理道德准则与职业守则 | Codes of Ethics (p. 49)</li>
+<li>医疗卫生伦理的基本原则 | The Principles of Health Care Ethics (p. 50)</li>
+<h3>第 5 章：法律法规：服务对象与照护者的法定权利 (第 59 页)</h3>
+<p><strong>Chapter 5: Legislation: The Client's Rights and Your Rights (p. 59)</strong></p>
+<li>理解权利的基本概念 | Understanding Rights (p. 61)</li>
+<li>加拿大公民的基本人权 | Basic Human Rights in Canada (p. 61)</li>
+<li>接受医疗卫生服务者的基本权利 | Basic Rights of People Receiving Health Services (p. 61)</li>
+<li>理解相关法律问题与法律责任 | Understanding Legal Issues (p. 69)</li>
+<li>照护工作者的合法权利 | Your Legal Rights (p. 72)</li>
+<h3>第 6 章：健康、安康、疾病与残疾 (第 77 页)</h3>
+<p><strong>Chapter 6: Health, Wellness, Illness, and Disability (p. 77)</strong></p>
+<li>健康与全人安康 (Wellness) | Health and Wellness (p. 79)</li>
+<li>疾病与身体/认知残疾 | Illness and Disability (p. 87)</li>
+<li>为患病及残障服务对象提供支持 | Supporting Clients With Illness and Disability (p. 88)</li>
+<h3>第 7 章：关怀多元文化与多样性 (第 96 页)</h3>
+<p><strong>Chapter 7: Caring About Culture and Diversity (p. 96)</strong></p>
+<li>多样性：族裔归属与文化传统 | Diversity: Ethnicity and Culture (p. 98)</li>
+<li>文化对健康信念与生活习惯的影响 | The Effect of Culture (p. 103)</li>
+<li>提供兼具文化敏感度与尊重的照护与支持 | Providing Culturally Sensitive Care and Support (p. 108)</li>
+<h3>第 8 章：压力管理与应对策略 (第 112 页)</h3>
+<p><strong>Chapter 8: Managing Stress (p. 112)</strong></p>
+<li>认识压力及其生理心理反应 | Stress (p. 113)</li>
+<li>时间管理技巧 | Time Management (p. 120)</li>
+<li>决策制定 | Decision Making (p. 121)</li>
+<li>解决问题的方法 | Problem Solving (p. 122)</li>
+<li>化解工作场所与人际冲突 | Dealing With Conflict (p. 124)</li>
+<h3>第 9 章：人际沟通与交流技巧 (第 129 页)</h3>
+<p><strong>Chapter 9: Interpersonal Communication (p. 129)</strong></p>
+<li>影响沟通交流的内外因素 | Factors That Influence Communication (p. 131)</li>
+<li>语言沟通 | Verbal Communication (p. 132)</li>
+<li>非语言沟通（肢体语言与微表情） | Nonverbal Communication (p. 134)</li>
+<li>常用沟通方法与技巧 | Communication Methods (p. 136)</li>
+<li>医护专业沟通标准 | Professional Communication (p. 138)</li>
+<li>沟通障碍及其克服策略 | Communication Barriers (p. 139)</li>
+<li>与愤怒、情绪激动者的沟通方法 | Communicating With Angry People (p. 142)</li>
+<li>坚定果断、不卑不亢的沟通方式 | Communicating Assertively (p. 143)</li>
+<li>向服务对象解释操作规程与任务 | Explaining Procedures and Tasks (p. 143)</li>
+<li>与认知障碍/失智症患者的有效沟通 | Communicating With Clients Living With Dementia (p. 145)</li>
+<h3>第 10 章：与他人协作：团队合作与工作委派 (第 149 页)</h3>
+<p><strong>Chapter 10: Working With Others: Teamwork and Delegation (p. 149)</strong></p>
+<li>医疗照护多学科协作团队 | The Health Care Team (p. 150)</li>
+<li>在主管护士/医师的督导下执业 | Working Under Supervision (p. 154)</li>
+<li>任务指派与工作委派流程 | Assigning and Delegating (p. 156)</li>
+<h3>第 11 章：与服务对象及其家属共处协作 (第 164 页)</h3>
+<p><strong>Chapter 11: Working With Clients and Their Families (p. 164)</strong></p>
+<li>在保持专业人际界限的同时提供仁爱关怀 | Providing Compassionate Care While Maintaining a Professional Relationship With the Client (p. 165)</li>
+<li>理解并支持服务对象的家庭 | The Client's Family (p. 170)</li>
+<h3>第 12 章：识别与防范虐待、霸凌与骚扰 (第 174 页)</h3>
+<p><strong>Chapter 12: Abuse, Bullying, and Harassment Awareness (p. 174)</strong></p>
+<li>《加拿大权利与自由宪章》相关法律保障 | Canadian Charter of Rights and Freedoms (p. 176)</li>
+<li>虐待的主要类型（身体、情感、财务、性及忽视） | Types of Abuse (p. 176)</li>
+<li>虐待关系的特征与动态机制 | Abusive Relationships (p. 179)</li>
+<li>识别虐待的警示体征与行为迹象 | Recognizing the Signs of Abuse (p. 180)</li>
+<li>虐待的循环周期 | The Cycle of Abuse (p. 182)</li>
+<li>当服务对象倾诉或披露受虐经历时的应对步骤 | What to Do When Clients Speak of Abuse (p. 187)</li>
+<li>依法举报虐待的法定责任与义务 | Your Legal Responsibilities in Reporting Abuse (p. 187)</li>
+<li>举报虐待的具体程序与渠道 | How to Report Abuse (p. 188)</li>
+<li>防范针对医护照护工作者的侵害与暴力 | Abuse of Health Care Workers (p. 188)</li>
+<h3>第 13 章：开启您的职业生涯 (第 194 页)</h3>
+<p><strong>Chapter 13: Starting Your Career (p. 194)</strong></p>
+<li>建立条理与系统规划 | Getting Organized (p. 195)</li>
+<li>设定职业优先级与目标 | Setting Priorities and Goals (p. 195)</li>
+<li>撰写专业简历与整理专业档案袋 | Preparing Your Resumé and Professional Portfolio (p. 196)</li>
+<li>搜寻并跟进就业机会与求职线索 | Finding and Following Leads (p. 201)</li>
+<li>撰写求职求职信 (Cover Letter) | Preparing a Letter of Application (p. 202)</li>
+<li>规范填写求职申请表 | Completing a Job Application Form (p. 206)</li>
+<li>面试准备、应答技巧与礼仪 | The Interview (p. 207)</li>
+<li>录用通知评估与入职准备 | The Employment Offer (p. 211)</li>
+<hr class="divider">
+<h2 class="sub-h2">第二部分：身体力学与活动照护</h2>
+<h2>PART 2: Body Mechanics and Movement</h2>
+<h3>第 14 章：身体力学与安全转移 (第 215 页)</h3>
+<p><strong>Chapter 14: Body Mechanics (p. 215)</strong></p>
+<li>预防职业性人身与脊椎损伤 | Helping to Prevent Personal Injuries (p. 217)</li>
+<li>核心身体力学原则与正确姿态 | Body Mechanics (p. 218)</li>
+<li>协助服务对象体位摆放与变换（仰卧、侧卧、半坐卧位等） | Positioning the Client (p. 231)</li>
+<li>协助服务对象安全转移（床到轮椅、座椅等） | Transferring the Client (p. 240)</li>
+<li>搬运与升降服务对象的安全操作（机械升降机运用） | Lifting a Client (p. 242)</li>
+<h3>第 15 章：运动与日常活动 (第 259 页)</h3>
+<p><strong>Chapter 15: Exercise and Activity (p. 259)</strong></p>
+<li>长期卧床休息的生理影响与并发症预防 | Bed Rest (p. 260)</li>
+<li>协助行走与下床活动 (Ambulation) 及助行设备运用 | Ambulation (p. 266)</li>
+<h3>第 16 章：康复护理与恢复性照护 (第 282 页)</h3>
+<p><strong>Chapter 16: Rehabilitation and Restorative Care (p. 282)</strong></p>
+<li>康复照护与恢复性照护的辨析 | Rehabilitative Care Versus Restorative Care (p. 283)</li>
+<li>康复与恢复性照护的核心目标 | Goals of Rehabilitative and Restorative Care (p. 283)</li>
+<li>康复医疗机构与照护环境设置 | Rehabilitation Settings (p. 284)</li>
+<li>整体康复流程与阶段 | The Rehabilitation Process (p. 287)</li>
+<li>协助康复与恢复性照护的实务技巧 | Assisting With Rehabilitation and Restorative Care (p. 290)</li>
+<li>康复与恢复性照护对身心健康的整体益处 | Overall Benefits of Rehabilitation and Restorative Care (p. 293)</li>
+<hr class="divider">
+<h2 class="sub-h2">第三部分：协助服务对象的基本生理照护需求</h2>
+<h2>PART 3: Assisting Clients With Basic Care Needs</h2>
+<h3>第 17 章：个人卫生照护 (第 296 页)</h3>
+<p><strong>Chapter 17: Personal Hygiene (p. 296)</strong></p>
+<li>口腔卫生与假牙护理 | Oral Hygiene (p. 297)</li>
+<li>沐浴协助（床上擦浴、盆浴、淋浴） | Bathing (p. 311)</li>
+<li>背部背部按摩技术 | The Back Massage (p. 326)</li>
+<li>会阴部清洁与护理 (Perineal Care) | Perineal Care (p. 328)</li>
+<li>女性经期卫生照护 | Menstrual Care (p. 334)</li>
+<h3>第 18 章：仪容修饰与更衣 (第 337 页)</h3>
+<p><strong>Chapter 18: Grooming and Dressing (p. 337)</strong></p>
+<li>头发梳理与清洁护理 | Hair Care (p. 338)</li>
+<li>刮胡与面部修饰 | Shaving (p. 347)</li>
+<li>指甲与足部基础护理 | Care of Nails and Feet (p. 349)</li>
+<li>更换衣物、失禁护理垫与病服 | Changing Clothing, Incontinence Briefs, and Hospital Gowns (p. 356)</li>
+<li>穿戴弹力防血栓袜与绷带 | Applying Elastic Anti-Embolic Stockings and Bandages (p. 368)</li>
+<li>仁爱与尊严照护的核心融入 | Compassionate Care (p. 372)</li>
+<h3>第 19 章：感染预防与控制 (第 376 页)</h3>
+<p><strong>Chapter 19: Preventing Infection (p. 376)</strong></p>
+<li>微生物基础知识（细菌、病毒、真菌） | Microorganisms (p. 378)</li>
+<li>病原体的传播途径与感染链 | The Spread of Pathogens (p. 382)</li>
+<li>内科无菌技术 (Medical Asepsis) 与清洁原则 | Medical Asepsis (p. 389)</li>
+<li>手卫生规范（洗手与手部消毒） | Hand Hygiene (p. 392)</li>
+<li>隔离预防措施（常规预防与接触、飞沫、空气传播预防） | Isolation Precautions (p. 401)</li>
+<li>外科无菌技术简介 (Surgical Asepsis) | Surgical Asepsis (p. 411)</li>
+<h3>第 20 章：安全防护与意外防范 (第 416 页)</h3>
+<p><strong>Chapter 20: Safety (p. 416)</strong></p>
+<li>跌倒与意外伤害的风险评估因素 | Accident Risk Factors (p. 417)</li>
+<li>准确核对与识别服务对象身份 | Identifying the Client (p. 420)</li>
+<li>居家与工作场所的安全防范措施 | Safety Measures at Home and in the Workplace (p. 422)</li>
+<li>中毒事件的防范与急救意识 | Preventing Poisoning (p. 430)</li>
+<li>烫伤与烧伤预防 | Preventing Burns (p. 431)</li>
+<li>医疗与生活设备相关意外防范 | Preventing Accidents With Equipment (p. 431)</li>
+<li>火灾防范与应急疏散规程 (RACE/PASS) | Preventing Fires (p. 431)</li>
+<li>窒息风险防范与气道异物梗阻 | Preventing Suffocation (p. 440)</li>
+<li>身体约束具的危害及替代预防策略 | Restraints and How to Avoid Using Them (p. 441)</li>
+<li>维护照护者自身的人身安全 | Promoting Your Personal Safety (p. 448)</li>
+<h3>第 21 章：病床与铺床技术 (第 458 页)</h3>
+<p><strong>Chapter 21: Beds and Bed Making (p. 458)</strong></p>
+<li>服务对象的病床类型与调节功能 | The Client's Bed (p. 460)</li>
+<li>床单、中单与床上用品的规范管理 | Linen (p. 464)</li>
+<li>铺床操作技术（空床、有人床、麻醉手术床） | Bed Making (p. 467)</li>
+<h3>第 22 章：皮肤护理与创伤/压疮预防 (第 480 页)</h3>
+<p><strong>Chapter 22: Skin Care and Prevention of Wounds (p. 480)</strong></p>
+<li>伤口创面的主要类型 | Types of Wounds (p. 483)</li>
+<li>皮肤撕裂伤 (Skin Tears) 的防范与保护 | Skin Tears (p. 485)</li>
+<li>压力性损伤（压疮/褥疮）的分期与全方位预防 | Pressure Injuries (p. 486)</li>
+<li>下肢与足部血管性溃疡 | Leg and Foot Ulcers (p. 493)</li>
+<li>创面愈合的生理过程与影响因素 | Wound Healing (p. 496)</li>
+<li>基础敷料类型与更换观察要点 | Dressings (p. 499)</li>
+<h3>第 23 章：促进舒适、疼痛管理与睡眠支持 (第 511 页)</h3>
+<p><strong>Chapter 23: Promoting Client Comfort, Pain Management, and Sleep (p. 511)</strong></p>
+<li>促进服务对象的舒适感与身心安宁 | Promoting Client Comfort and Well-Being (p. 512)</li>
+<li>疼痛对身心健康的影响及疼痛评估汇报 | Pain and Its Impact on a Client's Well-Being (p. 513)</li>
+<li>休息与充足睡眠的促进措施 | Rest and Sleep (p. 520)</li>
+<h3>第 24 章：测量身长、体重与生命体征 (第 528 页)</h3>
+<p><strong>Chapter 24: Measuring Height, Weight, and Vital Signs (p. 528)</strong></p>
+<li>测量身高与体重 | Measuring Height and Weight (p. 529)</li>
+<li>生命体征的测量与规范汇报原则 | Measuring and Reporting Vital Signs (p. 530)</li>
+<li>体温测量（口腔、腋下、直肠、鼓膜、额温） | Body Temperature (p. 534)</li>
+<li>脉搏测量（桡动脉、心尖搏动） | Pulse (p. 540)</li>
+<li>呼吸频率与节律观察 | Respirations (p. 544)</li>
+<li>血压测量与听诊技术 | Blood Pressure (p. 544)</li>
+<h3>第 25 章：医学专业术语基础 (第 557 页)</h3>
+<p><strong>Chapter 25: Medical Terminology (p. 557)</strong></p>
+<li>词根、前缀与后缀的构词规则 | Word Elements (p. 558)</li>
+<li>医学构词组合方法 | Combining Word Elements (p. 562)</li>
+<li>腹部九分法与四象限划分 | Abdominal Regions (p. 562)</li>
+<li>人体解剖方位术语 | Directional Terms (p. 562)</li>
+<li>常用医学缩写与首字母缩略词 | Abbreviations (p. 563)</li>
+<h3>第 26 章：照护计划制定、口头汇报与文书记录 (第 568 页)</h3>
+<p><strong>Chapter 26: Planning, Reporting, and Recording Client Care (p. 568)</strong></p>
+<li>院舍/机构内的照护计划制定流程 | The Care-Planning Process in Facilities (p. 569)</li>
+<li>社区/居家环境中的照护计划制定流程 | The Care-Planning Process in Community Settings (p. 572)</li>
+<li>支持工作者在照护计划中的核心职能 | Your Role in the Care-Planning Process (p. 574)</li>
+<li>口头汇报规范（SBAR 沟通与病情汇报） | Verbal Reporting (p. 576)</li>
+<li>服务对象病历、档案与护理记录书写标准 | Client Records or Charts (p. 577)</li>
+<hr class="divider">
+<h2 class="sub-h2">第四部分：协助服务对象的营养摄入与排泄照护</h2>
+<h2>PART 4: Assisting Clients With Nutrition and Elimination</h2>
+<h3>第 27 章：营养支持与体液平衡 (第 591 页)</h3>
+<p><strong>Chapter 27: Nutrition and Fluids (p. 591)</strong></p>
+<li>基础营养素（碳水化合物、蛋白质、脂肪、维生素与矿物质） | Basic Nutrition (p. 592)</li>
+<li>加拿大饮食指南与科学膳食 | Canada's Dietary Guidelines (p. 594)</li>
+<li>全生命周期各阶段的营养需求 | Nutrition Throughout the Life Cycle (p. 599)</li>
+<li>影响进食与营养吸收的生理/心理因素 | Factors That Affect Eating and Nutrition (p. 601)</li>
+<li>科学解读食品营养标签 | Food Labels (p. 602)</li>
+<li>咖啡因摄入管理 | Caffeine Intake (p. 603)</li>
+<li>膳食计划制定与餐食准备 | Meal Planning and Preparation (p. 604)</li>
+<li>治疗性与治疗特殊饮食（低盐、糖尿病饮食、碎食、泥状饮食） | Special Diets (p. 606)</li>
+<li>协助服务对象进食进餐实务技能 | Assisting Clients With Eating (p. 610)</li>
+<li>体液平衡（出入水量记录与水肿/脱水观察） | Fluid Balance (p. 614)</li>
+<h3>第 28 章：管饲营养与静脉输液监护 (第 624 页)</h3>
+<p><strong>Chapter 28: Enteral Nutrition and Intravenous Therapy (p. 624)</strong></p>
+<li>肠内营养管饲支持（鼻胃管、胃造口管 G-tube） | Enteral Nutrition (p. 625)</li>
+<li>静脉输液疗法的观察与照护职责 | Intravenous Therapy (p. 629)</li>
+<li>皮下输液疗法的观察与支持 | Subcutaneous Infusion Therapy (p. 632)</li>
+<h3>第 29 章：排尿生理与泌尿系照护 (第 636 页)</h3>
+<p><strong>Chapter 29: Urinary Elimination (p. 636)</strong></p>
+<li>正常排尿模式与观察指标 | Normal Urination (p. 638)</li>
+<li>尿失禁的原因、类型与失禁护理 | Urinary Incontinence (p. 648)</li>
+<li>导尿管管理（留置导尿、体外引流袋护理与排空） | Catheters (p. 650)</li>
+<li>膀胱再训练计划 | Bladder Training (p. 663)</li>
+<li>留取尿标本（常规尿、中段清洁尿） | Collecting Urine Specimens (p. 663)</li>
+<li>尿液床旁快速检测 | Testing Urine (p. 669)</li>
+<li>输尿管造口术与回肠膀胱术患者的照护 | The Client With a Ureterostomy or an Ileal Conduit (p. 673)</li>
+<li>排泄照护中的尊严与同理心关怀 | Compassionate Care (p. 675)</li>
+<h3>第 30 章：排便生理与肠道照护 (第 679 页)</h3>
+<p><strong>Chapter 30: Bowel Elimination (p. 679)</strong></p>
+<li>正常肠道排便与排泄特征 | Normal Bowel Movements (p. 680)</li>
+<li>影响排便的因素 | Factors Affecting Bowel Movement (p. 681)</li>
+<li>常见排便障碍（便秘、粪便嵌塞、腹泻、大便失禁） | Common Challenges Affecting Bowel Movement (p. 682)</li>
+<li>肠道再训练程序 | Bowel Training (p. 684)</li>
+<li>灌肠技术 (Enemas) 简介与辅助 | Enemas (p. 685)</li>
+<li>直肠排气管使用 | Rectal Tubes (p. 685)</li>
+<li>肠造口（结肠造口、回肠造口）患者的造口袋更换与造口皮肤护理 | The Client With an Ostomy (p. 689)</li>
+<li>粪便标本采集方法 | Stool Specimens (p. 690)</li>
+<hr class="divider">
+<h2 class="sub-h2">第五部分：人体系统构造与常见疾病学</h2>
+<h2>PART 5: Understanding Body Systems and Disorders</h2>
+<h3>第 31 章：生命周期生长发育全阶段 (第 698 页)</h3>
+<p><strong>Chapter 31: Growth and Development (p. 698)</strong></p>
+<li>生长发育的基本生物学原则 | Principles (p. 700)</li>
+<li>人类发展主要经典理论（埃里克森心理社会阶段等） | Selected Theories of Human Development (p. 700)</li>
+<li>从婴儿期到高龄期的生长发育各阶段特征 | Growth and Development (p. 703)</li>
+<h3>第 32 章：人体解剖构造与生理功能 (第 718 页)</h3>
+<p><strong>Chapter 32: Body Structure and Function (p. 718)</strong></p>
+<li>解剖学术语标准 | Anatomical Terms (p. 720)</li>
+<li>细胞、组织、器官、体腔与器官系统 | Cells, Tissues, Organs, Body Cavities, and Organ Systems (p. 720)</li>
+<li>皮肤系统（表皮、真皮、皮下组织） | The Integumentary System (p. 723)</li>
+<li>骨骼肌肉系统（骨骼、关节、肌肉） | The Musculoskeletal System (p. 724)</li>
+<li>神经系统（中枢与周围神经系统） | The Nervous System (p. 729)</li>
+<li>感觉器官（眼、耳、味觉、嗅觉、触觉） | The Sense Organs (p. 733)</li>
+<li>内分泌系统与激素调节 | The Endocrine System (p. 735)</li>
+<li>循环系统（心脏、血管、血液循环） | The Circulatory System (p. 736)</li>
+<li>呼吸系统（气道与肺泡气体交换） | The Respiratory System (p. 741)</li>
+<li>免疫系统与淋巴循环 | The Immune System (p. 742)</li>
+<li>消化系统与营养吸收 | The Digestive System (p. 743)</li>
+<li>泌尿系统（肾脏、输尿管、膀胱、尿道） | The Urinary System (p. 746)</li>
+<li>生殖系统（男性与女性生殖器官） | The Reproductive System (p. 748)</li>
+<h3>第 33 章：各系统常见疾病与机能障碍 (第 752 页)</h3>
+<p><strong>Chapter 33: Common Diseases and Disorders (p. 752)</strong></p>
+<li>传染病与接触性疾病 | Communicable Diseases (p. 755)</li>
+<li>癌症及抗癌治疗相关照护 | Cancer (p. 766)</li>
+<li>皮肤系统疾病（带状疱疹、皮炎等） | Integumentary System Disorders (p. 768)</li>
+<li>骨骼肌肉系统疾病（骨折、关节炎、骨质疏松） | Musculoskeletal System Disorders (p. 773)</li>
+<li>神经系统疾病（脑卒中/中风、帕金森病、多发性硬化） | Nervous System Disorders (p. 781)</li>
+<li>内分泌系统疾病（糖尿病及血糖管理、甲状腺疾病） | Endocrine System Disorders (p. 788)</li>
+<li>心血管系统疾病（高血压、冠心病、心绞痛、心衰） | Cardiovascular System Disorders (p. 790)</li>
+<li>呼吸系统疾病（慢阻肺 COPD、哮喘、肺炎） | Respiratory System Disorders (p. 797)</li>
+<li>免疫系统疾病（自身免疫病、艾滋病 HIV/AIDS） | Immune System Disorders (p. 800)</li>
+<li>消化系统疾病（胃食管反流、溃疡、肝胆疾病） | Digestive System Disorders (p. 802)</li>
+<li>泌尿系统疾病（尿路感染 UTI、慢性肾衰竭） | Urinary System Disorders (p. 805)</li>
+<li>生殖系统疾病 | Reproductive System Disorders (p. 807)</li>
+<h3>第 34 章：听觉与视觉障碍照护 (第 812 页)</h3>
+<p><strong>Chapter 34: Hearing and Vision Disorders (p. 812)</strong></p>
+<li>耳部疾病与听力损伤（助听器使用与沟通策略） | Ear Disorders and Hearing Impairment (p. 813)</li>
+<li>眼部疾病与视力障碍（白内障、青光眼、黄斑变性） | Eye Disorders and Vision Impairment (p. 818)</li>
+<li>视障/听障服务导盲犬与辅助动物规范 | Service Dogs for People with Hearing or Vision Challenges (p. 825)</li>
+<h3>第 35 章：言语与语言障碍照护 (第 829 页)</h3>
+<p><strong>Chapter 35: Speech and Language Disorders (p. 829)</strong></p>
+<li>失语症 (Aphasia) 的分类与表现 | Aphasia (p. 830)</li>
+<li>言语失用症 (Apraxia of Speech) | Apraxia of Speech (p. 831)</li>
+<li>构音障碍 (Dysarthria) | Dysarthria (p. 831)</li>
+<li>言语障碍对服务对象的情感与社交冲击 | Emotional Effects of Speech and Language Disorders (p. 831)</li>
+<li>言语语言康复治疗原则 | Treatment for Speech and Language Disorders (p. 833)</li>
+<li>支持有交流障碍的服务对象并开展有效沟通 | Supporting and Communicating With Clients (p. 834)</li>
+<h3>第 36 章：发育障碍与智力残疾 (第 839 页)</h3>
+<p><strong>Chapter 36: Developmental Disorders and Disabilities (p. 839)</strong></p>
+<li>发育障碍与残疾人士的专业照护原则 | Caring for a Client Who is Living with a Developmental Disability or Disorder (p. 840)</li>
+<li>发育障碍常见类型（自闭症谱系障碍、唐氏综合征、脑瘫） | Types of Developmental Disorders and Disabilities (p. 841)</li>
+<li>发育障碍对家庭系统的长期影响与喘息照护 | The Impact of Developmental Disorders and Disabilities on the Family (p. 851)</li>
+<h3>第 37 章：精神心理健康与精神障碍 (第 856 页)</h3>
+<p><strong>Chapter 37: Mental Health Disorders (p. 856)</strong></p>
+<li>精神健康与精神疾病的连续谱系 | Mental Health and Mental Health Disorders (p. 859)</li>
+<li>获得性脑损伤 (ABI) 的照护要点 | Acquired Brain Injuries (p. 865)</li>
+<li>焦虑障碍（惊恐发作、广泛性焦虑） | Anxiety Disorders (p. 866)</li>
+<li>双相情感障碍 | Bipolar and Related Disorders (p. 869)</li>
+<li>抑郁障碍（重度抑郁发作的识别） | Depressive Disorders (p. 870)</li>
+<li>破坏性、冲动控制与品行障碍 | Disruptive, Impulse-Control, and Conduct Disorders (p. 873)</li>
+<li>喂食与进食障碍（厌食症、暴食症） | Feeding and Eating Disorders (p. 876)</li>
+<li>强迫症及相关障碍 | Obsessive-Compulsive and Related Disorders (p. 878)</li>
+<li>人格障碍 | Personality Disorders (p. 880)</li>
+<li>精神分裂症谱系障碍 | Schizophrenia Spectrum Disorders (p. 881)</li>
+<li>非自杀性自伤行为 | Self-Harm Disorders (p. 882)</li>
+<li>睡眠-觉醒障碍 | Sleep-Wake Disorders (p. 883)</li>
+<li>物质相关与成瘾障碍（药物与酒精滥用） | Substance-Related and Addictive Disorders (p. 884)</li>
+<li>自杀行为障碍与危机干预意识 | Suicidal Behaviour Disorder (p. 885)</li>
+<h3>第 38 章：定向障碍、谵妄与认知症/失智症 (第 891 页)</h3>
+<p><strong>Chapter 38: Disorientation, Delirium, and Dementia (p. 891)</strong></p>
+<li>定向障碍的表现与原因 | Disorientation (p. 893)</li>
+<li>谵妄 (Delirium) 的急性特征与医疗急症鉴别 | Delirium (p. 895)</li>
+<li>认知症/失智症 (Dementia) 概述 | Dementia (p. 896)</li>
+<li>原发性失智症（阿尔茨海默病、路易体痴呆、额颞叶痴呆） | Primary Dementias (p. 898)</li>
+<li>继发性失智症（血管性痴呆等） | Secondary Dementias (p. 901)</li>
+<li>抑郁与失智症的鉴别与重叠 | Depression and Dementia (p. 902)</li>
+<li>失智症的病程分期（轻度、中度、重度） | Stages of Dementia (p. 903)</li>
+<h3>第 39 章：失智症患者的日常照护与行为应对 (第 906 页)</h3>
+<p><strong>Chapter 39: Supporting Clients Who Are Living With Dementia (p. 906)</strong></p>
+<li>失智症患者的全面生活支持与尊严维护 | Supporting Clients Who Are Living With Dementia (p. 906)</li>
+<li>应对行为反应（游荡、日落综合征、激越、幻觉）的非药物管理 | Managing Responsive Behaviours (p. 914)</li>
+<li>照料者与家庭成员的心理需求与支持资源 | Caregiver Needs (p. 923)</li>
+<hr class="divider">
+<h2 class="sub-h2">第六部分：为全年龄段服务对象提供安全照护</h2>
+<h2>PART 6: Providing and Promoting Safe Care for Clients of All Ages</h2>
+<h3>第 40 章：促进氧合与呼吸道照护 (第 927 页)</h3>
+<p><strong>Chapter 40: Promoting Oxygenation (p. 927)</strong></p>
+<li>影响机体氧需求的生理因素 | Factors Affecting Oxygen Needs (p. 929)</li>
+<li>呼吸功能改变（低氧血症、呼吸困难）的表现 | Altered Respiratory Function (p. 931)</li>
+<li>改善与促进氧合的体位与照护措施 | Promoting Oxygenation (p. 933)</li>
+<li>协助氧气疗法（鼻导管、面罩供氧的安全规范） | Assisting With Oxygen Therapy (p. 935)</li>
+<li>协助呼吸评估与诊断性检查 | Assisting With Assessment and Diagnostic Testing (p. 943)</li>
+<li>人工气道（气管切开导管）患者的照护配合 | Artificial Airways (p. 947)</li>
+<li>气道吸引操作配合要点 | Suctioning an Airway (p. 952)</li>
+<li>机械通气（呼吸机）患者的日常监护 | Mechanical Ventilation (p. 952)</li>
+<li>胸腔闭式引流管的观察与安全原则 | Chest Tubes (p. 954)</li>
+<h3>第 41 章：冷敷与热敷疗法 (第 959 页)</h3>
+<p><strong>Chapter 41: Heat and Cold Applications (p. 959)</strong></p>
+<li>热敷的生理效应、适应证与安全防烫伤规范 | Heat Applications (p. 961)</li>
+<li>冷敷的生理效应、适应证与防冻伤组织保护 | Cold Applications (p. 969)</li>
+<h3>第 42 章：产妇与新生儿照护 (第 976 页)</h3>
+<p><strong>Chapter 42: Caring for Infants and Their Parents (p. 976)</strong></p>
+<li>产褥期产妇的身心照护与母乳喂养支持 | Caring for New Birth Parents (p. 977)</li>
+<li>新生儿与婴儿日常照护（抱持、更换尿布、脐带与割礼护理） | Caring for Infants (p. 982)</li>
+<h3>第 43 章：婴幼儿与青少年照护 (第 1005 页)</h3>
+<p><strong>Chapter 43: Caring for the Young (p. 1005)</strong></p>
+<li>为患病或残障儿童与青少年提供照护支持 | Supporting the Infant, Child, or Teen (p. 1006)</li>
+<li>满足婴幼儿与儿童的营养需求 | Assisting Infants and Children to Meet Nutritional Needs (p. 1007)</li>
+<li>瑞氏综合征 (Reye's Syndrome) 与阿司匹林禁忌 | Reye's Syndrome (p. 1010)</li>
+<li>儿童管教与行为引导原则 | Discipline (p. 1011)</li>
+<li>支持展现挑战性行为的儿童 | Supporting the Child Who Demonstrates Challenging Behaviours (p. 1012)</li>
+<li>儿科环境中的感染预防控制 | Preventing Infections (p. 1012)</li>
+<h3>第 44 章：老年人身心照护 (第 1019 页)</h3>
+<p><strong>Chapter 44: Caring for Older Persons (p. 1019)</strong></p>
+<li>老年服务对象的整体照护哲学 | Caring for Older Clients (p. 1020)</li>
+<li>老年期情感与社交环境的变化（丧亲、角色转变） | Emotional and Social Changes (p. 1022)</li>
+<li>老年期抑郁症的识别与干预配合 | Depression in Older Persons (p. 1024)</li>
+<li>衰老引起的机体生理变化（感官、消化、泌尿、肌肉萎缩） | Physical Changes (p. 1025)</li>
+<li>老年人的性观念、亲密关系与情感需求 | The Older Person and Sexuality (p. 1029)</li>
+<h3>第 45 章：家庭管理与居家照料 (第 1033 页)</h3>
+<p><strong>Chapter 45: Home Management (p. 1033)</strong></p>
+<li>支持工作者在居家环境中的角色与权责边界 | The Support Worker's Role in Home Management (p. 1035)</li>
+<li>居家照料任务的组织与高效规划 | Getting Organized (p. 1038)</li>
+<li>居家设备与清洁用品规范 | Equipment and Supplies (p. 1038)</li>
+<li>安全使用家用清洁化学品 (WHMIS) | Using Cleaning Products Safely (p. 1040)</li>
+<li>卧室、起居室、厨房与卫生间的卫生清洁标准 | Cleaning Bedrooms, Living Rooms, Kitchens, and Bathrooms (p. 1040)</li>
+<li>洗衣与衣物消毒烘干流程 | Doing Laundry (p. 1045)</li>
+<li>垃圾分类回收与堆肥环保处理 | Recycling Items and Composting (p. 1049)</li>
+<li>应对照护计划之外任务的专业处理原则 | Performing Tasks Not Included on the Client's Care Plan (p. 1051)</li>
+<h3>第 46 章：药物管理与协助给药 (第 1055 页)</h3>
+<p><strong>Chapter 46: Medication Management (p. 1055)</strong></p>
+<li>执业范围 (Scope of Practice)：支持工作者在药物协助中的法定角色 | Scope of Practice: the Support Worker's Role (p. 1057)</li>
+<li>药物在体内的药理作用与药代动力学基础 | How Medications Work in the Body (p. 1059)</li>
+<li>常见药物剂型与给药途径（口服、外用、滴剂、吸入等） | Types of Medications (p. 1063)</li>
+<li>简单药物数学计算与剂量核对 | Performing Simple Medication Math (p. 1069)</li>
+<li>用药记录与给药记录单 (MAR) 规范 | Documentation (p. 1069)</li>
+<li>协助用药安全的“十大核对原则” (The 10 "Rights" of Medication Management) | The 10 "Rights" of Medication Management (p. 1071)</li>
+<li>处方药标签阅读与识别要求 | Medication Labelling Requirements (p. 1072)</li>
+<li>药物差错的紧急应对与报告流程 | Reporting Medication Errors (p. 1072)</li>
+<h3>第 47 章：急重症照护与围手术期支持 (第 1086 页)</h3>
+<p><strong>Chapter 47: Working in Acute Care (p. 1086)</strong></p>
+<li>协助服务对象在医院各科室间转运与交接班 | Supporting the Client During Transitions (p. 1087)</li>
+<li>协助医生/护士进行体格检查 | Assisting With Physical Examinations (p. 1090)</li>
+<li>指导服务对象为体检做好身心准备 | Preparing the Client for a Physical Exam (p. 1093)</li>
+<li>为接受手术的服务对象提供术前准备与术后基础照护 | Supporting the Client Who Is Having Surgery (p. 1096)</li>
+<h3>第 48 章：临终关怀、安宁疗护与哀伤抚慰 (第 1110 页)</h3>
+<p><strong>Chapter 48: End-of-Life Care (p. 1110)</strong></p>
+<li>威胁生命的终末期疾病 | Life-Threatening Conditions (p. 1111)</li>
+<li>面对死亡与临终的态度、文化与信仰差异 | Attitudes Toward Death and Dying (p. 1111)</li>
+<li>为垂死/临终服务对象提供身心关怀与舒适护理 | Caring for a Client Who is Dying (p. 1112)</li>
+<li>姑息治疗/缓和医疗/安宁疗护 (Palliative Care) 核心理念 | Palliative Care (p. 1116)</li>
+<li>临终相关的法律与伦理议题（预先医疗指示、放弃心肺复苏 DNR） | Legal Issues Surrounding Death and Dying (p. 1118)</li>
+<li>哀伤过程与悲伤抚慰支持阶段 | Grief (p. 1119)</li>
+<li>濒死与死亡的临床体征识别 | Signs of Death (p. 1123)</li>
+<hr class="divider">
+<h2 class="sub-h2">附录与全书参考索引</h2>
+<h2>Appendices & References</h2>
+<li><strong>附录</strong> | Appendix (p. 1131)</li>
+<li><strong>专业术语权威汇编</strong> | Glossary (p. 1135)</li>
+<li><strong>参考文献</strong> | References (p. 1161)</li>
+<li><strong>主题索引</strong> | Index (p. 1175)</li>
+<li><strong>临床操作规程总索引</strong> | Procedures (p. 1186)</li>
+
+      </article>
+
+      <!-- 3. Instructor Preface -->
+      <article class="reading-sheet" id="sec-instructor" style="display:none;">
+        <span class="book-badge">Pedagogy & 5th Edition Key Updates · Pages xvii–xxi</span>
+        <h1>《加拿大支持工作者教材》（第5版）教师序言与核心革新解析（中英双语对照）</h1>
+<h2 class="sub-h2">Instructor Preface & 5th Edition Key Enhancements</h2>
+<hr class="divider">
+<h2>一、 第5版修订背景与全加职业标准</h2>
+<h3>Background & Alignment With Canadian Vocational Standards</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>In keeping with the approach of previous editions, the fifth edition of <em>Sorrentino's Canadian Textbook for the Support Worker</em> serves the diverse needs of students and instructors in community colleges, private career colleges, school boards, and health care agencies across Canada. <br><br>Since the publication of the fourth edition, substantial changes have occurred in the Canadian health care landscape. Educational and vocational standards for support workers have been released both nationally and within various provinces. Furthermore, the role of support workers has expanded as health care systems shift focus toward community-based care, home support, and specialized long-term care for complex aging populations. <br><br>To reflect these standards and anticipated practice trends, this fifth edition has been rigorously updated, reorganized, and enriched with evidence-based research and clinical guidelines. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>秉承历版教材严谨务实的学术与教学传统，《索伦蒂诺加拿大支持工作者教材》（第5版）致力于全方位满足加拿大各地公立社区学院（Community Colleges）、私立职业学院（Private Career Colleges）、公立教育局成人职业培训项目及各级卫生保健机构师生的多元化教学需求。 <br><br>自本书第4版出版以来，加拿大整体医疗卫生体系经历了深刻的结构性变革。联邦及各省相继出台了全新的支持工作者国家职业标准与省级执业教育大纲。伴随着加拿大医疗卫生重心加速向“社区居家照护（Home & Community Care）”倾斜，以及长期照护院舍中高龄复杂慢性病患群体的激增，支持工作者的角色定位与临床技能要求得到了极大的拓展与深化。 <br><br>为精准契合上述国家与省级最新教学大纲，并前瞻性顺应加拿大医护行业的未来发展趋势，本版教材经过全面深入的循证更新、篇章重组与内容充实，确保每一处知识点与临床规程均代表当前行业最高循证实践标准。 <br><br></div>
+</div>
+<hr class="divider">
+<h2>二、 第5版教材核心内容革新要点</h2>
+<h3>Key Innovations in the Fifth Edition</h3>
+<li>1. <strong>严格界定并强化“法定执业范围”（Scope of Practice）意识</strong></li>
+<li><strong>【英文】</strong> A stronger emphasis on understanding the role of support workers and their defined scope of practice under provincial legislation and employer policies. The text clearly demarcates what support workers are legally permitted to perform, tasks that require formal delegation by a regulated health professional (e.g., RN or RPN), and unauthorized procedures.</li>
+<li><strong>【中文】</strong> 更加鲜明地突出了支持工作者的<strong>法定执业范围（Scope of Practice）</strong>。严格依据各省卫生法规及雇主规章，清晰划定支持工作者被法律允许独立执行的基础照护、必须经由注册护士（RN）或注册实习护士（RPN/LPN）<strong>正式书面委派（Delegation）</strong>方可协助的受监管操作，以及严禁跨越的医疗红线，切实规避执业法律与医疗安全风险。</li>
+<li>2. <strong>失智症照护与应对行为非药物管理（Dementia & Responsive Behaviours）</strong></li>
+<li><strong>【英文】</strong> Completely updated dementia care chapters reflecting clinical guidelines from the Alzheimer Society of Canada and evidence-based training models (such as Gentle Persuasive Approaches - GPA). Special focus is placed on recognizing that responsive behaviours are expressions of unmet physical, emotional, or environmental needs rather than intentional aggression.</li>
+<li><strong>【中文】</strong> 全面重写失智症（Dementia）专业照护章节，深度整合加拿大阿尔茨海默病协会（Alzheimer Society of Canada）的最新临床指南及广受推崇的<strong>温和劝导照护法（Gentle Persuasive Approaches, GPA）</strong>。重点引导学员深刻理解：失智症长者的所谓“问题行为/应对行为（Responsive Behaviours，如激越、抗拒照护、日落综合征等）”，本质上是其未被满足的生理痛苦、心理恐惧或环境不适的外在沟通表达，而非故意敌意，应当采取人本主义非药物安抚策略。</li>
+<li>3. <strong>文化安全与包容性谦卑（Cultural Safety, Humility & Diversity）</strong></li>
+<li><strong>【英文】</strong> Expanded content on cultural safety and cultural humility, honoring Canada's Truth and Reconciliation Commission (TRC) Calls to Action regarding Indigenous peoples (First Nations, Inuit, and Métis), as well as embracing Canada’s diverse multicultural, multilingual, and 2SLGBTQ+ communities.</li>
+<li><strong>【中文】</strong> 大幅扩充<strong>文化安全（Cultural Safety）</strong>与<strong>文化谦卑（Cultural Humility）</strong>教学模块，积极响应加拿大真相与和解委员会（TRC）针对原住民（第一民族、因纽特人、梅蒂斯人）医疗健康权利的行动倡议，同时全方位拥抱加拿大多元族裔、多语种移民以及性少数群体（2SLGBTQ+）的文化背景与独特照护需求。</li>
+<li>4. <strong>人本主义 DIPPS 核心原则的深度贯穿</strong></li>
+<li><strong>【英文】</strong> The DIPPS principles—Dignity, Independence, Preferences, Privacy, and Safety—serve as the moral and ethical compass throughout every clinical skill and patient interaction in the textbook.</li>
+<li><strong>【中文】</strong> <strong>DIPPS 照护哲学</strong>（<strong>Dignity 尊严、Independence 独立、Preferences 偏好、Privacy 隐私保密、Safety 人身安全</strong>）被彻底贯穿于全书每一项临床技能演示、医患言语交流与护理决策全流程中，杜绝冷冰冰的技术主义，彰显人本关怀。</li>
+<li>5. <strong>全人心理健康与创伤知情照护（Mental Health & Trauma-Informed Care）</strong></li>
+<li><strong>【英文】</strong> Modernized classification of mental health and substance-use disorders aligning with DSM-5 criteria, emphasizing stigma reduction, suicidal behaviour vigilance, and trauma-informed compassionate care approaches.</li>
+<li><strong>【中文】</strong> 心理精神障碍与物质成瘾章节与国际最新医学诊断标准（DSM-5）全面接轨，强调消除精神疾病污名化、提高抑郁与自杀危机警觉性，并推行<strong>创伤知情照护（Trauma-Informed Care）</strong>理念。</li>
+
+      </article>
+
+      <!-- 4. Student Preface -->
+      <article class="reading-sheet" id="sec-student" style="display:none;">
+        <span class="book-badge">Study Master Guide · Pedagogical Illustrations · Pages xxii–xxix</span>
+        <h1>《加拿大支持工作者教材》（第5版）学生前言与高效学习指南（中英双语对照）</h1>
+<h2 class="sub-h2">Student Preface & Study Guidelines</h2>
+<hr class="divider">
+<h2>第一部分：致未来的支持工作者 —— 您的神圣使命与专业角色</h2>
+<h3>Part 1: A Letter to the Student Support Worker</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>As a support worker, you are a very important member of the health care team because you probably spend more time with your clients than any other member of the team does. Team members rely on your observations, reports, and recordings, especially of any changes in a client. Your clients and their families rely on you to provide professional and safe care. You and the care you give may be the bright spots in a client's day. <br><br>This book was designed to help you learn by using its special features, which are described on the following pages. Since the last edition was published, educational and vocational standards for support workers have been released both nationally and within many provinces across Canada. To reflect these new standards, as well as anticipated practice trends, <em>Sorrentino's Canadian Textbook for the Support Worker</em>, fifth edition, has been thoroughly revised, updated, and reorganized to assist you, the student. Even after you graduate, the book will continue to be a useful and reliable resource to you in the field as you gain experience and expand your knowledge. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>作为一名支持工作者（Support Worker），您是整个跨学科医疗照护团队中不可或缺的关键核心成员。在所有医护团队成员中，您通常是与服务对象共处时间最长的人。无论是注册护士（RN）、注册实习护士（RPN/LPN）、医生还是专职治疗师，整个团队都高度依赖您敏锐的<strong>临床观察（Observations）</strong>、<strong>口头汇报（Reports）</strong>与<strong>文书记录（Recordings）</strong>——特别是当服务对象的身心状态发生任何细微变化时。更重要的是，您的服务对象及其家庭成员全心托付于您，期盼您为他们提供专业、尊严且高度安全的照护。您本人以及您所付出的温暖照护，往往就是服务对象一天当中最明媚的一束阳光。 <br><br>本书经过精心架构与全方位视觉设计，旨在通过诸多特色教学模块助您高效掌握专业技能。自上一版问世以来，全加拿大无论在联邦层面还是各省辖区内，均相继颁布了最新的支持工作者职业标准与职业教育规范。为全面契合这些最新标准及加拿大医疗照护行业的未来发展趋势，《索伦蒂诺加拿大支持工作者教材》（第5版）进行了全面深入的修订、更新与逻辑重组，全心全意为正在求学的您提供有力赋能。即便在您顺利毕业、考取资质并正式走上工作岗位之后，随着您临床经验的日益丰厚与专业维度的不断拓宽，本书仍将是您职业生涯中长久相伴、随时可查的权威案头参考书。 <br><br></div>
+</div>
+<hr class="divider">
+<h2>第二部分：SQRRR 五步高效医学阅读与学习法</h2>
+<h3>Part 2: The SQRRR Effective Study System for Healthcare Students</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>Your instructor will probably assign chapters or partial chapters from the textbook to read before or after class. When given a reading assignment, do you read from the first page to the last page without stopping? How much of what you read do you remember? Using an efficient study system will help you understand and retain all the information that you read. A useful study system has these five essential steps: <br><br>1. <strong>Preview (Survey)</strong> 2. <strong>Question</strong> 3. <strong>Read and Record</strong> 4. <strong>Recite</strong> 5. <strong>Review</strong> <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>在专业课程学习中，授课导师通常会在课前或课后为您布置指定章节的阅读任务。面对繁重的医学专业阅读，您是否往往从第一页直接读到最后一页中途不停？在读完之后，您真正能记住并运用到临床中的又有多少？运用一套科学、高效的研习系统，能够帮助您真正透彻理解并长期牢固记忆所读到的全部专业知识。这套广受医学教育界推崇的“SQRRR 学习系统”包含以下五个核心步骤： <br><br></div>
+</div>
+<hr class="divider">
+<h3>步骤 1：预习与全盘浏览 (Preview or Survey)</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>Before you start a reading assignment, preview or survey the assignment to get an idea of what it covers and to recall what you already know about the subject. Preview the chapter title, headings, subheadings, and terms or ideas in bold print or italics. Also, survey the learning objectives, key terms, introductory paragraph, boxes, key points, and the review questions at the end of the chapter. Previewing takes only a few minutes. Remember, previewing helps you become familiar with the material. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>在正式精读某个章节之前，先花几分钟时间对该阅读任务进行<strong>全景预习与快速浏览</strong>，以建立整体知识框架，并唤醒大脑中已有的背景认知。浏览章节标题、各级小标题、黑体粗体字与斜体强调词。同时，仔细扫读本章的<strong>学习目标（Objectives）</strong>、<strong>核心术语表（Key Terms）</strong>、开篇导语、表格插框、<strong>核心要点（Key Points）</strong>以及章末的<strong>复习思考题（Review Questions）</strong>。预习只需耗时三至五分钟，但它能在大脑中建立起清晰的“认知地图”，让后续精读事半功倍。 <br><br></div>
+</div>
+<hr class="divider">
+<h3>步骤 2：主动设问 (Question)</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>After previewing, you need to form a list of questions to be answered as you read the material. Questions should relate to what might be asked on a test or how the information applies to giving care. Use the title, headings, and subheadings to form questions. Avoid questions that have simple one-word answers. Questions that begin with <em>what</em>, <em>how</em>, or <em>why</em> are most helpful. While reading, if you find that a particular question does not help you understand and retain the material, change the question to make this step more useful. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>完成预习浏览后，带着思考主动将章节各级标题转化为具体的<strong>问题清单</strong>。所拟定的问题应当紧密围绕两个核心维度：“考试可能会如何考察？”以及“在实际临床照护中我该如何应用此项知识？”。尽量避免能用单一词汇作答的浅层问题，而应当多使用<strong>“是什么（What）”</strong>、<strong>“如何操作（How）”</strong>以及<strong>“为什么（Why）”</strong>开头的深度思考题。在阅读过程中，如果您发现某个问题对理解核心操作并无助益，可随时调整设问，让思考更加聚焦临床实践。 <br><br></div>
+</div>
+<hr class="divider">
+<h3>步骤 3：精读与主动记录 (Read and Record)</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>Reading, which is the next step, is more productive after you have determined what you already know and what you need to learn. The purpose of reading is to: - Gain new information - Connect the new information to what you already know <br><br>Break the assignment into smaller parts, and as you read each part, try to find answers for the questions you had formulated earlier. Also, mark important information in the text by underlining, highlighting, or making notes, which will remind you later what you need to go back to in order to review and learn. Making notes helps you remember what you have learned. When making notes, write down important information in the text margins or in a notebook. Use words and summary statements that will jog your memory about the material. <br><br>After reading the assignment, in order to retain the information, you need to organize it into a study guide—in the form of diagrams, flowcharts, or concept maps that show relationships or steps in a process. Note-taking in outline format is also very useful. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>在明确了自身已知与未知之后，接下来的阅读过程将极富成效。专业精读的核心目的在于： - 获取全新的医学与照护理论及操作规程； - 将新知识与以往的医学常识及过往生命经验建立深层神经连接。 <br><br>将长章节分解为若干短小单元。在阅读每一小节时，专注寻找刚才所提问题的答案。同时，通过划线、高光或做旁注标记核心考点，以便日后复习时精准回溯。动笔做笔记能显著强化神经突触记忆。做笔记时，请用您自己的话语提炼浓缩性结论，记录在页边空白或专用笔记本中。 <br><br>读完一个章节后，为了长期保持记忆，建议将其整理为体系化的“学习指南”——例如绘制展示操作流程的前后步骤图、因果逻辑图或概念框架图。采用层级清晰的提纲式大纲（Outline Format）记录笔记同样极为高效： <code></code>` I. 一级主题大标题 (Main heading) 1. 二级分类标题 (Second-level heading) a. 三级要点与操作步骤 (Third-level heading) <code></code>` <br><br></div>
+</div>
+<hr class="divider">
+<h3>步骤 4 与步骤 5：大声复述与周期复习 (Recite and Review)</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Recite:</strong> Finally, recite and review, using your notes and the study guide, by finding the answers for the questions you formed earlier and any others that may have come up during the reading and as you answered the review questions at the end of the chapter. Answer all questions out loud (recite). If you are unsure about the answers to any of the questions, consult your instructor or re-check the text. <br><br><strong>Review:</strong> Reviewing is more about <em>when</em> to study than <em>what</em> to study. You already decided what to study during the preview, question, and reading steps. Your instructor may have emphasized key points from the reading assignment in class. The best times to review both the information in your text and your notes from class are: 1. <strong>The same day or evening of the class</strong> 2. <strong>Right after your first study session</strong> 3. <strong>One week later</strong> 4. <strong>Regularly before a quiz, test, midterm, or final exam</strong> <br><br>Studying the information many times over spaced intervals will help transfer it into long-term clinical memory. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>复述（Recite）：</strong> 借助您的提纲笔记与知识结构图，针对前面提出的问题以及章末的复习思考题，尝试脱离书本、<strong>大声口述回答（Recite）</strong>。用专业术语清晰、流利地解释照护原理与操作要领。口述能够立即暴露记忆中的模糊与漏洞。如果对某个操作步骤或病理概念无法清晰作答，必须立刻重翻书本核实，或向授课导师请教。 <br><br><strong>科学周期复习（Review）：</strong> 复习的精髓不在于“学什么”，而在于<strong>“在什么时间节点复习”</strong>。前三个步骤已经为您锚定了核心考点。课堂上导师也会着重强调重难点。将书本理论与课堂笔记结合复习的<strong>四大黄金黄金时间窗口</strong>是： 1. <strong>上课当天的下午或当晚（趁热打铁，防止遗忘）</strong>； 2. <strong>初次完成自主研读的紧接着次日</strong>； 3. <strong>整整一周之后（抵抗艾宾浩斯遗忘曲线的关键点）</strong>； 4. <strong>单元小测、期中考核或全省统考之前的规律性系统复盘</strong>。 <br><br>通过这种“间隔重复（Spaced Repetition）”的方式反复回顾，医学知识才能真正化为您下意识的临床反应与肌肉记忆。 <br><br></div>
+</div>
+<hr class="divider">
+<h2>第三部分：教材八大核心教学特色图解指南</h2>
+<h3>Part 3: Guide to Textbook Special Features</h3>
+<p>本书设计了多套高辨识度的图文模块，其核心功能如下：</p>
+<li>1. <strong>核心术语表（Key Terms）</strong></li>
+<li>位于每章起始位置。汇聚该章最核心的医学病理、药理、法律与护理专有名词，配有精炼准确的学术定义，是备考名词解释与日常交班报告的核心基石。</li>
+<li>2. <strong>学习目标（Learning Objectives）</strong></li>
+<li>严格对照加拿大各省职业学习成果（VLOs），明确学员读完本章后必须达成的知识与技能考核指标。</li>
+<li>3. <strong>长期照护专栏（Focus on Long-Term Care）</strong></li>
+<li>专门针对养老院、护理院（Nursing Homes / Long-Term Care Homes）环境，深入解析脆弱长者的生理衰老、失智症应对及慢性病管理特征。</li>
+<li><strong>原书专栏范例（Box 33.9 院舍膳食计划，完整文字版）：</strong></li>
+<li><strong>社交性进餐（Social Dining）</strong>：长者在公共大餐厅就餐，每桌安排 4 至 6 名长者共同进餐，增进社交互动与归属感。</li>
+<li><strong>家庭式就餐（Family-Style Dining）</strong>：餐食盛装在公用大餐盘中放置于餐桌中央，长者在照护员协助下自行分盛食物，模拟家庭用餐氛围。</li>
+<li><strong>低刺激辅助进餐（Low-Stimulus Dining）</strong>：针对容易分心、烦躁焦虑的失智症长者，安排在安静、免除噪音与强光的独立辅助用餐区进食。</li>
+<li><strong>【临床要点】</strong>：固定就餐座次有助于认知症长者辨识环境；进餐前后需记录每位长者的精准摄入百分比。</li>
+<li>4. <strong>社区与居家照护专栏（Focus on Home Care）与生活技能支持</strong></li>
+<li>针对入户支持工作者（Home Support Worker），剖析在服务对象私人居所中如何因地制宜进行环境安全评估、尊重家庭习俗并独立开展照护。</li>
+<figure class="clinical-figure">
+  <img src="images/textbook1_features/feature_clock_plate_dining.png" alt="Clock Plate Dining Method" loading="lazy">
+  <figcaption><strong>图解展示：时钟表盘进餐引导法（Figure 27.5）</strong><br><em>FIGURE 27.5: The numbers on a clock are used to help a visually impaired client locate food.</em><br>【临床精义】针对视力障碍（视网膜病变、青光眼、白内障）长者，以时钟点位（例如：6点钟放米饭、10点钟放鸡肉、2点钟放青菜）告知食物位置，极大维护其自主进餐尊严与安全感。</figcaption>
+</figure>
+<li>5. <strong>人体力学与安全防护（Body Mechanics & Safety）</strong></li>
+<li>医护人员职业健康保护机制，预防腰椎间盘突出与肌肉拉伤。</li>
+<figure class="clinical-figure">
+  <img src="images/textbook1_features/feature_body_mechanics_lifting.png" alt="Body Mechanics Lifting and Pulling" loading="lazy">
+  <figcaption><strong>图解展示：正确与错误人体力学搬运示范（Figure 14.3 & 14.4）</strong><br><em>FIGURE 14.3 & 14.4: Picking up a box using incorrect (A) and correct (B) posture; Move your rear leg back when pulling.</em><br>【临床精义】屈膝下蹲、收紧核心、背部平直，利用大腿肌群发力，严禁弯腰代偿；推拉重物时扩大支撑面并向后撤后腿。</figcaption>
+</figure>
+<li>6. <strong>多元文化包容与人际空间（Respecting Diversity & Cultural Safety）</strong></li>
+<li>适应加拿大移民多元社会，理解文化背景对身体接触、目光交流与个人空间的深远影响。</li>
+<figure class="clinical-figure">
+  <img src="images/textbook1_features/feature_culture_personal_space.png" alt="Respecting Diversity and Personal Space" loading="lazy">
+  <figcaption><strong>图解展示：文化敏感性与身体语言接触（Figure 7.3 & Personal Space）</strong><br><em>FIGURE 7.3: Culture may influence how a client responds to touch.</em> —— 详细解析不同族裔关于个人距离（Personal Space）与身体接触的心理接受界限。</figcaption>
+</figure>
+<li>7. <strong>标准化技能操作规程（Procedures）</strong></li>
+<li>包含洗手、体温测量、床上擦浴、导尿管护理、升降机转移等数十项核心护理实操。每项操作均以<strong>“操作准备（Pre-Procedure）”、“操作实施（Procedure）”与“操作后收尾及记录（Post-Procedure）”</strong>三段式标准化呈现。</li>
+<figure class="clinical-figure">
+  <img src="images/textbook1_features/feature_procedure_steps.png" alt="Clinical Procedure Steps" loading="lazy">
+  <figcaption><strong>图解展示：标准化护理操作步骤图解（以协助进食与床上转移为例）</strong><br><em>Procedure: Assisting the Client with Eating & Moving the Client (Figure 14.14 B/C).</em><br>【临床精义】每项护理规程均以金黄色 DIPPS 徽标贯穿核心环节，时刻提醒学员遵循安全防护与尊严隐私。</figcaption>
+</figure>
+<li>8. <strong>章末复习与要点精炼（Chapter Review & Key Points）</strong></li>
+<li>提炼本章最核心考点，配套练习思考题，用于考前快速自我检阅。</li>
+
+      </article>
+
+      <!-- 5. Core Glossary -->
+      <article class="reading-sheet" id="sec-glossary" style="display:none;">
+        <span class="book-badge">Essential Medical & Clinical Terminology</span>
+        <h1>《加拿大支持工作者教材》（第5版）核心专业术语汇编（中英双语对照）</h1>
+<h2 class="sub-h2">Canadian Support Worker Essential Glossary & Key Terms</h2>
+<hr class="divider">
+<h2>一、 核心执业身份与医疗体系术语 (Professional Identity & Healthcare System)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>英文专业术语 (English Term)</th><th>中文标准译名</th><th>权威学术释义与临床内涵 (Definition & Clinical Context)</th></tr></thead>
+<tbody>
+<tr><td><strong>Support Worker (PSW / HCA)</strong></td><td>支持工作者 / 个人支持工作者 / 护工</td><td>在加拿大各省从事基层医疗卫生照护的专业从业者，为失去自理能力的长者、残障人士、急慢性病患提供日常生活照料与身心支持。在安省通称 Personal Support Worker (PSW)，在BC省及阿省多称 Health Care Assistant (HCA) 或 Health Care Aide。</td></tr>
+<tr><td><strong>Unregulated Care Provider (UCP)</strong></td><td>非监管照护提供者</td><td>法律术语。指其职业未受各省特定的《受监管健康职业法》立法监管学院（Regulatory College）发放牌照，但必须接受注册护士督导、遵循雇主规章并在法定执业范围内执业的医护人员（如 PSW）。</td></tr>
+<tr><td><strong>Regulated Health Professional (RHP)</strong></td><td>注册医疗卫生专业人员</td><td>依法受各省专业监管学院颁发牌照并实施行业自律监管的医护人员，如注册护士（RN）、注册实习护士（RPN/LPN）、医师（MD）、物理治疗师（PT）与作业治疗师（OT）。</td></tr>
+<tr><td><strong>Scope of Practice</strong></td><td>法定执业范围</td><td>法律与行业规章明确赋予某一工种被允许安全、合法执行的专业技能、知识水平与操作权责的法律边界。</td></tr>
+<tr><td><strong>Delegation</strong></td><td>授权委派 / 正式工作委托</td><td>法律程序。指注册专业人员（如 RN）根据法律规定，经过严格技能培训与能力核准后，将原本属于注册护士专有的受控护理操作（Controlled Act，如滴眼药、管饲冲洗）以书面形式委托给特定合格 PSW 代为执行的法律行为。</td></tr>
+<tr><td><strong>Assignment</strong></td><td>工作分配 / 日常任务下达</td><td>护士或主管根据照护计划，安排支持工作者执行其本身执业范围之内已有常规技能（如沐浴、测量体温、进食协助）的日常调度过程。</td></tr>
+<tr><td><strong>Client-Centred Care</strong></td><td>以服务对象为中心的照护</td><td>现代医疗核心哲学。将接受照护者视为拥有自主意志与尊严的独立个体，在制定所有照护决策时充分尊重其个人价值观、习惯偏好与生活方式。在不同机构中也称为 Resident-Centred Care（院舍长者）或 Patient-Centred Care（医院患者）。</td></tr>
+</tbody></table></div>
+<hr class="divider">
+<h2>二、 人本照护 DIPPS 五大基石原则 (DIPPS Core Principles)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>原则代号</th><th>英文核心词 (Core Concept)</th><th>中文标准译名</th><th>临床照护实践指导要领 (Clinical Practice Meaning)</th></tr></thead>
+<tbody>
+<tr><td><strong>D</strong></td><td><strong>Dignity</strong></td><td><strong>维护尊严</strong></td><td>始终视服务对象为一个值得尊敬的完整人。杜绝将其当婴儿般对待（Baby Talk），操作前敲门礼貌称呼其尊称，充分聆听并接纳其情感。</td></tr>
+<tr><td><strong>I</strong></td><td><strong>Independence</strong></td><td><strong>促进独立自主</strong></td><td>鼓励服务对象尽最大可能自己动手完成力所能及的动作（哪怕动作极为缓慢），严禁照护者为了赶时间而剥夺其自主权。</td></tr>
+<tr><td><strong>P</strong></td><td><strong>Preferences</strong></td><td><strong>尊重个人偏好</strong></td><td>允许并鼓励服务对象自主决定自己的日常事务，例如几点起床、今天想穿哪件衣服、想吃何种餐点等。</td></tr>
+<tr><td><strong>P</strong></td><td><strong>Privacy</strong></td><td><strong>保护隐私与保密</strong></td><td>物理隐私：暴露照护前拉严窗帘、关好房门、拉拢床帘，仅暴露正在清洁的身体局部；信息保密：严守保密义务，不在公共区域议论病情。</td></tr>
+<tr><td><strong>S</strong></td><td><strong>Safety</strong></td><td><strong>保障人身安全</strong></td><td>无论何时，确保服务对象及照护者自身免受意外跌倒、烫伤、感染及机械损伤。</td></tr>
+</tbody></table></div>
+<hr class="divider">
+<h2>三、 日常照护与日常生活活动能力 (Daily Living & Clinical Care)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>英文专业术语 (English Term)</th><th>中文标准译名</th><th>权威学术释义与临床内涵 (Definition & Clinical Context)</th></tr></thead>
+<tbody>
+<tr><td><strong>Activities of Daily Living (ADLs)</strong></td><td>日常生活活动能力</td><td>维持人类独立生活所必需的最基本自我照顾技能，主要包括：沐浴（Bathing）、穿衣修饰（Dressing）、进食（Eating/Feeding）、移动转移（Transferring/Mobility）、如厕（Toileting）及大小便控制（Continence）。</td></tr>
+<tr><td><strong>Instrumental Activities of Daily Living (IADLs)</strong></td><td>工具性日常生活活动能力</td><td>在复杂社会环境中独立生活所需的高阶复合能力，包括：做饭做餐、房屋日常清洁打扫、洗衣服、管理个人财务、遵医嘱服药、使用电话与交通工具、日常买菜购物。</td></tr>
+<tr><td><strong>Care Plan (Nursing Care Plan)</strong></td><td>综合护理照护计划</td><td>由医疗团队（主要由主管护士主导）评估服务对象的身心需求后制定的全面、个性化书面工作指引，详述其具体护理目标、干预措施、特殊注意事项及照护频次。</td></tr>
+<tr><td><strong>Body Mechanics</strong></td><td>身体力学</td><td>在进行各种身体动作、搬运与转移重物时，通过调整身体姿态、扩大支撑底面积（双脚分开与肩同宽）、降低重心、保持脊柱正常生理弯曲，从而最省力并防止背部与肌肉骨骼损伤的科学运动机制。</td></tr>
+<tr><td><strong>Medical Asepsis (Clean Technique)</strong></td><td>内科无菌技术 / 清洁技术</td><td>旨在减少微生物数量、阻断病原体从一个人传播到另一个人或环境中去的日常清洁与防感染措施（如手卫生、穿戴手套、环境表面消毒）。</td></tr>
+<tr><td><strong>Surgical Asepsis (Sterile Technique)</strong></td><td>外科无菌技术</td><td>旨在彻底消灭或清除某一区域或器械上所有微生物（包括细菌芽孢与病毒）的最高级别无菌操作规范。</td></tr>
+<tr><td><strong>Standard Precautions / Routine Practices</strong></td><td>常规预防措施 / 标准预防</td><td>针对所有服务对象普遍适用的基本防感染准则，基于“所有人的血液、体液、排泄物均具有潜在传染性”的假设，在接触时必须佩戴个人防护装备（PPE）。</td></tr>
+<tr><td><strong>Restraints</strong></td><td>身体约束具 / 限制性措施</td><td>用于限制、妨碍或阻碍服务对象自由身体移动的物理器械、衣物或化学药物。加拿大现代医疗倡导“无约束照护（Least-Restraint / Restraint-Free Environment）”。</td></tr>
+<tr><td><strong>Responsive Behaviours</strong></td><td>应对行为反应</td><td>失智症与认知障碍患者常出现的激越、徘徊、幻觉、日落综合征等行为。在加拿大护理学中不再使用“问题行为（Problem Behaviours）”，而是称为“应对行为”，强调其为患者应对内心恐惧或未被满足生理需求的外在反应。</td></tr>
+<tr><td><strong>Palliative Care (End-of-Life Care)</strong></td><td>姑息照护 / 安宁疗护 / 临终关怀</td><td>针对威胁生命的终末期疾病患者及其家属提供的一种整合性照护，其核心目标不是治愈疾病或盲目延长痛苦的生命，而是最大程度缓解疼痛与躯体不适，抚慰心理与灵性痛苦，提升临终生命质量。</td></tr>
+<tr><td><strong>Activities of Daily Living (ADLs) Checklist</strong></td><td>ADL 评估考核清单</td><td>临床评定患者独立程度的标准化量表（从完全自立、部分协助到完全依赖）。</td></tr>
+<tr><td><strong>MAR (Medication Administration Record)</strong></td><td>药物给予记录单 / 用药单</td><td>医疗机构中用于详细记录服务对象处方药名称、剂量、给药时间、途径及执行护士签名的法定法律文书。</td></tr>
+<tr><td><strong>SBAR Communication</strong></td><td>SBAR 标准化沟通汇报模式</td><td>临床医疗交班与病情恶化紧急汇报的国际通用结构化框架：<strong>S</strong>ituation（现状）、<strong>B</strong>ackground（病史背景）、<strong>A</strong>ssessment（评估发现）、<strong>R</strong>ecommendation（处理建议）。</td></tr>
+</tbody></table></div>
+
+      </article>
+
+      <!-- 6. Chapter 1 Unabridged (without repetitive quiz questions) -->
       <article class="reading-sheet" id="sec-ch1">
-        <span class="book-badge">Sorrentino 5th Ed. · Chapter 1 Unabridged</span>
+        <span class="book-badge">Sorrentino 5th Ed. · Chapter 1 Unabridged · Pages 1–18</span>
         <h1>《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</h1>
 <h2 class="sub-h2">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h2>
 <h2>Chapter 1: The Role and Responsibilities of the Support Worker</h2>
 <h2>第 1 章：支持工作者的角色与职责（原版逐字逐句 19 页全文典藏版）</h2>
 <hr class="divider">
-<h2>【开篇导读与学习目标】Chapter 1 Opener & Learning Objectives (Page 1)</h2>
+<h2 id="ch1-sec1" class="section-anchor-target">【开篇导读与学习目标】Chapter 1 Opener & Learning Objectives (Page 1)</h2>
 <h3>学习目标 (Objectives)</h3>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>After reading this chapter, the learner should be able to do the following: 1. Identify the role support workers play within the health care team. 2. Describe the goal of support work. 3. Differentiate between activities of daily living (ADLs) and instrumental activities of daily living (IADLs). 4. Describe the main responsibilities of the support worker. 5. Describe the importance of understanding the roles and responsibilities of support work. 6. Distinguish between regulated and unregulated health care providers. 7. Describe the significance of having a professional approach to support work. 8. Identify the things to consider when thinking critically and solving problems. 9. List the principles of client-centred care. <br><br></div>
   <div class="cn-block"><span class="lang-tag">CN 译文</span>完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： 1. 明确支持工作者在整个跨学科医疗卫生照护团队中所扮演的角色。 2. 阐述支持工作的根本执业宗旨与终极目标。 3. 准确区分“基础日常生活活动”（ADLs）与“工具性日常生活活动”（IADLs）。 4. 详尽阐述支持工作者的六大核心工作职责范畴。 5. 阐明深刻理解支持工作角色范畴与法定责任对执业安全的重要意义。 6. 明晰受监管专业医护人员与未受监管健康照护人员的法律界限。 7. 阐明在日常支持工作中秉持专业素养与严谨态度的重要价值。 8. 掌握在进行临床批判性思维与解决实际照护难题时必须考量的四大核心要素。 9. 准确列举“以服务对象为中心”的 DIPPS 核心人本照护原则。 <br><br></div>
 </div>
 <hr class="divider">
-<h3>核心专业术语表 (Key Terms) (Page 1)</h3>
+<h3 id="ch1-sec2" class="section-anchor-target">核心专业术语表 (Key Terms) (Page 1)</h3>
 <div class="table-wrap"><table>
 <thead><tr><th>英文核心术语 (Key Term)</th><th>音标 (Phonetic)</th><th>权威中文译名</th><th>原版学术定义与临床内涵 (Definition & Clinical Context)</th></tr></thead>
 <tbody>
@@ -877,7 +1627,7 @@
 <tr><td><strong>Unregulated care provider (UCP)</strong></td><td>/ʌnˈrɛɡjʊleɪtɪd kɛər prəˈvaɪdər/</td><td>未受监管照护提供者</td><td>执业行为不由省法定专业行业公会（College）直接发牌监管、但在医疗团队中提供关键生活照料的从业人员（如 PSW、HCA）。</td></tr>
 </tbody></table></div>
 <hr class="divider">
-<h2>第一节：支持工作的本质与崇高宗旨 (Pages 2 - 3)</h2>
+<h2 id="ch1-sec3" class="section-anchor-target">第一节：支持工作的本质与崇高宗旨 (Pages 2 - 3)</h2>
 <h3>支持工作者的定义与服务对象 (What is a Support Worker & Client?)</h3>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>Support workers provide care and assistance to clients of any age who have defined health care needs and who require help with their daily activities, whether they live in a facility or in the community. <em>Client</em> is a general term for any person receiving care or support services in a community setting, such as hospital patients, facility residents, and clients in the community. <br><br></div>
@@ -898,7 +1648,7 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>在日常工作中，支持工作者既可以作为跨学科医疗团队的一员协同作战，也可以一对一直接服务特定家庭。各省法律法规、雇主管理规章以及服务对象当前的身心健康状况，共同决定着支持工作者的执业方式以及所需的临床督导程度。他们不仅需要与各级医护同事紧密协作，还经常需要根据个案需求与医疗卫生体系之外的社会工作者、教师、神职人员或法律代表沟通对接。支持工作者在任何时刻都必须保持严谨审慎，在与同事探讨个案时严格恪守保密义务。同时，他们必须具备高度的灵活性，主动调整自身的工作风格以契合所处环境及服务对象的个人偏好与意愿。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第二节：支持工作在加拿大全境的职业现状与场所 (Pages 3 - 4)</h2>
+<h2 id="ch1-sec4" class="section-anchor-target">第二节：支持工作在加拿大全境的职业现状与场所 (Pages 3 - 4)</h2>
 <h3>加拿大各省职业称谓与现状差异 (Support Work Across Canada)</h3>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>The nature of support work varies across the country. There are differences in educational programs, work settings, job responsibilities, and terms used to describe support workers. Some sections of this text may not apply to support work in your particular city, province, or territory. If you are unsure about which parts apply to your area, ask your instructor or employer. <br><br>The term <em>support worker</em> refers to the worker who provides personal care and support services. However, <em>assisted-living worker</em>, <em>personal support worker (PSW)</em>, <em>personal attendant</em>, <em>patient care assistant (PCA)</em>, <em>resident care aide (RCA)</em>, <em>health care aide (HCA)</em>, <em>home care attendant</em>, <em>home support worker</em>, <em>nursing aide</em>, <em>community health worker</em>, or <em>continuing care assistant (CCA)</em>—among other titles—may be used in your province or territory to describe similar (but not always equivalent) jobs. The Appendix at the end of this book lists the support worker's titles in each province and territory. <br><br>Because of the wide variety of titles, the general public may not be aware of what support workers are called in their own province or territory or even within a facility they use. It is the role of support workers, their employing agencies, other health care providers, and their province's or territory's Ministry of Health to inform others of their role and how it fits in their current health care system. <br><br>This list may also include several titles that are not equivalent to one another. For example, in Ontario, <em>developmental service workers (DSWs)</em> play a different role and follow different educational standards than <em>personal support workers (PSWs)</em>, and yet both are considered to be support workers within the health care team. In some parts of Canada, the term <em>personal attendant</em> refers to a worker who is supervised directly by the person for whom they provide support services; personal attendants support people with physical disabilities. Educational programs to become a personal attendant are generally shorter than those for support workers. <br><br></div>
@@ -910,7 +1660,7 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>支持工作者的执业舞台极其广阔（详见第 3 章工作场所详解）。无论在何种环境中，支持工作者都必须时刻筑牢服务对象的安全防线，特别是针对那些患有认知障碍（阿尔茨海默病等失智症）或心理精神健康挑战的脆弱人群。 1. <strong>居家与社区环境（Home & Community Care）</strong>：支持工作者入户提供生活协助，使许多原本不得不提早入住养老院的高龄或残疾长者得以继续在熟悉的家中自立生活，享受天伦之乐。 2. <strong>辅助生活院舍与集体居所（Assisted-Living & Group Homes）</strong>：协助服务对象进行社交融入与适应过渡。 3. <strong>长期照护院舍（Long-Term Care Facilities / Nursing Homes）</strong>：日夜守护病情复杂、多病共存且生活无法自理的重症脆弱长者。 4. <strong>姑息缓和医疗与安宁疗护中心（Palliative Care & Hospices）</strong>：为处于生命终末期的临终患者提供全方位的身体舒适照护、口腔湿润、体位摆放与心灵陪伴，护佑他们安详、无痛、保有尊严地走完人生最后一程。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第三节：支持工作者的六大核心工作职责 (Pages 4 - 5)</h2>
+<h2 id="ch1-sec5" class="section-anchor-target">第三节：支持工作者的六大核心工作职责 (Pages 4 - 5)</h2>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>The role and responsibilities of support workers are determined by their province or territory and the employers they work for. In general, support workers assist clients with their personal care and personal hygiene, ensure safety, and promote independence. The six main areas of responsibility for support workers include: 1. Personal care 2. Support for nurses and other health care providers 3. Family support 4. Social support 5. Housekeeping or home management 6. Documenting and reporting <br><br></div>
   <div class="cn-block"><span class="lang-tag">CN 译文</span>支持工作者的具体角色定位与岗位职责，受所在省份法律大纲及受雇机构规章制度严格管辖。概括而言，其核心工作聚焦于协助服务对象完成个人生活照料与个人卫生维护、消除环境危险保障人身安全、以及全方位促进和激发个体的自理功能。其日常核心执业范畴涵盖以下六大支柱： <br><br></div>
@@ -946,7 +1696,7 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>在法律与临床层面上，“没有记录就等于没有做过（If it was not documented, it was not done）”。支持工作者必须依法依规对每一次翻身、排泄、进食量、精神状态以及所采取的照护措施进行客观、真实、及时的书面或电子病历（EHR）记录，并运用标准结构化沟通模式（如 SBAR 汇报法）向主管护士进行关键交班。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第四节：支持工作者真实一日工作实录 (Pages 5 - 9)</h2>
+<h2 id="ch1-sec6" class="section-anchor-target">第四节：支持工作者真实一日工作实录 (Pages 5 - 9)</h2>
 <h3>A Day in the Life of a Support Worker (Three Comprehensive Clinical Scenarios)</h3>
 <p>为帮助学员建立对支持工作者在不同工作场所真实运作的立体认知，教材精选呈现了三位从业人员完整的执业一日实录：</p>
 <h3>场景 1：社区入户照护 —— 史蒂芬的一天 (In the Community: Stephen) (Pages 5 - 6)</h3>
@@ -965,16 +1715,33 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>吉娜在综合医院拥有36张床位的外科急性骨科病房担任病患照护助理 PCA（07:00 - 15:30）： - <strong>07:00 - 07:30：外科交接班</strong> 掌握人工全髋关节置换术、全膝关节置换术及骨折内固定术后患者的受压禁忌与活动限制。 - <strong>07:30 - 11:30：术后晨间照护与早期下床活动</strong> 更换病员服；协助物理治疗师指导术后第一天患者使用助行器早期下床，严格遵守“全髋置换术后屈髋不得超过90度、下肢保持外展”的脱位预防规程；督导患者使用诱发性肺量计（Incentive Spirometer）进行深呼吸有效排痰，预防术后坠积性肺炎。 - <strong>敏锐观察与法定界限坚守（关键执业考点）：</strong> 吉娜在为12床输液患者整理床单位时，敏锐发现静脉输液袋已完全走空、输液泵正在蜂鸣报警。因调节静脉输液管路属于注册护士专有受控操作，吉娜<strong>绝对不去自行按键调试仪器</strong>，而是立即按下呼叫铃并在床旁大声报告责任护士前来更换。 - <strong>11:30 - 15:30：营养协助、精准计量与转运</strong> 协助分发午餐；精确测量并记录留置尿袋的尿量毫升数；使用平车平稳安全转运患者前往放射科复查 X 光片；终末消毒病房仪器并向护士长大交班。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第五节：跨学科医疗团队与法定执业范围 (Pages 10 - 13)</h2>
-<h3>特殊病区与跨学科团队理念 (Specialized Units & Multidisciplinary Team) (Page 10)</h3>
+<hr class="divider">
+<h2 id="ch1-sec7" class="section-anchor-target">第五节：受助人群类别与服务对象全景 (Pages 9 - 10)</h2>
+<h3>受助人群的通用专业称谓 (People Who Receive Support Services)</h3>
 <div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>Hospitals contain specialized units to care for clients with complex conditions, including critical care units (ICUs), coronary care units (CCUs), burn units, and pediatric units. Pediatric units care for sick or injured infants, children, and adolescents (FIGURE 1.2). Rehabilitation units focus on restoring lost abilities through physical therapy, occupational therapy, and speech therapy. <br><br>A team is a group of people working together toward a common goal. A health care team consists of professionals from diverse backgrounds with specialized skills and knowledge who collaborate to provide comprehensive, individualized, client-centred care. Support workers are vital front-line members of this team. <br><br></div>
+  <div class="en-block"><span class="lang-tag">EN 原文</span>People receiving health care and support services are known by different terms, depending on the setting. A person receiving care in a hospital is usually called a <em>patient</em>. A person living in a live-in facility is called a <em>resident</em>. A person receiving care or support services in the community is called a <em>client</em>. <em>Client</em> is also an all-encompassing term for people receiving health care or support services: hospital patients, facility residents, and clients in the community. <br><br>Whether the individual receiving care is known as a client, patient, or resident, always remember that he or she is a person. Every person is unique, with unique life experiences and situations, desires and opinions. Each will have different needs and different abilities. Support workers work with people from a variety of cultures or backgrounds (see Chapter 7). Part of the support worker's job is to accept this diversity among people. The <em>Respecting Diversity</em> boxes that appear throughout this text outline the importance of diversity and how people's backgrounds influence who they are and what they do. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>在不同医疗照护场景中，接受健康与支持服务的人士享有不同的专业称谓： - 在急重症医院（Hospital）中接受治疗的人，通常称为<strong>“就医患者（Patient）”</strong>； - 在长期居住型院舍（Live-in Facility / Long-Term Care）中生活的人，通常称为<strong>“常住长者 / 住户（Resident）”</strong>； - 在社区居家（Community / Home Care）环境中接受上门服务的人，通常称为<strong>“案主 / 服务对象（Client）”</strong>。 同时，“服务对象（Client）”也是一个全包容性（All-encompassing）的庄重统称，涵盖了医院患者、院舍住户以及社区案主。 <br><br>无论在具体的场所中他们被称为案主、患者还是住户，请始终牢记：<strong>他们首先是一个具有完整尊严的独立个体（A Person）</strong>。每个人都是独一无二的，拥有独特的人生阅历、境遇、渴望与见解。每个人的身心需求和身体机能各不相同。支持工作者每天都会与来自不同文化、种族和信仰背景的人群打交道（详见本书第 7 章）。支持工作者职责的核心基石之一，就是尊重并由衷包容人群之间的文化与个体多元性。贯穿全书的<strong>【尊重多元性】（Respecting Diversity）</strong>专栏，深刻阐释了多元文化的重要性，以及文化背景如何深刻塑造着一个人的行为方式与价值认知。 <br><br></div>
+</div>
+<h3>加拿大受助人群的九大核心类别 (Nine Categories of Clients Grouped by Issues, Needs, and Ages)</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>Clients can be grouped according to their issues, needs, and ages: 1. <strong>Older persons.</strong> Aging is a normal process and is not an illness or disease. Many older persons enjoy good health. However, body changes normally occur with the aging process. Social and emotional changes may also occur (see Chapter 43). The risks for contracting serious illnesses and becoming disabled increase with age. Most older persons remain at home as long as possible. Others are unable to manage even with assistance and move into a live-in facility. Throughout the text, issues relevant to older persons are discussed. 2. <strong>People with disabilities.</strong> Some people are living with disabilities due to illness, injury, or conditions present at birth. Disabilities may affect physical functioning, mental functioning, or both. Many adults with disabilities live in their own homes. Many work outside their homes. Support workers might help clients living with disabilities with their ADLs or might be responsible for teaching them how to perform the ADLs independently. 3. <strong>People with medical issues.</strong> Medical issues include illnesses, diseases, and injuries. These may include short-term (such as a broken bone), long-term (such as diabetes or multiple sclerosis), or progressive and life-threatening (such as some types of cancer) issues. 4. <strong>People having surgery.</strong> Surgical clients are those being prepared for surgery or who have recently had surgery. Preoperative care includes preparing the client for what to expect after surgery and addressing the client's fears and anxieties. Needs after surgery relate to relieving pain and discomfort, preventing complications, and helping the client adjust to body changes. People recover from surgeries in hospitals or in their homes. 5. <strong>People with mental health issues.</strong> Mental health issues range from mild to severe. Some people function normally but need help making decisions or coping with life stresses. Others are severely affected and need assistance with ADLs. 6. <strong>People needing rehabilitation.</strong> Rehabilitation is the process of restoring a person to the highest possible level of functioning through the use of therapy, exercise, or other methods. The person may need to regain functions lost due to surgery, illness, or accident. Some hospitals have special rehabilitation units. Many people receiving support at home and in long-term care settings require rehabilitation. 7. <strong>Children.</strong> When hospital care is needed, children are admitted to the pediatric unit. In some areas of Canada, support workers are hired to work in pediatric units (FIGURE 1.2). However, most support work for children occurs in community settings and long-term care facilities. Some children who receive care are living with physical or intellectual disabilities. Others need care because a parent has a medical challenge or has just had a new baby. The <em>Focus on Children</em> boxes and Chapter 42 discuss issues related to caring for children. 8. <strong>Birth parents and newborns.</strong> Complications and difficulties can occur at any time during pregnancy and even up to 6 to 8 weeks following childbirth. Some new birth parents need assistance with their own care or with their newborn's care. Most support work with birth parents and newborns takes place in the home (see Chapter 41). 9. <strong>People requiring special care.</strong> Some people who have serious and complex medical conditions need special care and equipment. Hospitals have special care units, including critical care units (ICUs), coronary care units (CCUs), kidney dialysis units, burn units, and emergency departments (EDs). In some areas of Canada, support workers are hired to work in these units. Support workers might transport people from one unit to another; take specimens to the lab; assist clients with bathing, feeding, mobility, or toileting; and assist other health care providers with special procedures. In some parts of Canada, support workers are not allowed to provide personal care to clients in unstable or critical conditions. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>根据健康问题、照护需求与所属年龄段，受助人群可系统划分为九大核心类别： 1. <strong>长者群体（Older Persons）</strong>：衰老（Aging）是人体正常的生命历程，绝非一种疾病或病态。许多长者身体十分硬朗。然而，生理功能的自然退行不可避免，社交圈缩小与情绪变化也随之而来（详见第 43 章）。患严重疾病与发生功能残障的风险随年龄显著上升。绝大多数长者希望尽可能长期留在家中生活；一部分即便在获得协助后仍无法维持安全生活，则会迁入长期照护机构。 2. <strong>残障人士（People with Disabilities）</strong>：包括因后天疾病、意外创伤或先天缺陷导致的残障。残障可能损害肢体生理机能、认知心理机能，或二者兼具。许多残障成年人独立居住在私人居所中，并正常外出工作。支持工作者既可直接协助其 ADLs，亦承担着指导赋权其学会独立完成日常生活技能的教学职责。 3. <strong>急慢性内科病患（People with Medical Issues）</strong>：涵盖各类创伤与疾病，包括<strong>短期急性期</strong>（如单纯骨折）、<strong>长期慢性期</strong>（如糖尿病、多发性硬化 MS）、以及<strong>渐进性且危及生命的重症</strong>（如某些晚期恶性肿瘤）。 4. <strong>手术期患者（People Having Surgery）</strong>：包括术前准备期与术后恢复期患者。术前照护着重于向患者解释术后配合流程、缓解其恐惧与焦虑；术后照护则聚焦于镇痛与舒适护理、预防术后并发症（深静脉血栓、肺炎等），并协助患者心理适应身体形态的变化（如截肢或造口）。 5. <strong>心理与精神健康受助者（People with Mental Health Issues）</strong>：病情跨度从轻度到重度。一部分人群日常功能正常，但在做出决策或应对突发生活应激时需要引导支持；另一部分严重精神障碍患者则认知受损，连最基本的穿衣进食等 ADLs 均需要全面协助。 6. <strong>康复期患者（People Needing Rehabilitation）</strong>：康复是通过物理治疗、功能锻炼等科学手段，使个体恢复至最高可能生理与生活机能的过程。康复广泛分布于综合医院康复科、居家入户康复以及长期照护院舍中。 7. <strong>儿童与儿科患儿（Children）</strong>：当患儿需要住院时入住儿科病区（Pediatric Unit）。在加拿大某些地区，支持工作者受聘在儿科病房执业（参见图 1.2）。但在全加范围内，更多儿童支持工作发生在社区居家与院舍中。受助儿童包括脑瘫、自闭症、智力障碍儿童，亦包括因父母患重病或刚分娩而需要临时照顾的健康儿童（详见第 42 章）。 8. <strong>产妇与新生儿家庭（Birth Parents and Newborns）</strong>：妊娠期及产后 6 至 8 周（产褥期）内随时可能发生身心并发症。初为人母的产妇往往需要关于自身伤口愈合、母乳喂养及新生儿沐浴抚触的居家协助（详见第 41 章）。 9. <strong>需要特殊重症监护的患者（People Requiring Special Care）</strong>：患有危及生命的极其复杂病症，集中在重症监护病区（ICU）、冠心病重症监护病区（CCU）、肾脏血液透析中心、烧伤病房与急诊科（ED）。在部分省份，PSW 协助转运病患、送检标本、协助基础清洁与移动；但在许多司法管辖区，<strong>法律明令禁止支持工作者为生命体征不稳定或处于危重状态的患者提供直接个人照料</strong>。 <br><br></div>
 </div>
 <figure class="clinical-figure">
   <img src="images/chapter_01/fig_1_2_pediatric_care.png" alt="Figure 1.2 Support Worker Caring for Sick Child" loading="lazy">
-  <figcaption><strong>图 1.2 教学图示：支持工作者在儿科病房为患病儿童提供悉心照料</strong><br><em>FIGURE 1.2: A support worker provides care to a sick child.</em><br>【教学要点】儿科病房对沟通与安全防范提出了更高要求；支持工作者需通过敏锐共情缓解患儿与家长的焦虑恐惧，并在法定执业权限内协助注册护士。</figcaption>
+  <figcaption><strong>图 1.2 教学图示：支持工作者正在儿科病房关怀生病患儿</strong><br><em>FIGURE 1.2: A support worker provides care to a sick child.</em><br>【教学要点】在儿科照护中，支持工作者不仅需要具备极大的耐心、亲和力与童心，更需要为陪伴家属提供情感支持，保障患儿病房安全。</figcaption>
 </figure>
-<h3>原书 Table 1.1 跨学科医疗团队成员全览表 (Pages 11 - 12 全文完整翻译)</h3>
+<hr class="divider">
+<h2 id="ch1-sec8" class="section-anchor-target">第六节：受监管医护人员与未受监管照护者 (Page 10)</h2>
+<h3>受监管专业人员与非立法监管提供者法定辨析 (Regulated and Unregulated Workers)</h3>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>Health care professions are either regulated or unregulated: - <strong>A regulated profession is self-governing.</strong> It has a professional organization called a <em>college</em>, which sets education and licence requirements. It also establishes the scope of practice, code of ethics, and standards of conduct for its members. In the case of a complaint about a member's conduct, the college investigates and, if necessary, disciplines members guilty of misconduct. Each regulated health care profession has legislation that details the roles and responsibilities of its members. Nursing is one of many regulated health care professions. - <strong>Unregulated care providers (UCPs)</strong> are health care providers who perform clearly identified services under the direction and supervision of a client, family member, regulated health care provider, or employer. However, UCPs are not regulated through legislation and are not members of an organization or professional college that governs their role. While UCPs do not currently follow any official code of ethics mandated by legislation, they must adhere to the codes of behaviour dictated by their employers (see Chapter 4, Box 4.1, for <em>A Sample Code of Ethics for Support Workers</em>). At this point, support workers in most provinces and territories are considered to be UCPs. <br><br>TABLE 1.1 describes the titles and positions of the common health care team members. It also specifies whether they are regulated or unregulated workers. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>在加拿大医疗卫生体系中，所有医护从业者被严格划分为两大法定阵营： - <strong>受监管专业（Regulated Profession）拥有自律监管特权（Self-Governing）</strong>。其受省特定法律管辖，设有法定发牌公会或行业监管学院（Regulatory College，如安省护士学院 CNO、安省内外科医师学会 CPSO）。学院拥有法定职权：确立该职业的准入教育门槛、颁发执业牌照、界定法定执业范围（Scope of Practice）、颁布职业道德守则（Code of Ethics）与执业标准；在收到公众或同业投诉时，学院有权展开法定调查，并对违纪成员处以暂停牌照、吊销执照或法律惩处。护理（护士）是典型的受监管健康专业之一。 - <strong>未受立法监管的照护提供者（Unregulated Care Providers, UCPs）</strong>：是在服务对象、家属、受监管医护人员（如主管护士）或雇主的指导与监督下，执行明确界定的生活照护服务的医护人员。UCPs 并非由省级专门立法直接发牌，也不属于任何自律发牌学院的注册会员。虽然目前尚未出台全国统一的法定伦理法规，但 UCPs 必须严格恪守受雇机构所颁布的雇员行为守则与职业道德规范（详见第 4 章 BOX 4.1《支持工作者职业道德守则范本》）。在现阶段，加拿大绝大多数省份和地区的支持工作者（PSW / HCA）均属于非监管提供者（UCPs）。 <br><br>原书 <strong>TABLE 1.1</strong> 详尽列明了加拿大跨学科医疗团队全体核心成员的职业头衔、岗位职责，并逐一明确标注了其属于受监管还是未受监管从业人员。 <br><br></div>
+</div>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>Hospitals contain specialized units to care for clients with complex conditions, including critical care units (ICUs), coronary care units (CCUs), burn units, and pediatric units. Pediatric units care for sick or injured infants, children, and adolescents (FIGURE 1.2). Rehabilitation units focus on restoring lost abilities through physical therapy, occupational therapy, and speech therapy. <br><br>A team is a group of people working together toward a common goal. A health care team consists of professionals from diverse backgrounds with specialized skills and knowledge who collaborate to provide comprehensive, individualized, client-centred care. Support workers are vital front-line members of this team. <br><br><br><br></div>
+</div>
+<h2 id="ch1-sec9" class="section-anchor-target">第七节：跨学科医疗团队全览表 Table 1.1 (Pages 11 - 12)</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>专业头衔 (Title)</th><th>监管属性 (Regulation)</th><th>核心法定临床职责与专业范畴 (Role Description)</th></tr></thead>
 <tbody>
@@ -997,7 +1764,7 @@
 <tr><td><strong>Support worker (PSW / HCA)<br>支持工作者 / 个人支持工作者</strong></td><td>未受监管 (Unregulated)<br>遵循省级教学标准</td><td>在注册护士或治疗师督导下执行个人生活照料（ADLs）；担任一线病情观察前哨；全天候提供以人为本的尊严照护。</td></tr>
 </tbody></table></div>
 <hr class="divider">
-<h2>第六节：法定执业范围、督导机制与授权委派 (Page 13)</h2>
+<h2 id="ch1-sec10" class="section-anchor-target">第八节：法定执业范围、督导机制与授权委派原则 (Page 13)</h2>
 <h3>执业范围与严禁越权 (Scope of Practice and Limitations)</h3>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>The support worker's scope of practice in any province, territory, city, or municipality is determined by provincial or territorial legislation, employer policies, and educational training standards. It identifies what a support worker may and may not do in relation to client care. <br><br>Never act beyond the legal limits of your role. Also, never perform a function or task that you have not been trained to do. If you perform a task that is outside these limits, you could harm a client and create serious legal problems for yourself and your employer. <br><br></div>
@@ -1009,7 +1776,7 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>支持工作者必须在受监管专业人员（绝大多数情况下为注册护士 RN 或实用护士 RPN/LPN）的直接或间接督导下开展工作。在社区居家环境中，督导通常由个案经理或巡回护士通过电话指导与定期入户抽查来实施。 <br><br><strong>任务授权委派（Delegation）的核心法则：</strong> 授权委派是注册护士将其部分专有护理操作在法律层面上转授予另一名人员执行的严格法定程序。每位学员必须牢记以下四项铁律： 1. <strong>护士终身负全责</strong>：授权护士对被委派任务的最终临床后果承担不可推卸的法定监管责任。 2. <strong>委派具有“特定对象单一性（Client-Specific）”</strong>：护士将给张先生滴眼药水的任务委派给您，绝对不意味着您可以自动给隔壁李太太滴眼药水！每一次委派仅针对特定案主、特定操作。 3. <strong>严格遵守授权委派的五大正确原则（Five Rights of Delegation）</strong>： - <strong>正确的任务（Right Task）</strong>：该任务符合雇主管理政策并属于可委派目录； - <strong>正确的环境条件（Right Circumstances）</strong>：案主病情绝对稳定，环境安全适宜； - <strong>正确的人选（Right Person）</strong>：该 PSW 已通过操作考核并证实具备执行能力； - <strong>正确的指令与沟通（Right Direction & Communication）</strong>：护士给出了清晰、详尽的步骤说明与异常应对预案； - <strong>正确的督导与评估（Right Supervision）</strong>：护士在现场或随时可联系，并对最终操作质量进行复核评估。 4. <strong>法定拒绝权（The Right to Refuse）</strong>：如果您从未接受过该项操作培训、自感无把握确保案主绝对安全、或者案主病情突然发生恶化波动，<strong>您拥有绝对的法律权利与伦理义务拒绝执行该任务</strong>，并必须立即向主管护士阐明专业拒绝理由。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第七节：展现专业素养、仪表与人际界限 (Pages 14 - 16)</h2>
+<h2 id="ch1-sec11" class="section-anchor-target">第九节：展现专业素养、仪表与人际界限 (Pages 14 - 16)</h2>
 <h3>积极职业态度与言辞艺术 (Workplace Attitude & BOX 1.1) (Page 14)</h3>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>Professionalism is an approach to work that demonstrates respect for others, commitment, competence, and appropriate behaviour. Being cheerful and friendly, keeping work schedules, performing tasks competently, and being helpful are all part of a positive attitude. <br><br>Punctuality and attendance are critical: everyone on the team, including the client, is affected when even one person is late or absent. Admit your errors, accept constructive criticism, and learn from others. <br><br></div>
@@ -1069,7 +1836,7 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>您在家里与私下朋友聚会时的随意谈吐，绝对不能照搬到严肃的医疗照护场所。在病区或案主家中谈话极易被他人听见： - 绝对严禁使用任何粗俗、下流、辱骂性或带有宗教/种族贬损的词汇。 - 避免使用令长者费解的年轻人口头俚语，亦不可卖弄生涩的医护行话。 - 语调温和从容、吐字清晰、语速适中；严禁大声呵斥、呼喝长者。 - 无论遇到何种冲突误解，绝对严禁与案主、家属或同事发生口角争吵！时刻保持冷静与专业克制。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第八节：以服务对象为中心的照护与 DIPPS 核心原则 (Pages 16 - 17)</h2>
+<h2 id="ch1-sec12" class="section-anchor-target">第十节：以服务对象为中心的照护与 DIPPS 核心原则 (Pages 16 - 17)</h2>
 <h3>人类六大基本生存需求 (Six Basic Human Needs Across the Lifespan)</h3>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>The goal of support work is to demonstrate true client-centred care by treating clients with kindness, honesty, sensitivity, comfort, discretion, respect, and understanding. Many people who require support are coping with serious illness, disability, personal issues, or life challenges. The acronym <strong>DIPPS</strong> is a reminder of the six principles of client-centred care: - <strong>Dignity:</strong> Feeling worthy, valued, and respected. - <strong>Independence:</strong> Doing what they can for themselves. - <strong>Individualized care:</strong> Care tailored to each unique person; no two individuals are identical. - <strong>Preferences:</strong> Making choices and explaining how they want things done. - <strong>Privacy:</strong> Bodies and affairs treated respectfully and shielded from public view. - <strong>Safety:</strong> Free from hazards, falls, infections, and fear. <br><br></div>
@@ -1081,13 +1848,17 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>在执行本书所涵盖的每一项护理技术与生活照料时，必须严格贯彻以下 10 项标准化临床落地步骤： 1. <strong>查阅护理计划（Check the care plan）</strong>：开始任何操作前，务必查阅案主的最新护理计划表，掌握其独特的个人偏好、禁忌体位与安全注意事项。 2. <strong>进门礼貌叩门（Knock before entering）</strong>：推门进入案主房间前必须轻轻叩门，等待回应方可入内；即使房门微开，也必须先敲门告知。 3. <strong>尊称致意并自我介绍（Address by name & introduce yourself）</strong>：使用其偏好的尊称礼貌称呼案主（如“早上好，史密斯先生”），并清晰告知自己的全名与支持工作者身份。 4. <strong>全程解释操作步骤（Explain the procedure）</strong>：在操作前用通俗语言解释要做什么，并在每一步过程中轻声提醒；知情的长者焦虑更少、更愿意主动配合。 5. <strong>征得案主知情同意（Obtain consent）</strong>：在动手接触案主身体前，必须获得其明确的口头同意（“我现在来帮您擦洗背部，可以吗？”）。 6. <strong>因人制宜尊重多元文化（Tailor care to diversity）</strong>：充分尊重案主的文化传统、信仰习俗与饮食禁忌。 7. <strong>全程严密保护隐私（Protect privacy）</strong>：拉严病房门窗与隔帘，使用盖被遮挡身体，仅暴露当前正在清洁的特定部位，严防身体裸露暴露于公众视线。 8. <strong>评估残存功能鼓励自理（Promote self-assist）</strong>：敏锐评估案主力所能及的动作，递上毛巾鼓励其自己洗脸，绝不因图快而剥夺其动手机会。 9. <strong>动作轻柔严守安全规程（Handle gently & ensure safety）</strong>：操作手法轻柔，严格固定床闸轮椅锁，收紧核心运用人体力学，彻底清除地面水渍与电线隐患。 10. <strong>严格执行标准感染控制（Standard precautions）</strong>：严格执行“洗手七步法”、规范穿脱手套与隔离装备，杜绝耐药致病菌交叉感染。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第九节：临床批判性思维与解决问题方法 (Page 17)</h2>
+<h2 id="ch1-sec13" class="section-anchor-target">第十一节：临床批判性思维与解决问题方法 (Page 17)</h2>
+<div class="bilingual-entry">
+  <div class="en-block"><span class="lang-tag">EN 原文</span>Support workers think critically and make many decisions in the course of a workday. For example, they estimate the time each task will take and plan the best way to complete their work on time, taking into account the various needs of the client. Many decisions involve critical thinking in order to solve problems. <br><br>When solving problems, consider the following four essential factors: 1. <strong>The goal of support work.</strong> Solutions to problems should not compromise the six principles of client-centred care: dignity, independence, individualized care, preferences, privacy, and safety, or DIPPS. 2. <strong>The client's viewpoint.</strong> Involve clients in solving problems that concern them. Examine the problem from the client's point of view. 3. <strong>Scope of practice.</strong> Learn and observe the rules of your workplace. Know the limits of your role. 4. <strong>Supervisor's viewpoint.</strong> Decide if the problem is one that you can handle on your own or one that your supervisor should handle. Your supervisor should provide guidance about which problems you can deal with on your own. <br><br>Critical thinking, decision making, and problem-solving are crucial to the support worker's role but are often difficult when a person is new to the job. To help you with the problem-solving process, this text includes <em>Supporting</em> boxes that present examples of problems faced by support workers and how the problems were solved. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>在纷繁复杂的日常执业中，支持工作者每时每刻都需要做出独立或协作判断。例如，他们需要精准预估每项照护操作所需的时间，并在兼顾案主各项个性化需求的前提下，规划出按时保质完成工作的最佳工作路线。绝大多数工作决策都需要运用批判性思维来解决现场遇到的各种临床两难与突发问题。 <br><br>当面临临床难题与解决问题时，必须依托以下四大核心支柱进行系统研判： 1. <strong>支持工作的终极目标（DIPPS 伦理核验）</strong>：任何解决方案都绝对不能以牺牲服务对象的六大核心原则为代价——尊严（Dignity）、独立（Independence）、个性化照护（Individualized Care）、偏好（Preferences）、隐私（Privacy）以及人身安全（Safety），即 DIPPS！ 2. <strong>服务对象的切身视角（Client's Viewpoint）</strong>：尽可能邀请案主共同参与讨论涉及其自身的决策与问题解决过程；换位思考，从案主独特的心理、情感与文化视角出发体察其顾虑。 3. <strong>法定执业范围边界（Scope of Practice Check）</strong>：熟练掌握并严格遵守所在工作单位的规章制度与法律红线。清晰了解自身岗位的职责边界，坚决不擅自执行未经授权或培训的医疗操作。 4. <strong>主管护士的临床视角（Supervisor's Viewpoint）</strong>：准确研判该问题属于自身可独立妥善处理的常规工作，还是属于必须立即上报主管护士协助解决的高风险事件。您的临床督导主管有责任为您提供指导，明确界定哪些问题可以自行处理、哪些必须立即升级汇报。 <br><br>批判性思维、临床决策与解决问题是支持工作者角色中不可或缺的核心技能，但对于初入职场的新人而言往往充满挑战。为了帮助您掌握科学的解决问题流程，本书在各章节特别设置了<strong>【支持工作实战范例】（Supporting Boxes）</strong>专栏，生动呈现支持工作者在真实执业中所面临的棘手问题以及最终是如何安全、妥善解决的。 <br><br></div>
+</div>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>Support workers think critically and make many decisions in the course of a workday. Critical thinking is the ability to think clearly and rationally, understand logical connections, and make reasoned judgments to solve problems safely. When solving problems, consider the following four essential factors: 1. <strong>The goal of support work:</strong> Solutions to problems should never compromise the six principles of client-centred care: dignity, independence, individualized care, preferences, privacy, and safety (DIPPS). 2. <strong>The client's viewpoint:</strong> Involve clients in solving problems that concern them. Examine the issue from the client's unique cultural, emotional, and physical perspective. 3. <strong>Scope of practice:</strong> Learn and observe the legal rules of your workplace. Know the legal boundaries and limits of your role. Never improvise a clinical task you are unauthorized to do. 4. <strong>Supervisor's viewpoint:</strong> Decide if the problem is one you can handle safely on your own within established policies, or if it is an emerging situation that requires immediate escalation and reporting to your supervising nurse. <br><br></div>
   <div class="cn-block"><span class="lang-tag">CN 译文</span>在纷繁复杂的日常执业中，支持工作者每时每刻都需要做出独立或协作判断。<strong>批判性思维（Critical Thinking）</strong>是一种基于事实、严谨理性分析因果关联并作出合宜决断的高阶思维能力。当面临临床两难或突发照护问题时，必须依托以下四大核心支柱进行系统研判： 1. <strong>支持工作的终极目标（DIPPS 伦理核验）</strong>：任何解决方案都绝对不能以牺牲服务对象的尊严、自立、个性化选择、偏好、隐私或人身安全为代价！ 2. <strong>服务对象的切身视角（Client's Viewpoint）</strong>：尽可能邀请案主共同参与讨论其自身的照护安排；换位思考，从长者的心理恐惧、身体疼痛与文化习俗出发体察其诉求。 3. <strong>法定执业范围边界（Scope of Practice Check）</strong>：严格审视自身操作是否符合法律大纲与机构政策；遇到未经授权的医疗操作，坚决不擅作主张。 4. <strong>主管护士的临床视角（Supervisor's Viewpoint）</strong>：准确评估当前事件属于常规自选工作范畴，还是属于病情突变、跌倒创伤、皮肤破溃等必须立即向责任护士越级汇报的红色预警事件。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第十节：全书章节要点回顾与批判性思维实战 (Page 18)</h2>
+<h2 id="ch1-sec14" class="section-anchor-target">第十二节：全书章节要点回顾与批判性思维实战 (Page 18)</h2>
 <h3>核心知识要点总结 (KEY POINTS)</h3>
 <div class="bilingual-entry">
   <div class="en-block"><span class="lang-tag">EN 原文</span>- The ultimate goal of support work is to improve the client's quality of life by following the principles of client-centred care (DIPPS). The support worker tends to the person's needs, which include physical needs as well as helping to relieve loneliness, providing comfort, encouraging independence, and promoting the person's self-respect. - Care should always be individualized to each client. A support worker's services to people in their homes help them remain independent and continue to live with their families. Support workers make a difference in people's lives. - Support workers can work in community-based or facility-based settings. Duties will vary according to the setting. - Most of a support worker's responsibilities can be grouped into six categories: (1) personal care, (2) support for nurses and other health care providers, (3) family support, (4) social support, (5) housekeeping or home management, and (6) documenting and reporting any basic assessments, observations, and care provided in the client's record or chart. - Depending on their setting, people receiving health care and support services are known by different terms, such as patient (in a hospital), resident (in a live-in facility), or client (in the community). - The people supported can be grouped according to their problems, needs, and ages. - At this point, support workers in most provinces and territories are still considered health care providers not regulated through legislation, or unregulated care providers (UCPs). Support workers are accountable to their supervisors, employers, and clients; they do not presently have an organization or college that governs their role. Regulated care providers are health care providers licensed and regulated by the province or territory to carry out care that is within their scope of practice. - There are many members of the health care team, with the client always at the centre of care. - It is important that support workers understand their scope of practice and never act beyond their role. - In many settings, support workers are supervised by nurses or other professionals. - Professionalism includes having a positive attitude, a sense of responsibility, a professional appearance, being discreet about client information, being a lifelong learner, advocating for the client, being discreet about personal matters, and using acceptable speech and language. - While discussing the client with co-workers, support workers must use discretion at all times and honour the client's right to confidentiality. Confidentiality means respecting and guarding personal and private information about another person. - Part of being a professional, reflective practice reviews consist of a review and self-evaluation of any care provided and identification of ways to improve clinical performance. - When thinking critically, making decisions, and solving problems, support workers must consider the principles of client-centred care (DIPPS), the client's viewpoint, their scope of practice, and their supervisor's viewpoint. <br><br></div>
@@ -1113,9 +1884,9 @@
     
       </article>
 
-      <!-- Chapter 1 Interactive Quiz (Dedicated Page) -->
+      <!-- 7. Chapter 1 Interactive Quiz (Dedicated Page) -->
       <article class="reading-sheet" id="sec-ch1-quiz" style="display:none;">
-        <span class="book-badge">Self-Assessment · Interactive Practice</span>
+        <span class="book-badge">Chapter 1 Review · 12 Authentic Questions · Pages 18–19</span>
         <div class="quiz-container">
 
       <div class="quiz-intro-banner">
@@ -1697,610 +2468,7 @@
 
       </article>
 
-      <!-- Table of Contents -->
-      <article class="reading-sheet" id="sec-toc" style="display:none;">
-        <span class="book-badge">Full Curriculum · 48 Chapters</span>
-        <h1>《加拿大支持工作者教材》（第5版）全书总目录（中英双语对照版）</h1>
-<h2 class="sub-h2">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h2>
-<h2>Table of Contents</h2>
-<hr class="divider">
-<h2 class="sub-h2">第一部分：支持工作及其对社会的影响</h2>
-<h2>PART 1: Support Work and Its Impact on Society</h2>
-<h3>第 1 章：支持工作者的角色与职责 (第 1 页)</h3>
-<p><strong>Chapter 1: The Role and Responsibilities of the Support Worker (p. 1)</strong></p>
-<li>全加拿大的支持工作概述 | Support Work Across Canada (p. 3)</li>
-<li>医疗卫生照护团队 | The Health Care Team (p. 10)</li>
-<li>展现专业素养 | Being a Professional (p. 14)</li>
-<li>支持工作的目标：通过以服务对象为中心的照护提升生活质量 | The Goal of Support Work: Improved Quality of Life Through Client-Centred Care (p. 16)</li>
-<li>批判性思维、临床决策与解决问题 | Critical Thinking, Decision Making, and Problem-Solving (p. 17)</li>
-<h3>第 2 章：加拿大医疗卫生保健体系 (第 20 页)</h3>
-<p><strong>Chapter 2: The Canadian Health Care System (p. 20)</strong></p>
-<li>加拿大现行医疗卫生体系概况 | Canada's Current Health Care System (p. 21)</li>
-<li>省与地区政府在医疗卫生中的职能角色 | The Provincial or Territorial Role in Health Care (p. 28)</li>
-<li>医疗保健面临的挑战、补充性服务与发展趋势 | Health Care Challenges, Supplementary Services, and Trends (p. 29)</li>
-<h3>第 3 章：工作场所与照护环境 (第 34 页)</h3>
-<p><strong>Chapter 3: Workplace Settings (p. 34)</strong></p>
-<li>工作场所设置与所提供的服务项目 | Workplace Settings and Services Provided (p. 36)</li>
-<li>在社区居家照护环境中工作 | Working in Community-Based Settings (p. 37)</li>
-<li>在医疗机构/院舍环境中工作 | Working in Facility-Based Settings (p. 38)</li>
-<li>机构工作实务与日常准则 | Working in a Facility (p. 42)</li>
-<h3>第 4 章：职业伦理与道德规范 (第 48 页)</h3>
-<p><strong>Chapter 4: Ethics (p. 48)</strong></p>
-<li>文化对信仰、价值观、道德与伦理的影响 | The Influence of Culture on Beliefs, Values, Morals, and Ethics (p. 49)</li>
-<li>伦理道德准则与职业守则 | Codes of Ethics (p. 49)</li>
-<li>医疗卫生伦理的基本原则 | The Principles of Health Care Ethics (p. 50)</li>
-<h3>第 5 章：法律法规：服务对象与照护者的法定权利 (第 59 页)</h3>
-<p><strong>Chapter 5: Legislation: The Client's Rights and Your Rights (p. 59)</strong></p>
-<li>理解权利的基本概念 | Understanding Rights (p. 61)</li>
-<li>加拿大公民的基本人权 | Basic Human Rights in Canada (p. 61)</li>
-<li>接受医疗卫生服务者的基本权利 | Basic Rights of People Receiving Health Services (p. 61)</li>
-<li>理解相关法律问题与法律责任 | Understanding Legal Issues (p. 69)</li>
-<li>照护工作者的合法权利 | Your Legal Rights (p. 72)</li>
-<h3>第 6 章：健康、安康、疾病与残疾 (第 77 页)</h3>
-<p><strong>Chapter 6: Health, Wellness, Illness, and Disability (p. 77)</strong></p>
-<li>健康与全人安康 (Wellness) | Health and Wellness (p. 79)</li>
-<li>疾病与身体/认知残疾 | Illness and Disability (p. 87)</li>
-<li>为患病及残障服务对象提供支持 | Supporting Clients With Illness and Disability (p. 88)</li>
-<h3>第 7 章：关怀多元文化与多样性 (第 96 页)</h3>
-<p><strong>Chapter 7: Caring About Culture and Diversity (p. 96)</strong></p>
-<li>多样性：族裔归属与文化传统 | Diversity: Ethnicity and Culture (p. 98)</li>
-<li>文化对健康信念与生活习惯的影响 | The Effect of Culture (p. 103)</li>
-<li>提供兼具文化敏感度与尊重的照护与支持 | Providing Culturally Sensitive Care and Support (p. 108)</li>
-<h3>第 8 章：压力管理与应对策略 (第 112 页)</h3>
-<p><strong>Chapter 8: Managing Stress (p. 112)</strong></p>
-<li>认识压力及其生理心理反应 | Stress (p. 113)</li>
-<li>时间管理技巧 | Time Management (p. 120)</li>
-<li>决策制定 | Decision Making (p. 121)</li>
-<li>解决问题的方法 | Problem Solving (p. 122)</li>
-<li>化解工作场所与人际冲突 | Dealing With Conflict (p. 124)</li>
-<h3>第 9 章：人际沟通与交流技巧 (第 129 页)</h3>
-<p><strong>Chapter 9: Interpersonal Communication (p. 129)</strong></p>
-<li>影响沟通交流的内外因素 | Factors That Influence Communication (p. 131)</li>
-<li>语言沟通 | Verbal Communication (p. 132)</li>
-<li>非语言沟通（肢体语言与微表情） | Nonverbal Communication (p. 134)</li>
-<li>常用沟通方法与技巧 | Communication Methods (p. 136)</li>
-<li>医护专业沟通标准 | Professional Communication (p. 138)</li>
-<li>沟通障碍及其克服策略 | Communication Barriers (p. 139)</li>
-<li>与愤怒、情绪激动者的沟通方法 | Communicating With Angry People (p. 142)</li>
-<li>坚定果断、不卑不亢的沟通方式 | Communicating Assertively (p. 143)</li>
-<li>向服务对象解释操作规程与任务 | Explaining Procedures and Tasks (p. 143)</li>
-<li>与认知障碍/失智症患者的有效沟通 | Communicating With Clients Living With Dementia (p. 145)</li>
-<h3>第 10 章：与他人协作：团队合作与工作委派 (第 149 页)</h3>
-<p><strong>Chapter 10: Working With Others: Teamwork and Delegation (p. 149)</strong></p>
-<li>医疗照护多学科协作团队 | The Health Care Team (p. 150)</li>
-<li>在主管护士/医师的督导下执业 | Working Under Supervision (p. 154)</li>
-<li>任务指派与工作委派流程 | Assigning and Delegating (p. 156)</li>
-<h3>第 11 章：与服务对象及其家属共处协作 (第 164 页)</h3>
-<p><strong>Chapter 11: Working With Clients and Their Families (p. 164)</strong></p>
-<li>在保持专业人际界限的同时提供仁爱关怀 | Providing Compassionate Care While Maintaining a Professional Relationship With the Client (p. 165)</li>
-<li>理解并支持服务对象的家庭 | The Client's Family (p. 170)</li>
-<h3>第 12 章：识别与防范虐待、霸凌与骚扰 (第 174 页)</h3>
-<p><strong>Chapter 12: Abuse, Bullying, and Harassment Awareness (p. 174)</strong></p>
-<li>《加拿大权利与自由宪章》相关法律保障 | Canadian Charter of Rights and Freedoms (p. 176)</li>
-<li>虐待的主要类型（身体、情感、财务、性及忽视） | Types of Abuse (p. 176)</li>
-<li>虐待关系的特征与动态机制 | Abusive Relationships (p. 179)</li>
-<li>识别虐待的警示体征与行为迹象 | Recognizing the Signs of Abuse (p. 180)</li>
-<li>虐待的循环周期 | The Cycle of Abuse (p. 182)</li>
-<li>当服务对象倾诉或披露受虐经历时的应对步骤 | What to Do When Clients Speak of Abuse (p. 187)</li>
-<li>依法举报虐待的法定责任与义务 | Your Legal Responsibilities in Reporting Abuse (p. 187)</li>
-<li>举报虐待的具体程序与渠道 | How to Report Abuse (p. 188)</li>
-<li>防范针对医护照护工作者的侵害与暴力 | Abuse of Health Care Workers (p. 188)</li>
-<h3>第 13 章：开启您的职业生涯 (第 194 页)</h3>
-<p><strong>Chapter 13: Starting Your Career (p. 194)</strong></p>
-<li>建立条理与系统规划 | Getting Organized (p. 195)</li>
-<li>设定职业优先级与目标 | Setting Priorities and Goals (p. 195)</li>
-<li>撰写专业简历与整理专业档案袋 | Preparing Your Resumé and Professional Portfolio (p. 196)</li>
-<li>搜寻并跟进就业机会与求职线索 | Finding and Following Leads (p. 201)</li>
-<li>撰写求职求职信 (Cover Letter) | Preparing a Letter of Application (p. 202)</li>
-<li>规范填写求职申请表 | Completing a Job Application Form (p. 206)</li>
-<li>面试准备、应答技巧与礼仪 | The Interview (p. 207)</li>
-<li>录用通知评估与入职准备 | The Employment Offer (p. 211)</li>
-<hr class="divider">
-<h2 class="sub-h2">第二部分：身体力学与活动照护</h2>
-<h2>PART 2: Body Mechanics and Movement</h2>
-<h3>第 14 章：身体力学与安全转移 (第 215 页)</h3>
-<p><strong>Chapter 14: Body Mechanics (p. 215)</strong></p>
-<li>预防职业性人身与脊椎损伤 | Helping to Prevent Personal Injuries (p. 217)</li>
-<li>核心身体力学原则与正确姿态 | Body Mechanics (p. 218)</li>
-<li>协助服务对象体位摆放与变换（仰卧、侧卧、半坐卧位等） | Positioning the Client (p. 231)</li>
-<li>协助服务对象安全转移（床到轮椅、座椅等） | Transferring the Client (p. 240)</li>
-<li>搬运与升降服务对象的安全操作（机械升降机运用） | Lifting a Client (p. 242)</li>
-<h3>第 15 章：运动与日常活动 (第 259 页)</h3>
-<p><strong>Chapter 15: Exercise and Activity (p. 259)</strong></p>
-<li>长期卧床休息的生理影响与并发症预防 | Bed Rest (p. 260)</li>
-<li>协助行走与下床活动 (Ambulation) 及助行设备运用 | Ambulation (p. 266)</li>
-<h3>第 16 章：康复护理与恢复性照护 (第 282 页)</h3>
-<p><strong>Chapter 16: Rehabilitation and Restorative Care (p. 282)</strong></p>
-<li>康复照护与恢复性照护的辨析 | Rehabilitative Care Versus Restorative Care (p. 283)</li>
-<li>康复与恢复性照护的核心目标 | Goals of Rehabilitative and Restorative Care (p. 283)</li>
-<li>康复医疗机构与照护环境设置 | Rehabilitation Settings (p. 284)</li>
-<li>整体康复流程与阶段 | The Rehabilitation Process (p. 287)</li>
-<li>协助康复与恢复性照护的实务技巧 | Assisting With Rehabilitation and Restorative Care (p. 290)</li>
-<li>康复与恢复性照护对身心健康的整体益处 | Overall Benefits of Rehabilitation and Restorative Care (p. 293)</li>
-<hr class="divider">
-<h2 class="sub-h2">第三部分：协助服务对象的基本生理照护需求</h2>
-<h2>PART 3: Assisting Clients With Basic Care Needs</h2>
-<h3>第 17 章：个人卫生照护 (第 296 页)</h3>
-<p><strong>Chapter 17: Personal Hygiene (p. 296)</strong></p>
-<li>口腔卫生与假牙护理 | Oral Hygiene (p. 297)</li>
-<li>沐浴协助（床上擦浴、盆浴、淋浴） | Bathing (p. 311)</li>
-<li>背部背部按摩技术 | The Back Massage (p. 326)</li>
-<li>会阴部清洁与护理 (Perineal Care) | Perineal Care (p. 328)</li>
-<li>女性经期卫生照护 | Menstrual Care (p. 334)</li>
-<h3>第 18 章：仪容修饰与更衣 (第 337 页)</h3>
-<p><strong>Chapter 18: Grooming and Dressing (p. 337)</strong></p>
-<li>头发梳理与清洁护理 | Hair Care (p. 338)</li>
-<li>刮胡与面部修饰 | Shaving (p. 347)</li>
-<li>指甲与足部基础护理 | Care of Nails and Feet (p. 349)</li>
-<li>更换衣物、失禁护理垫与病服 | Changing Clothing, Incontinence Briefs, and Hospital Gowns (p. 356)</li>
-<li>穿戴弹力防血栓袜与绷带 | Applying Elastic Anti-Embolic Stockings and Bandages (p. 368)</li>
-<li>仁爱与尊严照护的核心融入 | Compassionate Care (p. 372)</li>
-<h3>第 19 章：感染预防与控制 (第 376 页)</h3>
-<p><strong>Chapter 19: Preventing Infection (p. 376)</strong></p>
-<li>微生物基础知识（细菌、病毒、真菌） | Microorganisms (p. 378)</li>
-<li>病原体的传播途径与感染链 | The Spread of Pathogens (p. 382)</li>
-<li>内科无菌技术 (Medical Asepsis) 与清洁原则 | Medical Asepsis (p. 389)</li>
-<li>手卫生规范（洗手与手部消毒） | Hand Hygiene (p. 392)</li>
-<li>隔离预防措施（常规预防与接触、飞沫、空气传播预防） | Isolation Precautions (p. 401)</li>
-<li>外科无菌技术简介 (Surgical Asepsis) | Surgical Asepsis (p. 411)</li>
-<h3>第 20 章：安全防护与意外防范 (第 416 页)</h3>
-<p><strong>Chapter 20: Safety (p. 416)</strong></p>
-<li>跌倒与意外伤害的风险评估因素 | Accident Risk Factors (p. 417)</li>
-<li>准确核对与识别服务对象身份 | Identifying the Client (p. 420)</li>
-<li>居家与工作场所的安全防范措施 | Safety Measures at Home and in the Workplace (p. 422)</li>
-<li>中毒事件的防范与急救意识 | Preventing Poisoning (p. 430)</li>
-<li>烫伤与烧伤预防 | Preventing Burns (p. 431)</li>
-<li>医疗与生活设备相关意外防范 | Preventing Accidents With Equipment (p. 431)</li>
-<li>火灾防范与应急疏散规程 (RACE/PASS) | Preventing Fires (p. 431)</li>
-<li>窒息风险防范与气道异物梗阻 | Preventing Suffocation (p. 440)</li>
-<li>身体约束具的危害及替代预防策略 | Restraints and How to Avoid Using Them (p. 441)</li>
-<li>维护照护者自身的人身安全 | Promoting Your Personal Safety (p. 448)</li>
-<h3>第 21 章：病床与铺床技术 (第 458 页)</h3>
-<p><strong>Chapter 21: Beds and Bed Making (p. 458)</strong></p>
-<li>服务对象的病床类型与调节功能 | The Client's Bed (p. 460)</li>
-<li>床单、中单与床上用品的规范管理 | Linen (p. 464)</li>
-<li>铺床操作技术（空床、有人床、麻醉手术床） | Bed Making (p. 467)</li>
-<h3>第 22 章：皮肤护理与创伤/压疮预防 (第 480 页)</h3>
-<p><strong>Chapter 22: Skin Care and Prevention of Wounds (p. 480)</strong></p>
-<li>伤口创面的主要类型 | Types of Wounds (p. 483)</li>
-<li>皮肤撕裂伤 (Skin Tears) 的防范与保护 | Skin Tears (p. 485)</li>
-<li>压力性损伤（压疮/褥疮）的分期与全方位预防 | Pressure Injuries (p. 486)</li>
-<li>下肢与足部血管性溃疡 | Leg and Foot Ulcers (p. 493)</li>
-<li>创面愈合的生理过程与影响因素 | Wound Healing (p. 496)</li>
-<li>基础敷料类型与更换观察要点 | Dressings (p. 499)</li>
-<h3>第 23 章：促进舒适、疼痛管理与睡眠支持 (第 511 页)</h3>
-<p><strong>Chapter 23: Promoting Client Comfort, Pain Management, and Sleep (p. 511)</strong></p>
-<li>促进服务对象的舒适感与身心安宁 | Promoting Client Comfort and Well-Being (p. 512)</li>
-<li>疼痛对身心健康的影响及疼痛评估汇报 | Pain and Its Impact on a Client's Well-Being (p. 513)</li>
-<li>休息与充足睡眠的促进措施 | Rest and Sleep (p. 520)</li>
-<h3>第 24 章：测量身长、体重与生命体征 (第 528 页)</h3>
-<p><strong>Chapter 24: Measuring Height, Weight, and Vital Signs (p. 528)</strong></p>
-<li>测量身高与体重 | Measuring Height and Weight (p. 529)</li>
-<li>生命体征的测量与规范汇报原则 | Measuring and Reporting Vital Signs (p. 530)</li>
-<li>体温测量（口腔、腋下、直肠、鼓膜、额温） | Body Temperature (p. 534)</li>
-<li>脉搏测量（桡动脉、心尖搏动） | Pulse (p. 540)</li>
-<li>呼吸频率与节律观察 | Respirations (p. 544)</li>
-<li>血压测量与听诊技术 | Blood Pressure (p. 544)</li>
-<h3>第 25 章：医学专业术语基础 (第 557 页)</h3>
-<p><strong>Chapter 25: Medical Terminology (p. 557)</strong></p>
-<li>词根、前缀与后缀的构词规则 | Word Elements (p. 558)</li>
-<li>医学构词组合方法 | Combining Word Elements (p. 562)</li>
-<li>腹部九分法与四象限划分 | Abdominal Regions (p. 562)</li>
-<li>人体解剖方位术语 | Directional Terms (p. 562)</li>
-<li>常用医学缩写与首字母缩略词 | Abbreviations (p. 563)</li>
-<h3>第 26 章：照护计划制定、口头汇报与文书记录 (第 568 页)</h3>
-<p><strong>Chapter 26: Planning, Reporting, and Recording Client Care (p. 568)</strong></p>
-<li>院舍/机构内的照护计划制定流程 | The Care-Planning Process in Facilities (p. 569)</li>
-<li>社区/居家环境中的照护计划制定流程 | The Care-Planning Process in Community Settings (p. 572)</li>
-<li>支持工作者在照护计划中的核心职能 | Your Role in the Care-Planning Process (p. 574)</li>
-<li>口头汇报规范（SBAR 沟通与病情汇报） | Verbal Reporting (p. 576)</li>
-<li>服务对象病历、档案与护理记录书写标准 | Client Records or Charts (p. 577)</li>
-<hr class="divider">
-<h2 class="sub-h2">第四部分：协助服务对象的营养摄入与排泄照护</h2>
-<h2>PART 4: Assisting Clients With Nutrition and Elimination</h2>
-<h3>第 27 章：营养支持与体液平衡 (第 591 页)</h3>
-<p><strong>Chapter 27: Nutrition and Fluids (p. 591)</strong></p>
-<li>基础营养素（碳水化合物、蛋白质、脂肪、维生素与矿物质） | Basic Nutrition (p. 592)</li>
-<li>加拿大饮食指南与科学膳食 | Canada's Dietary Guidelines (p. 594)</li>
-<li>全生命周期各阶段的营养需求 | Nutrition Throughout the Life Cycle (p. 599)</li>
-<li>影响进食与营养吸收的生理/心理因素 | Factors That Affect Eating and Nutrition (p. 601)</li>
-<li>科学解读食品营养标签 | Food Labels (p. 602)</li>
-<li>咖啡因摄入管理 | Caffeine Intake (p. 603)</li>
-<li>膳食计划制定与餐食准备 | Meal Planning and Preparation (p. 604)</li>
-<li>治疗性与治疗特殊饮食（低盐、糖尿病饮食、碎食、泥状饮食） | Special Diets (p. 606)</li>
-<li>协助服务对象进食进餐实务技能 | Assisting Clients With Eating (p. 610)</li>
-<li>体液平衡（出入水量记录与水肿/脱水观察） | Fluid Balance (p. 614)</li>
-<h3>第 28 章：管饲营养与静脉输液监护 (第 624 页)</h3>
-<p><strong>Chapter 28: Enteral Nutrition and Intravenous Therapy (p. 624)</strong></p>
-<li>肠内营养管饲支持（鼻胃管、胃造口管 G-tube） | Enteral Nutrition (p. 625)</li>
-<li>静脉输液疗法的观察与照护职责 | Intravenous Therapy (p. 629)</li>
-<li>皮下输液疗法的观察与支持 | Subcutaneous Infusion Therapy (p. 632)</li>
-<h3>第 29 章：排尿生理与泌尿系照护 (第 636 页)</h3>
-<p><strong>Chapter 29: Urinary Elimination (p. 636)</strong></p>
-<li>正常排尿模式与观察指标 | Normal Urination (p. 638)</li>
-<li>尿失禁的原因、类型与失禁护理 | Urinary Incontinence (p. 648)</li>
-<li>导尿管管理（留置导尿、体外引流袋护理与排空） | Catheters (p. 650)</li>
-<li>膀胱再训练计划 | Bladder Training (p. 663)</li>
-<li>留取尿标本（常规尿、中段清洁尿） | Collecting Urine Specimens (p. 663)</li>
-<li>尿液床旁快速检测 | Testing Urine (p. 669)</li>
-<li>输尿管造口术与回肠膀胱术患者的照护 | The Client With a Ureterostomy or an Ileal Conduit (p. 673)</li>
-<li>排泄照护中的尊严与同理心关怀 | Compassionate Care (p. 675)</li>
-<h3>第 30 章：排便生理与肠道照护 (第 679 页)</h3>
-<p><strong>Chapter 30: Bowel Elimination (p. 679)</strong></p>
-<li>正常肠道排便与排泄特征 | Normal Bowel Movements (p. 680)</li>
-<li>影响排便的因素 | Factors Affecting Bowel Movement (p. 681)</li>
-<li>常见排便障碍（便秘、粪便嵌塞、腹泻、大便失禁） | Common Challenges Affecting Bowel Movement (p. 682)</li>
-<li>肠道再训练程序 | Bowel Training (p. 684)</li>
-<li>灌肠技术 (Enemas) 简介与辅助 | Enemas (p. 685)</li>
-<li>直肠排气管使用 | Rectal Tubes (p. 685)</li>
-<li>肠造口（结肠造口、回肠造口）患者的造口袋更换与造口皮肤护理 | The Client With an Ostomy (p. 689)</li>
-<li>粪便标本采集方法 | Stool Specimens (p. 690)</li>
-<hr class="divider">
-<h2 class="sub-h2">第五部分：人体系统构造与常见疾病学</h2>
-<h2>PART 5: Understanding Body Systems and Disorders</h2>
-<h3>第 31 章：生命周期生长发育全阶段 (第 698 页)</h3>
-<p><strong>Chapter 31: Growth and Development (p. 698)</strong></p>
-<li>生长发育的基本生物学原则 | Principles (p. 700)</li>
-<li>人类发展主要经典理论（埃里克森心理社会阶段等） | Selected Theories of Human Development (p. 700)</li>
-<li>从婴儿期到高龄期的生长发育各阶段特征 | Growth and Development (p. 703)</li>
-<h3>第 32 章：人体解剖构造与生理功能 (第 718 页)</h3>
-<p><strong>Chapter 32: Body Structure and Function (p. 718)</strong></p>
-<li>解剖学术语标准 | Anatomical Terms (p. 720)</li>
-<li>细胞、组织、器官、体腔与器官系统 | Cells, Tissues, Organs, Body Cavities, and Organ Systems (p. 720)</li>
-<li>皮肤系统（表皮、真皮、皮下组织） | The Integumentary System (p. 723)</li>
-<li>骨骼肌肉系统（骨骼、关节、肌肉） | The Musculoskeletal System (p. 724)</li>
-<li>神经系统（中枢与周围神经系统） | The Nervous System (p. 729)</li>
-<li>感觉器官（眼、耳、味觉、嗅觉、触觉） | The Sense Organs (p. 733)</li>
-<li>内分泌系统与激素调节 | The Endocrine System (p. 735)</li>
-<li>循环系统（心脏、血管、血液循环） | The Circulatory System (p. 736)</li>
-<li>呼吸系统（气道与肺泡气体交换） | The Respiratory System (p. 741)</li>
-<li>免疫系统与淋巴循环 | The Immune System (p. 742)</li>
-<li>消化系统与营养吸收 | The Digestive System (p. 743)</li>
-<li>泌尿系统（肾脏、输尿管、膀胱、尿道） | The Urinary System (p. 746)</li>
-<li>生殖系统（男性与女性生殖器官） | The Reproductive System (p. 748)</li>
-<h3>第 33 章：各系统常见疾病与机能障碍 (第 752 页)</h3>
-<p><strong>Chapter 33: Common Diseases and Disorders (p. 752)</strong></p>
-<li>传染病与接触性疾病 | Communicable Diseases (p. 755)</li>
-<li>癌症及抗癌治疗相关照护 | Cancer (p. 766)</li>
-<li>皮肤系统疾病（带状疱疹、皮炎等） | Integumentary System Disorders (p. 768)</li>
-<li>骨骼肌肉系统疾病（骨折、关节炎、骨质疏松） | Musculoskeletal System Disorders (p. 773)</li>
-<li>神经系统疾病（脑卒中/中风、帕金森病、多发性硬化） | Nervous System Disorders (p. 781)</li>
-<li>内分泌系统疾病（糖尿病及血糖管理、甲状腺疾病） | Endocrine System Disorders (p. 788)</li>
-<li>心血管系统疾病（高血压、冠心病、心绞痛、心衰） | Cardiovascular System Disorders (p. 790)</li>
-<li>呼吸系统疾病（慢阻肺 COPD、哮喘、肺炎） | Respiratory System Disorders (p. 797)</li>
-<li>免疫系统疾病（自身免疫病、艾滋病 HIV/AIDS） | Immune System Disorders (p. 800)</li>
-<li>消化系统疾病（胃食管反流、溃疡、肝胆疾病） | Digestive System Disorders (p. 802)</li>
-<li>泌尿系统疾病（尿路感染 UTI、慢性肾衰竭） | Urinary System Disorders (p. 805)</li>
-<li>生殖系统疾病 | Reproductive System Disorders (p. 807)</li>
-<h3>第 34 章：听觉与视觉障碍照护 (第 812 页)</h3>
-<p><strong>Chapter 34: Hearing and Vision Disorders (p. 812)</strong></p>
-<li>耳部疾病与听力损伤（助听器使用与沟通策略） | Ear Disorders and Hearing Impairment (p. 813)</li>
-<li>眼部疾病与视力障碍（白内障、青光眼、黄斑变性） | Eye Disorders and Vision Impairment (p. 818)</li>
-<li>视障/听障服务导盲犬与辅助动物规范 | Service Dogs for People with Hearing or Vision Challenges (p. 825)</li>
-<h3>第 35 章：言语与语言障碍照护 (第 829 页)</h3>
-<p><strong>Chapter 35: Speech and Language Disorders (p. 829)</strong></p>
-<li>失语症 (Aphasia) 的分类与表现 | Aphasia (p. 830)</li>
-<li>言语失用症 (Apraxia of Speech) | Apraxia of Speech (p. 831)</li>
-<li>构音障碍 (Dysarthria) | Dysarthria (p. 831)</li>
-<li>言语障碍对服务对象的情感与社交冲击 | Emotional Effects of Speech and Language Disorders (p. 831)</li>
-<li>言语语言康复治疗原则 | Treatment for Speech and Language Disorders (p. 833)</li>
-<li>支持有交流障碍的服务对象并开展有效沟通 | Supporting and Communicating With Clients (p. 834)</li>
-<h3>第 36 章：发育障碍与智力残疾 (第 839 页)</h3>
-<p><strong>Chapter 36: Developmental Disorders and Disabilities (p. 839)</strong></p>
-<li>发育障碍与残疾人士的专业照护原则 | Caring for a Client Who is Living with a Developmental Disability or Disorder (p. 840)</li>
-<li>发育障碍常见类型（自闭症谱系障碍、唐氏综合征、脑瘫） | Types of Developmental Disorders and Disabilities (p. 841)</li>
-<li>发育障碍对家庭系统的长期影响与喘息照护 | The Impact of Developmental Disorders and Disabilities on the Family (p. 851)</li>
-<h3>第 37 章：精神心理健康与精神障碍 (第 856 页)</h3>
-<p><strong>Chapter 37: Mental Health Disorders (p. 856)</strong></p>
-<li>精神健康与精神疾病的连续谱系 | Mental Health and Mental Health Disorders (p. 859)</li>
-<li>获得性脑损伤 (ABI) 的照护要点 | Acquired Brain Injuries (p. 865)</li>
-<li>焦虑障碍（惊恐发作、广泛性焦虑） | Anxiety Disorders (p. 866)</li>
-<li>双相情感障碍 | Bipolar and Related Disorders (p. 869)</li>
-<li>抑郁障碍（重度抑郁发作的识别） | Depressive Disorders (p. 870)</li>
-<li>破坏性、冲动控制与品行障碍 | Disruptive, Impulse-Control, and Conduct Disorders (p. 873)</li>
-<li>喂食与进食障碍（厌食症、暴食症） | Feeding and Eating Disorders (p. 876)</li>
-<li>强迫症及相关障碍 | Obsessive-Compulsive and Related Disorders (p. 878)</li>
-<li>人格障碍 | Personality Disorders (p. 880)</li>
-<li>精神分裂症谱系障碍 | Schizophrenia Spectrum Disorders (p. 881)</li>
-<li>非自杀性自伤行为 | Self-Harm Disorders (p. 882)</li>
-<li>睡眠-觉醒障碍 | Sleep-Wake Disorders (p. 883)</li>
-<li>物质相关与成瘾障碍（药物与酒精滥用） | Substance-Related and Addictive Disorders (p. 884)</li>
-<li>自杀行为障碍与危机干预意识 | Suicidal Behaviour Disorder (p. 885)</li>
-<h3>第 38 章：定向障碍、谵妄与认知症/失智症 (第 891 页)</h3>
-<p><strong>Chapter 38: Disorientation, Delirium, and Dementia (p. 891)</strong></p>
-<li>定向障碍的表现与原因 | Disorientation (p. 893)</li>
-<li>谵妄 (Delirium) 的急性特征与医疗急症鉴别 | Delirium (p. 895)</li>
-<li>认知症/失智症 (Dementia) 概述 | Dementia (p. 896)</li>
-<li>原发性失智症（阿尔茨海默病、路易体痴呆、额颞叶痴呆） | Primary Dementias (p. 898)</li>
-<li>继发性失智症（血管性痴呆等） | Secondary Dementias (p. 901)</li>
-<li>抑郁与失智症的鉴别与重叠 | Depression and Dementia (p. 902)</li>
-<li>失智症的病程分期（轻度、中度、重度） | Stages of Dementia (p. 903)</li>
-<h3>第 39 章：失智症患者的日常照护与行为应对 (第 906 页)</h3>
-<p><strong>Chapter 39: Supporting Clients Who Are Living With Dementia (p. 906)</strong></p>
-<li>失智症患者的全面生活支持与尊严维护 | Supporting Clients Who Are Living With Dementia (p. 906)</li>
-<li>应对行为反应（游荡、日落综合征、激越、幻觉）的非药物管理 | Managing Responsive Behaviours (p. 914)</li>
-<li>照料者与家庭成员的心理需求与支持资源 | Caregiver Needs (p. 923)</li>
-<hr class="divider">
-<h2 class="sub-h2">第六部分：为全年龄段服务对象提供安全照护</h2>
-<h2>PART 6: Providing and Promoting Safe Care for Clients of All Ages</h2>
-<h3>第 40 章：促进氧合与呼吸道照护 (第 927 页)</h3>
-<p><strong>Chapter 40: Promoting Oxygenation (p. 927)</strong></p>
-<li>影响机体氧需求的生理因素 | Factors Affecting Oxygen Needs (p. 929)</li>
-<li>呼吸功能改变（低氧血症、呼吸困难）的表现 | Altered Respiratory Function (p. 931)</li>
-<li>改善与促进氧合的体位与照护措施 | Promoting Oxygenation (p. 933)</li>
-<li>协助氧气疗法（鼻导管、面罩供氧的安全规范） | Assisting With Oxygen Therapy (p. 935)</li>
-<li>协助呼吸评估与诊断性检查 | Assisting With Assessment and Diagnostic Testing (p. 943)</li>
-<li>人工气道（气管切开导管）患者的照护配合 | Artificial Airways (p. 947)</li>
-<li>气道吸引操作配合要点 | Suctioning an Airway (p. 952)</li>
-<li>机械通气（呼吸机）患者的日常监护 | Mechanical Ventilation (p. 952)</li>
-<li>胸腔闭式引流管的观察与安全原则 | Chest Tubes (p. 954)</li>
-<h3>第 41 章：冷敷与热敷疗法 (第 959 页)</h3>
-<p><strong>Chapter 41: Heat and Cold Applications (p. 959)</strong></p>
-<li>热敷的生理效应、适应证与安全防烫伤规范 | Heat Applications (p. 961)</li>
-<li>冷敷的生理效应、适应证与防冻伤组织保护 | Cold Applications (p. 969)</li>
-<h3>第 42 章：产妇与新生儿照护 (第 976 页)</h3>
-<p><strong>Chapter 42: Caring for Infants and Their Parents (p. 976)</strong></p>
-<li>产褥期产妇的身心照护与母乳喂养支持 | Caring for New Birth Parents (p. 977)</li>
-<li>新生儿与婴儿日常照护（抱持、更换尿布、脐带与割礼护理） | Caring for Infants (p. 982)</li>
-<h3>第 43 章：婴幼儿与青少年照护 (第 1005 页)</h3>
-<p><strong>Chapter 43: Caring for the Young (p. 1005)</strong></p>
-<li>为患病或残障儿童与青少年提供照护支持 | Supporting the Infant, Child, or Teen (p. 1006)</li>
-<li>满足婴幼儿与儿童的营养需求 | Assisting Infants and Children to Meet Nutritional Needs (p. 1007)</li>
-<li>瑞氏综合征 (Reye's Syndrome) 与阿司匹林禁忌 | Reye's Syndrome (p. 1010)</li>
-<li>儿童管教与行为引导原则 | Discipline (p. 1011)</li>
-<li>支持展现挑战性行为的儿童 | Supporting the Child Who Demonstrates Challenging Behaviours (p. 1012)</li>
-<li>儿科环境中的感染预防控制 | Preventing Infections (p. 1012)</li>
-<h3>第 44 章：老年人身心照护 (第 1019 页)</h3>
-<p><strong>Chapter 44: Caring for Older Persons (p. 1019)</strong></p>
-<li>老年服务对象的整体照护哲学 | Caring for Older Clients (p. 1020)</li>
-<li>老年期情感与社交环境的变化（丧亲、角色转变） | Emotional and Social Changes (p. 1022)</li>
-<li>老年期抑郁症的识别与干预配合 | Depression in Older Persons (p. 1024)</li>
-<li>衰老引起的机体生理变化（感官、消化、泌尿、肌肉萎缩） | Physical Changes (p. 1025)</li>
-<li>老年人的性观念、亲密关系与情感需求 | The Older Person and Sexuality (p. 1029)</li>
-<h3>第 45 章：家庭管理与居家照料 (第 1033 页)</h3>
-<p><strong>Chapter 45: Home Management (p. 1033)</strong></p>
-<li>支持工作者在居家环境中的角色与权责边界 | The Support Worker's Role in Home Management (p. 1035)</li>
-<li>居家照料任务的组织与高效规划 | Getting Organized (p. 1038)</li>
-<li>居家设备与清洁用品规范 | Equipment and Supplies (p. 1038)</li>
-<li>安全使用家用清洁化学品 (WHMIS) | Using Cleaning Products Safely (p. 1040)</li>
-<li>卧室、起居室、厨房与卫生间的卫生清洁标准 | Cleaning Bedrooms, Living Rooms, Kitchens, and Bathrooms (p. 1040)</li>
-<li>洗衣与衣物消毒烘干流程 | Doing Laundry (p. 1045)</li>
-<li>垃圾分类回收与堆肥环保处理 | Recycling Items and Composting (p. 1049)</li>
-<li>应对照护计划之外任务的专业处理原则 | Performing Tasks Not Included on the Client's Care Plan (p. 1051)</li>
-<h3>第 46 章：药物管理与协助给药 (第 1055 页)</h3>
-<p><strong>Chapter 46: Medication Management (p. 1055)</strong></p>
-<li>执业范围 (Scope of Practice)：支持工作者在药物协助中的法定角色 | Scope of Practice: the Support Worker's Role (p. 1057)</li>
-<li>药物在体内的药理作用与药代动力学基础 | How Medications Work in the Body (p. 1059)</li>
-<li>常见药物剂型与给药途径（口服、外用、滴剂、吸入等） | Types of Medications (p. 1063)</li>
-<li>简单药物数学计算与剂量核对 | Performing Simple Medication Math (p. 1069)</li>
-<li>用药记录与给药记录单 (MAR) 规范 | Documentation (p. 1069)</li>
-<li>协助用药安全的“十大核对原则” (The 10 "Rights" of Medication Management) | The 10 "Rights" of Medication Management (p. 1071)</li>
-<li>处方药标签阅读与识别要求 | Medication Labelling Requirements (p. 1072)</li>
-<li>药物差错的紧急应对与报告流程 | Reporting Medication Errors (p. 1072)</li>
-<h3>第 47 章：急重症照护与围手术期支持 (第 1086 页)</h3>
-<p><strong>Chapter 47: Working in Acute Care (p. 1086)</strong></p>
-<li>协助服务对象在医院各科室间转运与交接班 | Supporting the Client During Transitions (p. 1087)</li>
-<li>协助医生/护士进行体格检查 | Assisting With Physical Examinations (p. 1090)</li>
-<li>指导服务对象为体检做好身心准备 | Preparing the Client for a Physical Exam (p. 1093)</li>
-<li>为接受手术的服务对象提供术前准备与术后基础照护 | Supporting the Client Who Is Having Surgery (p. 1096)</li>
-<h3>第 48 章：临终关怀、安宁疗护与哀伤抚慰 (第 1110 页)</h3>
-<p><strong>Chapter 48: End-of-Life Care (p. 1110)</strong></p>
-<li>威胁生命的终末期疾病 | Life-Threatening Conditions (p. 1111)</li>
-<li>面对死亡与临终的态度、文化与信仰差异 | Attitudes Toward Death and Dying (p. 1111)</li>
-<li>为垂死/临终服务对象提供身心关怀与舒适护理 | Caring for a Client Who is Dying (p. 1112)</li>
-<li>姑息治疗/缓和医疗/安宁疗护 (Palliative Care) 核心理念 | Palliative Care (p. 1116)</li>
-<li>临终相关的法律与伦理议题（预先医疗指示、放弃心肺复苏 DNR） | Legal Issues Surrounding Death and Dying (p. 1118)</li>
-<li>哀伤过程与悲伤抚慰支持阶段 | Grief (p. 1119)</li>
-<li>濒死与死亡的临床体征识别 | Signs of Death (p. 1123)</li>
-<hr class="divider">
-<h2 class="sub-h2">附录与全书参考索引</h2>
-<h2>Appendices & References</h2>
-<li><strong>附录</strong> | Appendix (p. 1131)</li>
-<li><strong>专业术语权威汇编</strong> | Glossary (p. 1135)</li>
-<li><strong>参考文献</strong> | References (p. 1161)</li>
-<li><strong>主题索引</strong> | Index (p. 1175)</li>
-<li><strong>临床操作规程总索引</strong> | Procedures (p. 1186)</li>
-
-      </article>
-
-      <!-- Student Preface -->
-      <article class="reading-sheet" id="sec-student" style="display:none;">
-        <span class="book-badge">Study Master Guide · Pedagogical Illustrations</span>
-        <h1>《加拿大支持工作者教材》（第5版）学生前言与高效学习指南（中英双语对照）</h1>
-<h2 class="sub-h2">Student Preface & Study Guidelines</h2>
-<hr class="divider">
-<h2>第一部分：致未来的支持工作者 —— 您的神圣使命与专业角色</h2>
-<h3>Part 1: A Letter to the Student Support Worker</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>As a support worker, you are a very important member of the health care team because you probably spend more time with your clients than any other member of the team does. Team members rely on your observations, reports, and recordings, especially of any changes in a client. Your clients and their families rely on you to provide professional and safe care. You and the care you give may be the bright spots in a client's day. <br><br>This book was designed to help you learn by using its special features, which are described on the following pages. Since the last edition was published, educational and vocational standards for support workers have been released both nationally and within many provinces across Canada. To reflect these new standards, as well as anticipated practice trends, <em>Sorrentino's Canadian Textbook for the Support Worker</em>, fifth edition, has been thoroughly revised, updated, and reorganized to assist you, the student. Even after you graduate, the book will continue to be a useful and reliable resource to you in the field as you gain experience and expand your knowledge. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>作为一名支持工作者（Support Worker），您是整个跨学科医疗照护团队中不可或缺的关键核心成员。在所有医护团队成员中，您通常是与服务对象共处时间最长的人。无论是注册护士（RN）、注册实习护士（RPN/LPN）、医生还是专职治疗师，整个团队都高度依赖您敏锐的<strong>临床观察（Observations）</strong>、<strong>口头汇报（Reports）</strong>与<strong>文书记录（Recordings）</strong>——特别是当服务对象的身心状态发生任何细微变化时。更重要的是，您的服务对象及其家庭成员全心托付于您，期盼您为他们提供专业、尊严且高度安全的照护。您本人以及您所付出的温暖照护，往往就是服务对象一天当中最明媚的一束阳光。 <br><br>本书经过精心架构与全方位视觉设计，旨在通过诸多特色教学模块助您高效掌握专业技能。自上一版问世以来，全加拿大无论在联邦层面还是各省辖区内，均相继颁布了最新的支持工作者职业标准与职业教育规范。为全面契合这些最新标准及加拿大医疗照护行业的未来发展趋势，《索伦蒂诺加拿大支持工作者教材》（第5版）进行了全面深入的修订、更新与逻辑重组，全心全意为正在求学的您提供有力赋能。即便在您顺利毕业、考取资质并正式走上工作岗位之后，随着您临床经验的日益丰厚与专业维度的不断拓宽，本书仍将是您职业生涯中长久相伴、随时可查的权威案头参考书。 <br><br></div>
-</div>
-<hr class="divider">
-<h2>第二部分：SQRRR 五步高效医学阅读与学习法</h2>
-<h3>Part 2: The SQRRR Effective Study System for Healthcare Students</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>Your instructor will probably assign chapters or partial chapters from the textbook to read before or after class. When given a reading assignment, do you read from the first page to the last page without stopping? How much of what you read do you remember? Using an efficient study system will help you understand and retain all the information that you read. A useful study system has these five essential steps: <br><br>1. <strong>Preview (Survey)</strong> 2. <strong>Question</strong> 3. <strong>Read and Record</strong> 4. <strong>Recite</strong> 5. <strong>Review</strong> <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>在专业课程学习中，授课导师通常会在课前或课后为您布置指定章节的阅读任务。面对繁重的医学专业阅读，您是否往往从第一页直接读到最后一页中途不停？在读完之后，您真正能记住并运用到临床中的又有多少？运用一套科学、高效的研习系统，能够帮助您真正透彻理解并长期牢固记忆所读到的全部专业知识。这套广受医学教育界推崇的“SQRRR 学习系统”包含以下五个核心步骤： <br><br></div>
-</div>
-<hr class="divider">
-<h3>步骤 1：预习与全盘浏览 (Preview or Survey)</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>Before you start a reading assignment, preview or survey the assignment to get an idea of what it covers and to recall what you already know about the subject. Preview the chapter title, headings, subheadings, and terms or ideas in bold print or italics. Also, survey the learning objectives, key terms, introductory paragraph, boxes, key points, and the review questions at the end of the chapter. Previewing takes only a few minutes. Remember, previewing helps you become familiar with the material. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>在正式精读某个章节之前，先花几分钟时间对该阅读任务进行<strong>全景预习与快速浏览</strong>，以建立整体知识框架，并唤醒大脑中已有的背景认知。浏览章节标题、各级小标题、黑体粗体字与斜体强调词。同时，仔细扫读本章的<strong>学习目标（Objectives）</strong>、<strong>核心术语表（Key Terms）</strong>、开篇导语、表格插框、<strong>核心要点（Key Points）</strong>以及章末的<strong>复习思考题（Review Questions）</strong>。预习只需耗时三至五分钟，但它能在大脑中建立起清晰的“认知地图”，让后续精读事半功倍。 <br><br></div>
-</div>
-<hr class="divider">
-<h3>步骤 2：主动设问 (Question)</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>After previewing, you need to form a list of questions to be answered as you read the material. Questions should relate to what might be asked on a test or how the information applies to giving care. Use the title, headings, and subheadings to form questions. Avoid questions that have simple one-word answers. Questions that begin with <em>what</em>, <em>how</em>, or <em>why</em> are most helpful. While reading, if you find that a particular question does not help you understand and retain the material, change the question to make this step more useful. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>完成预习浏览后，带着思考主动将章节各级标题转化为具体的<strong>问题清单</strong>。所拟定的问题应当紧密围绕两个核心维度：“考试可能会如何考察？”以及“在实际临床照护中我该如何应用此项知识？”。尽量避免能用单一词汇作答的浅层问题，而应当多使用<strong>“是什么（What）”</strong>、<strong>“如何操作（How）”</strong>以及<strong>“为什么（Why）”</strong>开头的深度思考题。在阅读过程中，如果您发现某个问题对理解核心操作并无助益，可随时调整设问，让思考更加聚焦临床实践。 <br><br></div>
-</div>
-<hr class="divider">
-<h3>步骤 3：精读与主动记录 (Read and Record)</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>Reading, which is the next step, is more productive after you have determined what you already know and what you need to learn. The purpose of reading is to: - Gain new information - Connect the new information to what you already know <br><br>Break the assignment into smaller parts, and as you read each part, try to find answers for the questions you had formulated earlier. Also, mark important information in the text by underlining, highlighting, or making notes, which will remind you later what you need to go back to in order to review and learn. Making notes helps you remember what you have learned. When making notes, write down important information in the text margins or in a notebook. Use words and summary statements that will jog your memory about the material. <br><br>After reading the assignment, in order to retain the information, you need to organize it into a study guide—in the form of diagrams, flowcharts, or concept maps that show relationships or steps in a process. Note-taking in outline format is also very useful. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>在明确了自身已知与未知之后，接下来的阅读过程将极富成效。专业精读的核心目的在于： - 获取全新的医学与照护理论及操作规程； - 将新知识与以往的医学常识及过往生命经验建立深层神经连接。 <br><br>将长章节分解为若干短小单元。在阅读每一小节时，专注寻找刚才所提问题的答案。同时，通过划线、高光或做旁注标记核心考点，以便日后复习时精准回溯。动笔做笔记能显著强化神经突触记忆。做笔记时，请用您自己的话语提炼浓缩性结论，记录在页边空白或专用笔记本中。 <br><br>读完一个章节后，为了长期保持记忆，建议将其整理为体系化的“学习指南”——例如绘制展示操作流程的前后步骤图、因果逻辑图或概念框架图。采用层级清晰的提纲式大纲（Outline Format）记录笔记同样极为高效： <code></code>` I. 一级主题大标题 (Main heading) 1. 二级分类标题 (Second-level heading) a. 三级要点与操作步骤 (Third-level heading) <code></code>` <br><br></div>
-</div>
-<hr class="divider">
-<h3>步骤 4 与步骤 5：大声复述与周期复习 (Recite and Review)</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Recite:</strong> Finally, recite and review, using your notes and the study guide, by finding the answers for the questions you formed earlier and any others that may have come up during the reading and as you answered the review questions at the end of the chapter. Answer all questions out loud (recite). If you are unsure about the answers to any of the questions, consult your instructor or re-check the text. <br><br><strong>Review:</strong> Reviewing is more about <em>when</em> to study than <em>what</em> to study. You already decided what to study during the preview, question, and reading steps. Your instructor may have emphasized key points from the reading assignment in class. The best times to review both the information in your text and your notes from class are: 1. <strong>The same day or evening of the class</strong> 2. <strong>Right after your first study session</strong> 3. <strong>One week later</strong> 4. <strong>Regularly before a quiz, test, midterm, or final exam</strong> <br><br>Studying the information many times over spaced intervals will help transfer it into long-term clinical memory. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>复述（Recite）：</strong> 借助您的提纲笔记与知识结构图，针对前面提出的问题以及章末的复习思考题，尝试脱离书本、<strong>大声口述回答（Recite）</strong>。用专业术语清晰、流利地解释照护原理与操作要领。口述能够立即暴露记忆中的模糊与漏洞。如果对某个操作步骤或病理概念无法清晰作答，必须立刻重翻书本核实，或向授课导师请教。 <br><br><strong>科学周期复习（Review）：</strong> 复习的精髓不在于“学什么”，而在于<strong>“在什么时间节点复习”</strong>。前三个步骤已经为您锚定了核心考点。课堂上导师也会着重强调重难点。将书本理论与课堂笔记结合复习的<strong>四大黄金黄金时间窗口</strong>是： 1. <strong>上课当天的下午或当晚（趁热打铁，防止遗忘）</strong>； 2. <strong>初次完成自主研读的紧接着次日</strong>； 3. <strong>整整一周之后（抵抗艾宾浩斯遗忘曲线的关键点）</strong>； 4. <strong>单元小测、期中考核或全省统考之前的规律性系统复盘</strong>。 <br><br>通过这种“间隔重复（Spaced Repetition）”的方式反复回顾，医学知识才能真正化为您下意识的临床反应与肌肉记忆。 <br><br></div>
-</div>
-<hr class="divider">
-<h2>第三部分：教材八大核心教学特色图解指南</h2>
-<h3>Part 3: Guide to Textbook Special Features</h3>
-<p>本书设计了多套高辨识度的图文模块，其核心功能如下：</p>
-<li>1. <strong>核心术语表（Key Terms）</strong></li>
-<li>位于每章起始位置。汇聚该章最核心的医学病理、药理、法律与护理专有名词，配有精炼准确的学术定义，是备考名词解释与日常交班报告的核心基石。</li>
-<li>2. <strong>学习目标（Learning Objectives）</strong></li>
-<li>严格对照加拿大各省职业学习成果（VLOs），明确学员读完本章后必须达成的知识与技能考核指标。</li>
-<li>3. <strong>长期照护专栏（Focus on Long-Term Care）</strong></li>
-<li>专门针对养老院、护理院（Nursing Homes / Long-Term Care Homes）环境，深入解析脆弱长者的生理衰老、失智症应对及慢性病管理特征。</li>
-<li><strong>原书专栏范例（Box 33.9 院舍膳食计划，完整文字版）：</strong></li>
-<li><strong>社交性进餐（Social Dining）</strong>：长者在公共大餐厅就餐，每桌安排 4 至 6 名长者共同进餐，增进社交互动与归属感。</li>
-<li><strong>家庭式就餐（Family-Style Dining）</strong>：餐食盛装在公用大餐盘中放置于餐桌中央，长者在照护员协助下自行分盛食物，模拟家庭用餐氛围。</li>
-<li><strong>低刺激辅助进餐（Low-Stimulus Dining）</strong>：针对容易分心、烦躁焦虑的失智症长者，安排在安静、免除噪音与强光的独立辅助用餐区进食。</li>
-<li><strong>【临床要点】</strong>：固定就餐座次有助于认知症长者辨识环境；进餐前后需记录每位长者的精准摄入百分比。</li>
-<li>4. <strong>社区与居家照护专栏（Focus on Home Care）与生活技能支持</strong></li>
-<li>针对入户支持工作者（Home Support Worker），剖析在服务对象私人居所中如何因地制宜进行环境安全评估、尊重家庭习俗并独立开展照护。</li>
-<figure class="clinical-figure">
-  <img src="images/textbook1_features/feature_clock_plate_dining.png" alt="Clock Plate Dining Method" loading="lazy">
-  <figcaption><strong>图解展示：时钟表盘进餐引导法（Figure 27.5）</strong><br><em>FIGURE 27.5: The numbers on a clock are used to help a visually impaired client locate food.</em><br>【临床精义】针对视力障碍（视网膜病变、青光眼、白内障）长者，以时钟点位（例如：6点钟放米饭、10点钟放鸡肉、2点钟放青菜）告知食物位置，极大维护其自主进餐尊严与安全感。</figcaption>
-</figure>
-<li>5. <strong>人体力学与安全防护（Body Mechanics & Safety）</strong></li>
-<li>医护人员职业健康保护机制，预防腰椎间盘突出与肌肉拉伤。</li>
-<figure class="clinical-figure">
-  <img src="images/textbook1_features/feature_body_mechanics_lifting.png" alt="Body Mechanics Lifting and Pulling" loading="lazy">
-  <figcaption><strong>图解展示：正确与错误人体力学搬运示范（Figure 14.3 & 14.4）</strong><br><em>FIGURE 14.3 & 14.4: Picking up a box using incorrect (A) and correct (B) posture; Move your rear leg back when pulling.</em><br>【临床精义】屈膝下蹲、收紧核心、背部平直，利用大腿肌群发力，严禁弯腰代偿；推拉重物时扩大支撑面并向后撤后腿。</figcaption>
-</figure>
-<li>6. <strong>多元文化包容与人际空间（Respecting Diversity & Cultural Safety）</strong></li>
-<li>适应加拿大移民多元社会，理解文化背景对身体接触、目光交流与个人空间的深远影响。</li>
-<figure class="clinical-figure">
-  <img src="images/textbook1_features/feature_culture_personal_space.png" alt="Respecting Diversity and Personal Space" loading="lazy">
-  <figcaption><strong>图解展示：文化敏感性与身体语言接触（Figure 7.3 & Personal Space）</strong><br><em>FIGURE 7.3: Culture may influence how a client responds to touch.</em> —— 详细解析不同族裔关于个人距离（Personal Space）与身体接触的心理接受界限。</figcaption>
-</figure>
-<li>7. <strong>标准化技能操作规程（Procedures）</strong></li>
-<li>包含洗手、体温测量、床上擦浴、导尿管护理、升降机转移等数十项核心护理实操。每项操作均以<strong>“操作准备（Pre-Procedure）”、“操作实施（Procedure）”与“操作后收尾及记录（Post-Procedure）”</strong>三段式标准化呈现。</li>
-<figure class="clinical-figure">
-  <img src="images/textbook1_features/feature_procedure_steps.png" alt="Clinical Procedure Steps" loading="lazy">
-  <figcaption><strong>图解展示：标准化护理操作步骤图解（以协助进食与床上转移为例）</strong><br><em>Procedure: Assisting the Client with Eating & Moving the Client (Figure 14.14 B/C).</em><br>【临床精义】每项护理规程均以金黄色 DIPPS 徽标贯穿核心环节，时刻提醒学员遵循安全防护与尊严隐私。</figcaption>
-</figure>
-<li>8. <strong>章末复习与要点精炼（Chapter Review & Key Points）</strong></li>
-<li>提炼本章最核心考点，配套练习思考题，用于考前快速自我检阅。</li>
-
-      </article>
-
-      <!-- Core Glossary -->
-      <article class="reading-sheet" id="sec-glossary" style="display:none;">
-        <span class="book-badge">Terminology & Pronunciation</span>
-        <h1>《加拿大支持工作者教材》（第5版）核心专业术语汇编（中英双语对照）</h1>
-<h2 class="sub-h2">Canadian Support Worker Essential Glossary & Key Terms</h2>
-<hr class="divider">
-<h2>一、 核心执业身份与医疗体系术语 (Professional Identity & Healthcare System)</h2>
-<div class="table-wrap"><table>
-<thead><tr><th>英文专业术语 (English Term)</th><th>中文标准译名</th><th>权威学术释义与临床内涵 (Definition & Clinical Context)</th></tr></thead>
-<tbody>
-<tr><td><strong>Support Worker (PSW / HCA)</strong></td><td>支持工作者 / 个人支持工作者 / 护工</td><td>在加拿大各省从事基层医疗卫生照护的专业从业者，为失去自理能力的长者、残障人士、急慢性病患提供日常生活照料与身心支持。在安省通称 Personal Support Worker (PSW)，在BC省及阿省多称 Health Care Assistant (HCA) 或 Health Care Aide。</td></tr>
-<tr><td><strong>Unregulated Care Provider (UCP)</strong></td><td>非监管照护提供者</td><td>法律术语。指其职业未受各省特定的《受监管健康职业法》立法监管学院（Regulatory College）发放牌照，但必须接受注册护士督导、遵循雇主规章并在法定执业范围内执业的医护人员（如 PSW）。</td></tr>
-<tr><td><strong>Regulated Health Professional (RHP)</strong></td><td>注册医疗卫生专业人员</td><td>依法受各省专业监管学院颁发牌照并实施行业自律监管的医护人员，如注册护士（RN）、注册实习护士（RPN/LPN）、医师（MD）、物理治疗师（PT）与作业治疗师（OT）。</td></tr>
-<tr><td><strong>Scope of Practice</strong></td><td>法定执业范围</td><td>法律与行业规章明确赋予某一工种被允许安全、合法执行的专业技能、知识水平与操作权责的法律边界。</td></tr>
-<tr><td><strong>Delegation</strong></td><td>授权委派 / 正式工作委托</td><td>法律程序。指注册专业人员（如 RN）根据法律规定，经过严格技能培训与能力核准后，将原本属于注册护士专有的受控护理操作（Controlled Act，如滴眼药、管饲冲洗）以书面形式委托给特定合格 PSW 代为执行的法律行为。</td></tr>
-<tr><td><strong>Assignment</strong></td><td>工作分配 / 日常任务下达</td><td>护士或主管根据照护计划，安排支持工作者执行其本身执业范围之内已有常规技能（如沐浴、测量体温、进食协助）的日常调度过程。</td></tr>
-<tr><td><strong>Client-Centred Care</strong></td><td>以服务对象为中心的照护</td><td>现代医疗核心哲学。将接受照护者视为拥有自主意志与尊严的独立个体，在制定所有照护决策时充分尊重其个人价值观、习惯偏好与生活方式。在不同机构中也称为 Resident-Centred Care（院舍长者）或 Patient-Centred Care（医院患者）。</td></tr>
-</tbody></table></div>
-<hr class="divider">
-<h2>二、 人本照护 DIPPS 五大基石原则 (DIPPS Core Principles)</h2>
-<div class="table-wrap"><table>
-<thead><tr><th>原则代号</th><th>英文核心词 (Core Concept)</th><th>中文标准译名</th><th>临床照护实践指导要领 (Clinical Practice Meaning)</th></tr></thead>
-<tbody>
-<tr><td><strong>D</strong></td><td><strong>Dignity</strong></td><td><strong>维护尊严</strong></td><td>始终视服务对象为一个值得尊敬的完整人。杜绝将其当婴儿般对待（Baby Talk），操作前敲门礼貌称呼其尊称，充分聆听并接纳其情感。</td></tr>
-<tr><td><strong>I</strong></td><td><strong>Independence</strong></td><td><strong>促进独立自主</strong></td><td>鼓励服务对象尽最大可能自己动手完成力所能及的动作（哪怕动作极为缓慢），严禁照护者为了赶时间而剥夺其自主权。</td></tr>
-<tr><td><strong>P</strong></td><td><strong>Preferences</strong></td><td><strong>尊重个人偏好</strong></td><td>允许并鼓励服务对象自主决定自己的日常事务，例如几点起床、今天想穿哪件衣服、想吃何种餐点等。</td></tr>
-<tr><td><strong>P</strong></td><td><strong>Privacy</strong></td><td><strong>保护隐私与保密</strong></td><td>物理隐私：暴露照护前拉严窗帘、关好房门、拉拢床帘，仅暴露正在清洁的身体局部；信息保密：严守保密义务，不在公共区域议论病情。</td></tr>
-<tr><td><strong>S</strong></td><td><strong>Safety</strong></td><td><strong>保障人身安全</strong></td><td>无论何时，确保服务对象及照护者自身免受意外跌倒、烫伤、感染及机械损伤。</td></tr>
-</tbody></table></div>
-<hr class="divider">
-<h2>三、 日常照护与日常生活活动能力 (Daily Living & Clinical Care)</h2>
-<div class="table-wrap"><table>
-<thead><tr><th>英文专业术语 (English Term)</th><th>中文标准译名</th><th>权威学术释义与临床内涵 (Definition & Clinical Context)</th></tr></thead>
-<tbody>
-<tr><td><strong>Activities of Daily Living (ADLs)</strong></td><td>日常生活活动能力</td><td>维持人类独立生活所必需的最基本自我照顾技能，主要包括：沐浴（Bathing）、穿衣修饰（Dressing）、进食（Eating/Feeding）、移动转移（Transferring/Mobility）、如厕（Toileting）及大小便控制（Continence）。</td></tr>
-<tr><td><strong>Instrumental Activities of Daily Living (IADLs)</strong></td><td>工具性日常生活活动能力</td><td>在复杂社会环境中独立生活所需的高阶复合能力，包括：做饭做餐、房屋日常清洁打扫、洗衣服、管理个人财务、遵医嘱服药、使用电话与交通工具、日常买菜购物。</td></tr>
-<tr><td><strong>Care Plan (Nursing Care Plan)</strong></td><td>综合护理照护计划</td><td>由医疗团队（主要由主管护士主导）评估服务对象的身心需求后制定的全面、个性化书面工作指引，详述其具体护理目标、干预措施、特殊注意事项及照护频次。</td></tr>
-<tr><td><strong>Body Mechanics</strong></td><td>身体力学</td><td>在进行各种身体动作、搬运与转移重物时，通过调整身体姿态、扩大支撑底面积（双脚分开与肩同宽）、降低重心、保持脊柱正常生理弯曲，从而最省力并防止背部与肌肉骨骼损伤的科学运动机制。</td></tr>
-<tr><td><strong>Medical Asepsis (Clean Technique)</strong></td><td>内科无菌技术 / 清洁技术</td><td>旨在减少微生物数量、阻断病原体从一个人传播到另一个人或环境中去的日常清洁与防感染措施（如手卫生、穿戴手套、环境表面消毒）。</td></tr>
-<tr><td><strong>Surgical Asepsis (Sterile Technique)</strong></td><td>外科无菌技术</td><td>旨在彻底消灭或清除某一区域或器械上所有微生物（包括细菌芽孢与病毒）的最高级别无菌操作规范。</td></tr>
-<tr><td><strong>Standard Precautions / Routine Practices</strong></td><td>常规预防措施 / 标准预防</td><td>针对所有服务对象普遍适用的基本防感染准则，基于“所有人的血液、体液、排泄物均具有潜在传染性”的假设，在接触时必须佩戴个人防护装备（PPE）。</td></tr>
-<tr><td><strong>Restraints</strong></td><td>身体约束具 / 限制性措施</td><td>用于限制、妨碍或阻碍服务对象自由身体移动的物理器械、衣物或化学药物。加拿大现代医疗倡导“无约束照护（Least-Restraint / Restraint-Free Environment）”。</td></tr>
-<tr><td><strong>Responsive Behaviours</strong></td><td>应对行为反应</td><td>失智症与认知障碍患者常出现的激越、徘徊、幻觉、日落综合征等行为。在加拿大护理学中不再使用“问题行为（Problem Behaviours）”，而是称为“应对行为”，强调其为患者应对内心恐惧或未被满足生理需求的外在反应。</td></tr>
-<tr><td><strong>Palliative Care (End-of-Life Care)</strong></td><td>姑息照护 / 安宁疗护 / 临终关怀</td><td>针对威胁生命的终末期疾病患者及其家属提供的一种整合性照护，其核心目标不是治愈疾病或盲目延长痛苦的生命，而是最大程度缓解疼痛与躯体不适，抚慰心理与灵性痛苦，提升临终生命质量。</td></tr>
-<tr><td><strong>Activities of Daily Living (ADLs) Checklist</strong></td><td>ADL 评估考核清单</td><td>临床评定患者独立程度的标准化量表（从完全自立、部分协助到完全依赖）。</td></tr>
-<tr><td><strong>MAR (Medication Administration Record)</strong></td><td>药物给予记录单 / 用药单</td><td>医疗机构中用于详细记录服务对象处方药名称、剂量、给药时间、途径及执行护士签名的法定法律文书。</td></tr>
-<tr><td><strong>SBAR Communication</strong></td><td>SBAR 标准化沟通汇报模式</td><td>临床医疗交班与病情恶化紧急汇报的国际通用结构化框架：<strong>S</strong>ituation（现状）、<strong>B</strong>ackground（病史背景）、<strong>A</strong>ssessment（评估发现）、<strong>R</strong>ecommendation（处理建议）。</td></tr>
-</tbody></table></div>
-
-      </article>
-
-      <!-- Instructor Preface -->
-      <article class="reading-sheet" id="sec-instructor" style="display:none;">
-        <span class="book-badge">Pedagogy & 5th Edition Updates</span>
-        <h1>《加拿大支持工作者教材》（第5版）教师序言与核心革新解析（中英双语对照）</h1>
-<h2 class="sub-h2">Instructor Preface & 5th Edition Key Enhancements</h2>
-<hr class="divider">
-<h2>一、 第5版修订背景与全加职业标准</h2>
-<h3>Background & Alignment With Canadian Vocational Standards</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>In keeping with the approach of previous editions, the fifth edition of <em>Sorrentino's Canadian Textbook for the Support Worker</em> serves the diverse needs of students and instructors in community colleges, private career colleges, school boards, and health care agencies across Canada. <br><br>Since the publication of the fourth edition, substantial changes have occurred in the Canadian health care landscape. Educational and vocational standards for support workers have been released both nationally and within various provinces. Furthermore, the role of support workers has expanded as health care systems shift focus toward community-based care, home support, and specialized long-term care for complex aging populations. <br><br>To reflect these standards and anticipated practice trends, this fifth edition has been rigorously updated, reorganized, and enriched with evidence-based research and clinical guidelines. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>秉承历版教材严谨务实的学术与教学传统，《索伦蒂诺加拿大支持工作者教材》（第5版）致力于全方位满足加拿大各地公立社区学院（Community Colleges）、私立职业学院（Private Career Colleges）、公立教育局成人职业培训项目及各级卫生保健机构师生的多元化教学需求。 <br><br>自本书第4版出版以来，加拿大整体医疗卫生体系经历了深刻的结构性变革。联邦及各省相继出台了全新的支持工作者国家职业标准与省级执业教育大纲。伴随着加拿大医疗卫生重心加速向“社区居家照护（Home & Community Care）”倾斜，以及长期照护院舍中高龄复杂慢性病患群体的激增，支持工作者的角色定位与临床技能要求得到了极大的拓展与深化。 <br><br>为精准契合上述国家与省级最新教学大纲，并前瞻性顺应加拿大医护行业的未来发展趋势，本版教材经过全面深入的循证更新、篇章重组与内容充实，确保每一处知识点与临床规程均代表当前行业最高循证实践标准。 <br><br></div>
-</div>
-<hr class="divider">
-<h2>二、 第5版教材核心内容革新要点</h2>
-<h3>Key Innovations in the Fifth Edition</h3>
-<li>1. <strong>严格界定并强化“法定执业范围”（Scope of Practice）意识</strong></li>
-<li><strong>【英文】</strong> A stronger emphasis on understanding the role of support workers and their defined scope of practice under provincial legislation and employer policies. The text clearly demarcates what support workers are legally permitted to perform, tasks that require formal delegation by a regulated health professional (e.g., RN or RPN), and unauthorized procedures.</li>
-<li><strong>【中文】</strong> 更加鲜明地突出了支持工作者的<strong>法定执业范围（Scope of Practice）</strong>。严格依据各省卫生法规及雇主规章，清晰划定支持工作者被法律允许独立执行的基础照护、必须经由注册护士（RN）或注册实习护士（RPN/LPN）<strong>正式书面委派（Delegation）</strong>方可协助的受监管操作，以及严禁跨越的医疗红线，切实规避执业法律与医疗安全风险。</li>
-<li>2. <strong>失智症照护与应对行为非药物管理（Dementia & Responsive Behaviours）</strong></li>
-<li><strong>【英文】</strong> Completely updated dementia care chapters reflecting clinical guidelines from the Alzheimer Society of Canada and evidence-based training models (such as Gentle Persuasive Approaches - GPA). Special focus is placed on recognizing that responsive behaviours are expressions of unmet physical, emotional, or environmental needs rather than intentional aggression.</li>
-<li><strong>【中文】</strong> 全面重写失智症（Dementia）专业照护章节，深度整合加拿大阿尔茨海默病协会（Alzheimer Society of Canada）的最新临床指南及广受推崇的<strong>温和劝导照护法（Gentle Persuasive Approaches, GPA）</strong>。重点引导学员深刻理解：失智症长者的所谓“问题行为/应对行为（Responsive Behaviours，如激越、抗拒照护、日落综合征等）”，本质上是其未被满足的生理痛苦、心理恐惧或环境不适的外在沟通表达，而非故意敌意，应当采取人本主义非药物安抚策略。</li>
-<li>3. <strong>文化安全与包容性谦卑（Cultural Safety, Humility & Diversity）</strong></li>
-<li><strong>【英文】</strong> Expanded content on cultural safety and cultural humility, honoring Canada's Truth and Reconciliation Commission (TRC) Calls to Action regarding Indigenous peoples (First Nations, Inuit, and Métis), as well as embracing Canada’s diverse multicultural, multilingual, and 2SLGBTQ+ communities.</li>
-<li><strong>【中文】</strong> 大幅扩充<strong>文化安全（Cultural Safety）</strong>与<strong>文化谦卑（Cultural Humility）</strong>教学模块，积极响应加拿大真相与和解委员会（TRC）针对原住民（第一民族、因纽特人、梅蒂斯人）医疗健康权利的行动倡议，同时全方位拥抱加拿大多元族裔、多语种移民以及性少数群体（2SLGBTQ+）的文化背景与独特照护需求。</li>
-<li>4. <strong>人本主义 DIPPS 核心原则的深度贯穿</strong></li>
-<li><strong>【英文】</strong> The DIPPS principles—Dignity, Independence, Preferences, Privacy, and Safety—serve as the moral and ethical compass throughout every clinical skill and patient interaction in the textbook.</li>
-<li><strong>【中文】</strong> <strong>DIPPS 照护哲学</strong>（<strong>Dignity 尊严、Independence 独立、Preferences 偏好、Privacy 隐私保密、Safety 人身安全</strong>）被彻底贯穿于全书每一项临床技能演示、医患言语交流与护理决策全流程中，杜绝冷冰冰的技术主义，彰显人本关怀。</li>
-<li>5. <strong>全人心理健康与创伤知情照护（Mental Health & Trauma-Informed Care）</strong></li>
-<li><strong>【英文】</strong> Modernized classification of mental health and substance-use disorders aligning with DSM-5 criteria, emphasizing stigma reduction, suicidal behaviour vigilance, and trauma-informed compassionate care approaches.</li>
-<li><strong>【中文】</strong> 心理精神障碍与物质成瘾章节与国际最新医学诊断标准（DSM-5）全面接轨，强调消除精神疾病污名化、提高抑郁与自杀危机警觉性，并推行<strong>创伤知情照护（Trauma-Informed Care）</strong>理念。</li>
-
-      </article>
-
-      <!-- Cover & Copyright -->
-      <article class="reading-sheet" id="sec-cover" style="display:none;">
-        <span class="book-badge">Official Copyright & Disclaimer</span>
-        <h1>《加拿大支持工作者教材》（第5版）封面、数字化资源与法律声明（中英双语对照）</h1>
-<h2 class="sub-h2">Cover, Digital Learning Resources & Notice</h2>
-<hr class="divider">
-<h2>一、 书名与作者团队 (Title & Authorship)</h2>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Sorrentino's CANADIAN TEXTBOOK for the SUPPORT WORKER</strong> Fifth Edition <br><br><strong>Mary J. Wilk</strong>, RN, GNC(C), BA, BScN, MN <em>Professor, Personal Support Worker Program, Fanshawe College, London, Ontario</em> <br><br><em>Original Author:</em> <strong>Sheila A. Sorrentino</strong>, PhD, RN <em>Contributing Canadian Experts & Advisory Editors across Ontario, British Columbia, Alberta, and Atlantic Canada.</em> <br><br><strong>ELSEVIER</strong> <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>《索伦蒂诺加拿大支持工作者教材》</strong> 第 5 版 <br><br><strong>玛丽·J·维尔克（Mary J. Wilk）</strong> 注册护士（RN）、加拿大老年护理认证专家（GNC(C)）、文学士（BA）、护理学学士（BScN）、护理学硕士（MN） <em>加拿大安大略省伦敦市 范莎学院（Fanshawe College）个人支持工作者项目 教授</em> <br><br><em>原著作者：</em> <strong>席拉·A·索伦蒂诺（Sheila A. Sorrentino）</strong> 博士、注册护士 <em>爱思唯尔（Elsevier Canada）出版公司</em> <br><br></div>
-</div>
-<hr class="divider">
-<h2>二、 Evolve 官方数字化学生学习资源 (Evolve Student Resources)</h2>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Evolve® — YOU'VE JUST PURCHASED MORE THAN A TEXTBOOK!</strong> Enhance your learning with Evolve Student Resources. The companion website for <em>Sorrentino's Canadian Textbook for the Support Worker</em>, 5th edition, offers valuable resources to help you succeed in your course and in clinical practice: - <strong>Audio Glossary:</strong> Pronunciations and definitions for hundreds of medical terms and key vocabulary words. - <strong>Interactive Practice Quizzes:</strong> Chapter-by-chapter multiple-choice quizzes to prepare for exams and provincial certification testing. - <strong>Clinical Skills Video Clips & Animations:</strong> Visual demonstration of complex patient care techniques and body mechanics. - <strong>Body Spectrum Electronic Anatomy Colouring Book:</strong> Interactive anatomical exploration of organ systems. - <strong>Procedure Checklists:</strong> Step-by-step competency evaluation rubrics matching provincial vocational learning outcomes. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>Evolve® 数字化学习平台 —— 您获得的不仅是一本纸质教科书！</strong> 通过 Evolve 学生专属在线资源深化您的专业学习。 《索伦蒂诺加拿大支持工作者教材》（第5版）配套官方学习网站为学员提供在学术课程与临床实习中取得卓越成就的权威辅助资源： - <strong>医学语音词汇表（Audio Glossary）</strong>：数百个常用医学术语与专业核心词汇的纯正英式/加式发音与权威释义。 - <strong>章节互动练习与自测题（Interactive Quizzes）</strong>：各章节配套多项选择题与情境分析题，全面备战学院期末考试与各省 PSW 资格认证评估。 - <strong>临床照护技能视频与三维动画（Clinical Skills Videos）</strong>：直观演示复杂护理技术、机械升降机操作及人体力学防损伤规范。 - <strong>Body Spectrum 人体解剖涂色书（电子版）</strong>：通过互动探索人体各大器官系统构造与生理机能。 - <strong>临床操作考核清单（Procedure Checklists）</strong>：与加拿大各省职业学习成果（Vocational Learning Outcomes, VLOs）完全对齐的逐条操作核查表。 <br><br></div>
-</div>
-<hr class="divider">
-<h2>三、 临床免责与法律声明 (Notice and Clinical Scope Disclaimer)</h2>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span><strong>Notice:</strong> The content and procedures in this book are based on information currently available. They were reviewed by instructors and practising professionals in various regions of Canada. However, employer policies and procedures may vary from the information and procedures in this book. In addition, research and new information may require changes in standards and practices. <br><br>Standards and guidelines from Health Canada, provincial and territorial ministries of health, and regulatory colleges may change as new information becomes available. Other guidelines, including those from public health agencies and employers, must always be followed in clinical practice. <br><br>The publisher and the author do not assume any responsibility for any injury and/or damage to persons or property arising out of or related to any use of the material contained in this book. It is the responsibility of the treating caregiver or health care worker, relying on independent professional judgment and working within their legal scope of practice under appropriate supervision, to determine the best approach for the client. <br><br>Neither the publisher nor the author is engaged in rendering medical, legal, or other professional services. If medical, legal, or other expert assistance is required, the services of a competent professional person should be sought. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span><strong>法律与临床执业免责声明：</strong> 本书所收录之专业内容与操作规程均基于当前现有的循证医学与专业护理资讯编写而成。上述内容已由加拿大各省份的资深护理教育导师及临床一线执业专家进行严格审阅。然而，在实际工作中，各雇主机构（如长期照护院舍、医院、社区居家照护机构）的内部政策、规章制度与操作流程可能与本书所述存在细微差异。此外，随着最新医学科研成果与临床经验的不断更新，行业标准与执业实践亦将随之演进。 <br><br>来自加拿大卫生部（Health Canada）、各省及地区卫生厅以及相关护士与医疗监管学院（Regulatory Colleges）的法定标准与指导方针可能会因新信息的发布而调整。在临床照护实践中，执业人员必须严格遵守公共卫生机构以及当前受雇单位的最新规章制度与照护指引。 <br><br>出版商与作者对于因使用或参考本书所载材料而可能导致的人身伤害、财产损失或法律纠纷，概不承担任何法律责任。照护工作者有责任基于独立的专业谨慎判断，在取得合法授权、处于相应监管督导之下并在自身法定执业范围（Scope of Practice）之内，为服务对象制定并执行最为适宜的照护方案。 <br><br>出版商与作者均不以出版此书的方式从事医疗诊断、法律咨询或其他专业执业行为。如需医疗、法律或其他专科专业援助，务必咨询具备法定资质的合格执业人员。 <br><br></div>
-</div>
-
-      </article>
-
-      <!-- Project Guide -->
+      <!-- 8. Project Guide -->
       <article class="reading-sheet" id="sec-guide" style="display:none;">
         <span class="book-badge">Project Roadmap & Principles</span>
         <h1>《加拿大支持工作者教材》（第5版）中英双语对照翻译工程</h1>
@@ -2370,16 +2538,57 @@
         target.style.display = 'block';
       }
       document.getElementById('currentTitle').innerText = title;
-      document.querySelectorAll('.nav-item button').forEach(el => el.classList.remove('active'));
-      // Find matching button
-      const btns = document.querySelectorAll('.nav-item button');
-      btns.forEach(b => {
-        if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(secId)) {
-          b.classList.add('active');
-        }
-      });
+      
+      // Update sidebar nav active status
+      document.querySelectorAll('.nav-item button, .chapter-main-btn').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sub-item button').forEach(el => el.classList.remove('active'));
+      
+      const navBtn = document.getElementById('nav-' + secId);
+      if (navBtn) {
+        navBtn.classList.add('active');
+      }
+
+      // Manage chapter chevron
+      const chevron = document.getElementById('ch1-chevron');
+      const subList = document.getElementById('ch1-subsections');
+      if (secId === 'sec-ch1') {
+        chevron.classList.add('open');
+        subList.style.display = 'flex';
+      }
+
       document.getElementById('sidebar').classList.remove('open');
       document.getElementById('contentPane').scrollTop = 0;
+    }
+
+    function handleChapterClick(secId, title) {
+      const chevron = document.getElementById('ch1-chevron');
+      const subList = document.getElementById('ch1-subsections');
+      const isCurrentlyOpen = chevron.classList.contains('open');
+      
+      switchSection(secId, title);
+      
+      if (isCurrentlyOpen) {
+        // toggle close
+        // subList.style.display = 'none';
+        // chevron.classList.remove('open');
+      } else {
+        subList.style.display = 'flex';
+        chevron.classList.add('open');
+      }
+    }
+
+    function jumpToCh1Sub(anchorId, title) {
+      switchSection('sec-ch1', title);
+      document.querySelectorAll('.sub-item button').forEach(el => el.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      
+      setTimeout(() => {
+        const target = document.getElementById(anchorId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 50);
+      document.getElementById('sidebar').classList.remove('open');
     }
 
     function setMode(mode) {
