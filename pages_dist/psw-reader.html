@@ -772,6 +772,196 @@
         font-size: 13px;
       }
     }
+  
+    /* Reader Audio Companion Bar */
+    .reader-audio-bar {
+      height: 48px;
+      background: var(--bg-sidebar);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      gap: 16px;
+      font-size: 13px;
+      z-index: 10;
+      flex-shrink: 0;
+    }
+
+    .rab-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .rab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--primary);
+      padding: 2px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .rab-text {
+      color: var(--ink);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 13px;
+    }
+
+    .rab-center {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rab-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .rab-btn:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    .rab-play {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .rab-play:hover {
+      background: var(--primary-dark);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .rab-scrub-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 200px;
+    }
+
+    .rab-range {
+      flex: 1;
+      -webkit-appearance: none;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--border);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .rab-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    .rab-time {
+      font-size: 11px;
+      color: var(--ink-sub);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .rab-speed-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--ink-sub);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .rab-speed-btn:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .rab-cinema-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--primary);
+      background: var(--primary-light);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .rab-cinema-link:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Active highlighted paragraph when audio is speaking */
+    .bilingual-entry.audio-active {
+      background: rgba(156, 102, 68, 0.08);
+      border-left: 3px solid var(--primary);
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(156, 102, 68, 0.12);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 900px) {
+      .reader-audio-bar {
+        padding: 0 10px;
+        gap: 8px;
+        height: 44px;
+      }
+      .rab-text {
+        max-width: 140px;
+      }
+      .rab-scrub-box {
+        width: 110px;
+      }
+      .rab-cinema-link span {
+        display: none;
+      }
+      .rab-cinema-link::after {
+        content: "🎙️ 有声书";
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -929,6 +1119,31 @@
         </div>
       </div>
     </header>
+
+    <!-- Reader Audio Companion Bar -->
+    <div class="reader-audio-bar" id="readerAudioBar">
+      <div class="rab-left">
+        <span class="rab-badge">🎧 导师原声</span>
+        <span class="rab-text" id="rabCurrentTitle">第 1 章：支持工作者的角色与职责 · 点击播放</span>
+      </div>
+      <div class="rab-center">
+        <button class="rab-btn" onclick="seekReaderAudio(-15)" title="后退 15 秒">↺ 15</button>
+        <button class="rab-btn rab-play" id="rabPlayBtn" onclick="toggleReaderAudioPlay()" title="播放/暂停">▶</button>
+        <button class="rab-btn" onclick="seekReaderAudio(30)" title="前进 30 秒">30 ↻</button>
+        <div class="rab-scrub-box">
+          <span class="rab-time" id="rabCurTime">00:00</span>
+          <input type="range" class="rab-range" id="rabRange" min="0" max="100" value="0" oninput="onRabScrubInput(this)" onchange="onRabScrubChange(this)">
+          <span class="rab-time" id="rabDurTime">--:--</span>
+        </div>
+        <button class="rab-speed-btn" id="rabSpeedBtn" onclick="cycleRabSpeed()">1.0x</button>
+      </div>
+      <div class="rab-right">
+        <a href="psw-audio.html" class="rab-cinema-link" title="开启独立沉浸式黑胶唱机有声典藏版">
+          <span>沉浸有声书 ↗</span>
+        </a>
+      </div>
+    </div>
+
 
     <!-- Reading Content Container -->
     <div class="content-scroll" id="contentScroll">
@@ -5124,6 +5339,7 @@
       document.getElementById('currentTitle').innerText = title;
       
       // Update sidebar nav active status
+      updateReaderAudioForSection(secId);
       document.querySelectorAll('.nav-item button').forEach(el => el.classList.remove('active'));
       const activeBtn = document.getElementById('nav-' + secId);
       if (activeBtn) activeBtn.classList.add('active');
@@ -5228,6 +5444,136 @@
         switchSection('sec-ch1', '第 1 章：支持工作者的角色与职责 (Pages 1–18)');
       }
     });
+  
+    // Reader Audio Companion Controller
+    let currentChapterAudioNum = 1;
+    let readerManifest = null;
+    let readerAudio = new Audio();
+    let rabIsPlaying = false;
+    let rabSpeedIdx = 1;
+    const rabSpeeds = [0.8, 1.0, 1.25, 1.5];
+
+    async function initReaderAudio() {
+      try {
+        const resp = await fetch('audio/psw/manifest.json');
+        if (resp.ok) {
+          readerManifest = await resp.json();
+          updateReaderAudioForSection('sec-ch1');
+        }
+      } catch (e) {
+        console.log('Audio manifest not yet loaded:', e);
+      }
+
+      readerAudio.addEventListener('timeupdate', onRabTimeUpdate);
+      readerAudio.addEventListener('ended', onRabEnded);
+      readerAudio.addEventListener('play', () => {
+        rabIsPlaying = true;
+        document.getElementById('rabPlayBtn').innerText = '⏸';
+      });
+      readerAudio.addEventListener('pause', () => {
+        rabIsPlaying = false;
+        document.getElementById('rabPlayBtn').innerText = '▶';
+      });
+      readerAudio.addEventListener('loadedmetadata', () => {
+        document.getElementById('rabDurTime').innerText = formatAudioTime(readerAudio.duration);
+      });
+    }
+
+    function formatAudioTime(sec) {
+      if (isNaN(sec) || sec <= 0) return '00:00';
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+    }
+
+    function updateReaderAudioForSection(secId) {
+      const match = secId.match(/sec-ch(\d+)/);
+      const chNum = match ? parseInt(match[1]) : null;
+      
+      if (!chNum) {
+        document.getElementById('rabCurrentTitle').innerText = '当前章节暂无原声，切换至正文收听';
+        return;
+      }
+
+      if (currentChapterAudioNum !== chNum || !readerAudio.src) {
+        currentChapterAudioNum = chNum;
+        readerAudio.src = `audio/psw/ch${chNum}_master.mp3`;
+        readerAudio.playbackRate = rabSpeeds[rabSpeedIdx];
+        
+        const chInfo = readerManifest && readerManifest.chapters ? readerManifest.chapters.find(c => c.ch_num === chNum) : null;
+        const titleText = chInfo ? `第 ${chNum} 章：${chInfo.title_en} (${chInfo.title_zh})` : `第 ${chNum} 章 导师原声`;
+        document.getElementById('rabCurrentTitle').innerText = titleText;
+        document.getElementById('rabCurTime').innerText = '00:00';
+        document.getElementById('rabRange').value = 0;
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      if (!readerAudio.src) {
+        updateReaderAudioForSection('sec-ch1');
+      }
+      if (readerAudio.paused) {
+        readerAudio.play().catch(e => console.log('Audio play error:', e));
+      } else {
+        readerAudio.pause();
+      }
+    }
+
+    function seekReaderAudio(delta) {
+      if (readerAudio.duration) {
+        readerAudio.currentTime = Math.max(0, Math.min(readerAudio.duration, readerAudio.currentTime + delta));
+      }
+    }
+
+    function onRabScrubInput(range) {
+      if (readerAudio.duration) {
+        const t = (range.value / 100) * readerAudio.duration;
+        document.getElementById('rabCurTime').innerText = formatAudioTime(t);
+      }
+    }
+
+    function onRabScrubChange(range) {
+      if (readerAudio.duration) {
+        readerAudio.currentTime = (range.value / 100) * readerAudio.duration;
+      }
+    }
+
+    function cycleRabSpeed() {
+      rabSpeedIdx = (rabSpeedIdx + 1) % rabSpeeds.length;
+      const spd = rabSpeeds[rabSpeedIdx];
+      readerAudio.playbackRate = spd;
+      document.getElementById('rabSpeedBtn').innerText = `${spd}x`;
+    }
+
+    function onRabTimeUpdate() {
+      const cur = readerAudio.currentTime;
+      const dur = readerAudio.duration;
+      document.getElementById('rabCurTime').innerText = formatAudioTime(cur);
+      if (dur > 0) {
+        document.getElementById('rabDurTime').innerText = formatAudioTime(dur);
+        document.getElementById('rabRange').value = (cur / dur) * 100;
+      }
+
+      // Sync active section title in bar
+      if (readerManifest && readerManifest.chapters) {
+        const ch = readerManifest.chapters.find(c => c.ch_num === currentChapterAudioNum);
+        if (ch && ch.timeline) {
+          const activeSec = ch.timeline.find(s => cur >= s.start_time && cur < s.end_time);
+          if (activeSec) {
+            document.getElementById('rabCurrentTitle').innerText = `§ ${activeSec.section_idx}. ${activeSec.title_en}`;
+          }
+        }
+      }
+    }
+
+    function onRabEnded() {
+      rabIsPlaying = false;
+      document.getElementById('rabPlayBtn').innerText = '▶';
+    }
+
+    // Initialize reader audio on DOM ready
+    window.addEventListener('DOMContentLoaded', initReaderAudio);
+
   </script>
 </body>
 </html>
