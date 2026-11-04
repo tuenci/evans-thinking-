@@ -463,6 +463,66 @@
       font-size: 14px;
     }
 
+    /* Chapter 1 Redirect to Quiz Card */
+    .quiz-redirect-card {
+      margin-top: 40px;
+      background: linear-gradient(135deg, #fdf8f0 0%, #f4eae0 100%);
+      border: 2px solid var(--border-focus);
+      border-radius: 12px;
+      padding: 28px 32px;
+      box-shadow: 0 4px 16px rgba(135, 86, 30, 0.08);
+      text-align: center;
+    }
+
+    .q-redirect-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 4px 10px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .quiz-redirect-card h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .quiz-redirect-card p {
+      font-size: 14.5px;
+      color: var(--ink-sub);
+      max-width: 650px;
+      margin: 0 auto 20px;
+      line-height: 1.65;
+    }
+
+    .btn-jump-quiz {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(135, 86, 30, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-jump-quiz:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(135, 86, 30, 0.35);
+    }
+
     /* Interactive Quiz Section */
     .quiz-container {
       display: flex;
@@ -781,7 +841,7 @@
 
     <!-- Reading Content Pane -->
     <div class="content-pane" id="contentPane">
-      <!-- Chapter 1 Unabridged -->
+      <!-- Chapter 1 Unabridged (without repetitive quiz questions) -->
       <article class="reading-sheet" id="sec-ch1">
         <span class="book-badge">Sorrentino 5th Ed. · Chapter 1 Unabridged</span>
         <h1>《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</h1>
@@ -1027,116 +1087,71 @@
   <div class="cn-block"><span class="lang-tag">CN 译文</span>在纷繁复杂的日常执业中，支持工作者每时每刻都需要做出独立或协作判断。<strong>批判性思维（Critical Thinking）</strong>是一种基于事实、严谨理性分析因果关联并作出合宜决断的高阶思维能力。当面临临床两难或突发照护问题时，必须依托以下四大核心支柱进行系统研判： 1. <strong>支持工作的终极目标（DIPPS 伦理核验）</strong>：任何解决方案都绝对不能以牺牲服务对象的尊严、自立、个性化选择、偏好、隐私或人身安全为代价！ 2. <strong>服务对象的切身视角（Client's Viewpoint）</strong>：尽可能邀请案主共同参与讨论其自身的照护安排；换位思考，从长者的心理恐惧、身体疼痛与文化习俗出发体察其诉求。 3. <strong>法定执业范围边界（Scope of Practice Check）</strong>：严格审视自身操作是否符合法律大纲与机构政策；遇到未经授权的医疗操作，坚决不擅作主张。 4. <strong>主管护士的临床视角（Supervisor's Viewpoint）</strong>：准确评估当前事件属于常规自选工作范畴，还是属于病情突变、跌倒创伤、皮肤破溃等必须立即向责任护士越级汇报的红色预警事件。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第十节：全书章节要点回顾精炼 (Page 18)</h2>
+<h2>第十节：全书章节要点回顾与批判性思维实战 (Page 18)</h2>
 <h3>核心知识要点总结 (KEY POINTS)</h3>
 <div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>- In many settings, support workers are supervised by nurses or other regulated health care professionals. - The ultimate goal of support work is to improve the client's quality of life by following the principles of client-centred care (DIPPS). - The support worker tends to the person's holistic needs, which include physical, emotional, social, cognitive, cultural, and spiritual needs, as well as helping to relieve loneliness and advocate for the client. - Professionalism includes having a positive attitude, a sense of responsibility, a professional appearance, being discreet about client information, being a lifelong learner, advocating for the client, being discreet about personal matters, and using acceptable speech and language. - Support workers work within their legal scope of practice and employer policies; they never perform unauthorized tasks. - Delegation is client-specific and nurse-supervised; support workers have a legal right to refuse unsafe delegation. - Critical thinking integrates the goal of support work, the client's perspective, the scope of practice, and the supervisor's guidance. - Support workers are directly accountable to their supervisors, employers, and to the clients they serve. <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- 在绝大多数照护环境中，支持工作者均由注册护士（RN）、注册实用护士（RPN/LPN）或其他受监管专业医护人员指导与督导。 - 支持工作的终极宗旨在于以人为本，严格遵循 DIPPS 六大基石原则全面提升案主及其家庭的生活品质。 - 支持工作者践行“全人照护”哲学，全面兼顾身体生理、心理情绪、社交人际、认知智力、文化传统与精神灵性需求，驱散孤独，为弱者代言。 - 崇高的专业素养包括：常怀积极心态、恪守岗位责任心、端庄得体的职业仪表、严守案主隐私机密、终身学习精进技能、坚守人际界限、杜绝私人杂务干扰、以及使用温和合宜的专业语言。 - 支持工作者必须在法定执业范围与机构制度红线内行事，坚决不越权违规操作。 - 任务授权委派具备“单一对象特定性”并由护士负最终全责；在未受训或不安全时，支持工作者拥有不可剥夺的法定拒绝权。 - 批判性思维决策需综合考量 DIPPS 宗旨、案主意愿、执业权限及主管护士要求。 - 支持工作者在法律、伦理与专业层面，对其临床主管、受雇机构以及所服务的案主负有神圣而严肃的执业责任。 <br><br></div>
+  <div class="en-block"><span class="lang-tag">EN 原文</span>- The ultimate goal of support work is to improve the client's quality of life by following the principles of client-centred care (DIPPS). The support worker tends to the person's needs, which include physical needs as well as helping to relieve loneliness, providing comfort, encouraging independence, and promoting the person's self-respect. - Care should always be individualized to each client. A support worker's services to people in their homes help them remain independent and continue to live with their families. Support workers make a difference in people's lives. - Support workers can work in community-based or facility-based settings. Duties will vary according to the setting. - Most of a support worker's responsibilities can be grouped into six categories: (1) personal care, (2) support for nurses and other health care providers, (3) family support, (4) social support, (5) housekeeping or home management, and (6) documenting and reporting any basic assessments, observations, and care provided in the client's record or chart. - Depending on their setting, people receiving health care and support services are known by different terms, such as patient (in a hospital), resident (in a live-in facility), or client (in the community). - The people supported can be grouped according to their problems, needs, and ages. - At this point, support workers in most provinces and territories are still considered health care providers not regulated through legislation, or unregulated care providers (UCPs). Support workers are accountable to their supervisors, employers, and clients; they do not presently have an organization or college that governs their role. Regulated care providers are health care providers licensed and regulated by the province or territory to carry out care that is within their scope of practice. - There are many members of the health care team, with the client always at the centre of care. - It is important that support workers understand their scope of practice and never act beyond their role. - In many settings, support workers are supervised by nurses or other professionals. - Professionalism includes having a positive attitude, a sense of responsibility, a professional appearance, being discreet about client information, being a lifelong learner, advocating for the client, being discreet about personal matters, and using acceptable speech and language. - While discussing the client with co-workers, support workers must use discretion at all times and honour the client's right to confidentiality. Confidentiality means respecting and guarding personal and private information about another person. - Part of being a professional, reflective practice reviews consist of a review and self-evaluation of any care provided and identification of ways to improve clinical performance. - When thinking critically, making decisions, and solving problems, support workers must consider the principles of client-centred care (DIPPS), the client's viewpoint, their scope of practice, and their supervisor's viewpoint. <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>- 支持工作的终极目标在于遵循以服务对象为中心的照护（DIPPS）核心原则，全方位提升案主的生活质量。支持工作者不仅照料其生理需求，还帮助驱散孤寂、提供身体舒适、鼓励自主自立并维护其自尊。 - 照护服务必须始终契合每位案主的个性化需求。支持工作者在居家环境中的上门服务，帮助案主最大程度维系自立并继续与家人团聚生活。支持工作者切实改变着受助者的生命轨迹。 - 支持工作者可在社区环境或机构院舍环境中执业，具体工作职责因场所而异。 - 支持工作者的大多数职责可归纳为六大范畴：(1) 个人生活照料；(2) 协助护士及其他医护人员；(3) 家庭系统支持；(4) 社交人际支持；(5) 家务与家居环境管理；(6) 记录并向团队汇报基础评估、观察发现以及所实施的照护。 - 根据所处执业场所，接受健康照护与支持服务的人士享有不同的专业称谓：综合医院中称为“病患（Patient）”，院舍机构中称为“常住长者/居民（Resident）”，社区环境中称为“案主（Client）”。 - 受助人群可依据其面临的问题、照护需求及所属年龄段进行细分。 - 目前在加拿大绝大多数省份和地区，支持工作者仍属于非立法监管的照护提供者（UCPs）。支持工作者对督导主管、雇主和案主直接负责；目前尚无专门的法定专业学院（College）直接监管其执业。受监管医护人员（RHPs）则是依法经省或地区授权发牌并在法定范围内执业的专业人员。 - 医疗卫生团队由众多专业成员组成，且案主始终处于团队照护的绝对核心地位。 - 支持工作者深刻理解自身的法定执业范围并严禁越权履职至关重要。 - 在大多数执业场景中，支持工作者接受注册护士或其他专业人士的监督与指导。 - 专业素养包括拥有积极的职业态度、高度责任感、规范的职业仪表、对案主信息严守机密、保持终身学习、替案主发声代言、将个人私事排除在工作场所之外，以及运用得体合宜的专业语言。 - 在与同事探讨案主个案时，支持工作者必须时刻保持审慎并捍卫案主的隐私保密权。保密意味着尊重并严密保护他人的个人隐私信息。 - 作为专业素养的关键部分，反思性执业回顾（Reflective Practice Reviews）包含对自己所提供各项照护的自省评估，并找出持续改进临床执业表现的具体途径。 - 在进行批判性思维、临床决策与解决问题时，支持工作者必须综合考量四项核心维度：以服务对象为中心的照护（DIPPS）原则、案主本人的视角、法定执业范围、以及督导主管的专业指引。 <br><br></div>
 </div>
 <hr class="divider">
-<h2>第十一节：章末全真自测复习题与详尽临床精解 (Page 19)</h2>
-<h3>第 1 题</h3>
+<h3>临床实践中的批判性思维案例情境 (CRITICAL THINKING IN PRACTICE) (Page 18)</h3>
 <div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>1. Which of the following is the ultimate goal of support work? A. To provide health care in hospitals B. To improve the quality of life of clients and their families C. To assist nurses with complex medical treatments D. To take over all personal responsibilities for the client <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>B</strong> - <strong>中文精解</strong>：支持工作的根本宗旨在于通过提供以服务对象为中心的照护，全方位改善案主及其整个家庭的生活质量。选项 A 局限于医院场景（支持工作广泛分布于居家与社区）；选项 C 属于护士本职，PSW 仅起辅助作用；选项 D 违背了促进案主自主自立（Independence）的核心伦理，故仅 B 正确。 <br><br></div>
+  <div class="en-block"><span class="lang-tag">EN 原文</span>In the clinical setting, a resident tells you that she has been getting out of bed on her own at night, even though she was instructed to ask for assistance whenever ambulating. She has fallen several times in the past and fractured her wrist the last time she fell. How will you respond? What will you do? As a student, what rules must you follow to protect patients and residents? <br><br></div>
+  <div class="cn-block"><span class="lang-tag">CN 译文</span>在临床照护机构中，一位常住长者悄悄告诉你：尽管医护团队此前反复叮嘱她在下床行走时必须呼叫协助，但最近几周她在夜间一直偷偷自行下床活动。她在过去曾多次跌倒，甚至在最近一次跌倒中造成了手腕骨折。 面对此种高风险情境，您应如何应对？ 1. <strong>即时言语沟通与同理倾听</strong>：以温和、不带评判的语气倾听长者夜间自行下床的真正缘由（例如是否夜尿频繁、呼叫铃位置不便、或担心麻烦护士）。肯定其渴望自立的心情，但必须耐心解释再次跌倒可能导致的严重卧床、失能乃至危及生命的后果。 2. <strong>立即干预与团队安全汇报</strong>：离开房间前确保床位降至最低安全高度，将呼叫铃手柄放置在触手可及处，排除地面障碍物并开启夜灯。<strong>最关键的是：立即向督导护士（Supervising Nurse）如实汇报该隐患</strong>，以便团队重新评估跌倒风险并制定夜间巡视频率或离床报警垫方案。绝不可为了“向长者保守秘密”而隐瞒安全隐患。 3. <strong>实习学生守则</strong>：支持工作者始终将“安全（Safety）”置于最高优先级。严禁擅自隐瞒长者的高危行动；对案主潜在身体伤害的预防，绝对优先于长者个人“不愿声张”的要求。 <br><br></div>
 </div>
-<h3>第 2 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>2. Which of the following is a way in which support workers assist multidisciplinary health care team members? A. By diagnosing illnesses and prescribing medications B. By creating independent medical care plans without nurse input C. By acting as the team's eyes and ears and reporting changes in the client D. By supervising registered nurses in long-term care facilities <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>C</strong> - <strong>中文精解</strong>：支持工作者在病床旁共处时间最长，充当整个医疗团队的“眼睛与耳朵”，其最核心的协作方式是敏锐观察并汇报案主的身心状态变化。诊断与开药（A）是执业医师和执业护士的法定特权；独立制定医疗计划（B）超出其权限；反向督导护士（D）完全违背了法定层级。 <br><br></div>
-</div>
-<h3>第 3 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>3. Activities of daily living (ADLs) include which of the following? A. Paying bills and banking B. Eating, bathing, grooming, and dressing C. Grocery shopping and preparing complex meals D. Arranging doctor appointments and driving <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>B</strong> - <strong>中文精解</strong>：进食、沐浴、更衣、洗漱梳理、如厕及移动属于维持基本生存的“基础日常生活活动”（ADLs）。选项 A、C、D 属于“工具性日常生活活动”（IADLs）。 <br><br></div>
-</div>
-<h3>第 4 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>4. Instrumental activities of daily living (IADLs) include which of the following? A. Bathing and oral hygiene B. Moving in bed and wheelchair transfers C. Light housekeeping, meal preparation, and managing finances D. Bowel and bladder elimination care <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>C</strong> - <strong>中文精解</strong>：轻度家务保洁、餐食筹划准备、采购与财务账单管理属于维持独立居家生活所需的高级复杂技能（IADLs）。A、B、D 均为基础 ADLs。 <br><br></div>
-</div>
-<h3>第 5 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>5. Who determines the support worker's legal scope of practice? A. The client and their immediate family members B. Provincial or territorial legislation, employer policies, and training standards C. The physician exclusively D. The support worker themselves based on past experience <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>B</strong> - <strong>中文精解</strong>：支持工作者的法定执业范围由三者共同裁定：各省及地区卫生法规、雇主规章制度、以及正规职业教育大纲。案主意愿、医生个人或 PSW 自行决断均无权凌驾于法律红线之上。 <br><br></div>
-</div>
-<h3>第 6 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>6. A support worker is asked by a client to administer an injection of insulin. What should the support worker do? A. Administer the injection if the client explains how to do it B. Refuse the task politely, explain that it is outside their scope of practice, and notify the nurse C. Give the injection only if the family provides written permission D. Administer half the dose to be safe <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>B</strong> - <strong>中文精解</strong>：侵入性皮下胰岛素注射属于受监管护士的专有核心医疗操作，严禁未经正式授权委派的 PSW 擅自执行。支持工作者必须礼貌回绝，说明执业范围受限，并立即汇报主管护士安排专业注射。 <br><br></div>
-</div>
-<h3>第 7 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>7. Delegation of a task from a nurse to a support worker is: A. Permanent and applies to all future clients B. Client-specific and requires appropriate supervision C. An informal agreement between friends at work D. Permitted only in emergency life-threatening events <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>B</strong> - <strong>中文精解</strong>：任务授权委派具备严格的“单一案主特定性（Client-Specific）”，绝不可自动泛化至其他患者，且护士必须提供全程规范的指导、沟通与监督。 <br><br></div>
-</div>
-<h3>第 8 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>8. If a support worker has not been trained for a delegated task, what is their responsibility? A. Try their best to perform it anyway B. Ask another untrained support worker to help C. Exercise their right and duty to refuse the task and notify the nurse D. Watch an online video and perform the task <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>C</strong> - <strong>中文精解</strong>：保障案主安全是不可妥协的底线。未受训擅自操作极易致残致死，因此支持工作者拥有神圣的法定拒绝权与报告义务。 <br><br></div>
-</div>
-<h3>第 9 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>9. In Box 1.1, which of the following is considered a positive professional statement? A. "Nobody told me about this." B. "I will make sure I do it." C. "It's not my fault, don't blame me." D. "I work harder than anyone else here." <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>B</strong> - <strong>中文精解</strong>：“我一定会做好（I will make sure I do it）”展现出主动担当、值得托付的积极职业态度；其余三项均为推诿诿过或抱怨的消极言辞。 <br><br></div>
-</div>
-<h3>第 10 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>10. Which practice complies with professional appearance guidelines (Box 1.2)? A. Wearing strong floral perfume to smell fresh B. Wearing dangling hoop earrings and multiple bracelets C. Wearing long, brightly polished artificial fingernails D. Keeping hair tied back off the collar and wearing clean, supportive, non-slip shoes <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>D</strong> - <strong>中文精解</strong>：头发束起离开衣领与穿着防滑耐磨包头支持鞋是标准的医护防护要求。喷洒浓香水（A）违反无香气政策易诱发哮喘；晃荡首饰（B）存在被抓伤撕裂风险；假指甲（C）易划伤老人皮肤并滋生耐药致病菌。 <br><br></div>
-</div>
-<h3>第 11 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>11. Keeping personal matters out of the workplace (Box 1.3) includes which of the following? A. Discussing financial problems with compassionate clients B. Asking clients for advice about your marital issues C. Using scheduled break times only for personal telephone calls D. Bringing your children to work when childcare is unavailable <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>C</strong> - <strong>中文精解</strong>：仅在规定的工间休息时间接打私人电话是恪守职业边界的体现。向服务对象倾诉经济或婚姻烦恼（A、B）会造成角色倒错与情感剥削，带孩子上班（D）严重违反机构规章。 <br><br></div>
-</div>
-<h3>第 12 题</h3>
-<div class="bilingual-entry">
-  <div class="en-block"><span class="lang-tag">EN 原文</span>12. What does the acronym DIPPS represent in client-centred support work? A. Diagnosis, Intervention, Prescription, Prognosis, Surgery B. Diet, Intake, Pulse, Pressure, Sleep C. Dignity, Independence, Individualized Care, Preferences, Privacy, Safety D. Documentation, Insurance, Policy, Procedures, Supervision <br><br></div>
-  <div class="cn-block"><span class="lang-tag">CN 译文</span>- <strong>正确答案</strong>：<strong>C</strong> - <strong>中文精解</strong>：DIPPS 代表全书六大核心人本照护哲学：Dignity（维护尊严）、Independence（促进自立）、Individualized Care（因人制宜个性化照护）、Preferences（尊重案主偏好）、Privacy（严守隐私保密）、Safety（保障人身安全）。 <br><br></div>
-</div>
+<hr class="divider">
 
+    <div class="quiz-redirect-card">
+      <div class="q-redirect-badge">CHAPTER 1 COMPLETE · KNOWLEDGE CHECK</div>
+      <h3>🎉 第 1 章全部课文精读完成</h3>
+      <p>本章原书 12 道全真执业自测题（<strong>第 1 题见原书第 18 页，第 2 至 12 题见第 19 页</strong>）已独立收录于专属交互题库模块中。支持实时点击判题、即时正误反馈与逐题权威临床精解，无需在正文中重复翻阅。</p>
+      <button class="btn-jump-quiz" onclick="switchSection('sec-ch1-quiz', '第 1 章：全真自测题与临床精解 (12道题库)')">
+        <span>✍️ 开启第 1 章交互自测题库 (12 道全真题)</span>
+        <span style="font-size:18px;">→</span>
+      </button>
+    </div>
+    
       </article>
 
-      <!-- Chapter 1 Interactive Quiz -->
+      <!-- Chapter 1 Interactive Quiz (Dedicated Page) -->
       <article class="reading-sheet" id="sec-ch1-quiz" style="display:none;">
         <span class="book-badge">Self-Assessment · Interactive Practice</span>
         <div class="quiz-container">
 
       <div class="quiz-intro-banner">
-        <div class="quiz-badge">KNOWLEDGE CHECK · INTERACTIVE MODE</div>
-        <h2>第 1 章：章末全真自测复习题与临床精解 (Page 19)</h2>
-        <p class="quiz-desc">原版 12 道标准执业自测题。点击选项可即时判断对错，点击“查看权威答案与临床精解”即可展开详尽的加拿大 PSW 临床实操解析与知识点溯源。</p>
+        <div class="quiz-badge">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</div>
+        <h2>第 1 章：章末全真自测复习题与详尽临床精解</h2>
+        <p class="quiz-desc">原版 12 道标准执业自测题（第 1 题位于原书第 18 页，第 2 至 12 题位于原书第 19 页）。点击选项可即时测试并验证对错，点击“查看权威答案与临床精解”即可展开详尽的加拿大 PSW 临床实操解析与知识点溯源。</p>
       </div>
     
         <div class="quiz-card" id="qcard-1">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 1 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 18</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">1. Which of the following is the ultimate goal of support work?</div>
+            <div class="quiz-stem-en">1. Activities of daily living (ADLs) are:</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-1')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'D', 'rat-1')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">To provide health care in hospitals</span>
+              <span class="quiz-opt-text">Social and recreational activities</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-1')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'D', 'rat-1')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">To improve the quality of life of clients and their families</span>
+              <span class="quiz-opt-text">Activities that support workers perform to prevent injuries</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-1')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'D', 'rat-1')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">To assist nurses with complex medical treatments</span>
+              <span class="quiz-opt-text">Physical exercises that people perform daily to keep themselves fit</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-1')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'D', 'rat-1')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">To take over all personal responsibilities for the client</span>
+              <span class="quiz-opt-text">Self-care activities that people perform daily to remain independent and to function in society</span>
             </div>
             
           </div>
@@ -1146,11 +1161,11 @@
             </button>
             <div class="quiz-rationale-box" id="rat-1" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：B</span>
+                <span class="ans-badge">正确答案：D</span>
                 <span class="ans-status" id="status-rat-1"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 支持工作的根本宗旨在于通过提供以服务对象为中心的照护，全方位改善案主及其整个家庭的生活质量。选项 A 局限于医院场景（支持工作广泛分布于居家与社区）；选项 C 属于护士本职，PSW 仅起辅助作用；选项 D 违背了促进案主自主自立（Independence）的核心伦理，故仅 B 正确。
+                <strong>【中文临床精解】</strong> 日常生活活动（ADLs）特指维持个体基本生存和自立生活不可或缺的日常自我照护活动（Self-care activities），包括进食、穿衣、沐浴、个人修饰整理、如厕及床上/轮椅转移。选项 A 属于社交娱乐；选项 B 指人体工效学与职业安全防护；选项 C 指日常健身锻炼，均不符合 ADLs 的医学定义。
               </div>
             </div>
           </div>
@@ -1159,31 +1174,31 @@
         <div class="quiz-card" id="qcard-2">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 2 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">2. Which of the following is a way in which support workers assist multidisciplinary health care team members?</div>
+            <div class="quiz-stem-en">2. Which of the following is a way in which support workers assist nurses or other health care team members?</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'C', 'rat-2')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'D', 'rat-2')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">By diagnosing illnesses and prescribing medications</span>
+              <span class="quiz-opt-text">Assess the client's needs</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'C', 'rat-2')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'D', 'rat-2')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">By creating independent medical care plans without nurse input</span>
+              <span class="quiz-opt-text">Order range-of-motion exercises</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'C', 'rat-2')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'D', 'rat-2')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">By acting as the team's eyes and ears and reporting changes in the client</span>
+              <span class="quiz-opt-text">Witness legal signatures on permission forms</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'C', 'rat-2')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'D', 'rat-2')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">By supervising registered nurses in long-term care facilities</span>
+              <span class="quiz-opt-text">Report changes in the client's behaviour or condition</span>
             </div>
             
           </div>
@@ -1193,11 +1208,11 @@
             </button>
             <div class="quiz-rationale-box" id="rat-2" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：C</span>
+                <span class="ans-badge">正确答案：D</span>
                 <span class="ans-status" id="status-rat-2"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 支持工作者在病床旁共处时间最长，充当整个医疗团队的“眼睛与耳朵”，其最核心的协作方式是敏锐观察并汇报案主的身心状态变化。诊断与开药（A）是执业医师和执业护士的法定特权；独立制定医疗计划（B）超出其权限；反向督导护士（D）完全违背了法定层级。
+                <strong>【中文临床精解】</strong> 支持工作者在病患床旁时间最长，充当医疗团队的“眼睛与耳朵”，其核心协助方式是敏锐观察并及时向督导护士汇报案主的身心状态变化。评估（Assess）案主需求、开具医嘱（Order）、见证法定签字（Witness legal consent）均属于注册护士（RN/RPN）或医生的法定职责，严禁未受监管的支持工作者越权执行。
               </div>
             </div>
           </div>
@@ -1206,31 +1221,31 @@
         <div class="quiz-card" id="qcard-3">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 3 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">3. Activities of daily living (ADLs) include which of the following?</div>
+            <div class="quiz-stem-en">3. Resident is a term used to describe a person who is receiving care at:</div>
           </div>
           <div class="quiz-options-list">
         
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-3')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Paying bills and banking</span>
+              <span class="quiz-opt-text">Home</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-3')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Eating, bathing, grooming, and dressing</span>
+              <span class="quiz-opt-text">A long-term care facility</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-3')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">Grocery shopping and preparing complex meals</span>
+              <span class="quiz-opt-text">An outpatient clinic</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-3')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Arranging doctor appointments and driving</span>
+              <span class="quiz-opt-text">A hospital</span>
             </div>
             
           </div>
@@ -1244,7 +1259,7 @@
                 <span class="ans-status" id="status-rat-3"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 进食、沐浴、更衣、洗漱梳理、如厕及移动属于维持基本生存的“基础日常生活活动”（ADLs）。选项 A、C、D 属于“工具性日常生活活动”（IADLs）。
+                <strong>【中文临床精解】</strong> 在加拿大医疗卫生体系中，服务对象的称谓随照护场所而异：在长期照护院舍（Long-Term Care Facility / Nursing Home）中居住的长者称为 **Resident**（常住长者/住户）；在急重症医院（Hospital）中接受救治的人称为 **Patient**（病患/患者）；而在社区或居家（Home / Community）接受上门服务的人则称为 **Client**（案主/服务对象）。
               </div>
             </div>
           </div>
@@ -1253,31 +1268,31 @@
         <div class="quiz-card" id="qcard-4">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 4 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">4. Instrumental activities of daily living (IADLs) include which of the following?</div>
+            <div class="quiz-stem-en">4. The main focus of the health care team is to:</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'C', 'rat-4')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-4')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Bathing and oral hygiene</span>
+              <span class="quiz-opt-text">See as many clients as possible</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'C', 'rat-4')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-4')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Moving in bed and wheelchair transfers</span>
+              <span class="quiz-opt-text">Provide quality care for the client</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'C', 'rat-4')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-4')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">Light housekeeping, meal preparation, and managing finances</span>
+              <span class="quiz-opt-text">Complete assigned tasks as quickly as possible</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'C', 'rat-4')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-4')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Bowel and bladder elimination care</span>
+              <span class="quiz-opt-text">Find a cure for the client's illness or condition</span>
             </div>
             
           </div>
@@ -1287,11 +1302,11 @@
             </button>
             <div class="quiz-rationale-box" id="rat-4" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：C</span>
+                <span class="ans-badge">正确答案：B</span>
                 <span class="ans-status" id="status-rat-4"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 轻度家务保洁、餐食筹划准备、采购与财务账单管理属于维持独立居家生活所需的高级复杂技能（IADLs）。A、B、D 均为基础 ADLs。
+                <strong>【中文临床精解】</strong> 医疗照护团队始终践行“以服务对象为中心（Client-Centred Care）”的最高宗旨，核心在于提供安全、尊重、关怀且高质量的照护（Provide quality care）。A 追求数量、C 追求盲目快速（容易忽视安全与沟通），均违背照护伦理；D 在姑息疗护、慢性病管理或临终关怀中往往无法实现“彻底治愈”，照护的重点在于缓解痛苦与提升生活质量。
               </div>
             </div>
           </div>
@@ -1300,31 +1315,31 @@
         <div class="quiz-card" id="qcard-5">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 5 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">5. Who determines the support worker's legal scope of practice?</div>
+            <div class="quiz-stem-en">5. Support workers are:</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-5')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'A', 'rat-5')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">The client and their immediate family members</span>
+              <span class="quiz-opt-text">Unregulated care providers</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-5')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'A', 'rat-5')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Provincial or territorial legislation, employer policies, and training standards</span>
+              <span class="quiz-opt-text">Licensed health care workers</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-5')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'A', 'rat-5')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">The physician exclusively</span>
+              <span class="quiz-opt-text">Members of a professional college</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-5')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'A', 'rat-5')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">The support worker themselves based on past experience</span>
+              <span class="quiz-opt-text">Members of a regulatory body</span>
             </div>
             
           </div>
@@ -1334,11 +1349,11 @@
             </button>
             <div class="quiz-rationale-box" id="rat-5" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：B</span>
+                <span class="ans-badge">正确答案：A</span>
                 <span class="ans-status" id="status-rat-5"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 支持工作者的法定执业范围由三者共同裁定：各省及地区卫生法规、雇主规章制度、以及正规职业教育大纲。案主意愿、医生个人或 PSW 自行决断均无权凌驾于法律红线之上。
+                <strong>【中文临床精解】</strong> 在加拿大绝大多数省份与地区，支持工作者属于“非立法监管照护提供者（Unregulated Care Providers, UCPs）”，其执业不直接由专门的立法发牌学院（如 College of Nurses of Ontario）发牌管理，而是由雇主政策、职业教育大纲及督导护士共同监管。B、C、D 适用于医生、注册护士（RN）、执业药剂师等受监管专业人士（RHPs）。
               </div>
             </div>
           </div>
@@ -1347,31 +1362,31 @@
         <div class="quiz-card" id="qcard-6">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 6 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">6. A support worker is asked by a client to administer an injection of insulin. What should the support worker do?</div>
+            <div class="quiz-stem-en">6. Scope of practice means:</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-6')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'D', 'rat-6')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Administer the injection if the client explains how to do it</span>
+              <span class="quiz-opt-text">The tasks that are assigned by your supervisor</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-6')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'D', 'rat-6')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Refuse the task politely, explain that it is outside their scope of practice, and notify the nurse</span>
+              <span class="quiz-opt-text">The tasks that a client asks you to perform</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-6')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'D', 'rat-6')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">Give the injection only if the family provides written permission</span>
+              <span class="quiz-opt-text">The effort you put into performing a task or procedure</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-6')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'D', 'rat-6')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Administer half the dose to be safe</span>
+              <span class="quiz-opt-text">The limits of your role to prevent client harm</span>
             </div>
             
           </div>
@@ -1381,11 +1396,11 @@
             </button>
             <div class="quiz-rationale-box" id="rat-6" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：B</span>
+                <span class="ans-badge">正确答案：D</span>
                 <span class="ans-status" id="status-rat-6"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 侵入性皮下胰岛素注射属于受监管护士的专有核心医疗操作，严禁未经正式授权委派的 PSW 擅自执行。支持工作者必须礼貌回绝，说明执业范围受限，并立即汇报主管护士安排专业注射。
+                <strong>【中文临床精解】</strong> 执业范围（Scope of Practice）是法律、雇主政策及教育大纲明确规定的执业底线与安全边界（The limits of your role），其根本法律意图是保护案主免遭非专业操作的意外伤害。主管的口头分配（A）或案主的个人要求（B）只要超出法定权限，支持工作者均有法律义务予以拒绝。
               </div>
             </div>
           </div>
@@ -1394,31 +1409,31 @@
         <div class="quiz-card" id="qcard-7">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 7 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">7. Delegation of a task from a nurse to a support worker is:</div>
+            <div class="quiz-stem-en">7. Professionalism is:</div>
           </div>
           <div class="quiz-options-list">
         
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-7')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Permanent and applies to all future clients</span>
+              <span class="quiz-opt-text">A term used to describe workplace settings</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-7')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Client-specific and requires appropriate supervision</span>
+              <span class="quiz-opt-text">An approach to work that demonstrates respect for others, commitment, competence, and appropriate behaviour</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-7')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">An informal agreement between friends at work</span>
+              <span class="quiz-opt-text">A commitment made by regulated professionals</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-7')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Permitted only in emergency life-threatening events</span>
+              <span class="quiz-opt-text">Another term for confidentiality</span>
             </div>
             
           </div>
@@ -1432,7 +1447,7 @@
                 <span class="ans-status" id="status-rat-7"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 任务授权委派具备严格的“单一案主特定性（Client-Specific）”，绝不可自动泛化至其他患者，且护士必须提供全程规范的指导、沟通与监督。
+                <strong>【中文临床精解】</strong> 教材明确指出：专业素养是一种综合工作哲学与行为准则，涵盖对他人（案主、家属及同仁）的尊重、严谨的敬业承诺、精湛的操作胜任力以及端庄合宜的言行举止。即便 PSW 属于非监管群体，同样必须在日常工作中恪守最高水准的专业素养。
               </div>
             </div>
           </div>
@@ -1441,31 +1456,31 @@
         <div class="quiz-card" id="qcard-8">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 8 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">8. If a support worker has not been trained for a delegated task, what is their responsibility?</div>
+            <div class="quiz-stem-en">8. Which of the following is true?</div>
           </div>
           <div class="quiz-options-list">
         
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'C', 'rat-8')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Try their best to perform it anyway</span>
+              <span class="quiz-opt-text">You can use a client's phone to make personal calls.</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'C', 'rat-8')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Ask another untrained support worker to help</span>
+              <span class="quiz-opt-text">Friends can visit you at work.</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'C', 'rat-8')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">Exercise their right and duty to refuse the task and notify the nurse</span>
+              <span class="quiz-opt-text">You must follow your employer's dress code policies.</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'C', 'rat-8')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Watch an online video and perform the task</span>
+              <span class="quiz-opt-text">Sharing your personal problems with a client shows compassion.</span>
             </div>
             
           </div>
@@ -1479,7 +1494,7 @@
                 <span class="ans-status" id="status-rat-8"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 保障案主安全是不可妥协的底线。未受训擅自操作极易致残致死，因此支持工作者拥有神圣的法定拒绝权与报告义务。
+                <strong>【中文临床精解】</strong> 根据教材第 15 页 BOX 1.2（专业仪表与着装守则），严格遵循雇主的着装规范政策（如穿戴干净制服、工牌、防滑闭口工作鞋、无香味政策等）是基本职业操守。选项 A 侵占案主私有财产；选项 B 扰乱工作纪律与场所安全；选项 D 严重越过了职业人际边界（Professional Boundaries），加重案主心理负担，属于违规行为。
               </div>
             </div>
           </div>
@@ -1488,31 +1503,31 @@
         <div class="quiz-card" id="qcard-9">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 9 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">9. In Box 1.1, which of the following is considered a positive professional statement?</div>
+            <div class="quiz-stem-en">9. In a long-term care facility, the client's information should be shared among:</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-9')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'A', 'rat-9')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">"Nobody told me about this."</span>
+              <span class="quiz-opt-text">Health care team members involved in the client's care</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-9')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'A', 'rat-9')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">"I will make sure I do it."</span>
+              <span class="quiz-opt-text">Health care team members and friends who visit the client</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-9')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'A', 'rat-9')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">"It's not my fault, don't blame me."</span>
+              <span class="quiz-opt-text">Family and friends of the client</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-9')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'A', 'rat-9')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">"I work harder than anyone else here."</span>
+              <span class="quiz-opt-text">All staff members at the facility</span>
             </div>
             
           </div>
@@ -1522,11 +1537,11 @@
             </button>
             <div class="quiz-rationale-box" id="rat-9" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：B</span>
+                <span class="ans-badge">正确答案：A</span>
                 <span class="ans-status" id="status-rat-9"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> “我一定会做好（I will make sure I do it）”展现出主动担当、值得托付的积极职业态度；其余三项均为推诿诿过或抱怨的消极言辞。
+                <strong>【中文临床精解】</strong> 根据加拿大健康信息隐私保护法（如安省 PHIPA）及教材保密原则（Confidentiality），个人健康信息仅可在“必要知情范围（Need-to-know basis）”内、于直接参与案主照护的医护成员之间交流。探视朋友（B）、普通亲属（除非持有合法医疗代理授权 POAC）（C）、以及与该案主照护无直接关联的机构其他员工（D）均无权获取隐私医疗记录。
               </div>
             </div>
           </div>
@@ -1535,31 +1550,31 @@
         <div class="quiz-card" id="qcard-10">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 10 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">10. Which practice complies with professional appearance guidelines (Box 1.2)?</div>
+            <div class="quiz-stem-en">10. Critical thinking means:</div>
           </div>
           <div class="quiz-options-list">
         
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'D', 'rat-10')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Wearing strong floral perfume to smell fresh</span>
+              <span class="quiz-opt-text">Keeping one's feelings to oneself</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'D', 'rat-10')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Wearing dangling hoop earrings and multiple bracelets</span>
+              <span class="quiz-opt-text">Approaching your work with enthusiasm</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'D', 'rat-10')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">Wearing long, brightly polished artificial fingernails</span>
+              <span class="quiz-opt-text">Being critical when thinking or speaking of others</span>
             </div>
             
             <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'D', 'rat-10')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Keeping hair tied back off the collar and wearing clean, supportive, non-slip shoes</span>
+              <span class="quiz-opt-text">The ability to think clearly and logically, using reflection and reason</span>
             </div>
             
           </div>
@@ -1573,7 +1588,7 @@
                 <span class="ans-status" id="status-rat-10"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 头发束起离开衣领与穿着防滑耐磨包头支持鞋是标准的医护防护要求。喷洒浓香水（A）违反无香气政策易诱发哮喘；晃荡首饰（B）存在被抓伤撕裂风险；假指甲（C）易划伤老人皮肤并滋生耐药致病菌。
+                <strong>【中文临床精解】</strong> 批判性思维并非盲目“批评（Criticize）”或指责他人，而是一种高阶思维与认知能力，指能够不受情绪与偏见干扰，运用严谨的反思（Reflection）、客观事实与逻辑理性（Reason），对复杂多变的临床状况做出清晰、准确的分析与判断。
               </div>
             </div>
           </div>
@@ -1582,31 +1597,31 @@
         <div class="quiz-card" id="qcard-11">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 11 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">11. Keeping personal matters out of the workplace (Box 1.3) includes which of the following?</div>
+            <div class="quiz-stem-en">11. The acronym DIPPS stands for:</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'C', 'rat-11')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'B', 'rat-11')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Discussing financial problems with compassionate clients</span>
+              <span class="quiz-opt-text">Disability, independence, preferences, policies, privacy, sympathy</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'C', 'rat-11')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'B', 'rat-11')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Asking clients for advice about your marital issues</span>
+              <span class="quiz-opt-text">Dignity, independence, individualized care, preferences, privacy, safety</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'C', 'rat-11')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'B', 'rat-11')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">Using scheduled break times only for personal telephone calls</span>
+              <span class="quiz-opt-text">Discretion, individuality, pity, privacy, support</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'C', 'rat-11')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'B', 'rat-11')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Bringing your children to work when childcare is unavailable</span>
+              <span class="quiz-opt-text">Disability, individuality, pity, privacy, scope of practice</span>
             </div>
             
           </div>
@@ -1616,11 +1631,17 @@
             </button>
             <div class="quiz-rationale-box" id="rat-11" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：C</span>
+                <span class="ans-badge">正确答案：B</span>
                 <span class="ans-status" id="status-rat-11"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> 仅在规定的工间休息时间接打私人电话是恪守职业边界的体现。向服务对象倾诉经济或婚姻烦恼（A、B）会造成角色倒错与情感剥削，带孩子上班（D）严重违反机构规章。
+                <strong>【中文临床精解】</strong> DIPPS 是加拿大支持工作者贯穿全书乃至整个职业生涯的六大核心支柱与照护哲学：
+- **D**ignity（捍卫人格尊严）
+- **I**ndependence（鼓励与促进自主自立）
+- **Individualized Care**（量身定制个性化照护）
+- **P**references（尊重案主个人偏好）
+- **P**rivacy（保障人身与信息隐私）
+- **S**afety（保障身体生理与环境安全）。
               </div>
             </div>
           </div>
@@ -1629,31 +1650,31 @@
         <div class="quiz-card" id="qcard-12">
           <div class="quiz-card-header">
             <span class="quiz-q-pill">Question 12 / 12</span>
-            <span class="quiz-q-topic">Chapter 1 Review</span>
+            <span class="quiz-q-topic">Chapter 1 Review · Page 19</span>
           </div>
           <div class="quiz-q-stem">
-            <div class="quiz-stem-en">12. What does the acronym DIPPS represent in client-centred support work?</div>
+            <div class="quiz-stem-en">12. Which statement is false? When solving problems, you should:</div>
           </div>
           <div class="quiz-options-list">
         
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'C', 'rat-12')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'A', 'D', 'rat-12')">
               <span class="quiz-opt-letter">A</span>
-              <span class="quiz-opt-text">Diagnosis, Intervention, Prescription, Prognosis, Surgery</span>
+              <span class="quiz-opt-text">Consider your scope of practice</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'C', 'rat-12')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'B', 'D', 'rat-12')">
               <span class="quiz-opt-letter">B</span>
-              <span class="quiz-opt-text">Diet, Intake, Pulse, Pressure, Sleep</span>
+              <span class="quiz-opt-text">Consider the principles of client-centred care</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'C', 'rat-12')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'C', 'D', 'rat-12')">
               <span class="quiz-opt-letter">C</span>
-              <span class="quiz-opt-text">Dignity, Independence, Individualized Care, Preferences, Privacy, Safety</span>
+              <span class="quiz-opt-text">Discuss the problem with the client</span>
             </div>
             
-            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'C', 'rat-12')">
+            <div class="quiz-opt-row" onclick="selectQuizOpt(this, 'D', 'D', 'rat-12')">
               <span class="quiz-opt-letter">D</span>
-              <span class="quiz-opt-text">Documentation, Insurance, Policy, Procedures, Supervision</span>
+              <span class="quiz-opt-text">Not involve the client to prevent causing more problems</span>
             </div>
             
           </div>
@@ -1663,11 +1684,11 @@
             </button>
             <div class="quiz-rationale-box" id="rat-12" style="display:none;">
               <div class="rationale-header">
-                <span class="ans-badge">正确答案：C</span>
+                <span class="ans-badge">正确答案：D</span>
                 <span class="ans-status" id="status-rat-12"></span>
               </div>
               <div class="rationale-content">
-                <strong>【中文临床精解】</strong> DIPPS 代表全书六大核心人本照护哲学：Dignity（维护尊严）、Independence（促进自立）、Individualized Care（因人制宜个性化照护）、Preferences（尊重案主偏好）、Privacy（严守隐私保密）、Safety（保障人身安全）。
+                <strong>【中文临床精解】</strong> 题目要求选出**错误（False）**的一项。根据教材第 17 页解决问题四步考量法中的“案主视角（Client's Viewpoint）”，支持工作者必须主动引导案主参与涉及其自身的决策与问题解决过程（Involve clients in solving problems that concern them）。选项 D 采取家长式剥夺案主参与权的做法，严重违背了“以服务对象为中心”与“赋权自立”的伦理宗旨，因此陈述错误，为本题正确选项。
               </div>
             </div>
           </div>
@@ -2350,7 +2371,13 @@
       }
       document.getElementById('currentTitle').innerText = title;
       document.querySelectorAll('.nav-item button').forEach(el => el.classList.remove('active'));
-      event.currentTarget.classList.add('active');
+      // Find matching button
+      const btns = document.querySelectorAll('.nav-item button');
+      btns.forEach(b => {
+        if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(secId)) {
+          b.classList.add('active');
+        }
+      });
       document.getElementById('sidebar').classList.remove('open');
       document.getElementById('contentPane').scrollTop = 0;
     }
