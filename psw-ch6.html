@@ -308,33 +308,180 @@
       margin: 0;
     }
     
-    /* Section Dividers */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar {
-      height: 1px;
-      background: var(--border-subtle);
-      margin-bottom: 18px;
+    /* 4-Tier Thematic & Heading Hierarchy */
+    /* Tier 1: Major Section Banner */
+    .editorial-major-section {
+      margin: 56px 0 24px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 5px solid var(--accent-navy);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .section-eyebrow {
+    .section-banner-head .section-badge {
+      display: inline-block;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent-navy);
-      margin-bottom: 6px;
+      color: #ffffff;
+      background: var(--accent-navy);
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
-    .sh-title-en {
-      font-size: 21px;
+    .section-banner-head .section-title-en {
+      font-size: 22px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .section-banner-head .section-title-cn {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-title-universal {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-summary-tag {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      line-height: 1.5;
+    }
+
+    /* Tier 2: Clinical Sub-topic Card */
+    .editorial-subtopic-card {
+      margin: 36px 0 16px;
+      padding: 14px 18px;
+      background: rgba(30, 58, 138, 0.035);
+      border-left: 3.5px solid var(--accent-navy);
+      border-radius: 0 8px 8px 0;
+    }
+    html.theme-night .editorial-subtopic-card {
+      background: rgba(96, 165, 250, 0.06);
+      border-left-color: #60a5fa;
+    }
+    .subtopic-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-navy);
+      margin-bottom: 4px;
+    }
+    html.theme-night .subtopic-tag {
+      color: #60a5fa;
+    }
+    .subtopic-title-en {
+      font-size: 17.5px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
-    .sh-title-cn {
-      font-size: 15px;
+    .subtopic-title-cn {
+      font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
+    .subtopic-title-universal {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 3: Micro-topic Row */
+    .editorial-microtopic-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .micro-bullet {
+      color: var(--accent-navy);
+      font-size: 12px;
+    }
+    html.theme-night .micro-bullet {
+      color: #60a5fa;
+    }
+    .micro-title-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .micro-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .micro-title-universal {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 4: Chapter Thematic Navigation Jumpbar */
+    .chapter-thematic-nav {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .thematic-nav-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .thematic-nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topic-chip {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+    .topic-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    .topic-chip .chip-num {
+      font-size: 10px;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+
+    /* Legacy section divider fallback */
+    .editorial-section-divider { margin: 48px 0 24px; }
+    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
+    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
+    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
     
     /* Bilingual Paragraphs */
     .bilingual-paragraph {
@@ -623,6 +770,10 @@
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
     html.mode-en .sh-title-cn,
+    html.mode-en .section-title-cn,
+    html.mode-en .subtopic-title-cn,
+    html.mode-en .micro-title-cn,
+    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
     html.mode-en .marker-text-cn,
@@ -635,6 +786,9 @@
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
     html.mode-cn .sh-title-en,
+    html.mode-cn .section-title-en,
+    html.mode-cn .subtopic-title-en,
+    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
     html.mode-cn .marker-text-en,
     html.mode-cn .eq-stem-en { display: none !important; }
@@ -674,6 +828,33 @@
       }
       .hero-title-en { font-size: 22px; }
       .hero-title-cn { font-size: 15.5px; }
+      
+      .editorial-major-section {
+        padding: 16px 14px;
+        margin: 36px 0 16px;
+        border-radius: 10px;
+      }
+      .section-banner-head .section-title-en { font-size: 18.5px; }
+      .section-banner-head .section-title-cn { font-size: 15px; }
+      .section-banner-head .section-title-universal { font-size: 17px; }
+      
+      .editorial-subtopic-card {
+        padding: 10px 12px;
+        margin: 24px 0 12px;
+      }
+      .subtopic-title-en { font-size: 16px; }
+      .subtopic-title-cn { font-size: 13.5px; }
+      .subtopic-title-universal { font-size: 15px; }
+      
+      .editorial-microtopic-row {
+        margin: 18px 0 8px;
+        flex-wrap: wrap;
+      }
+      .micro-title-en { font-size: 14.5px; }
+      .micro-title-cn { font-size: 13px; }
+      
+      .thematic-nav-chips { gap: 4px; }
+      .topic-chip { padding: 3px 8px; font-size: 11px; }
       
       .box-banner-header { padding: 12px 14px 10px; }
       .box-body-content { padding: 12px 14px 14px; }
@@ -723,30 +904,42 @@
         <span class="meta-item">Pages 77–95 · 11 道全真自测题</span>
         <span class="meta-item">轻触段落即可播放真人原声导读</span>
       </div>
+      
+        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
+          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
+          <div class="thematic-nav-chips">
+            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 历史演进、全人理念与</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 加拿大</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 疾病与残疾：临床分类</a><a href="#sec-06" class="topic-chip"><span class="chip-num">§ 06</span> 慈悲关怀与人本支持实</a><a href="#sec-07" class="topic-chip"><span class="chip-num">§ 07</span> 临床批判性思维修炼</a>
+          </div>
+        </nav>
+        
+      
+        <div class="page-jump-ribbon">
+          <span class="ribbon-label">原书页码检索:</span>
+          <div class="ribbon-scroll">
+            <a href="#page-77" class="ribbon-chip">p.77</a><a href="#page-78" class="ribbon-chip">p.78</a><a href="#page-79" class="ribbon-chip">p.79</a><a href="#page-82" class="ribbon-chip">p.82</a><a href="#page-87" class="ribbon-chip">p.87</a><a href="#page-91" class="ribbon-chip">p.91</a><a href="#page-94" class="ribbon-chip">p.94</a>
+          </div>
+        </div>
+        
     </header>
 
     <main class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 6 Opener & Learning Objectives (Page 77)</h3>
+                        <div class="page-anchor-marker" id="page-77">
+                          <span class="marker-pill">Page 77</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-01">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 6 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
                   </div>
-                </div>
+                </section>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
-                  </div>
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="0.0" data-end="47.04" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -756,15 +949,16 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【核心专业术语表】Chapter 6 Key Terms (Page 78)</h3>
+                        <div class="page-anchor-marker" id="page-78">
+                          <span class="marker-pill">Page 78</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-02">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 6 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
                   </div>
-                </div>
+                </section>
                 
             <div class="key-terms-section">
               <div class="kt-section-header">
@@ -1126,25 +1320,34 @@
                 </div></div>
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第一节：历史演进、全人理念与健康五大维度 (Pages 79 - 82)</h3>
+                        <div class="page-anchor-marker" id="page-79">
+                          <span class="marker-pill">Pages 79 - 82</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-03">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第一节：历史演进、全人理念与健康五大维度</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Historical Perspective & The Concept of Holism</h3><div class="subtopic-title-cn">历史视角的演变与全人健康哲学</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">历史视角的演变与全人健康哲学 (Historical Perspective & The Concept of Holism)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="Historical Perspective & The Concept of Holism" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">A support worker's job is to help clients achieve or maintain optimal health. But what exactly is "health"? In the nineteenth century, good health was defined simply as the absence of disease. If a person was not acutely sick in bed with an infectious illness such as tuberculosis, cholera, or diphtheria, they were considered healthy. In 1948, the World Health Organization (WHO) revolutionized health philosophy by defining health as: "a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity." Today, health is understood through holism. Holism is a concept that considers the whole person. A whole person has physical, social, emotional, cognitive, and spiritual dimensions. Holistic health recognizes that all five dimensions are deeply interrelated and that a change or crisis in one dimension directly reverberates through all others. Health and wellness lie on a continuum. At one end of the continuum is optimal health or wellness-a state of peak physical vitality, emotional resilience, social integration, and spiritual peace. At the opposite end is severe illness, incapacitating disability, or premature death. An individual's position on this continuum is never static; it fluctuates constantly throughout life based on age, life events, illnesses, personal choices, and coping abilities. <br><br></p>
                       <p class="para-cn">支持工作者的天职，在于竭尽全力协助受助案主达成并维系其生命所能达到的“最优健康状态”（Optimal Health）。然而，究竟什么是真正的“健康”？ 在 19 世纪工业革命时代，医学界对健康的理解极其狭隘，仅仅将其简单定义为“未罹患疾病”（The absence of disease）。如果一个人没有因肺结核、霍乱或白喉等致命传染病卧床不起，传统观点便将其视为“健康体魄”。 1948 年，世界卫生组织（WHO）以划时代的宪章重塑了全人类的健康哲学，将健康庄严界定为：“一种身体躯体、心理精神与社会适应层面的完全充实与完好状态，而绝非仅仅是没有疾病或虚弱羸弱。” 在当代加拿大医学与支持护理体系中，健康是通过“全人理念”（Holism）来深刻理解的。整体论主张：人绝不是一堆孤立运转的生物器官拼凑，而是一个具有深层灵魂的鲜活整全生命体！一个完整的人必然包含身体（Physical）、社交（Social）、情绪（Emotional）、认知（Cognitive）以及精神（Spiritual）五大共生维度。全人健康哲学明确指出：这五大维度血肉交融、休戚与共；任何一个维度遭受挫败、病变或创伤，必然会引发其他所有维度的剧烈连锁震荡！ 健康与安康不是一种非黑即白的静止标签，而是分布在一个动态滑动的“健康连续谱”（Health-Illness Continuum）之上。在连续谱的一端，是生机盎然的“最优安康状态”（Optimal Wellness）——拥有强健的抗病体魄、开朗的情绪韧性、融洽的社交支持以及内心的宁静自洽；而在连续谱的另一极端，则是重疾缠身、功能衰竭与濒死痛苦。任何人在生命旅途中所处的位置绝非一成不变，而是随着年龄增长、突发生活变故、慢性病进展、个人生活方式抉择以及心理抗挫能力在谱系上不断动态滑动迁移。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">健康的五大维度深度解析 (The Five Dimensions of Health)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Five Dimensions of Health</h3><div class="subtopic-title-cn">健康的五大维度深度解析</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="The Five Dimensions of Health" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">The five dimensions of health that constitute the whole person are: 1. Physical Health: Achieved when the body is strong, fit, energetic, and free from active disease or injury. It is influenced by genetics, nutrition, hydration, restorative sleep, regular physical activity, personal hygiene, and safety practices (such as wearing seat belts and avoiding smoking or substance abuse). 2. Emotional Health: Well-being in the emotional dimension, achieved when people feel secure, valued, and positive about themselves. Emotionally healthy individuals have self-esteem, self-control, and the ability to express feelings (such as love, joy, sorrow, fear, and anger) appropriately without being overwhelmed. 3. Social Health: Achieved through satisfying, stable, and trusting interpersonal relationships with family, friends, neighbours, and colleagues. It involves communicating effectively, showing empathy, and having a reliable social support system-an informal network of people who help each other through life's challenges (FIGURE 6.2). 4. Cognitive Health: Well-being in the intellectual dimension, achieved through an active, curious, and stimulated mind. It involves critical thinking, problem-solving, curiosity about the world, lifelong learning, and memory retention. 5. Spiritual Health: Achieved through belief in a purpose greater than the self, inner peace, and personal moral values. Spiritual health may be expressed through organized religion, prayer, meditation, artistic creation, or a deep connection to nature. <br><br>Personal factors that influence these dimensions include: • Personal life skills and problem-solving abilities. • Stress levels and personal coping mechanisms. • Cultural beliefs and health habits. • Social connections and sense of belonging. • Sense of personal control over life events. <br><br></p>
@@ -1152,17 +1355,22 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第二节：加拿大 12 大关键健康决定因素 (Pages 82 - 86)</h3>
+                        <div class="page-anchor-marker" id="page-82">
+                          <span class="marker-pill">Pages 82 - 86</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-04">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第二节：加拿大 12 大关键健康决定因素</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The 12 Key Determinants of Health in Canada</h3><div class="subtopic-title-cn">公共卫生视角与宏观健康决定因素</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">公共卫生视角与宏观健康决定因素 (The 12 Key Determinants of Health in Canada)</h4>
-
+                
                 <div class="editorial-box-opener" style="margin-top:36px;">
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
@@ -1174,14 +1382,15 @@
                   </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">专栏 6.1：健康社会决定因素对照：加拿大国家版本与世界卫生组织（WHO）全球版本深度对比</h4>
                     </div>
-                    <h3 class="sh-title-en">专栏 6.1：健康社会决定因素对照：加拿大国家版本与世界卫生组织（WHO）全球版本深度对比</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="249.74" data-end="437.93" data-title="The 12 Key Determinants of Health in Canada" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1191,24 +1400,26 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-case">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
+                      </div>
+                      <h4 class="box-title-en">CASE STUDY: Jason and His Determinants of Health</h4>
                     </div>
-                    <h3 class="sh-title-en">CASE STUDY: Jason and His Determinants of Health</h3>
-                  </div>
+                  </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">临床案例实操思维修炼：杰森与他的健康决定因素链条反思</h4>
                     </div>
-                    <h3 class="sh-title-en">临床案例实操思维修炼：杰森与他的健康决定因素链条反思</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="437.93" data-end="519.91" data-title="Illness vs Disability" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1220,7 +1431,7 @@
                 <aside class="editorial-box-container box-theme-teal">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🤝</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">DIGNITY & RESPECT · 人格尊严与多元文化照护守则</span>
                     </div>
                     <h4 class="box-title-en">BOX 6.1 Social Determinants of Health: The Real Causes of Sickness Health disparities are not simply due to poor biological luck or individual bad habits. They are deeply rooted in social, economic, and political structures. When support workers recognize the social determinants of health, they stop blaming clients for their health challenges and instead advocate for equitable care, dignity, and compassion.</h4>
@@ -1235,25 +1446,34 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第三节：疾病与残疾：临床分类与心理危机应对 (Pages 87 - 90)</h3>
+                        <div class="page-anchor-marker" id="page-87">
+                          <span class="marker-pill">Pages 87 - 90</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-05">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第三节：疾病与残疾：临床分类与心理危机应对</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Illness vs Disability</h3><div class="subtopic-title-cn">疾病与残疾的科学分类</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">疾病与残疾的科学分类 (Illness vs Disability)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="656.66" data-end="750.67" data-title="Compassionate Care & Overcoming Stigma" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Although often used interchangeably in casual conversation, illness and disability have distinct clinical definitions: • Illness: The loss of physical or mental health. Illness may be temporary or permanent. - Acute Illness: An illness that appears suddenly and lasts for a relatively short time (e.g., influenza, pneumonia, appendicitis, bone fractures). Most people recover fully from an acute illness. - Persistent (Chronic) Illness: A slow, progressive, long-term illness that cannot be cured, although its symptoms and complications can often be managed through medical therapies and lifestyle modifications (e.g., type 2 diabetes, chronic obstructive pulmonary disease [COPD], Parkinson's disease, Alzheimer's disease). • Disability: The loss of physical, sensory, or mental function. A disability may be present from birth (congenital) or acquired through illness or injury (e.g., blindness, deafness, paraplegia, limb amputation, intellectual disability). <br><br>Rick Hansen, Canadian accessibility activist and world-renowned wheelchair athlete, powerfully expressed: "There is nothing you can't do, if you set your mind to it. Anything is possible. My disability is that I cannot use my legs. My handicap is your negative perception of that disability, and thus of me." <br><br></p>
                       <p class="para-cn">尽管在世俗日常口语中，“疾病”与“残疾”常被混为一谈，但在严谨的加拿大临床医学与支持护理体系中，二者具有截然不同的专业内涵： • 疾病（Illness）：是指机体生理系统或心理精神健康状态的受损与机能偏离。疾病可分为两大形态： - 急性疾病（Acute Illness）：起病急骤、症状剧烈但持续病程相对较短的疾患（如急性季节性流感、大叶性肺炎、急性阑尾炎、单纯性闭合性骨折）。在接受规范抗感染或外科治疗后，绝大多数案主能够完全恢复基线健康。 - 持续性/慢性疾病（Persistent or Chronic Illness）：起病隐匿、进展缓慢、病程迁延数年甚至终生不可彻底治愈的慢性疾患（如 2 型糖尿病、慢性阻塞性肺疾病 COPD、帕金森病、阿尔茨海默病）。虽然现代医学无法彻底根治，但通过规律药物维持治疗与生活方式干预，能够有效延缓其并发症进展。 • 残疾（Disability）：是指机体解剖结构、感觉器官或中枢神经系统运动/认知功能的丧失。残疾既可以是先天性遗传畸形（Congenital），也可以是因后天严重外伤或心脑血管意外导致的后天获得性功能缺失（如双目失明、全聋、脊髓损伤导致的高位截瘫、外伤截肢、智力发展障碍）。 <br><br>加拿大举世闻名的截瘫轮椅运动员、无障碍权益运动领袖里克·汉森（Rick Hansen）曾留下一句震聋发聩的名言： “只要你下定决心，就没有什么事情是你做不到的，一切皆有可能。我的‘残疾’（Disability），仅仅在于我无法支配我的双腿行走；而真正让我举步维艰的‘社会残障阻碍’（Handicap），却在于社会公众对我身体残疾、以及对我个人能力所持有的狭隘偏见！” <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">面对疾病与残疾的心理行为防御反应 (Reactions to Illness and Disability)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Reactions to Illness and Disability</h3><div class="subtopic-title-cn">面对疾病与残疾的心理行为防御反应</div>
+                </div>
+                
                 <div class="editorial-box-opener" style="margin-top:36px;">
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
@@ -1265,14 +1485,15 @@
                   </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">专栏 6.2：案主面对突发疾病与残疾时的常见身心防御与情绪反应</h4>
                     </div>
-                    <h3 class="sh-title-en">专栏 6.2：案主面对突发疾病与残疾时的常见身心防御与情绪反应</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="750.67" data-end="898.56" data-title="The Power of Routines in Chronic Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1284,7 +1505,7 @@
                 <aside class="editorial-box-container box-theme-amber">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚠️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">LEGAL & CLINICAL ALERT · 临床过失警示与应对铁律</span>
                     </div>
                     <h4 class="box-title-en">BOX 6.2): 1. Denial: Refusing to acknowledge the reality of the illness or diagnosis ("There must be a mistake in the laboratory results; I feel perfectly fine!"). Denial can initially protect the person from acute psychological shock, but becomes dangerous if it prevents the client from seeking lifesaving medical treatments. 2. Anger: Expressing frustration, resentment, and bitterness over the unfairness of the situation ("Why me? What did I ever do to deserve this?"). Clients often displace their anger onto support workers, nurses, or family members. 3. Bargaining: Attempting to make deals, often with God, spiritual powers, or health professionals, to postpone death or reverse the illness ("If I can just live to see my daughter get married, I will never complain again"). 4. Depression and Grief: Overwhelming feelings of sadness, mourning the loss of health, physical abilities, career, and independence. Clients may become withdrawn, refuse food, or weep openly. 5. Fear and Anxiety: Dread of the unknown, fear of physical pain, fear of becoming a burden to loved ones, and anxiety over financial ruin or abandonment. 6. Acceptance: Reaching a state of peaceful acknowledgment of reality. The client accepts their physical limitations and focuses on maximizing remaining abilities and finding meaning in life.</h4>
@@ -1299,17 +1520,22 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第四节：慈悲关怀与人本支持实务准则 (Pages 91 - 93)</h3>
+                        <div class="page-anchor-marker" id="page-91">
+                          <span class="marker-pill">Pages 91 - 93</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-06">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 06 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第四节：慈悲关怀与人本支持实务准则</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 6.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Compassionate Care & Overcoming Stigma</h3><div class="subtopic-title-cn">慈悲关怀与克服社会污名化</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">慈悲关怀与克服社会污名化 (Compassionate Care & Overcoming Stigma)</h4>
-
+                
                 <div class="editorial-box-opener" style="margin-top:36px;">
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
@@ -1321,14 +1547,15 @@
                   </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">专栏 6.3：倡导残障人士积极社会形象的法定专业包容性语言规范指引（加拿大国家标准）</h4>
                     </div>
-                    <h3 class="sh-title-en">专栏 6.3：倡导残障人士积极社会形象的法定专业包容性语言规范指引（加拿大国家标准）</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1358,7 +1585,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 6.3 Suggested Guidelines for Providing Compassionate Care • Treat every client as a whole, unique individual, never as "the stroke patient in Room 12" or "the diabetic foot ulcer". • Practice active, nonjudgemental listening: give clients your undivided attention and validate their fears and grief. • Encourage independence: celebrate small triumphs and never rush a client who is trying to dress or eat independently. • Communicate clearly, gently, and with genuine warmth. • Protect dignity and modesty at all times during personal hygiene care. • Involve clients in daily decision-making to restore their sense of personal control. • Support the client's family with patience, understanding, and empathy.</h4>
@@ -1373,17 +1600,22 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第五节：临床批判性思维修炼 (Page 94)</h3>
+                        <div class="page-anchor-marker" id="page-94">
+                          <span class="marker-pill">Page 94</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-07">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 07 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第五节：临床批判性思维修炼</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 7.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Power of Routines in Chronic Care</h3><div class="subtopic-title-cn">杰因兹先生的早餐热麦片：日常作息背后的心理安全感与自决主权</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">杰因兹先生的早餐热麦片：日常作息背后的心理安全感与自决主权 (The Power of Routines in Chronic Care)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">CRITICAL THINKING IN PRACTICE (Page 94) Mr. Jaynz is an 84-year-old resident in a long-term care facility who lives with severe osteoarthritis and mild cognitive impairment. Every morning of his adult life, Mr. Jaynz has eaten a specific bowl of warm oatmeal porridge with brown sugar for breakfast, and another small bowl before bedtime. One morning, the kitchen runs out of oatmeal and the dietary aide substitutes cold cornflakes without consulting him. When you bring the tray into Mr. Jaynz's room, he becomes visibly agitated, pushes the tray away violently, and refuses to get dressed or participate in his morning physiotherapy. • Why are long-standing routines, such as eating warm cereal, profoundly important to older adults living with chronic illness or disability? • How does abruptly disrupting a familiar routine affect Mr. Jaynz's cognitive, emotional, and physical well-being? • How should you advocate for Mr. Jaynz and resolve this crisis using DIPPS principles? <br><br>Clinical Guidelines for Support Workers: 1. The Psychological Significance of Daily Routines: For older adults living in institutional facilities, chronic illness and physical decline strip away almost all independence and personal control. They cannot choose when to wake up, who provides their bath, or what medications they take. In this disorienting environment, deeply ingrained daily routines provide vital anchors of predictability, cognitive security, and comfort. 2. The Consequences of Abrupt Disruption: Varying Mr. Jaynz's cherished routine is not merely about breakfast cereal; to him, it represents a catastrophic loss of control, an insult to his dignity, and a frightening disruption of his daily reality. His agitation, tray-pushing, and refusal to participate in physiotherapy are distress responses to perceived helplessness. 3. Professional Action Plan: • Acknowledge and validate Mr. Jaynz's feelings with genuine empathy: "Mr. Jaynz, I see how upsetting this is. You always enjoy your warm oatmeal, and cold cereal was not what you expected." • Never scold or force him to eat the cold cereal. • Immediately contact the kitchen or supervisor to see if warm porridge can be quickly prepared or a warm nutritious alternative (such as warm cream of wheat) provided. • Ensure the dietary department updates Mr. Jaynz's permanent meal profile so that this breakdown is not repeated. • Once Mr. Jaynz feels heard and respected, gently assist him with his morning routine and physiotherapy. <br><br></p>

@@ -308,33 +308,180 @@
       margin: 0;
     }
     
-    /* Section Dividers */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar {
-      height: 1px;
-      background: var(--border-subtle);
-      margin-bottom: 18px;
+    /* 4-Tier Thematic & Heading Hierarchy */
+    /* Tier 1: Major Section Banner */
+    .editorial-major-section {
+      margin: 56px 0 24px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 5px solid var(--accent-navy);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .section-eyebrow {
+    .section-banner-head .section-badge {
+      display: inline-block;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent-navy);
-      margin-bottom: 6px;
+      color: #ffffff;
+      background: var(--accent-navy);
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
-    .sh-title-en {
-      font-size: 21px;
+    .section-banner-head .section-title-en {
+      font-size: 22px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .section-banner-head .section-title-cn {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-title-universal {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-summary-tag {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      line-height: 1.5;
+    }
+
+    /* Tier 2: Clinical Sub-topic Card */
+    .editorial-subtopic-card {
+      margin: 36px 0 16px;
+      padding: 14px 18px;
+      background: rgba(30, 58, 138, 0.035);
+      border-left: 3.5px solid var(--accent-navy);
+      border-radius: 0 8px 8px 0;
+    }
+    html.theme-night .editorial-subtopic-card {
+      background: rgba(96, 165, 250, 0.06);
+      border-left-color: #60a5fa;
+    }
+    .subtopic-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-navy);
+      margin-bottom: 4px;
+    }
+    html.theme-night .subtopic-tag {
+      color: #60a5fa;
+    }
+    .subtopic-title-en {
+      font-size: 17.5px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
-    .sh-title-cn {
-      font-size: 15px;
+    .subtopic-title-cn {
+      font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
+    .subtopic-title-universal {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 3: Micro-topic Row */
+    .editorial-microtopic-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .micro-bullet {
+      color: var(--accent-navy);
+      font-size: 12px;
+    }
+    html.theme-night .micro-bullet {
+      color: #60a5fa;
+    }
+    .micro-title-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .micro-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .micro-title-universal {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 4: Chapter Thematic Navigation Jumpbar */
+    .chapter-thematic-nav {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .thematic-nav-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .thematic-nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topic-chip {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+    .topic-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    .topic-chip .chip-num {
+      font-size: 10px;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+
+    /* Legacy section divider fallback */
+    .editorial-section-divider { margin: 48px 0 24px; }
+    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
+    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
+    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
     
     /* Bilingual Paragraphs */
     .bilingual-paragraph {
@@ -623,6 +770,10 @@
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
     html.mode-en .sh-title-cn,
+    html.mode-en .section-title-cn,
+    html.mode-en .subtopic-title-cn,
+    html.mode-en .micro-title-cn,
+    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
     html.mode-en .marker-text-cn,
@@ -635,6 +786,9 @@
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
     html.mode-cn .sh-title-en,
+    html.mode-cn .section-title-en,
+    html.mode-cn .subtopic-title-en,
+    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
     html.mode-cn .marker-text-en,
     html.mode-cn .eq-stem-en { display: none !important; }
@@ -674,6 +828,33 @@
       }
       .hero-title-en { font-size: 22px; }
       .hero-title-cn { font-size: 15.5px; }
+      
+      .editorial-major-section {
+        padding: 16px 14px;
+        margin: 36px 0 16px;
+        border-radius: 10px;
+      }
+      .section-banner-head .section-title-en { font-size: 18.5px; }
+      .section-banner-head .section-title-cn { font-size: 15px; }
+      .section-banner-head .section-title-universal { font-size: 17px; }
+      
+      .editorial-subtopic-card {
+        padding: 10px 12px;
+        margin: 24px 0 12px;
+      }
+      .subtopic-title-en { font-size: 16px; }
+      .subtopic-title-cn { font-size: 13.5px; }
+      .subtopic-title-universal { font-size: 15px; }
+      
+      .editorial-microtopic-row {
+        margin: 18px 0 8px;
+        flex-wrap: wrap;
+      }
+      .micro-title-en { font-size: 14.5px; }
+      .micro-title-cn { font-size: 13px; }
+      
+      .thematic-nav-chips { gap: 4px; }
+      .topic-chip { padding: 3px 8px; font-size: 11px; }
       
       .box-banner-header { padding: 12px 14px 10px; }
       .box-body-content { padding: 12px 14px 14px; }
@@ -723,30 +904,55 @@
         <span class="meta-item">Pages 1–19 · 12 道全真自测题</span>
         <span class="meta-item">轻触段落即可播放真人原声导读</span>
       </div>
+      
+        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
+          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
+          <div class="thematic-nav-chips">
+            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 支持工作的本质与崇高</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 支持工作在加拿大全境</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 支持工作者的六大核心</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 支持工作者真实一日工</a><a href="#sec-06" class="topic-chip"><span class="chip-num">§ 06</span> 受助人群类别与服务对</a><a href="#sec-07" class="topic-chip"><span class="chip-num">§ 07</span> 受监管医护人员与未受</a><a href="#sec-08" class="topic-chip"><span class="chip-num">§ 08</span> 跨学科医疗团队全览表</a><a href="#sec-09" class="topic-chip"><span class="chip-num">§ 09</span> 法定执业范围、督导机</a><a href="#sec-10" class="topic-chip"><span class="chip-num">§ 10</span> 展现专业素养、仪表与</a><a href="#sec-11" class="topic-chip"><span class="chip-num">§ 11</span> 以服务对象为中心的照</a><a href="#sec-12" class="topic-chip"><span class="chip-num">§ 12</span> 临床批判性思维与解决</a><a href="#sec-13" class="topic-chip"><span class="chip-num">§ 13</span> 全书章节要点回顾与批</a>
+          </div>
+        </nav>
+        
+      
+        <div class="page-jump-ribbon">
+          <span class="ribbon-label">原书页码检索:</span>
+          <div class="ribbon-scroll">
+            <a href="#page-1" class="ribbon-chip">p.1</a><a href="#page-2" class="ribbon-chip">p.2</a><a href="#page-3" class="ribbon-chip">p.3</a><a href="#page-4" class="ribbon-chip">p.4</a><a href="#page-5" class="ribbon-chip">p.5</a><a href="#page-9" class="ribbon-chip">p.9</a><a href="#page-10" class="ribbon-chip">p.10</a><a href="#page-11" class="ribbon-chip">p.11</a><a href="#page-13" class="ribbon-chip">p.13</a><a href="#page-14" class="ribbon-chip">p.14</a><a href="#page-16" class="ribbon-chip">p.16</a><a href="#page-17" class="ribbon-chip">p.17</a><a href="#page-18" class="ribbon-chip">p.18</a>
+          </div>
+        </div>
+        
     </header>
 
     <main class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 1 Opener & Learning Objectives (Page 1)</h3>
+                        <div class="page-anchor-marker" id="page-1">
+                          <span class="marker-pill">Page 1</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-01">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 1 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">学习目标 (Objectives)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="0.0" data-end="50.9" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">After reading this chapter, the learner should be able to do the following: 1. Identify the role support workers play within the health care team. 2. Describe the goal of support work. 3. Differentiate between activities of daily living (ADLs) and instrumental activities of daily living (IADLs). 4. Describe the main responsibilities of the support worker. 5. Describe the importance of understanding the roles and responsibilities of support work. 6. Distinguish between regulated and unregulated health care providers. 7. Describe the significance of having a professional approach to support work. 8. Identify the things to consider when thinking critically and solving problems. 9. List the principles of client-centred care. <br><br></p>
                       <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： 1. 明确支持工作者在整个跨学科医疗卫生照护团队中所扮演的角色。 2. 阐述支持工作的根本执业宗旨与终极目标。 3. 准确区分“基础日常生活活动”（ADLs）与“工具性日常生活活动”（IADLs）。 4. 详尽阐述支持工作者的六大核心工作职责范畴。 5. 阐明深刻理解支持工作角色范畴与法定责任对执业安全的重要意义。 6. 明晰受监管专业医护人员与未受监管健康照护人员的法律界限。 7. 阐明在日常支持工作中秉持专业素养与严谨态度的重要价值。 8. 掌握在进行临床批判性思维与解决实际照护难题时必须考量的四大核心要素。 9. 准确列举“以服务对象为中心”的 DIPPS 核心人本照护原则。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">核心专业术语表 (Key Terms) (Page 1)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 1.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Key Terms</h3><div class="subtopic-title-cn">核心专业术语表</div>
+                </div>
+                
             <div class="key-terms-section">
               <div class="kt-section-header">
                 <h3 class="kt-title">KEY TERMS · 第 1 章核心专业术语速查表</h3>
@@ -951,25 +1157,34 @@
                 </div></div>
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第一节：支持工作的本质与崇高宗旨 (Pages 2 - 3)</h3>
+                        <div class="page-anchor-marker" id="page-2">
+                          <span class="marker-pill">Pages 2 - 3</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-02">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第一节：支持工作的本质与崇高宗旨</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 2.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">What is a Support Worker & Client?</h3><div class="subtopic-title-cn">支持工作者的定义与服务对象</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">支持工作者的定义与服务对象 (What is a Support Worker & Client?)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="50.9" data-end="73.82" data-title="What is a Support Worker & Client?" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Support workers provide care and assistance to clients of any age who have defined health care needs and who require help with their daily activities, whether they live in a facility or in the community. <em>Client</em> is a general term for any person receiving care or support services in a community setting, such as hospital patients, facility residents, and clients in the community. <br><br></p>
                       <p class="para-cn">支持工作者（Support Worker）为处于任何年龄段、具有明确医疗健康与照护需求，且在日常生活活动中需要协助的人士提供专业照料与支持服务，无论其身处机构环境还是社区之中。“服务对象”（Client）是对在各类照护场景中接受医疗照护或支持服务的所有个体的总称，涵盖医院中的患者（Patients）、照护机构中的院舍长者/居民（Residents）以及居住在社区家庭中的案主（Community Clients）。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">支持工作的终极目标 (The Ultimate Goal of Support Work)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 2.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Ultimate Goal of Support Work</h3><div class="subtopic-title-cn">支持工作的终极目标</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="73.82" data-end="111.72" data-title="The Ultimate Goal of Support Work" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">The ultimate goal of support work is to improve the quality of life of the client and family by offering client-centred care and support in a safe, kind, sensitive, caring, and understanding manner. Support workers can make a difference in people's lives by alleviating loneliness, providing empathy, ensuring comfort, encouraging independence, and promoting the client's self-respect (FIGURE 1.1). They support the client and family in a holistic manner by addressing the client's physical, psychological, social, cognitive, cultural, and spiritual needs and advocate for the client by speaking or acting on the client's behalf. <br><br></p>
@@ -982,139 +1197,198 @@
                   <figcaption class="ef-caption-en"><strong>图 1.1 教学图示：支持工作者给予服务对象温情抚慰</strong><br>*FIGURE 1.1: A support worker comforts a client. (iStockphoto/FG Trade.)*<br>【临床启示】体温般的肢体触碰与专注倾听，是消除机构长者孤独感、传递安全感最有力的非语言沟通工具。</figcaption>
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">团队协作、执业规制与专业严谨性 (Teamwork, Legislation, and Professional Discretion)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 2.3 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Teamwork, Legislation, and Professional Discretion</h3><div class="subtopic-title-cn">团队协作、执业规制与专业严谨性</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="111.72" data-end="150.72" data-title="Teamwork, Legislation, and Professional Discretion" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Support workers may work as part of a health care team or work individually with a client. Legislation, employer policies, and a client's condition all influence how support workers function and how much supervision they need. They may collaborate with health care providers or with professionals outside of the health care sector, depending on the needs of their clients. Support workers must use discretion at all times and honour the client's right to confidentiality whenever discussing the client's case with co-workers. Support workers are expected to adapt their work style to the setting and to the needs and wishes of the client receiving care. <br><br></p>
                       <p class="para-cn">支持工作者既可以作为多学科医疗照护团队的一员协同工作，也可以一对一单独为某位服务对象提供照护。省级法律法规、雇主管理规章制度以及服务对象自身的健康状况，共同决定了支持工作者具体如何履行职责以及需要接受何种程度的临床督导。根据服务对象的实际需求，他们可能需要与专业医护人员协作，亦可能需要与医疗卫生体系之外的其他专业人士协作。在任何时候与同事探讨案情时，支持工作者都必须秉持高度的审慎明辨（Discretion），并恪守服务对象的隐私保密权（Right to Confidentiality）。支持工作者必须具备高度的专业灵活性，能够根据不同的工作环境以及受助个体的具体需求与意愿，敏锐调整自身的工作方式与服务风格。 <br><br></p>
                     </article>
                     
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第二节：支持工作在加拿大全境的职业现状与场所 (Pages 3 - 4)</h3>
+                        <div class="page-anchor-marker" id="page-3">
+                          <span class="marker-pill">Pages 3 - 4</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-03">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第二节：支持工作在加拿大全境的职业现状与场所</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Support Work Across Canada</h3><div class="subtopic-title-cn">加拿大各省职业称谓与现状差异</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">加拿大各省职业称谓与现状差异 (Support Work Across Canada)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="150.72" data-end="265.92" data-title="Support Work Across Canada" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">The nature of support work varies across the country. There are differences in educational programs, work settings, job responsibilities, and terms used to describe support workers. Some sections of this text may not apply to support work in your particular city, province, or territory. If you are unsure about which parts apply to your area, ask your instructor or employer. <br><br>The term <em>support worker</em> refers to the worker who provides personal care and support services. However, <em>assisted-living worker</em>, <em>personal support worker</em>, <em>personal attendant</em>, <em>patient care assistant</em>, <em>resident care aide</em>, <em>resident care attendant</em>, <em>health care aide</em>, <em>home care attendant</em>, <em>home support worker</em>, <em>nursing aide</em>, <em>nursing attendant</em>, <em>community health worker</em>, or <em>continuing care assistant</em>—among other titles—may be used in your province or territory to describe similar (but not always equivalent) jobs. The Appendix at the end of this book lists the support worker's titles in each province and territory. Because of the wide variety of titles, the general public may not be aware of what support workers are called in their own province or territory or even within a facility they use. It is the role of support workers, their employing agencies, other health care providers, and their province's or territory's Ministry of Health to inform others of their role and how it fits in their current health care structure. <br><br>This list may also include several titles that are not equivalent to one another. For example, in Ontario, developmental service workers (DSWs) play a different role and follow different educational standards than personal support workers (PSWs), and yet both are considered to be support workers within the health care team. In some parts of Canada, the term <em>personal attendant</em> refers to a worker who is supervised directly by the person for whom they provide support services; personal attendants support people with physical disabilities. Educational programs to become a personal attendant are generally shorter than those for support workers. <br><br></p>
                       <p class="para-cn">支持工作的性质在加拿大全境各省与地区之间存在一定差异。这种差异体现在培训教育大纲、工作场所类型、具体工作职责以及用于描述该职业的官方头衔上。本书中的某些章节可能并不完全适用于你所在的特定城市、省份或地区。如果你对自己所在地区适用的具体法规存在疑问，请及时向你的授课教师或雇主咨询。 <br><br>“支持工作者”（Support Worker）是一个统称，特指提供个人照护与支持服务的专业从业人员。然而，在各个省份或地区，可能会使用以下头衔来描述类似（但并非完全等同）的岗位：辅助生活护理员（Assisted-living worker）、个人支持工作者（Personal support worker, PSW）、私人照护员（Personal attendant）、病患照护助理（Patient care assistant）、院舍照护助理（Resident care aide）、院舍照护员（Resident care attendant）、医疗保健照料员（Health care aide, HCA）、居家护理员（Home care attendant）、居家支持工作者（Home support worker）、护理助理（Nursing aide）、护士助手（Nursing attendant）、社区卫生工作者（Community health worker）或持续照料助理（Continuing care assistant, CCA）等。本书文末的附录详细汇总列出了各个省与地区对该岗位的官方头衔。 <br><br>正因为头衔百花齐放，社会公众往往并不完全了解在自己所在的省份、地区乃至他们所使用的医疗机构中这些护理人员的正式称谓。支持工作者本人、其受雇机构、医疗团队中的其他医护人员以及各省和地区的卫生厅（Ministry of Health），均肩负着向社会大众普及该岗位职责及其在当前医疗卫生体系中定位的宣教责任。 <br><br>需要特别指出的是，上述列出的诸多头衔之间并不能直接划等号。例如在安大略省，“发育障碍服务工作者”（Developmental Service Worker, DSW）与“个人支持工作者”（PSW）承担不同的职责角色，遵循完全不同的教育培训标准，但两者均被视为跨学科医疗团队中的支持工作者。在加拿大的某些地区，“私人照护员”（Personal Attendant）特指直接由接受服务者本人进行管理与督导的工作人员；私人照护员专门为肢体残疾人士提供生活支持，其成为私人照护员的培训课程时长通常明显短于标准支持工作者。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">多元化工作场所与主管督导者的“眼睛和耳朵” (Workplace Settings & "Eyes and Ears")</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Workplace Settings & "Eyes and Ears"</h3><div class="subtopic-title-cn">多元化工作场所与主管督导者的“眼睛和耳朵”</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="265.92" data-end="344.18" data-title="Workplace Settings & &quot;Eyes and Ears&quot;" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Support workers work in a variety of settings (see Chapter 3 for definitions and details of workplace settings). In all settings, support workers ensure the safety of their clients, including those who are living with cognitive or mental health challenges. Services provided by support workers to clients in their homes can enable some clients to live independently or with their families. Support workers may also assist clients with social support, or social reintegration, as they prepare to move into an assisted-living facility or group home. In long-term care facilities, support workers assist clients with complex health challenges. Support workers also provide comfort and end-of-life care to dying clients so that they can die with dignity. <br><br>They are often the supervisor's "eyes and ears," meaning that because they are the person who spends the most time with the client, they are most likely to observe or hear things that should be reported to the supervisor, who may be a nurse or another type of health care worker. Observing and reporting are very important parts of the support worker's role and can have a great impact on a client's care. <br><br>Support workers may have to consult with other health care providers, such as social workers or physiotherapists, and may also have to consult with other professionals, such as the client's employers, clergy, or teachers, depending on the client's individual care plan. <br><br></p>
                       <p class="para-cn">支持工作者的执业场所极为广泛多样（有关各类工作场所的精准定义与详细规范，参见第 3 章）。在所有执业场所中，支持工作者都必须时刻筑牢服务对象的安全防线，特别是针对那些患有认知障碍或心理精神健康挑战的脆弱人群。支持工作者在案主家中提供的居家入户服务，能够赋能许多长者与病患在自己的家中独立生活或与家人共享天伦。当案主准备入住辅助生活设施（Assisted-living facility）或集体居所（Group home）时，支持工作者还会协助案主获得社交支持或实现社会功能重聚融入（Social reintegration）。在长期照护院舍（Long-term care facilities）中，支持工作者协助患有复杂重度健康挑战的长者；他们亦为处于生命弥留阶段的垂危病患提供安宁抚慰与临终关怀，确保长者能够怀抱尊严安详离世。 <br><br><strong>支持工作者往往是临床督导护士的“眼睛和耳朵”（"Eyes and Ears"）</strong>：这意味着，由于支持工作者是与服务对象朝夕相处、陪伴时间最长的专业人员，他们最有可能第一时间观察到或听到需要向上级督导汇报的异常体征与病情变化——督导人员可能是注册护士或另一类专业医疗照护人员。敏锐的观察（Observing）与严谨的汇报（Reporting）是支持工作者角色中举足轻重的组成部分，对服务对象的照护质量与生命安全有着深远影响。 <br><br>根据每位服务对象个性化照护计划的具体要求，支持工作者在日常工作中可能需要与其他医护人员进行跨学科会商（例如社会工作者或物理治疗师），亦可能需要与医疗卫生体系之外的其他专业人士进行沟通协作（例如案主的受雇雇主、神职人员/牧师或学校教师）。 <br><br></p>
                     </article>
                     
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第三节：支持工作者的六大核心工作职责 (Pages 4 - 5)</h3>
+                        <div class="page-anchor-marker" id="page-4">
+                          <span class="marker-pill">Pages 4 - 5</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-04">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第三节：支持工作者的六大核心工作职责</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Six Categories of Responsibilities</h3><div class="subtopic-title-cn">支持工作者的六大职责范畴概述</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">支持工作者的六大职责范畴概述 (The Six Categories of Responsibilities)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="344.18" data-end="372.1" data-title="The Six Categories of Responsibilities" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">A support worker's general responsibilities, depending on the jurisdiction in which they work, can be grouped into six categories: (1) personal care, (2) support for nurses and other health care providers, (3) family support, (4) social support, (5) housekeeping or home management, and (6) documenting and reporting any basic assessments, observations, and care provided in the client's record or chart. <br><br></p>
                       <p class="para-cn">根据支持工作者所执业的司法辖区（所在省份或地区），其日常通用工作职责大体可归纳为六大核心范畴： 1. <strong>个人生活照料（Personal care）</strong>； 2. <strong>协助护士及其他医疗卫生团队成员（Support for nurses and other health care providers）</strong>； 3. <strong>家庭系统支持（Family support）</strong>； 4. <strong>社交与人际支持（Social support）</strong>； 5. <strong>家务清洁或家居管理（Housekeeping or home management）</strong>； 6. <strong>在案主病历档案中记录并汇报所提供的基础评估、观察所见及照护措施（Documenting and reporting any basic assessments, observations, and care provided）</strong>。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">1. 个人生活照料：ADLs 与 IADLs (Personal Care: ADLs & IADLs)</h4>
 
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Personal Care: ADLs & IADLs</h4><span class="micro-title-cn">· 1. 个人生活照料：ADLs 与 IADLs</span>
+            </div>
+            
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="372.1" data-end="449.74" data-title="Personal Care: ADLs & IADLs" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Personal care responsibilities include assisting with activities of daily living (ADLs). These are the self-care actions that people perform every day to remain independent and to function effectively in society. Support workers help with daily activities such as eating, bathing, grooming, dressing, and toileting ("elimination"). They assist clients with limited mobility to change positions or move from one place to another and also help promote the client's safety and physical comfort. <br><br>In community settings, support workers also assist clients with instrumental activities of daily living (IADLs), which are the complex and necessary skills needed to successfully live independently. These IADLs may include assisting the client with handling finances, assisting with management of medications, arranging transportation, shopping, preparing meals, assisting with using a telephone or other communication devices, and doing housework and basic home maintenance. <br><br>The support worker is not responsible for deciding what should or should not be done for the client. However, while providing personal care, the support worker observes for and reports any changes in the client's behaviour or health. Such information is important to share with the appropriate person (either the charge nurse or the client's primary care nurse). <br><br></p>
                       <p class="para-cn">个人生活照护职责包括协助服务对象完成<strong>基础日常生活活动（Activities of Daily Living, ADLs）</strong>。这些是人们为了维持自立生存并在社会中正常行使机能而每天必须执行的基本自我照料行为。支持工作者协助完成诸如进食（Eating）、沐浴（Bathing）、梳理修饰（Grooming）、穿衣（Dressing）以及如厕排泄（Toileting / Elimination）等日常活动。他们协助活动受限的长者变换体位（Change positions）或在床、轮椅之间转移搬运，并全力促进长者的机体安全与生理舒适。 <br><br>在社区入户环境中，支持工作者还会协助案主完成<strong>工具性日常生活活动（Instrumental Activities of Daily Living, IADLs）</strong>。这些是维持在社区中独立生活所必需的复杂高阶生活技能，包括：协助案主管理日常财务收支、协助服药管理（按医嘱服药）、安排交通出行、外出采购食品杂物、烹饪配制健康餐食、协助使用电话或其他通讯设备，以及操持日常家务和基本房屋维护保养。 <br><br>支持工作者没有权力擅自决定应当为案主做什么或不该做什么（必须严格遵照医嘱与照护计划）。然而，在提供个人照护的过程中，支持工作者必须敏锐观察并及时汇报服务对象在行为表现或健康状态上的任何细微变化。将这些宝贵信息第一时间共享给对口负责人（病区主管护士 Charge Nurse 或案主的责任护士 Primary Care Nurse），对保障照护安全具有决定性意义。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">2. 协助护士与其他医护人员 (Support for Nurses and Other Providers)</h4>
 
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Support for Nurses and Other Providers</h4><span class="micro-title-cn">· 2. 协助护士与其他医护人员</span>
+            </div>
+            
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="449.74" data-end="474.31" data-title="Support for Nurses and Other Providers" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Support workers assist nurses or other health care team members by following the established care plan for each client; for instance, they may be required to clean equipment, measure and report vital signs, or assist with simple wound care. Support workers might also assist with oxygen therapy, heat or cold applications, and range-of-motion (ROM) exercises. <br><br></p>
                       <p class="para-cn">支持工作者通过严格执行为每位服务对象量身定制的既定照护计划（Established Care Plan），全力协助护士及其他医疗团队成员；例如，他们可能会被要求清洗消毒医疗辅助器材、测量并记录汇报生命体征（体温、脉搏、呼吸、血压）、或协助进行简单无菌伤口换药照料。在经过专门技能培训并获授权委派的情形下，支持工作者还可能协助实施氧气吸入疗法（Oxygen therapy）、冷热敷物理治疗应用（Heat or cold applications）以及关节活动度康复训练（Range-of-motion / ROM exercises）。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">3. 家庭系统支持 (Family Support)</h4>
 
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Family Support</h4><span class="micro-title-cn">· 3. 家庭系统支持</span>
+            </div>
+            
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="474.31" data-end="504.89" data-title="Family Support" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">In many facilities, support workers assist with admissions and discharges by introducing the client and family to the facility and helping the client unpack and settle in. In private homes, support workers help families care for loved ones who are living with health issues or need assistance with ADLs. Some families may need help with preparing meals and doing household chores; other families may need help with child care. Support worker services often give family caregivers a break from their duties. <br><br></p>
                       <p class="para-cn">在诸多照护机构中，支持工作者通过向服务对象及其家属介绍机构的设施环境、帮助案主拆箱整理行李并安顿入住，积极协助办理入院（Admissions）与出院（Discharges）手续。在私人家庭中，支持工作者协助家庭照料患病或在日常生活活动中需要照护的挚爱亲人。有些家庭可能需要协助备餐与操持家务；有些家庭可能需要协助照料年幼儿童。支持工作者所提供的入户服务，往往能为长期处于高压状态下的家庭照护者（Family caregivers）提供极其珍贵的喘息休息机会（Respite break），防止家庭照料者身心崩溃。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">4. 社交与人际支持 (Social Support)</h4>
 
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Social Support</h4><span class="micro-title-cn">· 4. 社交与人际支持</span>
+            </div>
+            
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="504.89" data-end="530.21" data-title="Social Support" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Support workers may help clients participate in social activities. These activities provide the client with enjoyment, recreation, and a chance to meet with friends. They may organize games and outings or may be hired privately to be a client's companion. Support workers may also be responsible for teaching clients to learn to live independently and to cook, clean, or shop by themselves. <br><br></p>
                       <p class="para-cn">支持工作者可以协助服务对象参与丰富多彩的社交活动。这些活动为长者带来身心愉悦、文娱享受以及与亲朋好友聚会交往的契机。他们可以组织益智桌游与户外远足郊游，亦可作为私人受雇的专业陪伴者（Companion）。支持工作者还可能负责对服务对象进行功能康复指导，培训他们重新掌握自立生活的技能，学会自己动手做饭烹饪、打扫清洁或独立去超市采购。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">5. 家务管理与家居环境维系 (Housekeeping or Home Management)</h4>
 
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Housekeeping or Home Management</h4><span class="micro-title-cn">· 5. 家务管理与家居环境维系</span>
+            </div>
+            
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="530.21" data-end="561.19" data-title="Housekeeping or Home Management" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Support workers often do a variety of housekeeping tasks in a facility setting, including making beds, delivering meals, tidying up living areas, and maintaining supplies. In a private home, housekeeping is called home management. Services depend on the needs of the person and the resources available to provide these services. Duties may include assisting clients with their IADLs, doing light housekeeping, doing laundry, and preparing and serving nutritious meals. <br><br></p>
                       <p class="para-cn">在机构环境中，支持工作者经常执行一系列家务保洁任务，包括整理铺床更单、运送分发餐盘、整理收拾起居区域以及补充维护护理消耗用品。在私人家庭环境中，家务工作被称为“家居管理”（Home Management）。具体服务内容完全取决于案主的个体需求以及该家庭可调用的资源条件。日常职责可能包括：协助案主执行工具性日常生活活动、从事日常轻度家务清洁、洗涤晾晒与熨烫衣物，以及规划烹饪并端送符合膳食指南的营养餐食。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">6. 基础评估、观察记录与书面汇报 (Documenting and Reporting)</h4>
 
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Documenting and Reporting</h4><span class="micro-title-cn">· 6. 基础评估、观察记录与书面汇报</span>
+            </div>
+            
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="561.19" data-end="617.14" data-title="Documenting and Reporting" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">As part of their professional accountability, all health care workers are legally responsible for reporting and documenting any client care they provide, as well as basic assessments and important observations about their clients. Examples of basic assessments or observations include if the client complains of pain, or if they refuse to eat. Understanding what is important to report is part of the support worker's need to think critically (see page 13). Depending on the agency, documentation may be in a written or electronic format (see Chapter 26). <br><br>The <em>A Day in the Life</em> boxes on pages 5-9 describe three support workers' typical workdays—in the community, in a long-term care facility, and in a hospital setting. In each box, the word <em>nurse</em> may mean registered nurse (RN), registered practical nurse (RPN), or licensed practical nurse (LPN), depending on the staffing policies of that particular agency. <br><br></p>
                       <p class="para-cn">作为其职业问责制（Professional Accountability）的法律组成部分，所有医疗卫生工作者对自己所提供的任何照护服务、所执行的基础临床评估以及对案主的重要观察所见，均承担严格的记录与汇报法律责任。基础评估或临床观察的典型范例包括：案主是否主动主诉疼痛、或者案主是否出现拒食不吃等反常征象。敏锐理解哪些信息属于必须紧急向上汇报的危急值与异常点，是支持工作者运用批判性思维的必备核心素养（参见第 13 页）。根据受雇机构的性质不同，文书记录既可以采用纸质手写表单，亦可采用电子病历系统（Electronic Format，详见第 26 章医学文书详解）。 <br><br>原书第 5 至 9 页所呈现的<strong>“支持工作者的一天”（A Day in the Life）</strong>真实案例模块，详尽生动地记录了三位支持工作者在不同临床场景下的典型一日实操记录——分别涵盖社区入户环境、长期照护院舍环境以及综合医院病区环境。在各个案例中，出现的“护士”（Nurse）一词根据具体机构的岗位编制政策，可能代表注册护士（RN）、注册实用护士（RPN）或执照实用护士（LPN）。 <br><br></p>
                     </article>
                     
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第四节：支持工作者真实一日工作实录 (Pages 5 - 9)</h3>
+                        <div class="page-anchor-marker" id="page-5">
+                          <span class="marker-pill">Pages 5 - 9</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-05">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第四节：支持工作者真实一日工作实录</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">NOTE on Timeframes</h3><div class="subtopic-title-cn">临床实操时间节点说明</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">临床实操时间节点说明 (NOTE on Timeframes)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="617.14" data-end="633.38" data-title="NOTE on Timeframes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><em>NOTE: The timeframes stated below are approximate times only. The actual amount of time to complete the work stated may vary according to a support worker's assigned workload, a client's changing state of health, or staffing shortages.</em> <br><br></p>
                       <p class="para-cn">【临床执业重要提示】下文所述的时间节点仅为近似预估时间。完成每项工作实际耗费的时间，会因支持工作者当天受指派的工作负荷强度、服务对象动态波动的病情健康状况或机构人员短缺情况而发生合理浮动。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">场景 1：社区入户照护 —— 史蒂芬的一天 (A Day in the Life of a Support Worker: In the Community / Home Care) (Pages 4 - 6)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">A Day in the Life of a Support Worker: In the Community / Home Care</h3><div class="subtopic-title-cn">场景 1：社区入户照护 —— 史蒂芬的一天</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="633.38" data-end="860.57" data-title="A Day in the Life of a Support Worker: In the Community / Home Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>In the Community (Home Care)</strong> <br><br>Each evening, Stephen receives his assignment for the next day from his supervisor. He uses the details in the assignment to plan his day. He consults a city map and plans his route. The people he is assigned to visit are living with a range of physical, emotional, and social issues and disabilities. Their major issues are briefly described below. <br><br>- <strong>Ms. Lau, 32</strong>, is living with cerebral palsy. She uses a wheelchair. She lives alone. Two days per week, she works outside the home. She receives home care to help her prepare for work. - <strong>Mr. O'Connor, 59</strong>, is recovering at home from a stroke. He is paralyzed on one side of his body and has a speech-language disorder. His wife is his primary caregiver. Mr. O'Connor receives home care three mornings a week. Mrs. O'Connor, 51, is at work during Stephen's visit. - <strong>Mr. Horowitz, 71</strong>, is living with dementia. His wife, 67, is caring for him at home. The couple gets emotional and social support from family and friends. Mrs. Horowitz looks after her husband's personal care needs. They receive 2 hours of home care per week to give Mrs. Horowitz a break. - <strong>Ms. Adams, 25</strong>, is a single mother on social assistance. She is recovering from a Caesarean section. She gets very little social and emotional support. She has newborn twins and three young children aged 1, 3, and 4 years. <br><br>Below are the tasks and activities that Stephen performs on a typical day at work. At all times he provides emotional support and provides care that is client centred. <br><br>- <strong>0715 to 0830 hours (7:15 a.m. to 8:30 a.m.)</strong> • Travels to first appointment; arrives at 0730 hours • Assists Ms. Lau with showering, grooming, and dressing • Helps Ms. Lau to prepare breakfast, clean up kitchen, and make bed • Records care provided, including any relevant observations <br><br>- <strong>0830 to 1000 hours (8:30 a.m. to 10:00 a.m.)</strong> • Travels to next appointment; arrives at 0900 hours • Assists Mr. O'Connor with elimination, bathing, shaving, hair care, and mouth care • Prepares breakfast for Mr. O'Connor and assists him with eating • Cleans up kitchen and makes bed • Takes Mr. O'Connor for a brief walk; he is learning to walk with a cane • Assists Mr. O'Connor with elimination again • Records care provided, including any relevant observations <br><br>- <strong>1000 to 1215 hours (10:00 a.m. to 12:15 p.m.)</strong> • Travels to next appointment; arrives at 1015 hours • Listens to Mrs. Horowitz, who is crying and says she is "worn out; telephones supervisor, who, in turn, calls the Horowitzes' case manager; case manager schedules a visit • Assists Mr. Horowitz with elimination, bathing, shaving, hair care, and mouth care • Cleans kitchen and does light housework in main living areas • Prepares lunch for Mr. Horowitz and assists him with eating • Records care provided, including any relevant observations <br><br>- <strong>1215 to 1530 hours (12:15 p.m. to 3:30 p.m.)</strong> • Takes break for lunch • Travels to next appointment; arrives at 1330 hours, the same time as the public health nurse • Helps children wash faces and hands • Prepares lunch for Ms. Adams and the three older children while the nurse assists Ms. Adams with breastfeeding the infants; feeds 1-year-old • Helps children with oral hygiene after lunch • Prepares three dinners; leaves one in the refrigerator and the others in the freezer • Records care provided, including any relevant observations • Reports observations from the day to nurse supervisor (would report unusual findings immediately throughout the day to supervisor) • Drives home <br><br></p>
                       <p class="para-cn"><strong>在社区环境中（居家照护 —— 史蒂芬的一天）</strong> <br><br>每天傍晚，史蒂芬（Stephen）会从主管那里接收次日的派单任务。他依据任务单上的详尽信息规划自己一天的行程，查阅城市地图并测算最优行驶路线。指派给他上门探访的案主们，正处于各类身体、心理情绪与社交功能障碍之中。四位案主的核心情况简述如下： - <strong>刘女士（Ms. Lau，32岁）</strong>：患有脑性瘫痪（Cerebral palsy），依靠轮椅代步，目前独居。她每周有两天外出工作；她接受居家照护，主要是协助她做好早晨出门上班前的准备。 - <strong>奥康纳先生（Mr. O'Connor，59岁）</strong>：中风（脑卒中）康复期，在家休养。他一侧肢体偏瘫并伴有言语语言障碍。其51岁的妻子是他的主要家庭照料者。奥康纳先生每周有三个上午接受居家照护；在史蒂芬上门服务期间，其妻子正好外出上班。 - <strong>霍洛维茨先生（Mr. Horowitz，71岁）</strong>：患有失智症（认知症）。其67岁的妻子在家照料他。老夫妇能从亲朋好友处获得情感与社交支持，妻子负责照顾丈夫所有的个人日常生活自理需求。他们每周接受 2 小时居家照护支持，以便让妻子得到宝贵的喘息休息机会。 - <strong>亚当斯女士（Ms. Adams，25岁）</strong>：领取社会救助金的年轻单亲母亲，刚接受了剖宫产手术（剖腹产）处于术后康复期，几乎得不到任何社交与情感支持。她膝下一对刚出生的双胞胎婴儿，以及另外三名幼童（分别为 1 岁、3 岁和 4 岁）。 <br><br>以下是史蒂芬在典型工作日所执行的任务与活动。在整个过程中，他时刻给予案主情感支持，并践行以服务对象为中心的照护： <br><br>- <strong>07:15 - 08:30 (0715 to 0830 hours)</strong> • 驾车前往第一个派工住址；于 07:30 准时抵达刘女士家； • 协助刘女士完成淋浴洗澡、个人梳理修饰与穿衣； • 协助刘女士制作早餐、清理洗净厨房、整理铺好床铺； • 规范记录所提供的各项照护操作，包括任何相关的临床观察所见。 <br><br>- <strong>08:30 - 10:00 (0830 to 1000 hours)</strong> • 驱车前往下一个住址；于 09:00 抵达奥康纳先生家； • 协助奥康纳先生如厕排泄、擦浴、刮脸剃须、头发梳理及口腔护理； • 为奥康纳先生制作早餐，并耐心协助其进食； • 清洁收拾厨房餐具，整理铺好床铺； • 搀扶奥康纳先生进行短距离步行锻炼；他正在康复治疗师指导下学习使用手杖行走； • 再次协助奥康纳先生完成如厕排泄； • 详细记录所实施的照护及相关临床观察。 <br><br>- <strong>10:00 - 12:15 (1000 to 1215 hours)</strong> • 驱车前往下一处案主家；于 10:15 抵达霍洛维茨先生家； • 进门发现霍洛维茨太太正在抹泪饮泣，哭诉自己已经“彻底心力交瘁、精疲力竭（worn out）”；史蒂芬立即电话联络自己的主管护士，主管护士随即致电该家庭的官方个案经理（Case Manager）；个案经理迅速安排了紧急上门家访评估； • 协助霍洛维茨先生完成如厕排泄、沐浴洗澡、剃须、梳头及口腔护理； • 清洁厨房，对主要起居活动区域进行轻度家务打扫； • 为霍洛维茨先生制作午餐，并协助进食； • 规范记录照护操作与霍洛维茨太太情绪危机的观察。 <br><br>- <strong>12:15 - 15:30 (1215 to 1530 hours)</strong> • 享受个人午餐休息时间； • 驱车前往下一个家庭；于 13:30 抵达亚当斯女士家，此时公共卫生护士（Public Health Nurse）也恰好同时抵达； • 协助孩子们清洗脸部和双手； • 为亚当斯女士和三个较大的孩子制作午餐，此时公共卫生护士协助亚当斯女士为双胞胎婴儿进行母乳喂养；史蒂芬负责给 1 岁的幼童喂饭； • 午餐后协助孩子们完成餐后口腔清洁护理； • 提前烹制好三顿晚餐分量：留一份在冷藏室内，其余两份密封贴好标签放入冷冻室储存； • 全面记录所提供的照护操作及相关观察要点； • 向护士主管口头汇报全天的观察情况（若日间出现任何异常体征，史蒂芬都会在第一时间随时向上级汇报）； • 驾车下班返回家中。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">场景 2：长期照护院舍 —— 克莱尔的一天 (A Day in the Life of a Support Worker: In a Long-Term Care Facility) (Pages 5 - 7)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.3 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">A Day in the Life of a Support Worker: In a Long-Term Care Facility</h3><div class="subtopic-title-cn">场景 2：长期照护院舍 —— 克莱尔的一天</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="860.57" data-end="1149.26" data-title="A Day in the Life of a Support Worker: In a Long-Term Care Facility" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>In a Long-Term Care Facility</strong> <br><br>Claire works on a unit in which the residents, mostly older people, require help with ADLs. The eight residents assigned to her live with a range of physical, emotional, and social issues and disabilities. <br><br>- <strong>Miss McDonald, 94</strong>, lives with a partial disability due to rheumatoid arthritis. - <strong>Mr. Schmidt, 82</strong>, is recovering from surgery. He lives with urinary incontinence, which causes him anxiety. - <strong>Mrs. Lawson, 88</strong>, is living with a heart condition and osteoarthritis. - <strong>Mr. Delgado, 63</strong>, has been paralyzed on one side following a stroke. He is unable to speak but is able to understand both written and spoken language. - <strong>Mr. Taylor, 71</strong>, is living with the early stages of Parkinson's disease. He has diabetes and poor vision as well. - <strong>Mrs. Sanchez, 81</strong>, is partially disabled due to multiple leg and hip fractures. She lives with osteoporosis. She is also depressed. - <strong>Mr. Bouchard, 89</strong>, is recovering from pneumonia. He has age-related hearing impairment. - <strong>Mrs. Khan, 44</strong>, is living with severe disability from multiple sclerosis. She lives with urinary and fecal incontinence. <br><br>Below are the tasks and activities that Claire performs on a typical day at work. At all times she provides emotional support and provides care that is client centred. <br><br>- <strong>0700 to 0715 hours (7:00 a.m. to 7:15 a.m.)</strong> • Receives report from nurse on the conditions of all residents on the unit • Receives assignment of care requirements, appointments, and activities scheduled for residents • Plans morning's tasks and activities <br><br>- <strong>0715 to 0845 hours (7:15 a.m. to 8:45 a.m.)</strong> • Helps seven of the residents get out of bed • Provides partial hygiene care to six residents, a shower for one resident, and a tub bath for another • Assists with elimination and changes their incontinence briefs • Assists residents with dressing and accompanies them to the dining room • Returns to the unit; provides partial hygiene to Mrs. Khan • Observes that the cut on Mrs. Khan's arm looks red and swollen and feels warm to the touch; makes a written record of it and gives a verbal report to the nurse • With help from another support worker, moves Mrs. Khan from her bed to a wheelchair • Transports Mrs. Khan to the dining room for breakfast • Records care provided, including any relevant observations <br><br>- <strong>0845 to 0930 hours (8:45 a.m. to 9:30 a.m.)</strong> • Assists residents with breakfast, ensuring that all have a nutritious breakfast and that special diets are followed • Encourages Mr. Taylor, Mrs. Lawson, and Miss McDonald to eat • Assists Mrs. Khan with eating; transports Mrs. Khan back to her unit • Returns to dining room and accompanies other residents back to their units • Records each resident's dietary intake in dietary intake record • Records care provided, including any relevant observations <br><br>- <strong>0930 to 1130 hours (9:30 a.m. to 11:30 a.m.)</strong> • Reports to nurse that Mr. Taylor (who has diabetes) did not eat • With assistance, lifts Mrs. Khan and settles her in bed • Assists residents with mouth care and elimination; changes their incontinence briefs • Reports on the conditions of residents to replacement support worker; takes a 15-minute break • Completes hygiene and grooming care for residents who received only partial care before breakfast • At 1030 hours, accompanies residents to games room • Makes beds and changes linens • Repositions Mrs. Khan in bed to prevent pressure ulcers • Tidies rooms and living areas • At 1130 hours, accompanies residents back to their units from games room <br><br>- <strong>1130 to 1300 hours (11:30 a.m. to 1:00 p.m.)</strong> • Reports on the conditions of residents to replacement support worker; takes a 30-minute break for lunch • Checks care requirements for each resident and plans the afternoon's tasks and activities • Accompanies residents to the dining room • Supervises residents and assists with feeding, as required • Accompanies residents back to their units • Assists residents with elimination and changes their incontinence briefs • Assists with mouth care • Makes sure that residents rest after lunch, as directed • Records each resident's dietary intake in dietary intake record • Records care provided, including any relevant observations <br><br>- <strong>1300 to 1500 hours (1:00 p.m. to 3:00 p.m.)</strong> • Assists residents with elimination and changes their incontinence briefs • Greets new resident, Mrs. Griffiths, and her family; introduces them to the facility; assists Mrs. Griffiths with unpacking • Introduces Mrs. Griffiths to other residents • Repositions Mrs. Khan • Comforts Mrs. Griffiths, who is feeling upset and lonely • Takes Mrs. Sanchez and Mrs. Griffiths for a walk • Assists residents with elimination and changes their incontinence briefs • Records care provided, including any relevant observations • Provides a verbal report to the nurse concerning each client's care <br><br></p>
                       <p class="para-cn"><strong>在长期照护院舍中（养老院病区 —— 克莱尔的一天）</strong> <br><br>克莱尔（Claire）在一家长期照护院舍病区工作，病区内的长者（绝大多数是老年人）在日常生活活动（ADLs）中都需要协助。指派给她照料的 8 位长者患有各种复杂的生理、心理与社交功能障碍： - <strong>麦克唐纳小姐（Miss McDonald，94岁）</strong>：因严重的类风湿关节炎导致肢体部分残疾； - <strong>施密特先生（Mr. Schmidt，82岁）</strong>：外科术后恢复期，患有尿失禁，失禁问题令他常年处于焦虑之中； - <strong>劳森太太（Mrs. Lawson，88岁）</strong>：患有慢性心脏病以及骨关节炎； - <strong>德尔加多先生（Mr. Delgado，63岁）</strong>：中风后导致一侧偏瘫，丧失言语能力，但能够完全理解口头语言与书面文字； - <strong>泰勒先生（Mr. Taylor，71岁）</strong>：处于帕金森病早期，同时伴有糖尿病及严重视力减退； - <strong>桑切斯太太（Mrs. Sanchez，81岁）</strong>：因多次发生下肢和髋部骨折导致部分残疾，伴有骨质疏松症，且处于抑郁状态； - <strong>布夏先生（Mr. Bouchard，89岁）</strong>：肺炎康复期，患有老年性听力减退； - <strong>汗太太（Mrs. Khan，44岁）</strong>：因多发性硬化症导致重度残疾，伴有大小便双重失禁。 <br><br>以下是克莱尔在典型白班中的工作实录。在全天各个时刻，她始终给予长者情感支撑，并践行以服务对象为中心的照护： <br><br>- <strong>07:00 - 07:15 (0700 to 0715 hours)</strong> • 参加晨间大交班，听取交班护士关于病区内所有长者夜间身心状况的详细报告； • 接收当天的照护任务单，核对长者照护需求、检查预约及日程活动； • 制定并优化上午各项工作与照护活动的行动计划。 <br><br>- <strong>07:15 - 08:45 (0715 to 0845 hours)</strong> • 协助其中 7 位长者起床离床； • 为 6 位长者提供晨间部分身体清洁，协助 1 位长者进行淋浴，协助另 1 位长者进行盆浴； • 协助长者如厕排泄，并更换污染的失禁纸尿裤/防漏垫； • 协助长者穿衣整理，并护送陪伴他们前往病区中央大餐厅就餐； • 返回病房单元，为卧床的汗太太提供床旁部分身体卫生护理； • <strong>关键临床观察</strong>：敏锐发现汗太太手臂上的一处皮肤划痕呈现红肿、发热体征；克莱尔立即进行书面记录，并当场向责任护士做出紧急口头汇报； • 在另一位支持工作者的通力配合下（双人搬运），将汗太太从病床上平稳安全转移至轮椅上； • 用轮椅护送汗太太前往餐厅享用早餐； • 详细记录所完成的照护内容与临床观察。 <br><br>- <strong>08:45 - 09:30 (0845 to 0930 hours)</strong> • 在大餐厅协助长者享用早餐，确保所有人都能摄入充足营养，并严格核对特殊治疗饮食； • 耐心鼓励食欲不佳的泰勒先生、劳森太太和麦克唐纳小姐进食； • 细心喂助无法自理的汗太太进餐；餐毕护送汗太太乘轮椅返回病房休息； • 返回大餐厅，陪伴并护送其他长者安全返回各自的病房单元； • 在长者专用膳食摄入记录单（Dietary Intake Record）上精确登记每位长者的进食百分比； • 规范记录所执行的照护操作。 <br><br>- <strong>09:30 - 11:30 (0930 to 1130 hours)</strong> • 紧急向责任护士汇报：患有糖尿病的泰勒先生早餐几乎分文未进（可能引发低血糖反应）； • 在同事协助下，将汗太太从轮椅抬起并舒适安顿在病床上； • 协助长者进行餐后口腔卫生清洁与排泄如厕，更换失禁护理垫； • 向接班顶岗支持工作者详细口头交班长者状况，享受合法的 15 分钟工间工休； • 为早餐前仅接受了部分清洁的长者补齐完整的个人卫生与梳理修饰； • 于 10:30 护送长者前往病区康乐活动室参加益智桌游活动； • 返回整理床铺，彻底更换汗渍与污损床单被套； • 为卧床的汗太太执行轴线翻身与体位变换，运用软枕减压以预防压疮（褥疮）； • 整理打扫房间与公共起居区域； • 于 11:30 再次前往活动室，陪伴长者返回各自病房。 <br><br>- <strong>11:30 - 13:00 (1130 to 1300 hours)</strong> • 向替班同事交班长者最新动态；享受 30 分钟午餐休息； • 核对长者下午最新的照护医嘱与需求，制定下午的活动流程； • 陪伴长者前往餐厅享用午餐； • 在餐厅进行全场监护，按需协助吞咽困难或进食不便的长者喂食； • 午餐结束后，护送陪伴长者安全返回病房； • 协助长者如厕排泄，更换清洁失禁护理垫； • 协助长者进行餐后漱口与义齿清洁等口腔护理； • 遵照医嘱，确保长者在午餐后舒适平卧或半卧位安静午休； • 在膳食摄入记录单上登记每位长者的午餐进食量； • 详实记录所实施的各项照护与重要观察。 <br><br>- <strong>13:00 - 15:00 (1300 to 1500 hours)</strong> • 协助长者排泄，检查并更换失禁短裤； • 热情迎接刚办理入住的新长者格里菲思太太（Mrs. Griffiths）及其家属；向他们详细介绍院舍环境与设施；协助格里菲思太太拆箱整理个人衣物与生活用品并妥善归位； • 将格里菲思太太引见介绍给病区内的其他长者认识； • 为卧床的汗太太再次执行减压翻身与体位摆放； • 发现新入住的格里菲思太太情绪低落、深感孤独与不安，克莱尔坐在其身旁给予亲切温情的安慰与心理疏导； • 陪伴桑切斯太太与新来的格里菲思太太在院舍安全走廊内散步交流； • 协助长者如厕排泄，更换失禁纸尿裤； • 全面记录所完成的照护内容； • 在白班结束前，向当班责任护士就每位长者的全天护理反应与观察所见进行详尽严谨的面对面口头大交班。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">场景 3：综合医院急性外科病房 —— 吉娜的一天 (A Day in the Life of a Support Worker: In a Hospital) (Pages 7 - 9)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.4 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">A Day in the Life of a Support Worker: In a Hospital</h3><div class="subtopic-title-cn">场景 3：综合医院急性外科病房 —— 吉娜的一天</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="1149.26" data-end="1410.34" data-title="A Day in the Life of a Support Worker: In a Hospital" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>In a Hospital</strong> <br><br>Gina works on a surgical unit, which is one type of acute care. Most clients on this unit have had surgery for fractures (broken bones). Others have had hip- or knee-replacement surgery. A few are waiting for their surgery. Many of these clients are living with additional health issues. Gina assists with the care of 10 clients. <br><br>- <strong>Miss Kwan, 66</strong>, sustained a thigh bone (femur) fracture. - <strong>Mr. McDuff, 76</strong>, sustained a recent spine fracture and lives with osteoporosis. - <strong>Mrs. Sadiq, 46</strong>, sustained shoulder and rib fractures, and lives with osteoporosis and quadriplegia. - <strong>Mrs. Clark, 85</strong>, sustained a hip fracture. She lives with osteoporosis and Alzheimer's disease. - <strong>Mr. Keene, 44</strong>, sustained fractures in the thigh bone and left knee. - <strong>Mr. Cross, 55</strong>, has had a knee replacement. He lives with arthritis. - <strong>Mrs. Pocza, 82</strong>, has sustained a hip fracture and lives with osteoporosis. - <strong>Ms. Hill, 35</strong>, has sustained multiple fractures involving her spine, thigh bone, and ankle. - <strong>Mrs. Leblanc, 74</strong>, has had a hip replacement. She also lives with diabetes. - <strong>Mr. Paes, 82</strong>, has sustained a hip fracture. He also lives with hearing impairment. <br><br>Below are the tasks and activities that Gina performs on a typical day at work. At all times she provides emotional support and provides care that is client centred. <br><br>- <strong>0700 to 0710 hours (7:00 a.m. to 7:10 a.m.)</strong> • Receives assignment on care requirements • Plans morning's tasks and activities <br><br>- <strong>0710 to 0800 hours (7:10 a.m. to 8:00 a.m.)</strong> • Provides hygiene care to four clients, including assisting with oral hygiene and hair care and providing partial bed baths • Assists with elimination • Records care provided, including any relevant observations <br><br>- <strong>0800 to 0845 hours (8:00 a.m. to 8:45 a.m.)</strong> • Accompanies dietary staff as they deliver breakfast trays • Positions and arranges trays for clients; assists clients with eating • Listens to Mrs. Pocza's concerns about her surgery; calls for the nurse, who answers Mrs. Pocza's questions • Records clients' food and fluid intakes • Assists clients with elimination • Records care provided, including any relevant observations <br><br>- <strong>0845 to 1130 hours (8:45 a.m. to 11:30 a.m.)</strong> • Assists clients with hygiene, elimination, showers, and baths, as required • Reports on the conditions of clients and care requirements to replacement support worker; takes a 15-minute break • Makes and changes beds • Assists with two discharges; helps clients pack • Helps nurse to reposition clients, as required • Assists clients with leg exercises and coughing and deep-breathing exercises • Records care provided, including any relevant observations <br><br>- <strong>1130 to 1300 hours (11:30 a.m. to 1:00 p.m.)</strong> • Reports on the conditions of clients and care requirements to replacement support worker; takes a 30-minute break for lunch • Checks the condition and care requirements of each client and plans afternoon tasks • Accompanies dietary staff as they deliver lunch trays • Positions and arranges trays for clients; assists clients with eating • Observes that Mr. McDuff's intravenous (IV) fluid is running low; notifies nurse immediately • Records food and fluid intakes • Assists clients with elimination and mouth care • Records care provided, including any relevant observations <br><br>- <strong>1300 to 1500 hours (1:00 p.m. to 3:00 p.m.)</strong> • Removes Mr. Paes's dentures before his medications are given • Assists clients with elimination • Observes drainage under Miss Kwan's cast; notifies nurse immediately • Answers call from nurse; provides comfort to Mrs. Clark, who is upset • Assists clients with leg exercises and coughing and deep-breathing exercises • Assists with admitting two clients • Helps nurse reposition clients, as required • Records care provided, including any relevant observations • Provides a verbal report to the nurse who is responsible for each of these clients <br><br><em>(NOTE: In many hospitals, a client is assigned to a primary care nurse. A support worker might be assigned to help care for the clients of several nurses so would have to report observations about the clients he or she works with to each client's primary care nurse.)</em> <br><br></p>
@@ -1124,29 +1398,38 @@
 *(NOTE: In many hospitals, a client is assigned to a primary care nurse. A support worker might be assigned to help care for the clients of several nurses so would have to report observations about the clients he or she works with to each client's primary care nurse.)*
 【原书临床机制解析】在加拿大诸多大型医院中，病患普遍采用“责任制责任护士”（Primary Care Nurse）进行专案管理。一名支持工作者通常被同时指派协助多名不同责任护士所管辖的患者。因此，支持工作者必须清晰明确每位患者对应的责任护士是谁，并将其全天观察到的病人体征与异常准确交接给该患者各自的专责护士，杜绝推诿遗漏。</div></div>
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第五节：受助人群类别与服务对象全景 (Pages 9 - 10)</h3>
+                        <div class="page-anchor-marker" id="page-9">
+                          <span class="marker-pill">Pages 9 - 10</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-06">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 06 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第五节：受助人群类别与服务对象全景</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 6.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">People Who Receive Support Services</h3><div class="subtopic-title-cn">受助人群的通用专业称谓</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">受助人群的通用专业称谓 (People Who Receive Support Services)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="1410.34" data-end="1475.11" data-title="People Who Receive Support Services" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">People receiving health care and support services are known by different terms, depending on the setting. A person receiving care in a hospital is usually called a <em>patient</em>. A person living in a live-in facility is called a <em>resident</em>. A person receiving care or support services in the community is called a <em>client</em>. <em>Client</em> is also an all-encompassing term for people receiving health care or support services: hospital patients, facility residents, and clients in the community. <br><br>Whether the individual receiving care is known as a client, patient, or resident, always remember that he or she is a <em>person</em>. Every person is unique, with unique life experiences and situations, desires and opinions. Each will have different needs and different abilities. Support workers work with people from a variety of cultures or backgrounds (see Chapter 7). Part of the support worker's job is to accept this diversity among people. The <em>Respecting Diversity</em> boxes that appear throughout this text outline the importance of diversity and how people's backgrounds influence who they are and what they do. <br><br></p>
                       <p class="para-cn">接受医疗保健与支持服务的人群，根据其所处的医疗照护场所不同，在专业上被冠以不同的称谓： - 在综合医院或急性照护机构中接受治疗护理的人士，通常被称为<strong>患者（Patient）</strong>； - 在全寄宿式照护机构（养老院、护理院、辅助生活院舍）中长住的人士，被称为<strong>院舍长者 / 居民（Resident）</strong>； - 在社区或私人家庭环境中接受支持照护服务的人士，被称为<strong>案主 / 客户（Client）</strong>； - 同时，<strong>“服务对象”（Client）</strong>也是一个统摄全局的尊称总称，泛指一切在医院、机构或社区中接受照护支持的个体。 <br><br>无论被照料的个体在术语上被称为案主、患者还是院舍长者，支持工作者都必须时刻铭记：<strong>他或她首先是一个活生生、有尊严的“人”（Person）</strong>。每一个人都是独一无二的，拥有独一无二的人生履历、生活境遇、内心愿望与观点立场。每个人都有截然不同的生理心理需求以及残存的机能水平。支持工作者需要与来自多元文化、不同种族、不同宗教与社会背景的人士共事（详见第 7 章多元文化照护）。包容并接纳人与人之间的文化多元性（Diversity），是支持工作者职业素养不可或缺的基石。全书中贯穿设立的<strong>“尊重多元文化”（Respecting Diversity）</strong>特色专栏，深刻阐释了多元文化包容的重要性，并剖析了文化背景如何深刻塑造个体的言行举止与价值取向。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">加拿大受助人群的九大核心类别 (Nine Categories of Clients Grouped by Issues, Needs, and Ages)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 6.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Nine Categories of Clients Grouped by Issues, Needs, and Ages</h3><div class="subtopic-title-cn">加拿大受助人群的九大核心类别</div>
+                </div>
+                
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                     </div>
                     <h4 class="box-title-en">Focus on Children boxes and Chapter 42 discuss issues related to caring for children. -</h4>
@@ -1166,29 +1449,38 @@
                   <figcaption class="ef-caption-en"><strong>图 1.2 教学图示：支持工作者在医疗机构中关爱呵护患病儿童</strong><br>*FIGURE 1.2: A support worker provides care to a sick child. (iStockphoto/FatCamera.)*<br>【临床启示】儿童绝非缩小的成人；与患儿沟通需保持视线平视、运用充满童趣的温和语言，在协助治疗的同时守护患儿的心理安全感。</figcaption>
                 </figure>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第六节：受监管医护人员与未受监管照护者 (Page 10)</h3>
+                        <div class="page-anchor-marker" id="page-10">
+                          <span class="marker-pill">Page 10</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-07">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 07 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第六节：受监管医护人员与未受监管照护者</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 7.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Health Care Team</h3><div class="subtopic-title-cn">医疗卫生照护团队的本质</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">医疗卫生照护团队的本质 (The Health Care Team)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="1720.58" data-end="1745.38" data-title="The Health Care Team" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">A team is a group of people working together toward a common goal. Health care teams include professionals with a variety of skills and knowledge who work together to meet the client's needs. Their goal is to provide quality care. Many professionals, including support workers, are involved in the care of one client. Which professionals are involved depends on the needs of the client. <br><br></p>
                       <p class="para-cn">团队是指一群为了达成共同目标而协同工作的人。医疗卫生照护团队汇聚了具备不同专业技能与知识背景的各类专业人士，他们彼此协作，全力满足服务对象的全面健康需求。他们的核心目标是提供高品质的临床照护（Quality Care）。在任何一位服务对象的照护流程中，往往都会有包括支持工作者在内的多位专业人员共同参与；具体有哪些专业人员介入，完全取决于服务对象的个体健康与照料需求。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">受监管专业人员与未受立法监管人员的法定界限 (Regulated and Unregulated Workers)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 7.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Regulated and Unregulated Workers</h3><div class="subtopic-title-cn">受监管专业人员与未受立法监管人员的法定界限</div>
+                </div>
+                
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                     </div>
                     <h4 class="box-title-en">Box 4.1, for</h4>
@@ -1202,17 +1494,22 @@
                   </div>
                 </aside>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第七节：跨学科医疗团队全览表 Table 1.1 (Pages 11 - 12)</h3>
+                        <div class="page-anchor-marker" id="page-11">
+                          <span class="marker-pill">Pages 11 - 12</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-08">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 08 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第七节：跨学科医疗团队全览表 Table 1.1</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 8.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Support and Health Care Team Members</h3><div class="subtopic-title-cn">TABLE 1.1 跨学科医疗团队 19 大核心成员全览表</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">TABLE 1.1 跨学科医疗团队 19 大核心成员全览表 (Support and Health Care Team Members)</h4>
-<div class="table-wrap"><table class="clinical-table">
+                <div class="table-wrap"><table class="clinical-table">
 <thead><tr><th>专业头衔 (Title)</th><th>监管属性 (Regulation)</th><th>权威中文官方译名</th><th>核心法定临床职责与专业范畴 (Role Description from Textbook)</th></tr></thead>
 <tbody>
 <tr><td><strong>Aboriginal support worker</strong></td><td><strong>未受监管 (Unregulated)</strong></td><td><strong>原住民支持工作者</strong></td><td>Assists Indigenous clients; provides education on diabetes prevention and management; provides guidance on self-care management; facilitates discharges from and admissions to health care facilities; organizes services.<br>（协助加拿大原住民服务对象；提供糖尿病防治与健康生活宣教；指导慢性病自我照料管理；协助办理转诊、出院与入院手续；组织对接社区支持服务。）</td></tr>
@@ -1236,58 +1533,80 @@
 <tr><td><strong>Support worker / Community support worker</strong></td><td><strong>未受监管 (Unregulated)</strong></td><td><strong>支持工作者 / 个人支持工作者 (PSW / HCA)</strong></td><td>Assists clients with personal care, family responsibilities, social and recreational activities, and housekeeping or home management; provides personal care and assistance with ADLs.<br>（在团队督导下，全力协助服务对象完成日常个人生理生活照护（ADLs）、分担家庭照料压力、陪伴参与社交文娱活动，并执行家务保洁与家居管理。）</td></tr>
 </tbody></table></div>
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第八节：法定执业范围、督导机制与授权委派原则 (Page 13)</h3>
+                        <div class="page-anchor-marker" id="page-13">
+                          <span class="marker-pill">Page 13</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-09">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 09 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第八节：法定执业范围、督导机制与授权委派原则</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 9.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Scope of Practice and Limitations</h3><div class="subtopic-title-cn">执业范围与严禁越权</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">执业范围与严禁越权 (Scope of Practice and Limitations)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="1834.27" data-end="1876.49" data-title="Scope of Practice and Limitations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Support workers must understand what to do, what not to do, and the limit and extent of a health care worker's role as determined by their province's educational standards and employer's policies in order to protect clients from harm. The term <em>scope of practice</em> is not a copyrighted term, and it is not intended only for regulated professionals. Instead, it is used to identify what a support worker may and may not do in relation to client care. <br><br>Never act beyond the legal limits of your role. Also, never perform a function or task that you have not been trained to do. If you perform a task that is outside these limits, you could harm a client and create serious legal problems for yourself and your employer. <br><br></p>
                       <p class="para-cn">为了切实保护服务对象免受人身伤害，支持工作者必须深刻理解自己<strong>“该做什么”、“绝不该做什么”</strong>，以及由其所在省份教育培训大纲和雇主管理规章制度所界定的职责边界与权限范畴。<strong>“法定执业范围”（Scope of Practice）</strong>并非受版权保护的专属词汇，它绝非仅适用于受监管的注册医护人员；恰恰相反，在全行业中，它被广泛用于精准界定支持工作者在照护案主时<strong>“被法律允许执行的操作”</strong>与<strong>“被法律严格禁止执行的行为”</strong>。 <br><br><strong>绝不可越权执行超出你法定角色界限的任何操作！</strong>同时，<strong>绝对严禁执行你从未接受过正规院校临床技能培训的任何技术性任务！</strong>如果你胆敢越过这一红线擅自操作，你极有可能直接导致案主伤残甚至死亡，并为你自己以及你的受雇机构招致灾难性的重大法律诉讼追责与刑事责任。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">执业范围的三大决定性权威来源 (Three Sources of Scope of Practice)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 9.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Three Sources of Scope of Practice</h3><div class="subtopic-title-cn">执业范围的三大决定性权威来源</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="1876.49" data-end="1966.15" data-title="Three Sources of Scope of Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">The support worker's scope of practice in any province, territory, city, or municipality is determined from three important sources. Those sources include the following: <br><br>1. <strong>Provincial/territorial educational standard of practice:</strong> Many provinces now follow either the national or provincial program standards, which dictate what support workers need to be taught in their educational programs. The support worker educational program includes information on the scope of practice for support work in that province or territory. Students will learn about the laws and the support worker's professional responsibilities in their part of the country. Students should ask their instructors if they require any clarification. <em>(Please visit [Nova Scotia CCA Scope of Practice Document](http://www.novascotiacca.ca/DocumentViewer.aspx?elementId=106908&portalName=ha) to view an example of a scope of practice document for the province of Nova Scotia.)</em> 2. <strong>Employer's policies:</strong> Every employer has written policies that establish what can and cannot be done by support workers. These policies should be read carefully before starting work. 3. <strong>Supervisor:</strong> On the job, the supervisor is the best source of clarification of the employer's policies. It is far better to ask for direction than risk harming a client, so never hesitate to ask questions or request clarification about any procedure. <br><br></p>
                       <p class="para-cn">在任何省份、地区、城市或市镇，支持工作者的执业范围均由以下三大核心支柱权威决定： 1. <strong>各省/地区官方教育大纲与执业标准（Educational Standards）</strong>：加拿大许多省份目前均严格遵循国家级或省级教学大纲标准，明确规制院校在支持工作者培训项目中必须教授的理论与操作技能。学生将在学习中系统掌握所在地区的法律法规及法定职责界限。若有任何疑问，学生应当主动向教师请教。（<em>读者可参阅加拿大新斯科舍省继续照料助理 CCA 官方执业范围文件范本</em>）。 2. <strong>雇主机构的管理规章制度（Employer's Policies）</strong>：每一家正规医疗机构或社区机构都拥有详尽的书面规章制度，黑纸白字地明确界定该机构内支持工作者被允许执行与严禁涉足的任务清单。在正式上岗提供照护前，必须逐条研读这些制度。 3. <strong>临床主管督导（Supervisor）</strong>：在临床第一线，督导护士是解答与澄清雇主制度疑难的最权威来源。<strong>主动向上级护士请教指导，其安全价值远远高于冒险违规操作而致案主于险境！</strong>因此，在对任何临床操作的合规性产生哪怕一丝疑虑时，绝不可盲目臆断，必须毫不犹豫地向上级请示。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">职业素养提升、终身学习与反思性执业回顾 (Professional Development and Lifelong Learning)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 9.3 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Professional Development and Lifelong Learning</h3><div class="subtopic-title-cn">职业素养提升、终身学习与反思性执业回顾</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="1966.15" data-end="2027.14" data-title="Professional Development and Lifelong Learning" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Being a professional requires critical thinking and reflective practice review. Critical thinking is the ability to think clearly and logically, using reflection and reason, based on knowledge obtained from experience, observation, or education. A reflective practice review is a self-evaluation of care provided with the goal of identifying ways to improve clinical performance and caregiving. <br><br>Health care is an ever-changing field. It is the responsibility of every professional in the field to ensure that all clinical skills and knowledge are up to date, since their own health and safety and the health and safety of co-workers and clients are at stake. Depending on the region, many postgraduate certificate courses and workshops may be available to support workers, such as advanced palliative care, conflict management courses, or medication management. Support workers also need to be aware of the scope of practice in their province or territory, since some, in particular situations, have been asked to perform tasks that are not within the support worker's scope. <br><br></p>
                       <p class="para-cn">成为一名真正的专业从业者，离不开临床批判性思维与持续的反思性执业回顾。<strong>批判性思维（Critical Thinking）</strong>是指立足于从实践经验、敏锐观察或正规教育中获取的专业知识，运用反思与理性逻辑进行清晰、严密推理思考的心智能力。<strong>反思性执业回顾（Reflective Practice Review）</strong>是指从业人员在完成临床照护后对自己所提供的服务进行自我剖析与自省评估，其终极目标在于发现自身不足并找出持续优化临床执业表现与照护技巧的具体途径。 <br><br>医疗保健是一个日新月异、知识技术快速迭代的领域。确保自身的临床技能与前沿照护知识时刻保持在最新状态，是该领域中每一位从业人员神圣不可推卸的职业责任——因为这不仅直接关乎服务对象的安危，亦直接牵涉到同事及支持工作者自身的健康与人身安全。根据所在地区不同，许多针对支持工作者的毕业后进修认证课程和专题工作坊可供深造选修，例如高级安宁舒缓疗护（Advanced Palliative Care）、职场冲突管理（Conflict Management）或药物协助管理（Medication Management）等。支持工作者还必须时刻保持法律敏锐度，时刻清晰知晓本省执业范围红线，因为在某些临床特殊情境下，个别机构或人员可能会违规要求支持工作者去执行并不在其法定执业范围内的危险技术性操作。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">支持工作者的临床督导机制 (The Supervision of Support Workers)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 9.4 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Supervision of Support Workers</h3><div class="subtopic-title-cn">支持工作者的临床督导机制</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="2027.14" data-end="2175.67" data-title="The Supervision of Support Workers" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">In facilities, in the community, or in private homes, support workers may be supervised by a nurse or other health care provider. A registered nurse (RN) is licensed and regulated by the province or territory to maintain overall responsibility for the planning and provision of client care. Some RNs have university degrees and even postgraduate education. Others have community college diplomas. RNs assess clients, make nursing diagnoses, develop care plans, and implement and evaluate nursing care. They also carry out physicians' orders. An RN is usually a team leader of the health care team, which includes RPNs or LPNs (see below), support workers, and other allied health care providers. <br><br>A licensed practical nurse (LPN), also known as a registered practical nurse (RPN), is licensed and regulated by the province or territory to carry out basic nursing procedures and provide client care. RPNs and LPNs have a community college diploma, although many also have university degrees and even postgraduate education. Like RNs, they must hold a current nursing registration in the province that they practise in. RPNs or LPNs function in a decision-making position when caring for stable clients with uncomplicated health issues, but when providing care to clients with serious and unstable health issues, they assist RNs and help with complex procedures. RPNs and LPNs often supervise support workers. <br><br>Some clients, particularly in a live-in environment, may be assigned to a primary care nurse, who is responsible for the ongoing management of the health of a client. Duties of this nurse include liaising with other health care team members, the client, and her or his family. In an acute-care environment, the primary care nurse may or may not be directly involved in providing the client care on a daily basis but will oversee the work of those who do, including the support worker. <br><br>In some situations, a support worker may be supervised by a professional other than an RN, RPN, or LPN. For example, in the recreation department of a long-term care facility, support workers may report to a recreational therapist. In the community, a supervisor may be a social worker, a physiotherapist, or another health care provider. <br><br>Some support workers are hired and supervised directly by clients. These support workers must be particularly aware of provincial or territorial legislation that limits the tasks and procedures they can perform. <br><br></p>
                       <p class="para-cn">无论是在院舍机构、社区中心还是私人家庭中，支持工作者通常都在护士或其他专业医护人员的督导下开展工作： 1. <strong>注册护士（RN）督导</strong>：注册护士由省或地区法定发牌监管，对服务对象整体照护计划的制定与实施承担全面法律责任。RN 通常拥有四年制护理学士学位甚至研究生学历；他们负责全面评估案主病情、下达护理诊断、制定并动态调整照护计划、组织实施并评价护理成效，并严格执行医师医嘱。RN 通常是跨学科医疗团队的领队，统筹指挥 RPN/LPN、支持工作者及其他相关辅助医护人员。 2. <strong>注册实用护士（RPN / LPN）督导</strong>：RPN/LPN 同样由省或地区依法发牌监管，具备公立学院大专文凭。他们与 RN 一样必须持有本省有效的年度注册护士执照。当面对病情稳定、预后明朗的慢性病案主时，RPN/LPN 处于独立的临床决策地位；而在照护病情凶险不稳定的危重患者时，他们协助 RN 并配合完成复杂操作。在长期照护院舍等机构中，RPN/LPN 经常直接担任支持工作者的现场主管护士。 3. <strong>责任制护士（Primary Care Nurse）</strong>：在院舍或急重症环境中，案主常被指定由一名责任护士负责其长期的全面健康管理，负责与团队成员及家属保持全方位联络。在急性照护环境中，责任护士虽然不一定事必躬亲地处理每项基础擦洗，但负责全面监督一线护理人员（包括支持工作者）的实际操作质量。 4. <strong>非护士专业人员的跨界督导</strong>：在某些特殊岗位上，支持工作者的主管可能并非护士。例如在养老院康乐文娱部，支持工作者可能直接向康乐治疗师（Recreational Therapist）汇报；在社区环境中，督导人员可能是注册社会工作者、物理治疗师或其他专业医护人员。 5. <strong>案主本人直接雇佣与自主督导</strong>：一部分支持工作者是由案主本人（如高位截瘫但智力清晰的年轻残疾人）直接出资雇佣并由案主自行管理的私人护理员。在此类情形下，支持工作者更必须保持高度的法律警惕性，清醒界定本省限制未受监管人员执行的技术性医疗禁区，严防盲从案主要求而触犯法律底线。 <br><br></p>
                     </article>
                     
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第九节：展现专业素养、仪表与人际界限 (Pages 14 - 16)</h3>
+                        <div class="page-anchor-marker" id="page-14">
+                          <span class="marker-pill">Pages 14 - 16</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-10">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 10 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第九节：展现专业素养、仪表与人际界限</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 10.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Being a Professional & Positive Attitude</h3><div class="subtopic-title-cn">什么是真正的专业素养？</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">什么是真正的专业素养？(Being a Professional & Positive Attitude)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="2175.67" data-end="2215.2" data-title="Being a Professional & Positive Attitude" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Professionalism is an approach to work that demonstrates respect for others, commitment, competence, and appropriate behaviour. Being cheerful and friendly, keeping work schedules, performing tasks competently, and being helpful are all part of a professional approach. To be a true professional, you must demonstrate the following: <br><br>- <strong>Positive attitude:</strong> You need to show a good attitude about your job. The work you do is very important. People rely on you to give efficient care and support. You need to believe that you and your work are valuable and show that you enjoy your work. Be enthusiastic, considerate, and courteous. <br><br></p>
@@ -1333,7 +1652,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 1.2: Practices for a Professional Appearance</h4>
@@ -1353,8 +1672,12 @@
                   <figcaption class="ef-caption-en"><strong>图 1.3 教学图示：标准职业仪表支持工作者示范</strong><br>*FIGURE 1.3: This support worker is well groomed. Her uniform and shoes are clean. Her hair is worn in a simple style and is kept out of her face and off her collar. She is not wearing any jewellery, except a watch. Her name tag is easily visible and approved by her employer. (Source: Sorrentino, S. A. [2000]. Mosby's textbook for nursing assistants [5th ed., p. 37]. Mosby.)*</figcaption>
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">走廊交谈防窃听、终身进修与敢于为案主发声 (Confidentiality, Lifelong Learning & Advocacy)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 10.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Confidentiality, Lifelong Learning & Advocacy</h3><div class="subtopic-title-cn">走廊交谈防窃听、终身进修与敢于为案主发声</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="2312.14" data-end="2395.01" data-title="Confidentiality, Lifelong Learning & Advocacy" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">...never talk with a client about another client, even if you avoid using names. Also, avoid talking about clients, co-workers, and your employer where you can be overheard; if you need to discuss a client's care with team members, make sure that other clients, families, and visitors cannot hear you. People overhearing may think you are talking about them or their family members. This assumption can lead to misinformation and confusion, which can be distressing to those affected. <br><br>- <strong>Lifelong learning:</strong> Equipment and techniques for caring for clients can become outdated, and it is the responsibility of all caregivers to keep current with the information that affects the care they give. To keep your knowledge up to date, attend workshops and in-services that are offered by your employer, get clarifications from your supervisor, and read up about new equipment or practices that you are uncertain about. - <strong>Advocating for the client:</strong> Support workers will often make important observations about the client or family, and these observations must be communicated to the health care team. Sharing this information is especially important if a client is unable to speak for themselves. It is also the responsibility of professionals to avoid taking shortcuts in their care, as doing so may seriously harm the client. Shortcuts include taking longer breaks, skipping tasks listed on the client's care plan, or failing to apply theory on hygiene learned in school to client practice. <br><br></p>
@@ -1376,7 +1699,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 1.3: Keeping Personal Matters Out of the Workplace</h4>
@@ -1390,21 +1713,26 @@
                   </div>
                 </aside>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第十节：以服务对象为中心的照护与 DIPPS 核心原则 (Pages 16 - 17)</h3>
+                        <div class="page-anchor-marker" id="page-16">
+                          <span class="marker-pill">Pages 16 - 17</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-11">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 11 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第十节：以服务对象为中心的照护与 DIPPS 核心原则</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 11.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Client-Centred Care & DIPPS Acronym</h3><div class="subtopic-title-cn">以服务对象为中心的核心内涵与 DIPPS 六大基石</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">以服务对象为中心的核心内涵与 DIPPS 六大基石 (Client-Centred Care & DIPPS Acronym)</h4>
-
+                
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 1.4).</h4>
@@ -1439,7 +1767,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 1.4: DIPPS—Principles of Client-Centred Care, the Goal of Support Work</h4>
@@ -1453,42 +1781,56 @@
                   </div>
                 </aside>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第十一节：临床批判性思维与解决问题方法 (Page 17)</h3>
+                        <div class="page-anchor-marker" id="page-17">
+                          <span class="marker-pill">Page 17</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-12">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 12 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第十一节：临床批判性思维与解决问题方法</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 12.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Critical Thinking & Four Pillars of Problem-Solving</h3><div class="subtopic-title-cn">临床批判性思维与问题解决的四大决策支柱</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">临床批判性思维与问题解决的四大决策支柱 (Critical Thinking & Four Pillars of Problem-Solving)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="2760.91" data-end="2825.93" data-title="Critical Thinking & Four Pillars of Problem-Solving" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>CRITICAL THINKING, DECISION MAKING, AND PROBLEM-SOLVING</strong> <br><br>Support workers think critically and make many decisions in the course of a workday. For example, they estimate the time each task will take and plan the best way to complete their work on time, taking into account the various needs of the client. Many decisions involve critical thinking in order to solve problems. <br><br>When solving problems, consider the following: - <strong>The goal of support work:</strong> Solutions to problems should not compromise the six principles of client-centred care: dignity, independence, individualized care, preferences, privacy, and safety, or DIPPS. - <strong>The client's viewpoint:</strong> Involve clients in solving problems that concern them. Examine the problem from the client's point of view. - <strong>Scope of practice:</strong> Learn and observe the rules of your workplace. Know the limits of your role. - <strong>Supervisor's viewpoint:</strong> Decide if the problem is one that you can handle on your own or one that your supervisor should handle. Your supervisor should provide guidance about which problems you can deal with on your own. <br><br></p>
                       <p class="para-cn"><strong>临床批判性思维、临床决策与照护问题解决</strong> <br><br>在每天的工作流程中，支持工作者无时无刻不在运用批判性思维做出大量的临床决策。例如，在兼顾服务对象多维需求的前提下，合理预估每项护理任务所需的时间跨度，并科学规划出确保在排班时间内高质量完工的最优工作路径。许多日常决策都必须依托批判性思维来解决错综复杂的现场问题。 <br><br>在面对临床难题进行问题解决与决策时，支持工作者必须立足于以下<strong>四大核心支柱</strong>进行系统考量： 1. <strong>始终对齐支持工作的终极宗旨（The Goal of Support Work）</strong>：任何问题的解决方案，都<strong>绝不可牺牲或损害“以服务对象为中心”的 DIPPS 六大根本基石（尊严、自立、个性化、偏好、隐私与安全）</strong>。 2. <strong>充分站在服务对象的立场视角（The Client's Viewpoint）</strong>：只要该问题涉及长者自身，就必须主动邀请长者共同参与探讨解决；必须设身处地从长者的视角与切身利益来审视审判问题。 3. <strong>严守法定执业范围红线（Scope of Practice）</strong>：熟练掌握并严格遵守所在机构的规章制度与省级法律界限，清醒知晓自己角色的权力极限，严禁越权擅断。 4. <strong>深刻理解上级督导的专业视角（Supervisor's Viewpoint）</strong>：清醒辨析该问题究竟是属于自己有权独立现场解决的范畴，还是属于必须立即上报交由主管护士介入决策的范畴。主管督导护士应当就哪些问题支持工作者可以自主处置、哪些问题必须立即上报提供清晰的指引规范。 <br><br></p>
                     </article>
                     
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第十二节：全书章节要点回顾与批判性思维实战 (Page 18)</h3>
+                        <div class="page-anchor-marker" id="page-18">
+                          <span class="marker-pill">Page 18</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-13">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 13 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第十二节：全书章节要点回顾与批判性思维实战</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 13.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">CHAPTER REVIEW · KEY POINTS</h3><div class="subtopic-title-cn">核心知识要点总结</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">核心知识要点总结 (CHAPTER REVIEW · KEY POINTS)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="2825.93" data-end="2999.38" data-title="CHAPTER REVIEW · KEY POINTS" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>CHAPTER REVIEW · KEY POINTS</strong> - The ultimate goal of support work is to improve the client's quality of life by following the principles of client-centred care (DIPPS). The support worker tends to the person's needs, which include physical needs as well as helping to relieve loneliness, providing comfort, encouraging independence, and promoting the person's self-respect. Care should always be individualized to each client. A support worker's services to people in their homes help them remain independent and continue to live with their families. Support workers make a difference in people's lives. - Support workers can work in community-based or facility-based settings. Duties will vary according to the setting. - Most of a support worker's responsibilities can be grouped into six categories: (1) personal care, (2) support for nurses and other health care providers, (3) family support, (4) social support, (5) housekeeping or home management, and (6) documenting and reporting any basic assessments, observations, and care provided in the client's record or chart. - Depending on their setting, people receiving health care and support services are known by different terms, such as patient (in a hospital), resident (in a live-in facility), or client (in the community). - The people supported can be grouped according to their problems, needs, and ages. - At this point, support workers in most provinces and territories are still considered health care providers not regulated through legislation, or unregulated care providers (UCPs). Support workers are accountable to their supervisors, employers, and clients; they do not presently have an organization or college that governs their role. Regulated care providers are health care providers licensed and regulated by the province or territory to carry out care that is within their scope of practice. - There are many members of the health care team, with the client always at the centre of care. - It is important that support workers understand their scope of practice and never act beyond their role. - In many settings, support workers are supervised by nurses or other professionals. - Professionalism includes having a positive attitude, a sense of responsibility, a professional appearance, being discreet about client information, being a lifelong learner, advocating for the client, being discreet about personal matters, and using acceptable speech and language. - While discussing the client with co-workers, support workers must use discretion at all times and honour the client's right to confidentiality. Confidentiality means respecting and guarding personal and private information about another person. - Part of being a professional, reflective practice reviews consist of a review and self-evaluation of any care provided and identification of ways to improve clinical performance. - When thinking critically, making decisions, and solving problems, support workers must consider the principles of client-centred care (DIPPS), the client's viewpoint, their scope of practice, and their supervisor's viewpoint. <br><br></p>
                       <p class="para-cn"><strong>第 1 章核心知识要点权威回顾（KEY POINTS）：</strong> 1. <strong>支持工作的终极使命</strong>：支持工作的根本宗旨在于践行 DIPPS 六大人本原则以提升长者的生命品质。支持工作者全方位满足长者的身心需求，排遣孤独、倾注温情抚慰、激发自主自立、维护人格尊严。照护必须全程个性化。入户服务能赋能长者在熟悉的家中自立生存，支持工作者真正改变了他人的生命轨迹。 2. <strong>执业场所多样性</strong>：支持工作者既可执业于社区环境亦可执业于院舍机构，具体职责随场所特性动态调整。 3. <strong>六大核心职责体系</strong>：(1) 个人生活照料；(2) 协助护士及其他医护人员；(3) 家庭系统支持；(4) 社交人际支持；(5) 家务管理；(6) 基础评估、观察所见与照护记录书面汇报。 4. <strong>受助人群的三大称谓</strong>：医院中称为患者（Patient），全寄宿机构中称为院舍长者（Resident），社区家庭中称为案主（Client），通称为服务对象。 5. <strong>受助人群九大分类</strong>：可依据健康问题、多维需求与年龄跨度清晰归纳为九大核心类别。 6. <strong>未受监管照护者（UCPs）法定属性</strong>：目前在绝大多数省份支持工作者属于 UCPs，向督导、雇主及案主问责，暂无专门法定行业公会直接发牌管理；而受监管专业人员（如护士、医生）由省级专业公会直接发牌规制。 7. <strong>以案主为中心的跨学科团队</strong>：医疗团队汇聚多学科专业力量，但服务对象始终处于整个照护体系的正中央核心。 8. <strong>执业范围红线原则</strong>：深刻领悟所在省份教育标准与雇主制度所界定的执业范围（Scope of Practice），绝不擅自越权。 9. <strong>多层级督导机制</strong>：在绝大多数场景下，支持工作者接受注册护士（RN）或实用护士（RPN/LPN）等专科人员的临床督导。 10. <strong>专业素养八大支柱</strong>：专业素养涵盖积极阳光态度、高度责任心、专业规范仪表、案主信息保密审慎、终身学习、敢于为长者发声、将个人私事完全排除于职场外、文明合宜的语言谈吐。 11. <strong>信息隐私保密权（Confidentiality）</strong>：与同事探讨案情时必须严守保密义务，尊重并全力捍卫服务对象的一切个人健康与私人隐私信息。 12. <strong>反思性执业回顾（Reflective Practice Review）</strong>：作为专业素养的核心，从业者必须定期对自身实施的各项照护进行批判性自省评估，确保持续精进临床操作品质。 13. <strong>临床决策四大维度</strong>：在运用批判性思维解决问题时，必须综合平衡 DIPPS 人本照护宗旨、案主切身视角、法定执业范围以及上级督导的专业指引。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">临床实践中的批判性思维案例情境 (CRITICAL THINKING IN PRACTICE) (Page 18)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 13.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">CRITICAL THINKING IN PRACTICE</h3><div class="subtopic-title-cn">临床实践中的批判性思维案例情境</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="1" data-start="2999.38" data-end="3024.89" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>CRITICAL THINKING IN PRACTICE</strong> In the clinical setting, a resident tells you that she has been getting out of bed on her own at night, even though she was instructed to ask for assistance whenever ambulating. She has fallen several times in the past and fractured her wrist the last time she fell. How will you respond? What will you do? As a student, what rules must you follow to protect patients and residents? <br><br><strong>【题目翻译与临床决策指引】</strong> 在临床长照机构实习中，一位长期入住的长者悄悄告诉你：她最近每天夜间都自己偷偷下床走动去洗手间，尽管医护团队三令五申要求她每次离床走动前必须按呼叫铃寻求人员协助。该长者过去曾多次发生严重跌倒，在上一次跌倒中甚至导致了手腕粉碎性骨折。老人家哀求你替她保守这个“秘密”，不要告诉护士。 - <strong>你应当如何与长者沟通回应？</strong> - <strong>你必须立刻采取什么临床行动？</strong> - <strong>作为一名实习学员或在职支持工作者，你必须严格遵守哪些安全铁律来全力保护病患与长者的生命安全？</strong> <br><br><strong>【权威临床决策精解与实战行动准则】</strong> 1. <strong>治疗性沟通与共情劝导</strong>：切勿用严厉生硬的口吻训斥长者。首先以温和共情的态度肯定其渴望自主自立的心情，但必须耐心向其解释：既往多次跌倒且伴有严重骨折史，夜间视线昏暗、突发体位性低血压极易再次发生致命跌倒，可能导致严重的股骨颈骨折、长期卧床、完全丧失自理能力甚至危及生命。 2. <strong>果断干预与团队安全闭环汇报</strong>：离开房间前立即落实跌倒防范措施：确保病床摇降至最低安全高度，将呼叫铃手柄放置在长者健侧唾手可及之处，清理床旁与地面一切障碍物，开启夜间照明地灯。<strong>最为关键的一步：支持工作者绝不可为了向长者盲目承诺而隐瞒安全隐患，必须在离开房间后第一时间立即向当班主管督导护士（Supervising Nurse）如实汇报该高危隐患！</strong>以便跨学科团队紧急重新评估长者的跌倒风险指数，调整防跌倒干预计划（如安装离床重力感应报警垫、提高夜间巡视频率等）。 3. <strong>实习学生守则与伦理底线</strong>：<strong>生命安全（Safety）在支持工作一切价值排序中始终位列最高优先级！</strong>支持工作者绝不能隐瞒长者的高危行动。对案主生命安全和严重躯体伤害的预防，具有绝对的压倒性，绝对优先于长者个人“不愿声张”的盲目要求。</p>

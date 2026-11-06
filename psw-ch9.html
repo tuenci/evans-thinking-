@@ -308,33 +308,180 @@
       margin: 0;
     }
     
-    /* Section Dividers */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar {
-      height: 1px;
-      background: var(--border-subtle);
-      margin-bottom: 18px;
+    /* 4-Tier Thematic & Heading Hierarchy */
+    /* Tier 1: Major Section Banner */
+    .editorial-major-section {
+      margin: 56px 0 24px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 5px solid var(--accent-navy);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .section-eyebrow {
+    .section-banner-head .section-badge {
+      display: inline-block;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent-navy);
-      margin-bottom: 6px;
+      color: #ffffff;
+      background: var(--accent-navy);
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
-    .sh-title-en {
-      font-size: 21px;
+    .section-banner-head .section-title-en {
+      font-size: 22px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .section-banner-head .section-title-cn {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-title-universal {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-summary-tag {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      line-height: 1.5;
+    }
+
+    /* Tier 2: Clinical Sub-topic Card */
+    .editorial-subtopic-card {
+      margin: 36px 0 16px;
+      padding: 14px 18px;
+      background: rgba(30, 58, 138, 0.035);
+      border-left: 3.5px solid var(--accent-navy);
+      border-radius: 0 8px 8px 0;
+    }
+    html.theme-night .editorial-subtopic-card {
+      background: rgba(96, 165, 250, 0.06);
+      border-left-color: #60a5fa;
+    }
+    .subtopic-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-navy);
+      margin-bottom: 4px;
+    }
+    html.theme-night .subtopic-tag {
+      color: #60a5fa;
+    }
+    .subtopic-title-en {
+      font-size: 17.5px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
-    .sh-title-cn {
-      font-size: 15px;
+    .subtopic-title-cn {
+      font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
+    .subtopic-title-universal {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 3: Micro-topic Row */
+    .editorial-microtopic-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .micro-bullet {
+      color: var(--accent-navy);
+      font-size: 12px;
+    }
+    html.theme-night .micro-bullet {
+      color: #60a5fa;
+    }
+    .micro-title-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .micro-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .micro-title-universal {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 4: Chapter Thematic Navigation Jumpbar */
+    .chapter-thematic-nav {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .thematic-nav-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .thematic-nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topic-chip {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+    .topic-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    .topic-chip .chip-num {
+      font-size: 10px;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+
+    /* Legacy section divider fallback */
+    .editorial-section-divider { margin: 48px 0 24px; }
+    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
+    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
+    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
     
     /* Bilingual Paragraphs */
     .bilingual-paragraph {
@@ -623,6 +770,10 @@
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
     html.mode-en .sh-title-cn,
+    html.mode-en .section-title-cn,
+    html.mode-en .subtopic-title-cn,
+    html.mode-en .micro-title-cn,
+    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
     html.mode-en .marker-text-cn,
@@ -635,6 +786,9 @@
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
     html.mode-cn .sh-title-en,
+    html.mode-cn .section-title-en,
+    html.mode-cn .subtopic-title-en,
+    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
     html.mode-cn .marker-text-en,
     html.mode-cn .eq-stem-en { display: none !important; }
@@ -674,6 +828,33 @@
       }
       .hero-title-en { font-size: 22px; }
       .hero-title-cn { font-size: 15.5px; }
+      
+      .editorial-major-section {
+        padding: 16px 14px;
+        margin: 36px 0 16px;
+        border-radius: 10px;
+      }
+      .section-banner-head .section-title-en { font-size: 18.5px; }
+      .section-banner-head .section-title-cn { font-size: 15px; }
+      .section-banner-head .section-title-universal { font-size: 17px; }
+      
+      .editorial-subtopic-card {
+        padding: 10px 12px;
+        margin: 24px 0 12px;
+      }
+      .subtopic-title-en { font-size: 16px; }
+      .subtopic-title-cn { font-size: 13.5px; }
+      .subtopic-title-universal { font-size: 15px; }
+      
+      .editorial-microtopic-row {
+        margin: 18px 0 8px;
+        flex-wrap: wrap;
+      }
+      .micro-title-en { font-size: 14.5px; }
+      .micro-title-cn { font-size: 13px; }
+      
+      .thematic-nav-chips { gap: 4px; }
+      .topic-chip { padding: 3px 8px; font-size: 11px; }
       
       .box-banner-header { padding: 12px 14px 10px; }
       .box-body-content { padding: 12px 14px 14px; }
@@ -723,30 +904,42 @@
         <span class="meta-item">Pages 129–148 · 11 道全真自测题</span>
         <span class="meta-item">轻触段落即可播放真人原声导读</span>
       </div>
+      
+        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
+          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
+          <div class="thematic-nav-chips">
+            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 沟通环路模型与影响沟</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 口头语言与非语言沟通</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 促进有效沟通的核心技</a><a href="#sec-06" class="topic-chip"><span class="chip-num">§ 06</span> 沟通壁垒识别与潜意识</a><a href="#sec-07" class="topic-chip"><span class="chip-num">§ 07</span> 应对愤怒案主与坚定果</a><a href="#sec-08" class="topic-chip"><span class="chip-num">§ 08</span> 与认知症及阿尔茨海默</a>
+          </div>
+        </nav>
+        
+      
+        <div class="page-jump-ribbon">
+          <span class="ribbon-label">原书页码检索:</span>
+          <div class="ribbon-scroll">
+            <a href="#page-129" class="ribbon-chip">p.129</a><a href="#page-130" class="ribbon-chip">p.130</a><a href="#page-131" class="ribbon-chip">p.131</a><a href="#page-132" class="ribbon-chip">p.132</a><a href="#page-136" class="ribbon-chip">p.136</a><a href="#page-138" class="ribbon-chip">p.138</a><a href="#page-142" class="ribbon-chip">p.142</a><a href="#page-145" class="ribbon-chip">p.145</a>
+          </div>
+        </div>
+        
     </header>
 
     <main class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 9 Opener & Learning Objectives (Page 129)</h3>
+                        <div class="page-anchor-marker" id="page-129">
+                          <span class="marker-pill">Page 129</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-01">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 9 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
                   </div>
-                </div>
+                </section>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
-                  </div>
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -756,15 +949,16 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【核心专业术语表】Chapter 9 Key Terms (Page 130)</h3>
+                        <div class="page-anchor-marker" id="page-130">
+                          <span class="marker-pill">Page 130</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-02">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 9 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
                   </div>
-                </div>
+                </section>
                 
             <div class="key-terms-section">
               <div class="kt-section-header">
@@ -1009,25 +1203,34 @@
                 </div></div>
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第一节：沟通环路模型与影响沟通的核心因素 (Pages 131 - 132)</h3>
+                        <div class="page-anchor-marker" id="page-131">
+                          <span class="marker-pill">Pages 131 - 132</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-03">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第一节：沟通环路模型与影响沟通的核心因素</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Communication Process</h3><div class="subtopic-title-cn">沟通的基本双向环路</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">沟通的基本双向环路 (The Communication Process)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Effective interpersonal communication leads to better relationships with clients, families, and co-workers. It is also necessary for providing safe and effective health care. Health care team members share information about what has been done for the client, what needs to be done for the client, and the client's response to care and treatment. For communication to take place, the following elements are required: 1. <strong>The sender:</strong> The person who conceives and initiates the message. 2. <strong>The message:</strong> The information, thought, idea, or feeling being transmitted. 3. <strong>The receiver:</strong> The person who receives, intercepts, and decodes the message. 4. <strong>Feedback:</strong> The receiver's verbal or nonverbal response, which confirms whether the message was received and understood accurately. Without feedback, the sender cannot know if the communication was successful. <br><br></p>
                       <p class="para-cn">卓越的人际沟通，是与服务对象、家属及同侪建立深厚信任关系的基石，更是保障安全、高效医疗照护的核心前提。多学科医疗团队成员必须通过持续沟通，共享案主已接受的处置、下一步亟待实施的照护计划，以及案主对治疗与支持干预的真实身心反应。 一次完整的沟通必须具备以下四大核心要素构成的闭环： 1. <strong>发送者（The Sender）：</strong> 构思并主动发起信息的个体。 2. <strong>信息本身（The Message）：</strong> 所欲传达的事实、观点、照护指令或内在情感。 3. <strong>接收者（The Receiver）：</strong> 接收、倾听并解码该信息的个体。 4. <strong>反馈（Feedback）：</strong> 接收者通过语言或肢体动作作出的回应，明确证实信息是否已被准确接收与正确理解。缺乏有效反馈，沟通环路便处于断裂状态，发送者无法断定信息是否真正送达。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">影响沟通的深层主客观因素 (Factors That Influence Communication)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Factors That Influence Communication</h3><div class="subtopic-title-cn">影响沟通的深层主客观因素</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Many factors can influence how a message is sent, received, and interpreted: • <strong>Perceptions:</strong> How each person views the world based on their past experiences, values, and assumptions. • <strong>Experiences and background:</strong> A person's culture, education, primary language, and socioeconomic status shape their vocabulary and communication habits. • <strong>Physical and mental health:</strong> Fatigue, severe pain, sensory loss (hearing or vision impairment), illness, and cognitive changes dramatically alter a client's ability to communicate. • <strong>Emotions:</strong> Fear, grief, anger, anxiety, and depression can cause clients to misunderstand messages or react defensively. • <strong>Environmental factors:</strong> Background noise, lack of privacy, distractions, and poor lighting can prevent clients from focusing on the conversation. <br><br></p>
@@ -1035,25 +1238,34 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第二节：口头语言与非语言沟通的深度临床辨析 (Pages 132 - 135)</h3>
+                        <div class="page-anchor-marker" id="page-132">
+                          <span class="marker-pill">Pages 132 - 135</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-04">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第二节：口头语言与非语言沟通的深度临床辨析</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Verbal Communication & Electronic Media</h3><div class="subtopic-title-cn">口头语言沟通与电子通讯警示</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">口头语言沟通与电子通讯警示 (Verbal Communication & Electronic Media)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Verbal communication uses words, either spoken or written. When communicating verbally with clients: • Use words that have clear, unmistakable meanings. Avoid confusing medical jargon or abbreviations. • Speak clearly, slowly, and distinctly. • Control the tone and pitch of your voice. Shouting communicates anger or impatience, which intimidates clients. • Do not speak to adult clients as if they were children ("elderspeak"). Avoid calling them "sweetie," "honey," or "grandma," which demeans their adult dignity. <br><br><strong>Electronic Communication Warning:</strong> Support workers frequently use smartphones, tablets, or secure computers to read care assignments and communicate with supervisors. Remember: • Electronic messages lack nonverbal cues (tone of voice, facial expression), making them easily misunderstood. • Never text or email personal health information over unencrypted or public networks. • Never post any client information or photos on social media; doing so violates privacy laws and will lead to immediate termination and legal prosecution. <br><br></p>
                       <p class="para-cn">口头语言沟通涵盖有声语言与书面文字。与案主进行言语沟通时，必须恪守以下专业操守： • 选用通俗易懂、定义明确的生活化词汇，坚决摒弃晦涩的医学行话或缩略语，防止案主产生误解恐慌。 • 吐字清晰、语速沉稳适中、断句得当。 • 严格调控音调与音量。大声嚷叫不仅无法促进理解，反而会向案主传递出烦躁、不耐烦或指责的负面信号，令其陷入恐慌。 • 严禁对成年长者使用“儿化语”（Elderspeak）！绝不可使用“小甜心”、“乖乖”、“老奶奶”等幼化贬损性昵称，必须称呼其法定尊称（如 Mr. Smith），誓死捍卫案主的成年人尊严。 <br><br><strong>电子通讯执业铁律：</strong> 支持工作者在日常交接班中日益依赖智能手机或平板电脑查阅派工单。务必牢记： • 电子文字彻底剥离了语音语调与面部表情等非语言线索，极易诱发冷漠无情或粗鲁命令的误解。 • 严禁通过非加密公共网络或私人社交账号传输案主的个人健康信息。 • 严禁在个人社交媒体（微信、Instagram、Facebook）上发布关于案主的任何文字、照片或视频片段！此举属于严重触犯加拿大隐私法的非法犯罪行为，将面临即刻开除与法律追诉！ <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">非语言沟通的强大威力与身体语言密码 (Nonverbal Communication & Body Language)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Nonverbal Communication & Body Language</h3><div class="subtopic-title-cn">非语言沟通的强大威力与身体语言密码</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Nonverbal communication messages are sent without words. In fact, research demonstrates that the majority of human communication is nonverbal. Nonverbal messages reflect a person's truest feelings and are more difficult to fake than spoken words. Key aspects of nonverbal communication include: • <strong>Body language:</strong> Posture, gestures, movements, and body position. Slouching conveys disinterest; facing the client conveys attentiveness. • <strong>Facial expressions:</strong> The face is the most expressive part of the body. Fear, anger, happiness, pain, and disgust are instantly revealed. • <strong>Eye contact:</strong> Making appropriate eye contact signals honesty, respect, and attentiveness. However, eye contact norms vary across cultures. • <strong>Touch:</strong> Touch is a very powerful form of communication. It can convey warmth, comfort, reassurance, and caring. However, touch must be used judiciously, respecting cultural boundaries and client consent. <br><br></p>
@@ -1061,24 +1273,26 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-case">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
+                      </div>
+                      <h4 class="box-title-en">CASE STUDY: The Power of Nonverbal Cues in Clinical Observation</h4>
                     </div>
-                    <h3 class="sh-title-en">CASE STUDY: The Power of Nonverbal Cues in Clinical Observation</h3>
-                  </div>
+                  </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">临床案例实操思维修炼：非语言线索在床旁观察中的决定性力量</h4>
                     </div>
-                    <h3 class="sh-title-en">临床案例实操思维修炼：非语言线索在床旁观察中的决定性力量</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1088,17 +1302,22 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第三节：促进有效沟通的核心技能与方法 (Pages 136 - 138)</h3>
+                        <div class="page-anchor-marker" id="page-136">
+                          <span class="marker-pill">Pages 136 - 138</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-05">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第三节：促进有效沟通的核心技能与方法</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Communication Methods & Active Listening</h3><div class="subtopic-title-cn">倾听、复述、澄清与聚焦技术</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">倾听、复述、澄清与聚焦技术 (Communication Methods & Active Listening)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Using specific communication methods helps you share information more effectively and understand your clients' needs: 1. <strong>Active and Empathetic Listening:</strong> Give your undivided attention. Face the client, make appropriate eye contact, and avoid interrupting. Listen not only to what is said, but to the feelings behind the words. 2. <strong>Paraphrasing:</strong> Restating the client's message in your own words. It shows you are listening and allows the client to confirm or correct your understanding. - Client: "I hate this food. It tastes like cardboard, and I don't want any of it." - Support Worker: "You are really frustrated with the quality of the meals today." 3. <strong>Clarifying:</strong> Asking questions to ensure you understand an ambiguous or vague message. - Example: "Could you explain what you mean when you say you feel 'funny' inside?" 4. <strong>Focusing:</strong> Guiding the conversation back to a specific topic when a client rambles or becomes distracted. - Example: "You mentioned your knee earlier. Let's talk more about when that pain started." 5. <strong>Open-Ended vs. Closed-Ended Questions:</strong> - <strong>Open-ended:</strong> "How was your sleep last night?" (Encourages elaboration). - <strong>Closed-ended:</strong> "Are you in pain right now?" (Elicits brief, factual answers). <br><br></p>
@@ -1106,17 +1325,22 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第四节：沟通壁垒识别与潜意识心理防御机制 (Pages 138 - 141)</h3>
+                        <div class="page-anchor-marker" id="page-138">
+                          <span class="marker-pill">Pages 138 - 141</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-06">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 06 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第四节：沟通壁垒识别与潜意识心理防御机制</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 6.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Communication Barriers</h3><div class="subtopic-title-cn">常见的沟通破坏性壁垒</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">常见的沟通破坏性壁垒 (Communication Barriers)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Communication barriers prevent the message from being sent or received effectively. As a support worker, you must consciously avoid the following destructive habits: • <strong>Interrupting:</strong> Cuts off the client's train of thought and conveys impatience. • <strong>Giving unsolicited advice:</strong> Telling clients what they "should" do takes away their autonomy. • <strong>Minimizing feelings:</strong> Saying "Don't worry, you'll be fine" dismisses genuine fears and invalidates the client's emotional experience. • <strong>Using clichés and platitudes:</strong> Trite expressions like "Tomorrow is another day" shut down communication. • <strong>Changing the subject abruptly:</strong> Conveys that you are uncomfortable with the client's emotions. • <strong>Passing judgement:</strong> Expressing disapproval of a client's lifestyle, religion, or decisions. <br><br></p>
@@ -1135,14 +1359,15 @@
                   </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">专栏 9.1：心理防御机制：潜意识如何构建抵御焦虑与心理创伤的防护屏障</h4>
                     </div>
-                    <h3 class="sh-title-en">专栏 9.1：心理防御机制：潜意识如何构建抵御焦虑与心理创伤的防护屏障</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1152,17 +1377,22 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第五节：应对愤怒案主与坚定果敢沟通风格 (Pages 142 - 144)</h3>
+                        <div class="page-anchor-marker" id="page-142">
+                          <span class="marker-pill">Pages 142 - 144</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-07">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 07 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第五节：应对愤怒案主与坚定果敢沟通风格</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 7.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Communicating With Angry Clients</h3><div class="subtopic-title-cn">与愤怒案主沟通的降级技巧</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">与愤怒案主沟通的降级技巧 (Communicating With Angry Clients)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Anger is a normal emotional reaction to loss of independence, chronic pain, and frustration. When dealing with an angry client: • Recognize that the anger is usually not directed at you personally, even if you are the target of the outburst. • Stay calm and composed. Maintain an open, nonthreatening posture. • Lower your voice and speak in a soft, steady, and soothing tone. • Listen attentively and do not argue, become defensive, or interrupt. • Validate their frustration: "I hear how upset you are that your bath was delayed." • Ensure your own personal safety. Never position yourself in a corner where your exit is blocked. If the client becomes physically violent, withdraw immediately and summon assistance. <br><br></p>
@@ -1181,20 +1411,21 @@
                   </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">专栏 9.2：化解案主愤怒情绪的专业临床行动指南（护身与降温铁律）</h4>
                     </div>
-                    <h3 class="sh-title-en">专栏 9.2：化解案主愤怒情绪的专业临床行动指南（护身与降温铁律）</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                     </div>
                     <h4 class="box-title-en">Focus on concrete solutions:</h4>
@@ -1209,17 +1440,22 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第六节：与认知症及阿尔茨海默病案主沟通的黄金准则 (Pages 145 - 146)</h3>
+                        <div class="page-anchor-marker" id="page-145">
+                          <span class="marker-pill">Pages 145 - 146</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-08">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 08 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第六节：与认知症及阿尔茨海默病案主沟通的黄金准则</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 8.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Communicating With Clients Living With Dementia</h3><div class="subtopic-title-cn">认知症长者的交流困境与情感联结</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">认知症长者的交流困境与情感联结 (Communicating With Clients Living With Dementia)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Dementia gradually destroys brain cells responsible for language comprehension and expression. Clients with dementia often struggle to find words (aphasia), repeat phrases, lose their train of thought, and become easily confused or agitated. Core principles for communicating with someone living with dementia: • <strong>Approach from the front:</strong> Never startle a client with dementia by approaching from behind. • <strong>Maintain gentle eye contact at eye level:</strong> Sit or squat down so you are not looming over them. • <strong>State your name and greet them warmly every single time.</strong> • <strong>Use simple, short sentences and speak slowly and clearly.</strong> • <strong>Ask one simple question at a time.</strong> Give ample time (up to 20–30 seconds) for the client to process and respond. • <strong>Use visual cues and gestures:</strong> Point to the shirt when asking, "Would you like to put on this blue shirt?" • <strong>Never argue or try to logic with hallucinations or delusions:</strong> Enter their reality and provide emotional comfort. <br><br></p>
@@ -1238,14 +1474,15 @@
                   </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">专栏 9.4：阿尔茨海默病与认知症长者全流程温和沟通实战秘笈</h4>
                     </div>
-                    <h3 class="sh-title-en">专栏 9.4：阿尔茨海默病与认知症长者全流程温和沟通实战秘笈</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="9" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">

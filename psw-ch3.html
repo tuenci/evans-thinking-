@@ -308,33 +308,180 @@
       margin: 0;
     }
     
-    /* Section Dividers */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar {
-      height: 1px;
-      background: var(--border-subtle);
-      margin-bottom: 18px;
+    /* 4-Tier Thematic & Heading Hierarchy */
+    /* Tier 1: Major Section Banner */
+    .editorial-major-section {
+      margin: 56px 0 24px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 5px solid var(--accent-navy);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .section-eyebrow {
+    .section-banner-head .section-badge {
+      display: inline-block;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent-navy);
-      margin-bottom: 6px;
+      color: #ffffff;
+      background: var(--accent-navy);
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
-    .sh-title-en {
-      font-size: 21px;
+    .section-banner-head .section-title-en {
+      font-size: 22px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .section-banner-head .section-title-cn {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-title-universal {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-summary-tag {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      line-height: 1.5;
+    }
+
+    /* Tier 2: Clinical Sub-topic Card */
+    .editorial-subtopic-card {
+      margin: 36px 0 16px;
+      padding: 14px 18px;
+      background: rgba(30, 58, 138, 0.035);
+      border-left: 3.5px solid var(--accent-navy);
+      border-radius: 0 8px 8px 0;
+    }
+    html.theme-night .editorial-subtopic-card {
+      background: rgba(96, 165, 250, 0.06);
+      border-left-color: #60a5fa;
+    }
+    .subtopic-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-navy);
+      margin-bottom: 4px;
+    }
+    html.theme-night .subtopic-tag {
+      color: #60a5fa;
+    }
+    .subtopic-title-en {
+      font-size: 17.5px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
-    .sh-title-cn {
-      font-size: 15px;
+    .subtopic-title-cn {
+      font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
+    .subtopic-title-universal {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 3: Micro-topic Row */
+    .editorial-microtopic-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .micro-bullet {
+      color: var(--accent-navy);
+      font-size: 12px;
+    }
+    html.theme-night .micro-bullet {
+      color: #60a5fa;
+    }
+    .micro-title-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .micro-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .micro-title-universal {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 4: Chapter Thematic Navigation Jumpbar */
+    .chapter-thematic-nav {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .thematic-nav-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .thematic-nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topic-chip {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+    .topic-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    .topic-chip .chip-num {
+      font-size: 10px;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+
+    /* Legacy section divider fallback */
+    .editorial-section-divider { margin: 48px 0 24px; }
+    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
+    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
+    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
     
     /* Bilingual Paragraphs */
     .bilingual-paragraph {
@@ -623,6 +770,10 @@
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
     html.mode-en .sh-title-cn,
+    html.mode-en .section-title-cn,
+    html.mode-en .subtopic-title-cn,
+    html.mode-en .micro-title-cn,
+    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
     html.mode-en .marker-text-cn,
@@ -635,6 +786,9 @@
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
     html.mode-cn .sh-title-en,
+    html.mode-cn .section-title-en,
+    html.mode-cn .subtopic-title-en,
+    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
     html.mode-cn .marker-text-en,
     html.mode-cn .eq-stem-en { display: none !important; }
@@ -674,6 +828,33 @@
       }
       .hero-title-en { font-size: 22px; }
       .hero-title-cn { font-size: 15.5px; }
+      
+      .editorial-major-section {
+        padding: 16px 14px;
+        margin: 36px 0 16px;
+        border-radius: 10px;
+      }
+      .section-banner-head .section-title-en { font-size: 18.5px; }
+      .section-banner-head .section-title-cn { font-size: 15px; }
+      .section-banner-head .section-title-universal { font-size: 17px; }
+      
+      .editorial-subtopic-card {
+        padding: 10px 12px;
+        margin: 24px 0 12px;
+      }
+      .subtopic-title-en { font-size: 16px; }
+      .subtopic-title-cn { font-size: 13.5px; }
+      .subtopic-title-universal { font-size: 15px; }
+      
+      .editorial-microtopic-row {
+        margin: 18px 0 8px;
+        flex-wrap: wrap;
+      }
+      .micro-title-en { font-size: 14.5px; }
+      .micro-title-cn { font-size: 13px; }
+      
+      .thematic-nav-chips { gap: 4px; }
+      .topic-chip { padding: 3px 8px; font-size: 11px; }
       
       .box-banner-header { padding: 12px 14px 10px; }
       .box-body-content { padding: 12px 14px 14px; }
@@ -723,30 +904,42 @@
         <span class="meta-item">Pages 34–47 · 9 道全真自测题</span>
         <span class="meta-item">轻触段落即可播放真人原声导读</span>
       </div>
+      
+        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
+          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
+          <div class="thematic-nav-chips">
+            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 两大执业阵地全景与原</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 社区场景深度拆解：居</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 四大工作环境利弊大起</a>
+          </div>
+        </nav>
+        
+      
+        <div class="page-jump-ribbon">
+          <span class="ribbon-label">原书页码检索:</span>
+          <div class="ribbon-scroll">
+            <a href="#page-34" class="ribbon-chip">p.34</a><a href="#page-35" class="ribbon-chip">p.35</a><a href="#page-36" class="ribbon-chip">p.36</a><a href="#page-37" class="ribbon-chip">p.37</a><a href="#page-39" class="ribbon-chip">p.39</a>
+          </div>
+        </div>
+        
     </header>
 
     <main class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 3 Opener & Learning Objectives (Page 34)</h3>
+                        <div class="page-anchor-marker" id="page-34">
+                          <span class="marker-pill">Page 34</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-01">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 3 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
                   </div>
-                </div>
+                </section>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
-                  </div>
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="0.0" data-end="34.2" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -756,15 +949,16 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【核心专业术语表】Chapter 3 Key Terms (Page 35)</h3>
+                        <div class="page-anchor-marker" id="page-35">
+                          <span class="marker-pill">Page 35</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-02">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 3 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
                   </div>
-                </div>
+                </section>
                 
             <div class="key-terms-section">
               <div class="kt-section-header">
@@ -1061,25 +1255,34 @@
                 </div></div>
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第一节：两大执业阵地全景与原住民社区执业 (Pages 36 - 37)</h3>
+                        <div class="page-anchor-marker" id="page-36">
+                          <span class="marker-pill">Pages 36 - 37</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-03">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第一节：两大执业阵地全景与原住民社区执业</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Community-Based vs Facility-Based Settings</h3><div class="subtopic-title-cn">社区型照护与机构型照护的本质分野</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">社区型照护与机构型照护的本质分野 (Community-Based vs Facility-Based Settings)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="34.2" data-end="91.32" data-title="Community-Based vs Facility-Based Settings" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>WORKPLACE SETTINGS AND SERVICES PROVIDED</strong> <br><br>This chapter describes common community-based and facility-based workplace settings for support workers. It also explores benefits and challenges you will encounter as a support worker in each of these work settings. <br><br>Support workers are employed in a variety of work settings. Some work in community settings, where services are provided to clients within the community, such as private homes, group homes, and adult day programs. Others work in facilities, where clients live and receive health care services, such as hospitals, long-term care facilities, and assisted-living facilities. <br><br>The nature of the support worker's role depends largely on the workplace setting. In some settings, support workers focus primarily on personal care and assisting with activities of daily living (ADLs). In other settings, they assist with household management, child care, or recreational activities. <br><br></p>
                       <p class="para-cn"><strong>支持工作者两大执业阵地与服务全景</strong> <br><br>本章系统解析支持工作者（PSW / HCA）所面临的两大最核心工作阵地：<strong>“社区型执业环境”（Community-Based Settings）</strong>与<strong>“机构型执业环境”（Facility-Based Settings）</strong>，并深刻剖析在不同执业场景中从业所收获的独特职业成长红利以及必须攻坚化解的执业挑战。 <br><br>支持工作者广泛活跃在纷繁多样的临床一线。一部分从业人员扎根于<strong>社区环境（Community Settings）</strong>之中，直接在案主日常生活的真实空间中提供上门照护，涵盖案主的私人住宅（Private Homes）、小型集体家庭公寓（Group Homes）、以及成人日间康乐中心（Adult Day Programs）。另一部分从业人员则深耕于<strong>集中式机构设施（Facility Settings）</strong>之内，在案主常住并接受密集医疗照护的专业机构中执业，涵盖各级综合医院（Hospitals）、长期照护院舍（Long-Term Care Facilities / 养老院）、以及辅助生活照护居所（Assisted-Living Facilities）。 <br><br>支持工作者的具体职责范畴，在极大程度上直接取决于其所身处的具体工作场所。在某些特定岗位上，支持工作者的全副精力高度聚焦于案主的个人生理照护（Personal Care）与协助基础日常生活活动（ADLs，如沐浴、排泄、换衣、进食与翻身移动）；而在另一些岗位环境中，他们则侧重于协助家居环境管理（轻度家务整理与烹饪）、抚育照料婴幼儿、或策划并带领长者开展有益身心的社交文娱康乐活动。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">原住民社区支持工作者的神圣使命 (Working in Indigenous Communities)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Working in Indigenous Communities</h3><div class="subtopic-title-cn">原住民社区支持工作者的神圣使命</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="91.32" data-end="123.65" data-title="Working in Indigenous Communities" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">In some provinces and territories, support workers may be employed by a First Nation (self-governing or otherwise) to provide care to their Indigenous clients. The job descriptions for support workers may vary between employers. Some employers expect support workers to perform only personal care, while others expect them to perform a variety of tasks, including housekeeping and running errands. <br><br>No matter where you work, you must always be aware of your scope of practice and the policies and procedures of your employer. <br><br></p>
@@ -1093,17 +1296,22 @@
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第二节：社区场景深度拆解：居家支持、成人日托与支持型住房 (Pages 37 - 38)</h3>
+                        <div class="page-anchor-marker" id="page-37">
+                          <span class="marker-pill">Pages 37 - 38</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-04">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第二节：社区场景深度拆解：居家支持、成人日托与支持型住房</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Home Care & Family Support</h3><div class="subtopic-title-cn">社区居家照护与家庭支持</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">社区居家照护与家庭支持 (Home Care & Family Support)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="123.65" data-end="163.75" data-title="Home Care & Family Support" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>WORKING IN COMMUNITY-BASED SETTINGS</strong> <br><br>Working in the community involves providing care in clients' private homes or in community-based facilities. Support workers who work in clients' homes provide a variety of services, including personal care, home support services (FIGURE 3.2), ADLs, child care, transportation, and companionship. <br><br>The client's home is their personal territory. You are a guest in their home, and you must respect their personal belongings, routines, and family culture. Support workers help clients remain as independent as possible in their homes, preventing or postponing the need for facility placement. <br><br></p>
@@ -1116,8 +1324,12 @@
                   <figcaption class="ef-caption-en"><strong>图 3.2 教学图示：支持工作者正在协助居家案主整理食品杂货</strong><br>*FIGURE 3.2: With the assistance of support workers, many clients are able to continue living in their own homes. (iStockphoto/monkeybusinessimages.)*<br>【教学意图】：生动展现居家支持工作者不仅提供生理擦洗，更在日常食品采购与家务管理中给予关键支撑，守护长者居家自立。</figcaption>
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">成人日间康乐计划与支持型保障公寓 (Adult Day Programs & Supportive Housing)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Adult Day Programs & Supportive Housing</h3><div class="subtopic-title-cn">成人日间康乐计划与支持型保障公寓</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="163.75" data-end="244.68" data-title="Adult Day Programs & Supportive Housing" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">• <strong>Adult Day Programs:</strong> Adult day programs (also known as adult day-care centres) provide supervised group activities, personal care, recreation, and meals for older persons and adults with physical or mental disabilities who live in the community. These programs provide an opportunity for social interaction and activities that help clients maintain physical and cognitive functioning. They also provide respite care for primary caregivers, giving them a needed break from their caregiving responsibilities. <br><br>• <strong>Supportive Housing and Assisted-Living Facilities:</strong> Supportive housing facilities (also called assisted-living facilities) provide housing and support services to people who need some assistance with daily activities but do not need 24-hour nursing care. Residents live in their own apartments or suites within a larger building or complex. Services often include meals in a central dining room, housekeeping, laundry, recreation, 24-hour emergency response, and assistance with ADLs. <br><br>• <strong>Respite Services:</strong> Respite services provide temporary relief to primary caregivers who care for family members with chronic illnesses, disabilities, or terminal conditions. Respite can be provided in the client's home, in an adult day program, or through a temporary stay in a facility. Respite care prevents caregiver burnout and helps families keep loved ones at home longer. <br><br></p>
@@ -1125,15 +1337,16 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第三节：四大工作环境利弊大起底与从业抉择 (Pages 39 - 45)</h3>
+                        <div class="page-anchor-marker" id="page-39">
+                          <span class="marker-pill">Pages 39 - 45</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-05">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第三节：四大工作环境利弊大起底与从业抉择</h2>
                   </div>
-                </div>
+                </section>
                 
                 <div class="editorial-box-opener" style="margin-top:36px;">
                   <aside class="editorial-box-container box-theme-terracotta">
@@ -1149,7 +1362,7 @@
                 <aside class="editorial-box-container box-theme-terracotta">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🏡</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
                     </div>
                     <h4 class="box-title-en">BOX 3.1: Benefits and Challenges Associated With Working in Home Care</h4>
@@ -1163,8 +1376,12 @@
                   </div>
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">退休公寓与集体家庭公寓 (Retirement Homes & Group Homes)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Retirement Homes & Group Homes</h3><div class="subtopic-title-cn">退休公寓与集体家庭公寓</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="306.58" data-end="371.52" data-title="Retirement Homes & Group Homes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">• <strong>Retirement Homes:</strong> A retirement home (or retirement residence) is a privately owned and operated facility that provides rental accommodation, meals, activities, and support services to older persons who are mostly independent. Residents pay for their own accommodation and services from their personal income or savings. These facilities are not heavily regulated like nursing homes, although provincial regulations require licensing and standards of care. Support workers in retirement homes provide scheduled personal care, assist with meals, and respond to emergencies. <br><br>• <strong>Group Homes:</strong> A group home is a residential facility that houses a small number of people (usually 3 to 10) who have physical disabilities, developmental disabilities, or mental health disorders. The home is designed to resemble a family setting and is located in a residential neighbourhood (FIGURE 3.5). Staff provide 24-hour supervision and assist with daily living activities, meal preparation, shopping, transportation, and recreation, encouraging residents to develop life skills. <br><br></p>
@@ -1192,7 +1409,7 @@
                 <aside class="editorial-box-container box-theme-terracotta">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🏡</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
                     </div>
                     <h4 class="box-title-en">BOX 3.2: Benefits and Challenges Associated With Working in a Long-Term Care Facility</h4>
@@ -1221,7 +1438,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 3.3: Benefits and Challenges Associated With Working Directly for Clients</h4>
@@ -1250,7 +1467,7 @@
                 <aside class="editorial-box-container box-theme-terracotta">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🏡</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
                     </div>
                     <h4 class="box-title-en">BOX 3.4: Benefits and Challenges Associated With Working in a Facility (Hospitals & Special Units)</h4>
@@ -1265,24 +1482,14 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【本章复习与核心要点回顾】Chapter 3 Review (Page 46)</h3>
-                  </div>
-                </div>
-                
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">核心要点清单 (KEY POINTS)</h3>
-                  </div>
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Chapter 3 Review</h4><span class="micro-title-cn">· 本章复习与核心要点回顾</span>
+            </div>
+            
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">KEY POINTS</h3><div class="subtopic-title-cn">核心要点清单</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="603.5" data-end="705.05" data-title="KEY POINTS" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1292,14 +1499,9 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">临床批判性思维修炼 (CRITICAL THINKING IN PRACTICE)</h3>
-                  </div>
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.3 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">CRITICAL THINKING IN PRACTICE</h3><div class="subtopic-title-cn">临床批判性思维修炼</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="705.05" data-end="738.14" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">

@@ -308,33 +308,180 @@
       margin: 0;
     }
     
-    /* Section Dividers */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar {
-      height: 1px;
-      background: var(--border-subtle);
-      margin-bottom: 18px;
+    /* 4-Tier Thematic & Heading Hierarchy */
+    /* Tier 1: Major Section Banner */
+    .editorial-major-section {
+      margin: 56px 0 24px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 5px solid var(--accent-navy);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .section-eyebrow {
+    .section-banner-head .section-badge {
+      display: inline-block;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent-navy);
-      margin-bottom: 6px;
+      color: #ffffff;
+      background: var(--accent-navy);
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
-    .sh-title-en {
-      font-size: 21px;
+    .section-banner-head .section-title-en {
+      font-size: 22px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .section-banner-head .section-title-cn {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-title-universal {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-summary-tag {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      line-height: 1.5;
+    }
+
+    /* Tier 2: Clinical Sub-topic Card */
+    .editorial-subtopic-card {
+      margin: 36px 0 16px;
+      padding: 14px 18px;
+      background: rgba(30, 58, 138, 0.035);
+      border-left: 3.5px solid var(--accent-navy);
+      border-radius: 0 8px 8px 0;
+    }
+    html.theme-night .editorial-subtopic-card {
+      background: rgba(96, 165, 250, 0.06);
+      border-left-color: #60a5fa;
+    }
+    .subtopic-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-navy);
+      margin-bottom: 4px;
+    }
+    html.theme-night .subtopic-tag {
+      color: #60a5fa;
+    }
+    .subtopic-title-en {
+      font-size: 17.5px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
-    .sh-title-cn {
-      font-size: 15px;
+    .subtopic-title-cn {
+      font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
+    .subtopic-title-universal {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 3: Micro-topic Row */
+    .editorial-microtopic-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .micro-bullet {
+      color: var(--accent-navy);
+      font-size: 12px;
+    }
+    html.theme-night .micro-bullet {
+      color: #60a5fa;
+    }
+    .micro-title-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .micro-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .micro-title-universal {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 4: Chapter Thematic Navigation Jumpbar */
+    .chapter-thematic-nav {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .thematic-nav-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .thematic-nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topic-chip {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+    .topic-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    .topic-chip .chip-num {
+      font-size: 10px;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+
+    /* Legacy section divider fallback */
+    .editorial-section-divider { margin: 48px 0 24px; }
+    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
+    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
+    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
     
     /* Bilingual Paragraphs */
     .bilingual-paragraph {
@@ -623,6 +770,10 @@
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
     html.mode-en .sh-title-cn,
+    html.mode-en .section-title-cn,
+    html.mode-en .subtopic-title-cn,
+    html.mode-en .micro-title-cn,
+    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
     html.mode-en .marker-text-cn,
@@ -635,6 +786,9 @@
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
     html.mode-cn .sh-title-en,
+    html.mode-cn .section-title-en,
+    html.mode-cn .subtopic-title-en,
+    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
     html.mode-cn .marker-text-en,
     html.mode-cn .eq-stem-en { display: none !important; }
@@ -674,6 +828,33 @@
       }
       .hero-title-en { font-size: 22px; }
       .hero-title-cn { font-size: 15.5px; }
+      
+      .editorial-major-section {
+        padding: 16px 14px;
+        margin: 36px 0 16px;
+        border-radius: 10px;
+      }
+      .section-banner-head .section-title-en { font-size: 18.5px; }
+      .section-banner-head .section-title-cn { font-size: 15px; }
+      .section-banner-head .section-title-universal { font-size: 17px; }
+      
+      .editorial-subtopic-card {
+        padding: 10px 12px;
+        margin: 24px 0 12px;
+      }
+      .subtopic-title-en { font-size: 16px; }
+      .subtopic-title-cn { font-size: 13.5px; }
+      .subtopic-title-universal { font-size: 15px; }
+      
+      .editorial-microtopic-row {
+        margin: 18px 0 8px;
+        flex-wrap: wrap;
+      }
+      .micro-title-en { font-size: 14.5px; }
+      .micro-title-cn { font-size: 13px; }
+      
+      .thematic-nav-chips { gap: 4px; }
+      .topic-chip { padding: 3px 8px; font-size: 11px; }
       
       .box-banner-header { padding: 12px 14px 10px; }
       .box-body-content { padding: 12px 14px 14px; }
@@ -723,30 +904,42 @@
         <span class="meta-item">Pages 96–111 · 12 道全真自测题</span>
         <span class="meta-item">轻触段落即可播放真人原声导读</span>
       </div>
+      
+        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
+          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
+          <div class="thematic-nav-chips">
+            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 加拿大马赛克文化、族</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 文化对健康信念、疾病</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 文化胜任力与文化安全</a><a href="#sec-06" class="topic-chip"><span class="chip-num">§ 06</span> 临床批判性思维修炼</a>
+          </div>
+        </nav>
+        
+      
+        <div class="page-jump-ribbon">
+          <span class="ribbon-label">原书页码检索:</span>
+          <div class="ribbon-scroll">
+            <a href="#page-96" class="ribbon-chip">p.96</a><a href="#page-97" class="ribbon-chip">p.97</a><a href="#page-98" class="ribbon-chip">p.98</a><a href="#page-103" class="ribbon-chip">p.103</a><a href="#page-108" class="ribbon-chip">p.108</a><a href="#page-110" class="ribbon-chip">p.110</a>
+          </div>
+        </div>
+        
     </header>
 
     <main class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 7 Opener & Learning Objectives (Page 96)</h3>
+                        <div class="page-anchor-marker" id="page-96">
+                          <span class="marker-pill">Page 96</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-01">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 7 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
                   </div>
-                </div>
+                </section>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
-                  </div>
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="0.0" data-end="51.12" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -756,15 +949,16 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【核心专业术语表】Chapter 7 Key Terms (Page 97)</h3>
+                        <div class="page-anchor-marker" id="page-97">
+                          <span class="marker-pill">Page 97</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-02">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 7 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
                   </div>
-                </div>
+                </section>
                 
             <div class="key-terms-section">
               <div class="kt-section-header">
@@ -1087,25 +1281,34 @@
                 </div></div>
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第一节：加拿大马赛克文化、族裔认同与多样性全貌 (Pages 98 - 103)</h3>
+                        <div class="page-anchor-marker" id="page-98">
+                          <span class="marker-pill">Pages 98 - 103</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-03">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第一节：加拿大马赛克文化、族裔认同与多样性全貌</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Canadian Cultural Mosaic & Diversity</h3><div class="subtopic-title-cn">加拿大文化马赛克与多元共存</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">加拿大文化马赛克与多元共存 (The Canadian Cultural Mosaic & Diversity)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="51.12" data-end="144.5" data-title="The Canadian Cultural Mosaic & Diversity" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Respect for diversity is one of the most vital professional values that every support worker must embody. Diversity is the state of different individuals and cultures coexisting. During your career as a support worker, you will care for and work with people whose lifestyles, religious beliefs, dietary habits, cultural customs, and rituals are very different from your own. Canada has one of the most culturally diverse populations in the world. Unlike the American philosophy of the "melting pot"-which historically pressured immigrants to assimilate and abandon their distinct traditions to blend into a single homogenous culture-Canada embraces the philosophy of the "cultural mosaic". In a mosaic, each distinct ethnic and cultural community is actively encouraged to retain, celebrate, and share its unique language, cultural traditions, cuisine, and heritage, while contributing as a vibrant, interconnected piece of the whole Canadian nation. Culture refers to the characteristics of a group of people, including language, values, beliefs, customs, habits, ways of life, rules for behaviour, music, and traditions. Culture is learned, shared, and passed down from generation to generation. It is dynamic and evolves over time. Ethnicity refers to the sharing of a common history, language, geography, national origin, religion, or identity. A person's ethnic identity gives them a sense of shared belonging. However, support workers must understand that not everyone within an ethnic group shares the exact same culture, beliefs, or practices. <br><br></p>
                       <p class="para-cn">对“多样性”（Diversity）的至高尊重，是每一位在加拿大执业的支持工作者必须融入血液的核心职业素养。所谓“多样性”，是指具有不同文化背景、宗教信仰、性取向与生命历程的个体在同一个社会空间中包容共生。在你的职业生涯中，你所照护的案主以及与你并肩作战的同事，其生活习俗、精神信仰、饮食禁忌与人生仪式往往与你自身的生活经验截然不同。 加拿大拥有举世瞩目的多元文化人口结构。与美国历史上倡导的“文化熔炉”（Melting Pot）理念——即施压新移民迅速被主流文化“同化”（Assimilate）、放弃原有母国传统融入单一同质化大熔炉不同，加拿大庄严推行“文化马赛克”（Cultural Mosaic）的国家宪政哲学。在马赛克艺术拼图中，每一个独特的族裔与文化群体，都被真诚鼓励保留其母语方言、风俗传统、艺术信仰与独特遗产，如同斑斓剔透的彩色瓷片，各自绽放独特光彩，共同拼接成加拿大这幅包容绚烂的国家整体画卷！ “文化”（Culture）是一个群体所共享的特征总和，涵盖语言符号、道德价值观、宗教宇宙观、风俗礼仪、生活习惯、不成文的行为准则、音乐饮食以及代际传承的历史传统。文化是在后天社会化进程中习得、共享并随时代变迁动态演进的。 “族裔归属”（Ethnicity）则是指一群人所共同拥有的历史记忆、地理故土、共同语言、国籍渊源、宗教传统或集体族群认同。“族裔认同”（Ethnic Identity）赋予个体深层的文化根基与群体归属感。然而，优秀的专业支持工作者必须时刻保持清醒：切勿把同一种族或族裔简单机械地划上等号——即便来自同一族群，个体之间的受教育背景、家庭教养与现代文化认同亦存在极其显著的个性化差异！ <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">破除社会偏见、刻板印象与年龄歧视 (Dismantling Prejudices, Stereotypes & Ageism)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Dismantling Prejudices, Stereotypes & Ageism</h3><div class="subtopic-title-cn">破除社会偏见、刻板印象与年龄歧视</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="144.5" data-end="269.69" data-title="Dismantling Prejudices, Stereotypes & Ageism" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Prejudice is an attitude that forms an opinion or prejudges an individual based solely on their membership in a group, rather than on their individual character. When prejudice is translated into external actions, it becomes discrimination. A stereotype is an overly simple, rigid, or exaggerated view of a group of people that assumes every member of that group has the exact same characteristics. In contrast, a generalization is a broad observation about cultural tendencies that acknowledges that individual differences always exist. Support workers must NEVER rely on stereotypes when providing care. Harmful forms of prejudice in health care: • Racism: Feelings of superiority over, and hatred, prejudice, or intolerance toward, a person or group based on race or skin colour. • Sexism: Prejudice or unequal treatment based on gender. • Homophobia: Irrational fear, hatred, or intolerance directed toward LGBTQ2 individuals. • Ageism: Feelings of impatience, prejudice, or negative stereotypes directed toward older adults. <br><br><br><br></p>
@@ -1122,14 +1325,15 @@
                   </aside>
                 </div>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">专栏 7.1：年龄歧视与老年维权：安大略省人权委员会（OHRC）官方权威维权事实清单</h4>
                     </div>
-                    <h3 class="sh-title-en">专栏 7.1：年龄歧视与老年维权：安大略省人权委员会（OHRC）官方权威维权事实清单</h3>
-                  </div>
+                  </aside>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="269.69" data-end="371.18" data-title="Family Structures & Cultural Health Beliefs" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1139,25 +1343,34 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第二节：文化对健康信念、疾病应对与沟通的影响 (Pages 103 - 108)</h3>
+                        <div class="page-anchor-marker" id="page-103">
+                          <span class="marker-pill">Pages 103 - 108</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-04">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第二节：文化对健康信念、疾病应对与沟通的影响</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Family Structures & Cultural Health Beliefs</h3><div class="subtopic-title-cn">文化对家庭结构与疾病因果观的塑造</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">文化对家庭结构与疾病因果观的塑造 (Family Structures & Cultural Health Beliefs)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="371.18" data-end="463.13" data-title="Cross-Cultural Communication, Touch & Space" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Culture shapes how people view family structure, authority, health, and sickness: 1. Family Structures: • Nuclear Family: Two parents and their children living together under one roof. • Extended Family: Multi-generational households including grandparents, parents, children, aunts, uncles, and cousins living together or cooperating closely. In many Asian, African, and Indigenous cultures, elders are revered as decision-makers. • Blended Family: Reconstructed families with stepparents and stepchildren. • Same-Sex Family: Two adults of the same gender in a loving partnership raising children or living together. • Single-Parent Family: One adult raising children independently. <br><br>2. Cultural Beliefs About Causes of Illness: Different cultures explain the onset of sickness through distinct worldviews: • Supernatural or Spiritual Forces: In some cultures, illness is viewed as punishment from God, an attack by evil spirits, witchcraft, or the result of a curse. Cures may involve prayer, rituals, amulets, and traditional medicine people. • Natural Harmony and Balance: Many Eastern and Indigenous philosophies (such as Traditional Chinese Medicine and Ayurveda) view health as a delicate balance between opposite forces (Yin and Yang, hot and cold, mind, body, and nature). Sickness is caused by disharmony or energy blockage, treated through acupuncture, herbal remedies, and dietary balancing. • Biomedical (Scientific) Model: Mainstream Western medicine views illness as the result of biological malfunctions, bacterial or viral infections, genetic mutations, or trauma, treated via pharmaceuticals and surgery. <br><br></p>
                       <p class="para-cn">文化深刻规约并塑造着人们如何看待家庭伦理、孝道权威、健康成因与疾病应对： 1. 多元家庭组织形态： • 核心家庭（Nuclear Family）：由两名夫妻伴侣与其子女共同生活在同一屋檐下的现代家庭形态。 • 大家族大家庭（Extended Family）：祖孙三代甚至四代同堂，涵盖祖父母、父母、子女、叔伯姑表共同居住或紧密互助。在许多亚洲、非洲、拉美及加拿大原住民文化中，家族长者享有至高无上的道德尊严与最终决策权。 • 重组家庭（Blended Family）：由离异再婚夫妻、继父母与前婚继子女拼接融合的新型家庭。 • 同性家庭（Same-Sex Family）：两位同性爱人基于法律与爱情结成伴侣共同生活或抚育后代的家庭单元。 • 单亲家庭（Single-Parent Family）：由父亲或母亲一人独立抚养子女的家庭。 <br><br>2. 文化对于疾病成因的多元哲学诠释： 不同文化传统对于人类为何会罹患重病，持有截然不同的宇宙观解释： • 超自然或神灵惩戒观：在某些传统文化中，重疾被视为触怒神灵的惩罚、恶灵缠身、巫术诅咒或宿世恶业报应。其康复干预往往重度依托于宗庙祈福、驱邪仪式、佩戴护身符以及寻求传统萨满巫医的灵魂净化。 • 阴阳自然平衡与天地和谐观：许多东方医学与原住民传统哲学（如传统中医 TCM、印度阿育吠陀、北美原住民药轮文化）视健康为天地阴阳、五行生克、寒热失调或身心灵与大自然生态失衡的外在病理投射。疾病是气血淤阻、经络失衡的产物；其调治重在借助草药食疗、针灸推拿与天人合一的心灵归位。 • 西医现代生物科学模型（Biomedical Model）：主流现代西方医学将疾病视作外来致病菌病毒感染、细胞恶变基因突变、代谢内分泌紊乱或物理组织创伤的生化机械故障，依赖化学靶向药物、无菌抗生素与外科手术予以干预。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">跨文化非言语沟通、身体距离与触碰禁忌 (Cross-Cultural Communication, Touch & Space)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 4.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Cross-Cultural Communication, Touch & Space</h3><div class="subtopic-title-cn">跨文化非言语沟通、身体距离与触碰禁忌</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="463.13" data-end="559.61" data-title="Cultural Safety & Practical Guidelines" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Nonverbal communication is deeply influenced by cultural rules: • Personal Space: In Western Canadian society, people typically maintain an arm's length (about 1 metre) of personal space during casual conversations. People from Mediterranean, Middle Eastern, and Latin American cultures often stand much closer and feel comfortable with close physical proximity. • Eye Contact: In mainstream North American culture, maintaining direct eye contact is perceived as honesty, confidence, and respect. However, in many Indigenous, Asian, and Middle Eastern traditions, direct, prolonged eye contact with authority figures or elders is considered disrespectful, confrontational, or rude; lowering the eyes is a sign of profound deference. • Touch and Physical Contact: In some cultures, a handshake, hug, or touching someone's shoulder is a natural expression of warmth. In contrast, in many conservative Islamic, Orthodox Jewish, or traditional Asian cultures, physical touch between unrelated individuals of opposite sexes is strictly prohibited by religious modesty laws. Furthermore, in many Buddhist cultures, the head is sacred-touching a client's head (even to adjust hair or hats) without explicit warning and permission is an offensive taboo. • Expression of Pain: Some cultures encourage open, loud weeping and verbal groaning as a healthy release of pain; other cultures (such as Scandinavian or traditional East Asian) emphasize stoicism, emotional restraint, and silent endurance, hiding severe pain from health workers. <br><br></p>
@@ -1165,21 +1378,26 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第三节：文化胜任力与文化安全照护实务准则 (Pages 108 - 109)</h3>
+                        <div class="page-anchor-marker" id="page-108">
+                          <span class="marker-pill">Pages 108 - 109</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-05">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第三节：文化胜任力与文化安全照护实务准则</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Cultural Safety & Practical Guidelines</h3><div class="subtopic-title-cn">文化安全、文化谦逊与实务指引</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">文化安全、文化谦逊与实务指引 (Cultural Safety & Practical Guidelines)</h4>
-
+                
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 7.2 Guidelines for Culturally Sensitive Care • Never make assumptions about a client's beliefs based on their skin colour or country of origin; always ask respectfully: "What personal traditions or preferences are important for us to know as we support you?" • Learn about the diverse cultures in your local community. • Respect cultural and religious objects: never touch or move sacred items (such as Indigenous medicine pouches, sweetgrass braids, Sikh turbans or kanga combs, rosaries, or prayer rugs) without permission. • Accommodate dietary practices and religious fasts (such as Halal, Kosher, vegetarianism, Hindu beef abstinence, or Ramadan fasting) within safety guidelines. • Facilitate spiritual rituals and provide quiet, private space for prayer and visits from spiritual leaders. • If language barriers exist, use official, trained medical interpreters; NEVER rely on young children to translate complex medical information. • Treat every client with unconditional positive regard, patience, and compassion.</h4>
@@ -1194,17 +1412,22 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第四节：临床批判性思维修炼 (Page 110)</h3>
+                        <div class="page-anchor-marker" id="page-110">
+                          <span class="marker-pill">Page 110</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-06">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 06 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第四节：临床批判性思维修炼</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 6.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Addressing Language Barriers & Cultural Anxiety</h3><div class="subtopic-title-cn">不通英语的院舍长者频繁按铃呼叫：语言障碍、文化焦虑与主动巡查策略</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">不通英语的院舍长者频繁按铃呼叫：语言障碍、文化焦虑与主动巡查策略 (Addressing Language Barriers & Cultural Anxiety)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">CRITICAL THINKING IN PRACTICE (Page 110) Mr. Zhang is an 81-year-old resident who recently moved from China into a Canadian long-term care facility. Mr. Zhang does not speak or understand English. He has mild heart failure and generalized mobility limitations. Throughout your morning shift, Mr. Zhang uses his bedside call bell repeatedly-ringing it 15 times within four hours. When you answer the bell, some of his needs are urgent (needing urgent assistance to the commode), but other times he simply points to the window, smiles anxiously, or motions for a cup of warm water. You notice a distinct clinical pattern: Mr. Zhang rings his call bell significantly more often in the late evening, immediately after his family leaves after visiting hours, and whenever more than 30 minutes pass without a staff member entering his room. • How might this behavioural pattern be invaluable in updating Mr. Zhang's personalized care plan? • What are the root causes of Mr. Zhang's frequent call bell use? • How can you and the health care team proactively decrease his anxiety and promote cultural safety? <br><br>Clinical Guidelines for Support Workers: 1. Root-Cause Clinical Analysis: Mr. Zhang's frequent call bell use is NOT "demanding" or "manipulative" behaviour. It is a profound manifestation of cultural disorientation, acute loneliness, fear of abandonment, and language isolation. Being unable to communicate in English in an unfamiliar Western institution makes him terrified that if an emergency occurs, no one will come to save him. When his family leaves, his anxiety spikes exponentially. 2. Invaluable Care Plan Adjustments: His behavioural pattern clearly proves that reactive care (waiting for him to ring the bell) is failing him and exhausting staff. The care plan should be transformed into proactive rounding (checking on Mr. Zhang every 25-30 minutes before he feels compelled to ring). 3. Proactive Cultural Safety Strategies: • Establish a regular proactive rounding schedule: pop into his room with a warm smile, check his comfort, offer warm water, and assist with toileting before he rings. • Create a bilingual pictorial communication board with clear photos, English words, and Chinese characters (e.g., photos for "Toilet / 如厕", "Warm Water / 温水", "Pain / 疼痛", "Cold / 寒冷", "Tired / 疲劳"). • Learn 4-5 basic Mandarin courteous greeting words ("Ni Hao / 你好", "Xie Xie / 谢谢"). • Encourage his family to bring familiar items: Chinese television programs or radio stations, framed family photos, favourite warm teas, and familiar cultural blankets to normalize his living environment. • Coordinate with the recreation department to pair him with Chinese-speaking volunteers or staff. <br><br></p>

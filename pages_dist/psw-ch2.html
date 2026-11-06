@@ -308,33 +308,180 @@
       margin: 0;
     }
     
-    /* Section Dividers */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar {
-      height: 1px;
-      background: var(--border-subtle);
-      margin-bottom: 18px;
+    /* 4-Tier Thematic & Heading Hierarchy */
+    /* Tier 1: Major Section Banner */
+    .editorial-major-section {
+      margin: 56px 0 24px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 5px solid var(--accent-navy);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .section-eyebrow {
+    .section-banner-head .section-badge {
+      display: inline-block;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent-navy);
-      margin-bottom: 6px;
+      color: #ffffff;
+      background: var(--accent-navy);
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
-    .sh-title-en {
-      font-size: 21px;
+    .section-banner-head .section-title-en {
+      font-size: 22px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .section-banner-head .section-title-cn {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-title-universal {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .section-banner-head .section-summary-tag {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      line-height: 1.5;
+    }
+
+    /* Tier 2: Clinical Sub-topic Card */
+    .editorial-subtopic-card {
+      margin: 36px 0 16px;
+      padding: 14px 18px;
+      background: rgba(30, 58, 138, 0.035);
+      border-left: 3.5px solid var(--accent-navy);
+      border-radius: 0 8px 8px 0;
+    }
+    html.theme-night .editorial-subtopic-card {
+      background: rgba(96, 165, 250, 0.06);
+      border-left-color: #60a5fa;
+    }
+    .subtopic-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-navy);
+      margin-bottom: 4px;
+    }
+    html.theme-night .subtopic-tag {
+      color: #60a5fa;
+    }
+    .subtopic-title-en {
+      font-size: 17.5px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
-    .sh-title-cn {
-      font-size: 15px;
+    .subtopic-title-cn {
+      font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
+    .subtopic-title-universal {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 3: Micro-topic Row */
+    .editorial-microtopic-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .micro-bullet {
+      color: var(--accent-navy);
+      font-size: 12px;
+    }
+    html.theme-night .micro-bullet {
+      color: #60a5fa;
+    }
+    .micro-title-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .micro-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .micro-title-universal {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Tier 4: Chapter Thematic Navigation Jumpbar */
+    .chapter-thematic-nav {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .thematic-nav-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .thematic-nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topic-chip {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+    .topic-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    .topic-chip .chip-num {
+      font-size: 10px;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+
+    /* Legacy section divider fallback */
+    .editorial-section-divider { margin: 48px 0 24px; }
+    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
+    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
+    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
     
     /* Bilingual Paragraphs */
     .bilingual-paragraph {
@@ -623,6 +770,10 @@
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
     html.mode-en .sh-title-cn,
+    html.mode-en .section-title-cn,
+    html.mode-en .subtopic-title-cn,
+    html.mode-en .micro-title-cn,
+    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
     html.mode-en .marker-text-cn,
@@ -635,6 +786,9 @@
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
     html.mode-cn .sh-title-en,
+    html.mode-cn .section-title-en,
+    html.mode-cn .subtopic-title-en,
+    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
     html.mode-cn .marker-text-en,
     html.mode-cn .eq-stem-en { display: none !important; }
@@ -674,6 +828,33 @@
       }
       .hero-title-en { font-size: 22px; }
       .hero-title-cn { font-size: 15.5px; }
+      
+      .editorial-major-section {
+        padding: 16px 14px;
+        margin: 36px 0 16px;
+        border-radius: 10px;
+      }
+      .section-banner-head .section-title-en { font-size: 18.5px; }
+      .section-banner-head .section-title-cn { font-size: 15px; }
+      .section-banner-head .section-title-universal { font-size: 17px; }
+      
+      .editorial-subtopic-card {
+        padding: 10px 12px;
+        margin: 24px 0 12px;
+      }
+      .subtopic-title-en { font-size: 16px; }
+      .subtopic-title-cn { font-size: 13.5px; }
+      .subtopic-title-universal { font-size: 15px; }
+      
+      .editorial-microtopic-row {
+        margin: 18px 0 8px;
+        flex-wrap: wrap;
+      }
+      .micro-title-en { font-size: 14.5px; }
+      .micro-title-cn { font-size: 13px; }
+      
+      .thematic-nav-chips { gap: 4px; }
+      .topic-chip { padding: 3px 8px; font-size: 11px; }
       
       .box-banner-header { padding: 12px 14px 10px; }
       .box-body-content { padding: 12px 14px 14px; }
@@ -723,30 +904,42 @@
         <span class="meta-item">Pages 20–33 · 11 道全真自测题</span>
         <span class="meta-item">轻触段落即可播放真人原声导读</span>
       </div>
+      
+        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
+          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
+          <div class="thematic-nav-chips">
+            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 加拿大现行医疗体制总</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 《加拿大健康法案》五</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 加拿大医疗体制百年演</a><a href="#sec-06" class="topic-chip"><span class="chip-num">§ 06</span> 联邦与省/地区政府的</a><a href="#sec-07" class="topic-chip"><span class="chip-num">§ 07</span> 医疗服务交付的三大层</a><a href="#sec-08" class="topic-chip"><span class="chip-num">§ 08</span> 居家照护服务四大范畴</a><a href="#sec-09" class="topic-chip"><span class="chip-num">§ 09</span> 加拿大医疗体制面临的</a><a href="#sec-10" class="topic-chip"><span class="chip-num">§ 10</span> 替代医学、健康促进与</a>
+          </div>
+        </nav>
+        
+      
+        <div class="page-jump-ribbon">
+          <span class="ribbon-label">原书页码检索:</span>
+          <div class="ribbon-scroll">
+            <a href="#page-20" class="ribbon-chip">p.20</a><a href="#page-21" class="ribbon-chip">p.21</a><a href="#page-22" class="ribbon-chip">p.22</a><a href="#page-23" class="ribbon-chip">p.23</a><a href="#page-25" class="ribbon-chip">p.25</a><a href="#page-27" class="ribbon-chip">p.27</a><a href="#page-29" class="ribbon-chip">p.29</a><a href="#page-31" class="ribbon-chip">p.31</a>
+          </div>
+        </div>
+        
     </header>
 
     <main class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 2 Opener & Learning Objectives (Page 20)</h3>
+                        <div class="page-anchor-marker" id="page-20">
+                          <span class="marker-pill">Page 20</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-01">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 2 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
                   </div>
-                </div>
+                </section>
                 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
-                  </div>
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="0.0" data-end="41.04" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -756,15 +949,16 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【核心专业术语表】Chapter 2 Key Terms (Page 21)</h3>
+                        <div class="page-anchor-marker" id="page-21">
+                          <span class="marker-pill">Page 21</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-02">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
+                    <h2 class="section-title-en">Chapter 2 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
                   </div>
-                </div>
+                </section>
                 
             <div class="key-terms-section">
               <div class="kt-section-header">
@@ -996,29 +1190,38 @@
                 </div></div>
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第一节：加拿大现行医疗体制总览与 Medicare 核心理念 (Pages 21 - 22)</h3>
+                        <div class="page-anchor-marker" id="page-21">
+                          <span class="marker-pill">Pages 21 - 22</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-03">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第一节：加拿大现行医疗体制总览与 Medicare 核心理念</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Belief in Universal Access & Medicare</h3><div class="subtopic-title-cn">崇高信念与全民公费医疗系统概述</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">崇高信念与全民公费医疗系统概述 (Belief in Universal Access & Medicare)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="41.04" data-end="74.57" data-title="Belief in Universal Access & Medicare" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en">Most Canadians believe that quality health care should be available to all Canadian citizens, regardless of their ability to pay for services. Canada's national health insurance system, known as medicare, which is envied throughout the world, was developed to achieve this goal. Medicare uses provincial or territorial taxes and federal taxes to pay for all medically necessary health services for all permanent residents. As members of Canada's changing health care system, support workers have an increasingly important role to play. <br><br></p>
                       <p class="para-cn">绝大多数加拿大人坚信：每一位公民无论个人贫富、无论是否具备即时支付能力，都应当享有获得高品质医疗卫生服务的神圣权利。享誉全球并令世人称羡的加拿大国家医疗保险体系——通称“全民医疗体系”（Medicare）——正是为了践行这一崇高愿景而建立。Medicare 汇集各省/地区税收与联邦政府税收，共同出资全额支付所有永久居民在医学上所必需的一切医疗服务费用。作为身处这一不断变革与重塑的医疗卫生系统中的专业从业者，支持工作者（PSW / HCA）所肩负的使命与角色正变得前所未有的关键与崇高。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">联邦与省/地区交织的医疗管理架构 (An Interlocking Public System)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 3.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">An Interlocking Public System</h3><div class="subtopic-title-cn">联邦与省/地区交织的医疗管理架构</div>
+                </div>
+                
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 2.1 on page 22)—that are provided in the federal government's Canada Health Act.</h4>
@@ -1033,15 +1236,16 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第二节：《加拿大健康法案》五大基石原则 (Page 22)</h3>
+                        <div class="page-anchor-marker" id="page-22">
+                          <span class="marker-pill">Page 22</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-04">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第二节：《加拿大健康法案》五大基石原则</h2>
                   </div>
-                </div>
+                </section>
                 
                 <div class="editorial-box-opener" style="margin-top:36px;">
                   <aside class="editorial-box-container box-theme-sage">
@@ -1057,7 +1261,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 2.1: The Principles of Medicare, as Listed in the Canada Health Act (1984)</h4>
@@ -1072,17 +1276,22 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第三节：加拿大医疗体制百年演进史与“最伟大的加拿大人” (Pages 22 - 23)</h3>
+                        <div class="page-anchor-marker" id="page-22">
+                          <span class="marker-pill">Pages 22 - 23</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-05">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第三节：加拿大医疗体制百年演进史与“最伟大的加拿大人”</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Early Challenges & The Great Depression</h3><div class="subtopic-title-cn">早期自费苦难、大萧条与互助萌芽</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">早期自费苦难、大萧条与互助萌芽 (Early Challenges & The Great Depression)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="237.22" data-end="306.74" data-title="Early Challenges & The Great Depression" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>The Evolution of Canada's Health Care System</strong> <br><br>In the first part of the twentieth century, individuals in Canada were expected to pay the entire amount of their doctors' bills and hospital fees. Often, there were no "set fees" for services; that is, for the same treatment, a physician could charge one patient a certain amount and another patient an entirely different fee, depending on what the physician thought the patient could afford to pay. Those who could not afford to pay sometimes had to access charity through community agencies such as the Victorian Order of Nurses, the Red Cross, and local churches (FIGURE 2.1), and some people just went without health care altogether. <br><br>The Great Depression of the 1930s had a dramatic effect on Canada's health care system. Families struggled to feed, clothe, and house their members and could not possibly pay their medical bills. A serious illness or stay in a hospital caused financial disaster for many. The cost of care prevented others from even seeking medical treatment, so those who had illnesses and disabilities would instead depend on family members and neighbours to provide care. These hardships inspired Canadians to create a prepaid medical and hospitalization insurance plan. <br><br></p>
@@ -1095,12 +1304,16 @@
                   <figcaption class="ef-caption-en"><strong>图 2.1 历史教学图示：20世纪初期民间慈善机构上门照护</strong><br>*FIGURE 2.1: In the first part of the twentieth century, charitable services were provided by community agencies such as the Victorian Order of Nurses for Canada. (Courtesy VON Canada [Victorian Order of Nurses].)*<br>【教学意图】：直观呈现 20 世纪公费医疗诞生前，加拿大脆弱贫困病患完全依赖 VON 等非营利慈善志愿护士登门救济的真实历史风貌。</figcaption>
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">萨斯喀彻温省的破冰革新与汤米·道格拉斯 (Tommy Douglas & The Birth of Medicare)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 5.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Tommy Douglas & The Birth of Medicare</h3><div class="subtopic-title-cn">萨斯喀彻温省的破冰革新与汤米·道格拉斯</div>
+                </div>
+                
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 2.2). By 1972, all provinces and territories had extended their insurance plans to also cover medical services provided outside hospitals. Again, provincial and territorial governments and the federal government shared the health care expenses roughly equally. Modern medicare began that year, giving all permanent residents free access to the same quality of hospital and medical care, regardless of their personal financial status.</h4>
@@ -1115,17 +1328,22 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第四节：联邦与省/地区政府的法定分工与原住民医疗行动呼吁 (Pages 23 - 25)</h3>
+                        <div class="page-anchor-marker" id="page-23">
+                          <span class="marker-pill">Pages 23 - 25</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-06">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 06 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第四节：联邦与省/地区政府的法定分工与原住民医疗行动呼吁</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 6.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Federal Role in Health Care</h3><div class="subtopic-title-cn">联邦政府的五大核心法定职责</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">联邦政府的五大核心法定职责 (The Federal Role in Health Care)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="427.44" data-end="484.73" data-title="The Federal Role in Health Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>The Federal Role in Health Care</strong> <br><br>The federal government is responsible for the following: • Administering the Canada Health Act and providing provincial funding • Providing direct delivery of health care services to specific groups, such as First Nations people living on reserves; Inuit peoples; serving members of the Canadian Forces and the Royal Canadian Mounted Police (RCMP); eligible veterans; and inmates of federal penitentiaries • Developing and carrying out government policy and programs that promote health and prevent disease; for example, the federal government approves drugs, assesses health risks posed by environmental hazards, and provides funds to support public health programs such as prenatal health education • Transferring tax money to the provinces and territories to share the cost of medically necessary health care services • Prohibiting service providers (such as physicians) from billing clients extra charges and user fees and ensuring that all the provinces and territories provide the same quality and type of care. <br><br></p>
@@ -1147,7 +1365,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 2.3: Health Canada's Role in Indigenous Health Care</h4>
@@ -1176,7 +1394,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 2.4: Truth and Reconciliation Commission of Canada's Seven Health Calls to Action</h4>
@@ -1197,17 +1415,22 @@
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第五节：医疗服务交付的三大层级与向居家照护的战略重心转移 (Pages 25 - 28)</h3>
+                        <div class="page-anchor-marker" id="page-25">
+                          <span class="marker-pill">Pages 25 - 28</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-07">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 07 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第五节：医疗服务交付的三大层级与向居家照护的战略重心转移</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 7.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Primary, Secondary, Tertiary & Quaternary Care</h3><div class="subtopic-title-cn">初级、二级、三级与四级医疗服务全貌</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">初级、二级、三级与四级医疗服务全貌 (Primary, Secondary, Tertiary & Quaternary Care)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="704.23" data-end="839.57" data-title="Primary, Secondary, Tertiary & Quaternary Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>Primary, Secondary, and Tertiary Health Care Delivery</strong> <br><br>In the past, most health care funding went to hospitals and equipment, and the focus of health care was to make people better after they became ill. The Canadian government has recognized that secondary or tertiary health care delivery, while still important, can be shortened or prevented altogether with adequate preventive measures taken in the primary health care delivery stage. Every province and territory provides primary, secondary, and tertiary health care (FIGURE 2.3). <br><br>• <strong>Primary health care delivery</strong> is the first point of contact that most people have with the health care system (e.g., through a doctor, a nurse, or another health care provider, or perhaps through phone-based or computer-based services). Primary health care delivery usually takes place in the community, but it can also take place within a hospital. Primary health care delivery offers a wide range of services, focusing mostly on health promotion, early diagnosis of disease or disability, and disease prevention. Coordinated primary health care teams include family doctors, nurses, nurse practitioners, and other health care providers. <br><br>• <strong>Secondary health care delivery</strong> includes assessment, diagnosis, treatment, and preventive services that are associated with more complex medical issues. This type of care is generally provided by specialist physicians and other specialized health care providers. An example of secondary health care delivery would be a referral from a family doctor or nurse practitioner to a medical specialist for a specific medical issue that may require diagnosis and treatment. It can take place in the community (such as the specialist doctor's office) or in a hospital. <br><br>• <strong>Tertiary health care delivery</strong> is a specialized, highly technical level of health care that takes place in large research and teaching hospitals. Tertiary health care delivery usually takes place within specialized care units such as a critical care unit and requires advanced diagnostic and treatment support services as well as highly specialized personnel. It is the most expensive level of health care delivery. <br><br>• A new specialized section of tertiary health care delivery is called <strong>quaternary care</strong>, which includes experimental medicines or surgical procedures. Because it is so highly specialized, not every health care centre will offer quaternary care. <br><br></p>
@@ -1220,8 +1443,12 @@
                   <figcaption class="ef-caption-en"><strong>图 2.3 教学图示：初级、二级与三级医疗服务层级对比</strong><br>*FIGURE 2.3: A brief comparison of primary, secondary, and tertiary levels of health care.*<br>【教学意图】：以阶梯式图示清晰展现初级门诊（Primary Care）、专科转诊（Secondary Care）与教学医院重症手术（Tertiary/Quaternary Care）的服务定位与转诊路径。</figcaption>
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">医院向社区居家照护的战略重心大转移 (The Historical Shift to Home Care)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 7.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">The Historical Shift to Home Care</h3><div class="subtopic-title-cn">医院向社区居家照护的战略重心大转移</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="839.57" data-end="988.99" data-title="The Historical Shift to Home Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>Home Care</strong> <br><br>Over the years, the Canadian health care system has seen a shift in focus from hospital care to home care. Traditionally, people entered the health care system through hospitals. However, over the past two decades, the role and structure of hospitals have changed dramatically. Operating a hospital requires a tremendous amount of money. Over a third of all health care spending goes into running hospitals. Therefore, in order to cut costs, most provincial and territorial governments have reduced the number of hospitals: hundreds of hospitals have closed, merged, or been converted into other types of health care facilities. <br><br>Partly to save money and partly as a result of technological advances, and also to reduce infection rates, clients are now sent home sooner after hospital procedures than they used to be. Each year, fewer clients stay in hospital overnight, and if they do stay overnight, they stay for shorter time periods than they would have in the past. In order to support patients who leave hospitals early, governments have gradually increased spending on home care. Home care is health care and support services provided to people in their places of residence, including private homes, licensed live-in care facilities, and assisted-living facilities (see Chapter 3). Home care is the most common of the community-based services, and support workers are needed and are actively recruited to work in all home care areas. <br><br>Home care was first created to provide care for people who needed at-home assistance after hospital discharge. Today, home care provides community care and support to a wide range of people. Clients include older persons; families with children; people who are living with mental, physical, or developmental disabilities; people with short-term and long-term medical conditions; and people in the recovery, rehabilitative, or final stages of a life-ending disease. Home care services provide assistance to families who need help with a new baby. They enable people with disabilities to get up in the morning and get ready for school or work. They help people adjust to a disability or recover from an illness (FIGURE 2.4). They enable people who are dying to remain at home rather than be admitted to a hospital. <br><br>One major focus of home care is to enable people to remain in their homes, so they can be as healthy as possible and remain independent for as long as possible. For some people, home care replaces hospital or other facility care. For others, home care allows them to maintain their health and independence, thus delaying or preventing admission to a facility. <br><br></p>
@@ -1235,17 +1462,22 @@
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第六节：居家照护服务四大范畴与省/地区职责分工 (Pages 27 - 29)</h3>
+                        <div class="page-anchor-marker" id="page-27">
+                          <span class="marker-pill">Pages 27 - 29</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-08">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 08 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第六节：居家照护服务四大范畴与省/地区职责分工</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 8.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Four Categories of Home Care Services</h3><div class="subtopic-title-cn">居家照护的核心分类体系</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">居家照护的核心分类体系 (Four Categories of Home Care Services)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="988.99" data-end="1097.45" data-title="Four Categories of Home Care Services" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>Home Care Services and Funding</strong> <br><br>Support workers provide most home care support services. In most provinces and territories, support services are provided by both public and private agencies that can be either for-profit or not-for-profit organizations. Every province and territory has a publicly funded home care program... All provinces and territories offer: • Client assessment—determining if the person is eligible for services • Case coordination and management (see Chapter 10) • Nursing services • Support services for eligible clients <br><br>Home care services are classified into the following categories: 1. <strong>Personal care services:</strong> These nonmedical services offered through home care, often by support workers, include assisting with activities of daily living (ADLs—e.g., bathing, feeding, mobility, and dressing) and providing comfort care to clients who are dying. 2. <strong>Home support services:</strong> These services, often provided by support workers to clients who live at home, include assisting with home management, assisting with ADLs, and assisting with taking medications. 3. <strong>Professional services:</strong> Therapies and treatments provided by the relevant health care providers, which include nursing care, physiotherapy, occupational therapy, speech therapy, nutrition counselling, social work, respiratory therapy, paramedic and emergency medical technician (EMT) services, nail care, and in-home blood testing. 4. <strong>Support for instrumental activities of daily living (IADLs):</strong> These services, often provided by support workers, include shopping with a client, assisting a client with banking, and teaching a client how to follow a recipe. <br><br>Volunteer services such as Meals on Wheels (FIGURE 2.5) and friendly visiting can be provided by anyone who meets the volunteer criteria. <br><br></p>
@@ -1267,7 +1499,7 @@
                 <aside class="editorial-box-container box-theme-terracotta">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🏡</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
                     </div>
                     <h4 class="box-title-en">BOX 2.5: How Home Care Is Governed and Delivered</h4>
@@ -1281,8 +1513,12 @@
                   </div>
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">表 2.1 全加各省与地区官方医疗保险计划名称一览表 (Table 2.1 Provincial/Territorial Health Insurance Programs)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 8.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Table 2.1 Provincial/Territorial Health Insurance Programs</h3><div class="subtopic-title-cn">表 2.1 全加各省与地区官方医疗保险计划名称一览表</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1152.79" data-end="1200.96" data-title="Table 2.1 Provincial/Territorial Health Insurance Programs" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>TABLE 2.1: Provincial and Territorial Health Insurance Programs</strong> <br><br></p>
@@ -1334,25 +1570,34 @@
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第七节：加拿大医疗体制面临的五大严峻挑战、补充保险与区域改革 (Pages 29 - 30)</h3>
+                        <div class="page-anchor-marker" id="page-29">
+                          <span class="marker-pill">Pages 29 - 30</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-09">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 09 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第七节：加拿大医疗体制面临的五大严峻挑战、补充保险与区域改革</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 9.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Challenges Facing Medicare</h3><div class="subtopic-title-cn">医疗体系承受的前所未有之重压</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">医疗体系承受的前所未有之重压 (Challenges Facing Medicare)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1351.54" data-end="1463.78" data-title="Supplementary Benefits & Regionalization" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>HEALTH CARE CHALLENGES, SUPPLEMENTARY SERVICES, AND TRENDS</strong> <br><br><strong>Challenges</strong> The Canadian health care system has come under stress in recent years. Many factors challenge the country's ability to provide quality, universal health care, and these factors are expected to continue into the future. They include the following: <br><br>• <strong>Worker shortages.</strong> Many rural and remote areas face severe shortages of physicians, nurses, and other health care workers. The growing trend of people moving to bigger cities leaves smaller communities in need of educated workers. There is an increasing need for support workers in both rural and urban settings throughout many provinces. • <strong>Aging of the baby boomer generation (those born between 1945 and 1964).</strong> Canadian society is aging. For the older population to live safely and with dignity and independence, the costs of our health care system will rise. • <strong>Increasing numbers of Canadians require care.</strong> People aged 65 and older are the fastest-growing age group in Canada, and this trend is expected to continue for decades. Many of today's older persons live with one or more chronic health challenges, have mobility issues, or experience a mental health problem, all of which may require medical intervention. • <strong>Aging of health care workers.</strong> Health care workers are also aging. Many studies are investigating the effects of different types of work on older bodies. One finding is that older workers have fewer injuries, but the injuries they have tend to be more severe. • <strong>Long waiting lists for surgeries, diagnostics, and medical procedures.</strong> Long wait times cause stress and a possible worsening of their condition for many clients in need of treatment. • <strong>Long waiting times for admission to long-term care facilities.</strong> Clients who are ill and waiting for long-term care placement must often stay in an acute-care hospital because it is unsafe for them to live at home. Overcrowded hospital units and emergency departments have resulted. To remedy the situation, many hospitals have restructured their care delivery to include continuing care units, where these clients can await long-term care admission. • <strong>The steadily rising cost of care.</strong> Of all the challenges facing the health care system, its rising cost is the greatest. Drugs and technology that help treat diseases and disabilities are better than ever before. However, these advances come at a high price due to the cost of developing them. Building and labour costs, too, are always spiralling upward, and taxpayers bear the burden. <br><br></p>
                       <p class="para-cn"><strong>加拿大医疗卫生体系面临的七大严峻挑战</strong> <br><br>近年来，加拿大公费医疗体制正承受着前所未有的极限重压。多重结构性深层矛盾正持续冲击国家维系高质量、均等化全民公费医疗的能力，且这些压力在未来数十年内将愈演愈烈： <br><br>1. <strong>医护人力资源极度匮乏（Worker Shortages）</strong>：在广大偏远乡村和北部偏僻地区，执业医师、护士及支持工作者呈现断崖式短缺。人口向特大都市集聚的不可逆趋势，使得小型城镇极度缺乏合格医护人才。在加拿大各省，不论是乡村家庭还是都市社区，支持工作者（PSW）的需求量正呈爆炸式攀升。 2. <strong>“婴儿潮一代”集体步入古稀之年（Aging of Baby Boomers）</strong>：出生于二战后（1945–1964年）极其庞大的婴儿潮一代如今已全线迈入高龄阶段。为了让这一庞大群体能够安全、体面、有尊严且尽可能独立地生活，国家公共医疗财政开支注定呈刚性指数级激增。 3. <strong>亟需长期照护的受助长者基数激增</strong>：65 岁及以上高龄群体是加拿大全社会增长最为迅猛的人口梯队。当今多数长者身体同时罹患一种或数种慢性器质性疾病，伴随肢体活动障碍或认知障碍（失智症），需要长期密集的医疗与护理干预。 4. <strong>医护从业人员自身人口老龄化（Aging of Workers）</strong>：医护队伍本身亦不可阻挡地面临高龄化。医学人体工程学研究表明：年长医护人员凭借丰富经验虽然发生工伤的频次相对较少，但一旦发生扭伤摔伤，其组织创伤与骨折严重程度远超年轻同行，康复极慢。 5. <strong>择期手术、诊断造影与专科诊治排期漫长（Wait Times）</strong>：漫长的手术与核磁CT等待时间，不仅给饱受病痛折磨的案主及其家庭带来沉重精神焦虑，更随时面临基础病情在等待中恶化衰竭的潜在临床风险。 6. <strong>养老院公立床位排期过长致使医院急诊严重压床（ALC 危机）</strong>：由于社区长期照护机构（LTC）床位极度紧缺，大批已脱离生命危险但生活完全无法自理、无法安全返家的患病长者，只能常年滞留在昂贵的急症医院病房（即“备选照护级别”ALC 现象），直接导致各大综合医院急诊室人满为患、一床难求。为破解此僵局，许多医院被迫自建“过渡延续照护单元”（Continuing Care Units），供长者苦等养老院床位。 7. <strong>医疗新技术与人力运营成本的失控飞涨（Rising Costs）</strong>：在所有严峻考验中，<strong>医疗总成本的无底洞式飞涨是最大、最根本的生存威胁</strong>！靶向新药、生物制剂与尖端诊疗仪器的研发上市成本呈天文数字；医疗基建与人力薪酬持续走高，最终全部沉重地压在纳税人的脊梁上。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">补充医疗保险、商业保险与大区化管理改革 (Supplementary Benefits & Regionalization)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 9.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Supplementary Benefits & Regionalization</h3><div class="subtopic-title-cn">补充医疗保险、商业保险与大区化管理改革</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1463.78" data-end="1504.39" data-title="Alternative Health Practices" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>Additional (Supplementary) Services & Private Health Insurance</strong> <br><br>Provinces and territories provide coverage to certain people (e.g., older persons, children, and recipients of social assistance) for services that are not generally covered under the publicly funded health care system. These supplementary health benefits often include prescription drugs, dental care, vision care, medical equipment and appliances (e.g., prostheses, wheelchairs), independent-living assistance, and the services of other health care providers such as chiropractors. The level of coverage varies across the country. Additional health insurance, sometimes referred to as benefits, covers services that are not government funded... Those who do not qualify for supplementary benefits under government plans pay for these services with individual, out-of-pocket payments or through private health insurance plans... <br><br><strong>Health Care Trends & Regional Authorities</strong> To reduce some of the pressures placed on our health care system, new ways of providing care have been introduced to Canadians, with the intent of providing quality care while avoiding needless spending. Instead of Canadians' relying on hospitals and doctors, there is a trend toward providing alternative care in clinics, in health care centres, and through home care. Many families now seek medical services not only from doctors but also from nurse practitioners. Medical advances have led to more surgical procedures being done through day surgery on an outpatient basis... <br><br>Most provinces and territories have tried to control costs and improve delivery by decentralizing decision making on health care delivery to the regional or local board level. Such regional authorities are managed by elected and appointed members who oversee hospitals, long-term care homes, home care, and public health services in their areas. As part of these reforms, provincial and territorial governments are now focused on two areas: • Health promotion and disease prevention • Home care <br><br></p>
@@ -1360,37 +1605,50 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第八节：替代医学、健康促进与支持工作者的前沿预防使命 (Pages 31)</h3>
+                        <div class="page-anchor-marker" id="page-31">
+                          <span class="marker-pill">Pages 31</span>
+                        </div>
+                        
+                <section class="editorial-major-section" id="sec-10">
+                  <div class="section-banner-head">
+                    <span class="section-badge">SECTION 10 · 章节核心大节</span>
+                    <h2 class="section-title-universal">第八节：替代医学、健康促进与支持工作者的前沿预防使命</h2>
                   </div>
+                </section>
+                
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 10.1 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Alternative Health Practices</h3><div class="subtopic-title-cn">替代医学与传统医学的融合</div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">替代医学与传统医学的融合 (Alternative Health Practices)</h4>
-
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1504.39" data-end="1578.22" data-title="Health Promotion & Support Worker's Vital Role" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>Alternative Health Practices</strong> <br><br>Alternative health practices are health treatments that have not been taught or practised in traditional medical communities and offer therapies that differ from standard medical practice (see Chapters 23, 44, and 45). They include massage therapies, homeopathy, herbal medicines (including the use of cannabis), and acupuncture. These practices are gaining widespread acceptance by the same medical community (also known as Western medicine) that once disregarded them and are now often ordered by physicians and used in conjunction with traditional treatments. Many of these services are also now covered by some provincial and territorial health care plans. <br><br></p>
                       <p class="para-cn"><strong>替代疗法与西方主流医学的有机融合</strong> <br><br><strong>替代健康疗法（Alternative Health Practices）</strong>是指那些未曾纳入西方传统医学院经典教学体系、在操作机理与哲学上异于标准常规医学的各类特色治疗方法（参见第 23、44 及 45 章）。常见形式涵盖注册推拿按摩疗法（RMT）、顺势疗法（Homeopathy）、天然草药与植物提取物疗法（包括医用大麻的应用）、以及传统中医针灸疗法（Acupuncture）。 <br><br>曾经对这些非主流疗法持怀疑甚至排斥态度的西方主流医学界（Western Medicine），如今正全面转变观念，广泛接纳并认可这些传统经验智慧的临床疗效。现如今，执业医师常常根据患者慢性疼痛、神经麻痹或恶心呕吐等临床指征，主动开具针灸或按摩处方，将其作为常规药物手术的重要辅助协同疗法；部分省份的公费医保或雇员商业保险亦已正式将特定替代疗法列入受保支付范围。 <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">健康促进与疾病预防：支持工作者的非凡价值 (Health Promotion & Support Worker's Vital Role)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 10.2 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Health Promotion & Support Worker's Vital Role</h3><div class="subtopic-title-cn">健康促进与疾病预防：支持工作者的非凡价值</div>
+                </div>
+                
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1578.22" data-end="1639.9" data-title="Supporting Mr. Wloch: Health Insurance Portability" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                       <div class="para-play-indicator">▶</div>
                       <p class="para-en"><strong>Health Promotion and Disease Prevention</strong> <br><br>Traditionally, the purpose of a health care system has been to diagnose, treat, and cure illnesses. A more recent approach to health care, however, involves developing ways to promote health and prevent diseases from occurring. Preventing illness and injury, while keeping people healthy, is more effective and cheaper than providing treatments in hospitals. <br><br>• <strong>Health promotion</strong> refers to strategies that improve or maintain health and independence. • <strong>Disease prevention</strong> refers to strategies that prevent the occurrence of disease or injury. <br><br>Support workers contribute to health promotion and disease prevention and are needed now more than ever because they provide nonmedical care and services that can help prevent major health problems. Take, for example, Mr. Lukovic, who has been on bedrest for a long time. He is at risk for pressure ulcers, pneumonia, and blood clots. To prevent these complications, you, as his support worker, help him keep his skin clean and dry, change his position in bed frequently, and help him perform range-of-motion exercises. By doing these important things for Mr. Lukovic, you can help improve his quality of life now and prevent him from developing illness or disability in the future. <br><br></p>
                       <p class="para-cn"><strong>健康促进、疾病预防与支持工作者的前沿预防使命</strong> <br><br>在传统医学观念中，医疗体系的唯一功能局限于在疾病发生后进行诊断、用药和手术治愈。然而，现代前沿医疗的核心理念实现了颠覆性升华：<strong>全力探索并实施能够促进大众健康、阻止疾病发生的各种源头治理途径！</strong>防患于未然、保护广大民众远离创伤与病痛，其临床有效性与经济成本效益，远远优于等病入膏肓后再送进 ICU 抢救。 <br><br>• <strong>健康促进（Health Promotion）</strong>：指一切旨在提升、增进并长久维系个体身心健康功能与独立自理自立能力的宏观与微观干预策略。 • <strong>疾病预防（Disease Prevention）</strong>：指一切旨在从根源上阻止特定器质性疾病发生、阻断感染途径或预防人身伤害意外事故的防控策略。 <br><br>支持工作者（PSW）在前沿预防和健康促进中扮演着无可替代的中流砥柱角色——在当今医疗重构格局下，社会对 PSW 的渴求比以往任何历史时期都更为迫切！因为正是支持工作者日复一日所提供的基础、非医疗性贴身照护，在最前线成功阻击了无数足以致命的恶性并发症。以长期绝对卧床的长者卢科维奇先生（Mr. Lukovic）为例：久卧病榻的他时刻面临着罹患致死性深层压疮（褥疮）、坠积性肺炎（Pneumonia）以及下肢深静脉血栓（DVT）的高危风险。为了阻止这些毁灭性并发症的发生，你作为他的专职支持工作者，时刻协助他保持受压皮肤的绝对清洁与干爽，按时每两小时严格为他执行轴线翻身变换体位，并在床旁耐心协助他完成全套四肢关节活动度维持训练（Range-of-Motion Exercises）。通过为你负责的卢科维奇先生严谨执行这些看似微小平凡的照护细节，你不仅当场大幅升华了他的晚年生活品质，更在医学实质上直接挽救了他的生命，阻止了他在未来陷入更为深重的伤残与危局！ <br><br></p>
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">临床实战案例：弗洛赫先生跨省迁徙与医保便携性 (Supporting Mr. Wloch: Health Insurance Portability)</h4>
 
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 10.3 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">Supporting Mr. Wloch: Health Insurance Portability</h3><div class="subtopic-title-cn">临床实战案例：弗洛赫先生跨省迁徙与医保便携性</div>
+                </div>
+                
                 <aside class="editorial-box-container box-theme-case">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📋</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
                     </div>
                     <h4 class="box-title-en">Supporting Mr. Wloch: An Example of Health Insurance Portability in Canada</h4>
@@ -1405,24 +1663,14 @@
                 </aside>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">【本章复习与核心要点回顾】Chapter 2 Review (Page 32)</h3>
-                  </div>
-                </div>
-                
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">核心要点清单 (KEY POINTS)</h3>
-                  </div>
+            <div class="editorial-microtopic-row">
+              <span class="micro-bullet">▪</span>
+              <h4 class="micro-title-en">Chapter 2 Review</h4><span class="micro-title-cn">· 本章复习与核心要点回顾</span>
+            </div>
+            
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 10.4 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">KEY POINTS</h3><div class="subtopic-title-cn">核心要点清单</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1802.28" data-end="1818.24" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -1432,14 +1680,9 @@
                     </article>
                     <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">临床批判性思维修炼 (CRITICAL THINKING IN PRACTICE)</h3>
-                  </div>
+                <div class="editorial-subtopic-card">
+                  <div class="subtopic-tag">TOPIC 10.5 · 临床子专题</div>
+                  <h3 class="subtopic-title-en">CRITICAL THINKING IN PRACTICE</h3><div class="subtopic-title-cn">临床批判性思维修炼</div>
                 </div>
                 
                     <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
