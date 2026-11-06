@@ -1,0 +1,2437 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 12: Abuse, Bullying, and Harassment Awareness · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
+      background: var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+    }
+    .ps-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html#sec-ch12" class="nav-home-btn">← 返回全书总目录</a>
+      <div class="nav-chapter-title">
+        <span class="ch-badge">CH 12</span>
+        <span>Abuse, Bullying, and Harassment Awareness</span>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 12 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 27:10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 12 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Abuse, Bullying, and Harassment Awareness</h1>
+      <h2 class="hero-title-cn">识别与防范虐待、霸凌与骚扰：法律强制报告与弱势群体安全防线</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 174–193 · 17 道全真自测题</span>
+        <span class="meta-item">专业音频：27:10</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch12-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+
+      
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-174">第 174 页 · 学习目标与虐待欺凌防范认知开篇</option><option value="page-175">第 175 页 · 核心专业术语表与反虐待基本人权基石</option><option value="page-176">第 176 页 · 《加拿大权利与自由宪章》与六大虐待类型全解析</option><option value="page-177">第 177 页 · 专栏 12.1 加拿大人法定权利与自由全貌及图像侵权</option><option value="page-178">第 178 页 · 专栏 12.2 网络欺凌防范与专栏 12.3 刑法非自愿私密图像立法</option><option value="page-179">第 179 页 · 虐待关系特征与专栏 12.4 虐待极高危易感人群剖析</option><option value="page-180">第 180 页 · 虐待诱发诱因、识别指征与安全专栏：成人受虐症状清单 (Part 1)</option><option value="page-181">第 181 页 · 成人受虐症状清单 (Part 2: 经济与忽视)、儿童受虐体征与配偶虐待成因</option><option value="page-182">第 182 页 · 虐待恶性循环三阶段与案例：艾米·卢的性侵创伤与触碰回避</option><option value="page-183">第 183 页 · 儿童虐待与忽视的深远心理破坏及分类</option><option value="page-184">第 184 页 · 衰弱消退综合征与案例：泰勒胎儿酒精谱系障碍与高压家庭</option><option value="page-185">第 185 页 · 长者虐待的高发诱因、易感群体与隐瞒受虐的心理机制</option><option value="page-186">第 186 页 · 机构虐待（粗暴对待 vs 婴儿化贬损语言）与芬妮太太家暴目击案例</option><option value="page-187">第 187 页 · 当服务对象向你倾诉受虐经历时的专业支持指南与倾听原则</option><option value="page-188">第 188 页 · 医护人员执业受暴风险与法定虐待汇报程序铁律</option><option value="page-189">第 189 页 · 安全专栏：遭遇攻击性服务对象时的自我防卫脱身法则</option><option value="page-190">第 190 页 · 职场欺凌、骚扰界定与专栏 12.5 职业健康安全法案雇主法定义务</option><option value="page-191">第 191 页 · 应对职场欺凌四步法、客观取证日志与员工援助计划 (EAP)</option><option value="page-192">第 192 页 · 本章核心知识点回顾、希尔德女士尊严照料批判性思维修炼与自测 (Part 1: Q1-Q3)</option><option value="page-193">第 193 页 · 章末全真自测试题 (Part 2: Q4-Q17)、权威答案精解与在线研习资源</option>
+              </select>
+            </div>
+          </div>
+          <div class="ps-chips-ribbon">
+            <a href="#page-174" class="page-chip-item"><span class="pc-num">p.174</span></a><a href="#page-175" class="page-chip-item"><span class="pc-num">p.175</span></a><a href="#page-176" class="page-chip-item"><span class="pc-num">p.176</span></a><a href="#page-177" class="page-chip-item"><span class="pc-num">p.177</span></a><a href="#page-178" class="page-chip-item"><span class="pc-num">p.178</span></a><a href="#page-179" class="page-chip-item"><span class="pc-num">p.179</span></a><a href="#page-180" class="page-chip-item"><span class="pc-num">p.180</span></a><a href="#page-181" class="page-chip-item"><span class="pc-num">p.181</span></a><a href="#page-182" class="page-chip-item"><span class="pc-num">p.182</span></a><a href="#page-183" class="page-chip-item"><span class="pc-num">p.183</span></a><a href="#page-184" class="page-chip-item"><span class="pc-num">p.184</span></a><a href="#page-185" class="page-chip-item"><span class="pc-num">p.185</span></a><a href="#page-186" class="page-chip-item"><span class="pc-num">p.186</span></a><a href="#page-187" class="page-chip-item"><span class="pc-num">p.187</span></a><a href="#page-188" class="page-chip-item"><span class="pc-num">p.188</span></a><a href="#page-189" class="page-chip-item"><span class="pc-num">p.189</span></a><a href="#page-190" class="page-chip-item"><span class="pc-num">p.190</span></a><a href="#page-191" class="page-chip-item"><span class="pc-num">p.191</span></a><a href="#page-192" class="page-chip-item"><span class="pc-num">p.192</span></a><a href="#page-193" class="page-chip-item"><span class="pc-num">p.193</span></a>
+          </div>
+        </div>
+        
+    </header>
+
+    <div class="editorial-stream">
+      <div id="page-174"></div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">OBJECTIVES</h3>
+                  <div class="heading-cn">本章学习目标</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="0.0" data-end="45.0" data-title="Objectives & Abuse Awareness Opener" onclick="playParagraphAudio(this)">
+                      <p class="para-en">After reading this chapter, the learner should be able to do the following:</p>
+                      <p class="para-cn">研读并掌握本章知识后，学习者应当能够全面达成以下临床核心技能与法律认知目标：</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Identify the legal act that is meant to protect all Canadians, new immigrants, and visitors from abuse.</strong></div>
+                      <div class="item-cn">精准识别旨在保护全体加拿大公民、新移民及访客免受虐待与歧视的根本宪制法律基石。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe the types of abuse.</strong></div>
+                      <div class="item-cn">系统掌握并深入剖析身体虐待、性虐待、情感虐待、经济虐待、忽视与欺凌等主要虐待形态。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe the cycle of abuse.</strong></div>
+                      <div class="item-cn">清晰掌握虐待恶性循环的三大核心发展阶段（紧张积聚期、急性暴力发作期、蜜月宽恕期）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe spousal abuse, child abuse, and abuse of older persons.</strong></div>
+                      <div class="item-cn">全面辨析配偶虐待（亲密伴侣暴力）、虐待儿童与长者虐待的临床特征与特殊脆弱性。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe how clients and health care workers can be abused.</strong></div>
+                      <div class="item-cn">深刻理解服务对象如何遭受医护人员不当对待，以及医护人员如何在临床执业中遭受服务对象的暴力与言语侵犯。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Explain what to do if you have an abusive client.</strong></div>
+                      <div class="item-cn">熟练掌握面对攻击性或虐待性服务对象时的自我防卫黄金安全规程与危机脱身法则。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Identify signs of abuse.</strong></div>
+                      <div class="item-cn">精准识别身体虐待、性侵、情感折磨、经济剥削与照料忽视的典型临床体征与行为警讯。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Explain your legal responsibilities when reporting abuse.</strong></div>
+                      <div class="item-cn">严格明晰在怀疑或目睹虐待时支持工作者所肩负的法定汇报义务、法律责任红线与保密边界。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe what to do if a client tells you about being abused.</strong></div>
+                      <div class="item-cn">熟练掌握当服务对象主动向你披露受虐经历时的专业倾听、情感支持与规范记录范式。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Apply the information in this chapter to your clinical practice properly.</strong></div>
+                      <div class="item-cn">将反虐待、防欺凌与维护人身尊严的法律伦理准则切实无缝转化应用于日常一线临床实践。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <div class="editorial-footer-url">
+                  <span class="efu-icon">🌐</span>
+                  <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
+                  <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+                </div>
+                
+            <div class="page-anchor-marker" id="page-175">
+              <span class="marker-pill">p. 175</span>
+            </div>
+            
+                <div class="key-terms-master-container" id="kt-container-ch12">
+                  <div class="kt-toolbar">
+                    <div class="kt-toolbar-left">
+                      <h3 class="kt-title">Key Terms · 核心专业术语表（全 18 词速查）</h3>
+                    </div>
+                    <div class="kt-toolbar-right">
+                      <div class="kt-mode-toggle">
+                        <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch12', 'table')">速查词表</button>
+                        <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch12', 'cards')">精研卡片</button>
+                      </div>
+                      <div class="kt-search-box">
+                        <input type="text" class="kt-search-input" placeholder="搜索中英文术语 (Filter terms)..." oninput="filterGlossary('ch12', this.value)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mode 1: Compact Table View (Default) -->
+                  <div class="kt-view-table active" id="kt-table-view-ch12">
+                    <div class="table-wrap">
+                      <table class="kt-compact-table">
+                        <thead>
+                          <tr>
+                            <th style="width: 26%;">英文术语 / 国际音标</th>
+                            <th style="width: 22%;">中文对照 / 出处</th>
+                            <th style="width: 52%;">教材标准学术释义与临床界定</th>
+                          </tr>
+                        </thead>
+                        <tbody id="kt-table-body-ch12">
+                
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">abuse</strong>
+                              <span class="kt-ipa">/əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">虐待 / 故意伤害</span>
+                              <span class="kt-ref">175</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Physical or mental harm caused deliberately by another person or persons. p. 175</div>
+                              <div class="kt-def-cn">由另一人或多人故意蓄意造成的身体伤害、痛苦或精神心理创伤（第 175 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">bullying</strong>
+                              <span class="kt-ipa">/ˈbʊl.i.ɪŋ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">欺凌 / 霸凌骚扰</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A type of abuse in which one person or a group of people purposely and repeatedly says or does hurtful things to someone else. Also known as harassment. p. 176</div>
+                              <div class="kt-def-cn">一种虐待形态，指一个人或一个群体有目的且反复多次对他人实施具有伤害性的言语攻击或羞辱行为；亦称骚扰（Harassment）（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">child abuse</strong>
+                              <span class="kt-ipa">/tʃaɪld əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">虐待儿童 / 侵害儿童罪</span>
+                              <span class="kt-ref">183</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Mistreatment or neglect of a child by a parent, guardian, or caregiver. p. 183</div>
+                              <div class="kt-def-cn">父母、法定监护人或照料者对未成年儿童实施的身体虐待、精神折磨、性侵犯或严重忽视（第 183 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">child neglect</strong>
+                              <span class="kt-ipa">/tʃaɪld nɪˈɡlekt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">儿童照料忽视 / 监护失职</span>
+                              <span class="kt-ref">193</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Failure by a child's parents or other caregivers to meet the child's basic needs for emotional, psychological, and physical development. p. 193</div>
+                              <div class="kt-def-cn">儿童父母或其他照料者未能满足儿童在情感滋养、心理健康及身体生理正常发育所需的基础生存与照护需求（第 193 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">cyberbullying</strong>
+                              <span class="kt-ipa">/ˈsaɪ.bəˌbʊl.i.ɪŋ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">网络欺凌 / 网络暴力虐待</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A type of abuse that uses communication technologies such as the Internet, social networking sites, text messaging, and instant messaging with the purpose of repeatedly intimidating or harassing a person. Also known as cyberabuse. p. 176</div>
+                              <div class="kt-def-cn">利用互联网、社交网络平台、手机短信及即时通信等现代信息技术，以反复恐吓、羞辱、骚扰或孤立特定个人为目的的虐待行为；亦称网络虐待（Cyberabuse）（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">emotional abuse</strong>
+                              <span class="kt-ipa">/ɪˈməʊ.ʃən.əl əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">情感虐待 / 心理虐待</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Words or actions that cause mental harm, especially to a person's self-esteem. Also known as psychological abuse. p. 176</div>
+                              <div class="kt-def-cn">通过具有攻击性、贬损性或孤立性的言语或行为造成他人精神心理创伤，尤指对受害者自尊心与人格尊严的蓄意践踏；亦称心理虐待（Psychological Abuse）（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">emotional neglect</strong>
+                              <span class="kt-ipa">/ɪˈməʊ.ʃən.əl nɪˈɡlekt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">情感忽视 / 心理情感匮乏</span>
+                              <span class="kt-ref">183</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Failure to meet a person's need to feel loved, wanted, safe, and worthy. p. 183</div>
+                              <div class="kt-def-cn">未能满足被照护者在被爱、被接纳、安全感以及感受到自身存在价值等方面的基本心理与情感需求（第 183 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">failure to thrive</strong>
+                              <span class="kt-ipa">/ˈfeɪ.ljər tuː θraɪv/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">生长发育迟缓 / 衰弱消退综合征</span>
+                              <span class="kt-ref">184</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A term to describe infants, babies, or children who are below the norms for body weight, growth, or cognitive development. It is also used when referring to older persons who are losing weight and experiencing a health decline for no apparent reason. p. 184</div>
+                              <div class="kt-def-cn">指婴儿、幼童在体重增长、身体发育或认知成长上显著低于正常医学标准；亦特指老年人无明确医学原发病因出现的进行性体重骤降与全身机能急性衰退（第 184 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">financial abuse</strong>
+                              <span class="kt-ipa">/faɪˈnæn.ʃəl əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">经济虐待 / 财产侵占剥削</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The misuse of a person's money or property. p. 176</div>
+                              <div class="kt-def-cn">照护者或其他当事人非经许可擅自侵占、挪用、窃取或不正当掌控受害者的个人资金、养老金、银行账户或不动产等财产（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">marginalized</strong>
+                              <span class="kt-ipa">/ˈmɑː.dʒɪ.nəl.aɪzd/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">边缘化群体 / 边缘弱势者</span>
+                              <span class="kt-ref">179</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Prevented from having control over one's life or health care because of language, life circumstances, or role in society, resulting in being shunned from mainstream society. p. 179</div>
+                              <div class="kt-def-cn">由于语言障碍、生活贫困困境或社会地位低下，导致其无法掌控自身生活与医疗保健决策，进而被主流社会排斥、忽视或隔离的弱势群体（第 179 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">neglect</strong>
+                              <span class="kt-ipa">/nɪˈɡlekt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">照护忽视 / 玩忽职守</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The state of being uncared for physically, emotionally, or psychologically. p. 176</div>
+                              <div class="kt-def-cn">生活不能自理者在身体生理、情感连接或心理需求上处于无人过问、得不到基础照料与保护的失职状态（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">physical abuse</strong>
+                              <span class="kt-ipa">/ˈfɪz.ɪ.kəl əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">身体虐待 / 暴力伤害</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The deliberate application of force to any part of another person's body, which may result in a nonaccidental injury and sometimes death. p. 176</div>
+                              <div class="kt-def-cn">对他人身体任何部位蓄意施加暴力或物理强力，导致非意外性创伤、骨折、软组织挫伤甚至死亡的行为（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">physical neglect</strong>
+                              <span class="kt-ipa">/ˈfɪz.ɪ.kəl nɪˈɡlekt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">身体生存忽视 / 生活照料剥夺</span>
+                              <span class="kt-ref">183</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Failure to adequately meet a dependent's need for food, clothing, shelter, cleanliness, medical care, and protection from harm. p. 183</div>
+                              <div class="kt-def-cn">未能充分满足被照护者在营养饮食、衣物御寒、居住安全、个人卫生、必要医疗救治及防范伤害等方面的基础生存需求（第 183 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">psychological abuse</strong>
+                              <span class="kt-ipa">/ˌsaɪ.kəˈlɒdʒ.ɪ.kəl əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">心理虐待</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">See emotional abuse. p. 176</div>
+                              <div class="kt-def-cn">参见情感虐待（Emotional abuse）。通过精神恐吓、辱骂、孤立或贬损摧毁个体自我价值感的虐待行为（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">sexual abuse</strong>
+                              <span class="kt-ipa">/ˈsek.ʃu.əl əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">性虐待 / 性侵犯</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Any nonconsensual sexual act (including touching) that results from a threat, coercion, or force. p. 176</div>
+                              <div class="kt-def-cn">在缺乏完全自愿知情同意前提下，通过恐吓、胁迫、权力施压或暴力强力实施的任何性行为（包括性接触、猥亵抚摸与暴露）（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">sexual harassment</strong>
+                              <span class="kt-ipa">/ˈsek.ʃu.əl həˈræs.mənt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">性骚扰</span>
+                              <span class="kt-ref">176</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Any conduct, comment, gesture, threat, or suggestion that is sexual in nature; a form of sexual abuse. p. 176</div>
+                              <div class="kt-def-cn">任何具有性意味、令当事人感到不适或受辱的不受欢迎举止、言语评论、肢体手势、威胁或暗示；属于性虐待的特定法律形态（第 176 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">spousal abuse</strong>
+                              <span class="kt-ipa">/ˈspaʊ.zəl əˈbjuːs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">配偶虐待 / 亲密伴侣暴力</span>
+                              <span class="kt-ref">181</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Abuse of a partner by a partner in an intimate relationship such as a marriage or common-law relationship. p. 181</div>
+                              <div class="kt-def-cn">在婚姻关系或同居伴侣等亲密关系中，一方对另一方实施的身体、情感、性或经济侵害（第 181 页）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">workplace bullying</strong>
+                              <span class="kt-ipa">/ˈwɜːk.pleɪs ˈbʊl.i.ɪŋ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">职场欺凌 / 职场霸凌骚扰</span>
+                              <span class="kt-ref">190</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Acts or verbal comments that could mentally hurt or isolate a person in the workplace. p. 190</div>
+                              <div class="kt-def-cn">在工作场所中发生的蓄意对特定员工造成心理创伤、孤立排挤、名誉毁损或职业威胁的言行举止（第 190 页）。</div>
+                            </td>
+                          </tr>
+                    
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="kt-expand-bar" id="kt-expand-bar-table-ch12">
+                      <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch12', 'table')">
+                        展开全部 18 个专业术语 ▼
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Mode 2: Cards Deck View -->
+                  <div class="kt-view-cards" id="kt-cards-view-ch12" style="display:none;">
+                    <div class="terms-editorial-grid" id="kt-cards-grid-ch12">
+                
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">abuse</strong>
+                            <span class="etc-ipa">/əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">虐待 / 故意伤害</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Physical or mental harm caused deliberately by another person or persons. p. 175 <span class="etc-ref">(175)</span></div>
+                          <div class="etc-def-cn">由另一人或多人故意蓄意造成的身体伤害、痛苦或精神心理创伤（第 175 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">bullying</strong>
+                            <span class="etc-ipa">/ˈbʊl.i.ɪŋ/</span>
+                          </div>
+                          <span class="etc-cn-tag">欺凌 / 霸凌骚扰</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A type of abuse in which one person or a group of people purposely and repeatedly says or does hurtful things to someone else. Also known as harassment. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">一种虐待形态，指一个人或一个群体有目的且反复多次对他人实施具有伤害性的言语攻击或羞辱行为；亦称骚扰（Harassment）（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">child abuse</strong>
+                            <span class="etc-ipa">/tʃaɪld əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">虐待儿童 / 侵害儿童罪</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Mistreatment or neglect of a child by a parent, guardian, or caregiver. p. 183 <span class="etc-ref">(183)</span></div>
+                          <div class="etc-def-cn">父母、法定监护人或照料者对未成年儿童实施的身体虐待、精神折磨、性侵犯或严重忽视（第 183 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">child neglect</strong>
+                            <span class="etc-ipa">/tʃaɪld nɪˈɡlekt/</span>
+                          </div>
+                          <span class="etc-cn-tag">儿童照料忽视 / 监护失职</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Failure by a child's parents or other caregivers to meet the child's basic needs for emotional, psychological, and physical development. p. 193 <span class="etc-ref">(193)</span></div>
+                          <div class="etc-def-cn">儿童父母或其他照料者未能满足儿童在情感滋养、心理健康及身体生理正常发育所需的基础生存与照护需求（第 193 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">cyberbullying</strong>
+                            <span class="etc-ipa">/ˈsaɪ.bəˌbʊl.i.ɪŋ/</span>
+                          </div>
+                          <span class="etc-cn-tag">网络欺凌 / 网络暴力虐待</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A type of abuse that uses communication technologies such as the Internet, social networking sites, text messaging, and instant messaging with the purpose of repeatedly intimidating or harassing a person. Also known as cyberabuse. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">利用互联网、社交网络平台、手机短信及即时通信等现代信息技术，以反复恐吓、羞辱、骚扰或孤立特定个人为目的的虐待行为；亦称网络虐待（Cyberabuse）（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">emotional abuse</strong>
+                            <span class="etc-ipa">/ɪˈməʊ.ʃən.əl əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">情感虐待 / 心理虐待</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Words or actions that cause mental harm, especially to a person's self-esteem. Also known as psychological abuse. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">通过具有攻击性、贬损性或孤立性的言语或行为造成他人精神心理创伤，尤指对受害者自尊心与人格尊严的蓄意践踏；亦称心理虐待（Psychological Abuse）（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">emotional neglect</strong>
+                            <span class="etc-ipa">/ɪˈməʊ.ʃən.əl nɪˈɡlekt/</span>
+                          </div>
+                          <span class="etc-cn-tag">情感忽视 / 心理情感匮乏</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Failure to meet a person's need to feel loved, wanted, safe, and worthy. p. 183 <span class="etc-ref">(183)</span></div>
+                          <div class="etc-def-cn">未能满足被照护者在被爱、被接纳、安全感以及感受到自身存在价值等方面的基本心理与情感需求（第 183 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">failure to thrive</strong>
+                            <span class="etc-ipa">/ˈfeɪ.ljər tuː θraɪv/</span>
+                          </div>
+                          <span class="etc-cn-tag">生长发育迟缓 / 衰弱消退综合征</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A term to describe infants, babies, or children who are below the norms for body weight, growth, or cognitive development. It is also used when referring to older persons who are losing weight and experiencing a health decline for no apparent reason. p. 184 <span class="etc-ref">(184)</span></div>
+                          <div class="etc-def-cn">指婴儿、幼童在体重增长、身体发育或认知成长上显著低于正常医学标准；亦特指老年人无明确医学原发病因出现的进行性体重骤降与全身机能急性衰退（第 184 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">financial abuse</strong>
+                            <span class="etc-ipa">/faɪˈnæn.ʃəl əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">经济虐待 / 财产侵占剥削</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The misuse of a person's money or property. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">照护者或其他当事人非经许可擅自侵占、挪用、窃取或不正当掌控受害者的个人资金、养老金、银行账户或不动产等财产（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">marginalized</strong>
+                            <span class="etc-ipa">/ˈmɑː.dʒɪ.nəl.aɪzd/</span>
+                          </div>
+                          <span class="etc-cn-tag">边缘化群体 / 边缘弱势者</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Prevented from having control over one's life or health care because of language, life circumstances, or role in society, resulting in being shunned from mainstream society. p. 179 <span class="etc-ref">(179)</span></div>
+                          <div class="etc-def-cn">由于语言障碍、生活贫困困境或社会地位低下，导致其无法掌控自身生活与医疗保健决策，进而被主流社会排斥、忽视或隔离的弱势群体（第 179 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">neglect</strong>
+                            <span class="etc-ipa">/nɪˈɡlekt/</span>
+                          </div>
+                          <span class="etc-cn-tag">照护忽视 / 玩忽职守</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The state of being uncared for physically, emotionally, or psychologically. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">生活不能自理者在身体生理、情感连接或心理需求上处于无人过问、得不到基础照料与保护的失职状态（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">physical abuse</strong>
+                            <span class="etc-ipa">/ˈfɪz.ɪ.kəl əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">身体虐待 / 暴力伤害</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The deliberate application of force to any part of another person's body, which may result in a nonaccidental injury and sometimes death. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">对他人身体任何部位蓄意施加暴力或物理强力，导致非意外性创伤、骨折、软组织挫伤甚至死亡的行为（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">physical neglect</strong>
+                            <span class="etc-ipa">/ˈfɪz.ɪ.kəl nɪˈɡlekt/</span>
+                          </div>
+                          <span class="etc-cn-tag">身体生存忽视 / 生活照料剥夺</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Failure to adequately meet a dependent's need for food, clothing, shelter, cleanliness, medical care, and protection from harm. p. 183 <span class="etc-ref">(183)</span></div>
+                          <div class="etc-def-cn">未能充分满足被照护者在营养饮食、衣物御寒、居住安全、个人卫生、必要医疗救治及防范伤害等方面的基础生存需求（第 183 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">psychological abuse</strong>
+                            <span class="etc-ipa">/ˌsaɪ.kəˈlɒdʒ.ɪ.kəl əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">心理虐待</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">See emotional abuse. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">参见情感虐待（Emotional abuse）。通过精神恐吓、辱骂、孤立或贬损摧毁个体自我价值感的虐待行为（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">sexual abuse</strong>
+                            <span class="etc-ipa">/ˈsek.ʃu.əl əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">性虐待 / 性侵犯</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Any nonconsensual sexual act (including touching) that results from a threat, coercion, or force. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">在缺乏完全自愿知情同意前提下，通过恐吓、胁迫、权力施压或暴力强力实施的任何性行为（包括性接触、猥亵抚摸与暴露）（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">sexual harassment</strong>
+                            <span class="etc-ipa">/ˈsek.ʃu.əl həˈræs.mənt/</span>
+                          </div>
+                          <span class="etc-cn-tag">性骚扰</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Any conduct, comment, gesture, threat, or suggestion that is sexual in nature; a form of sexual abuse. p. 176 <span class="etc-ref">(176)</span></div>
+                          <div class="etc-def-cn">任何具有性意味、令当事人感到不适或受辱的不受欢迎举止、言语评论、肢体手势、威胁或暗示；属于性虐待的特定法律形态（第 176 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">spousal abuse</strong>
+                            <span class="etc-ipa">/ˈspaʊ.zəl əˈbjuːs/</span>
+                          </div>
+                          <span class="etc-cn-tag">配偶虐待 / 亲密伴侣暴力</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Abuse of a partner by a partner in an intimate relationship such as a marriage or common-law relationship. p. 181 <span class="etc-ref">(181)</span></div>
+                          <div class="etc-def-cn">在婚姻关系或同居伴侣等亲密关系中，一方对另一方实施的身体、情感、性或经济侵害（第 181 页）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">workplace bullying</strong>
+                            <span class="etc-ipa">/ˈwɜːk.pleɪs ˈbʊl.i.ɪŋ/</span>
+                          </div>
+                          <span class="etc-cn-tag">职场欺凌 / 职场霸凌骚扰</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Acts or verbal comments that could mentally hurt or isolate a person in the workplace. p. 190 <span class="etc-ref">(190)</span></div>
+                          <div class="etc-def-cn">在工作场所中发生的蓄意对特定员工造成心理创伤、孤立排挤、名誉毁损或职业威胁的言行举止（第 190 页）。</div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                    <div class="kt-expand-bar" id="kt-expand-bar-cards-ch12">
+                      <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch12', 'cards')">
+                        展开全部 18 张精研术语卡片 ▼
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="45.0" data-end="140.0" data-title="Key Terms, Charter Foundation & Human Rights" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse results when physical or mental harm is deliberately caused by another person or persons. Abuse can be caused by anyone, such as a family member, friend, partner, classmate, co-worker, supervisor, or caregiver.</p>
+                      <p class="para-cn">当身体伤害、生理痛苦或精神心理创伤是由另一人或多人蓄意故意造成时，便构成了法律与医学意义上的虐待（Abuse）。虐待的施暴者可以是任何人，例如家庭成员、朋友、生活伴侣、同学、同事、主管乃至专职照料者。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="45.0" data-end="140.0" data-title="Key Terms, Charter Foundation & Human Rights" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse can be caused by one person or by two or more people. Unlike random acts of violence, which take place in all societies, abuse implies a relationship between the abuser and the abused, and the abuser or abusers are able to exert power and control over the abused.</p>
+                      <p class="para-cn">虐待可以由单一施暴者发起，亦可由两人或多人合谋实施。不同于在任何社会中都可能偶发的随机街头暴力犯罪，虐待的本质必然深植于施暴者与受害者之间的某种特定人际关系纽带之中，且施暴者能够凭借某种优势地位对受害者行使不对等的权力压制与人身控制。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="45.0" data-end="140.0" data-title="Key Terms, Charter Foundation & Human Rights" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse occurs in all age groups, all genders, at all social and economic levels, and in all cultures and communities. Abuse can take place in private or in public, for example, through an information medium such as a phone or the Internet.</p>
+                      <p class="para-cn">虐待可侵袭任何年龄阶段、任何性别取向、任何社会经济阶层以及任何文化信仰与族群社区。虐待既可以发生在隐秘的家庭私域，亦可公然暴露于公共场所，或通过手机、网络社交媒体等现代信息媒介广泛蔓延。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="45.0" data-end="140.0" data-title="Key Terms, Charter Foundation & Human Rights" onclick="playParagraphAudio(this)">
+                      <p class="para-en">As a support worker, you must know how to recognize and report suspected abuse. You need to realize that abuse can occur in workplaces, homes, and community settings as well as in health care facilities. In some cases, the victim is physically, emotionally, or financially dependent on the abuser.</p>
+                      <p class="para-cn">作为支持工作者，你必须熟练掌握识别疑似受虐体征与法定规范汇报的核心技能。你必须深刻清醒认识到：虐待既可能肆虐于工作场所、私人居家、社区日间中心，亦可能暗藏于医疗保健机构与长期照护院舍之中。在极多案例中，受害者在生理自理、情感归属或经济生存上对施暴者存在着极高程度的深度依赖。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="45.0" data-end="140.0" data-title="Key Terms, Charter Foundation & Human Rights" onclick="playParagraphAudio(this)">
+                      <p class="para-en">In Chapter 7, we discussed each person's right to be treated with respect and the need to accept people's differences at all times. Showing respect for all clients is especially important in the field of support work.</p>
+                      <p class="para-cn">在第 7 章中，我们深入探讨了每个人享有受人尊重的神圣权利，以及在任何时候无条件包容接纳个体文化差异的必要性。在支持工作实务中，对全体服务对象倾注由衷尊重尤为关键。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="45.0" data-end="140.0" data-title="Key Terms, Charter Foundation & Human Rights" onclick="playParagraphAudio(this)">
+                      <p class="para-en">It is an unfortunate truth, however, that some people (and especially some support workers) do not recognize that all of us have the right to safe, respectful treatment. When clients' rights are ignored, the clients become victims of abuse.</p>
+                      <p class="para-cn">然而令人痛心的是，现实中仍有某些人员（尤其是少数缺乏职业素养的支持工作者）未能真正领悟到：我们所有人——无论身心失能与否——均享有获得安全、充满尊严照护的不可剥夺的基本人权。当服务对象的合法权益遭受漠视甚至践踏时，他们便沦为了受虐的受害者。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="45.0" data-end="140.0" data-title="Key Terms, Charter Foundation & Human Rights" onclick="playParagraphAudio(this)">
+                      <p class="para-en">In this chapter, we will discuss the Canadian Charter of Rights and Freedoms, which is the foundation for all of Canada's laws that make abuse illegal. We will also discuss (1) the types of abuses, (2) persons who are at highest risk for abuse, and (3) ways to recognize and to report abuse.</p>
+                      <p class="para-cn">在本章中，我们将系统研习《加拿大权利与自由宪章》——这是将所有虐待行为定性为违法犯罪的加拿大法治总基石。我们还将深入剖析：(1) 主要虐待与欺凌形态；(2) 处于最高受虐风险中的极端脆弱人群；以及 (3) 敏锐识别受虐警讯与规范执行法定强制报告程序的全套临床实务操作。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-176">
+              <span class="marker-pill">p. 176</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p176">
+                  <h2 class="heading-en">CANADIAN CHARTER OF RIGHTS AND FREEDOMS</h2>
+                  <div class="heading-cn">《加拿大权利与自由宪章》的法理基石</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="140.0" data-end="230.0" data-title="Charter Rights & The Five Types of Abuse" onclick="playParagraphAudio(this)">
+                      <p class="para-en">The Canadian government has enacted laws to protect all Canadians, immigrants, and even visitors to Canada, from abuse and discrimination of any kind (BOX 12.1). Since 1982, the most important protection has been the Canadian Charter of Rights and Freedoms, which states that Canada values equality and diversity and that no one should be abused and no one has the right to treat others unfairly.</p>
+                      <p class="para-cn">加拿大政府通过了一系列严密的法案，保护全体加拿大公民、新移民乃至抵达加拿大的所有访客免受任何形式的虐待与歧视（专栏 12.1）。自 1982 年起，最具权威的核心法制屏障当属《加拿大权利与自由宪章》（The Canadian Charter of Rights and Freedoms）。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="140.0" data-end="230.0" data-title="Charter Rights & The Five Types of Abuse" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Knowingly failing to comply with the Charter is illegal and can be considered abuse. The Charter also requires everyone—including government, the police, the courts, and all Canadians—to respect the basic human rights of others.</p>
+                      <p class="para-cn">该宪章庄严宣示：加拿大崇尚人人平等与多元文化包容，任何人都绝不应当遭受虐待，且没有任何人拥有不公正对待他人的特权。明知故犯违背宪章规定不仅违法，亦可直接被定性为虐待侵权行为。宪章强制要求包括政府各级部门、警务执法机关、各级法庭以及全体加拿大居民在内的所有人，必须无条件尊重他人的基本人权。</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-ch12-p176">
+                  <h2 class="heading-en">TYPES OF ABUSE</h2>
+                  <div class="heading-cn">虐待的主要表现形态全解析</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="140.0" data-end="230.0" data-title="Charter Rights & The Five Types of Abuse" onclick="playParagraphAudio(this)">
+                      <p class="para-en">There are many ways in which people can abuse others of all ages, in various settings. It is also important to note that more than one type of abuse can occur at the same time. Abuse sometimes comes in other forms, such as bullying, or cyberbullying.</p>
+                      <p class="para-cn">在不同的执业与生活场景中，针对不同年龄段个体的虐待行为有着繁多的表现形式。尤为重要的是：在真实的临床与生活情境中，往往不止一种虐待形态在同一受害者身上同时交织发生。虐待还经常以欺凌（Bullying）或网络暴力欺凌（Cyberbullying）等现代衍生形式蔓延。</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Physical abuse is force or violence that causes pain, injury, and sometimes death. Physical abuse includes pinching, hair pulling, pushing, slapping, hitting, shaking, choking, biting, or kicking. It also includes burning, poisoning, using weapons, or throwing things (e.g., a chair or a hammer) at someone.</strong></div>
+                      <div class="item-cn">身体虐待（Physical abuse）：指蓄意施加的导致身体剧痛、组织创伤甚至死亡的物理暴力或强力。包括掐捏、扯头发、推搡、掌掴、击打、剧烈摇晃、锁喉勒颈、咬伤或脚踢；亦包括烫伤灼伤、投毒、动用器械武器攻击，或向他人猛力投掷重物（如椅子或铁锤等）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Sexual abuse is unwanted sexual activity such as rape and attempted rape. Unwanted touching, fondling, kissing, and exposure (i.e., the abuser showing their genitals to the victim) are also considered sexual abuse. Sexual harassment—another form of sexual abuse—is any conduct, comment, gesture, threat, or suggestion that is sexual in nature.</strong></div>
+                      <div class="item-cn">性虐待（Sexual abuse）：指任何违背意愿、未经知情同意的强迫性行为，如强奸及强奸未遂。未经允许的身体触碰、猥亵抚摸、强吻以及暴露行为（即施暴者向受害者故意裸露生殖器）均构成性虐待。性骚扰（Sexual harassment）是性虐待的特定法律形态，指任何具有性意味、令人感到被侵犯的不受欢迎举止、言辞评论、肢体手势、威胁恐吓或暗示。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Emotional abuse (psychological abuse) occurs through words or actions that cause mental harm. It usually involves an attack on a person's self-esteem—for example, constantly insulting, humiliating, or rejecting a person, or saying that the person is 'stupid' or 'ugly.' Insults can also be directed at the person's sexual orientation, weight, or ethnic identity (see Chapter 7). All of these can harm the person's sense of worth and self-confidence. Emotional abuse can happen to infants, children, teens, adults, and older adults. Emotional abuse lessens the victim's dignity and self-worth because they are called names, yelled at, insulted, mocked, threatened, or sworn at. The victim may be ignored for long periods or may not be allowed to do preferred activities or visit with family, friends, or others. Threatening to harm someone or something that the victim loves (such as a child or a pet) is another example of emotional abuse.</strong></div>
+                      <div class="item-cn">情感虐待/心理虐待（Emotional / Psychological abuse）：指通过语言攻击或侮辱性行为造成精神心理创伤的暴行。它通常直接针对个体的自尊心展开毁灭性践踏——例如持续不断的人身侮辱、当众羞辱、冷酷排斥，或贬斥长者“愚蠢无能”或“丑陋恶心”。侮辱亦可针对当事人的性取向、体型体重或种族民族身份（参见第 7 章）。这一切都会毁灭个体的存在价值感与自信心。情感虐待可侵袭婴儿、儿童、青少年、成年人乃至年迈长者。当受害者被起侮辱性外号、疯狂咆哮、讥讽嘲弄、恐吓威胁或恶毒诅咒时，其人格尊严被剥夺殆尽。受害者还可能遭受长期精神冷暴力（被彻底视若空气），或被剥夺从事喜好活动的自由，被严禁与亲友会面交往。以伤害受害者所挚爱的人或事物（如子女或宠物）相要挟，同样是极其恶劣的情感虐待。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Financial abuse is the misuse of a person's money or property, usually for the abuser's financial gain. Financial abuse includes stealing, forging signatures, selling property or possessions without permission, and persuading or tricking victims to change their will or give up control of their finances. Some abusers do not allow their victims access to their own money.</strong></div>
+                      <div class="item-cn">经济虐待（Financial abuse）：指非法侵占、挪用或不当掌控他人的资金或财产，通常以谋取施暴者的经济私利为目的。包括盗窃现金、伪造签名、未经许可擅自变卖长者的房产与私人物品，以及通过欺诈、恐吓或诱骗迫使受害者修改遗嘱或交出财务控制权。某些施暴者甚至彻底切断受害者使用其自身合法退休金与银行账户的途径。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Neglect is failure to meet the basic needs of a dependent person. Victims of neglect are usually children, people with disabilities, and frail older persons. Neglect occurs when a clean, comfortable, and safe environment is not provided. In some cases, the caregiver may even withhold or deny basic needs such as food, water, or clothing. Personal care, medical care, education, and attention and love may also be denied or withheld. The caregiver may knowingly neglect the victim or unintentionally neglect the person because of an inability to provide adequate care.</strong></div>
+                      <div class="item-cn">照料忽视（Neglect）：指照护者未能满足生活依赖者的生存与发育基本需求。受害者通常为未成年儿童、残障人士以及极度衰弱的老年人。当未能为其提供清洁、舒适且安全的生存居住环境时便构成了忽视。在严重案例中，照护者甚至刻意剥夺或克扣诸如食物、饮用水或御寒衣物等生命必需品；生活护理、必要医疗、教育机会以及情感关切与爱抚亦被长期剥夺。忽视既可能是照护者明知故犯的主观遗弃，亦可能源于照护者能力严重不足、身心枯竭导致的非故意性照护失职。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Bullying is a type of abuse in which one person or a group of people purposely and repeatedly says or does hurtful things to someone else. It is also known as harassment. The abuse can include (a) physical bullying, such as hitting, spitting, or breaking someone else's belongings; (b) verbal bullying, such as name calling, threats, and teasing; and (c) social bullying, such as spreading rumours, gossiping, or making others look foolish. It can occur anywhere: schools, nursing homes, and in the workplace (see Workplace Bullying on page 190).</strong></div>
+                      <div class="item-cn">欺凌 / 霸凌（Bullying）：指一个人或一个群体有目的且反复多次对他人实施言语或肢体伤害的虐待行为，亦称骚扰。包括：(a) 肢体欺凌，如殴打、吐口水或故意损坏他人财物；(b) 言语欺凌，如侮辱性绰号、恶意恐吓与嘲讽；以及 (c) 社交欺凌，如散布恶意谣言、人际孤立或当众出丑。欺凌可发生于任何场所：学校、照护机构以及职场工作环境中（参见第 190 页职场欺凌）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Cyberbullying (also known as cyberabuse) is a type of abuse that uses communication technologies like the Internet, social networking sites, text messaging, and instant messaging with the purpose of repeatedly intimidating or harassing a person. Cyberbullying is not limited to any one age group. There are a number of types of cyberbullying (BOX 12.2). It is illegal to post untrue statements about a person (see discussion of libel and slander on page 72 in Chapter 5).</strong></div>
+                      <div class="item-cn">网络欺凌（Cyberbullying，亦称网络虐待 Cyberabuse）：指利用互联网、社交网站、手机短信和即时通信软件，以反复恐吓、羞辱或骚扰特定个人为目的的现代虐待形态。网络欺凌绝不局限于某一特定年龄群体，涵盖多种衍生形态（专栏 12.2）。在网络上公开发布针对他人的不实虚假言论属于违法犯罪行为（参见第 5 章第 72 页关于文字诽谤与言语诽谤的法律界定）。</div>
+                    </li>
+                    </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-177">
+              <span class="marker-pill">p. 177</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-blue">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 12.1 The Rights and Freedoms of All Canadians</h4>
+                    <div class="box-title-cn">专栏 12.1 加拿大全体居民法定人权与自由全貌</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">The Canadian Charter of Rights and Freedoms (1982) ensures that all Canadians, new immigrants, permanent residents, and visitors to Canada have the following rights:<br><br>• Fundamental Freedoms. This section includes the rights to freedom of conscience and religion; freedom of thought, belief, opinion, and expression, including freedom of the press and other media of communications; and freedom of peaceful assembly and association. Therefore, Canadians, new immigrants, and visitors to Canada have the right to practise the religion of their choice and express their views without fear of being punished in any way. They can also voice their opinions in print, in person, or on the Internet, radio, or television. We all have the right to choose who we want to communicate with (or not), and we can join together in a peaceful manner to express our opinions.<br><br>• Equality Rights. This section includes the rights to equal treatment before and under the law and equal benefit and protection of the law without discrimination based on race, national or ethnic origin, colour, religion, gender, age, and mental or physical disability. Other grounds of discrimination that were not specifically set out in the Charter, such as sexual orientation and marital status, were recognized in 1985. We are all considered equal, and nobody can get poorer (or special) treatment because of their differences.<br><br>• Democratic Rights. These sections contain the right to vote, the right to run for public office, and the maximum duration of legislative bodies.<br><br>• Mobility. This section ensures the right to move from place to place within Canada and ensures that Canadian citizens are free to enter and leave Canada as they please. It also gives citizens and permanent residents the right to move to and live in any province.<br><br>• Legal Rights. These sections set out the rights that protect us in our dealings with the justice system. These rights ensure that individuals who are involved in legal proceedings are treated fairly, especially those charged with criminal offences, and include the rights:<br>  - To have life, liberty, and security of the person<br>  - To be secure from unreasonable search and seizure<br>  - To be free from unnecessary detention or imprisonment<br>  - To be informed promptly of reasons for any arrest or detention<br>  - To retain and instruct counsel on arrest or detention<br>  - To be tried within a reasonable time by an impartial tribunal<br>  - To be presumed innocent<br>  - To have protection against self-incrimination<br>  - To be free from cruel and unusual treatment or punishment<br>  - To have the assistance of an interpreter<br><br>• Language Rights. These sections confirm that English and French are the official languages of Canada and assert the equality of the French and English languages in particular situations. Federal laws must be published in both English and French.<br><br>• Minority Language Education Rights. This section establishes that provincial governments must provide certain English- or French-language minority schooling where numbers warrant.<br><br>Source: Canadian Charter of Rights and Freedoms, s. 2, Part I of the Constitution Act, 1982, being Schedule B to the Canada Act 1982 (UK), 1982, c 11.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">《加拿大权利与自由宪章》（1982 年）庄严捍卫全体加拿大公民、新移民、永久居民及境外访客享有以下神圣不可侵犯的基本权利：<br><br>• 基本自由（Fundamental Freedoms）：涵盖良心与宗教自由；思想、信念、观点与言论表达自由（包括新闻出版与大众传媒自由）；以及和平集会与结社自由。因此，全体居民有权践行自身选择的宗教信仰，毫无畏惧地公开表达见解；可通过报刊、网络、广播电视发声；有权自主决定与谁交往，并能以和平合法方式集会表达诉求。<br><br>• 平等权利（Equality Rights）：法律面前人人平等，并同等享有法律的保护与利益，严禁因种族、民族血统、肤色、宗教信仰、性别、年龄、智力或肢体残障而遭受任何歧视。其他未在初始条文中详列的歧视理由（如性取向、婚姻状况等）已于 1985 年由最高法院确认为违宪。任何人都不得因自身特异性而遭受不公待遇。<br><br>• 民主权利（Democratic Rights）：涵盖依法享有选举权与被选举权，以及立法机构任期的宪制限制。<br><br>• 迁徙自由（Mobility Rights）：确保在加拿大全境自由迁徙移动的权利，保障公民自由出入加拿大国境；赋予公民及永久居民在任何省份自由定居与谋生的权利。<br><br>• 司法法定权利（Legal Rights）：在应对司法执法程序中确保程序正义，特别是针对刑事指控被告人，涵盖：<br>  - 享有生命、自由及人身安全的权利；<br>  - 免受无理搜查与扣押的权利；<br>  - 免遭任意拘留或监禁的权利；<br>  - 被捕或拘留时获知确切理由的权利；<br>  - 被捕时立即聘请并咨询律师的权利；<br>  - 在合理期限内由公正法庭审判的权利；<br>  - 享有无罪推定原则的权利；<br>  - 免受强迫自证其罪的权利；<br>  - 免受残酷及非寻常待遇或惩罚的权利；<br>  - 在审讯诉讼中获得免费法庭翻译协助的权利。<br><br>• 语言权利（Language Rights）：确立法语法语为加拿大联邦官方语言，在议会与联邦法院（含最高法院）中享有平等法定地位；联邦法律法规必须以双语同步颁布。<br><br>• 少数族裔语言教育权（Minority Language Education Rights）：规定省政府在合规适龄儿童达到一定规模时，必须提供官方少数语言教育设施。<br><br>出处：Canadian Charter of Rights and Freedoms, Constitution Act, 1982.</div>
+                    </div>
+                  </div>
+                </aside>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="230.0" data-end="320.0" data-title="BOX 12.1 Rights and Freedoms of All Canadians" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Today's advanced technology allows people to take pictures, edit them, and then post them electronically to a social media site. It is illegal to do so without the permission of those pictured (BOX 12.3).</p>
+                      <p class="para-cn">当今高度发达的移动互联网技术使人们能够随时随地拍摄照片、进行数字化编辑并上传分发至各大社交网络平台。然而，未经照片中当事人的明确知情同意擅自分享发布，在法律上属于严重违法侵权行为（专栏 12.3）。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="230.0" data-end="320.0" data-title="BOX 12.1 Rights and Freedoms of All Canadians" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Unfortunately for many, hurtful or embarrassing images can easily be posted anonymously and distributed throughout the world, so it is difficult for victims to easily ignore them. This redistribution of images or messages revictimizes the person over and over, perhaps for weeks, months, or even years in extreme cases.</p>
+                      <p class="para-cn">令人痛心的是，具有伤害性、侮辱性或隐私难堪的图像极易被恶意匿名发布并在全球网络中病毒式扩散，使受害者根本无法轻易回避。这种在数字空间中的持续二次传播与恶意转发，往往会在数周、数月乃至数年内对受害者造成无休止的反复精神重创与心理凌迟。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-178">
+              <span class="marker-pill">p. 178</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-lavender">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 12.2 Types of Cyberbullying, Its Impact, and How to Stop It</h4>
+                    <div class="box-title-cn">专栏 12.2 网络欺凌的常见形态、身心摧残与终结防范策略</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Cyberbullying includes:<br>• Sending mean or threatening emails or text/instant messages<br>• Posting embarrassing photos of someone online<br>• Creating a website to make fun of others<br>• Pretending to be someone by using their name<br>• Tricking someone into revealing personal or embarrassing information and sending it to others<br><br>Cyberbullying can impact its victim in a number of ways, regardless of age, leading to:<br>• Stress-related health problems (headaches, stomachaches)<br>• Social anxiety, loneliness, and isolation<br>• Depression<br>• Low self-esteem<br>• Social withdrawal or aggressive behaviours<br>• Suicidal thoughts or attempts<br><br>If you or someone you know is a victim of bullying:<br>• Report criminal offences, such as threats, assaults, and sexual exploitation to the local police detachment.<br>• Report unwanted text messages to your telephone service provider.<br>• Report online bullying to the social media site and block the person responsible.<br>• Walk away or leave the online conversation.<br>• Keep track of the bullying (write it down and/or save a screenshot of the online message).<br><br>Source: Royal Canadian Mounted Police (RCMP). (2019). Bullying and cyberbullying. Government of Canada.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">网络欺凌与网络虐待的具体行径包括：<br>• 发送具有恶意贬损或恐吓威胁性质的电子邮件、手机短信或即时聊天消息；<br>• 在互联网公共空间擅自发布他人的隐私难堪或受辱照片；<br>• 专门搭建恶意网站用以嘲讽、抹黑或恶搞特定个人；<br>• 盗用他人姓名身份在网络上冒名顶替进行破坏活动；<br>• 诱骗他人透露敏感隐私或难堪信息后恶意群发分发给第三方。<br><br>网络欺凌对任何年龄段的受害者均会造成毁灭性身心冲击，诱发：<br>• 应激诱发的躯体生理疾病（如慢性顽固性偏头痛、胃痛与消化道功能紊乱）；<br>• 严重的社交焦虑障碍、极度孤独感与人际隔绝；<br>• 临床重度抑郁症；<br>• 自我认同感与自尊心彻底崩塌；<br>• 极度社交回避退缩或反常的绝望攻击性反应；<br>• 自杀意念、自残或自杀企图。<br><br>应对网络霸凌与维权自救的黄金实操规程：<br>• 涉及人身威胁、肢体暴力、性剥削等刑事犯罪的，立即向属地加拿大皇家骑警（RCMP）或当地警局报案；<br>• 向电信网络运营商如实举报骚扰性短信或恶意垃圾来电；<br>• 向社交网络平台官方安全团队提交侵权违规举报，并立即拉黑屏蔽恶意施暴账号；<br>• 坚决退出有毒的在线对话群组，中断施暴渠道；<br>• 严密留存完整证据链：详实记录案发时间并对所有恶意言论及图片截图留底以备司法起诉。<br><br>出处：加拿大皇家骑警（RCMP, 2019）官方网络霸凌安全防御指南。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+                <aside class="editorial-box-container box-theme-terracotta">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 12.3 Cyberbullying Legislation</h4>
+                    <div class="box-title-cn">专栏 12.3 加拿大刑法针对非自愿分享私密图像的刑事立法</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">As of March 10, 2015, it is an offence under Canada's Criminal Code to share intimate images of a person without the consent of the person appearing in the image. This law applies to everyone, not only to people under age 18. The purpose of this offence is to protect the privacy a person has with regard to nudity or sexual activity. An 'intimate image' is defined as an image that depicts a person engaged in explicit sexual activity or that depicts a sexual organ, anal region, or breast. The image also has to be one in which the person depicted had a reasonable expectation of privacy at the time of the recording and never gave up any privacy interest at the time of the offence.<br><br>With digital technology rapidly changing, there has been an increase of cyberbullying in the form of distributing intimate or sexual images without the consent of the person in the photo or video. This type of behaviour can occur in a variety of situations. Often, it is used as a form of revenge: a person has willingly shared an intimate image of themselves with a partner and when the relationship ends, that partner distributes those photos publicly (this is sometimes called 'revenge porn').<br><br>Whatever the motivation, the impact of this kind of cyberbullying can be devastating to a person's self-esteem, reputation, and mental health. In some cases, these acts may have played a part in teens taking their own lives. Judges now have the authority to order the removal of intimate images from the Internet if the images were posted without the consent of the person or persons in the image.<br><br>Anyone convicted of distributing an intimate image without consent can face serious legal consequences. For example:<br>• They could be imprisoned for up to 5 years;<br>• The computer, cell phone, or other device they used to share the image could be seized and forfeited; and<br>• They could be ordered to reimburse the victim for costs incurred in removing the intimate image from the Internet or elsewhere.<br><br>Source: Government of Canada. (2018). What are the potential legal consequences of cyberbullying? Public Safety Canada.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">自 2015 年 3 月 10 日起，《加拿大刑法典》（Criminal Code of Canada）正式确立：未经图像中当事人明确同意，擅自分享或散布其私密图像属于严重的联邦刑事犯罪。该法律对全体国民具有普适约束力，绝不仅限于未成年人。设立该罪名的核心法理在于捍卫个体在裸体或性隐私维度的法定隐私权。法律所界定的“私密图像（Intimate Image）”，是指展现当事人从事显性性活动，或暴露其性器官、肛门区域或女性乳房的照片或视频。该图像拍摄时当事人具有合乎情理的隐私期待，且在案发当时从未放弃过其隐私权益。<br><br>随着数字摄影技术的普及，以未经许可恶意散布私密色情图像为手段的网络暴力急剧攀升。此类行径多见于所谓“报复性色情（Revenge Porn）”：受害者曾基于信任自愿向亲密伴侣分享过私人隐秘照片；但在恋爱或婚姻关系破裂后，施暴方出于报复、敲诈或恶意泄愤将照片公开发布传播。<br><br>无论其动机为何，此类恶行对受害者的自尊、名誉与精神心理造成的创伤往往是毁灭性的，甚至导致了多起青少年绝望自杀的社会惨剧。如今加拿大各级法官已拥有充分司法裁决权，可依法下令强制互联网平台立即彻底删除未经许可发布的私密图像。<br><br>任何被定罪犯有“非自愿传播私密图像罪”的当事人，将面临极其严厉的刑事制裁：<br>• 最高可判处长达 5 年的联邦有期徒刑；<br>• 施暴者用于传播图像的电脑、智能手机或任何电子硬件设备将被依法查封并永久没收；<br>• 法院可依法责令施暴者全额赔偿受害者为从全网删除下架私密图像所产生的一切高额取证与技术维权开销。<br><br>出处：加拿大公共安全部（Public Safety Canada, 2018）。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-179">
+              <span class="marker-pill">p. 179</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p179">
+                  <h2 class="heading-en">ABUSIVE RELATIONSHIPS</h2>
+                  <div class="heading-cn">虐待关系的本质特征与权力控制</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="410.0" data-end="500.0" data-title="Abusive Relationships & BOX 12.4 Persons at Highest Risk" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse can occur in many different kinds of relationships. An abuser can be a caregiver, such as a parent, child, friend, grandparent, step-parent, or relative.</p>
+                      <p class="para-cn">虐待可潜伏并爆发于极其多元的人际关系形态之中。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="410.0" data-end="500.0" data-title="Abusive Relationships & BOX 12.4 Persons at Highest Risk" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Sometimes, the abuser is a nonrelative who is close to the person, such as a family friend or a parent's or adult child's partner. All age groups are at risk and all are equally likely to be victims, although some people are at greater risk for abuse (BOX 12.4).</p>
+                      <p class="para-cn">施暴者既可能是负有直接抚养监护职责的照料者（如亲生父母、成年子女、密友、祖父母、继父母或近亲属）；有时，施暴者亦可能是与家庭关系紧密的非血缘亲信人员（如家庭密友、父母或成年子女的新伴侣）。虽然理论上任何年龄群体均面临风险并可能沦为受害者，但特定人群具有显著更高的易感脆弱性（专栏 12.4）。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="410.0" data-end="500.0" data-title="Abusive Relationships & BOX 12.4 Persons at Highest Risk" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse occurs in all types of families: rich and poor, educated and uneducated. Any individuals can be abused by their spouses or partners; children can be abused by their classmates or by significant others; older persons can be abused by their caregivers or their adult children; or clients can be abused by health care workers. Health care workers can also be abused by their clients.</p>
+                      <p class="para-cn">虐待遍及各种类型的家庭环境：无论贫富贵贱、教育程度高低。任何人均可能遭受配偶或伴侣的家暴摧残；儿童可能沦为同学霸凌或监护人虐待的受害者；高龄长者可能遭受照料者或成年子女的欺凌侵占；服务对象可能遭受医护人员的失范侵犯；而医护工作者在临床执业中亦同样面临遭受服务对象暴力与言语攻击的严峻风险。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-amber">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 12.4 Persons at Highest Risk for Abuse</h4>
+                    <div class="box-title-cn">专栏 12.4 虐待极高危易感脆弱人群全景深度剖析</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Even though anyone could potentially be abused (or, for that matter, be an abuser, given the right circumstances), there are certain groups of people who are especially at risk for being abused. Abuse may damage such persons' sense of self-worth and dignity and increase their social isolation, making them even more vulnerable to abuse. Also, abused persons may be unable to access (or not know about) support systems that are available to them. These people include:<br><br>• Marginalized persons (especially women). Those who (1) are unable to report abuse because they are not fluent enough in an official language, or (2) belong to a visible-minority group (for example, members of Indigenous communities or some ethnic groups, or perhaps members of the LGBTQ2 community), (3) are geographically isolated, (4) have a physical or intellectual disability, (5) live with a mental health disorder, (6) have (or had) a substance abuse problem, or (7) work in the sex trade, and are marginalized, which means they are usually shunned by mainstream society. People who are marginalized are usually treated like they are 'invisible' and they often feel powerless to report abuse, or they may not be understood or believed when they do report it, in which case authorities may not give as much attention to their reports as to other people's reports. Sexual assault against women is particularly prevalent in Northern Canada, where there is a much higher proportion of Indigenous people.<br><br>• Children. Children are usually dependent on the person who is caring for them. They are too young to know how to defend or protect themselves. Some parents or caregivers think that they have the right to 'discipline' their children by using abusive force or words. Others are overwhelmed with the stress and responsibilities of being a parent or guardian, or they very likely were abused themselves during their childhood. Some abuse is punitive, but it can also be sexual in nature.<br><br>• Socially or geographically isolated older persons. Older people who cannot get out of the places where they live may not have an opportunity to tell anyone that they are abused. Bruises and other obvious physical signs might also go unnoticed if these older persons are prevented from having contact with others. Older people may not know how to escape from an abuser or may lack the strength to seek safety and shelter.<br><br>• Older persons with reduced cognitive capacity. These people may not know or remember that they have been abused. They may no longer have control over their finances, so they may not know that their money or belongings are being taken.<br><br>• Dependent older persons with disabilities. If older persons do not have opportunities to interact with others, abuses can often go unrecognized. In the case of physical abuse, bruises are often explained away by the abuser as being caused by the disability, age, or general health condition of the older person.<br><br>• Older persons cared for by people with substance abuse problems. People with substance abuse problems may lack impulse control—that is, the ability to control their angry outbursts or to deal with the older person's challenging behaviours in a nonviolent manner. Others may have financial problems and steal from the older person they care for to support their own substance addiction.<br><br>Source: Adapted from Government of Canada. (2011). Elder abuse is wrong, Department of Justice.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">尽管在特定极端环境下任何人都有可能沦为受虐受害者（甚至在特定压力下转化为施暴者），但流行病学与临床司法数据清晰证实，某些特定社会群体具有极其高危的易感脆弱性。持续的虐待会摧毁当事人的自我价值感与尊严，加剧其与社会的隔绝，进而使其深陷更加易受侵害的绝望深渊；许多受虐者甚至完全无法触及或根本不知道社会存在着可供求助的救济庇护机制。这些高危群体包括：<br><br>• 边缘化弱势人群（尤其是边缘化女性）：包括：(1) 因官方语言（英/法）不流利而丧失对外求助能力的移民；(2) 属于少数族裔、原住民（Indigenous）社群或 LGBTQ2+ 群体的人员；(3) 地理位置极端隔绝偏僻的居民；(4) 罹患肢体失能或智力发育残障者；(5) 伴有精神心理疾病患者；(6) 存在或曾有物质滥用成瘾史的人员；以及 (7) 从事性工作者。他们长期遭受主流社会的冷漠排斥与忽视，在社会治理中往往沦为“隐形人”；他们感到无力报警或求助，即便主动报告也往往难以获得调查人员的充分信任与重视。针对女性的性侵犯与暴力在加拿大北部领地尤为高发，当地原住民人口比例高且医疗司法资源极度匮乏。<br><br>• 未成年儿童：儿童在生理与生活上完全依赖其照护者，年幼无力进行自我保护或反抗求救。某些父母或监护人错误地将野蛮的暴力殴打或人格侮辱视为合法的“家庭管教”手段；另一些照料者则被沉重的育儿重压与生活窘境压垮，或者自身在童年期便遭受过严重的家暴虐待创伤。虐待儿童既有惩罚性肉体暴力，亦包含令人发指的性侵犯。<br><br>• 社交或地理环境被隔离的高龄长者：被禁锢在室内无法外出社交的长者，根本没有机会向外界诉说受虐事实；在被施暴者切断外部探视联系后，其身上的淤伤与外伤极易被隐瞒掩盖；长者往往不知道如何逃离施暴者，更缺乏体力寻求法律庇护与紧急避难所。<br><br>• 伴有认知机能减退与痴呆的老年人：此类长者往往无法清晰识别或回忆起自己遭受过的虐待经过；他们丧失了对自身银行账户与财务的主导权，因此在养老金与贵重私产被侵吞盗用时浑然不知。<br><br>• 严重肢体失能依赖照料的长者：缺乏与外界沟通的机会使得隐性虐待难以被外界发现。在身体暴力导致淤青创伤时，施暴者往往会狡辩推脱称是长者因自身残障跌倒、衰老或虚弱体质所导致的“意外”。<br><br>• 由物质成瘾（吸毒/酗酒）人员照护的衰弱长者：深陷物质滥用的照料者大脑冲动控制机制严重受损，极易在长者出现失禁或认知障碍行为时突发暴怒攻击；此外，施暴者常常深陷财务绝境，为筹措毒资而肆无忌惮地洗劫掠夺长者的养老资产。<br><br>出处：加拿大司法部（Department of Justice Canada, 2011）官方权威公报。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-180">
+              <span class="marker-pill">p. 180</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="500.0" data-end="590.0" data-title="Contributing Abuse Factors & Signs and Symptoms of Abuse (Part 1)" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abusive relationships are complex, and there is usually no single cause for the abuse. In most cases of abuse by a caregiver, the abuse has been triggered when the abuser felt overwhelmed and felt that no help was available to care for their physically or mentally challenged child or dependent parent. However, in all relationships, a person is more likely to be abusive if they are dealing with the following: Problems with alcohol or drugs; Mental illness (for example, major depression) or severe personality flaws (for example, an explosive temper, inability to control impulses, or lack of empathy for others); Abuse as a child; Going through a period of high stress, such as divorce, unemployment, poverty, or illness.</p>
+                      <p class="para-cn">虐待关系的形成极其复杂，通常绝非由单一诱因所致。在大多数家庭照料者实施虐待的案例中，往往是由于照护者在面对身心失能的残障儿童或重病依赖的高龄父母时，承受了难以承受的长期重压，且深感外界没有任何援助可用，从而引发了绝望中的情绪崩溃与暴力外溢。然而，在所有人际关系中，施暴者往往具备以下高危特征：深陷严重的酒精或毒品物质滥用问题；伴有重度精神心理疾病（如重度抑郁症）或严重的人格缺陷（如暴躁易怒、冲动控制障碍或极端缺乏同理共情能力）；童年时期遭受过家庭虐待创伤；正在经历人生重大高应激变故（如婚姻破裂离婚、失业破产、极度贫困或恶性疾病）。</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-ch12-p180">
+                  <h2 class="heading-en">RECOGNIZING THE SIGNS OF ABUSE</h2>
+                  <div class="heading-cn">敏锐识别虐待与忽视的临床客观指征</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="500.0" data-end="590.0" data-title="Contributing Abuse Factors & Signs and Symptoms of Abuse (Part 1)" onclick="playParagraphAudio(this)">
+                      <p class="para-en">As a support worker, you are responsible for recognizing the signs of abuse. These signs generally apply to all abusive relationships, in all settings.</p>
+                      <p class="para-cn">作为支持工作者，你的法定专业职责是敏锐识别出可能提示受虐的客观体征与行为警讯。这些临床指征广泛适用于各种场景下的虐待关系。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="500.0" data-end="590.0" data-title="Contributing Abuse Factors & Signs and Symptoms of Abuse (Part 1)" onclick="playParagraphAudio(this)">
+                      <p class="para-en">However, you are not qualified to judge whether or not your client is being abused. You may think you recognize one or some of the signs (see the Think About Safety: Signs and Symptoms of Abuse box), but such signs do not always mean that abuse has occurred. These signs might, however, suggest that abuse is a possibility.</p>
+                      <p class="para-cn">然而，你必须清醒认识到：支持工作者没有法定资质去最终判定或裁决服务对象是否遭受了虐待。你或许观察到了某项或某些可疑体征（参见“安全前线：虐待与忽视的临床症状全景核查表”专栏），但单一指征并不绝对等同于虐待必然发生；然而，这些指征确凿无疑地提示着虐待的极大可能性。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="500.0" data-end="590.0" data-title="Contributing Abuse Factors & Signs and Symptoms of Abuse (Part 1)" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Watch for signs of abuse or neglect in the course of your daily work with your clients. Immediately report any suspicions or observations to your supervisor.</p>
+                      <p class="para-cn">在与服务对象日常接触的每分每秒中，请时刻保持高度的临床警惕。一旦察觉任何可疑的虐待或忽视线索，必须立即以事实为依据向你的临床主管汇报。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="500.0" data-end="590.0" data-title="Contributing Abuse Factors & Signs and Symptoms of Abuse (Part 1)" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Your supervisor will ensure that the situation is investigated. Know your employer's procedures for reporting observations or suspicions of abuse.</p>
+                      <p class="para-cn">主管将启动跨学科调查与法定处置程序。你必须熟练掌握所在机构关于观察记录与汇报疑似虐待的具体操作规程。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Think About Safety: Signs and Symptoms of Abuse (Part 1)</h4>
+                    <div class="box-title-cn">安全前线专栏：虐待与忽视的临床症状全景核查表（第一部分：身体、性与情感虐待）</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Victims of abuse can be subjected to one or more of the following types of abuse:<br><br>Physical Abuse<br>• Physical injuries (such as burns, bumps, bruises, scratches, cuts, or fractures) that frequently go untreated and either are unexplained or have unlikely explanations<br>• New injuries that appear while older injuries are still healing<br>• Frequent injuries (such as burns, bruises, welts, or cuts) on the face, neck, inner arms, back, upper arms, and inner thighs (people who are abused often try to hide their injuries under clothing or makeup)<br>• Welts, bruises, or burns that have the shape of the object that caused the injury; for example, the shape may be of a handprint, belt, or wooden spoon<br>• Unexplained missing or loose teeth<br>• A very groggy or overly sedated client<br><br>Sexual Abuse<br>• Irritation or injury (such as cuts and bruises or scarring) of the thighs, perineum, or breasts<br>• Intense fear of bathing or perineal care<br>• Torn, stained, or bloody underwear<br>• Vaginal discharge, genital odour, and painful urination<br>• Difficulty walking or sitting<br>• Avoidance of touching (see the Supporting Emmy Lou: One Abuse Survivor's Struggle box on page 182)<br><br>Emotional Abuse<br>• A change in behaviour, especially if the client seems depressed or unusually quiet or withdrawn<br>• Fearful behaviour, especially in the presence of the suspected abuser; for example, the client cowers, avoids eye contact, or trembles<br>• Unwillingness to talk or answer questions<br>• Change in behaviour when the suspected abuser enters and leaves the room<br>• Withholding of permission to socialize with family or friends or client's withdrawal from contacts<br>• Private conversations not allowed—the suspected abuser insists on being present or within hearing distance of all conversations<br>• Change in behaviour of the suspected abuser (who may be the caregiver)—for example, on one occasion she is pleasant and cooperative and, on another, is defensive or hostile<br>• Caregiver's failure to show any affection toward the person in their care, or shows of affection seem strained or insincere<br>• Frequent statements by the caregiver that the person in their care is difficult or demanding</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">受虐受害者往往同时遭受以下多维度的残酷摧残，照护者应严格核查以下临床警讯：<br><br>【一、身体虐待体征（Physical Abuse Signs）】<br>• 身体出现反复未获就医处置的创伤（如烧伤灼痕、肿块、挫伤淤斑、抓痕、裂伤或不明原因骨折），伤情缺乏合理解释或其解释明显违背物理常识；<br>• 身上旧伤未愈又添新伤（新伤叠旧伤，处于不同愈合期的淤青伤痕并存）；<br>• 面部、颈部、大臂内侧、后背、大腿内侧等隐私保护部位频繁出现伤痕（受虐者常试图利用长袖衣物或化妆品刻意掩盖伤情）；<br>• 伤口形状直接与致伤工具吻合（如清晰的手掌印、皮带扣痕迹、电线印或木勺烫痕）；<br>• 毫无病理依据的牙齿松动脱落或缺失；<br>• 服务对象整日神志恍惚、嗜睡或处于反常的过量镇静剂抑制状态。<br><br>【二、性虐待体征（Sexual Abuse Signs）】<br>• 大腿根部、会阴私密区或胸部乳房出现红肿刺激、擦伤挫裂、淤青或陈旧疤痕；<br>• 对个人沐浴更衣或会阴部清洁护理表现出极端恐惧、尖叫抗拒或恐慌发作；<br>• 贴身内衣撕裂、沾有不明污渍或带血；<br>• 出现异常阴道分泌物、生殖器异味或排尿剧痛（Dysuria）；<br>• 出现步态异常、行走困难或无法坐卧；<br>• 表现出极端的触碰回避（Touch Avoidance，参见第 182 页艾米·卢的创伤案例）。<br><br>【三、情感与心理虐待指征（Emotional Abuse Signs）】<br>• 行为举止发生戏剧性剧变，表现出深度的消沉抑郁、反常的沉默寡言或极端自闭退缩；<br>• 在涉嫌施暴者出现时表现出极度恐惧畏缩：瑟瑟发抖、战战兢兢、刻意回避目光接触；<br>• 表现出极强的戒备，坚决不愿开口交谈或抗拒回答基础问题；<br>• 当涉嫌施暴者进出房间时，受害者的情绪与体态发生瞬时的巨大两极反转；<br>• 被严禁外出与亲朋好友正常社交，或受害者主动切断所有外部联系；<br>• 施暴者坚决剥夺任何私下交谈机会，强行要求每一次交流必须在场或处于其听力监控范围内；<br>• 涉嫌施暴者（常为家属照护者）在外界接触时表现出双面人格：前一秒和善配合，后一秒暴躁防御甚至充满敌意；<br>• 照料者从未对受护者流露过任何由衷温情，其表面的关心显得僵硬伪善与敷衍；<br>• 照料者频繁向外界抱怨指责其所照料的长者“刁钻难缠、无理取闹”。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-181">
+              <span class="marker-pill">p. 181</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Think About Safety: Signs and Symptoms of Abuse (Part 2)</h4>
+                    <div class="box-title-cn">安全前线专栏：虐待与忽视的临床症状全景核查表（第二部分：经济虐待、忽视与儿童体征）</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Financial Abuse<br>• Caregiver's refusal to spend money on caring for the person<br>• Unpaid bills (such as utilities, telephone, or rent) or bounced cheques, even though client has money<br>• Lack of adequate food, clothing, personal care items, or furnishings, even though client can afford them<br>• Suspected abuser's greater concern is the cost, rather than the quality, of the care<br>• Missing personal belongings, with no explanation<br>• Suspected abuser does not have a job and is secretive about their source of income<br>• Client has to ask for permission to write cheques or spend money<br><br>Neglect<br>• Lack of personal hygiene; for example, a neglected client may have ingrown nails, decayed teeth, untreated sores, matted hair, body odour, or dirty clothing<br>• Signs of poor nutrition and fluid intake, such as weight loss; extreme thirst; a thin, bony appearance; sunken eyes or cheeks; and a dry, papery feeling to the skin<br>• Pressure sores<br>• Medications not purchased<br>• Lack of supervision or attention for prolonged periods<br><br>Infants and Children<br>All of the above as well as the following are signs of abuse or neglect in children and infants:<br>• Sudden behaviour changes—for example, bed-wetting, loss of bladder or bowel control during the day, or loss of appetite<br>• Prolonged vomiting or diarrhea<br>• Developmental delays, such as not gaining weight or not reaching developmental milestones (e.g., sitting or standing)<br>• Lack of energy in infants, shown by lack of interest in the surroundings, infrequent crying, and generally an undemanding disposition<br>• Unsafe, unclean, or inadequate living conditions<br><br>Sources: Boyack, V. (1997). Golden years—hidden fears: Elder abuse. Kerby Centre; Quinn, M. J., & Tomita, S. K. (1997). Elder abuse and neglect (2nd ed.). Springer; Government of Canada, Department of Justice. (2011). Elder abuse is wrong.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">【四、经济虐待指征（Financial Abuse Signs）】<br>• 照护者坚决拒绝为满足被照护者的基本生活起居与医疗需求支付合理开销；<br>• 账户明明有充足存款，却频繁出现水电煤气、电话、房租欠费断缴通知或银行支票跳票；<br>• 长者明明具备经济支付能力，家中却极度匮乏必要的营养食物、合体衣物、基础卫生用品或起居家具；<br>• 涉嫌施暴者对长者照护质量漠不关心，唯独对各项照护开销表现出病态的苛刻与算计；<br>• 长者珍爱的贵重首饰、银行卡或私人物品莫名不翼而飞，且缺乏任何合理交代；<br>• 涉嫌施暴者长期处于无业状态，但对自身日常生活开销的经济来源极度隐瞒回避；<br>• 长者在动用自身合法退休金、书写支票或进行任何日常小额消费时，必须向施暴者屈辱地“申请批准”。<br><br>【五、照料忽视体征（Neglect Signs）】<br>• 个人卫生极度匮乏：如指甲过长深嵌甲沟感染（嵌甲）、满口重度龋齿残根、全身多处未处置的慢性溃疡与擦伤、头发严重板结油腻、体味刺鼻、衣物肮脏破旧；<br>• 严重的营养不良与脱水征象：进行性消瘦脱形、极度口渴、皮包骨样恶病质面容、眼窝深陷、面颊干瘪、皮肤干燥枯槁如羊皮纸；<br>• 骨隆突处出现难以愈合的压疮褥疮（Pressure Sores）；<br>• 长期断药：处方救命药物因未去药房配药购买而长期停滞；<br>• 长期缺乏基本生活监护，长者被反锁或孤立遗忘在床榻上数小时甚至整天无人问津。<br><br>【六、婴幼儿与儿童特异性受虐与忽视体征】<br>除上述全部指征外，儿童与婴儿出现以下异常高度警示受虐或忽视：<br>• 行为举止突发两极逆转：如已学会如厕的儿童突然重发夜间遗尿（Bed-wetting）、日间大小便失禁或食欲急剧丧失；<br>• 长期反复出现不明原因的剧烈呕吐或顽固性腹泻；<br>• 全面生长发育迟缓：体重不增反降，无法如期达成翻身、独坐、站立或语言发育里程碑；<br>• 婴儿精神萎靡淡漠：对周围环境缺乏最基本的好奇反应、极少哭泣发声，表现出反常的“过度温顺且从无需求”的病态退缩状态；<br>• 生活在极其脏乱、充满安全隐患或缺乏基本水暖设施的恶劣环境中。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+                <div class="editorial-heading-major" id="sec-ch12-p181">
+                  <h2 class="heading-en">SPOUSAL ABUSE</h2>
+                  <div class="heading-cn">配偶虐待与亲密伴侣暴力</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="590.0" data-end="680.0" data-title="Signs of Abuse (Part 2), Spousal Abuse & Why Victims Stay" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Spousal abuse is abuse that occurs between intimate partners in a marriage or common-law relationship and may be physical, sexual, emotional, or financial. Usually, more than one type of abuse is present in the relationship. Spousal abuse is abuse in any love-partner relationship, including same-sex relationships. Individuals of all genders can be abused by their partners.</p>
+                      <p class="para-cn">配偶虐待（Spousal abuse，亦称亲密伴侣暴力 Intimate Partner Violence）是指在合法婚姻关系或事实同居伴侣关系中，一方对另一方所实施的侵害行为，涵盖身体暴力、性侵犯、情感精神折磨以及经济剥削等多重维度。在真实的家暴关系中，往往多种虐待形态交织并存。配偶虐待适用于任何形式的恋爱伴侣关系，包括同性恋伴侣关系。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="590.0" data-end="680.0" data-title="Signs of Abuse (Part 2), Spousal Abuse & Why Victims Stay" onclick="playParagraphAudio(this)">
+                      <p class="para-en">However, women are statistically more severely injured than men are. The incidence of male injury from abuse in a man-woman relationship is not as well known because, in many cases, the male is less likely to report this abuse. Domestic violence rates among intimate couples usually increase when the woman is pregnant or caring for an infant.</p>
+                      <p class="para-cn">任何性别的人群均有可能沦为亲密伴侣暴力的受害者。然而流行病学数据证实，女性在遭受家暴时受到的肉体创伤往往更为严重与致命。男性受暴者的统计数据常被严重低估，因为出于传统社会性别观念的羞耻感，男性往往极少主动报警求助。尤为触目惊心的是：临床数据显示，当女性处于妊娠期（怀孕期）或产后哺乳抚育新生儿的高压阶段时，家庭暴力的发生率与恶化程度往往显著飙升。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Why Do They Stay?</h3>
+                  <div class="heading-cn">深度伦理剖析：受害者为何选择隐忍留守？</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="590.0" data-end="680.0" data-title="Signs of Abuse (Part 2), Spousal Abuse & Why Victims Stay" onclick="playParagraphAudio(this)">
+                      <p class="para-en">People who are abused by their partner often deny the abuse. They also often choose to stay with their partners in spite of serious physical violence.</p>
+                      <p class="para-cn">遭受伴侣残酷虐待的受害者往往在外界询问时本能地否认受虐事实。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="590.0" data-end="680.0" data-title="Signs of Abuse (Part 2), Spousal Abuse & Why Victims Stay" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Some victims may stay because they are afraid of leaving their abuser, who might have threatened them with harm, death, or denial of child custody. In some circumstances, the victim may stay so that the children can continue to have the financial and other comforts of a two-parent home. Some victims stay because they do not know where to go or how to get help.</p>
+                      <p class="para-cn">即便面对严重的肢体肉体暴力，他们亦常常做出令人费解的选择——继续留守在施暴者身边。深入剖析其心理与现实困境，受害者选择隐忍留守的核心诱因包括：极度恐惧离开施暴者后会招致毁灭性报复——施暴者常常凶残威胁称一旦敢离开便会杀害受害者本人、屠戮其父母全家或通过司法手段彻底剥夺孩子的抚养权；为了让年幼的子女能够继续享受双亲家庭的经济支撑与物质条件；受害者在长期的控制与孤立下完全丧失了社交资源，根本不知道能够去往何方寻求庇护，甚至完全不了解社会上存在着妇女庇护所与紧急法律救济机制。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-182">
+              <span class="marker-pill">p. 182</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p182">
+                  <h2 class="heading-en">THE CYCLE OF ABUSE</h2>
+                  <div class="heading-cn">虐待的恶性循环三阶段模型</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="680.0" data-end="770.0" data-title="Cycle of Abuse & Supporting Emmy Lou Case Study" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse is rarely an isolated, one-time occurrence. Instead, it typically follows a predictable and destructive three-phase cycle that tightens over time:</p>
+                      <p class="para-cn">家庭暴力与亲密关系虐待极少是一次性的偶然偶发事件。相反，它通常呈现出高度规律性、步步收紧且反复发作的恶性循环机制，贯穿于三大核心演进阶段之中：</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• 1. Tension-Building Phase: The abuser experiences increasing tension, anger, and irritability over minor daily issues. The abuser may become overly critical, sullen, or verbally abusive. The victim recognizes the mounting danger and often feels as if they are 'walking on eggshells,' desperately trying to please, placate, or avoid antagonizing the abuser in a futile attempt to prevent violence.</strong></div>
+                      <div class="item-cn">第一阶段：紧张积聚期（Tension-Building Phase）。施暴者因日常生活中的琐碎小事积蓄越来越强烈的烦躁、怨气与易怒情绪，开始频繁进行冷嘲热讽、刻意找茬或言语攻击。受害者能够敏锐嗅到空气中一触即发的危险气息，内心时刻处于“如履薄冰（Walking on eggshells）”的极度恐慌中，竭尽全力顺从、讨好或回避对方，试图以自我牺牲来延迟或阻止暴力的全面爆发。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• 2. Abusive Phase (Acute Battering Incident): The tension explodes into acute, uncontrollable physical, sexual, or emotional violence. The abuser deliberately exerts physical force, inflicts injuries, destroys property, or unleashes severe verbal terror. The victim is subjected to trauma, severe pain, and psychological devastation.</strong></div>
+                      <div class="item-cn">第二阶段：急性暴力爆发期（Abusive Phase / Acute Battering Incident）。积聚的暴戾情绪如火山般爆发，升级为彻底失控的肢体暴力、性侵犯或极端精神摧残。施暴者毫无节制地拳打脚踢、动用器械殴打、砸碎财物或发起极尽恶毒的死亡威胁。受害者遭受严重的躯体创伤与不可逆的精神休克。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• 3. Honeymoon Phase (Calm and Remorse): Following the violent explosion, the abuser suddenly undergoes a dramatic behavioral reversal. The abuser appears deeply remorseful, weeps, begs for forgiveness, buys extravagant gifts, and promises to never hurt the victim again. The abuser becomes exceptionally loving, attentive, and charming, often blaming external stressors (like alcohol or work pressures) for the 'lapse.' Falsely believing that genuine transformation has occurred, the victim forgives the abuser and abandons plans to escape—until tension inexorably begins to build once again.</strong></div>
+                      <div class="item-cn">第三阶段：蜜月宽恕期（Honeymoon Phase / Calm and Remorse）。在狂暴的发泄过后，施暴者态度发生令人咋舌的戏剧性逆转。施暴者展现出痛心疾首的悔恨，痛哭流涕地下跪道歉、恳求宽恕、购买贵重礼物，并信誓旦旦发誓“下不为例、绝不再犯”。在此阶段，施暴者表现出异乎寻常的温柔体贴与深情款款，并习惯性将暴行甩锅给外部压力（如醉酒或工作不顺）。受害者被这种虚假的悔改所迷惑，误以为对方已真正痛改前非，从而选择宽恕并放弃求助或出逃计划——直至紧张的阴云再度不可避免地重新笼罩。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Emmy Lou: One Abuse Survivor's Struggle</h4>
+                    <div class="box-title-cn">临床实务案例：支持艾米·卢——一位受虐幸存者的心理创伤与触碰回避</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Emmy Lou is a 32-year-old woman who grew up in a loving family. One night, when Emmy Lou was in high school, she was babysitting her neighbour's two children, as she often did. She was upstairs putting the children to bed and did not hear the children's father come into the house and up the stairs. She greeted him warmly, but he suddenly grabbed her, covered her mouth, and sexually assaulted her. He threatened to kill her and her family if she ever told anyone.<br><br>Terrified, Emmy Lou kept the assault a secret for years. The trauma severely impacted her mental health, causing chronic anxiety, depression, and severe touch avoidance. Even now, during routine medical examinations or supportive personal care, any sudden or unexpected touch causes her extreme panic and triggers flashback memories of the assault.<br><br>As a support worker, understanding Emmy Lou's trauma history is critical. Always explain what you are about to do before touching her, ask for her permission, maintain eye contact, and allow her to set the pace of care.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">艾米·卢（Emmy Lou）现年 32 岁，成长于一个充满关爱的温暖家庭。高中的一个夜晚，艾米·卢像往常一样在邻居家协助照看两个年幼的孩子。当她在二楼哄孩子们入睡时，完全没有听到孩子的父亲已经悄然进屋并走上楼梯。她礼貌地向他打招呼，但那名男子突然凶残地抓住她、捂住她的嘴，对她实施了严重的性侵犯。施暴者恶狠狠地威胁她：如果她敢向任何人透露半句，就将她及其全家彻底杀害。<br><br>在极度恐惧与绝望中，艾米·卢将这段梦魇般的受虐经历深埋心底多年。这一毁灭性的创伤严重摧毁了她的心理健康，导致她长期遭受慢性重度焦虑、抑郁以及极其严重的“触碰回避”（Touch Avoidance）。即便到了今天，在接受常规身体检查或支持性个人护理时，任何突如其来或未提前告知的肢体接触都会引发她极度的恐慌发作，并瞬间诱发对当年性侵场景的创伤后闪回（Flashback）。<br><br>作为支持工作者，深入理解艾米·卢的创伤背景是提供安全照护的前提。在进行任何肢体接触前，必须清晰告知下一步操作并征得其知情许可，保持温暖的目光交流，绝不突兀触碰，由长者自主掌控照料节奏。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-183">
+              <span class="marker-pill">p. 183</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p183">
+                  <h2 class="heading-en">CHILD ABUSE</h2>
+                  <div class="heading-cn">儿童虐待与忽视的深远危害与法定分类</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="770.0" data-end="860.0" data-title="Child Abuse, Categories & Failure to Thrive" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Child abuse occurs when a parent, guardian, or caregiver mistreats or neglects a child, which may result in: Significant emotional or psychological harm; Serious risk of harm to the child. Child abuse is a gross misuse of a caregiver's position of trust and authority over a child.</p>
+                      <p class="para-cn">虐待儿童（Child abuse）是指父母、法定监护人或照料者对未成年儿童实施的虐待或照料忽视，直接导致：严重的心理创伤与精神损害；使儿童面临遭受严重身体与身心伤害的致命风险。虐待儿童是对照护者本应享有的信任地位与监护权威的极端滥用与背叛。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="770.0" data-end="860.0" data-title="Child Abuse, Categories & Failure to Thrive" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Children who are abused tend to experience more social problems and perform less well in school than other children. As a result, as adults, they can remain poorly adjusted socially and emotionally.</p>
+                      <p class="para-cn">长期遭受虐待的儿童在人际交往中表现出极其严重的社交适应障碍，学业成绩普遍显著落后于健康同龄人。其毁灭性创伤甚至会延续终生，导致其成年后在情绪管理、人际依恋与社会融入中长期处于严重的心理失调状态。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Types of Child Abuse and Neglect</h3>
+                  <div class="heading-cn">儿童受虐与被忽视的四维分类</div>
+                </div>
+                <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Physical abuse includes beating, shaking (such as in Shaken Baby Syndrome), burning, kicking, or suffocating a child.</strong></div>
+                      <div class="item-cn">儿童身体虐待：涵盖对儿童进行毒打、掌掴脚踢、烫伤灼烧、窒息闷堵，以及极其致命的“摇晃婴儿综合征（Shaken Baby Syndrome）”——由于婴儿颈部肌肉与脑部血管极其脆弱，剧烈前后摇晃可直接引发致命性颅内出血与不可逆永久脑损伤。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Sexual abuse includes any sexual exploitation, fondling, exposure, or involving a child in pornography.</strong></div>
+                      <div class="item-cn">儿童性虐待与性剥削：包括针对未成年人的任何非自愿性接触、猥亵抚摸、性器暴露，以及强迫儿童参与拍摄任何色情淫秽影像制品。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Emotional abuse includes constantly demeaning, ridiculing, terrorizing, or isolating the child, conveying that the child is worthless or unloved.</strong></div>
+                      <div class="item-cn">儿童情感虐待：包括对孩子进行持续的人格侮辱、当众讥讽、心理恐吓或长期关禁闭孤立，向孩子灌输其一无是处、毫无价值且不配被爱的毁灭性心理暗示。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Physical and emotional neglect includes failure to provide food, shelter, warm clothing, medical/dental care, hygiene, supervision, or maternal love and bonding.</strong></div>
+                      <div class="item-cn">身体与情感忽视：表现为未能为儿童提供温饱饮食、御寒衣物、安全住所、必要的医疗与牙科救治、基础卫生自理，或长期剥夺亲子依恋关爱与情感滋养。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Failure to Thrive</h3>
+                  <div class="heading-cn">儿童生长发育停滞与衰亡状态</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="770.0" data-end="860.0" data-title="Child Abuse, Categories & Failure to Thrive" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Failure to thrive is a term used to describe infants, babies, or young children who are well below developmental norms for body weight, height, or cognitive milestones without an identified medical organic disease. While some causes are organic, a primary known etiology of failure to thrive is severe caregiver neglect and emotional deprivation.</p>
+                      <p class="para-cn">生长发育迟缓与消退综合征（Failure to thrive）是一个严峻的儿科医学诊断术语，特指婴儿、幼儿在无明确器质性原发病的前提下，体重增长、身高发育或神经认知发展指标显著低于同龄人群正常生长曲线的最低阈值。尽管少数病例源于器质性吸收障碍，但在绝大多数临床实践中，该综合征的最主要病因正是照护者的极度生活照料忽视与长期情感冷暴力剥夺。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-184">
+              <span class="marker-pill">p. 184</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="860.0" data-end="950.0" data-title="Failure to Thrive & Supporting Taylor FASD Case Study" onclick="playParagraphAudio(this)">
+                      <p class="para-en">One of the many known causes of failure to thrive is caregiver neglect. In extreme cases, it can lead to permanent developmental delays and even the death of the client. Unfortunately, many of the mothers of infants described with failure to thrive were themselves likely also abused in the past.</p>
+                      <p class="para-cn">照护者的长期忽视是诱发生长发育停滞的公认首恶。在极端恶劣的情形下，这种剥夺会导致患儿不可逆的永久性智力与身体残疾，甚至直接导致患儿衰竭死亡。更令人扼腕叹息的临床流行病学事实是：被诊断为生长发育迟缓的患儿的母亲们，其自身往往在童年时代亦遭受过极其严重的家庭虐待与忽视创伤，从而深陷跨代际创伤传递的悲剧死循环。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Taylor: Understanding Factors Contributing to Abuse</h4>
+                    <div class="box-title-cn">临床实务案例：支持泰勒——深刻剖析引发儿童受虐的高危复合诱因</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Taylor is a 6-year-old boy who was born with fetal alcohol spectrum disorder (FASD; see Chapter 36). His weight and height are well below developmental norms, and he exhibits severe hyperactivity, impulsivity, and difficulty following simple instructions.<br><br>Taylor's mother, Sarah, is a 24-year-old single parent living in poverty. She has no family support nearby and works long hours at minimum-wage jobs. Sarah was herself severely physically and emotionally abused as a child and struggles with depression. Frequently overwhelmed by Taylor's challenging behaviours, Sarah often screams at him, locks him in his room for hours, and has on multiple occasions slapped him hard across the face, leaving visible finger welts.<br><br>A community support worker assigned to assist with family respite notices the bruises, Taylor's emaciated appearance, and Sarah's explosive temper. Recognizing the acute intersection of maternal trauma, developmental disability, poverty, and isolation, the worker immediately documents the objective findings and notifies both the supervisor and child welfare services to initiate emergency family support and protection intervention.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">泰勒（Taylor）是一名 6 岁的男童，患有先天性胎儿酒精谱系障碍（Fetal Alcohol Spectrum Disorder, FASD，参见第 36 章）。他的身高和体重严重低于同龄儿童的发育标准，且表现出极端的活动过度、冲动攻击性以及难以遵循简单生活指令的行为障碍。<br><br>泰勒的母亲萨拉（Sarah）现年 24 岁，是一名在贫困线上挣扎的年轻单亲母亲。她没有任何亲属在身边协助，靠打零工维系微薄生计。萨拉在童年时代曾遭受过极其残酷的身体与情感虐待，长期深陷抑郁症的折磨。面对泰勒极为棘手的多动与哭闹行为，身心俱疲的萨拉常常陷入歇斯底里的情绪失控：疯狂对泰勒咆哮、将其反锁在卧室数小时，甚至多次狠抽他的耳光，在面部留下清晰的指痕与淤青红印。<br><br>受派上门协助提供家庭喘息服务的社区支持工作者敏锐察觉到了泰勒身上的淤伤、极度消瘦营养不良的体征以及萨拉一触即发的暴躁情绪。该支持工作者深刻洞察到：童年受虐创伤史、患儿发育残障、生活极度贫困与社会孤立构成了诱发虐待的致命复合温床。工作者立即以绝对客观的事实记录所有观察结果，并第一时间上报给主管与儿童保护福利机构（CAS），全面启动紧急家庭干预与法定儿童保护程序。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-185">
+              <span class="marker-pill">p. 185</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p185">
+                  <h2 class="heading-en">ABUSE OF OLDER PERSONS</h2>
+                  <div class="heading-cn">长者虐待：临床高发诱因、易感性与法律保护</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="950.0" data-end="1040.0" data-title="Abuse of Older Persons & Reporting Dilemmas" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse of older persons (often referred to as elder abuse) can occur in private homes or in health care institutions. Elder abuse can be physical, emotional, sexual, financial, or neglect. Often, financial abuse is combined with emotional or physical abuse—for example, an adult son who moves in with his aging parent after losing his job and takes control of the parent's home and pension cheques.</p>
+                      <p class="para-cn">长者虐待（Abuse of older persons / Elder abuse）既频繁肆虐于私人居家环境，亦悄然滋生于长期照护院舍等医疗机构之中。长者虐待涵盖身体、情感、性虐待、经济侵占以及生活忽视五大维度。在现实案件中，经济虐待往往与身体暴力或精神恐吓高度捆绑——例如成年子女在失业破产后强行搬回年迈父母家中同住，随后一步步霸占父母的房产所有权并强行扣留老人的养老金支票以供自己挥霍。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="950.0" data-end="1040.0" data-title="Abuse of Older Persons & Reporting Dilemmas" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abused older persons sometimes choose not to complain about the abuse. Like abused spouses, they may fear the abuser but are also dependent on them, or may not know where or how to get help. They may fear being forced to move into a long-term care facility if they report their caregiver.</p>
+                      <p class="para-cn">遭受虐待的老年人往往在面对外界时选择保持沉默、隐忍不报。如同受虐配偶一样，长者内心虽对施暴者充满了恐惧，但在生活自理上又彻底依赖对方，或者根本不知道去向何处求援。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="950.0" data-end="1040.0" data-title="Abuse of Older Persons & Reporting Dilemmas" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Some older people feel deep shame that their own children are abusing them, or they may feel that they are somehow to blame. Social isolation, lack of language or literacy skills, and cognitive impairment make older adults uniquely vulnerable to abuse.</p>
+                      <p class="para-cn">更为普遍的恐惧在于：长者极其害怕一旦举报了身为子女的照料者，自己便会被迫逐出熟悉的居所，被强行送入冰冷的长期照护机构。许多长者对被自己的亲生骨肉虐待深感奇耻大辱，甚至错误地认为是自己教子无方、愧对家庭。严重的社会隔绝、官方语言文字障碍以及伴随衰老而来的认知机能障碍，使老年群体具有独特的极高受害脆弱性。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-186">
+              <span class="marker-pill">p. 186</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p186">
+                  <h2 class="heading-en">ABUSE BY HEALTH CARE WORKERS</h2>
+                  <div class="heading-cn">医护人员执业失范与机构虐待防范</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1040.0" data-end="1130.0" data-title="Institutional Abuse & Supporting Mrs. Finnie Case Study" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse can be very obvious, such as roughly handling or force-feeding a client. Or it can be very subtle (not obvious); for example, staff can demean or belittle clients by calling them 'grandma' or 'slugger' or by referring to their incontinence briefs as 'diapers.' These comments are embarrassing for the client and violate the DIPPS (dignity, independence, individualized care, preferences, privacy, and safety) principles. Staff may also neglect clients by ignoring call bells, withholding care, or failing to reposition immobile clients, leading to pressure ulcers.</p>
+                      <p class="para-cn">在医疗与照护机构中，工作人员对服务对象的虐待既可能是显而易见的显性暴力——如粗暴拉扯翻身、动作粗野拖拽或强行灌食；亦可能表现为极其隐蔽但杀伤力巨大的隐性精神摧残——例如医护人员当面以居高临下的口吻直呼失能长者为“老奶奶（Grandma）”或“小家伙（Slugger）”，或者轻浮地将成人的失禁吸收内裤称作“尿布（Diaper）”，将衣物围兜称作“围嘴（Bib）”。这些婴儿化与贬损性的称谓不仅令长者深感羞耻难堪，更直接粗暴践踏了 DIPPS（尊严、独立、个性化、偏好、隐私与安全）职业准则。此外，因工作怠慢而刻意无视紧急呼叫铃、擅自克扣护理服务、不按时为卧床患者翻身减压导致恶性压疮溃烂，均属于严重的机构照料忽视。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Mrs. Finnie: Witnessing Client Abuse by Family Member</h4>
+                    <div class="box-title-cn">临床实务案例：支持芬妮太太——目击家属虐待长者时的紧急职业应对</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Mrs. Finnie is an 82-year-old woman with moderate vascular dementia living at home with her adult daughter, Brenda. Brenda is Mrs. Finnie's primary caregiver but is chronically exhausted and resentful of the caregiving burden.<br><br>One afternoon, while support worker Karen is in the kitchen preparing a meal, Mrs. Finnie experiences an episode of urinary incontinence, soaking her clothing and the sofa. Hearing Mrs. Finnie's confused apologies, Brenda storms into the living room, screams profanities at her mother, violently shakes Mrs. Finnie by her shoulders, and pushes her roughly backward onto the chair, shouting, 'You disgusting old burden! You did this on purpose to ruin my day!' Mrs. Finnie trembles uncontrollably and sobs in terror.<br><br>Karen enters the room, remains completely calm, and uses a gentle, steady tone to defuse the immediate crisis: 'Brenda, let me assist Mrs. Finnie into the bathroom right now to get her clean and comfortable. Why don't you take a break and step outside for some fresh air?' Once Brenda leaves and Mrs. Finnie is safe and comforted, Karen carefully checks Mrs. Finnie for physical injuries. Immediately upon returning to the agency office, Karen writes a comprehensive objective incident report and directly reports the physical and verbal abuse to her clinical supervisor and case manager.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">芬妮太太（Mrs. Finnie）现年 82 岁，罹患中度血管性痴呆，在家中与成年女儿布伦达（Brenda）共同居住。布伦达是母亲的主要照料者，但长期处于极度身心耗竭之中，对日益沉重的照护包袱充满了怨恨与焦躁。<br><br>一天下午，当支持工作者凯伦（Karen）正在厨房准备营养晚餐时，芬妮太太突发尿失禁，浸湿了衣物与客厅沙发。听到芬妮太太含混不清的道歉声，布伦达怒火中烧冲入客厅，疯狂对母亲爆粗口辱骂，死死抓住芬妮太太的肩膀用力前后剧烈摇晃，随后狠狠将老人猛推回椅子上，歇斯底里地吼道：“你这个恶心的老累赘！你绝对是故意尿出来整我的！”芬妮太太浑身剧烈颤抖，在无助的惊恐中失声痛哭。<br><br>凯伦迅速步入客厅，强迫自己保持绝对的镇定与冷静，用温柔而坚定的语调巧妙介入化解迫在眉睫的危机：“布伦达，我现在马上扶芬妮太太去洗手间清洗更衣，让她舒适下来。你辛苦了一整天，先去阳台透透气休息一会儿吧。”在劝离布伦达、确保芬妮太太脱离险境并给予温暖抚慰后，凯伦细致检查了长者双肩及身体是否有拉伤或淤痕。在当天下班返回机构的第一时间，凯伦详实撰写了客观事实报告，立即向临床主管与个案经理做了全面汇报。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-187">
+              <span class="marker-pill">p. 187</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p187">
+                  <h2 class="heading-en">WHAT TO DO WHEN CLIENTS SPEAK OF ABUSE</h2>
+                  <div class="heading-cn">当服务对象向你披露受虐事实时的专业应对指南</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1130.0" data-end="1220.0" data-title="What to Do When Clients Speak of Abuse" onclick="playParagraphAudio(this)">
+                      <p class="para-en">You should be prepared for the possibility of a client or child telling you about being abused. In such situations, it is important that you support the person and know how to offer immediate help. Follow your employer's guidelines and policies. The following are some general guidelines on how to be supportive:</p>
+                      <p class="para-cn">作为一线支持工作者，你必须随时做好心理准备：某位长者或儿童可能会在照护信任建立后，悄悄向你倾诉自己正在遭受的受虐惨剧。在此类极度敏感的危机时刻，懂得如何给予当事人坚定的情感支撑并启动即时专业援助至关重要。必须时刻严格遵循雇主规章与法定报告流程。以下是提供专业支持的核心执业黄金法则：</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Listen attentively. Let your clients tell you what happened in their own words. Recognize that it takes enormous courage for a victim to speak out.</strong></div>
+                      <div class="item-cn">全神贯注倾听（Listen attentively）：让服务对象用其自己的语言和节奏叙述事情经过。深刻体会受虐者鼓起勇气向外人倾诉需要跨越多么巨大的心理恐惧与心理阻力，中途切勿打断或催促。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Do not judge or express shock. Stay calm and supportive. Do not blame the victim or make promises you cannot keep (such as promising to keep the abuse a secret).</strong></div>
+                      <div class="item-cn">绝不评判或显露震惊慌乱（Do not judge）：保持绝对的沉着冷静与温暖接纳。绝不要流露出责怪受害者的言辞（如问“你当初为什么不反抗”），更严禁做出违背法律伦理的空头承诺——切记：绝对不能向当事人承诺“我会替你完全保密、绝不上报”。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Reassure the person. Reassure the client that they are not to blame for the abuse, that their safety is paramount, and that help is available.</strong></div>
+                      <div class="item-cn">给予坚定的情感抚慰（Reassure the person）：真诚肯定地告知服务对象：遭受虐待绝不是他们的过错，他们的人身安全是最重要的事情，机构和专业团队一定会全力提供保护与支持。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Maintain confidentiality within the care team. Inform the client gently that you must report this information to your supervisor/nurse so that proper protection and resources can be coordinated.</strong></div>
+                      <div class="item-cn">在照护团队内恪守法定保密原则：温和且明确地告知长者：为了确保其人身绝对安全，你必须依法依规将此情况报告给你的临床主管护士，以便医疗与社工团队协调专业调查与安全救助资源。</div>
+                    </li>
+                    </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-188">
+              <span class="marker-pill">p. 188</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p188">
+                  <h2 class="heading-en">ABUSE OF HEALTH CARE WORKERS</h2>
+                  <div class="heading-cn">医护人员面临的执业受暴风险与零容忍原则</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1220.0" data-end="1310.0" data-title="Abuse of Health Care Workers & Mandatory Reporting Protocols" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Sometimes, health care workers, including support workers, are abused while on the job. You are at risk for physical or verbal abuse from your clients, your clients' family members, or other members of the health care team.</p>
+                      <p class="para-cn">在日常临床执业中，包括支持工作者在内的全体医护人员，同样面临着严重的职场受暴威胁。你可能遭受来自服务对象本人、患者家属乃至医疗团队内部同事的身体暴力或言语虐待。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1220.0" data-end="1310.0" data-title="Abuse of Health Care Workers & Mandatory Reporting Protocols" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Abuse of staff can take the form of physical assaults (pinching, hitting, biting), verbal threats, racial slurs, or sexual harassment. Health care employers have a legal duty to provide a safe work environment and establish clear zero-tolerance policies for violence and harassment.</p>
+                      <p class="para-cn">针对医护员工的侵害包括肢体攻击（如掐捏、殴打、撕咬）、言语威胁恐吓、种族歧视性辱骂以及下流性骚扰。医疗雇主在法律上负有不可推卸的法定责任为员工创造安全合规的执业环境，并在机构内确立针对一切暴力与骚扰行为的“零容忍（Zero Tolerance）”制度规范。</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-ch12-p188">
+                  <h2 class="heading-en">HOW TO REPORT ABUSE</h2>
+                  <div class="heading-cn">法定虐待汇报程序的四大黄金铁律</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1220.0" data-end="1310.0" data-title="Abuse of Health Care Workers & Mandatory Reporting Protocols" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Your employer will have specific rules regarding how to report your observations. It is very important to document your observations in writing as soon as possible after the event occurs. When reporting abuse, remember to follow these essential protocols:</p>
+                      <p class="para-cn">你的雇主机构必将拥有关于如何规范汇报疑似虐待的详尽操作指南。在可疑事件发生后，第一时间以书面形式准确客观记录全部第一手见闻至关重要。在汇报涉嫌虐待时，必须且仅能严格恪守以下核心法纪程序：</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Record only objective facts—do not make assumptions or interpretations. Document exactly what you saw, heard, and smelled, and quote the exact words used by the client using quotation marks.</strong></div>
+                      <div class="item-cn">仅记录客观事实，严禁任何主观臆断或推论猜测：详实记录你亲眼所见（如淤伤尺寸与颜色）、亲耳所听及嗅觉闻到的客观事实；在记录受害者陈述时，必须使用双引号完整逐字引用其原话口述。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Include all 4 essential identification components: (1) Alleged victim's full name, address, phone, age, and gender; (2) Alleged abuser's name, contact information, and relationship to victim; (3) Detailed description of physical/behavioural evidence and suspicions; (4) Exact date, time, and location of the incident.</strong></div>
+                      <div class="item-cn">完备记录四大法定核心要素：(1) 涉嫌受害者的完整姓名、住址、联系电话、确切年龄与性别；(2) 涉嫌施暴者的姓名、联系方式及其与受害者的社会/亲属关系；(3) 涉嫌虐待或忽视的客观伤情体征、证据与合理疑点详述；(4) 案发的准确日期、具体时间与明确发生地点。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Maintain confidentiality strictly: Never gossip with co-workers or share details with anyone not directly authorized to investigate the matter.</strong></div>
+                      <div class="item-cn">严守保密义务红线：严禁在更衣室或休息室与同事八卦讨论案情，严禁向任何未经法定授权参与调查的外部人员透露分毫信息。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Keep permanent personal records: Retain a secure, confidential copy of your dated notes in case legal proceedings or court testimony occur years later.</strong></div>
+                      <div class="item-cn">永久留存个人备份记录：务必妥善锁存一份带有明确签署日期的个人工作手记副本，以备数年后在司法法庭出庭作证或警方取证时提供确凿回忆佐证。</div>
+                    </li>
+                    </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-189">
+              <span class="marker-pill">p. 189</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-amber">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Think About Safety: What to Do When a Client Is Abusive</h4>
+                    <div class="box-title-cn">安全防卫专栏：遭遇攻击性或暴力倾向服务对象时的自我防护黄金法则</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">When confronted by an aggressive, volatile, or abusive client, your safety is paramount. Follow these proven clinical safety protocols:<br><br>• Stay calm. Take slow, deep breaths. Keep your facial expressions neutral and your voice calm, steady, and low-pitched.<br>• Stand up so that the client is not in a dominant physical position over you.<br>• Stand far enough away from the client—at least 2 m (6 ft)—so that the client cannot suddenly hit, kick, or grab you.<br>• Position yourself close to an open door or clear exit route so you can escape quickly without being trapped in a corner.<br>• Note the exact locations of call bells, emergency pull cords, alarms, closed-circuit monitors, and telephones.<br>• Keep your hands free and visible. Do not touch the client or make sudden movements that could be interpreted as threatening.<br>• Do not argue, defend yourself, or scold the client. Validate feelings while setting firm, calm boundaries.<br>• Protect yourself. If you believe you are in immediate physical danger, quickly leave the room or house, proceed to a safe area, and immediately call for emergency help or contact your supervisor.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">当面对具有强烈攻击性、情绪失控或暴力虐待倾向的服务对象时，你自身的人身安全永远是第一位的最高法则。必须严格践行以下临床防卫黄金规程：<br><br>• 保持绝对冷静：进行深长缓慢的腹式呼吸；面部表情保持平静中立，语调平稳、低沉且坚定，绝不显露惊慌或愤怒。<br>• 立即站立起身：绝不要坐在椅子上或蹲下，防止失控长者在体格上处于居高临下的物理压制优势。<br>• 保持充足的安全防御距离：与当事人保持至少 2 米（6 英尺）以上的安全间隔，防止其突然伸手击打、脚踢或猛烈撕扯抓挠。<br>• 始终占据靠近门或逃生通道的位置：绝不要将自己置于被逼入墙角、床角或封闭死胡同的绝境，确保身后逃生动线畅通无阻。<br>• 敏锐锁定现场安全救援设施：进屋第一步即须查明呼叫铃、应急拉绳警报器、监控探头及座机电话的确切方位。<br>• 双手自然垂放并保持空置可见：绝不要将双手插入口袋，切勿伸手强行触碰或推搡长者，避免任何可能被误解为攻击敌意的突兀肢体动作。<br>• 切忌争吵、辩解或训斥：绝不要与失控的长者唇枪舌剑据理力争；以沉着温和的语言安抚其情绪，同时明确宣示安全界限。<br>• 坚决实施人身自我保护：一旦你预感到自身面临迫在眉睫的身体暴力伤害危险，立即迅速果断撤离房间或民宅，撤退至安全区域，第一时间拨打 911 紧急报警或向临床主管呼叫紧急支援！</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-190">
+              <span class="marker-pill">p. 190</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p190">
+                  <h2 class="heading-en">WORKPLACE BULLYING AND HARASSMENT</h2>
+                  <div class="heading-cn">职场欺凌与骚扰的法律界定与雇主法定防护责任</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1400.0" data-end="1490.0" data-title="Workplace Bullying, Harassment & BOX 12.5 OH&S Mandates" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Workplace bullying involves acts or verbal comments that could mentally hurt or isolate a person in the workplace. Bullying can be carried out by a co-worker, a supervisor, or a group of employees.</p>
+                      <p class="para-cn">职场欺凌（Workplace bullying）是指在工作场所中发生的足以对他人的精神心理造成严重创伤、羞辱或人际孤立的蓄意言行。欺凌的实施者既可能是同级同事、上级主管，亦可能是抱团排挤他人的员工小团体。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1400.0" data-end="1490.0" data-title="Workplace Bullying, Harassment & BOX 12.5 OH&S Mandates" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Harassment occurs when conduct, comments, or gestures offend or humiliate another person. Sexual harassment can be directed toward women, men, or individuals of all gender identities. Provincial Occupational Health and Safety legislation across Canada strictly mandates that employers protect staff from all forms of workplace harassment and violence (BOX 12.5).</p>
+                      <p class="para-cn">当某些不受欢迎的言行举止或肢体手势冒犯、羞辱或贬低了当事人时，便构成了职场骚扰。性骚扰绝不仅针对女性，在女性占多数的医护职场中亦常针对男性员工，并侵犯所有性别身份群体。加拿大各省《职业健康与安全法案》（Occupational Health and Safety Act）严格确立：雇主负有法定义务保护全体员工免受职场骚扰与暴力的侵害（专栏 12.5）。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-lavender">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 12.5 Workplace Bullying and Harassment: Examples and Worker Protections</h4>
+                    <div class="box-title-cn">专栏 12.5 职场欺凌与骚扰的典型表现形式及员工法定防护权益</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">Workplace bullying and harassment can take many toxic forms:<br>• Spreading malicious rumours, gossip, or innuendo<br>• Excluding or isolating someone socially or professionally<br>• Intimidating a person with yelling, swearing, or aggressive body language<br>• Undermining or deliberately impeding a person's work (e.g., hiding supplies or withholding critical patient care information)<br>• Constantly changing work guidelines or assigning unreasonable workloads<br>• Demeaning comments about a person's gender, race, culture, or personal life<br>• Unwelcome sexual jokes, suggestive remarks, or unwanted physical contact<br><br>Under Occupational Health and Safety legislation, Canadian employers MUST:<br>1. Develop and post written workplace harassment and violence policies.<br>2. Provide mandatory anti-harassment training to all employees.<br>3. Establish confidential reporting and fair investigation procedures.<br>4. Protect employees from retaliation for reporting harassment in good faith.</div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">职场欺凌与骚扰在临床环境中常表现为以下剧毒失范行为：<br>• 恶意散布同事的恶毒谣言、八卦绯闻或不实中伤；<br>• 在社交交往或专业交接中故意冷落、孤立排挤特定同事；<br>• 通过咆哮、爆粗口、拍桌子或侵略性肢体动作实施精神威慑恐吓；<br>• 蓄意暗中搞破坏阻碍同事正常履行职责（如恶意藏匿护理耗材、故意隐瞒患者关键交班病情）；<br>• 频繁朝令夕改工作标准，或蓄意给特定员工指派非人道、不可能完成的惩罚性超负荷排班；<br>• 针对同事的性别、种族肤色、文化背景或个人私生活发表具有侮辱贬损意味的言论；<br>• 讲荤段子性暗示笑话、发表下流评论或进行未经许可的不当肢体触碰。<br><br>根据加拿大各省《职业健康与安全法案》，雇主必须强制履行以下法定职责：<br>1. 制定并在工作场所显眼位置张贴书面的《反职场骚扰与反暴力法定政策》；<br>2. 为全体新老员工提供系统规范的强制性反欺凌与防骚扰实操培训；<br>3. 设立严密保密的投诉渠道与客观公正的独立调查仲裁程序；<br>4. 依法严格保护所有善意举报骚扰的员工，坚决杜绝任何形式的职业报复与打压。</div>
+                    </div>
+                  </div>
+                </aside>
+                
+            <div class="page-anchor-marker" id="page-191">
+              <span class="marker-pill">p. 191</span>
+            </div>
+            
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">How to Address and Resolve Workplace Bullying</h3>
+                  <div class="heading-cn">果断终结与维权反制职场欺凌的四大实操步骤</div>
+                </div>
+                <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• 1. Confront the bully directly if safe: Firmly and calmly inform the person that their behaviour is unwelcome, unacceptable, and must stop immediately. You may request a supervisor or union representative to accompany you.</strong></div>
+                      <div class="item-cn">第一步：在确保人身安全前提下当面严正交涉。以坚定、冷静且不容置疑的口吻当场正告施暴者：其言行是不受欢迎、绝对不可接受的严重骚扰，必须立即彻底停止！在交涉时，你完全有权要求工会代表或临床主管陪同在场作证。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• 2. Maintain a factual daily journal: Record every incident in meticulous detail immediately after it happens. Document exact dates, times, locations, verbatim words spoken, actions taken, and names of all witnesses present. Note the precise emotional and physical impact on your well-being.</strong></div>
+                      <div class="item-cn">第二步：严密撰写客观事实取证日记。在每次遭遇骚扰后第一时间详实记录：准确的案发年月日与具体时间；发生的具体科室地点；对方口述的辱骂原话与具体动作；在场所有目击证人同事的姓名；以及该事件对你造成的具体心理重创与身心健康损害。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• 3. Preserve all digital and documentary evidence: Keep hard and electronic copies of all emails, text messages, shift schedules, memos, or sticky notes related to the harassment. Store these securely outside of the workplace system.</strong></div>
+                      <div class="item-cn">第三步：妥善保全所有数字化与纸质客观证据链。将涉及骚扰中伤的全部电子邮件、手机短信、排班表、备忘录或便签纸完整截屏并打印备份，务必将其安全存放在工作场所系统之外的个人私人设备中。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• 4. File a formal complaint and utilize EAP: Submit a formal written grievance to your supervisor, Human Resources department, or union steward according to policy. Access your organization's Employee Assistance Program (EAP) for confidential psychological counseling and trauma recovery support.</strong></div>
+                      <div class="item-cn">第四步：正式提起书面申诉并启用员工援助计划（EAP）。严格依据雇主规程向人力资源部（HR）、高层管理层或工会正式提交书面投诉信。同时充分利用机构提供的“员工援助计划（Employee Assistance Program, EAP）”，获取免费且绝对隐私保密的专业临床心理疏导与创伤复原支持。</div>
+                    </li>
+                    </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-192">
+              <span class="marker-pill">p. 192</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-ch12-p192">
+                  <h2 class="heading-en">CHAPTER REVIEW</h2>
+                  <div class="heading-cn">本章系统复习与核心要点</div>
+                </div>
+                
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">KEY POINTS</h3>
+                  <div class="heading-cn">临床核心知识要点回顾</div>
+                </div>
+                <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• All clients have the right to safe, respectful care.</strong></div>
+                      <div class="item-cn">所有服务对象均享有在安全、充满尊严与尊重的前提下接受专业照护的不可剥夺的基本人权。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Abuse results when physical or mental harm is caused by someone in a position of trust, such as a family member, a partner, or a caregiver. The main types of abuse include (1) physical, (2) sexual, (3) emotional, (4) financial, and (5) neglect.</strong></div>
+                      <div class="item-cn">虐待通常发生于处于信任或依赖关系中的施暴者与受害者之间（如家庭成员、伴侣或专业照护者）。主要虐待形态包括五大范畴：(1) 身体虐待、(2) 性虐待、(3) 情感/心理虐待、(4) 经济虐待、以及 (5) 照料忽视。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Abuse occurs repeatedly, as the abuser tries to dominate the victim.</strong></div>
+                      <div class="item-cn">虐待往往具有反复发作性，其心理核心在于施暴者试图对受害者施加持续的控制权与支配地位。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• The three phases in the cycle of abuse are (1) the tension-building phase, (2) the abusive phase, and (3) the honeymoon phase.</strong></div>
+                      <div class="item-cn">虐待的恶性循环包括三大核心演变阶段：(1) 紧张积聚期（Tension-Building）、(2) 急性暴力爆发期（Abusive Incident）、以及 (3) 蜜月宽恕期（Honeymoon Phase）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• All health care workers should be aware of the signs and symptoms of abuse in both adults and children (see pages 180 to 181).</strong></div>
+                      <div class="item-cn">全体医护人员必须高度警惕并熟练掌握成人与儿童受虐的典型生理体征、行为异样及情绪改变（详见教材第 180 至 181 页）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• People at highest risk for abuse are (1) marginalized people, especially women; (2) children; (3) older persons; (4) socially or geographically isolated older persons; (5) older persons with reduced cognitive capacity; (6) dependent older persons with disabilities; and (7) older persons cared for by people with substance abuse problems.</strong></div>
+                      <div class="item-cn">虐待极高危易感人群包括：(1) 边缘化群体（尤其是原住民女性、LGBTQ2+等）；(2) 未成年儿童；(3) 高龄长者；(4) 遭遇社会或地理隔绝的独居老人；(5) 认知机能衰退或痴呆症患者；(6) 严重肢体残障完全依赖照料的长者；以及 (7) 由物质滥用（酗酒/吸毒）人员照料的脆弱个体。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Situations that increase the risk for child abuse include (1) family crisis, (2) presence of nonbiological or transient parental partners, (3) isolation, and (4) caring for children with special needs.</strong></div>
+                      <div class="item-cn">显著增加儿童受虐风险的高危现实诱因包括：(1) 家庭重大变故或经济危机；(2) 家中存在频繁更换的非亲生伴侣；(3) 极端社会隔绝；以及 (4) 抚养患有先天残障或重症特殊照护需求的患儿。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• All health care workers should be aware of what to do if they suspect that one of their clients has been abused or if a client admits to being abused: (1) follow your employer's rules on how to report your observations; (2) record all your observations and make your reports in writing; and (3) keep all notes in case you are asked to remember details in the future.</strong></div>
+                      <div class="item-cn">当怀疑服务对象受虐或当事人主动吐露受虐事实时，医护人员必须严格践行三原则：(1) 严格遵循雇主规章与法定程序上报观察所得；(2) 详实客观地以书面形式记录所有观察到的第一手事实证据；(3) 妥善永久保存全部原始笔记以备法律诉讼调查。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• When reporting abuse, record only the facts you know or were told by the alleged victim—do not make assumptions. Record the following: (1) the alleged victim's name, address, phone number, age, and gender; (2) the alleged abuser's name, address, phone number, and relationship to the victim; (3) your description of abuse or neglect, suspicions, and evidence obtained; (4) the date, time, and place of the abuse.</strong></div>
+                      <div class="item-cn">汇报涉嫌虐待时，必须且仅能记录已知客观事实或受害者原话陈述——严禁任何主观臆断或推论猜测。记录要素必须完备：(1) 受害者姓名、住址、电话、年龄与性别；(2) 涉嫌施暴者姓名、联系方式及其与受害者的关系；(3) 涉嫌受虐或忽视的具体客观体征、嫌疑线索与获取的证据；(4) 案发的准确日期、具体时间与发生地点。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• When reporting abuse, it is essential to respect and protect your client's right to privacy. Tell only those who need to know. Do not gossip or tell anyone who is not directly involved.</strong></div>
+                      <div class="item-cn">在汇报虐待全流程中，必须严格捍卫服务对象的法定隐私保密权利。仅能向法定必须知情的主管或执法专职人员汇报，严禁任何形式的同事八卦或向无关人员泄露案情。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Health care workers should be aware of how to handle an aggressive, volatile, or abusive situation involving a client.</strong></div>
+                      <div class="item-cn">医护人员必须受过专业培训，熟练掌握在面对具有攻击性、情绪失控或暴力虐待倾向的服务对象时的专业降温与自我防护脱身规程（详见教材第 188 至 190 页）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Bullying in the workplace can have very negative effects on staff. It is the employer's duty to protect employees from risks at work.</strong></div>
+                      <div class="item-cn">职场欺凌与骚扰会对员工的身心健康造成严重不可逆创伤。根据各省职业健康与安全法案，雇主负有不可推卸的法定责任为员工创造并维护免受骚扰与暴力的安全执业环境。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">CRITICAL THINKING IN PRACTICE: Preserving Adult Dignity and Responding to Institutional Mistreatment</h4>
+                    <div class="box-title-cn">临床批判性思维实战：捍卫成年长者尊严与抵制机构内贬损虐待行为</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en" style="line-height:1.65; margin-bottom:10px;">【CLINICAL SCENARIO】<br>Ms. Hild has experienced urinary incontinence and chewing and swallowing problems since her stroke. When speaking to Ms. Hild, a co-worker uses the term 'diaper' to describe her incontinence product and 'bib' for her clothing protector. The same co-worker wipes spilled food from Ms. Hild's face with a spoon and threatens to withhold privileges if she does not finish meals. How will you respond to your co-worker's statements and actions? What are your responsibilities if you witness this behaviour? Explain why it is important to treat the person as an adult and not a child.<br><br>【CLINICAL ETHICAL ANALYSIS】<br><br>1. Deconstruct the Abusive Behaviours:<br>   - Infantizing Demeaning Language: Calling an adult's protective garment a 'diaper' or 'bib' is emotional/psychological abuse. It strips the client of adult dignity and violates DIPPS. The correct clinical terms are 'incontinence brief/product' and 'clothing protector'.<br>   - Rough Physical Disrespect: Scraping food with a metal spoon can cause pain, skin tears, and humiliation. Staff should gently wipe the face with a warm, damp cloth or napkin.<br>   - Threatening and Coercion: Threatening to withhold activities or privileges is emotional abuse and coercive intimidation.<br><br>2. Professional Direct Response to Co-Worker:<br>   - Intervene calmly and advocate immediately for the client: 'Let's use a soft damp cloth to clean Ms. Hild's face so she feels more comfortable.'<br>   - In private, address the professional standards firmly: 'Calling these products diapers and bibs makes Ms. Hild feel embarrassed. Our agency and professional guidelines require us to use respectful adult terminology like brief and clothing protector, and threatening to withhold activities violates her rights.'<br><br>3. Duty to Report Witnessed Abuse:<br>   - Under professional codes of conduct and institutional policy, every healthcare worker has an absolute ethical and legal duty to protect clients from abuse. You must document the exact objective facts witnessed and report the incident directly to your supervisor/nurse.<br><br>4. The Core Principle of Adult Dignity:<br>   - Ms. Hild is an adult with decades of life experience, wisdom, and intrinsic human worth. Illness and disability do not diminish adult personhood. Treating an adult like a helpless, misbehaving child induces severe shame, depression, and loss of self-esteem. Person-centred care demands unconditional respect.<br></div>
+                      <div class="clause-cn" style="line-height:1.65; color:var(--text-secondary);">【临床真实情境】<br>希尔德女士（Ms. Hild）在中风后遗症后出现了尿失禁以及咀嚼吞咽功能障碍。在与其沟通时，你的一位同事当着老人的面使用“尿布（Diaper）”来称呼成人失禁吸收垫，用“围嘴（Bib）”来称呼成人衣物围兜保护巾。不仅如此，该同事在老人嘴角溢出食物残渣时直接粗暴地用金属勺子在其脸上用力刮蹭擦拭，甚至严厉恐吓老人：“如果你今天不把饭全吃完，就取消你参加下午集体娱乐活动的资格！”你该如何得体应对同事的言行举止？目击此类行为时你肩负着怎样的法定与伦理职责？深刻阐述为何必须将服务对象视为拥有完整尊严的成年人、坚决摒弃婴儿化对待的极端重要性。<br><br>【临床伦理与界限剖析】<br><br>1. 深入剖析虐待与失范行为的本质：<br>   - 婴儿化与贬损性语言（Emotional/Psychological Abuse）：对成年长者使用“尿布”、“围嘴”等幼儿词汇属于典型的情感与精神虐待，直接践踏长者的人格尊严，严重违背 DIPPS 准则。临床标准术语必须使用“失禁吸收裤/护理垫（Incontinence Brief/Product）”与“衣物防护围巾（Clothing Protector）”。<br>   - 粗暴的物理侵犯与羞辱：用坚硬的金属勺子刮擦面部极易刮伤脆弱皮肤，且充满羞辱性。必须使用温热柔软的湿毛巾或餐巾轻柔拭去食物。<br>   - 恐吓与剥夺权利：以取消活动资格相威胁属于严重的精神恐吓与霸凌，侵犯长者的基本自由。<br><br>2. 现场与事后对同事的专业应对策略：<br>   - 现场即时温和介入保护长者：“我们换一条柔软温热的毛巾帮希尔德女士擦拭吧，这样她会更舒服。”<br>   - 事后私下严肃沟通：“使用‘尿布’和‘围嘴’会让希尔德女士深感难堪。根据机构政策与执业标准，我们必须使用成人尊重术语；以取消活动恐吓她进食更是严重违规。”<br><br>3. 目击虐待时的法定汇报义务：<br>   - 根据照护工作者职业守则与法律要求，医护人员对目击的任何虐待行为负有不可推卸的法定保护与汇报责任。必须如实记录目击时间、准确言行等客观事实，第一时间向临床主管护士书面报告。<br><br>4. 捍卫成年人尊严的核心伦理逻辑：<br>   - 希尔德女士是一位拥有数十年丰富人生阅历、社会贡献与独立人格的成熟长者。突发的疾病与失能绝不会剥夺她作为成年人的崇高尊严。将失能长者当作不听话的幼童加以训斥与贬损，会诱发深重的屈辱感、无望感与绝望抑郁。全人照护要求无论其身体机能如何受损，均须以崇高敬意平等相待。<br></div>
+                    </div>
+                  </div>
+                </aside>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1580.0" data-end="1670.0" data-title="Chapter Review, Critical Thinking (Ms. Hild) & Quiz Q1-Q3" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Answers to all 17 review questions are located at the bottom of Page 193 in the original textbook. In this fluid web edition, all 17 authentic questions have been relocated to the dedicated, interactive Self-Test Quiz Bank for Chapter 12.</p>
+                      <p class="para-cn">在原版纸质教材中，全部 17 道复习题的标准答案附于第 193 页底部。在本次全新升级的流式数字网络版中，本章全部 17 道标准执业自测题已被独立收录于专属的“第 12 章自测习题库”模块中，提供即时互动答题校验与权威双语临床解析。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-193">
+              <span class="marker-pill">p. 193</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="1670.0" data-end="1760.0" data-title="Quiz Q4-Q17, Answer Key & Online Resources" onclick="playParagraphAudio(this)">
+                      <p class="para-en">All 17 review questions covering the Canadian Charter, cycle of abuse, spousal violence, pediatric trauma, elder abuse red flags, restraint misuse, and physical de-escalation are interactive in the dedicated practice bank.</p>
+                      <p class="para-cn">涵盖《加拿大宪章》、虐待恶性循环模型、亲密伴侣暴力、儿童创伤、长者虐待警讯、约束具滥用界定及面对攻击性长者时的自我防护规程等全部 17 道自测题均在专属习题库中提供全真交互支持。</p>
+                    </article>
+                    
+                <div class="editorial-footer-url">
+                  <span class="efu-icon">🌐</span>
+                  <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
+                  <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+                </div>
+                
+                <div class="editorial-footer-credit" style="margin-top:24px; padding:12px 16px; font-size:12px; color:var(--text-tertiary); border-top:1px dashed var(--border-color);">
+                  <div>Chapter opener image: iStockphoto/Imagesbybarbara. p. 193</div>
+                  <div>本章开篇摄影图片版权：iStockphoto/Imagesbybarbara。第 193 页。</div>
+                </div>
+                
+    </div>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch12_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+      } else {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
