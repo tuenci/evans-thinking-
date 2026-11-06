@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：19:50</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch4-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-48">第 48 页 · 学习目标、伦理守则开篇与导读 (Objectives & Code of Ethics Opener)</option><option value="page-49">第 49 页 · 核心专业术语表与伦理、道德、价值观辨析 (Key Terms, Ethics, Morals & Values)</option><option value="page-50">第 50 页 · 多元文化背景对伦理观念的影响与专栏：梅德维杰德先生 (Culture & Supporting Mr. Medvjed)</option><option value="page-51">第 51 页 · 医疗伦理四大根本原则（一）：自主自决原则 (Health Care Ethics: Autonomy)</option><option value="page-52">第 52 页 · 医疗伦理四大根本原则（二）：公平正义原则与慈惠行善原则 (Justice & Beneficence)</option><option value="page-53">第 53 页 · 医疗伦理四大根本原则（三）：不伤害原则与防范虐待 (Nonmaleficence & Preventing Harm)</option><option value="page-54">第 54 页 · 临床伦理困境的本质：对立道德选择冲突与利益冲突防范 (Ethical Dilemmas & Conflict of Interest)</option><option value="page-55">第 55 页 · 伦理困境实战案例研讨：自决权与人身安全的激烈博弈 (Ethical Case: Autonomy vs Safety)</option><option value="page-56">第 56 页 · 解决临床伦理困境的四步科学决断框架与支持网络 (Four-Step Framework for Ethical Dilemmas)</option><option value="page-57">第 57 页 · 本章核心要点精要总结、强迫进食思维修炼与自测题 Q1-Q10 (Key Points, Critical Thinking & Q1-Q10)</option><option value="page-58">第 58 页 · 章末全真执业自测题 Q11 与教材第 58 页官方标准答案深度精解 (Official Exam Q11 & Answer Key)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-48" class="page-chip-item"><span class="pc-num">p.48</span></a><a href="#page-49" class="page-chip-item"><span class="pc-num">p.49</span></a><a href="#page-50" class="page-chip-item"><span class="pc-num">p.50</span></a><a href="#page-51" class="page-chip-item"><span class="pc-num">p.51</span></a><a href="#page-52" class="page-chip-item"><span class="pc-num">p.52</span></a><a href="#page-53" class="page-chip-item"><span class="pc-num">p.53</span></a><a href="#page-54" class="page-chip-item"><span class="pc-num">p.54</span></a><a href="#page-55" class="page-chip-item"><span class="pc-num">p.55</span></a><a href="#page-56" class="page-chip-item"><span class="pc-num">p.56</span></a><a href="#page-57" class="page-chip-item"><span class="pc-num">p.57</span></a><a href="#page-58" class="page-chip-item"><span class="pc-num">p.58</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-48"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch4" aria-label="Chapter 4 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.48–58 · 共 11 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-48">第 48 页 · 学习目标、伦理守则开篇与导读 (Objectives & Code of Ethics Opener)</option><option value="page-49">第 49 页 · 核心专业术语表与伦理、道德、价值观辨析 (Key Terms, Ethics, Morals & Values)</option><option value="page-50">第 50 页 · 多元文化背景对伦理观念的影响与专栏：梅德维杰德先生 (Culture & Supporting Mr. Medvjed)</option><option value="page-51">第 51 页 · 医疗伦理四大根本原则（一）：自主自决原则 (Health Care Ethics: Autonomy)</option><option value="page-52">第 52 页 · 医疗伦理四大根本原则（二）：公平正义原则与慈惠行善原则 (Justice & Beneficence)</option><option value="page-53">第 53 页 · 医疗伦理四大根本原则（三）：不伤害原则与防范虐待 (Nonmaleficence & Preventing Harm)</option><option value="page-54">第 54 页 · 临床伦理困境的本质：对立道德选择冲突与利益冲突防范 (Ethical Dilemmas & Conflict of Interest)</option><option value="page-55">第 55 页 · 伦理困境实战案例研讨：自决权与人身安全的激烈博弈 (Ethical Case: Autonomy vs Safety)</option><option value="page-56">第 56 页 · 解决临床伦理困境的四步科学决断框架与支持网络 (Four-Step Framework for Ethical Dilemmas)</option><option value="page-57">第 57 页 · 本章核心要点精要总结、强迫进食思维修炼与自测题 Q1-Q10 (Key Points, Critical Thinking & Q1-Q10)</option><option value="page-58">第 58 页 · 章末全真执业自测题 Q11 与教材第 58 页官方标准答案深度精解 (Official Exam Q11 & Answer Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-48" class="cp-chip" id="cp-chip-4-48" data-page="48" onclick="handlePageChipClick(event, 'page-48')" title="第 48 页 · 学习目标、伦理守则开篇与导读 (Objectives & Code of Ethics Opener)"><span class="cp-num">p.48</span></a><a href="#page-49" class="cp-chip" id="cp-chip-4-49" data-page="49" onclick="handlePageChipClick(event, 'page-49')" title="第 49 页 · 核心专业术语表与伦理、道德、价值观辨析 (Key Terms, Ethics, Morals & Values)"><span class="cp-num">p.49</span></a><a href="#page-50" class="cp-chip" id="cp-chip-4-50" data-page="50" onclick="handlePageChipClick(event, 'page-50')" title="第 50 页 · 多元文化背景对伦理观念的影响与专栏：梅德维杰德先生 (Culture & Supporting Mr. Medvjed)"><span class="cp-num">p.50</span></a><a href="#page-51" class="cp-chip" id="cp-chip-4-51" data-page="51" onclick="handlePageChipClick(event, 'page-51')" title="第 51 页 · 医疗伦理四大根本原则（一）：自主自决原则 (Health Care Ethics: Autonomy)"><span class="cp-num">p.51</span></a><a href="#page-52" class="cp-chip" id="cp-chip-4-52" data-page="52" onclick="handlePageChipClick(event, 'page-52')" title="第 52 页 · 医疗伦理四大根本原则（二）：公平正义原则与慈惠行善原则 (Justice & Beneficence)"><span class="cp-num">p.52</span></a><a href="#page-53" class="cp-chip" id="cp-chip-4-53" data-page="53" onclick="handlePageChipClick(event, 'page-53')" title="第 53 页 · 医疗伦理四大根本原则（三）：不伤害原则与防范虐待 (Nonmaleficence & Preventing Harm)"><span class="cp-num">p.53</span></a><a href="#page-54" class="cp-chip" id="cp-chip-4-54" data-page="54" onclick="handlePageChipClick(event, 'page-54')" title="第 54 页 · 临床伦理困境的本质：对立道德选择冲突与利益冲突防范 (Ethical Dilemmas & Conflict of Interest)"><span class="cp-num">p.54</span></a><a href="#page-55" class="cp-chip" id="cp-chip-4-55" data-page="55" onclick="handlePageChipClick(event, 'page-55')" title="第 55 页 · 伦理困境实战案例研讨：自决权与人身安全的激烈博弈 (Ethical Case: Autonomy vs Safety)"><span class="cp-num">p.55</span></a><a href="#page-56" class="cp-chip" id="cp-chip-4-56" data-page="56" onclick="handlePageChipClick(event, 'page-56')" title="第 56 页 · 解决临床伦理困境的四步科学决断框架与支持网络 (Four-Step Framework for Ethical Dilemmas)"><span class="cp-num">p.56</span></a><a href="#page-57" class="cp-chip" id="cp-chip-4-57" data-page="57" onclick="handlePageChipClick(event, 'page-57')" title="第 57 页 · 本章核心要点精要总结、强迫进食思维修炼与自测题 Q1-Q10 (Key Points, Critical Thinking & Q1-Q10)"><span class="cp-num">p.57</span></a><a href="#page-58" class="cp-chip" id="cp-chip-4-58" data-page="58" onclick="handlePageChipClick(event, 'page-58')" title="第 58 页 · 章末全真执业自测题 Q11 与教材第 58 页官方标准答案深度精解 (Official Exam Q11 & Answer Key)"><span class="cp-num">p.58</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-48"></div>
                 <div class="editorial-footer-url">
                   <span class="efu-icon">🌐</span>
                   <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
@@ -1808,6 +1857,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

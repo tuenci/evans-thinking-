@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：24:10</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch8-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-112">第 112 页 · 学习目标与压力管理开篇</option><option value="page-113">第 113 页 · 核心专业术语表与大健康压力源概述</option><option value="page-114">第 114 页 · 表8.1 压力影响全人五大维度与常见生活变故</option><option value="page-115">第 115 页 · 专栏 8.1 急性压力生理体征与压力源反应因子</option><option value="page-116">第 116 页 · 专栏 8.2 慢性压力、专栏 8.3 情绪行为体征与长者儿童压力</option><option value="page-117">第 117 页 · 心理防御机制、情感验证与支持工作者自身压力调适</option><option value="page-118">第 118 页 · 专栏 8.4 深呼吸静心法与专栏 8.5 渐进式肌肉冥想</option><option value="page-119">第 119 页 · 职业倦怠成因、专栏：凯茜的职业倦怠案例与自救策略</option><option value="page-120">第 120 页 · 时间管理原则、SMART目标设定与多元文化时间观</option><option value="page-121">第 121 页 · 工作日常规划提问清单、专栏：帕吉特太太的日程选择</option><option value="page-122">第 122 页 · 专栏 8.6 时间管理省时技巧、决断力与问题解决流程</option><option value="page-123">第 123 页 · 问题解决四步法：识别与分析问题、主管汇报十项触发线</option><option value="page-124">第 124 页 · 专栏：高太太的观察沟通、专栏：塞缪尔斯太太的赋能方案</option><option value="page-125">第 125 页 · 职场与医患冲突化解、专栏：多元文化应对冲突的差异</option><option value="page-126">第 126 页 · 专栏 8.7 冲突化解核心十二步法则与学生成绩争议实操</option><option value="page-127">第 127 页 · 本章核心知识点、椅子报警器思维修炼与章末全真自测试题 (Part 1)</option><option value="page-128">第 128 页 · 章末全真自测试题 (Part 2) 与官方参考答案</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-112" class="page-chip-item"><span class="pc-num">p.112</span></a><a href="#page-113" class="page-chip-item"><span class="pc-num">p.113</span></a><a href="#page-114" class="page-chip-item"><span class="pc-num">p.114</span></a><a href="#page-115" class="page-chip-item"><span class="pc-num">p.115</span></a><a href="#page-116" class="page-chip-item"><span class="pc-num">p.116</span></a><a href="#page-117" class="page-chip-item"><span class="pc-num">p.117</span></a><a href="#page-118" class="page-chip-item"><span class="pc-num">p.118</span></a><a href="#page-119" class="page-chip-item"><span class="pc-num">p.119</span></a><a href="#page-120" class="page-chip-item"><span class="pc-num">p.120</span></a><a href="#page-121" class="page-chip-item"><span class="pc-num">p.121</span></a><a href="#page-122" class="page-chip-item"><span class="pc-num">p.122</span></a><a href="#page-123" class="page-chip-item"><span class="pc-num">p.123</span></a><a href="#page-124" class="page-chip-item"><span class="pc-num">p.124</span></a><a href="#page-125" class="page-chip-item"><span class="pc-num">p.125</span></a><a href="#page-126" class="page-chip-item"><span class="pc-num">p.126</span></a><a href="#page-127" class="page-chip-item"><span class="pc-num">p.127</span></a><a href="#page-128" class="page-chip-item"><span class="pc-num">p.128</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-112"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch8" aria-label="Chapter 8 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.112–128 · 共 17 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-112">第 112 页 · 学习目标与压力管理开篇</option><option value="page-113">第 113 页 · 核心专业术语表与大健康压力源概述</option><option value="page-114">第 114 页 · 表8.1 压力影响全人五大维度与常见生活变故</option><option value="page-115">第 115 页 · 专栏 8.1 急性压力生理体征与压力源反应因子</option><option value="page-116">第 116 页 · 专栏 8.2 慢性压力、专栏 8.3 情绪行为体征与长者儿童压力</option><option value="page-117">第 117 页 · 心理防御机制、情感验证与支持工作者自身压力调适</option><option value="page-118">第 118 页 · 专栏 8.4 深呼吸静心法与专栏 8.5 渐进式肌肉冥想</option><option value="page-119">第 119 页 · 职业倦怠成因、专栏：凯茜的职业倦怠案例与自救策略</option><option value="page-120">第 120 页 · 时间管理原则、SMART目标设定与多元文化时间观</option><option value="page-121">第 121 页 · 工作日常规划提问清单、专栏：帕吉特太太的日程选择</option><option value="page-122">第 122 页 · 专栏 8.6 时间管理省时技巧、决断力与问题解决流程</option><option value="page-123">第 123 页 · 问题解决四步法：识别与分析问题、主管汇报十项触发线</option><option value="page-124">第 124 页 · 专栏：高太太的观察沟通、专栏：塞缪尔斯太太的赋能方案</option><option value="page-125">第 125 页 · 职场与医患冲突化解、专栏：多元文化应对冲突的差异</option><option value="page-126">第 126 页 · 专栏 8.7 冲突化解核心十二步法则与学生成绩争议实操</option><option value="page-127">第 127 页 · 本章核心知识点、椅子报警器思维修炼与章末全真自测试题 (Part 1)</option><option value="page-128">第 128 页 · 章末全真自测试题 (Part 2) 与官方参考答案</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-112" class="cp-chip" id="cp-chip-8-112" data-page="112" onclick="handlePageChipClick(event, 'page-112')" title="第 112 页 · 学习目标与压力管理开篇"><span class="cp-num">p.112</span></a><a href="#page-113" class="cp-chip" id="cp-chip-8-113" data-page="113" onclick="handlePageChipClick(event, 'page-113')" title="第 113 页 · 核心专业术语表与大健康压力源概述"><span class="cp-num">p.113</span></a><a href="#page-114" class="cp-chip" id="cp-chip-8-114" data-page="114" onclick="handlePageChipClick(event, 'page-114')" title="第 114 页 · 表8.1 压力影响全人五大维度与常见生活变故"><span class="cp-num">p.114</span></a><a href="#page-115" class="cp-chip" id="cp-chip-8-115" data-page="115" onclick="handlePageChipClick(event, 'page-115')" title="第 115 页 · 专栏 8.1 急性压力生理体征与压力源反应因子"><span class="cp-num">p.115</span></a><a href="#page-116" class="cp-chip" id="cp-chip-8-116" data-page="116" onclick="handlePageChipClick(event, 'page-116')" title="第 116 页 · 专栏 8.2 慢性压力、专栏 8.3 情绪行为体征与长者儿童压力"><span class="cp-num">p.116</span></a><a href="#page-117" class="cp-chip" id="cp-chip-8-117" data-page="117" onclick="handlePageChipClick(event, 'page-117')" title="第 117 页 · 心理防御机制、情感验证与支持工作者自身压力调适"><span class="cp-num">p.117</span></a><a href="#page-118" class="cp-chip" id="cp-chip-8-118" data-page="118" onclick="handlePageChipClick(event, 'page-118')" title="第 118 页 · 专栏 8.4 深呼吸静心法与专栏 8.5 渐进式肌肉冥想"><span class="cp-num">p.118</span></a><a href="#page-119" class="cp-chip" id="cp-chip-8-119" data-page="119" onclick="handlePageChipClick(event, 'page-119')" title="第 119 页 · 职业倦怠成因、专栏：凯茜的职业倦怠案例与自救策略"><span class="cp-num">p.119</span></a><a href="#page-120" class="cp-chip" id="cp-chip-8-120" data-page="120" onclick="handlePageChipClick(event, 'page-120')" title="第 120 页 · 时间管理原则、SMART目标设定与多元文化时间观"><span class="cp-num">p.120</span></a><a href="#page-121" class="cp-chip" id="cp-chip-8-121" data-page="121" onclick="handlePageChipClick(event, 'page-121')" title="第 121 页 · 工作日常规划提问清单、专栏：帕吉特太太的日程选择"><span class="cp-num">p.121</span></a><a href="#page-122" class="cp-chip" id="cp-chip-8-122" data-page="122" onclick="handlePageChipClick(event, 'page-122')" title="第 122 页 · 专栏 8.6 时间管理省时技巧、决断力与问题解决流程"><span class="cp-num">p.122</span></a><a href="#page-123" class="cp-chip" id="cp-chip-8-123" data-page="123" onclick="handlePageChipClick(event, 'page-123')" title="第 123 页 · 问题解决四步法：识别与分析问题、主管汇报十项触发线"><span class="cp-num">p.123</span></a><a href="#page-124" class="cp-chip" id="cp-chip-8-124" data-page="124" onclick="handlePageChipClick(event, 'page-124')" title="第 124 页 · 专栏：高太太的观察沟通、专栏：塞缪尔斯太太的赋能方案"><span class="cp-num">p.124</span></a><a href="#page-125" class="cp-chip" id="cp-chip-8-125" data-page="125" onclick="handlePageChipClick(event, 'page-125')" title="第 125 页 · 职场与医患冲突化解、专栏：多元文化应对冲突的差异"><span class="cp-num">p.125</span></a><a href="#page-126" class="cp-chip" id="cp-chip-8-126" data-page="126" onclick="handlePageChipClick(event, 'page-126')" title="第 126 页 · 专栏 8.7 冲突化解核心十二步法则与学生成绩争议实操"><span class="cp-num">p.126</span></a><a href="#page-127" class="cp-chip" id="cp-chip-8-127" data-page="127" onclick="handlePageChipClick(event, 'page-127')" title="第 127 页 · 本章核心知识点、椅子报警器思维修炼与章末全真自测试题 (Part 1)"><span class="cp-num">p.127</span></a><a href="#page-128" class="cp-chip" id="cp-chip-8-128" data-page="128" onclick="handlePageChipClick(event, 'page-128')" title="第 128 页 · 章末全真自测试题 (Part 2) 与官方参考答案"><span class="cp-num">p.128</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-112"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习与执业考核目标</div>
@@ -2361,6 +2410,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

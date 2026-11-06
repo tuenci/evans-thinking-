@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：23:15</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch5-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-59">第 59 页 · 学习目标与核心原则</option><option value="page-60">第 60 页 · 加拿大宪章与核心术语</option><option value="page-61">第 61 页 · 理解权利与加拿大基本人权</option><option value="page-62">第 62 页 · 专栏 5.1 & 复合照护法规</option><option value="page-63">第 63 页 · 专栏 5.2 BC省住户权利法案</option><option value="page-64">第 64 页 · 服务对象基本权利与尊严照护</option><option value="page-65">第 65 页 · 尊严实务推进与电子隐私保护</option><option value="page-66">第 66 页 · 专栏 5.3 尊重尊严与知情同意</option><option value="page-67">第 67 页 · 专栏 5.4 隐私准则与预立指示</option><option value="page-68">第 68 页 · 临床案例：生前预嘱与替代决策者</option><option value="page-69">第 69 页 · 遗嘱设立、代理人与自决权</option><option value="page-70">第 70 页 · 刑法 vs 民法与侵权归责</option><option value="page-71">第 71 页 · 执业范围边界与专栏 5.5 侵权案例</option><option value="page-72">第 72 页 · 非法拘禁、诽谤与照护者法定权利</option><option value="page-73">第 73 页 · 人权、职业健康安全与工伤赔偿</option><option value="page-74">第 74 页 · 社区服务立法与健康档案规约</option><option value="page-75">第 75 页 · 本章复习、核心要点与审辩思维修炼</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-59" class="page-chip-item"><span class="pc-num">p.59</span></a><a href="#page-60" class="page-chip-item"><span class="pc-num">p.60</span></a><a href="#page-61" class="page-chip-item"><span class="pc-num">p.61</span></a><a href="#page-62" class="page-chip-item"><span class="pc-num">p.62</span></a><a href="#page-63" class="page-chip-item"><span class="pc-num">p.63</span></a><a href="#page-64" class="page-chip-item"><span class="pc-num">p.64</span></a><a href="#page-65" class="page-chip-item"><span class="pc-num">p.65</span></a><a href="#page-66" class="page-chip-item"><span class="pc-num">p.66</span></a><a href="#page-67" class="page-chip-item"><span class="pc-num">p.67</span></a><a href="#page-68" class="page-chip-item"><span class="pc-num">p.68</span></a><a href="#page-69" class="page-chip-item"><span class="pc-num">p.69</span></a><a href="#page-70" class="page-chip-item"><span class="pc-num">p.70</span></a><a href="#page-71" class="page-chip-item"><span class="pc-num">p.71</span></a><a href="#page-72" class="page-chip-item"><span class="pc-num">p.72</span></a><a href="#page-73" class="page-chip-item"><span class="pc-num">p.73</span></a><a href="#page-74" class="page-chip-item"><span class="pc-num">p.74</span></a><a href="#page-75" class="page-chip-item"><span class="pc-num">p.75</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-59"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch5" aria-label="Chapter 5 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.59–75 · 共 17 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-59">第 59 页 · 学习目标与核心原则</option><option value="page-60">第 60 页 · 加拿大宪章与核心术语</option><option value="page-61">第 61 页 · 理解权利与加拿大基本人权</option><option value="page-62">第 62 页 · 专栏 5.1 & 复合照护法规</option><option value="page-63">第 63 页 · 专栏 5.2 BC省住户权利法案</option><option value="page-64">第 64 页 · 服务对象基本权利与尊严照护</option><option value="page-65">第 65 页 · 尊严实务推进与电子隐私保护</option><option value="page-66">第 66 页 · 专栏 5.3 尊重尊严与知情同意</option><option value="page-67">第 67 页 · 专栏 5.4 隐私准则与预立指示</option><option value="page-68">第 68 页 · 临床案例：生前预嘱与替代决策者</option><option value="page-69">第 69 页 · 遗嘱设立、代理人与自决权</option><option value="page-70">第 70 页 · 刑法 vs 民法与侵权归责</option><option value="page-71">第 71 页 · 执业范围边界与专栏 5.5 侵权案例</option><option value="page-72">第 72 页 · 非法拘禁、诽谤与照护者法定权利</option><option value="page-73">第 73 页 · 人权、职业健康安全与工伤赔偿</option><option value="page-74">第 74 页 · 社区服务立法与健康档案规约</option><option value="page-75">第 75 页 · 本章复习、核心要点与审辩思维修炼</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-59" class="cp-chip" id="cp-chip-5-59" data-page="59" onclick="handlePageChipClick(event, 'page-59')" title="第 59 页 · 学习目标与核心原则"><span class="cp-num">p.59</span></a><a href="#page-60" class="cp-chip" id="cp-chip-5-60" data-page="60" onclick="handlePageChipClick(event, 'page-60')" title="第 60 页 · 加拿大宪章与核心术语"><span class="cp-num">p.60</span></a><a href="#page-61" class="cp-chip" id="cp-chip-5-61" data-page="61" onclick="handlePageChipClick(event, 'page-61')" title="第 61 页 · 理解权利与加拿大基本人权"><span class="cp-num">p.61</span></a><a href="#page-62" class="cp-chip" id="cp-chip-5-62" data-page="62" onclick="handlePageChipClick(event, 'page-62')" title="第 62 页 · 专栏 5.1 & 复合照护法规"><span class="cp-num">p.62</span></a><a href="#page-63" class="cp-chip" id="cp-chip-5-63" data-page="63" onclick="handlePageChipClick(event, 'page-63')" title="第 63 页 · 专栏 5.2 BC省住户权利法案"><span class="cp-num">p.63</span></a><a href="#page-64" class="cp-chip" id="cp-chip-5-64" data-page="64" onclick="handlePageChipClick(event, 'page-64')" title="第 64 页 · 服务对象基本权利与尊严照护"><span class="cp-num">p.64</span></a><a href="#page-65" class="cp-chip" id="cp-chip-5-65" data-page="65" onclick="handlePageChipClick(event, 'page-65')" title="第 65 页 · 尊严实务推进与电子隐私保护"><span class="cp-num">p.65</span></a><a href="#page-66" class="cp-chip" id="cp-chip-5-66" data-page="66" onclick="handlePageChipClick(event, 'page-66')" title="第 66 页 · 专栏 5.3 尊重尊严与知情同意"><span class="cp-num">p.66</span></a><a href="#page-67" class="cp-chip" id="cp-chip-5-67" data-page="67" onclick="handlePageChipClick(event, 'page-67')" title="第 67 页 · 专栏 5.4 隐私准则与预立指示"><span class="cp-num">p.67</span></a><a href="#page-68" class="cp-chip" id="cp-chip-5-68" data-page="68" onclick="handlePageChipClick(event, 'page-68')" title="第 68 页 · 临床案例：生前预嘱与替代决策者"><span class="cp-num">p.68</span></a><a href="#page-69" class="cp-chip" id="cp-chip-5-69" data-page="69" onclick="handlePageChipClick(event, 'page-69')" title="第 69 页 · 遗嘱设立、代理人与自决权"><span class="cp-num">p.69</span></a><a href="#page-70" class="cp-chip" id="cp-chip-5-70" data-page="70" onclick="handlePageChipClick(event, 'page-70')" title="第 70 页 · 刑法 vs 民法与侵权归责"><span class="cp-num">p.70</span></a><a href="#page-71" class="cp-chip" id="cp-chip-5-71" data-page="71" onclick="handlePageChipClick(event, 'page-71')" title="第 71 页 · 执业范围边界与专栏 5.5 侵权案例"><span class="cp-num">p.71</span></a><a href="#page-72" class="cp-chip" id="cp-chip-5-72" data-page="72" onclick="handlePageChipClick(event, 'page-72')" title="第 72 页 · 非法拘禁、诽谤与照护者法定权利"><span class="cp-num">p.72</span></a><a href="#page-73" class="cp-chip" id="cp-chip-5-73" data-page="73" onclick="handlePageChipClick(event, 'page-73')" title="第 73 页 · 人权、职业健康安全与工伤赔偿"><span class="cp-num">p.73</span></a><a href="#page-74" class="cp-chip" id="cp-chip-5-74" data-page="74" onclick="handlePageChipClick(event, 'page-74')" title="第 74 页 · 社区服务立法与健康档案规约"><span class="cp-num">p.74</span></a><a href="#page-75" class="cp-chip" id="cp-chip-5-75" data-page="75" onclick="handlePageChipClick(event, 'page-75')" title="第 75 页 · 本章复习、核心要点与审辩思维修炼"><span class="cp-num">p.75</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-59"></div>
                 <aside class="editorial-box-container box-theme-blue">
                   <div class="box-banner-header">
                     <h4 class="box-title-en">OBJECTIVES</h4>
@@ -3774,6 +3823,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

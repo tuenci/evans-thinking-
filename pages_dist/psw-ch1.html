@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：34:10</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch1-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-1">第 1 页 · 学习目标、核心专业术语表与开篇导读 (Objectives, Key Terms & Chapter Opener)</option><option value="page-2">第 2 页 · 支持工作者的定义、终极宗旨与全人照护 (What is a Support Worker & The Ultimate Goal)</option><option value="page-3">第 3 页 · 加拿大各省支持工作现状与多元职业头衔 (Support Work Across Canada & Professional Titles)</option><option value="page-4">第 4 页 · 支持工作者六大核心职责：ADLs与IADLs、护士协作与家务管理 (The Six Categories of Responsibilities)</option><option value="page-5">第 5 页 · 支持工作者日常工作职责对比清单：社区居家照护 vs 机构照护 (Typical Daily Activities: Home vs Facility)</option><option value="page-6">第 6 页 · 真实工作实录（一）：社区居家入户照护 —— 史蒂芬的一天 (A Day in the Life: Home Care - Stephen)</option><option value="page-7">第 7 页 · 真实工作实录（二）：长期照护院舍晨间护理 —— 克莱尔的一天 (A Day in the Life: Long-Term Care - Claire)</option><option value="page-8">第 8 页 · 真实工作实录（三）：急症综合医院外科病区 —— 吉娜的一天 (A Day in the Life: Hospital - Gina)</option><option value="page-9">第 9 页 · 受助人群全景：母婴、儿童青少年、成年病患、残障人士与长者 (The People Supported Across the Lifespan)</option><option value="page-10">第 10 页 · 执业场所谱系与医疗卫生团队：受监管与未受监管照护者辨析 (Settings, The Health Care Team & Regulated vs UCP)</option><option value="page-11">第 11 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（上：医师/护士/物理/作业/言语治疗师）(The Health Care Team Part 1)</option><option value="page-12">第 12 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（下：营养师/社工/药剂师/康乐/PSW/案主及家属）(The Health Care Team Part 2)</option><option value="page-13">第 13 页 · 法定执业范围、主管护士临床督导机制与职业素养核心基石 (Scope of Practice, Supervision & Professionalism)</option><option value="page-14">第 14 页 · 专栏 1.1：消极言辞 vs 积极职业沟通；专业仪表规范与案主隐私保密 (Box 1.1, Appearance & Confidentiality)</option><option value="page-15">第 15 页 · 反思性执业自我评估审查、严守职业界限与以服务对象为中心的照护 (Reflective Practice Review & Professional Boundaries)</option><option value="page-16">第 16 页 · DIPPS 核心人本照护原则（尊严、独立、偏好、隐私、安全）与实战落地 (Client-Centred Care & DIPPS Principles)</option><option value="page-17">第 17 页 · 临床批判性思维与解决问题的四大决策支柱（DIPPS、案主视角、执业范围、督导考量）(Critical Thinking & Problem-Solving)</option><option value="page-18">第 18 页 · 本章核心要点精要总结、跌倒长者拒绝求助临床反思与自测选择题 (Key Points, Critical Thinking & Review Question 1)</option><option value="page-19">第 19 页 · 章末全真执业自测题 (Q2-Q12) 与教材第 19 页官方标准答案深度精解 (Official Practice Exam Q2-Q12 & Answers)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-1" class="page-chip-item"><span class="pc-num">p.1</span></a><a href="#page-2" class="page-chip-item"><span class="pc-num">p.2</span></a><a href="#page-3" class="page-chip-item"><span class="pc-num">p.3</span></a><a href="#page-4" class="page-chip-item"><span class="pc-num">p.4</span></a><a href="#page-5" class="page-chip-item"><span class="pc-num">p.5</span></a><a href="#page-6" class="page-chip-item"><span class="pc-num">p.6</span></a><a href="#page-7" class="page-chip-item"><span class="pc-num">p.7</span></a><a href="#page-8" class="page-chip-item"><span class="pc-num">p.8</span></a><a href="#page-9" class="page-chip-item"><span class="pc-num">p.9</span></a><a href="#page-10" class="page-chip-item"><span class="pc-num">p.10</span></a><a href="#page-11" class="page-chip-item"><span class="pc-num">p.11</span></a><a href="#page-12" class="page-chip-item"><span class="pc-num">p.12</span></a><a href="#page-13" class="page-chip-item"><span class="pc-num">p.13</span></a><a href="#page-14" class="page-chip-item"><span class="pc-num">p.14</span></a><a href="#page-15" class="page-chip-item"><span class="pc-num">p.15</span></a><a href="#page-16" class="page-chip-item"><span class="pc-num">p.16</span></a><a href="#page-17" class="page-chip-item"><span class="pc-num">p.17</span></a><a href="#page-18" class="page-chip-item"><span class="pc-num">p.18</span></a><a href="#page-19" class="page-chip-item"><span class="pc-num">p.19</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-1"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch1" aria-label="Chapter 1 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.1–19 · 共 19 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-1">第 1 页 · 学习目标、核心专业术语表与开篇导读 (Objectives, Key Terms & Chapter Opener)</option><option value="page-2">第 2 页 · 支持工作者的定义、终极宗旨与全人照护 (What is a Support Worker & The Ultimate Goal)</option><option value="page-3">第 3 页 · 加拿大各省支持工作现状与多元职业头衔 (Support Work Across Canada & Professional Titles)</option><option value="page-4">第 4 页 · 支持工作者六大核心职责：ADLs与IADLs、护士协作与家务管理 (The Six Categories of Responsibilities)</option><option value="page-5">第 5 页 · 支持工作者日常工作职责对比清单：社区居家照护 vs 机构照护 (Typical Daily Activities: Home vs Facility)</option><option value="page-6">第 6 页 · 真实工作实录（一）：社区居家入户照护 —— 史蒂芬的一天 (A Day in the Life: Home Care - Stephen)</option><option value="page-7">第 7 页 · 真实工作实录（二）：长期照护院舍晨间护理 —— 克莱尔的一天 (A Day in the Life: Long-Term Care - Claire)</option><option value="page-8">第 8 页 · 真实工作实录（三）：急症综合医院外科病区 —— 吉娜的一天 (A Day in the Life: Hospital - Gina)</option><option value="page-9">第 9 页 · 受助人群全景：母婴、儿童青少年、成年病患、残障人士与长者 (The People Supported Across the Lifespan)</option><option value="page-10">第 10 页 · 执业场所谱系与医疗卫生团队：受监管与未受监管照护者辨析 (Settings, The Health Care Team & Regulated vs UCP)</option><option value="page-11">第 11 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（上：医师/护士/物理/作业/言语治疗师）(The Health Care Team Part 1)</option><option value="page-12">第 12 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（下：营养师/社工/药剂师/康乐/PSW/案主及家属）(The Health Care Team Part 2)</option><option value="page-13">第 13 页 · 法定执业范围、主管护士临床督导机制与职业素养核心基石 (Scope of Practice, Supervision & Professionalism)</option><option value="page-14">第 14 页 · 专栏 1.1：消极言辞 vs 积极职业沟通；专业仪表规范与案主隐私保密 (Box 1.1, Appearance & Confidentiality)</option><option value="page-15">第 15 页 · 反思性执业自我评估审查、严守职业界限与以服务对象为中心的照护 (Reflective Practice Review & Professional Boundaries)</option><option value="page-16">第 16 页 · DIPPS 核心人本照护原则（尊严、独立、偏好、隐私、安全）与实战落地 (Client-Centred Care & DIPPS Principles)</option><option value="page-17">第 17 页 · 临床批判性思维与解决问题的四大决策支柱（DIPPS、案主视角、执业范围、督导考量）(Critical Thinking & Problem-Solving)</option><option value="page-18">第 18 页 · 本章核心要点精要总结、跌倒长者拒绝求助临床反思与自测选择题 (Key Points, Critical Thinking & Review Question 1)</option><option value="page-19">第 19 页 · 章末全真执业自测题 (Q2-Q12) 与教材第 19 页官方标准答案深度精解 (Official Practice Exam Q2-Q12 & Answers)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-1" class="cp-chip" id="cp-chip-1-1" data-page="1" onclick="handlePageChipClick(event, 'page-1')" title="第 1 页 · 学习目标、核心专业术语表与开篇导读 (Objectives, Key Terms & Chapter Opener)"><span class="cp-num">p.1</span></a><a href="#page-2" class="cp-chip" id="cp-chip-1-2" data-page="2" onclick="handlePageChipClick(event, 'page-2')" title="第 2 页 · 支持工作者的定义、终极宗旨与全人照护 (What is a Support Worker & The Ultimate Goal)"><span class="cp-num">p.2</span></a><a href="#page-3" class="cp-chip" id="cp-chip-1-3" data-page="3" onclick="handlePageChipClick(event, 'page-3')" title="第 3 页 · 加拿大各省支持工作现状与多元职业头衔 (Support Work Across Canada & Professional Titles)"><span class="cp-num">p.3</span></a><a href="#page-4" class="cp-chip" id="cp-chip-1-4" data-page="4" onclick="handlePageChipClick(event, 'page-4')" title="第 4 页 · 支持工作者六大核心职责：ADLs与IADLs、护士协作与家务管理 (The Six Categories of Responsibilities)"><span class="cp-num">p.4</span></a><a href="#page-5" class="cp-chip" id="cp-chip-1-5" data-page="5" onclick="handlePageChipClick(event, 'page-5')" title="第 5 页 · 支持工作者日常工作职责对比清单：社区居家照护 vs 机构照护 (Typical Daily Activities: Home vs Facility)"><span class="cp-num">p.5</span></a><a href="#page-6" class="cp-chip" id="cp-chip-1-6" data-page="6" onclick="handlePageChipClick(event, 'page-6')" title="第 6 页 · 真实工作实录（一）：社区居家入户照护 —— 史蒂芬的一天 (A Day in the Life: Home Care - Stephen)"><span class="cp-num">p.6</span></a><a href="#page-7" class="cp-chip" id="cp-chip-1-7" data-page="7" onclick="handlePageChipClick(event, 'page-7')" title="第 7 页 · 真实工作实录（二）：长期照护院舍晨间护理 —— 克莱尔的一天 (A Day in the Life: Long-Term Care - Claire)"><span class="cp-num">p.7</span></a><a href="#page-8" class="cp-chip" id="cp-chip-1-8" data-page="8" onclick="handlePageChipClick(event, 'page-8')" title="第 8 页 · 真实工作实录（三）：急症综合医院外科病区 —— 吉娜的一天 (A Day in the Life: Hospital - Gina)"><span class="cp-num">p.8</span></a><a href="#page-9" class="cp-chip" id="cp-chip-1-9" data-page="9" onclick="handlePageChipClick(event, 'page-9')" title="第 9 页 · 受助人群全景：母婴、儿童青少年、成年病患、残障人士与长者 (The People Supported Across the Lifespan)"><span class="cp-num">p.9</span></a><a href="#page-10" class="cp-chip" id="cp-chip-1-10" data-page="10" onclick="handlePageChipClick(event, 'page-10')" title="第 10 页 · 执业场所谱系与医疗卫生团队：受监管与未受监管照护者辨析 (Settings, The Health Care Team & Regulated vs UCP)"><span class="cp-num">p.10</span></a><a href="#page-11" class="cp-chip" id="cp-chip-1-11" data-page="11" onclick="handlePageChipClick(event, 'page-11')" title="第 11 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（上：医师/护士/物理/作业/言语治疗师）(The Health Care Team Part 1)"><span class="cp-num">p.11</span></a><a href="#page-12" class="cp-chip" id="cp-chip-1-12" data-page="12" onclick="handlePageChipClick(event, 'page-12')" title="第 12 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（下：营养师/社工/药剂师/康乐/PSW/案主及家属）(The Health Care Team Part 2)"><span class="cp-num">p.12</span></a><a href="#page-13" class="cp-chip" id="cp-chip-1-13" data-page="13" onclick="handlePageChipClick(event, 'page-13')" title="第 13 页 · 法定执业范围、主管护士临床督导机制与职业素养核心基石 (Scope of Practice, Supervision & Professionalism)"><span class="cp-num">p.13</span></a><a href="#page-14" class="cp-chip" id="cp-chip-1-14" data-page="14" onclick="handlePageChipClick(event, 'page-14')" title="第 14 页 · 专栏 1.1：消极言辞 vs 积极职业沟通；专业仪表规范与案主隐私保密 (Box 1.1, Appearance & Confidentiality)"><span class="cp-num">p.14</span></a><a href="#page-15" class="cp-chip" id="cp-chip-1-15" data-page="15" onclick="handlePageChipClick(event, 'page-15')" title="第 15 页 · 反思性执业自我评估审查、严守职业界限与以服务对象为中心的照护 (Reflective Practice Review & Professional Boundaries)"><span class="cp-num">p.15</span></a><a href="#page-16" class="cp-chip" id="cp-chip-1-16" data-page="16" onclick="handlePageChipClick(event, 'page-16')" title="第 16 页 · DIPPS 核心人本照护原则（尊严、独立、偏好、隐私、安全）与实战落地 (Client-Centred Care & DIPPS Principles)"><span class="cp-num">p.16</span></a><a href="#page-17" class="cp-chip" id="cp-chip-1-17" data-page="17" onclick="handlePageChipClick(event, 'page-17')" title="第 17 页 · 临床批判性思维与解决问题的四大决策支柱（DIPPS、案主视角、执业范围、督导考量）(Critical Thinking & Problem-Solving)"><span class="cp-num">p.17</span></a><a href="#page-18" class="cp-chip" id="cp-chip-1-18" data-page="18" onclick="handlePageChipClick(event, 'page-18')" title="第 18 页 · 本章核心要点精要总结、跌倒长者拒绝求助临床反思与自测选择题 (Key Points, Critical Thinking & Review Question 1)"><span class="cp-num">p.18</span></a><a href="#page-19" class="cp-chip" id="cp-chip-1-19" data-page="19" onclick="handlePageChipClick(event, 'page-19')" title="第 19 页 · 章末全真执业自测题 (Q2-Q12) 与教材第 19 页官方标准答案深度精解 (Official Practice Exam Q2-Q12 & Answers)"><span class="cp-num">p.19</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-1"></div>
                 <div class="editorial-key-terms-container" id="terms-ch1">
                   <div class="kt-header-bar">
                     <div class="kt-title-group">
@@ -2385,6 +2434,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

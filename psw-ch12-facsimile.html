@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：27:10</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch12-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-174">第 174 页 · 学习目标与虐待欺凌防范认知开篇</option><option value="page-175">第 175 页 · 核心专业术语表与反虐待基本人权基石</option><option value="page-176">第 176 页 · 《加拿大权利与自由宪章》与六大虐待类型全解析</option><option value="page-177">第 177 页 · 专栏 12.1 加拿大人法定权利与自由全貌及图像侵权</option><option value="page-178">第 178 页 · 专栏 12.2 网络欺凌防范与专栏 12.3 刑法非自愿私密图像立法</option><option value="page-179">第 179 页 · 虐待关系特征与专栏 12.4 虐待极高危易感人群剖析</option><option value="page-180">第 180 页 · 虐待诱发诱因、识别指征与安全专栏：成人受虐症状清单 (Part 1)</option><option value="page-181">第 181 页 · 成人受虐症状清单 (Part 2: 经济与忽视)、儿童受虐体征与配偶虐待成因</option><option value="page-182">第 182 页 · 虐待恶性循环三阶段与案例：艾米·卢的性侵创伤与触碰回避</option><option value="page-183">第 183 页 · 儿童虐待与忽视的深远心理破坏及分类</option><option value="page-184">第 184 页 · 衰弱消退综合征与案例：泰勒胎儿酒精谱系障碍与高压家庭</option><option value="page-185">第 185 页 · 长者虐待的高发诱因、易感群体与隐瞒受虐的心理机制</option><option value="page-186">第 186 页 · 机构虐待（粗暴对待 vs 婴儿化贬损语言）与芬妮太太家暴目击案例</option><option value="page-187">第 187 页 · 当服务对象向你倾诉受虐经历时的专业支持指南与倾听原则</option><option value="page-188">第 188 页 · 医护人员执业受暴风险与法定虐待汇报程序铁律</option><option value="page-189">第 189 页 · 安全专栏：遭遇攻击性服务对象时的自我防卫脱身法则</option><option value="page-190">第 190 页 · 职场欺凌、骚扰界定与专栏 12.5 职业健康安全法案雇主法定义务</option><option value="page-191">第 191 页 · 应对职场欺凌四步法、客观取证日志与员工援助计划 (EAP)</option><option value="page-192">第 192 页 · 本章核心知识点回顾、希尔德女士尊严照料批判性思维修炼与自测 (Part 1: Q1-Q3)</option><option value="page-193">第 193 页 · 章末全真自测试题 (Part 2: Q4-Q17)、权威答案精解与在线研习资源</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-174" class="page-chip-item"><span class="pc-num">p.174</span></a><a href="#page-175" class="page-chip-item"><span class="pc-num">p.175</span></a><a href="#page-176" class="page-chip-item"><span class="pc-num">p.176</span></a><a href="#page-177" class="page-chip-item"><span class="pc-num">p.177</span></a><a href="#page-178" class="page-chip-item"><span class="pc-num">p.178</span></a><a href="#page-179" class="page-chip-item"><span class="pc-num">p.179</span></a><a href="#page-180" class="page-chip-item"><span class="pc-num">p.180</span></a><a href="#page-181" class="page-chip-item"><span class="pc-num">p.181</span></a><a href="#page-182" class="page-chip-item"><span class="pc-num">p.182</span></a><a href="#page-183" class="page-chip-item"><span class="pc-num">p.183</span></a><a href="#page-184" class="page-chip-item"><span class="pc-num">p.184</span></a><a href="#page-185" class="page-chip-item"><span class="pc-num">p.185</span></a><a href="#page-186" class="page-chip-item"><span class="pc-num">p.186</span></a><a href="#page-187" class="page-chip-item"><span class="pc-num">p.187</span></a><a href="#page-188" class="page-chip-item"><span class="pc-num">p.188</span></a><a href="#page-189" class="page-chip-item"><span class="pc-num">p.189</span></a><a href="#page-190" class="page-chip-item"><span class="pc-num">p.190</span></a><a href="#page-191" class="page-chip-item"><span class="pc-num">p.191</span></a><a href="#page-192" class="page-chip-item"><span class="pc-num">p.192</span></a><a href="#page-193" class="page-chip-item"><span class="pc-num">p.193</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-174"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch12" aria-label="Chapter 12 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.174–193 · 共 20 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-174">第 174 页 · 学习目标与虐待欺凌防范认知开篇</option><option value="page-175">第 175 页 · 核心专业术语表与反虐待基本人权基石</option><option value="page-176">第 176 页 · 《加拿大权利与自由宪章》与六大虐待类型全解析</option><option value="page-177">第 177 页 · 专栏 12.1 加拿大人法定权利与自由全貌及图像侵权</option><option value="page-178">第 178 页 · 专栏 12.2 网络欺凌防范与专栏 12.3 刑法非自愿私密图像立法</option><option value="page-179">第 179 页 · 虐待关系特征与专栏 12.4 虐待极高危易感人群剖析</option><option value="page-180">第 180 页 · 虐待诱发诱因、识别指征与安全专栏：成人受虐症状清单 (Part 1)</option><option value="page-181">第 181 页 · 成人受虐症状清单 (Part 2: 经济与忽视)、儿童受虐体征与配偶虐待成因</option><option value="page-182">第 182 页 · 虐待恶性循环三阶段与案例：艾米·卢的性侵创伤与触碰回避</option><option value="page-183">第 183 页 · 儿童虐待与忽视的深远心理破坏及分类</option><option value="page-184">第 184 页 · 衰弱消退综合征与案例：泰勒胎儿酒精谱系障碍与高压家庭</option><option value="page-185">第 185 页 · 长者虐待的高发诱因、易感群体与隐瞒受虐的心理机制</option><option value="page-186">第 186 页 · 机构虐待（粗暴对待 vs 婴儿化贬损语言）与芬妮太太家暴目击案例</option><option value="page-187">第 187 页 · 当服务对象向你倾诉受虐经历时的专业支持指南与倾听原则</option><option value="page-188">第 188 页 · 医护人员执业受暴风险与法定虐待汇报程序铁律</option><option value="page-189">第 189 页 · 安全专栏：遭遇攻击性服务对象时的自我防卫脱身法则</option><option value="page-190">第 190 页 · 职场欺凌、骚扰界定与专栏 12.5 职业健康安全法案雇主法定义务</option><option value="page-191">第 191 页 · 应对职场欺凌四步法、客观取证日志与员工援助计划 (EAP)</option><option value="page-192">第 192 页 · 本章核心知识点回顾、希尔德女士尊严照料批判性思维修炼与自测 (Part 1: Q1-Q3)</option><option value="page-193">第 193 页 · 章末全真自测试题 (Part 2: Q4-Q17)、权威答案精解与在线研习资源</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-174" class="cp-chip" id="cp-chip-12-174" data-page="174" onclick="handlePageChipClick(event, 'page-174')" title="第 174 页 · 学习目标与虐待欺凌防范认知开篇"><span class="cp-num">p.174</span></a><a href="#page-175" class="cp-chip" id="cp-chip-12-175" data-page="175" onclick="handlePageChipClick(event, 'page-175')" title="第 175 页 · 核心专业术语表与反虐待基本人权基石"><span class="cp-num">p.175</span></a><a href="#page-176" class="cp-chip" id="cp-chip-12-176" data-page="176" onclick="handlePageChipClick(event, 'page-176')" title="第 176 页 · 《加拿大权利与自由宪章》与六大虐待类型全解析"><span class="cp-num">p.176</span></a><a href="#page-177" class="cp-chip" id="cp-chip-12-177" data-page="177" onclick="handlePageChipClick(event, 'page-177')" title="第 177 页 · 专栏 12.1 加拿大人法定权利与自由全貌及图像侵权"><span class="cp-num">p.177</span></a><a href="#page-178" class="cp-chip" id="cp-chip-12-178" data-page="178" onclick="handlePageChipClick(event, 'page-178')" title="第 178 页 · 专栏 12.2 网络欺凌防范与专栏 12.3 刑法非自愿私密图像立法"><span class="cp-num">p.178</span></a><a href="#page-179" class="cp-chip" id="cp-chip-12-179" data-page="179" onclick="handlePageChipClick(event, 'page-179')" title="第 179 页 · 虐待关系特征与专栏 12.4 虐待极高危易感人群剖析"><span class="cp-num">p.179</span></a><a href="#page-180" class="cp-chip" id="cp-chip-12-180" data-page="180" onclick="handlePageChipClick(event, 'page-180')" title="第 180 页 · 虐待诱发诱因、识别指征与安全专栏：成人受虐症状清单 (Part 1)"><span class="cp-num">p.180</span></a><a href="#page-181" class="cp-chip" id="cp-chip-12-181" data-page="181" onclick="handlePageChipClick(event, 'page-181')" title="第 181 页 · 成人受虐症状清单 (Part 2: 经济与忽视)、儿童受虐体征与配偶虐待成因"><span class="cp-num">p.181</span></a><a href="#page-182" class="cp-chip" id="cp-chip-12-182" data-page="182" onclick="handlePageChipClick(event, 'page-182')" title="第 182 页 · 虐待恶性循环三阶段与案例：艾米·卢的性侵创伤与触碰回避"><span class="cp-num">p.182</span></a><a href="#page-183" class="cp-chip" id="cp-chip-12-183" data-page="183" onclick="handlePageChipClick(event, 'page-183')" title="第 183 页 · 儿童虐待与忽视的深远心理破坏及分类"><span class="cp-num">p.183</span></a><a href="#page-184" class="cp-chip" id="cp-chip-12-184" data-page="184" onclick="handlePageChipClick(event, 'page-184')" title="第 184 页 · 衰弱消退综合征与案例：泰勒胎儿酒精谱系障碍与高压家庭"><span class="cp-num">p.184</span></a><a href="#page-185" class="cp-chip" id="cp-chip-12-185" data-page="185" onclick="handlePageChipClick(event, 'page-185')" title="第 185 页 · 长者虐待的高发诱因、易感群体与隐瞒受虐的心理机制"><span class="cp-num">p.185</span></a><a href="#page-186" class="cp-chip" id="cp-chip-12-186" data-page="186" onclick="handlePageChipClick(event, 'page-186')" title="第 186 页 · 机构虐待（粗暴对待 vs 婴儿化贬损语言）与芬妮太太家暴目击案例"><span class="cp-num">p.186</span></a><a href="#page-187" class="cp-chip" id="cp-chip-12-187" data-page="187" onclick="handlePageChipClick(event, 'page-187')" title="第 187 页 · 当服务对象向你倾诉受虐经历时的专业支持指南与倾听原则"><span class="cp-num">p.187</span></a><a href="#page-188" class="cp-chip" id="cp-chip-12-188" data-page="188" onclick="handlePageChipClick(event, 'page-188')" title="第 188 页 · 医护人员执业受暴风险与法定虐待汇报程序铁律"><span class="cp-num">p.188</span></a><a href="#page-189" class="cp-chip" id="cp-chip-12-189" data-page="189" onclick="handlePageChipClick(event, 'page-189')" title="第 189 页 · 安全专栏：遭遇攻击性服务对象时的自我防卫脱身法则"><span class="cp-num">p.189</span></a><a href="#page-190" class="cp-chip" id="cp-chip-12-190" data-page="190" onclick="handlePageChipClick(event, 'page-190')" title="第 190 页 · 职场欺凌、骚扰界定与专栏 12.5 职业健康安全法案雇主法定义务"><span class="cp-num">p.190</span></a><a href="#page-191" class="cp-chip" id="cp-chip-12-191" data-page="191" onclick="handlePageChipClick(event, 'page-191')" title="第 191 页 · 应对职场欺凌四步法、客观取证日志与员工援助计划 (EAP)"><span class="cp-num">p.191</span></a><a href="#page-192" class="cp-chip" id="cp-chip-12-192" data-page="192" onclick="handlePageChipClick(event, 'page-192')" title="第 192 页 · 本章核心知识点回顾、希尔德女士尊严照料批判性思维修炼与自测 (Part 1: Q1-Q3)"><span class="cp-num">p.192</span></a><a href="#page-193" class="cp-chip" id="cp-chip-12-193" data-page="193" onclick="handlePageChipClick(event, 'page-193')" title="第 193 页 · 章末全真自测试题 (Part 2: Q4-Q17)、权威答案精解与在线研习资源"><span class="cp-num">p.193</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-174"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -2434,6 +2483,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

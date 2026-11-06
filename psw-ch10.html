@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：20:45</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch10-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-149">第 149 页 · 学习目标与团队协作开篇</option><option value="page-150">第 150 页 · 核心专业术语表与团队执业基石</option><option value="page-151">第 151 页 · 医疗团队核心要素、卓越团队合作原则与角色边界</option><option value="page-152">第 152 页 · 专栏：个案研讨会实战与团队模式的核心优势</option><option value="page-153">第 153 页 · 机构内照护团队模式：功能制、团队制与责任制护理</option><option value="page-154">第 154 页 · 社区跨学科团队运作、个案经理协调角色与居家照护</option><option value="page-155">第 155 页 · 团队协作核心挑战、职场负面态度化解与专业信任</option><option value="page-156">第 156 页 · 工作委派法定定义、受监管人员与非受监管人员权责</option><option value="page-157">第 157 页 · 加拿大各省工作委派法定程序与非可转让性铁律</option><option value="page-158">第 158 页 · 护士工作委派五大正确黄金原则与决策自审关卡</option><option value="page-159">第 159 页 · 委派决策五阶段严密闭环：评估、规划、培训、监护与成效考核</option><option value="page-160">第 160 页 · 支持工作者在委派中的法定义务、安全边界与汇报要义</option><option value="page-161">第 161 页 · 坚决拒绝接受委派的法定六大红线情形与专业拒绝沟通范式</option><option value="page-162">第 162 页 · 本章核心知识点回顾、居家换药越权两难思维修炼与章末自测 (Part 1)</option><option value="page-163">第 163 页 · 章末全真自测试题 (Part 2: Q3-Q10)、权威答案精解与在线研习资源</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-149" class="page-chip-item"><span class="pc-num">p.149</span></a><a href="#page-150" class="page-chip-item"><span class="pc-num">p.150</span></a><a href="#page-151" class="page-chip-item"><span class="pc-num">p.151</span></a><a href="#page-152" class="page-chip-item"><span class="pc-num">p.152</span></a><a href="#page-153" class="page-chip-item"><span class="pc-num">p.153</span></a><a href="#page-154" class="page-chip-item"><span class="pc-num">p.154</span></a><a href="#page-155" class="page-chip-item"><span class="pc-num">p.155</span></a><a href="#page-156" class="page-chip-item"><span class="pc-num">p.156</span></a><a href="#page-157" class="page-chip-item"><span class="pc-num">p.157</span></a><a href="#page-158" class="page-chip-item"><span class="pc-num">p.158</span></a><a href="#page-159" class="page-chip-item"><span class="pc-num">p.159</span></a><a href="#page-160" class="page-chip-item"><span class="pc-num">p.160</span></a><a href="#page-161" class="page-chip-item"><span class="pc-num">p.161</span></a><a href="#page-162" class="page-chip-item"><span class="pc-num">p.162</span></a><a href="#page-163" class="page-chip-item"><span class="pc-num">p.163</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-149"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch10" aria-label="Chapter 10 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.149–163 · 共 15 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-149">第 149 页 · 学习目标与团队协作开篇</option><option value="page-150">第 150 页 · 核心专业术语表与团队执业基石</option><option value="page-151">第 151 页 · 医疗团队核心要素、卓越团队合作原则与角色边界</option><option value="page-152">第 152 页 · 专栏：个案研讨会实战与团队模式的核心优势</option><option value="page-153">第 153 页 · 机构内照护团队模式：功能制、团队制与责任制护理</option><option value="page-154">第 154 页 · 社区跨学科团队运作、个案经理协调角色与居家照护</option><option value="page-155">第 155 页 · 团队协作核心挑战、职场负面态度化解与专业信任</option><option value="page-156">第 156 页 · 工作委派法定定义、受监管人员与非受监管人员权责</option><option value="page-157">第 157 页 · 加拿大各省工作委派法定程序与非可转让性铁律</option><option value="page-158">第 158 页 · 护士工作委派五大正确黄金原则与决策自审关卡</option><option value="page-159">第 159 页 · 委派决策五阶段严密闭环：评估、规划、培训、监护与成效考核</option><option value="page-160">第 160 页 · 支持工作者在委派中的法定义务、安全边界与汇报要义</option><option value="page-161">第 161 页 · 坚决拒绝接受委派的法定六大红线情形与专业拒绝沟通范式</option><option value="page-162">第 162 页 · 本章核心知识点回顾、居家换药越权两难思维修炼与章末自测 (Part 1)</option><option value="page-163">第 163 页 · 章末全真自测试题 (Part 2: Q3-Q10)、权威答案精解与在线研习资源</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-149" class="cp-chip" id="cp-chip-10-149" data-page="149" onclick="handlePageChipClick(event, 'page-149')" title="第 149 页 · 学习目标与团队协作开篇"><span class="cp-num">p.149</span></a><a href="#page-150" class="cp-chip" id="cp-chip-10-150" data-page="150" onclick="handlePageChipClick(event, 'page-150')" title="第 150 页 · 核心专业术语表与团队执业基石"><span class="cp-num">p.150</span></a><a href="#page-151" class="cp-chip" id="cp-chip-10-151" data-page="151" onclick="handlePageChipClick(event, 'page-151')" title="第 151 页 · 医疗团队核心要素、卓越团队合作原则与角色边界"><span class="cp-num">p.151</span></a><a href="#page-152" class="cp-chip" id="cp-chip-10-152" data-page="152" onclick="handlePageChipClick(event, 'page-152')" title="第 152 页 · 专栏：个案研讨会实战与团队模式的核心优势"><span class="cp-num">p.152</span></a><a href="#page-153" class="cp-chip" id="cp-chip-10-153" data-page="153" onclick="handlePageChipClick(event, 'page-153')" title="第 153 页 · 机构内照护团队模式：功能制、团队制与责任制护理"><span class="cp-num">p.153</span></a><a href="#page-154" class="cp-chip" id="cp-chip-10-154" data-page="154" onclick="handlePageChipClick(event, 'page-154')" title="第 154 页 · 社区跨学科团队运作、个案经理协调角色与居家照护"><span class="cp-num">p.154</span></a><a href="#page-155" class="cp-chip" id="cp-chip-10-155" data-page="155" onclick="handlePageChipClick(event, 'page-155')" title="第 155 页 · 团队协作核心挑战、职场负面态度化解与专业信任"><span class="cp-num">p.155</span></a><a href="#page-156" class="cp-chip" id="cp-chip-10-156" data-page="156" onclick="handlePageChipClick(event, 'page-156')" title="第 156 页 · 工作委派法定定义、受监管人员与非受监管人员权责"><span class="cp-num">p.156</span></a><a href="#page-157" class="cp-chip" id="cp-chip-10-157" data-page="157" onclick="handlePageChipClick(event, 'page-157')" title="第 157 页 · 加拿大各省工作委派法定程序与非可转让性铁律"><span class="cp-num">p.157</span></a><a href="#page-158" class="cp-chip" id="cp-chip-10-158" data-page="158" onclick="handlePageChipClick(event, 'page-158')" title="第 158 页 · 护士工作委派五大正确黄金原则与决策自审关卡"><span class="cp-num">p.158</span></a><a href="#page-159" class="cp-chip" id="cp-chip-10-159" data-page="159" onclick="handlePageChipClick(event, 'page-159')" title="第 159 页 · 委派决策五阶段严密闭环：评估、规划、培训、监护与成效考核"><span class="cp-num">p.159</span></a><a href="#page-160" class="cp-chip" id="cp-chip-10-160" data-page="160" onclick="handlePageChipClick(event, 'page-160')" title="第 160 页 · 支持工作者在委派中的法定义务、安全边界与汇报要义"><span class="cp-num">p.160</span></a><a href="#page-161" class="cp-chip" id="cp-chip-10-161" data-page="161" onclick="handlePageChipClick(event, 'page-161')" title="第 161 页 · 坚决拒绝接受委派的法定六大红线情形与专业拒绝沟通范式"><span class="cp-num">p.161</span></a><a href="#page-162" class="cp-chip" id="cp-chip-10-162" data-page="162" onclick="handlePageChipClick(event, 'page-162')" title="第 162 页 · 本章核心知识点回顾、居家换药越权两难思维修炼与章末自测 (Part 1)"><span class="cp-num">p.162</span></a><a href="#page-163" class="cp-chip" id="cp-chip-10-163" data-page="163" onclick="handlePageChipClick(event, 'page-163')" title="第 163 页 · 章末全真自测试题 (Part 2: Q3-Q10)、权威答案精解与在线研习资源"><span class="cp-num">p.163</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-149"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -2221,6 +2270,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

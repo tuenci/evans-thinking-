@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：38:40</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch14-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-215">第 215 页 · 学习目标与身体力学防护原则开篇</option><option value="page-216">第 216 页 · 核心专业术语表与支持工作者日常体能搬抬负荷</option><option value="page-217">第 217 页 · 工伤防范基石：10分钟岗前拉伸热身与全身关节旋转操</option><option value="page-218">第 218 页 · 身体力学三大支柱：支撑面、重心与骨盆倾斜/弓步法则</option><option value="page-219">第 219 页 · 安全专栏：良好身体力学黄金操作准则与零搬抬政策 (No-Lift)</option><option value="page-220">第 220 页 · 失能案主协助装备选型、人机协同与双人/三人团队配合</option><option value="page-221">第 221 页 · 居家与长者照护聚焦：摩擦力 (Friction) 与剪切力 (Shearing) 组织损伤病理</option><option value="page-222">第 222 页 · 剪切力防范全流程：移位单 (Turning Pad) 与引流导管安全保护</option><option value="page-223">第 223 页 · 减摩擦移位神器：滑移单 (Slider Sheets) 与滑移板 (Slider Boards) 规范操作</option><option value="page-224">第 224 页 · 翻身技术总览：常规床边翻身与轴线翻身 (Log-Rolling) 临床适应症</option><option value="page-225">第 225 页 · 操作规程：脊柱创伤案主轴线翻身法 (Log-Rolling) 准备与三人协同入轨</option><option value="page-226">第 226 页 · 操作规程：轴线翻身软枕稳固支撑、DIPPS 舒适体位与术后评估</option><option value="page-227">第 227 页 · 操作规程：协助案主向床头移动 (Moving Up in Bed) 准备与协同发力</option><option value="page-228">第 228 页 · 操作规程：移位单拉平防压疮护理、床栏复位与临床体征评估</option><option value="page-229">第 229 页 · 操作规程：病床至平车转运法 (Bed to Stretcher) 准备与协同滑移</option><option value="page-230">第 230 页 · 操作规程：平车安全护栏锁定、转运防跌倒与反向回床复位</option><option value="page-231">第 231 页 · 床上端坐试耐受 (Dangling) 循环刺激与福氏卧位 (Fowler's) 角度分级</option><option value="page-232">第 232 页 · 操作规程：分段式协助案主向床边移动 (Moving to Side of Bed)</option><option value="page-233">第 233 页 · 操作规程：床边移动动作分解完成、DIPPS 隐私与安全床栏管理</option><option value="page-234">第 234 页 · 操作规程：协助案主在床边端坐双腿下垂 (Dangling) 准备与体位性低血压防范</option><option value="page-235">第 235 页 · 操作规程：床边下垂脉搏监测、头晕眩晕应急处置与安全回床</option><option value="page-236">第 236 页 · 临床核心体位标准：仰卧位 (Supine) 与侧卧位 (Lateral) 减压垫枕规范</option><option value="page-237">第 237 页 · 特殊临床体位：俯卧位 (Prone) 与西姆斯灌肠检查卧位 (Sims') 摆放标准</option><option value="page-238">第 238 页 · 姿势支撑防畸形辅具：足托板、防足下垂夹板、转子卷与分腿枕</option><option value="page-239">第 239 页 · 轮椅与座椅端坐体位标准：90-90-90度角法则与上肢抬高托扶</option><option value="page-240">第 240 页 · 安全专栏：移位 (Transfer) 与起吊 (Lift) 的本质区别及轮椅重置复位</option><option value="page-241">第 241 页 · 移位辅助装备全解析：步态移位带 (Transfer Belt) 与滑移转运板 (Transfer Board)</option><option value="page-242">第 242 页 · 操作规程：移位安全带 (Transfer Belt) 规范佩戴、两指松紧度检验与禁忌症</option><option value="page-243">第 243 页 · 徒手硬抬 (Manual Lift) 致命危害、工伤致残风险与机构安全禁令</option><option value="page-244">第 244 页 · 操作规程：床至轮椅安全转移 (Bed to Chair) 准备、健侧主导与双人站位</option><option value="page-245">第 245 页 · 操作规程：床至轮椅转移发力技巧、双膝顶抵支点与旋转入座</option><option value="page-246">第 246 页 · 操作规程：轮椅坐姿摆正、脚踏板复位与反向回床复位规程</option><option value="page-247">第 247 页 · 操作规程：反向回床动作分解、DIPPS 舒适体位与呼叫铃交付</option><option value="page-248">第 248 页 · 操作规程：马桶及座便椅转移 (To and From Toilet) 准备与衣裤退解</option><option value="page-249">第 249 页 · 操作规程：马桶转移坐下、会阴冲洗消毒与防滑抓杆 (Grab Bars) 规范</option><option value="page-250">第 250 页 · 操作规程：马桶起立协助、便后手部卫生与轮椅平稳回转</option><option value="page-251">第 251 页 · 实战案例研习：支持郭太太 (Mrs. Quouong)——零搬抬政策 (No-Lift) 与同侪违规压力处置</option><option value="page-252">第 252 页 · 操作规程：三人协同平车转运法 (Moving to a Stretcher) 准备与床位平行锁定</option><option value="page-253">第 253 页 · 操作规程：平车滑移单过床推进、高低落差调平与三人默契发力</option><option value="page-254">第 254 页 · 操作规程：平车护栏拉起固定、盖被保暖防风与术后平卧交接</option><option value="page-255">第 255 页 · 操作规程：电动/液压机械升降机 (Mechanical Lift) 悬吊带铺展与挂钩安全锁定</option><option value="page-256">第 256 页 · 操作规程：机械吊机升起平移、立位升降机规范与坐姿平稳着陆</option><option value="page-257">第 257 页 · 本章核心要点精炼回顾、急迫如厕单人困境临床思维修炼与自测题 (Q1-Q17)</option><option value="page-258">第 258 页 · 章末全真执业自测题 (Q18-Q28 T/F & 单选题) 及原版权威官方答案核验</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-215" class="page-chip-item"><span class="pc-num">p.215</span></a><a href="#page-216" class="page-chip-item"><span class="pc-num">p.216</span></a><a href="#page-217" class="page-chip-item"><span class="pc-num">p.217</span></a><a href="#page-218" class="page-chip-item"><span class="pc-num">p.218</span></a><a href="#page-219" class="page-chip-item"><span class="pc-num">p.219</span></a><a href="#page-220" class="page-chip-item"><span class="pc-num">p.220</span></a><a href="#page-221" class="page-chip-item"><span class="pc-num">p.221</span></a><a href="#page-222" class="page-chip-item"><span class="pc-num">p.222</span></a><a href="#page-223" class="page-chip-item"><span class="pc-num">p.223</span></a><a href="#page-224" class="page-chip-item"><span class="pc-num">p.224</span></a><a href="#page-225" class="page-chip-item"><span class="pc-num">p.225</span></a><a href="#page-226" class="page-chip-item"><span class="pc-num">p.226</span></a><a href="#page-227" class="page-chip-item"><span class="pc-num">p.227</span></a><a href="#page-228" class="page-chip-item"><span class="pc-num">p.228</span></a><a href="#page-229" class="page-chip-item"><span class="pc-num">p.229</span></a><a href="#page-230" class="page-chip-item"><span class="pc-num">p.230</span></a><a href="#page-231" class="page-chip-item"><span class="pc-num">p.231</span></a><a href="#page-232" class="page-chip-item"><span class="pc-num">p.232</span></a><a href="#page-233" class="page-chip-item"><span class="pc-num">p.233</span></a><a href="#page-234" class="page-chip-item"><span class="pc-num">p.234</span></a><a href="#page-235" class="page-chip-item"><span class="pc-num">p.235</span></a><a href="#page-236" class="page-chip-item"><span class="pc-num">p.236</span></a><a href="#page-237" class="page-chip-item"><span class="pc-num">p.237</span></a><a href="#page-238" class="page-chip-item"><span class="pc-num">p.238</span></a><a href="#page-239" class="page-chip-item"><span class="pc-num">p.239</span></a><a href="#page-240" class="page-chip-item"><span class="pc-num">p.240</span></a><a href="#page-241" class="page-chip-item"><span class="pc-num">p.241</span></a><a href="#page-242" class="page-chip-item"><span class="pc-num">p.242</span></a><a href="#page-243" class="page-chip-item"><span class="pc-num">p.243</span></a><a href="#page-244" class="page-chip-item"><span class="pc-num">p.244</span></a><a href="#page-245" class="page-chip-item"><span class="pc-num">p.245</span></a><a href="#page-246" class="page-chip-item"><span class="pc-num">p.246</span></a><a href="#page-247" class="page-chip-item"><span class="pc-num">p.247</span></a><a href="#page-248" class="page-chip-item"><span class="pc-num">p.248</span></a><a href="#page-249" class="page-chip-item"><span class="pc-num">p.249</span></a><a href="#page-250" class="page-chip-item"><span class="pc-num">p.250</span></a><a href="#page-251" class="page-chip-item"><span class="pc-num">p.251</span></a><a href="#page-252" class="page-chip-item"><span class="pc-num">p.252</span></a><a href="#page-253" class="page-chip-item"><span class="pc-num">p.253</span></a><a href="#page-254" class="page-chip-item"><span class="pc-num">p.254</span></a><a href="#page-255" class="page-chip-item"><span class="pc-num">p.255</span></a><a href="#page-256" class="page-chip-item"><span class="pc-num">p.256</span></a><a href="#page-257" class="page-chip-item"><span class="pc-num">p.257</span></a><a href="#page-258" class="page-chip-item"><span class="pc-num">p.258</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-215"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch14" aria-label="Chapter 14 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.215–258 · 共 44 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-215">第 215 页 · 学习目标与身体力学防护原则开篇</option><option value="page-216">第 216 页 · 核心专业术语表与支持工作者日常体能搬抬负荷</option><option value="page-217">第 217 页 · 工伤防范基石：10分钟岗前拉伸热身与全身关节旋转操</option><option value="page-218">第 218 页 · 身体力学三大支柱：支撑面、重心与骨盆倾斜/弓步法则</option><option value="page-219">第 219 页 · 安全专栏：良好身体力学黄金操作准则与零搬抬政策 (No-Lift)</option><option value="page-220">第 220 页 · 失能案主协助装备选型、人机协同与双人/三人团队配合</option><option value="page-221">第 221 页 · 居家与长者照护聚焦：摩擦力 (Friction) 与剪切力 (Shearing) 组织损伤病理</option><option value="page-222">第 222 页 · 剪切力防范全流程：移位单 (Turning Pad) 与引流导管安全保护</option><option value="page-223">第 223 页 · 减摩擦移位神器：滑移单 (Slider Sheets) 与滑移板 (Slider Boards) 规范操作</option><option value="page-224">第 224 页 · 翻身技术总览：常规床边翻身与轴线翻身 (Log-Rolling) 临床适应症</option><option value="page-225">第 225 页 · 操作规程：脊柱创伤案主轴线翻身法 (Log-Rolling) 准备与三人协同入轨</option><option value="page-226">第 226 页 · 操作规程：轴线翻身软枕稳固支撑、DIPPS 舒适体位与术后评估</option><option value="page-227">第 227 页 · 操作规程：协助案主向床头移动 (Moving Up in Bed) 准备与协同发力</option><option value="page-228">第 228 页 · 操作规程：移位单拉平防压疮护理、床栏复位与临床体征评估</option><option value="page-229">第 229 页 · 操作规程：病床至平车转运法 (Bed to Stretcher) 准备与协同滑移</option><option value="page-230">第 230 页 · 操作规程：平车安全护栏锁定、转运防跌倒与反向回床复位</option><option value="page-231">第 231 页 · 床上端坐试耐受 (Dangling) 循环刺激与福氏卧位 (Fowler's) 角度分级</option><option value="page-232">第 232 页 · 操作规程：分段式协助案主向床边移动 (Moving to Side of Bed)</option><option value="page-233">第 233 页 · 操作规程：床边移动动作分解完成、DIPPS 隐私与安全床栏管理</option><option value="page-234">第 234 页 · 操作规程：协助案主在床边端坐双腿下垂 (Dangling) 准备与体位性低血压防范</option><option value="page-235">第 235 页 · 操作规程：床边下垂脉搏监测、头晕眩晕应急处置与安全回床</option><option value="page-236">第 236 页 · 临床核心体位标准：仰卧位 (Supine) 与侧卧位 (Lateral) 减压垫枕规范</option><option value="page-237">第 237 页 · 特殊临床体位：俯卧位 (Prone) 与西姆斯灌肠检查卧位 (Sims') 摆放标准</option><option value="page-238">第 238 页 · 姿势支撑防畸形辅具：足托板、防足下垂夹板、转子卷与分腿枕</option><option value="page-239">第 239 页 · 轮椅与座椅端坐体位标准：90-90-90度角法则与上肢抬高托扶</option><option value="page-240">第 240 页 · 安全专栏：移位 (Transfer) 与起吊 (Lift) 的本质区别及轮椅重置复位</option><option value="page-241">第 241 页 · 移位辅助装备全解析：步态移位带 (Transfer Belt) 与滑移转运板 (Transfer Board)</option><option value="page-242">第 242 页 · 操作规程：移位安全带 (Transfer Belt) 规范佩戴、两指松紧度检验与禁忌症</option><option value="page-243">第 243 页 · 徒手硬抬 (Manual Lift) 致命危害、工伤致残风险与机构安全禁令</option><option value="page-244">第 244 页 · 操作规程：床至轮椅安全转移 (Bed to Chair) 准备、健侧主导与双人站位</option><option value="page-245">第 245 页 · 操作规程：床至轮椅转移发力技巧、双膝顶抵支点与旋转入座</option><option value="page-246">第 246 页 · 操作规程：轮椅坐姿摆正、脚踏板复位与反向回床复位规程</option><option value="page-247">第 247 页 · 操作规程：反向回床动作分解、DIPPS 舒适体位与呼叫铃交付</option><option value="page-248">第 248 页 · 操作规程：马桶及座便椅转移 (To and From Toilet) 准备与衣裤退解</option><option value="page-249">第 249 页 · 操作规程：马桶转移坐下、会阴冲洗消毒与防滑抓杆 (Grab Bars) 规范</option><option value="page-250">第 250 页 · 操作规程：马桶起立协助、便后手部卫生与轮椅平稳回转</option><option value="page-251">第 251 页 · 实战案例研习：支持郭太太 (Mrs. Quouong)——零搬抬政策 (No-Lift) 与同侪违规压力处置</option><option value="page-252">第 252 页 · 操作规程：三人协同平车转运法 (Moving to a Stretcher) 准备与床位平行锁定</option><option value="page-253">第 253 页 · 操作规程：平车滑移单过床推进、高低落差调平与三人默契发力</option><option value="page-254">第 254 页 · 操作规程：平车护栏拉起固定、盖被保暖防风与术后平卧交接</option><option value="page-255">第 255 页 · 操作规程：电动/液压机械升降机 (Mechanical Lift) 悬吊带铺展与挂钩安全锁定</option><option value="page-256">第 256 页 · 操作规程：机械吊机升起平移、立位升降机规范与坐姿平稳着陆</option><option value="page-257">第 257 页 · 本章核心要点精炼回顾、急迫如厕单人困境临床思维修炼与自测题 (Q1-Q17)</option><option value="page-258">第 258 页 · 章末全真执业自测题 (Q18-Q28 T/F & 单选题) 及原版权威官方答案核验</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-215" class="cp-chip" id="cp-chip-14-215" data-page="215" onclick="handlePageChipClick(event, 'page-215')" title="第 215 页 · 学习目标与身体力学防护原则开篇"><span class="cp-num">p.215</span></a><a href="#page-216" class="cp-chip" id="cp-chip-14-216" data-page="216" onclick="handlePageChipClick(event, 'page-216')" title="第 216 页 · 核心专业术语表与支持工作者日常体能搬抬负荷"><span class="cp-num">p.216</span></a><a href="#page-217" class="cp-chip" id="cp-chip-14-217" data-page="217" onclick="handlePageChipClick(event, 'page-217')" title="第 217 页 · 工伤防范基石：10分钟岗前拉伸热身与全身关节旋转操"><span class="cp-num">p.217</span></a><a href="#page-218" class="cp-chip" id="cp-chip-14-218" data-page="218" onclick="handlePageChipClick(event, 'page-218')" title="第 218 页 · 身体力学三大支柱：支撑面、重心与骨盆倾斜/弓步法则"><span class="cp-num">p.218</span></a><a href="#page-219" class="cp-chip" id="cp-chip-14-219" data-page="219" onclick="handlePageChipClick(event, 'page-219')" title="第 219 页 · 安全专栏：良好身体力学黄金操作准则与零搬抬政策 (No-Lift)"><span class="cp-num">p.219</span></a><a href="#page-220" class="cp-chip" id="cp-chip-14-220" data-page="220" onclick="handlePageChipClick(event, 'page-220')" title="第 220 页 · 失能案主协助装备选型、人机协同与双人/三人团队配合"><span class="cp-num">p.220</span></a><a href="#page-221" class="cp-chip" id="cp-chip-14-221" data-page="221" onclick="handlePageChipClick(event, 'page-221')" title="第 221 页 · 居家与长者照护聚焦：摩擦力 (Friction) 与剪切力 (Shearing) 组织损伤病理"><span class="cp-num">p.221</span></a><a href="#page-222" class="cp-chip" id="cp-chip-14-222" data-page="222" onclick="handlePageChipClick(event, 'page-222')" title="第 222 页 · 剪切力防范全流程：移位单 (Turning Pad) 与引流导管安全保护"><span class="cp-num">p.222</span></a><a href="#page-223" class="cp-chip" id="cp-chip-14-223" data-page="223" onclick="handlePageChipClick(event, 'page-223')" title="第 223 页 · 减摩擦移位神器：滑移单 (Slider Sheets) 与滑移板 (Slider Boards) 规范操作"><span class="cp-num">p.223</span></a><a href="#page-224" class="cp-chip" id="cp-chip-14-224" data-page="224" onclick="handlePageChipClick(event, 'page-224')" title="第 224 页 · 翻身技术总览：常规床边翻身与轴线翻身 (Log-Rolling) 临床适应症"><span class="cp-num">p.224</span></a><a href="#page-225" class="cp-chip" id="cp-chip-14-225" data-page="225" onclick="handlePageChipClick(event, 'page-225')" title="第 225 页 · 操作规程：脊柱创伤案主轴线翻身法 (Log-Rolling) 准备与三人协同入轨"><span class="cp-num">p.225</span></a><a href="#page-226" class="cp-chip" id="cp-chip-14-226" data-page="226" onclick="handlePageChipClick(event, 'page-226')" title="第 226 页 · 操作规程：轴线翻身软枕稳固支撑、DIPPS 舒适体位与术后评估"><span class="cp-num">p.226</span></a><a href="#page-227" class="cp-chip" id="cp-chip-14-227" data-page="227" onclick="handlePageChipClick(event, 'page-227')" title="第 227 页 · 操作规程：协助案主向床头移动 (Moving Up in Bed) 准备与协同发力"><span class="cp-num">p.227</span></a><a href="#page-228" class="cp-chip" id="cp-chip-14-228" data-page="228" onclick="handlePageChipClick(event, 'page-228')" title="第 228 页 · 操作规程：移位单拉平防压疮护理、床栏复位与临床体征评估"><span class="cp-num">p.228</span></a><a href="#page-229" class="cp-chip" id="cp-chip-14-229" data-page="229" onclick="handlePageChipClick(event, 'page-229')" title="第 229 页 · 操作规程：病床至平车转运法 (Bed to Stretcher) 准备与协同滑移"><span class="cp-num">p.229</span></a><a href="#page-230" class="cp-chip" id="cp-chip-14-230" data-page="230" onclick="handlePageChipClick(event, 'page-230')" title="第 230 页 · 操作规程：平车安全护栏锁定、转运防跌倒与反向回床复位"><span class="cp-num">p.230</span></a><a href="#page-231" class="cp-chip" id="cp-chip-14-231" data-page="231" onclick="handlePageChipClick(event, 'page-231')" title="第 231 页 · 床上端坐试耐受 (Dangling) 循环刺激与福氏卧位 (Fowler's) 角度分级"><span class="cp-num">p.231</span></a><a href="#page-232" class="cp-chip" id="cp-chip-14-232" data-page="232" onclick="handlePageChipClick(event, 'page-232')" title="第 232 页 · 操作规程：分段式协助案主向床边移动 (Moving to Side of Bed)"><span class="cp-num">p.232</span></a><a href="#page-233" class="cp-chip" id="cp-chip-14-233" data-page="233" onclick="handlePageChipClick(event, 'page-233')" title="第 233 页 · 操作规程：床边移动动作分解完成、DIPPS 隐私与安全床栏管理"><span class="cp-num">p.233</span></a><a href="#page-234" class="cp-chip" id="cp-chip-14-234" data-page="234" onclick="handlePageChipClick(event, 'page-234')" title="第 234 页 · 操作规程：协助案主在床边端坐双腿下垂 (Dangling) 准备与体位性低血压防范"><span class="cp-num">p.234</span></a><a href="#page-235" class="cp-chip" id="cp-chip-14-235" data-page="235" onclick="handlePageChipClick(event, 'page-235')" title="第 235 页 · 操作规程：床边下垂脉搏监测、头晕眩晕应急处置与安全回床"><span class="cp-num">p.235</span></a><a href="#page-236" class="cp-chip" id="cp-chip-14-236" data-page="236" onclick="handlePageChipClick(event, 'page-236')" title="第 236 页 · 临床核心体位标准：仰卧位 (Supine) 与侧卧位 (Lateral) 减压垫枕规范"><span class="cp-num">p.236</span></a><a href="#page-237" class="cp-chip" id="cp-chip-14-237" data-page="237" onclick="handlePageChipClick(event, 'page-237')" title="第 237 页 · 特殊临床体位：俯卧位 (Prone) 与西姆斯灌肠检查卧位 (Sims') 摆放标准"><span class="cp-num">p.237</span></a><a href="#page-238" class="cp-chip" id="cp-chip-14-238" data-page="238" onclick="handlePageChipClick(event, 'page-238')" title="第 238 页 · 姿势支撑防畸形辅具：足托板、防足下垂夹板、转子卷与分腿枕"><span class="cp-num">p.238</span></a><a href="#page-239" class="cp-chip" id="cp-chip-14-239" data-page="239" onclick="handlePageChipClick(event, 'page-239')" title="第 239 页 · 轮椅与座椅端坐体位标准：90-90-90度角法则与上肢抬高托扶"><span class="cp-num">p.239</span></a><a href="#page-240" class="cp-chip" id="cp-chip-14-240" data-page="240" onclick="handlePageChipClick(event, 'page-240')" title="第 240 页 · 安全专栏：移位 (Transfer) 与起吊 (Lift) 的本质区别及轮椅重置复位"><span class="cp-num">p.240</span></a><a href="#page-241" class="cp-chip" id="cp-chip-14-241" data-page="241" onclick="handlePageChipClick(event, 'page-241')" title="第 241 页 · 移位辅助装备全解析：步态移位带 (Transfer Belt) 与滑移转运板 (Transfer Board)"><span class="cp-num">p.241</span></a><a href="#page-242" class="cp-chip" id="cp-chip-14-242" data-page="242" onclick="handlePageChipClick(event, 'page-242')" title="第 242 页 · 操作规程：移位安全带 (Transfer Belt) 规范佩戴、两指松紧度检验与禁忌症"><span class="cp-num">p.242</span></a><a href="#page-243" class="cp-chip" id="cp-chip-14-243" data-page="243" onclick="handlePageChipClick(event, 'page-243')" title="第 243 页 · 徒手硬抬 (Manual Lift) 致命危害、工伤致残风险与机构安全禁令"><span class="cp-num">p.243</span></a><a href="#page-244" class="cp-chip" id="cp-chip-14-244" data-page="244" onclick="handlePageChipClick(event, 'page-244')" title="第 244 页 · 操作规程：床至轮椅安全转移 (Bed to Chair) 准备、健侧主导与双人站位"><span class="cp-num">p.244</span></a><a href="#page-245" class="cp-chip" id="cp-chip-14-245" data-page="245" onclick="handlePageChipClick(event, 'page-245')" title="第 245 页 · 操作规程：床至轮椅转移发力技巧、双膝顶抵支点与旋转入座"><span class="cp-num">p.245</span></a><a href="#page-246" class="cp-chip" id="cp-chip-14-246" data-page="246" onclick="handlePageChipClick(event, 'page-246')" title="第 246 页 · 操作规程：轮椅坐姿摆正、脚踏板复位与反向回床复位规程"><span class="cp-num">p.246</span></a><a href="#page-247" class="cp-chip" id="cp-chip-14-247" data-page="247" onclick="handlePageChipClick(event, 'page-247')" title="第 247 页 · 操作规程：反向回床动作分解、DIPPS 舒适体位与呼叫铃交付"><span class="cp-num">p.247</span></a><a href="#page-248" class="cp-chip" id="cp-chip-14-248" data-page="248" onclick="handlePageChipClick(event, 'page-248')" title="第 248 页 · 操作规程：马桶及座便椅转移 (To and From Toilet) 准备与衣裤退解"><span class="cp-num">p.248</span></a><a href="#page-249" class="cp-chip" id="cp-chip-14-249" data-page="249" onclick="handlePageChipClick(event, 'page-249')" title="第 249 页 · 操作规程：马桶转移坐下、会阴冲洗消毒与防滑抓杆 (Grab Bars) 规范"><span class="cp-num">p.249</span></a><a href="#page-250" class="cp-chip" id="cp-chip-14-250" data-page="250" onclick="handlePageChipClick(event, 'page-250')" title="第 250 页 · 操作规程：马桶起立协助、便后手部卫生与轮椅平稳回转"><span class="cp-num">p.250</span></a><a href="#page-251" class="cp-chip" id="cp-chip-14-251" data-page="251" onclick="handlePageChipClick(event, 'page-251')" title="第 251 页 · 实战案例研习：支持郭太太 (Mrs. Quouong)——零搬抬政策 (No-Lift) 与同侪违规压力处置"><span class="cp-num">p.251</span></a><a href="#page-252" class="cp-chip" id="cp-chip-14-252" data-page="252" onclick="handlePageChipClick(event, 'page-252')" title="第 252 页 · 操作规程：三人协同平车转运法 (Moving to a Stretcher) 准备与床位平行锁定"><span class="cp-num">p.252</span></a><a href="#page-253" class="cp-chip" id="cp-chip-14-253" data-page="253" onclick="handlePageChipClick(event, 'page-253')" title="第 253 页 · 操作规程：平车滑移单过床推进、高低落差调平与三人默契发力"><span class="cp-num">p.253</span></a><a href="#page-254" class="cp-chip" id="cp-chip-14-254" data-page="254" onclick="handlePageChipClick(event, 'page-254')" title="第 254 页 · 操作规程：平车护栏拉起固定、盖被保暖防风与术后平卧交接"><span class="cp-num">p.254</span></a><a href="#page-255" class="cp-chip" id="cp-chip-14-255" data-page="255" onclick="handlePageChipClick(event, 'page-255')" title="第 255 页 · 操作规程：电动/液压机械升降机 (Mechanical Lift) 悬吊带铺展与挂钩安全锁定"><span class="cp-num">p.255</span></a><a href="#page-256" class="cp-chip" id="cp-chip-14-256" data-page="256" onclick="handlePageChipClick(event, 'page-256')" title="第 256 页 · 操作规程：机械吊机升起平移、立位升降机规范与坐姿平稳着陆"><span class="cp-num">p.256</span></a><a href="#page-257" class="cp-chip" id="cp-chip-14-257" data-page="257" onclick="handlePageChipClick(event, 'page-257')" title="第 257 页 · 本章核心要点精炼回顾、急迫如厕单人困境临床思维修炼与自测题 (Q1-Q17)"><span class="cp-num">p.257</span></a><a href="#page-258" class="cp-chip" id="cp-chip-14-258" data-page="258" onclick="handlePageChipClick(event, 'page-258')" title="第 258 页 · 章末全真执业自测题 (Q18-Q28 T/F & 单选题) 及原版权威官方答案核验"><span class="cp-num">p.258</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-215"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -4121,6 +4170,72 @@ Clients in bed are positioned in basic bed positions to promote comfort, breathi
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：25:30</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch9-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-129">第 129 页 · 学习目标与人际沟通开篇</option><option value="page-130">第 130 页 · 核心专业术语表与人际沟通核心价值</option><option value="page-131">第 131 页 · 沟通模型四要素与影响信息解读的多元因素</option><option value="page-132">第 132 页 · 口头语言沟通艺术、用词选语与电子社交媒体边界</option><option value="page-133">第 133 页 · 照护操作前解释原则与非语言肢体语言系统</option><option value="page-134">第 134 页 · 专栏：雷耶斯先生的言行反差、触碰伦理与有效沉默</option><option value="page-135">第 135 页 · 专栏：罗宾逊太太的静默相伴、倾听艺术与同理复述</option><option value="page-136">第 136 页 · 封闭式提问与开放式提问的临床边界与应用</option><option value="page-137">第 137 页 · 专栏：索菲亚与杜普伊斯先生的复述提问实录与聚焦聚焦</option><option value="page-138">第 138 页 · 常见沟通障碍：打断、自问自答、说教与职场礼仪</option><option value="page-139">第 139 页 · 八大无意识心理防御机制病理界定与表现</option><option value="page-140">第 140 页 · 防御机制临床剖析：否认、投射、合理化与倒退</option><option value="page-141">第 141 页 · 专栏 9.1 杜绝居高临下式轻蔑语言对比与应对防御机制</option><option value="page-142">第 142 页 · 愤怒案主的心理成因、非语言预警体征与平息策略</option><option value="page-143">第 143 页 · 专栏 9.2 平息愤怒案主核心指引与坚定自信沟通风格</option><option value="page-144">第 144 页 · 专栏：卡拉与贝鲁蒂先生的坚定自信沟通辨析与四步教学法</option><option value="page-145">第 145 页 · 专栏 9.3 协助案主学习新技能指引与认知症沟通核心法则</option><option value="page-146">第 146 页 · 专栏 9.4 阿尔茨海默学会认知症全方位沟通黄金实操守则</option><option value="page-147">第 147 页 · 本章核心知识点回顾、长期照护人手短缺思维修炼与章末自测 (Part 1)</option><option value="page-148">第 148 页 · 章末全真自测试题 (Part 2: Q3-Q11)、权威答案精解与在线研习资源</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-129" class="page-chip-item"><span class="pc-num">p.129</span></a><a href="#page-130" class="page-chip-item"><span class="pc-num">p.130</span></a><a href="#page-131" class="page-chip-item"><span class="pc-num">p.131</span></a><a href="#page-132" class="page-chip-item"><span class="pc-num">p.132</span></a><a href="#page-133" class="page-chip-item"><span class="pc-num">p.133</span></a><a href="#page-134" class="page-chip-item"><span class="pc-num">p.134</span></a><a href="#page-135" class="page-chip-item"><span class="pc-num">p.135</span></a><a href="#page-136" class="page-chip-item"><span class="pc-num">p.136</span></a><a href="#page-137" class="page-chip-item"><span class="pc-num">p.137</span></a><a href="#page-138" class="page-chip-item"><span class="pc-num">p.138</span></a><a href="#page-139" class="page-chip-item"><span class="pc-num">p.139</span></a><a href="#page-140" class="page-chip-item"><span class="pc-num">p.140</span></a><a href="#page-141" class="page-chip-item"><span class="pc-num">p.141</span></a><a href="#page-142" class="page-chip-item"><span class="pc-num">p.142</span></a><a href="#page-143" class="page-chip-item"><span class="pc-num">p.143</span></a><a href="#page-144" class="page-chip-item"><span class="pc-num">p.144</span></a><a href="#page-145" class="page-chip-item"><span class="pc-num">p.145</span></a><a href="#page-146" class="page-chip-item"><span class="pc-num">p.146</span></a><a href="#page-147" class="page-chip-item"><span class="pc-num">p.147</span></a><a href="#page-148" class="page-chip-item"><span class="pc-num">p.148</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-129"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch9" aria-label="Chapter 9 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.129–148 · 共 20 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-129">第 129 页 · 学习目标与人际沟通开篇</option><option value="page-130">第 130 页 · 核心专业术语表与人际沟通核心价值</option><option value="page-131">第 131 页 · 沟通模型四要素与影响信息解读的多元因素</option><option value="page-132">第 132 页 · 口头语言沟通艺术、用词选语与电子社交媒体边界</option><option value="page-133">第 133 页 · 照护操作前解释原则与非语言肢体语言系统</option><option value="page-134">第 134 页 · 专栏：雷耶斯先生的言行反差、触碰伦理与有效沉默</option><option value="page-135">第 135 页 · 专栏：罗宾逊太太的静默相伴、倾听艺术与同理复述</option><option value="page-136">第 136 页 · 封闭式提问与开放式提问的临床边界与应用</option><option value="page-137">第 137 页 · 专栏：索菲亚与杜普伊斯先生的复述提问实录与聚焦聚焦</option><option value="page-138">第 138 页 · 常见沟通障碍：打断、自问自答、说教与职场礼仪</option><option value="page-139">第 139 页 · 八大无意识心理防御机制病理界定与表现</option><option value="page-140">第 140 页 · 防御机制临床剖析：否认、投射、合理化与倒退</option><option value="page-141">第 141 页 · 专栏 9.1 杜绝居高临下式轻蔑语言对比与应对防御机制</option><option value="page-142">第 142 页 · 愤怒案主的心理成因、非语言预警体征与平息策略</option><option value="page-143">第 143 页 · 专栏 9.2 平息愤怒案主核心指引与坚定自信沟通风格</option><option value="page-144">第 144 页 · 专栏：卡拉与贝鲁蒂先生的坚定自信沟通辨析与四步教学法</option><option value="page-145">第 145 页 · 专栏 9.3 协助案主学习新技能指引与认知症沟通核心法则</option><option value="page-146">第 146 页 · 专栏 9.4 阿尔茨海默学会认知症全方位沟通黄金实操守则</option><option value="page-147">第 147 页 · 本章核心知识点回顾、长期照护人手短缺思维修炼与章末自测 (Part 1)</option><option value="page-148">第 148 页 · 章末全真自测试题 (Part 2: Q3-Q11)、权威答案精解与在线研习资源</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-129" class="cp-chip" id="cp-chip-9-129" data-page="129" onclick="handlePageChipClick(event, 'page-129')" title="第 129 页 · 学习目标与人际沟通开篇"><span class="cp-num">p.129</span></a><a href="#page-130" class="cp-chip" id="cp-chip-9-130" data-page="130" onclick="handlePageChipClick(event, 'page-130')" title="第 130 页 · 核心专业术语表与人际沟通核心价值"><span class="cp-num">p.130</span></a><a href="#page-131" class="cp-chip" id="cp-chip-9-131" data-page="131" onclick="handlePageChipClick(event, 'page-131')" title="第 131 页 · 沟通模型四要素与影响信息解读的多元因素"><span class="cp-num">p.131</span></a><a href="#page-132" class="cp-chip" id="cp-chip-9-132" data-page="132" onclick="handlePageChipClick(event, 'page-132')" title="第 132 页 · 口头语言沟通艺术、用词选语与电子社交媒体边界"><span class="cp-num">p.132</span></a><a href="#page-133" class="cp-chip" id="cp-chip-9-133" data-page="133" onclick="handlePageChipClick(event, 'page-133')" title="第 133 页 · 照护操作前解释原则与非语言肢体语言系统"><span class="cp-num">p.133</span></a><a href="#page-134" class="cp-chip" id="cp-chip-9-134" data-page="134" onclick="handlePageChipClick(event, 'page-134')" title="第 134 页 · 专栏：雷耶斯先生的言行反差、触碰伦理与有效沉默"><span class="cp-num">p.134</span></a><a href="#page-135" class="cp-chip" id="cp-chip-9-135" data-page="135" onclick="handlePageChipClick(event, 'page-135')" title="第 135 页 · 专栏：罗宾逊太太的静默相伴、倾听艺术与同理复述"><span class="cp-num">p.135</span></a><a href="#page-136" class="cp-chip" id="cp-chip-9-136" data-page="136" onclick="handlePageChipClick(event, 'page-136')" title="第 136 页 · 封闭式提问与开放式提问的临床边界与应用"><span class="cp-num">p.136</span></a><a href="#page-137" class="cp-chip" id="cp-chip-9-137" data-page="137" onclick="handlePageChipClick(event, 'page-137')" title="第 137 页 · 专栏：索菲亚与杜普伊斯先生的复述提问实录与聚焦聚焦"><span class="cp-num">p.137</span></a><a href="#page-138" class="cp-chip" id="cp-chip-9-138" data-page="138" onclick="handlePageChipClick(event, 'page-138')" title="第 138 页 · 常见沟通障碍：打断、自问自答、说教与职场礼仪"><span class="cp-num">p.138</span></a><a href="#page-139" class="cp-chip" id="cp-chip-9-139" data-page="139" onclick="handlePageChipClick(event, 'page-139')" title="第 139 页 · 八大无意识心理防御机制病理界定与表现"><span class="cp-num">p.139</span></a><a href="#page-140" class="cp-chip" id="cp-chip-9-140" data-page="140" onclick="handlePageChipClick(event, 'page-140')" title="第 140 页 · 防御机制临床剖析：否认、投射、合理化与倒退"><span class="cp-num">p.140</span></a><a href="#page-141" class="cp-chip" id="cp-chip-9-141" data-page="141" onclick="handlePageChipClick(event, 'page-141')" title="第 141 页 · 专栏 9.1 杜绝居高临下式轻蔑语言对比与应对防御机制"><span class="cp-num">p.141</span></a><a href="#page-142" class="cp-chip" id="cp-chip-9-142" data-page="142" onclick="handlePageChipClick(event, 'page-142')" title="第 142 页 · 愤怒案主的心理成因、非语言预警体征与平息策略"><span class="cp-num">p.142</span></a><a href="#page-143" class="cp-chip" id="cp-chip-9-143" data-page="143" onclick="handlePageChipClick(event, 'page-143')" title="第 143 页 · 专栏 9.2 平息愤怒案主核心指引与坚定自信沟通风格"><span class="cp-num">p.143</span></a><a href="#page-144" class="cp-chip" id="cp-chip-9-144" data-page="144" onclick="handlePageChipClick(event, 'page-144')" title="第 144 页 · 专栏：卡拉与贝鲁蒂先生的坚定自信沟通辨析与四步教学法"><span class="cp-num">p.144</span></a><a href="#page-145" class="cp-chip" id="cp-chip-9-145" data-page="145" onclick="handlePageChipClick(event, 'page-145')" title="第 145 页 · 专栏 9.3 协助案主学习新技能指引与认知症沟通核心法则"><span class="cp-num">p.145</span></a><a href="#page-146" class="cp-chip" id="cp-chip-9-146" data-page="146" onclick="handlePageChipClick(event, 'page-146')" title="第 146 页 · 专栏 9.4 阿尔茨海默学会认知症全方位沟通黄金实操守则"><span class="cp-num">p.146</span></a><a href="#page-147" class="cp-chip" id="cp-chip-9-147" data-page="147" onclick="handlePageChipClick(event, 'page-147')" title="第 147 页 · 本章核心知识点回顾、长期照护人手短缺思维修炼与章末自测 (Part 1)"><span class="cp-num">p.147</span></a><a href="#page-148" class="cp-chip" id="cp-chip-9-148" data-page="148" onclick="handlePageChipClick(event, 'page-148')" title="第 148 页 · 章末全真自测试题 (Part 2: Q3-Q11)、权威答案精解与在线研习资源"><span class="cp-num">p.148</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-129"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -2991,6 +3040,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

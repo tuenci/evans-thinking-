@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：28:45</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch2-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-20">第 20 页 · 学习目标、全民医保演进与开篇导读 (Objectives & Evolution of Medicare)</option><option value="page-21">第 21 页 · 核心专业术语表与全民医保核心准则导论 (Key Terms & Medicare Framework)</option><option value="page-22">第 22 页 · 加拿大全民医保历史渊源：从萨省试点到全联邦立法 (History of Medicare: Douglas to Canada Health Act)</option><option value="page-23">第 23 页 · 《加拿大健康法》(1984) 五大神圣支柱原则与专栏 2.1 (Five Principles of Medicare & Box 2.1)</option><option value="page-24">第 24 页 · 联邦政府与省/地区政府在医疗照护中的权责划分 (Federal vs Provincial Healthcare Responsibilities)</option><option value="page-25">第 25 页 · 真相与和解委员会 (TRC)：针对原住民健康的七大行动呼吁 (TRC Calls to Action for Indigenous Health)</option><option value="page-26">第 26 页 · 医疗卫生服务三级分级架构：初级、二级与三级医疗 (Primary, Secondary & Tertiary Care Delivery)</option><option value="page-27">第 27 页 · 社区卫生服务机构与居家照护 (Home Care) 的兴起 (Community Health Services & Home Care)</option><option value="page-28">第 28 页 · 加拿大居家照护项目运作模式与公私营机构资金来源 (Home Care Programs & Funding Across Canada)</option><option value="page-29">第 29 页 · 加拿大医疗卫生体系面临的四大严峻挑战 (Challenges: Aging, Costs, Waitlists & Shortages)</option><option value="page-30">第 30 页 · 医疗改革新动向：健康促进、疾病预防与专栏 2.2 门诊就诊自查 (Health Promotion, Prevention & Box 2.2)</option><option value="page-31">第 31 页 · 补充医疗福利保险、私人商业保险与未来发展趋势 (Supplementary Benefits & Future Trends)</option><option value="page-32">第 32 页 · 本章核心要点精要总结、医疗体制议题批判性思维与自测题 Q1-Q3 (Key Points, Critical Thinking & Q1-Q3)</option><option value="page-33">第 33 页 · 章末全真执业自测题 (Q4-Q11) 与教材第 33 页官方标准答案深度精解 (Official Exam Q4-Q11 & Answer Key)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-20" class="page-chip-item"><span class="pc-num">p.20</span></a><a href="#page-21" class="page-chip-item"><span class="pc-num">p.21</span></a><a href="#page-22" class="page-chip-item"><span class="pc-num">p.22</span></a><a href="#page-23" class="page-chip-item"><span class="pc-num">p.23</span></a><a href="#page-24" class="page-chip-item"><span class="pc-num">p.24</span></a><a href="#page-25" class="page-chip-item"><span class="pc-num">p.25</span></a><a href="#page-26" class="page-chip-item"><span class="pc-num">p.26</span></a><a href="#page-27" class="page-chip-item"><span class="pc-num">p.27</span></a><a href="#page-28" class="page-chip-item"><span class="pc-num">p.28</span></a><a href="#page-29" class="page-chip-item"><span class="pc-num">p.29</span></a><a href="#page-30" class="page-chip-item"><span class="pc-num">p.30</span></a><a href="#page-31" class="page-chip-item"><span class="pc-num">p.31</span></a><a href="#page-32" class="page-chip-item"><span class="pc-num">p.32</span></a><a href="#page-33" class="page-chip-item"><span class="pc-num">p.33</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-20"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch2" aria-label="Chapter 2 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.20–33 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-20">第 20 页 · 学习目标、全民医保演进与开篇导读 (Objectives & Evolution of Medicare)</option><option value="page-21">第 21 页 · 核心专业术语表与全民医保核心准则导论 (Key Terms & Medicare Framework)</option><option value="page-22">第 22 页 · 加拿大全民医保历史渊源：从萨省试点到全联邦立法 (History of Medicare: Douglas to Canada Health Act)</option><option value="page-23">第 23 页 · 《加拿大健康法》(1984) 五大神圣支柱原则与专栏 2.1 (Five Principles of Medicare & Box 2.1)</option><option value="page-24">第 24 页 · 联邦政府与省/地区政府在医疗照护中的权责划分 (Federal vs Provincial Healthcare Responsibilities)</option><option value="page-25">第 25 页 · 真相与和解委员会 (TRC)：针对原住民健康的七大行动呼吁 (TRC Calls to Action for Indigenous Health)</option><option value="page-26">第 26 页 · 医疗卫生服务三级分级架构：初级、二级与三级医疗 (Primary, Secondary & Tertiary Care Delivery)</option><option value="page-27">第 27 页 · 社区卫生服务机构与居家照护 (Home Care) 的兴起 (Community Health Services & Home Care)</option><option value="page-28">第 28 页 · 加拿大居家照护项目运作模式与公私营机构资金来源 (Home Care Programs & Funding Across Canada)</option><option value="page-29">第 29 页 · 加拿大医疗卫生体系面临的四大严峻挑战 (Challenges: Aging, Costs, Waitlists & Shortages)</option><option value="page-30">第 30 页 · 医疗改革新动向：健康促进、疾病预防与专栏 2.2 门诊就诊自查 (Health Promotion, Prevention & Box 2.2)</option><option value="page-31">第 31 页 · 补充医疗福利保险、私人商业保险与未来发展趋势 (Supplementary Benefits & Future Trends)</option><option value="page-32">第 32 页 · 本章核心要点精要总结、医疗体制议题批判性思维与自测题 Q1-Q3 (Key Points, Critical Thinking & Q1-Q3)</option><option value="page-33">第 33 页 · 章末全真执业自测题 (Q4-Q11) 与教材第 33 页官方标准答案深度精解 (Official Exam Q4-Q11 & Answer Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-20" class="cp-chip" id="cp-chip-2-20" data-page="20" onclick="handlePageChipClick(event, 'page-20')" title="第 20 页 · 学习目标、全民医保演进与开篇导读 (Objectives & Evolution of Medicare)"><span class="cp-num">p.20</span></a><a href="#page-21" class="cp-chip" id="cp-chip-2-21" data-page="21" onclick="handlePageChipClick(event, 'page-21')" title="第 21 页 · 核心专业术语表与全民医保核心准则导论 (Key Terms & Medicare Framework)"><span class="cp-num">p.21</span></a><a href="#page-22" class="cp-chip" id="cp-chip-2-22" data-page="22" onclick="handlePageChipClick(event, 'page-22')" title="第 22 页 · 加拿大全民医保历史渊源：从萨省试点到全联邦立法 (History of Medicare: Douglas to Canada Health Act)"><span class="cp-num">p.22</span></a><a href="#page-23" class="cp-chip" id="cp-chip-2-23" data-page="23" onclick="handlePageChipClick(event, 'page-23')" title="第 23 页 · 《加拿大健康法》(1984) 五大神圣支柱原则与专栏 2.1 (Five Principles of Medicare & Box 2.1)"><span class="cp-num">p.23</span></a><a href="#page-24" class="cp-chip" id="cp-chip-2-24" data-page="24" onclick="handlePageChipClick(event, 'page-24')" title="第 24 页 · 联邦政府与省/地区政府在医疗照护中的权责划分 (Federal vs Provincial Healthcare Responsibilities)"><span class="cp-num">p.24</span></a><a href="#page-25" class="cp-chip" id="cp-chip-2-25" data-page="25" onclick="handlePageChipClick(event, 'page-25')" title="第 25 页 · 真相与和解委员会 (TRC)：针对原住民健康的七大行动呼吁 (TRC Calls to Action for Indigenous Health)"><span class="cp-num">p.25</span></a><a href="#page-26" class="cp-chip" id="cp-chip-2-26" data-page="26" onclick="handlePageChipClick(event, 'page-26')" title="第 26 页 · 医疗卫生服务三级分级架构：初级、二级与三级医疗 (Primary, Secondary & Tertiary Care Delivery)"><span class="cp-num">p.26</span></a><a href="#page-27" class="cp-chip" id="cp-chip-2-27" data-page="27" onclick="handlePageChipClick(event, 'page-27')" title="第 27 页 · 社区卫生服务机构与居家照护 (Home Care) 的兴起 (Community Health Services & Home Care)"><span class="cp-num">p.27</span></a><a href="#page-28" class="cp-chip" id="cp-chip-2-28" data-page="28" onclick="handlePageChipClick(event, 'page-28')" title="第 28 页 · 加拿大居家照护项目运作模式与公私营机构资金来源 (Home Care Programs & Funding Across Canada)"><span class="cp-num">p.28</span></a><a href="#page-29" class="cp-chip" id="cp-chip-2-29" data-page="29" onclick="handlePageChipClick(event, 'page-29')" title="第 29 页 · 加拿大医疗卫生体系面临的四大严峻挑战 (Challenges: Aging, Costs, Waitlists & Shortages)"><span class="cp-num">p.29</span></a><a href="#page-30" class="cp-chip" id="cp-chip-2-30" data-page="30" onclick="handlePageChipClick(event, 'page-30')" title="第 30 页 · 医疗改革新动向：健康促进、疾病预防与专栏 2.2 门诊就诊自查 (Health Promotion, Prevention & Box 2.2)"><span class="cp-num">p.30</span></a><a href="#page-31" class="cp-chip" id="cp-chip-2-31" data-page="31" onclick="handlePageChipClick(event, 'page-31')" title="第 31 页 · 补充医疗福利保险、私人商业保险与未来发展趋势 (Supplementary Benefits & Future Trends)"><span class="cp-num">p.31</span></a><a href="#page-32" class="cp-chip" id="cp-chip-2-32" data-page="32" onclick="handlePageChipClick(event, 'page-32')" title="第 32 页 · 本章核心要点精要总结、医疗体制议题批判性思维与自测题 Q1-Q3 (Key Points, Critical Thinking & Q1-Q3)"><span class="cp-num">p.32</span></a><a href="#page-33" class="cp-chip" id="cp-chip-2-33" data-page="33" onclick="handlePageChipClick(event, 'page-33')" title="第 33 页 · 章末全真执业自测题 (Q4-Q11) 与教材第 33 页官方标准答案深度精解 (Official Exam Q4-Q11 & Answer Key)"><span class="cp-num">p.33</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-20"></div>
                 <div class="editorial-footer-url">
                   <span class="efu-icon">🌐</span>
                   <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
@@ -1987,6 +2036,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

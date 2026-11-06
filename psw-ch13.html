@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：26:00</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch13-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-194">第 194 页 · 学习目标与支持工作者职业起步开篇</option><option value="page-195">第 195 页 · 核心专业术语表与求职前期规划及工作区准备</option><option value="page-196">第 196 页 · 专栏 13.1 求职权威资源库、简历功能与履历区别</option><option value="page-197">第 197 页 · 时间倒序型与功能型简历对比及数字化云端存储</option><option value="page-198">第 198 页 · 全真模板：肖恩·图图西斯时间倒序型标准简历 (埃德蒙顿)</option><option value="page-199">第 199 页 · 全真模板：凯莉·索维功能型技能矩阵标准简历 (汉密尔顿)</option><option value="page-200">第 200 页 · 简历自审六大黄金法则与精准人岗匹配审查</option><option value="page-201">第 201 页 · 职业能力档案集 (Portfolio) 必备材料与功能型简历后半段</option><option value="page-202">第 202 页 · 证明人 (References) 遴选授权原则与求职信 (Cover Letter) 核心结构</option><option value="page-203">第 203 页 · 全真招聘广告剖析 (博德代尔养老院) 与求职信行文艺术</option><option value="page-204">第 204 页 · 全真模板：标准应征求职信 (Cover Letter) 逐段中英解析</option><option value="page-205">第 205 页 · 纸质与线上工作申请表 (Application Forms) 填写真实性铁律</option><option value="page-206">第 206 页 · 专栏 13.2 数字化求职专业素养：邮箱、语音留言与社交媒体审计</option><option value="page-207">第 207 页 · 面试前期系统准备：雇主背景调研、常问问题梳理与模拟演练</option><option value="page-208">第 208 页 · 面试职业着装、无香政策 (Scent-Free) 与身体语言管理</option><option value="page-209">第 209 页 · 专栏 13.3 支持工作者高频经典面试问题与行为情境问答</option><option value="page-210">第 210 页 · 面试礼仪规程、积极倾听技巧与STAR法则答题范式</option><option value="page-211">第 211 页 · 专栏 13.4 应聘者向面试官反向提问清单与非法面试问题防范</option><option value="page-212">第 212 页 · 面试后 24 小时感谢信模板与应聘全流程反思自评</option><option value="page-213">第 213 页 · 录用通知（确定性 vs 条件性录用）与入职前背景体检筛查</option><option value="page-214">第 214 页 · 本章核心要点回顾、背调推荐人失联实战研习与章末全真自测题 (20 题 T/F)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-194" class="page-chip-item"><span class="pc-num">p.194</span></a><a href="#page-195" class="page-chip-item"><span class="pc-num">p.195</span></a><a href="#page-196" class="page-chip-item"><span class="pc-num">p.196</span></a><a href="#page-197" class="page-chip-item"><span class="pc-num">p.197</span></a><a href="#page-198" class="page-chip-item"><span class="pc-num">p.198</span></a><a href="#page-199" class="page-chip-item"><span class="pc-num">p.199</span></a><a href="#page-200" class="page-chip-item"><span class="pc-num">p.200</span></a><a href="#page-201" class="page-chip-item"><span class="pc-num">p.201</span></a><a href="#page-202" class="page-chip-item"><span class="pc-num">p.202</span></a><a href="#page-203" class="page-chip-item"><span class="pc-num">p.203</span></a><a href="#page-204" class="page-chip-item"><span class="pc-num">p.204</span></a><a href="#page-205" class="page-chip-item"><span class="pc-num">p.205</span></a><a href="#page-206" class="page-chip-item"><span class="pc-num">p.206</span></a><a href="#page-207" class="page-chip-item"><span class="pc-num">p.207</span></a><a href="#page-208" class="page-chip-item"><span class="pc-num">p.208</span></a><a href="#page-209" class="page-chip-item"><span class="pc-num">p.209</span></a><a href="#page-210" class="page-chip-item"><span class="pc-num">p.210</span></a><a href="#page-211" class="page-chip-item"><span class="pc-num">p.211</span></a><a href="#page-212" class="page-chip-item"><span class="pc-num">p.212</span></a><a href="#page-213" class="page-chip-item"><span class="pc-num">p.213</span></a><a href="#page-214" class="page-chip-item"><span class="pc-num">p.214</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-194"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch13" aria-label="Chapter 13 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.194–214 · 共 21 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-194">第 194 页 · 学习目标与支持工作者职业起步开篇</option><option value="page-195">第 195 页 · 核心专业术语表与求职前期规划及工作区准备</option><option value="page-196">第 196 页 · 专栏 13.1 求职权威资源库、简历功能与履历区别</option><option value="page-197">第 197 页 · 时间倒序型与功能型简历对比及数字化云端存储</option><option value="page-198">第 198 页 · 全真模板：肖恩·图图西斯时间倒序型标准简历 (埃德蒙顿)</option><option value="page-199">第 199 页 · 全真模板：凯莉·索维功能型技能矩阵标准简历 (汉密尔顿)</option><option value="page-200">第 200 页 · 简历自审六大黄金法则与精准人岗匹配审查</option><option value="page-201">第 201 页 · 职业能力档案集 (Portfolio) 必备材料与功能型简历后半段</option><option value="page-202">第 202 页 · 证明人 (References) 遴选授权原则与求职信 (Cover Letter) 核心结构</option><option value="page-203">第 203 页 · 全真招聘广告剖析 (博德代尔养老院) 与求职信行文艺术</option><option value="page-204">第 204 页 · 全真模板：标准应征求职信 (Cover Letter) 逐段中英解析</option><option value="page-205">第 205 页 · 纸质与线上工作申请表 (Application Forms) 填写真实性铁律</option><option value="page-206">第 206 页 · 专栏 13.2 数字化求职专业素养：邮箱、语音留言与社交媒体审计</option><option value="page-207">第 207 页 · 面试前期系统准备：雇主背景调研、常问问题梳理与模拟演练</option><option value="page-208">第 208 页 · 面试职业着装、无香政策 (Scent-Free) 与身体语言管理</option><option value="page-209">第 209 页 · 专栏 13.3 支持工作者高频经典面试问题与行为情境问答</option><option value="page-210">第 210 页 · 面试礼仪规程、积极倾听技巧与STAR法则答题范式</option><option value="page-211">第 211 页 · 专栏 13.4 应聘者向面试官反向提问清单与非法面试问题防范</option><option value="page-212">第 212 页 · 面试后 24 小时感谢信模板与应聘全流程反思自评</option><option value="page-213">第 213 页 · 录用通知（确定性 vs 条件性录用）与入职前背景体检筛查</option><option value="page-214">第 214 页 · 本章核心要点回顾、背调推荐人失联实战研习与章末全真自测题 (20 题 T/F)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-194" class="cp-chip" id="cp-chip-13-194" data-page="194" onclick="handlePageChipClick(event, 'page-194')" title="第 194 页 · 学习目标与支持工作者职业起步开篇"><span class="cp-num">p.194</span></a><a href="#page-195" class="cp-chip" id="cp-chip-13-195" data-page="195" onclick="handlePageChipClick(event, 'page-195')" title="第 195 页 · 核心专业术语表与求职前期规划及工作区准备"><span class="cp-num">p.195</span></a><a href="#page-196" class="cp-chip" id="cp-chip-13-196" data-page="196" onclick="handlePageChipClick(event, 'page-196')" title="第 196 页 · 专栏 13.1 求职权威资源库、简历功能与履历区别"><span class="cp-num">p.196</span></a><a href="#page-197" class="cp-chip" id="cp-chip-13-197" data-page="197" onclick="handlePageChipClick(event, 'page-197')" title="第 197 页 · 时间倒序型与功能型简历对比及数字化云端存储"><span class="cp-num">p.197</span></a><a href="#page-198" class="cp-chip" id="cp-chip-13-198" data-page="198" onclick="handlePageChipClick(event, 'page-198')" title="第 198 页 · 全真模板：肖恩·图图西斯时间倒序型标准简历 (埃德蒙顿)"><span class="cp-num">p.198</span></a><a href="#page-199" class="cp-chip" id="cp-chip-13-199" data-page="199" onclick="handlePageChipClick(event, 'page-199')" title="第 199 页 · 全真模板：凯莉·索维功能型技能矩阵标准简历 (汉密尔顿)"><span class="cp-num">p.199</span></a><a href="#page-200" class="cp-chip" id="cp-chip-13-200" data-page="200" onclick="handlePageChipClick(event, 'page-200')" title="第 200 页 · 简历自审六大黄金法则与精准人岗匹配审查"><span class="cp-num">p.200</span></a><a href="#page-201" class="cp-chip" id="cp-chip-13-201" data-page="201" onclick="handlePageChipClick(event, 'page-201')" title="第 201 页 · 职业能力档案集 (Portfolio) 必备材料与功能型简历后半段"><span class="cp-num">p.201</span></a><a href="#page-202" class="cp-chip" id="cp-chip-13-202" data-page="202" onclick="handlePageChipClick(event, 'page-202')" title="第 202 页 · 证明人 (References) 遴选授权原则与求职信 (Cover Letter) 核心结构"><span class="cp-num">p.202</span></a><a href="#page-203" class="cp-chip" id="cp-chip-13-203" data-page="203" onclick="handlePageChipClick(event, 'page-203')" title="第 203 页 · 全真招聘广告剖析 (博德代尔养老院) 与求职信行文艺术"><span class="cp-num">p.203</span></a><a href="#page-204" class="cp-chip" id="cp-chip-13-204" data-page="204" onclick="handlePageChipClick(event, 'page-204')" title="第 204 页 · 全真模板：标准应征求职信 (Cover Letter) 逐段中英解析"><span class="cp-num">p.204</span></a><a href="#page-205" class="cp-chip" id="cp-chip-13-205" data-page="205" onclick="handlePageChipClick(event, 'page-205')" title="第 205 页 · 纸质与线上工作申请表 (Application Forms) 填写真实性铁律"><span class="cp-num">p.205</span></a><a href="#page-206" class="cp-chip" id="cp-chip-13-206" data-page="206" onclick="handlePageChipClick(event, 'page-206')" title="第 206 页 · 专栏 13.2 数字化求职专业素养：邮箱、语音留言与社交媒体审计"><span class="cp-num">p.206</span></a><a href="#page-207" class="cp-chip" id="cp-chip-13-207" data-page="207" onclick="handlePageChipClick(event, 'page-207')" title="第 207 页 · 面试前期系统准备：雇主背景调研、常问问题梳理与模拟演练"><span class="cp-num">p.207</span></a><a href="#page-208" class="cp-chip" id="cp-chip-13-208" data-page="208" onclick="handlePageChipClick(event, 'page-208')" title="第 208 页 · 面试职业着装、无香政策 (Scent-Free) 与身体语言管理"><span class="cp-num">p.208</span></a><a href="#page-209" class="cp-chip" id="cp-chip-13-209" data-page="209" onclick="handlePageChipClick(event, 'page-209')" title="第 209 页 · 专栏 13.3 支持工作者高频经典面试问题与行为情境问答"><span class="cp-num">p.209</span></a><a href="#page-210" class="cp-chip" id="cp-chip-13-210" data-page="210" onclick="handlePageChipClick(event, 'page-210')" title="第 210 页 · 面试礼仪规程、积极倾听技巧与STAR法则答题范式"><span class="cp-num">p.210</span></a><a href="#page-211" class="cp-chip" id="cp-chip-13-211" data-page="211" onclick="handlePageChipClick(event, 'page-211')" title="第 211 页 · 专栏 13.4 应聘者向面试官反向提问清单与非法面试问题防范"><span class="cp-num">p.211</span></a><a href="#page-212" class="cp-chip" id="cp-chip-13-212" data-page="212" onclick="handlePageChipClick(event, 'page-212')" title="第 212 页 · 面试后 24 小时感谢信模板与应聘全流程反思自评"><span class="cp-num">p.212</span></a><a href="#page-213" class="cp-chip" id="cp-chip-13-213" data-page="213" onclick="handlePageChipClick(event, 'page-213')" title="第 213 页 · 录用通知（确定性 vs 条件性录用）与入职前背景体检筛查"><span class="cp-num">p.213</span></a><a href="#page-214" class="cp-chip" id="cp-chip-13-214" data-page="214" onclick="handlePageChipClick(event, 'page-214')" title="第 214 页 · 本章核心要点回顾、背调推荐人失联实战研习与章末全真自测题 (20 题 T/F)"><span class="cp-num">p.214</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-194"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -3094,6 +3143,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：26:30</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch6-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-77">第 77 页 · 学习目标与开篇导读</option><option value="page-78">第 78 页 · 核心专业术语表 (Key Terms)</option><option value="page-79">第 79 页 · 全人健康理念与健康维度</option><option value="page-80">第 80 页 · 生理、情绪、社交与精神健康</option><option value="page-81">第 81 页 · 认知健康与健康安康连续谱</option><option value="page-82">第 82 页 · 加拿大 12 大关键健康决定因素</option><option value="page-83">第 83 页 · 专栏 6.1 健康决定因素：加拿大 vs WHO</option><option value="page-84">第 84 页 · 案例分析：杰森的健康决定因素链条</option><option value="page-85">第 85 页 · 个人健康行为、儿童发展与基因秉赋</option><option value="page-86">第 86 页 · 医疗服务、性别、文化与原住民健康</option><option value="page-87">第 87 页 · 急性疾病 vs 持续性慢性疾病分类</option><option value="page-88">第 88 页 · 疾病与残疾伴随的重大生活转变与丧失</option><option value="page-89">第 89 页 · 专栏 6.2 面对疾病与残疾的身心防御反应</option><option value="page-90">第 90 页 · 案例分析：维塔利先生的自尊与抑郁危机</option><option value="page-91">第 91 页 · 以 DIPPS 为指导的慈悲关怀与人本支持</option><option value="page-92">第 92 页 · 专栏 6.3 残障人士包容性语言指引 (上)</option><option value="page-93">第 93 页 · 专栏 6.3 残障人士包容性语言指引 (下)</option><option value="page-94">第 94 页 · 本章要点回顾与批判性思维 (Q1-Q9)</option><option value="page-95">第 95 页 · 本章自测题精解与权威答案 (Q10-Q11)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-77" class="page-chip-item"><span class="pc-num">p.77</span></a><a href="#page-78" class="page-chip-item"><span class="pc-num">p.78</span></a><a href="#page-79" class="page-chip-item"><span class="pc-num">p.79</span></a><a href="#page-80" class="page-chip-item"><span class="pc-num">p.80</span></a><a href="#page-81" class="page-chip-item"><span class="pc-num">p.81</span></a><a href="#page-82" class="page-chip-item"><span class="pc-num">p.82</span></a><a href="#page-83" class="page-chip-item"><span class="pc-num">p.83</span></a><a href="#page-84" class="page-chip-item"><span class="pc-num">p.84</span></a><a href="#page-85" class="page-chip-item"><span class="pc-num">p.85</span></a><a href="#page-86" class="page-chip-item"><span class="pc-num">p.86</span></a><a href="#page-87" class="page-chip-item"><span class="pc-num">p.87</span></a><a href="#page-88" class="page-chip-item"><span class="pc-num">p.88</span></a><a href="#page-89" class="page-chip-item"><span class="pc-num">p.89</span></a><a href="#page-90" class="page-chip-item"><span class="pc-num">p.90</span></a><a href="#page-91" class="page-chip-item"><span class="pc-num">p.91</span></a><a href="#page-92" class="page-chip-item"><span class="pc-num">p.92</span></a><a href="#page-93" class="page-chip-item"><span class="pc-num">p.93</span></a><a href="#page-94" class="page-chip-item"><span class="pc-num">p.94</span></a><a href="#page-95" class="page-chip-item"><span class="pc-num">p.95</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-77"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch6" aria-label="Chapter 6 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.77–95 · 共 19 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-77">第 77 页 · 学习目标与开篇导读</option><option value="page-78">第 78 页 · 核心专业术语表 (Key Terms)</option><option value="page-79">第 79 页 · 全人健康理念与健康维度</option><option value="page-80">第 80 页 · 生理、情绪、社交与精神健康</option><option value="page-81">第 81 页 · 认知健康与健康安康连续谱</option><option value="page-82">第 82 页 · 加拿大 12 大关键健康决定因素</option><option value="page-83">第 83 页 · 专栏 6.1 健康决定因素：加拿大 vs WHO</option><option value="page-84">第 84 页 · 案例分析：杰森的健康决定因素链条</option><option value="page-85">第 85 页 · 个人健康行为、儿童发展与基因秉赋</option><option value="page-86">第 86 页 · 医疗服务、性别、文化与原住民健康</option><option value="page-87">第 87 页 · 急性疾病 vs 持续性慢性疾病分类</option><option value="page-88">第 88 页 · 疾病与残疾伴随的重大生活转变与丧失</option><option value="page-89">第 89 页 · 专栏 6.2 面对疾病与残疾的身心防御反应</option><option value="page-90">第 90 页 · 案例分析：维塔利先生的自尊与抑郁危机</option><option value="page-91">第 91 页 · 以 DIPPS 为指导的慈悲关怀与人本支持</option><option value="page-92">第 92 页 · 专栏 6.3 残障人士包容性语言指引 (上)</option><option value="page-93">第 93 页 · 专栏 6.3 残障人士包容性语言指引 (下)</option><option value="page-94">第 94 页 · 本章要点回顾与批判性思维 (Q1-Q9)</option><option value="page-95">第 95 页 · 本章自测题精解与权威答案 (Q10-Q11)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-77" class="cp-chip" id="cp-chip-6-77" data-page="77" onclick="handlePageChipClick(event, 'page-77')" title="第 77 页 · 学习目标与开篇导读"><span class="cp-num">p.77</span></a><a href="#page-78" class="cp-chip" id="cp-chip-6-78" data-page="78" onclick="handlePageChipClick(event, 'page-78')" title="第 78 页 · 核心专业术语表 (Key Terms)"><span class="cp-num">p.78</span></a><a href="#page-79" class="cp-chip" id="cp-chip-6-79" data-page="79" onclick="handlePageChipClick(event, 'page-79')" title="第 79 页 · 全人健康理念与健康维度"><span class="cp-num">p.79</span></a><a href="#page-80" class="cp-chip" id="cp-chip-6-80" data-page="80" onclick="handlePageChipClick(event, 'page-80')" title="第 80 页 · 生理、情绪、社交与精神健康"><span class="cp-num">p.80</span></a><a href="#page-81" class="cp-chip" id="cp-chip-6-81" data-page="81" onclick="handlePageChipClick(event, 'page-81')" title="第 81 页 · 认知健康与健康安康连续谱"><span class="cp-num">p.81</span></a><a href="#page-82" class="cp-chip" id="cp-chip-6-82" data-page="82" onclick="handlePageChipClick(event, 'page-82')" title="第 82 页 · 加拿大 12 大关键健康决定因素"><span class="cp-num">p.82</span></a><a href="#page-83" class="cp-chip" id="cp-chip-6-83" data-page="83" onclick="handlePageChipClick(event, 'page-83')" title="第 83 页 · 专栏 6.1 健康决定因素：加拿大 vs WHO"><span class="cp-num">p.83</span></a><a href="#page-84" class="cp-chip" id="cp-chip-6-84" data-page="84" onclick="handlePageChipClick(event, 'page-84')" title="第 84 页 · 案例分析：杰森的健康决定因素链条"><span class="cp-num">p.84</span></a><a href="#page-85" class="cp-chip" id="cp-chip-6-85" data-page="85" onclick="handlePageChipClick(event, 'page-85')" title="第 85 页 · 个人健康行为、儿童发展与基因秉赋"><span class="cp-num">p.85</span></a><a href="#page-86" class="cp-chip" id="cp-chip-6-86" data-page="86" onclick="handlePageChipClick(event, 'page-86')" title="第 86 页 · 医疗服务、性别、文化与原住民健康"><span class="cp-num">p.86</span></a><a href="#page-87" class="cp-chip" id="cp-chip-6-87" data-page="87" onclick="handlePageChipClick(event, 'page-87')" title="第 87 页 · 急性疾病 vs 持续性慢性疾病分类"><span class="cp-num">p.87</span></a><a href="#page-88" class="cp-chip" id="cp-chip-6-88" data-page="88" onclick="handlePageChipClick(event, 'page-88')" title="第 88 页 · 疾病与残疾伴随的重大生活转变与丧失"><span class="cp-num">p.88</span></a><a href="#page-89" class="cp-chip" id="cp-chip-6-89" data-page="89" onclick="handlePageChipClick(event, 'page-89')" title="第 89 页 · 专栏 6.2 面对疾病与残疾的身心防御反应"><span class="cp-num">p.89</span></a><a href="#page-90" class="cp-chip" id="cp-chip-6-90" data-page="90" onclick="handlePageChipClick(event, 'page-90')" title="第 90 页 · 案例分析：维塔利先生的自尊与抑郁危机"><span class="cp-num">p.90</span></a><a href="#page-91" class="cp-chip" id="cp-chip-6-91" data-page="91" onclick="handlePageChipClick(event, 'page-91')" title="第 91 页 · 以 DIPPS 为指导的慈悲关怀与人本支持"><span class="cp-num">p.91</span></a><a href="#page-92" class="cp-chip" id="cp-chip-6-92" data-page="92" onclick="handlePageChipClick(event, 'page-92')" title="第 92 页 · 专栏 6.3 残障人士包容性语言指引 (上)"><span class="cp-num">p.92</span></a><a href="#page-93" class="cp-chip" id="cp-chip-6-93" data-page="93" onclick="handlePageChipClick(event, 'page-93')" title="第 93 页 · 专栏 6.3 残障人士包容性语言指引 (下)"><span class="cp-num">p.93</span></a><a href="#page-94" class="cp-chip" id="cp-chip-6-94" data-page="94" onclick="handlePageChipClick(event, 'page-94')" title="第 94 页 · 本章要点回顾与批判性思维 (Q1-Q9)"><span class="cp-num">p.94</span></a><a href="#page-95" class="cp-chip" id="cp-chip-6-95" data-page="95" onclick="handlePageChipClick(event, 'page-95')" title="第 95 页 · 本章自测题精解与权威答案 (Q10-Q11)"><span class="cp-num">p.95</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-77"></div>
                 <aside class="editorial-box-container box-theme-blue">
                   <div class="box-banner-header">
                     <h4 class="box-title-en">OBJECTIVES</h4>
@@ -2873,6 +2922,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

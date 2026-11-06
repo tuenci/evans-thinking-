@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：21:40</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch7-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-96">第 96 页 · 学习目标与文化多样性开篇</option><option value="page-97">第 97 页 · 核心专业术语表与加拿大文化马赛克</option><option value="page-98">第 98 页 · 多元文化法案与族裔及文化界定</option><option value="page-99">第 99 页 · 文化同化、图7.1影响因素与专栏：文化生活习惯</option><option value="page-100">第 100 页 · 偏见与歧视类型、年龄与性别歧视、LGBTQ2与顺性别</option><option value="page-101">第 101 页 · 专栏 7.1 安省人权委：年龄歧视法案与文化安全</option><option value="page-102">第 102 页 · 专栏：跨性别关怀与案例分析：文化冲突（席尔瓦太太）</option><option value="page-103">第 103 页 · 文化胜任力职场指引与多元家庭组织形态</option><option value="page-104">第 104 页 · 图7.2 大家庭、文化对宗教信仰的影响与防范精神虐待</option><option value="page-105">第 105 页 · 传统民间疗法、跨文化沟通原则与身体语言触碰</option><option value="page-106">第 106 页 · 专栏：与加拿大原住民沟通时严禁使用之五大禁忌词汇</option><option value="page-107">第 107 页 · 专栏：与非英语母语案主沟通技巧与个人空间界限</option><option value="page-108">第 108 页 · 专栏：伦迪先生的个人空间触碰照护、眼神与沉默沟通</option><option value="page-109">第 109 页 · 无偏见关怀指引、专栏：库图尔太太与12项反思自省</option><option value="page-110">第 110 页 · 本章核心要点、审辩思维修炼与章末全真自测试题 (Part 1)</option><option value="page-111">第 111 页 · 章末全真自测试题 (Part 2) 与官方参考答案</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-96" class="page-chip-item"><span class="pc-num">p.96</span></a><a href="#page-97" class="page-chip-item"><span class="pc-num">p.97</span></a><a href="#page-98" class="page-chip-item"><span class="pc-num">p.98</span></a><a href="#page-99" class="page-chip-item"><span class="pc-num">p.99</span></a><a href="#page-100" class="page-chip-item"><span class="pc-num">p.100</span></a><a href="#page-101" class="page-chip-item"><span class="pc-num">p.101</span></a><a href="#page-102" class="page-chip-item"><span class="pc-num">p.102</span></a><a href="#page-103" class="page-chip-item"><span class="pc-num">p.103</span></a><a href="#page-104" class="page-chip-item"><span class="pc-num">p.104</span></a><a href="#page-105" class="page-chip-item"><span class="pc-num">p.105</span></a><a href="#page-106" class="page-chip-item"><span class="pc-num">p.106</span></a><a href="#page-107" class="page-chip-item"><span class="pc-num">p.107</span></a><a href="#page-108" class="page-chip-item"><span class="pc-num">p.108</span></a><a href="#page-109" class="page-chip-item"><span class="pc-num">p.109</span></a><a href="#page-110" class="page-chip-item"><span class="pc-num">p.110</span></a><a href="#page-111" class="page-chip-item"><span class="pc-num">p.111</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-96"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch7" aria-label="Chapter 7 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.96–111 · 共 16 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-96">第 96 页 · 学习目标与文化多样性开篇</option><option value="page-97">第 97 页 · 核心专业术语表与加拿大文化马赛克</option><option value="page-98">第 98 页 · 多元文化法案与族裔及文化界定</option><option value="page-99">第 99 页 · 文化同化、图7.1影响因素与专栏：文化生活习惯</option><option value="page-100">第 100 页 · 偏见与歧视类型、年龄与性别歧视、LGBTQ2与顺性别</option><option value="page-101">第 101 页 · 专栏 7.1 安省人权委：年龄歧视法案与文化安全</option><option value="page-102">第 102 页 · 专栏：跨性别关怀与案例分析：文化冲突（席尔瓦太太）</option><option value="page-103">第 103 页 · 文化胜任力职场指引与多元家庭组织形态</option><option value="page-104">第 104 页 · 图7.2 大家庭、文化对宗教信仰的影响与防范精神虐待</option><option value="page-105">第 105 页 · 传统民间疗法、跨文化沟通原则与身体语言触碰</option><option value="page-106">第 106 页 · 专栏：与加拿大原住民沟通时严禁使用之五大禁忌词汇</option><option value="page-107">第 107 页 · 专栏：与非英语母语案主沟通技巧与个人空间界限</option><option value="page-108">第 108 页 · 专栏：伦迪先生的个人空间触碰照护、眼神与沉默沟通</option><option value="page-109">第 109 页 · 无偏见关怀指引、专栏：库图尔太太与12项反思自省</option><option value="page-110">第 110 页 · 本章核心要点、审辩思维修炼与章末全真自测试题 (Part 1)</option><option value="page-111">第 111 页 · 章末全真自测试题 (Part 2) 与官方参考答案</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-96" class="cp-chip" id="cp-chip-7-96" data-page="96" onclick="handlePageChipClick(event, 'page-96')" title="第 96 页 · 学习目标与文化多样性开篇"><span class="cp-num">p.96</span></a><a href="#page-97" class="cp-chip" id="cp-chip-7-97" data-page="97" onclick="handlePageChipClick(event, 'page-97')" title="第 97 页 · 核心专业术语表与加拿大文化马赛克"><span class="cp-num">p.97</span></a><a href="#page-98" class="cp-chip" id="cp-chip-7-98" data-page="98" onclick="handlePageChipClick(event, 'page-98')" title="第 98 页 · 多元文化法案与族裔及文化界定"><span class="cp-num">p.98</span></a><a href="#page-99" class="cp-chip" id="cp-chip-7-99" data-page="99" onclick="handlePageChipClick(event, 'page-99')" title="第 99 页 · 文化同化、图7.1影响因素与专栏：文化生活习惯"><span class="cp-num">p.99</span></a><a href="#page-100" class="cp-chip" id="cp-chip-7-100" data-page="100" onclick="handlePageChipClick(event, 'page-100')" title="第 100 页 · 偏见与歧视类型、年龄与性别歧视、LGBTQ2与顺性别"><span class="cp-num">p.100</span></a><a href="#page-101" class="cp-chip" id="cp-chip-7-101" data-page="101" onclick="handlePageChipClick(event, 'page-101')" title="第 101 页 · 专栏 7.1 安省人权委：年龄歧视法案与文化安全"><span class="cp-num">p.101</span></a><a href="#page-102" class="cp-chip" id="cp-chip-7-102" data-page="102" onclick="handlePageChipClick(event, 'page-102')" title="第 102 页 · 专栏：跨性别关怀与案例分析：文化冲突（席尔瓦太太）"><span class="cp-num">p.102</span></a><a href="#page-103" class="cp-chip" id="cp-chip-7-103" data-page="103" onclick="handlePageChipClick(event, 'page-103')" title="第 103 页 · 文化胜任力职场指引与多元家庭组织形态"><span class="cp-num">p.103</span></a><a href="#page-104" class="cp-chip" id="cp-chip-7-104" data-page="104" onclick="handlePageChipClick(event, 'page-104')" title="第 104 页 · 图7.2 大家庭、文化对宗教信仰的影响与防范精神虐待"><span class="cp-num">p.104</span></a><a href="#page-105" class="cp-chip" id="cp-chip-7-105" data-page="105" onclick="handlePageChipClick(event, 'page-105')" title="第 105 页 · 传统民间疗法、跨文化沟通原则与身体语言触碰"><span class="cp-num">p.105</span></a><a href="#page-106" class="cp-chip" id="cp-chip-7-106" data-page="106" onclick="handlePageChipClick(event, 'page-106')" title="第 106 页 · 专栏：与加拿大原住民沟通时严禁使用之五大禁忌词汇"><span class="cp-num">p.106</span></a><a href="#page-107" class="cp-chip" id="cp-chip-7-107" data-page="107" onclick="handlePageChipClick(event, 'page-107')" title="第 107 页 · 专栏：与非英语母语案主沟通技巧与个人空间界限"><span class="cp-num">p.107</span></a><a href="#page-108" class="cp-chip" id="cp-chip-7-108" data-page="108" onclick="handlePageChipClick(event, 'page-108')" title="第 108 页 · 专栏：伦迪先生的个人空间触碰照护、眼神与沉默沟通"><span class="cp-num">p.108</span></a><a href="#page-109" class="cp-chip" id="cp-chip-7-109" data-page="109" onclick="handlePageChipClick(event, 'page-109')" title="第 109 页 · 无偏见关怀指引、专栏：库图尔太太与12项反思自省"><span class="cp-num">p.109</span></a><a href="#page-110" class="cp-chip" id="cp-chip-7-110" data-page="110" onclick="handlePageChipClick(event, 'page-110')" title="第 110 页 · 本章核心要点、审辩思维修炼与章末全真自测试题 (Part 1)"><span class="cp-num">p.110</span></a><a href="#page-111" class="cp-chip" id="cp-chip-7-111" data-page="111" onclick="handlePageChipClick(event, 'page-111')" title="第 111 页 · 章末全真自测试题 (Part 2) 与官方参考答案"><span class="cp-num">p.111</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-96"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习与执业考核目标</div>
@@ -2838,6 +2887,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

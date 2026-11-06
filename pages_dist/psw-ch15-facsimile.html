@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：24:50</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch15-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-259">第 259 页 · 学习目标与日常机能活动开篇 (Objectives & Activity Foundations)</option><option value="page-260">第 260 页 · 核心专业术语表、去适应综合征与卧床医嘱分级 (Key Terms, Deconditioning & Bed Rest)</option><option value="page-261">第 261 页 · 长期卧床并发症病理机制：关节挛缩、肌肉萎缩与体位性低血压 (Complications of Bed Rest)</option><option value="page-262">第 262 页 · 专栏 15.1：体位性低血压防范全流程与床板/足托板防足下垂 (BOX 15.1 & Supportive Devices)</option><option value="page-263">第 263 页 · 姿势支撑辅具全解析：转子卷、手卷握把、指垫、夹板与床支架 (Trochanter Rolls & Splints)</option><option value="page-264">第 264 页 · 悬吊提臂架 (Trapeze)、运动防挛缩机制与关节活动度 (ROM) 三大分类 (ROM Classifications)</option><option value="page-265">第 265 页 · 儿童游戏聚焦、长者照护文娱活动规划与专栏 15.2：DIPPS 关怀融入 (Focus on Children & LTC)</option><option value="page-266">第 266 页 · 专栏 15.3：关节活动度 (ROM) 黄金操作准则与步行准备 (BOX 15.3 ROM Guidelines & Ambulation)</option><option value="page-267">第 267 页 · 操作规程：全身关节活动度 (ROM) 训练（颈部、肩部全弧度与肘部活动）(ROM Neck & Shoulder)</option><option value="page-268">第 268 页 · 操作规程：前臂旋前旋后、腕关节全向屈伸、拇指对指与手指伸屈 (ROM Forearm & Hands)</option><option value="page-269">第 269 页 · 操作规程：髋关节屈伸外展旋转、膝关节与踝足背屈跖屈翻转 (ROM Hip, Knee & Ankle)</option><option value="page-270">第 270 页 · 操作规程：足趾活动收尾、DIPPS 舒适复位与日常步行 (Ambulation) 临床评估 (ROM Completion)</option><option value="page-271">第 271 页 · 肥胖对关节软骨负荷病理与操作规程：协助案主步行准备及移位带佩戴 (Helping Client Walk Prep)</option><option value="page-272">第 272 页 · 操作规程：步行协同站位、步态纠正指导、平稳回床与体征记录 (Ambulation Execution)</option><option value="page-273">第 273 页 · 失控跌倒力学机制与操作规程：跌倒案主顺势滑移保护技术 (Helping the Falling Client)</option><option value="page-274">第 274 页 · 图解 15.23 贴靠大腿顺势滑落三步法与绝不徒手硬拉原则 (Falling Mechanics Diagram)</option><option value="page-275">第 275 页 · 居家照护聚焦：跌倒骨折脑外伤急救、9-1-1 呼救与无伤协助起立规程 (Home Care Fall Protocol)</option><option value="page-276">第 276 页 · 助行辅具分类：前臂加拿大拐 (Lofstrand) 与腋下拐杖安全维护铁律 (Crutches Safety Rules)</option><option value="page-277">第 277 页 · 手杖 (Cane) 健侧主导三步法与标准助行架 (Walker) 平稳迈步法则 (Canes & Walkers Mechanics)</option><option value="page-278">第 278 页 · 滚轮助行车 (Rollator) 与下肢支具/踝足矫形器 (AFO) 防压疮护理 (Rollators & Braces)</option><option value="page-279">第 279 页 · 专栏 15.4：使用助行架案主坐入轮椅、床边与起立防倾覆规程 (BOX 15.4 Sit & Stand)</option><option value="page-280">第 280 页 · 本章核心知识点精要、双小时 ROM 临床思维修炼与自测选择题 (Q1-Q6) (Key Points & Exam Part 1)</option><option value="page-281">第 281 页 · 章末全真执业自测题 (Q7-Q9 单选 & Q10-Q14 正误题) 与官方标准答案解析 (Official Exam & Key)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-259" class="page-chip-item"><span class="pc-num">p.259</span></a><a href="#page-260" class="page-chip-item"><span class="pc-num">p.260</span></a><a href="#page-261" class="page-chip-item"><span class="pc-num">p.261</span></a><a href="#page-262" class="page-chip-item"><span class="pc-num">p.262</span></a><a href="#page-263" class="page-chip-item"><span class="pc-num">p.263</span></a><a href="#page-264" class="page-chip-item"><span class="pc-num">p.264</span></a><a href="#page-265" class="page-chip-item"><span class="pc-num">p.265</span></a><a href="#page-266" class="page-chip-item"><span class="pc-num">p.266</span></a><a href="#page-267" class="page-chip-item"><span class="pc-num">p.267</span></a><a href="#page-268" class="page-chip-item"><span class="pc-num">p.268</span></a><a href="#page-269" class="page-chip-item"><span class="pc-num">p.269</span></a><a href="#page-270" class="page-chip-item"><span class="pc-num">p.270</span></a><a href="#page-271" class="page-chip-item"><span class="pc-num">p.271</span></a><a href="#page-272" class="page-chip-item"><span class="pc-num">p.272</span></a><a href="#page-273" class="page-chip-item"><span class="pc-num">p.273</span></a><a href="#page-274" class="page-chip-item"><span class="pc-num">p.274</span></a><a href="#page-275" class="page-chip-item"><span class="pc-num">p.275</span></a><a href="#page-276" class="page-chip-item"><span class="pc-num">p.276</span></a><a href="#page-277" class="page-chip-item"><span class="pc-num">p.277</span></a><a href="#page-278" class="page-chip-item"><span class="pc-num">p.278</span></a><a href="#page-279" class="page-chip-item"><span class="pc-num">p.279</span></a><a href="#page-280" class="page-chip-item"><span class="pc-num">p.280</span></a><a href="#page-281" class="page-chip-item"><span class="pc-num">p.281</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-259"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch15" aria-label="Chapter 15 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.259–281 · 共 23 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-259">第 259 页 · 学习目标与日常机能活动开篇 (Objectives & Activity Foundations)</option><option value="page-260">第 260 页 · 核心专业术语表、去适应综合征与卧床医嘱分级 (Key Terms, Deconditioning & Bed Rest)</option><option value="page-261">第 261 页 · 长期卧床并发症病理机制：关节挛缩、肌肉萎缩与体位性低血压 (Complications of Bed Rest)</option><option value="page-262">第 262 页 · 专栏 15.1：体位性低血压防范全流程与床板/足托板防足下垂 (BOX 15.1 & Supportive Devices)</option><option value="page-263">第 263 页 · 姿势支撑辅具全解析：转子卷、手卷握把、指垫、夹板与床支架 (Trochanter Rolls & Splints)</option><option value="page-264">第 264 页 · 悬吊提臂架 (Trapeze)、运动防挛缩机制与关节活动度 (ROM) 三大分类 (ROM Classifications)</option><option value="page-265">第 265 页 · 儿童游戏聚焦、长者照护文娱活动规划与专栏 15.2：DIPPS 关怀融入 (Focus on Children & LTC)</option><option value="page-266">第 266 页 · 专栏 15.3：关节活动度 (ROM) 黄金操作准则与步行准备 (BOX 15.3 ROM Guidelines & Ambulation)</option><option value="page-267">第 267 页 · 操作规程：全身关节活动度 (ROM) 训练（颈部、肩部全弧度与肘部活动）(ROM Neck & Shoulder)</option><option value="page-268">第 268 页 · 操作规程：前臂旋前旋后、腕关节全向屈伸、拇指对指与手指伸屈 (ROM Forearm & Hands)</option><option value="page-269">第 269 页 · 操作规程：髋关节屈伸外展旋转、膝关节与踝足背屈跖屈翻转 (ROM Hip, Knee & Ankle)</option><option value="page-270">第 270 页 · 操作规程：足趾活动收尾、DIPPS 舒适复位与日常步行 (Ambulation) 临床评估 (ROM Completion)</option><option value="page-271">第 271 页 · 肥胖对关节软骨负荷病理与操作规程：协助案主步行准备及移位带佩戴 (Helping Client Walk Prep)</option><option value="page-272">第 272 页 · 操作规程：步行协同站位、步态纠正指导、平稳回床与体征记录 (Ambulation Execution)</option><option value="page-273">第 273 页 · 失控跌倒力学机制与操作规程：跌倒案主顺势滑移保护技术 (Helping the Falling Client)</option><option value="page-274">第 274 页 · 图解 15.23 贴靠大腿顺势滑落三步法与绝不徒手硬拉原则 (Falling Mechanics Diagram)</option><option value="page-275">第 275 页 · 居家照护聚焦：跌倒骨折脑外伤急救、9-1-1 呼救与无伤协助起立规程 (Home Care Fall Protocol)</option><option value="page-276">第 276 页 · 助行辅具分类：前臂加拿大拐 (Lofstrand) 与腋下拐杖安全维护铁律 (Crutches Safety Rules)</option><option value="page-277">第 277 页 · 手杖 (Cane) 健侧主导三步法与标准助行架 (Walker) 平稳迈步法则 (Canes & Walkers Mechanics)</option><option value="page-278">第 278 页 · 滚轮助行车 (Rollator) 与下肢支具/踝足矫形器 (AFO) 防压疮护理 (Rollators & Braces)</option><option value="page-279">第 279 页 · 专栏 15.4：使用助行架案主坐入轮椅、床边与起立防倾覆规程 (BOX 15.4 Sit & Stand)</option><option value="page-280">第 280 页 · 本章核心知识点精要、双小时 ROM 临床思维修炼与自测选择题 (Q1-Q6) (Key Points & Exam Part 1)</option><option value="page-281">第 281 页 · 章末全真执业自测题 (Q7-Q9 单选 & Q10-Q14 正误题) 与官方标准答案解析 (Official Exam & Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-259" class="cp-chip" id="cp-chip-15-259" data-page="259" onclick="handlePageChipClick(event, 'page-259')" title="第 259 页 · 学习目标与日常机能活动开篇 (Objectives & Activity Foundations)"><span class="cp-num">p.259</span></a><a href="#page-260" class="cp-chip" id="cp-chip-15-260" data-page="260" onclick="handlePageChipClick(event, 'page-260')" title="第 260 页 · 核心专业术语表、去适应综合征与卧床医嘱分级 (Key Terms, Deconditioning & Bed Rest)"><span class="cp-num">p.260</span></a><a href="#page-261" class="cp-chip" id="cp-chip-15-261" data-page="261" onclick="handlePageChipClick(event, 'page-261')" title="第 261 页 · 长期卧床并发症病理机制：关节挛缩、肌肉萎缩与体位性低血压 (Complications of Bed Rest)"><span class="cp-num">p.261</span></a><a href="#page-262" class="cp-chip" id="cp-chip-15-262" data-page="262" onclick="handlePageChipClick(event, 'page-262')" title="第 262 页 · 专栏 15.1：体位性低血压防范全流程与床板/足托板防足下垂 (BOX 15.1 & Supportive Devices)"><span class="cp-num">p.262</span></a><a href="#page-263" class="cp-chip" id="cp-chip-15-263" data-page="263" onclick="handlePageChipClick(event, 'page-263')" title="第 263 页 · 姿势支撑辅具全解析：转子卷、手卷握把、指垫、夹板与床支架 (Trochanter Rolls & Splints)"><span class="cp-num">p.263</span></a><a href="#page-264" class="cp-chip" id="cp-chip-15-264" data-page="264" onclick="handlePageChipClick(event, 'page-264')" title="第 264 页 · 悬吊提臂架 (Trapeze)、运动防挛缩机制与关节活动度 (ROM) 三大分类 (ROM Classifications)"><span class="cp-num">p.264</span></a><a href="#page-265" class="cp-chip" id="cp-chip-15-265" data-page="265" onclick="handlePageChipClick(event, 'page-265')" title="第 265 页 · 儿童游戏聚焦、长者照护文娱活动规划与专栏 15.2：DIPPS 关怀融入 (Focus on Children & LTC)"><span class="cp-num">p.265</span></a><a href="#page-266" class="cp-chip" id="cp-chip-15-266" data-page="266" onclick="handlePageChipClick(event, 'page-266')" title="第 266 页 · 专栏 15.3：关节活动度 (ROM) 黄金操作准则与步行准备 (BOX 15.3 ROM Guidelines & Ambulation)"><span class="cp-num">p.266</span></a><a href="#page-267" class="cp-chip" id="cp-chip-15-267" data-page="267" onclick="handlePageChipClick(event, 'page-267')" title="第 267 页 · 操作规程：全身关节活动度 (ROM) 训练（颈部、肩部全弧度与肘部活动）(ROM Neck & Shoulder)"><span class="cp-num">p.267</span></a><a href="#page-268" class="cp-chip" id="cp-chip-15-268" data-page="268" onclick="handlePageChipClick(event, 'page-268')" title="第 268 页 · 操作规程：前臂旋前旋后、腕关节全向屈伸、拇指对指与手指伸屈 (ROM Forearm & Hands)"><span class="cp-num">p.268</span></a><a href="#page-269" class="cp-chip" id="cp-chip-15-269" data-page="269" onclick="handlePageChipClick(event, 'page-269')" title="第 269 页 · 操作规程：髋关节屈伸外展旋转、膝关节与踝足背屈跖屈翻转 (ROM Hip, Knee & Ankle)"><span class="cp-num">p.269</span></a><a href="#page-270" class="cp-chip" id="cp-chip-15-270" data-page="270" onclick="handlePageChipClick(event, 'page-270')" title="第 270 页 · 操作规程：足趾活动收尾、DIPPS 舒适复位与日常步行 (Ambulation) 临床评估 (ROM Completion)"><span class="cp-num">p.270</span></a><a href="#page-271" class="cp-chip" id="cp-chip-15-271" data-page="271" onclick="handlePageChipClick(event, 'page-271')" title="第 271 页 · 肥胖对关节软骨负荷病理与操作规程：协助案主步行准备及移位带佩戴 (Helping Client Walk Prep)"><span class="cp-num">p.271</span></a><a href="#page-272" class="cp-chip" id="cp-chip-15-272" data-page="272" onclick="handlePageChipClick(event, 'page-272')" title="第 272 页 · 操作规程：步行协同站位、步态纠正指导、平稳回床与体征记录 (Ambulation Execution)"><span class="cp-num">p.272</span></a><a href="#page-273" class="cp-chip" id="cp-chip-15-273" data-page="273" onclick="handlePageChipClick(event, 'page-273')" title="第 273 页 · 失控跌倒力学机制与操作规程：跌倒案主顺势滑移保护技术 (Helping the Falling Client)"><span class="cp-num">p.273</span></a><a href="#page-274" class="cp-chip" id="cp-chip-15-274" data-page="274" onclick="handlePageChipClick(event, 'page-274')" title="第 274 页 · 图解 15.23 贴靠大腿顺势滑落三步法与绝不徒手硬拉原则 (Falling Mechanics Diagram)"><span class="cp-num">p.274</span></a><a href="#page-275" class="cp-chip" id="cp-chip-15-275" data-page="275" onclick="handlePageChipClick(event, 'page-275')" title="第 275 页 · 居家照护聚焦：跌倒骨折脑外伤急救、9-1-1 呼救与无伤协助起立规程 (Home Care Fall Protocol)"><span class="cp-num">p.275</span></a><a href="#page-276" class="cp-chip" id="cp-chip-15-276" data-page="276" onclick="handlePageChipClick(event, 'page-276')" title="第 276 页 · 助行辅具分类：前臂加拿大拐 (Lofstrand) 与腋下拐杖安全维护铁律 (Crutches Safety Rules)"><span class="cp-num">p.276</span></a><a href="#page-277" class="cp-chip" id="cp-chip-15-277" data-page="277" onclick="handlePageChipClick(event, 'page-277')" title="第 277 页 · 手杖 (Cane) 健侧主导三步法与标准助行架 (Walker) 平稳迈步法则 (Canes & Walkers Mechanics)"><span class="cp-num">p.277</span></a><a href="#page-278" class="cp-chip" id="cp-chip-15-278" data-page="278" onclick="handlePageChipClick(event, 'page-278')" title="第 278 页 · 滚轮助行车 (Rollator) 与下肢支具/踝足矫形器 (AFO) 防压疮护理 (Rollators & Braces)"><span class="cp-num">p.278</span></a><a href="#page-279" class="cp-chip" id="cp-chip-15-279" data-page="279" onclick="handlePageChipClick(event, 'page-279')" title="第 279 页 · 专栏 15.4：使用助行架案主坐入轮椅、床边与起立防倾覆规程 (BOX 15.4 Sit & Stand)"><span class="cp-num">p.279</span></a><a href="#page-280" class="cp-chip" id="cp-chip-15-280" data-page="280" onclick="handlePageChipClick(event, 'page-280')" title="第 280 页 · 本章核心知识点精要、双小时 ROM 临床思维修炼与自测选择题 (Q1-Q6) (Key Points & Exam Part 1)"><span class="cp-num">p.280</span></a><a href="#page-281" class="cp-chip" id="cp-chip-15-281" data-page="281" onclick="handlePageChipClick(event, 'page-281')" title="第 281 页 · 章末全真执业自测题 (Q7-Q9 单选 & Q10-Q14 正误题) 与官方标准答案解析 (Official Exam & Key)"><span class="cp-num">p.281</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-259"></div>
                 <div class="editorial-heading-major" id="sec-ch15-p259">
                   <h2 class="heading-en">OBJECTIVES</h2>
                   <div class="heading-cn">本章核心研习目标</div>
@@ -3069,6 +3118,72 @@ C: Lower the client smoothly to the floor by bending at hips and knees, shieldin
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

@@ -1842,6 +1842,122 @@
       border-radius: 4px;
     }
 
+    /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main, #2b2520);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted, #73675c);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      background: var(--bg-surface, #ffffff);
+      color: var(--text-main, #2b2520);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: #1e3a8a;
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: var(--bg-surface, #ffffff);
+      color: var(--text-secondary, #4a4036);
+      border: 1px solid var(--border);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: #1e3a8a;
+      color: #ffffff !important;
+      border-color: #1e3a8a;
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: #1e3a8a !important;
+      color: #ffffff !important;
+      border-color: #1e3a8a !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html, .content-scroll {
+      scroll-behavior: smooth;
+    }
+
     .editorial-plate {
       margin: 24px 0;
       padding: 14px 18px;
@@ -3792,7 +3908,28 @@
           <span class="sheet-meta-badge">Chapter 1 Full Text · Pages 1–18 Unabridged</span>
           <span class="sheet-meta-edition">Sorrentino 5th Ed.</span>
         </div>
-        <div id="page-1"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch1" aria-label="Chapter 1 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.1–19 · 共 19 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-1">第 1 页 · 学习目标、核心专业术语表与开篇导读 (Objectives, Key Terms & Chapter Opener)</option><option value="page-2">第 2 页 · 支持工作者的定义、终极宗旨与全人照护 (What is a Support Worker & The Ultimate Goal)</option><option value="page-3">第 3 页 · 加拿大各省支持工作现状与多元职业头衔 (Support Work Across Canada & Professional Titles)</option><option value="page-4">第 4 页 · 支持工作者六大核心职责：ADLs与IADLs、护士协作与家务管理 (The Six Categories of Responsibilities)</option><option value="page-5">第 5 页 · 支持工作者日常工作职责对比清单：社区居家照护 vs 机构照护 (Typical Daily Activities: Home vs Facility)</option><option value="page-6">第 6 页 · 真实工作实录（一）：社区居家入户照护 —— 史蒂芬的一天 (A Day in the Life: Home Care - Stephen)</option><option value="page-7">第 7 页 · 真实工作实录（二）：长期照护院舍晨间护理 —— 克莱尔的一天 (A Day in the Life: Long-Term Care - Claire)</option><option value="page-8">第 8 页 · 真实工作实录（三）：急症综合医院外科病区 —— 吉娜的一天 (A Day in the Life: Hospital - Gina)</option><option value="page-9">第 9 页 · 受助人群全景：母婴、儿童青少年、成年病患、残障人士与长者 (The People Supported Across the Lifespan)</option><option value="page-10">第 10 页 · 执业场所谱系与医疗卫生团队：受监管与未受监管照护者辨析 (Settings, The Health Care Team & Regulated vs UCP)</option><option value="page-11">第 11 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（上：医师/护士/物理/作业/言语治疗师）(The Health Care Team Part 1)</option><option value="page-12">第 12 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（下：营养师/社工/药剂师/康乐/PSW/案主及家属）(The Health Care Team Part 2)</option><option value="page-13">第 13 页 · 法定执业范围、主管护士临床督导机制与职业素养核心基石 (Scope of Practice, Supervision & Professionalism)</option><option value="page-14">第 14 页 · 专栏 1.1：消极言辞 vs 积极职业沟通；专业仪表规范与案主隐私保密 (Box 1.1, Appearance & Confidentiality)</option><option value="page-15">第 15 页 · 反思性执业自我评估审查、严守职业界限与以服务对象为中心的照护 (Reflective Practice Review & Professional Boundaries)</option><option value="page-16">第 16 页 · DIPPS 核心人本照护原则（尊严、独立、偏好、隐私、安全）与实战落地 (Client-Centred Care & DIPPS Principles)</option><option value="page-17">第 17 页 · 临床批判性思维与解决问题的四大决策支柱（DIPPS、案主视角、执业范围、督导考量）(Critical Thinking & Problem-Solving)</option><option value="page-18">第 18 页 · 本章核心要点精要总结、跌倒长者拒绝求助临床反思与自测选择题 (Key Points, Critical Thinking & Review Question 1)</option><option value="page-19">第 19 页 · 章末全真执业自测题 (Q2-Q12) 与教材第 19 页官方标准答案深度精解 (Official Practice Exam Q2-Q12 & Answers)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-1" class="cp-chip" id="cp-chip-1-1" data-page="1" onclick="handlePageChipClick(event, 'page-1')" title="第 1 页 · 学习目标、核心专业术语表与开篇导读 (Objectives, Key Terms & Chapter Opener)"><span class="cp-num">p.1</span></a><a href="#page-2" class="cp-chip" id="cp-chip-1-2" data-page="2" onclick="handlePageChipClick(event, 'page-2')" title="第 2 页 · 支持工作者的定义、终极宗旨与全人照护 (What is a Support Worker & The Ultimate Goal)"><span class="cp-num">p.2</span></a><a href="#page-3" class="cp-chip" id="cp-chip-1-3" data-page="3" onclick="handlePageChipClick(event, 'page-3')" title="第 3 页 · 加拿大各省支持工作现状与多元职业头衔 (Support Work Across Canada & Professional Titles)"><span class="cp-num">p.3</span></a><a href="#page-4" class="cp-chip" id="cp-chip-1-4" data-page="4" onclick="handlePageChipClick(event, 'page-4')" title="第 4 页 · 支持工作者六大核心职责：ADLs与IADLs、护士协作与家务管理 (The Six Categories of Responsibilities)"><span class="cp-num">p.4</span></a><a href="#page-5" class="cp-chip" id="cp-chip-1-5" data-page="5" onclick="handlePageChipClick(event, 'page-5')" title="第 5 页 · 支持工作者日常工作职责对比清单：社区居家照护 vs 机构照护 (Typical Daily Activities: Home vs Facility)"><span class="cp-num">p.5</span></a><a href="#page-6" class="cp-chip" id="cp-chip-1-6" data-page="6" onclick="handlePageChipClick(event, 'page-6')" title="第 6 页 · 真实工作实录（一）：社区居家入户照护 —— 史蒂芬的一天 (A Day in the Life: Home Care - Stephen)"><span class="cp-num">p.6</span></a><a href="#page-7" class="cp-chip" id="cp-chip-1-7" data-page="7" onclick="handlePageChipClick(event, 'page-7')" title="第 7 页 · 真实工作实录（二）：长期照护院舍晨间护理 —— 克莱尔的一天 (A Day in the Life: Long-Term Care - Claire)"><span class="cp-num">p.7</span></a><a href="#page-8" class="cp-chip" id="cp-chip-1-8" data-page="8" onclick="handlePageChipClick(event, 'page-8')" title="第 8 页 · 真实工作实录（三）：急症综合医院外科病区 —— 吉娜的一天 (A Day in the Life: Hospital - Gina)"><span class="cp-num">p.8</span></a><a href="#page-9" class="cp-chip" id="cp-chip-1-9" data-page="9" onclick="handlePageChipClick(event, 'page-9')" title="第 9 页 · 受助人群全景：母婴、儿童青少年、成年病患、残障人士与长者 (The People Supported Across the Lifespan)"><span class="cp-num">p.9</span></a><a href="#page-10" class="cp-chip" id="cp-chip-1-10" data-page="10" onclick="handlePageChipClick(event, 'page-10')" title="第 10 页 · 执业场所谱系与医疗卫生团队：受监管与未受监管照护者辨析 (Settings, The Health Care Team & Regulated vs UCP)"><span class="cp-num">p.10</span></a><a href="#page-11" class="cp-chip" id="cp-chip-1-11" data-page="11" onclick="handlePageChipClick(event, 'page-11')" title="第 11 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（上：医师/护士/物理/作业/言语治疗师）(The Health Care Team Part 1)"><span class="cp-num">p.11</span></a><a href="#page-12" class="cp-chip" id="cp-chip-1-12" data-page="12" onclick="handlePageChipClick(event, 'page-12')" title="第 12 页 · Table 1.1 跨学科医疗团队核心成员职责与法定资质（下：营养师/社工/药剂师/康乐/PSW/案主及家属）(The Health Care Team Part 2)"><span class="cp-num">p.12</span></a><a href="#page-13" class="cp-chip" id="cp-chip-1-13" data-page="13" onclick="handlePageChipClick(event, 'page-13')" title="第 13 页 · 法定执业范围、主管护士临床督导机制与职业素养核心基石 (Scope of Practice, Supervision & Professionalism)"><span class="cp-num">p.13</span></a><a href="#page-14" class="cp-chip" id="cp-chip-1-14" data-page="14" onclick="handlePageChipClick(event, 'page-14')" title="第 14 页 · 专栏 1.1：消极言辞 vs 积极职业沟通；专业仪表规范与案主隐私保密 (Box 1.1, Appearance & Confidentiality)"><span class="cp-num">p.14</span></a><a href="#page-15" class="cp-chip" id="cp-chip-1-15" data-page="15" onclick="handlePageChipClick(event, 'page-15')" title="第 15 页 · 反思性执业自我评估审查、严守职业界限与以服务对象为中心的照护 (Reflective Practice Review & Professional Boundaries)"><span class="cp-num">p.15</span></a><a href="#page-16" class="cp-chip" id="cp-chip-1-16" data-page="16" onclick="handlePageChipClick(event, 'page-16')" title="第 16 页 · DIPPS 核心人本照护原则（尊严、独立、偏好、隐私、安全）与实战落地 (Client-Centred Care & DIPPS Principles)"><span class="cp-num">p.16</span></a><a href="#page-17" class="cp-chip" id="cp-chip-1-17" data-page="17" onclick="handlePageChipClick(event, 'page-17')" title="第 17 页 · 临床批判性思维与解决问题的四大决策支柱（DIPPS、案主视角、执业范围、督导考量）(Critical Thinking & Problem-Solving)"><span class="cp-num">p.17</span></a><a href="#page-18" class="cp-chip" id="cp-chip-1-18" data-page="18" onclick="handlePageChipClick(event, 'page-18')" title="第 18 页 · 本章核心要点精要总结、跌倒长者拒绝求助临床反思与自测选择题 (Key Points, Critical Thinking & Review Question 1)"><span class="cp-num">p.18</span></a><a href="#page-19" class="cp-chip" id="cp-chip-1-19" data-page="19" onclick="handlePageChipClick(event, 'page-19')" title="第 19 页 · 章末全真执业自测题 (Q2-Q12) 与教材第 19 页官方标准答案深度精解 (Official Practice Exam Q2-Q12 & Answers)"><span class="cp-num">p.19</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-1"></div>
                 <div class="editorial-key-terms-container" id="terms-ch1">
                   <div class="kt-header-bar">
                     <div class="kt-title-group">
@@ -5869,7 +6006,28 @@
           <span class="sheet-meta-badge">Chapter 2 Full Text · Pages 20–32 Unabridged</span>
           <span class="sheet-meta-edition">The Canadian Health Care System</span>
         </div>
-        <div id="page-20"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch2" aria-label="Chapter 2 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.20–33 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-20">第 20 页 · 学习目标、全民医保演进与开篇导读 (Objectives & Evolution of Medicare)</option><option value="page-21">第 21 页 · 核心专业术语表与全民医保核心准则导论 (Key Terms & Medicare Framework)</option><option value="page-22">第 22 页 · 加拿大全民医保历史渊源：从萨省试点到全联邦立法 (History of Medicare: Douglas to Canada Health Act)</option><option value="page-23">第 23 页 · 《加拿大健康法》(1984) 五大神圣支柱原则与专栏 2.1 (Five Principles of Medicare & Box 2.1)</option><option value="page-24">第 24 页 · 联邦政府与省/地区政府在医疗照护中的权责划分 (Federal vs Provincial Healthcare Responsibilities)</option><option value="page-25">第 25 页 · 真相与和解委员会 (TRC)：针对原住民健康的七大行动呼吁 (TRC Calls to Action for Indigenous Health)</option><option value="page-26">第 26 页 · 医疗卫生服务三级分级架构：初级、二级与三级医疗 (Primary, Secondary & Tertiary Care Delivery)</option><option value="page-27">第 27 页 · 社区卫生服务机构与居家照护 (Home Care) 的兴起 (Community Health Services & Home Care)</option><option value="page-28">第 28 页 · 加拿大居家照护项目运作模式与公私营机构资金来源 (Home Care Programs & Funding Across Canada)</option><option value="page-29">第 29 页 · 加拿大医疗卫生体系面临的四大严峻挑战 (Challenges: Aging, Costs, Waitlists & Shortages)</option><option value="page-30">第 30 页 · 医疗改革新动向：健康促进、疾病预防与专栏 2.2 门诊就诊自查 (Health Promotion, Prevention & Box 2.2)</option><option value="page-31">第 31 页 · 补充医疗福利保险、私人商业保险与未来发展趋势 (Supplementary Benefits & Future Trends)</option><option value="page-32">第 32 页 · 本章核心要点精要总结、医疗体制议题批判性思维与自测题 Q1-Q3 (Key Points, Critical Thinking & Q1-Q3)</option><option value="page-33">第 33 页 · 章末全真执业自测题 (Q4-Q11) 与教材第 33 页官方标准答案深度精解 (Official Exam Q4-Q11 & Answer Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-20" class="cp-chip" id="cp-chip-2-20" data-page="20" onclick="handlePageChipClick(event, 'page-20')" title="第 20 页 · 学习目标、全民医保演进与开篇导读 (Objectives & Evolution of Medicare)"><span class="cp-num">p.20</span></a><a href="#page-21" class="cp-chip" id="cp-chip-2-21" data-page="21" onclick="handlePageChipClick(event, 'page-21')" title="第 21 页 · 核心专业术语表与全民医保核心准则导论 (Key Terms & Medicare Framework)"><span class="cp-num">p.21</span></a><a href="#page-22" class="cp-chip" id="cp-chip-2-22" data-page="22" onclick="handlePageChipClick(event, 'page-22')" title="第 22 页 · 加拿大全民医保历史渊源：从萨省试点到全联邦立法 (History of Medicare: Douglas to Canada Health Act)"><span class="cp-num">p.22</span></a><a href="#page-23" class="cp-chip" id="cp-chip-2-23" data-page="23" onclick="handlePageChipClick(event, 'page-23')" title="第 23 页 · 《加拿大健康法》(1984) 五大神圣支柱原则与专栏 2.1 (Five Principles of Medicare & Box 2.1)"><span class="cp-num">p.23</span></a><a href="#page-24" class="cp-chip" id="cp-chip-2-24" data-page="24" onclick="handlePageChipClick(event, 'page-24')" title="第 24 页 · 联邦政府与省/地区政府在医疗照护中的权责划分 (Federal vs Provincial Healthcare Responsibilities)"><span class="cp-num">p.24</span></a><a href="#page-25" class="cp-chip" id="cp-chip-2-25" data-page="25" onclick="handlePageChipClick(event, 'page-25')" title="第 25 页 · 真相与和解委员会 (TRC)：针对原住民健康的七大行动呼吁 (TRC Calls to Action for Indigenous Health)"><span class="cp-num">p.25</span></a><a href="#page-26" class="cp-chip" id="cp-chip-2-26" data-page="26" onclick="handlePageChipClick(event, 'page-26')" title="第 26 页 · 医疗卫生服务三级分级架构：初级、二级与三级医疗 (Primary, Secondary & Tertiary Care Delivery)"><span class="cp-num">p.26</span></a><a href="#page-27" class="cp-chip" id="cp-chip-2-27" data-page="27" onclick="handlePageChipClick(event, 'page-27')" title="第 27 页 · 社区卫生服务机构与居家照护 (Home Care) 的兴起 (Community Health Services & Home Care)"><span class="cp-num">p.27</span></a><a href="#page-28" class="cp-chip" id="cp-chip-2-28" data-page="28" onclick="handlePageChipClick(event, 'page-28')" title="第 28 页 · 加拿大居家照护项目运作模式与公私营机构资金来源 (Home Care Programs & Funding Across Canada)"><span class="cp-num">p.28</span></a><a href="#page-29" class="cp-chip" id="cp-chip-2-29" data-page="29" onclick="handlePageChipClick(event, 'page-29')" title="第 29 页 · 加拿大医疗卫生体系面临的四大严峻挑战 (Challenges: Aging, Costs, Waitlists & Shortages)"><span class="cp-num">p.29</span></a><a href="#page-30" class="cp-chip" id="cp-chip-2-30" data-page="30" onclick="handlePageChipClick(event, 'page-30')" title="第 30 页 · 医疗改革新动向：健康促进、疾病预防与专栏 2.2 门诊就诊自查 (Health Promotion, Prevention & Box 2.2)"><span class="cp-num">p.30</span></a><a href="#page-31" class="cp-chip" id="cp-chip-2-31" data-page="31" onclick="handlePageChipClick(event, 'page-31')" title="第 31 页 · 补充医疗福利保险、私人商业保险与未来发展趋势 (Supplementary Benefits & Future Trends)"><span class="cp-num">p.31</span></a><a href="#page-32" class="cp-chip" id="cp-chip-2-32" data-page="32" onclick="handlePageChipClick(event, 'page-32')" title="第 32 页 · 本章核心要点精要总结、医疗体制议题批判性思维与自测题 Q1-Q3 (Key Points, Critical Thinking & Q1-Q3)"><span class="cp-num">p.32</span></a><a href="#page-33" class="cp-chip" id="cp-chip-2-33" data-page="33" onclick="handlePageChipClick(event, 'page-33')" title="第 33 页 · 章末全真执业自测题 (Q4-Q11) 与教材第 33 页官方标准答案深度精解 (Official Exam Q4-Q11 & Answer Key)"><span class="cp-num">p.33</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-20"></div>
                 <div class="editorial-footer-url">
                   <span class="efu-icon">🌐</span>
                   <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
@@ -7490,7 +7648,28 @@
           <span class="sheet-meta-badge">Chapter 3 Full Text · Pages 34–46 Unabridged</span>
           <span class="sheet-meta-edition">Workplace Settings</span>
         </div>
-        <div id="page-34"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch3" aria-label="Chapter 3 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.34–47 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-34">第 34 页 · 学习目标、执业场所全景概览与开篇导读 (Objectives & Workplace Settings)</option><option value="page-35">第 35 页 · 核心专业术语表（急性/慢病/辅助生活/长期照护）(Key Terms: Acute to Supportive)</option><option value="page-36">第 36 页 · 两大执业阵地分野：社区型照护 vs 机构型照护 (Community-Based vs Facility-Based Care)</option><option value="page-37">第 37 页 · 社区照护场所：原住民社区工作挑战与社区健康中心 (Indigenous Communities & Community Centres)</option><option value="page-38">第 38 页 · 居家照护 (Home Care) 执业实录与专栏 3.1 居家照护优势与挑战 (Home Care & Box 3.1 Benefits/Challenges)</option><option value="page-39">第 39 页 · 成人日间康乐计划与辅助生活照护公寓 (Adult Day Programs & Assisted-Living Facilities)</option><option value="page-40">第 40 页 · 长期照护院舍（养老院）：生活环境与温馨家园氛围 (Long-Term Care Homes & Homelike Atmosphere)</option><option value="page-41">第 41 页 · 专栏 3.2：长期照护院舍执业优势与挑战对比表 (Box 3.2 Benefits and Challenges of Working in LTC)</option><option value="page-42">第 42 页 · 退休自理公寓与集体家庭公寓执业解析 (Retirement Homes & Group Homes)</option><option value="page-43">第 43 页 · 专栏 3.3：直接受雇于案主本人的优势与执业挑战 (Box 3.3 Working Directly for Clients)</option><option value="page-44">第 44 页 · 综合医院急症外科、专科病房与亚急性医疗 (Hospitals, Specialized Units & Subacute Care)</option><option value="page-45">第 45 页 · 专栏 3.4：急症综合医院执业利弊对比与从业选择 (Box 3.4 Benefits/Challenges in Hospital Settings)</option><option value="page-46">第 46 页 · 本章核心要点精要总结、工作场所抉择批判性思维与自测题 Q1-Q6 (Key Points, Critical Thinking & Q1-Q6)</option><option value="page-47">第 47 页 · 章末全真执业自测题 (Q7-Q9) 与教材第 47 页官方标准答案深度精解 (Official Exam Q7-Q9 & Answer Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-34" class="cp-chip" id="cp-chip-3-34" data-page="34" onclick="handlePageChipClick(event, 'page-34')" title="第 34 页 · 学习目标、执业场所全景概览与开篇导读 (Objectives & Workplace Settings)"><span class="cp-num">p.34</span></a><a href="#page-35" class="cp-chip" id="cp-chip-3-35" data-page="35" onclick="handlePageChipClick(event, 'page-35')" title="第 35 页 · 核心专业术语表（急性/慢病/辅助生活/长期照护）(Key Terms: Acute to Supportive)"><span class="cp-num">p.35</span></a><a href="#page-36" class="cp-chip" id="cp-chip-3-36" data-page="36" onclick="handlePageChipClick(event, 'page-36')" title="第 36 页 · 两大执业阵地分野：社区型照护 vs 机构型照护 (Community-Based vs Facility-Based Care)"><span class="cp-num">p.36</span></a><a href="#page-37" class="cp-chip" id="cp-chip-3-37" data-page="37" onclick="handlePageChipClick(event, 'page-37')" title="第 37 页 · 社区照护场所：原住民社区工作挑战与社区健康中心 (Indigenous Communities & Community Centres)"><span class="cp-num">p.37</span></a><a href="#page-38" class="cp-chip" id="cp-chip-3-38" data-page="38" onclick="handlePageChipClick(event, 'page-38')" title="第 38 页 · 居家照护 (Home Care) 执业实录与专栏 3.1 居家照护优势与挑战 (Home Care & Box 3.1 Benefits/Challenges)"><span class="cp-num">p.38</span></a><a href="#page-39" class="cp-chip" id="cp-chip-3-39" data-page="39" onclick="handlePageChipClick(event, 'page-39')" title="第 39 页 · 成人日间康乐计划与辅助生活照护公寓 (Adult Day Programs & Assisted-Living Facilities)"><span class="cp-num">p.39</span></a><a href="#page-40" class="cp-chip" id="cp-chip-3-40" data-page="40" onclick="handlePageChipClick(event, 'page-40')" title="第 40 页 · 长期照护院舍（养老院）：生活环境与温馨家园氛围 (Long-Term Care Homes & Homelike Atmosphere)"><span class="cp-num">p.40</span></a><a href="#page-41" class="cp-chip" id="cp-chip-3-41" data-page="41" onclick="handlePageChipClick(event, 'page-41')" title="第 41 页 · 专栏 3.2：长期照护院舍执业优势与挑战对比表 (Box 3.2 Benefits and Challenges of Working in LTC)"><span class="cp-num">p.41</span></a><a href="#page-42" class="cp-chip" id="cp-chip-3-42" data-page="42" onclick="handlePageChipClick(event, 'page-42')" title="第 42 页 · 退休自理公寓与集体家庭公寓执业解析 (Retirement Homes & Group Homes)"><span class="cp-num">p.42</span></a><a href="#page-43" class="cp-chip" id="cp-chip-3-43" data-page="43" onclick="handlePageChipClick(event, 'page-43')" title="第 43 页 · 专栏 3.3：直接受雇于案主本人的优势与执业挑战 (Box 3.3 Working Directly for Clients)"><span class="cp-num">p.43</span></a><a href="#page-44" class="cp-chip" id="cp-chip-3-44" data-page="44" onclick="handlePageChipClick(event, 'page-44')" title="第 44 页 · 综合医院急症外科、专科病房与亚急性医疗 (Hospitals, Specialized Units & Subacute Care)"><span class="cp-num">p.44</span></a><a href="#page-45" class="cp-chip" id="cp-chip-3-45" data-page="45" onclick="handlePageChipClick(event, 'page-45')" title="第 45 页 · 专栏 3.4：急症综合医院执业利弊对比与从业选择 (Box 3.4 Benefits/Challenges in Hospital Settings)"><span class="cp-num">p.45</span></a><a href="#page-46" class="cp-chip" id="cp-chip-3-46" data-page="46" onclick="handlePageChipClick(event, 'page-46')" title="第 46 页 · 本章核心要点精要总结、工作场所抉择批判性思维与自测题 Q1-Q6 (Key Points, Critical Thinking & Q1-Q6)"><span class="cp-num">p.46</span></a><a href="#page-47" class="cp-chip" id="cp-chip-3-47" data-page="47" onclick="handlePageChipClick(event, 'page-47')" title="第 47 页 · 章末全真执业自测题 (Q7-Q9) 与教材第 47 页官方标准答案深度精解 (Official Exam Q7-Q9 & Answer Key)"><span class="cp-num">p.47</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-34"></div>
                 <div class="editorial-footer-url">
                   <span class="efu-icon">🌐</span>
                   <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
@@ -9045,7 +9224,28 @@
           <span class="sheet-meta-badge">Chapter 4 Full Text · Pages 48–57 Unabridged</span>
           <span class="sheet-meta-edition">Ethics in Support Work</span>
         </div>
-        <div id="page-48"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch4" aria-label="Chapter 4 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.48–58 · 共 11 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-48">第 48 页 · 学习目标、伦理守则开篇与导读 (Objectives & Code of Ethics Opener)</option><option value="page-49">第 49 页 · 核心专业术语表与伦理、道德、价值观辨析 (Key Terms, Ethics, Morals & Values)</option><option value="page-50">第 50 页 · 多元文化背景对伦理观念的影响与专栏：梅德维杰德先生 (Culture & Supporting Mr. Medvjed)</option><option value="page-51">第 51 页 · 医疗伦理四大根本原则（一）：自主自决原则 (Health Care Ethics: Autonomy)</option><option value="page-52">第 52 页 · 医疗伦理四大根本原则（二）：公平正义原则与慈惠行善原则 (Justice & Beneficence)</option><option value="page-53">第 53 页 · 医疗伦理四大根本原则（三）：不伤害原则与防范虐待 (Nonmaleficence & Preventing Harm)</option><option value="page-54">第 54 页 · 临床伦理困境的本质：对立道德选择冲突与利益冲突防范 (Ethical Dilemmas & Conflict of Interest)</option><option value="page-55">第 55 页 · 伦理困境实战案例研讨：自决权与人身安全的激烈博弈 (Ethical Case: Autonomy vs Safety)</option><option value="page-56">第 56 页 · 解决临床伦理困境的四步科学决断框架与支持网络 (Four-Step Framework for Ethical Dilemmas)</option><option value="page-57">第 57 页 · 本章核心要点精要总结、强迫进食思维修炼与自测题 Q1-Q10 (Key Points, Critical Thinking & Q1-Q10)</option><option value="page-58">第 58 页 · 章末全真执业自测题 Q11 与教材第 58 页官方标准答案深度精解 (Official Exam Q11 & Answer Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-48" class="cp-chip" id="cp-chip-4-48" data-page="48" onclick="handlePageChipClick(event, 'page-48')" title="第 48 页 · 学习目标、伦理守则开篇与导读 (Objectives & Code of Ethics Opener)"><span class="cp-num">p.48</span></a><a href="#page-49" class="cp-chip" id="cp-chip-4-49" data-page="49" onclick="handlePageChipClick(event, 'page-49')" title="第 49 页 · 核心专业术语表与伦理、道德、价值观辨析 (Key Terms, Ethics, Morals & Values)"><span class="cp-num">p.49</span></a><a href="#page-50" class="cp-chip" id="cp-chip-4-50" data-page="50" onclick="handlePageChipClick(event, 'page-50')" title="第 50 页 · 多元文化背景对伦理观念的影响与专栏：梅德维杰德先生 (Culture & Supporting Mr. Medvjed)"><span class="cp-num">p.50</span></a><a href="#page-51" class="cp-chip" id="cp-chip-4-51" data-page="51" onclick="handlePageChipClick(event, 'page-51')" title="第 51 页 · 医疗伦理四大根本原则（一）：自主自决原则 (Health Care Ethics: Autonomy)"><span class="cp-num">p.51</span></a><a href="#page-52" class="cp-chip" id="cp-chip-4-52" data-page="52" onclick="handlePageChipClick(event, 'page-52')" title="第 52 页 · 医疗伦理四大根本原则（二）：公平正义原则与慈惠行善原则 (Justice & Beneficence)"><span class="cp-num">p.52</span></a><a href="#page-53" class="cp-chip" id="cp-chip-4-53" data-page="53" onclick="handlePageChipClick(event, 'page-53')" title="第 53 页 · 医疗伦理四大根本原则（三）：不伤害原则与防范虐待 (Nonmaleficence & Preventing Harm)"><span class="cp-num">p.53</span></a><a href="#page-54" class="cp-chip" id="cp-chip-4-54" data-page="54" onclick="handlePageChipClick(event, 'page-54')" title="第 54 页 · 临床伦理困境的本质：对立道德选择冲突与利益冲突防范 (Ethical Dilemmas & Conflict of Interest)"><span class="cp-num">p.54</span></a><a href="#page-55" class="cp-chip" id="cp-chip-4-55" data-page="55" onclick="handlePageChipClick(event, 'page-55')" title="第 55 页 · 伦理困境实战案例研讨：自决权与人身安全的激烈博弈 (Ethical Case: Autonomy vs Safety)"><span class="cp-num">p.55</span></a><a href="#page-56" class="cp-chip" id="cp-chip-4-56" data-page="56" onclick="handlePageChipClick(event, 'page-56')" title="第 56 页 · 解决临床伦理困境的四步科学决断框架与支持网络 (Four-Step Framework for Ethical Dilemmas)"><span class="cp-num">p.56</span></a><a href="#page-57" class="cp-chip" id="cp-chip-4-57" data-page="57" onclick="handlePageChipClick(event, 'page-57')" title="第 57 页 · 本章核心要点精要总结、强迫进食思维修炼与自测题 Q1-Q10 (Key Points, Critical Thinking & Q1-Q10)"><span class="cp-num">p.57</span></a><a href="#page-58" class="cp-chip" id="cp-chip-4-58" data-page="58" onclick="handlePageChipClick(event, 'page-58')" title="第 58 页 · 章末全真执业自测题 Q11 与教材第 58 页官方标准答案深度精解 (Official Exam Q11 & Answer Key)"><span class="cp-num">p.58</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-48"></div>
                 <div class="editorial-footer-url">
                   <span class="efu-icon">🌐</span>
                   <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
@@ -10407,7 +10607,28 @@
           <span class="sheet-meta-badge">Chapter 5 Full Text · Pages 59–76 Unabridged</span>
           <span class="sheet-meta-edition">Legislation & Client Rights</span>
         </div>
-        <div id="page-59"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch5" aria-label="Chapter 5 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.59–75 · 共 17 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-59">第 59 页 · 学习目标与核心原则</option><option value="page-60">第 60 页 · 加拿大宪章与核心术语</option><option value="page-61">第 61 页 · 理解权利与加拿大基本人权</option><option value="page-62">第 62 页 · 专栏 5.1 & 复合照护法规</option><option value="page-63">第 63 页 · 专栏 5.2 BC省住户权利法案</option><option value="page-64">第 64 页 · 服务对象基本权利与尊严照护</option><option value="page-65">第 65 页 · 尊严实务推进与电子隐私保护</option><option value="page-66">第 66 页 · 专栏 5.3 尊重尊严与知情同意</option><option value="page-67">第 67 页 · 专栏 5.4 隐私准则与预立指示</option><option value="page-68">第 68 页 · 临床案例：生前预嘱与替代决策者</option><option value="page-69">第 69 页 · 遗嘱设立、代理人与自决权</option><option value="page-70">第 70 页 · 刑法 vs 民法与侵权归责</option><option value="page-71">第 71 页 · 执业范围边界与专栏 5.5 侵权案例</option><option value="page-72">第 72 页 · 非法拘禁、诽谤与照护者法定权利</option><option value="page-73">第 73 页 · 人权、职业健康安全与工伤赔偿</option><option value="page-74">第 74 页 · 社区服务立法与健康档案规约</option><option value="page-75">第 75 页 · 本章复习、核心要点与审辩思维修炼</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-59" class="cp-chip" id="cp-chip-5-59" data-page="59" onclick="handlePageChipClick(event, 'page-59')" title="第 59 页 · 学习目标与核心原则"><span class="cp-num">p.59</span></a><a href="#page-60" class="cp-chip" id="cp-chip-5-60" data-page="60" onclick="handlePageChipClick(event, 'page-60')" title="第 60 页 · 加拿大宪章与核心术语"><span class="cp-num">p.60</span></a><a href="#page-61" class="cp-chip" id="cp-chip-5-61" data-page="61" onclick="handlePageChipClick(event, 'page-61')" title="第 61 页 · 理解权利与加拿大基本人权"><span class="cp-num">p.61</span></a><a href="#page-62" class="cp-chip" id="cp-chip-5-62" data-page="62" onclick="handlePageChipClick(event, 'page-62')" title="第 62 页 · 专栏 5.1 & 复合照护法规"><span class="cp-num">p.62</span></a><a href="#page-63" class="cp-chip" id="cp-chip-5-63" data-page="63" onclick="handlePageChipClick(event, 'page-63')" title="第 63 页 · 专栏 5.2 BC省住户权利法案"><span class="cp-num">p.63</span></a><a href="#page-64" class="cp-chip" id="cp-chip-5-64" data-page="64" onclick="handlePageChipClick(event, 'page-64')" title="第 64 页 · 服务对象基本权利与尊严照护"><span class="cp-num">p.64</span></a><a href="#page-65" class="cp-chip" id="cp-chip-5-65" data-page="65" onclick="handlePageChipClick(event, 'page-65')" title="第 65 页 · 尊严实务推进与电子隐私保护"><span class="cp-num">p.65</span></a><a href="#page-66" class="cp-chip" id="cp-chip-5-66" data-page="66" onclick="handlePageChipClick(event, 'page-66')" title="第 66 页 · 专栏 5.3 尊重尊严与知情同意"><span class="cp-num">p.66</span></a><a href="#page-67" class="cp-chip" id="cp-chip-5-67" data-page="67" onclick="handlePageChipClick(event, 'page-67')" title="第 67 页 · 专栏 5.4 隐私准则与预立指示"><span class="cp-num">p.67</span></a><a href="#page-68" class="cp-chip" id="cp-chip-5-68" data-page="68" onclick="handlePageChipClick(event, 'page-68')" title="第 68 页 · 临床案例：生前预嘱与替代决策者"><span class="cp-num">p.68</span></a><a href="#page-69" class="cp-chip" id="cp-chip-5-69" data-page="69" onclick="handlePageChipClick(event, 'page-69')" title="第 69 页 · 遗嘱设立、代理人与自决权"><span class="cp-num">p.69</span></a><a href="#page-70" class="cp-chip" id="cp-chip-5-70" data-page="70" onclick="handlePageChipClick(event, 'page-70')" title="第 70 页 · 刑法 vs 民法与侵权归责"><span class="cp-num">p.70</span></a><a href="#page-71" class="cp-chip" id="cp-chip-5-71" data-page="71" onclick="handlePageChipClick(event, 'page-71')" title="第 71 页 · 执业范围边界与专栏 5.5 侵权案例"><span class="cp-num">p.71</span></a><a href="#page-72" class="cp-chip" id="cp-chip-5-72" data-page="72" onclick="handlePageChipClick(event, 'page-72')" title="第 72 页 · 非法拘禁、诽谤与照护者法定权利"><span class="cp-num">p.72</span></a><a href="#page-73" class="cp-chip" id="cp-chip-5-73" data-page="73" onclick="handlePageChipClick(event, 'page-73')" title="第 73 页 · 人权、职业健康安全与工伤赔偿"><span class="cp-num">p.73</span></a><a href="#page-74" class="cp-chip" id="cp-chip-5-74" data-page="74" onclick="handlePageChipClick(event, 'page-74')" title="第 74 页 · 社区服务立法与健康档案规约"><span class="cp-num">p.74</span></a><a href="#page-75" class="cp-chip" id="cp-chip-5-75" data-page="75" onclick="handlePageChipClick(event, 'page-75')" title="第 75 页 · 本章复习、核心要点与审辩思维修炼"><span class="cp-num">p.75</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-59"></div>
                 <aside class="editorial-box-container box-theme-blue">
                   <div class="box-banner-header">
                     <h4 class="box-title-en">OBJECTIVES</h4>
@@ -13705,7 +13926,28 @@
           <span class="sheet-meta-badge">Chapter 6 Full Text · Pages 77–95 Unabridged</span>
           <span class="sheet-meta-edition">Health, Wellness, Illness, Disability</span>
         </div>
-        <div id="page-77"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch6" aria-label="Chapter 6 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.77–95 · 共 19 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-77">第 77 页 · 学习目标与开篇导读</option><option value="page-78">第 78 页 · 核心专业术语表 (Key Terms)</option><option value="page-79">第 79 页 · 全人健康理念与健康维度</option><option value="page-80">第 80 页 · 生理、情绪、社交与精神健康</option><option value="page-81">第 81 页 · 认知健康与健康安康连续谱</option><option value="page-82">第 82 页 · 加拿大 12 大关键健康决定因素</option><option value="page-83">第 83 页 · 专栏 6.1 健康决定因素：加拿大 vs WHO</option><option value="page-84">第 84 页 · 案例分析：杰森的健康决定因素链条</option><option value="page-85">第 85 页 · 个人健康行为、儿童发展与基因秉赋</option><option value="page-86">第 86 页 · 医疗服务、性别、文化与原住民健康</option><option value="page-87">第 87 页 · 急性疾病 vs 持续性慢性疾病分类</option><option value="page-88">第 88 页 · 疾病与残疾伴随的重大生活转变与丧失</option><option value="page-89">第 89 页 · 专栏 6.2 面对疾病与残疾的身心防御反应</option><option value="page-90">第 90 页 · 案例分析：维塔利先生的自尊与抑郁危机</option><option value="page-91">第 91 页 · 以 DIPPS 为指导的慈悲关怀与人本支持</option><option value="page-92">第 92 页 · 专栏 6.3 残障人士包容性语言指引 (上)</option><option value="page-93">第 93 页 · 专栏 6.3 残障人士包容性语言指引 (下)</option><option value="page-94">第 94 页 · 本章要点回顾与批判性思维 (Q1-Q9)</option><option value="page-95">第 95 页 · 本章自测题精解与权威答案 (Q10-Q11)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-77" class="cp-chip" id="cp-chip-6-77" data-page="77" onclick="handlePageChipClick(event, 'page-77')" title="第 77 页 · 学习目标与开篇导读"><span class="cp-num">p.77</span></a><a href="#page-78" class="cp-chip" id="cp-chip-6-78" data-page="78" onclick="handlePageChipClick(event, 'page-78')" title="第 78 页 · 核心专业术语表 (Key Terms)"><span class="cp-num">p.78</span></a><a href="#page-79" class="cp-chip" id="cp-chip-6-79" data-page="79" onclick="handlePageChipClick(event, 'page-79')" title="第 79 页 · 全人健康理念与健康维度"><span class="cp-num">p.79</span></a><a href="#page-80" class="cp-chip" id="cp-chip-6-80" data-page="80" onclick="handlePageChipClick(event, 'page-80')" title="第 80 页 · 生理、情绪、社交与精神健康"><span class="cp-num">p.80</span></a><a href="#page-81" class="cp-chip" id="cp-chip-6-81" data-page="81" onclick="handlePageChipClick(event, 'page-81')" title="第 81 页 · 认知健康与健康安康连续谱"><span class="cp-num">p.81</span></a><a href="#page-82" class="cp-chip" id="cp-chip-6-82" data-page="82" onclick="handlePageChipClick(event, 'page-82')" title="第 82 页 · 加拿大 12 大关键健康决定因素"><span class="cp-num">p.82</span></a><a href="#page-83" class="cp-chip" id="cp-chip-6-83" data-page="83" onclick="handlePageChipClick(event, 'page-83')" title="第 83 页 · 专栏 6.1 健康决定因素：加拿大 vs WHO"><span class="cp-num">p.83</span></a><a href="#page-84" class="cp-chip" id="cp-chip-6-84" data-page="84" onclick="handlePageChipClick(event, 'page-84')" title="第 84 页 · 案例分析：杰森的健康决定因素链条"><span class="cp-num">p.84</span></a><a href="#page-85" class="cp-chip" id="cp-chip-6-85" data-page="85" onclick="handlePageChipClick(event, 'page-85')" title="第 85 页 · 个人健康行为、儿童发展与基因秉赋"><span class="cp-num">p.85</span></a><a href="#page-86" class="cp-chip" id="cp-chip-6-86" data-page="86" onclick="handlePageChipClick(event, 'page-86')" title="第 86 页 · 医疗服务、性别、文化与原住民健康"><span class="cp-num">p.86</span></a><a href="#page-87" class="cp-chip" id="cp-chip-6-87" data-page="87" onclick="handlePageChipClick(event, 'page-87')" title="第 87 页 · 急性疾病 vs 持续性慢性疾病分类"><span class="cp-num">p.87</span></a><a href="#page-88" class="cp-chip" id="cp-chip-6-88" data-page="88" onclick="handlePageChipClick(event, 'page-88')" title="第 88 页 · 疾病与残疾伴随的重大生活转变与丧失"><span class="cp-num">p.88</span></a><a href="#page-89" class="cp-chip" id="cp-chip-6-89" data-page="89" onclick="handlePageChipClick(event, 'page-89')" title="第 89 页 · 专栏 6.2 面对疾病与残疾的身心防御反应"><span class="cp-num">p.89</span></a><a href="#page-90" class="cp-chip" id="cp-chip-6-90" data-page="90" onclick="handlePageChipClick(event, 'page-90')" title="第 90 页 · 案例分析：维塔利先生的自尊与抑郁危机"><span class="cp-num">p.90</span></a><a href="#page-91" class="cp-chip" id="cp-chip-6-91" data-page="91" onclick="handlePageChipClick(event, 'page-91')" title="第 91 页 · 以 DIPPS 为指导的慈悲关怀与人本支持"><span class="cp-num">p.91</span></a><a href="#page-92" class="cp-chip" id="cp-chip-6-92" data-page="92" onclick="handlePageChipClick(event, 'page-92')" title="第 92 页 · 专栏 6.3 残障人士包容性语言指引 (上)"><span class="cp-num">p.92</span></a><a href="#page-93" class="cp-chip" id="cp-chip-6-93" data-page="93" onclick="handlePageChipClick(event, 'page-93')" title="第 93 页 · 专栏 6.3 残障人士包容性语言指引 (下)"><span class="cp-num">p.93</span></a><a href="#page-94" class="cp-chip" id="cp-chip-6-94" data-page="94" onclick="handlePageChipClick(event, 'page-94')" title="第 94 页 · 本章要点回顾与批判性思维 (Q1-Q9)"><span class="cp-num">p.94</span></a><a href="#page-95" class="cp-chip" id="cp-chip-6-95" data-page="95" onclick="handlePageChipClick(event, 'page-95')" title="第 95 页 · 本章自测题精解与权威答案 (Q10-Q11)"><span class="cp-num">p.95</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-77"></div>
                 <aside class="editorial-box-container box-theme-blue">
                   <div class="box-banner-header">
                     <h4 class="box-title-en">OBJECTIVES</h4>
@@ -16223,7 +16465,28 @@
           <span class="sheet-meta-badge">Chapter 7 Full Text · Pages 96–111 Unabridged</span>
           <span class="sheet-meta-edition">Caring About Culture & Diversity</span>
         </div>
-        <div id="page-96"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch7" aria-label="Chapter 7 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.96–111 · 共 16 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-96">第 96 页 · 学习目标与文化多样性开篇</option><option value="page-97">第 97 页 · 核心专业术语表与加拿大文化马赛克</option><option value="page-98">第 98 页 · 多元文化法案与族裔及文化界定</option><option value="page-99">第 99 页 · 文化同化、图7.1影响因素与专栏：文化生活习惯</option><option value="page-100">第 100 页 · 偏见与歧视类型、年龄与性别歧视、LGBTQ2与顺性别</option><option value="page-101">第 101 页 · 专栏 7.1 安省人权委：年龄歧视法案与文化安全</option><option value="page-102">第 102 页 · 专栏：跨性别关怀与案例分析：文化冲突（席尔瓦太太）</option><option value="page-103">第 103 页 · 文化胜任力职场指引与多元家庭组织形态</option><option value="page-104">第 104 页 · 图7.2 大家庭、文化对宗教信仰的影响与防范精神虐待</option><option value="page-105">第 105 页 · 传统民间疗法、跨文化沟通原则与身体语言触碰</option><option value="page-106">第 106 页 · 专栏：与加拿大原住民沟通时严禁使用之五大禁忌词汇</option><option value="page-107">第 107 页 · 专栏：与非英语母语案主沟通技巧与个人空间界限</option><option value="page-108">第 108 页 · 专栏：伦迪先生的个人空间触碰照护、眼神与沉默沟通</option><option value="page-109">第 109 页 · 无偏见关怀指引、专栏：库图尔太太与12项反思自省</option><option value="page-110">第 110 页 · 本章核心要点、审辩思维修炼与章末全真自测试题 (Part 1)</option><option value="page-111">第 111 页 · 章末全真自测试题 (Part 2) 与官方参考答案</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-96" class="cp-chip" id="cp-chip-7-96" data-page="96" onclick="handlePageChipClick(event, 'page-96')" title="第 96 页 · 学习目标与文化多样性开篇"><span class="cp-num">p.96</span></a><a href="#page-97" class="cp-chip" id="cp-chip-7-97" data-page="97" onclick="handlePageChipClick(event, 'page-97')" title="第 97 页 · 核心专业术语表与加拿大文化马赛克"><span class="cp-num">p.97</span></a><a href="#page-98" class="cp-chip" id="cp-chip-7-98" data-page="98" onclick="handlePageChipClick(event, 'page-98')" title="第 98 页 · 多元文化法案与族裔及文化界定"><span class="cp-num">p.98</span></a><a href="#page-99" class="cp-chip" id="cp-chip-7-99" data-page="99" onclick="handlePageChipClick(event, 'page-99')" title="第 99 页 · 文化同化、图7.1影响因素与专栏：文化生活习惯"><span class="cp-num">p.99</span></a><a href="#page-100" class="cp-chip" id="cp-chip-7-100" data-page="100" onclick="handlePageChipClick(event, 'page-100')" title="第 100 页 · 偏见与歧视类型、年龄与性别歧视、LGBTQ2与顺性别"><span class="cp-num">p.100</span></a><a href="#page-101" class="cp-chip" id="cp-chip-7-101" data-page="101" onclick="handlePageChipClick(event, 'page-101')" title="第 101 页 · 专栏 7.1 安省人权委：年龄歧视法案与文化安全"><span class="cp-num">p.101</span></a><a href="#page-102" class="cp-chip" id="cp-chip-7-102" data-page="102" onclick="handlePageChipClick(event, 'page-102')" title="第 102 页 · 专栏：跨性别关怀与案例分析：文化冲突（席尔瓦太太）"><span class="cp-num">p.102</span></a><a href="#page-103" class="cp-chip" id="cp-chip-7-103" data-page="103" onclick="handlePageChipClick(event, 'page-103')" title="第 103 页 · 文化胜任力职场指引与多元家庭组织形态"><span class="cp-num">p.103</span></a><a href="#page-104" class="cp-chip" id="cp-chip-7-104" data-page="104" onclick="handlePageChipClick(event, 'page-104')" title="第 104 页 · 图7.2 大家庭、文化对宗教信仰的影响与防范精神虐待"><span class="cp-num">p.104</span></a><a href="#page-105" class="cp-chip" id="cp-chip-7-105" data-page="105" onclick="handlePageChipClick(event, 'page-105')" title="第 105 页 · 传统民间疗法、跨文化沟通原则与身体语言触碰"><span class="cp-num">p.105</span></a><a href="#page-106" class="cp-chip" id="cp-chip-7-106" data-page="106" onclick="handlePageChipClick(event, 'page-106')" title="第 106 页 · 专栏：与加拿大原住民沟通时严禁使用之五大禁忌词汇"><span class="cp-num">p.106</span></a><a href="#page-107" class="cp-chip" id="cp-chip-7-107" data-page="107" onclick="handlePageChipClick(event, 'page-107')" title="第 107 页 · 专栏：与非英语母语案主沟通技巧与个人空间界限"><span class="cp-num">p.107</span></a><a href="#page-108" class="cp-chip" id="cp-chip-7-108" data-page="108" onclick="handlePageChipClick(event, 'page-108')" title="第 108 页 · 专栏：伦迪先生的个人空间触碰照护、眼神与沉默沟通"><span class="cp-num">p.108</span></a><a href="#page-109" class="cp-chip" id="cp-chip-7-109" data-page="109" onclick="handlePageChipClick(event, 'page-109')" title="第 109 页 · 无偏见关怀指引、专栏：库图尔太太与12项反思自省"><span class="cp-num">p.109</span></a><a href="#page-110" class="cp-chip" id="cp-chip-7-110" data-page="110" onclick="handlePageChipClick(event, 'page-110')" title="第 110 页 · 本章核心要点、审辩思维修炼与章末全真自测试题 (Part 1)"><span class="cp-num">p.110</span></a><a href="#page-111" class="cp-chip" id="cp-chip-7-111" data-page="111" onclick="handlePageChipClick(event, 'page-111')" title="第 111 页 · 章末全真自测试题 (Part 2) 与官方参考答案"><span class="cp-num">p.111</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-96"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习与执业考核目标</div>
@@ -18653,7 +18916,28 @@
           <span class="sheet-meta-badge">Chapter 8 Full Text · Pages 112–128 Unabridged</span>
           <span class="sheet-meta-edition">Managing Stress & Self-Care</span>
         </div>
-        <div id="page-112"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch8" aria-label="Chapter 8 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.112–128 · 共 17 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-112">第 112 页 · 学习目标与压力管理开篇</option><option value="page-113">第 113 页 · 核心专业术语表与大健康压力源概述</option><option value="page-114">第 114 页 · 表8.1 压力影响全人五大维度与常见生活变故</option><option value="page-115">第 115 页 · 专栏 8.1 急性压力生理体征与压力源反应因子</option><option value="page-116">第 116 页 · 专栏 8.2 慢性压力、专栏 8.3 情绪行为体征与长者儿童压力</option><option value="page-117">第 117 页 · 心理防御机制、情感验证与支持工作者自身压力调适</option><option value="page-118">第 118 页 · 专栏 8.4 深呼吸静心法与专栏 8.5 渐进式肌肉冥想</option><option value="page-119">第 119 页 · 职业倦怠成因、专栏：凯茜的职业倦怠案例与自救策略</option><option value="page-120">第 120 页 · 时间管理原则、SMART目标设定与多元文化时间观</option><option value="page-121">第 121 页 · 工作日常规划提问清单、专栏：帕吉特太太的日程选择</option><option value="page-122">第 122 页 · 专栏 8.6 时间管理省时技巧、决断力与问题解决流程</option><option value="page-123">第 123 页 · 问题解决四步法：识别与分析问题、主管汇报十项触发线</option><option value="page-124">第 124 页 · 专栏：高太太的观察沟通、专栏：塞缪尔斯太太的赋能方案</option><option value="page-125">第 125 页 · 职场与医患冲突化解、专栏：多元文化应对冲突的差异</option><option value="page-126">第 126 页 · 专栏 8.7 冲突化解核心十二步法则与学生成绩争议实操</option><option value="page-127">第 127 页 · 本章核心知识点、椅子报警器思维修炼与章末全真自测试题 (Part 1)</option><option value="page-128">第 128 页 · 章末全真自测试题 (Part 2) 与官方参考答案</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-112" class="cp-chip" id="cp-chip-8-112" data-page="112" onclick="handlePageChipClick(event, 'page-112')" title="第 112 页 · 学习目标与压力管理开篇"><span class="cp-num">p.112</span></a><a href="#page-113" class="cp-chip" id="cp-chip-8-113" data-page="113" onclick="handlePageChipClick(event, 'page-113')" title="第 113 页 · 核心专业术语表与大健康压力源概述"><span class="cp-num">p.113</span></a><a href="#page-114" class="cp-chip" id="cp-chip-8-114" data-page="114" onclick="handlePageChipClick(event, 'page-114')" title="第 114 页 · 表8.1 压力影响全人五大维度与常见生活变故"><span class="cp-num">p.114</span></a><a href="#page-115" class="cp-chip" id="cp-chip-8-115" data-page="115" onclick="handlePageChipClick(event, 'page-115')" title="第 115 页 · 专栏 8.1 急性压力生理体征与压力源反应因子"><span class="cp-num">p.115</span></a><a href="#page-116" class="cp-chip" id="cp-chip-8-116" data-page="116" onclick="handlePageChipClick(event, 'page-116')" title="第 116 页 · 专栏 8.2 慢性压力、专栏 8.3 情绪行为体征与长者儿童压力"><span class="cp-num">p.116</span></a><a href="#page-117" class="cp-chip" id="cp-chip-8-117" data-page="117" onclick="handlePageChipClick(event, 'page-117')" title="第 117 页 · 心理防御机制、情感验证与支持工作者自身压力调适"><span class="cp-num">p.117</span></a><a href="#page-118" class="cp-chip" id="cp-chip-8-118" data-page="118" onclick="handlePageChipClick(event, 'page-118')" title="第 118 页 · 专栏 8.4 深呼吸静心法与专栏 8.5 渐进式肌肉冥想"><span class="cp-num">p.118</span></a><a href="#page-119" class="cp-chip" id="cp-chip-8-119" data-page="119" onclick="handlePageChipClick(event, 'page-119')" title="第 119 页 · 职业倦怠成因、专栏：凯茜的职业倦怠案例与自救策略"><span class="cp-num">p.119</span></a><a href="#page-120" class="cp-chip" id="cp-chip-8-120" data-page="120" onclick="handlePageChipClick(event, 'page-120')" title="第 120 页 · 时间管理原则、SMART目标设定与多元文化时间观"><span class="cp-num">p.120</span></a><a href="#page-121" class="cp-chip" id="cp-chip-8-121" data-page="121" onclick="handlePageChipClick(event, 'page-121')" title="第 121 页 · 工作日常规划提问清单、专栏：帕吉特太太的日程选择"><span class="cp-num">p.121</span></a><a href="#page-122" class="cp-chip" id="cp-chip-8-122" data-page="122" onclick="handlePageChipClick(event, 'page-122')" title="第 122 页 · 专栏 8.6 时间管理省时技巧、决断力与问题解决流程"><span class="cp-num">p.122</span></a><a href="#page-123" class="cp-chip" id="cp-chip-8-123" data-page="123" onclick="handlePageChipClick(event, 'page-123')" title="第 123 页 · 问题解决四步法：识别与分析问题、主管汇报十项触发线"><span class="cp-num">p.123</span></a><a href="#page-124" class="cp-chip" id="cp-chip-8-124" data-page="124" onclick="handlePageChipClick(event, 'page-124')" title="第 124 页 · 专栏：高太太的观察沟通、专栏：塞缪尔斯太太的赋能方案"><span class="cp-num">p.124</span></a><a href="#page-125" class="cp-chip" id="cp-chip-8-125" data-page="125" onclick="handlePageChipClick(event, 'page-125')" title="第 125 页 · 职场与医患冲突化解、专栏：多元文化应对冲突的差异"><span class="cp-num">p.125</span></a><a href="#page-126" class="cp-chip" id="cp-chip-8-126" data-page="126" onclick="handlePageChipClick(event, 'page-126')" title="第 126 页 · 专栏 8.7 冲突化解核心十二步法则与学生成绩争议实操"><span class="cp-num">p.126</span></a><a href="#page-127" class="cp-chip" id="cp-chip-8-127" data-page="127" onclick="handlePageChipClick(event, 'page-127')" title="第 127 页 · 本章核心知识点、椅子报警器思维修炼与章末全真自测试题 (Part 1)"><span class="cp-num">p.127</span></a><a href="#page-128" class="cp-chip" id="cp-chip-8-128" data-page="128" onclick="handlePageChipClick(event, 'page-128')" title="第 128 页 · 章末全真自测试题 (Part 2) 与官方参考答案"><span class="cp-num">p.128</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-112"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习与执业考核目标</div>
@@ -20617,7 +20901,28 @@
           <span class="sheet-meta-badge">Chapter 9 Interpersonal Communication · Pages 129–148</span>
           <span class="sheet-meta-edition">Sorrentino 5th Edition Unabridged</span>
         </div>
-        <div id="page-129"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch9" aria-label="Chapter 9 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.129–148 · 共 20 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-129">第 129 页 · 学习目标与人际沟通开篇</option><option value="page-130">第 130 页 · 核心专业术语表与人际沟通核心价值</option><option value="page-131">第 131 页 · 沟通模型四要素与影响信息解读的多元因素</option><option value="page-132">第 132 页 · 口头语言沟通艺术、用词选语与电子社交媒体边界</option><option value="page-133">第 133 页 · 照护操作前解释原则与非语言肢体语言系统</option><option value="page-134">第 134 页 · 专栏：雷耶斯先生的言行反差、触碰伦理与有效沉默</option><option value="page-135">第 135 页 · 专栏：罗宾逊太太的静默相伴、倾听艺术与同理复述</option><option value="page-136">第 136 页 · 封闭式提问与开放式提问的临床边界与应用</option><option value="page-137">第 137 页 · 专栏：索菲亚与杜普伊斯先生的复述提问实录与聚焦聚焦</option><option value="page-138">第 138 页 · 常见沟通障碍：打断、自问自答、说教与职场礼仪</option><option value="page-139">第 139 页 · 八大无意识心理防御机制病理界定与表现</option><option value="page-140">第 140 页 · 防御机制临床剖析：否认、投射、合理化与倒退</option><option value="page-141">第 141 页 · 专栏 9.1 杜绝居高临下式轻蔑语言对比与应对防御机制</option><option value="page-142">第 142 页 · 愤怒案主的心理成因、非语言预警体征与平息策略</option><option value="page-143">第 143 页 · 专栏 9.2 平息愤怒案主核心指引与坚定自信沟通风格</option><option value="page-144">第 144 页 · 专栏：卡拉与贝鲁蒂先生的坚定自信沟通辨析与四步教学法</option><option value="page-145">第 145 页 · 专栏 9.3 协助案主学习新技能指引与认知症沟通核心法则</option><option value="page-146">第 146 页 · 专栏 9.4 阿尔茨海默学会认知症全方位沟通黄金实操守则</option><option value="page-147">第 147 页 · 本章核心知识点回顾、长期照护人手短缺思维修炼与章末自测 (Part 1)</option><option value="page-148">第 148 页 · 章末全真自测试题 (Part 2: Q3-Q11)、权威答案精解与在线研习资源</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-129" class="cp-chip" id="cp-chip-9-129" data-page="129" onclick="handlePageChipClick(event, 'page-129')" title="第 129 页 · 学习目标与人际沟通开篇"><span class="cp-num">p.129</span></a><a href="#page-130" class="cp-chip" id="cp-chip-9-130" data-page="130" onclick="handlePageChipClick(event, 'page-130')" title="第 130 页 · 核心专业术语表与人际沟通核心价值"><span class="cp-num">p.130</span></a><a href="#page-131" class="cp-chip" id="cp-chip-9-131" data-page="131" onclick="handlePageChipClick(event, 'page-131')" title="第 131 页 · 沟通模型四要素与影响信息解读的多元因素"><span class="cp-num">p.131</span></a><a href="#page-132" class="cp-chip" id="cp-chip-9-132" data-page="132" onclick="handlePageChipClick(event, 'page-132')" title="第 132 页 · 口头语言沟通艺术、用词选语与电子社交媒体边界"><span class="cp-num">p.132</span></a><a href="#page-133" class="cp-chip" id="cp-chip-9-133" data-page="133" onclick="handlePageChipClick(event, 'page-133')" title="第 133 页 · 照护操作前解释原则与非语言肢体语言系统"><span class="cp-num">p.133</span></a><a href="#page-134" class="cp-chip" id="cp-chip-9-134" data-page="134" onclick="handlePageChipClick(event, 'page-134')" title="第 134 页 · 专栏：雷耶斯先生的言行反差、触碰伦理与有效沉默"><span class="cp-num">p.134</span></a><a href="#page-135" class="cp-chip" id="cp-chip-9-135" data-page="135" onclick="handlePageChipClick(event, 'page-135')" title="第 135 页 · 专栏：罗宾逊太太的静默相伴、倾听艺术与同理复述"><span class="cp-num">p.135</span></a><a href="#page-136" class="cp-chip" id="cp-chip-9-136" data-page="136" onclick="handlePageChipClick(event, 'page-136')" title="第 136 页 · 封闭式提问与开放式提问的临床边界与应用"><span class="cp-num">p.136</span></a><a href="#page-137" class="cp-chip" id="cp-chip-9-137" data-page="137" onclick="handlePageChipClick(event, 'page-137')" title="第 137 页 · 专栏：索菲亚与杜普伊斯先生的复述提问实录与聚焦聚焦"><span class="cp-num">p.137</span></a><a href="#page-138" class="cp-chip" id="cp-chip-9-138" data-page="138" onclick="handlePageChipClick(event, 'page-138')" title="第 138 页 · 常见沟通障碍：打断、自问自答、说教与职场礼仪"><span class="cp-num">p.138</span></a><a href="#page-139" class="cp-chip" id="cp-chip-9-139" data-page="139" onclick="handlePageChipClick(event, 'page-139')" title="第 139 页 · 八大无意识心理防御机制病理界定与表现"><span class="cp-num">p.139</span></a><a href="#page-140" class="cp-chip" id="cp-chip-9-140" data-page="140" onclick="handlePageChipClick(event, 'page-140')" title="第 140 页 · 防御机制临床剖析：否认、投射、合理化与倒退"><span class="cp-num">p.140</span></a><a href="#page-141" class="cp-chip" id="cp-chip-9-141" data-page="141" onclick="handlePageChipClick(event, 'page-141')" title="第 141 页 · 专栏 9.1 杜绝居高临下式轻蔑语言对比与应对防御机制"><span class="cp-num">p.141</span></a><a href="#page-142" class="cp-chip" id="cp-chip-9-142" data-page="142" onclick="handlePageChipClick(event, 'page-142')" title="第 142 页 · 愤怒案主的心理成因、非语言预警体征与平息策略"><span class="cp-num">p.142</span></a><a href="#page-143" class="cp-chip" id="cp-chip-9-143" data-page="143" onclick="handlePageChipClick(event, 'page-143')" title="第 143 页 · 专栏 9.2 平息愤怒案主核心指引与坚定自信沟通风格"><span class="cp-num">p.143</span></a><a href="#page-144" class="cp-chip" id="cp-chip-9-144" data-page="144" onclick="handlePageChipClick(event, 'page-144')" title="第 144 页 · 专栏：卡拉与贝鲁蒂先生的坚定自信沟通辨析与四步教学法"><span class="cp-num">p.144</span></a><a href="#page-145" class="cp-chip" id="cp-chip-9-145" data-page="145" onclick="handlePageChipClick(event, 'page-145')" title="第 145 页 · 专栏 9.3 协助案主学习新技能指引与认知症沟通核心法则"><span class="cp-num">p.145</span></a><a href="#page-146" class="cp-chip" id="cp-chip-9-146" data-page="146" onclick="handlePageChipClick(event, 'page-146')" title="第 146 页 · 专栏 9.4 阿尔茨海默学会认知症全方位沟通黄金实操守则"><span class="cp-num">p.146</span></a><a href="#page-147" class="cp-chip" id="cp-chip-9-147" data-page="147" onclick="handlePageChipClick(event, 'page-147')" title="第 147 页 · 本章核心知识点回顾、长期照护人手短缺思维修炼与章末自测 (Part 1)"><span class="cp-num">p.147</span></a><a href="#page-148" class="cp-chip" id="cp-chip-9-148" data-page="148" onclick="handlePageChipClick(event, 'page-148')" title="第 148 页 · 章末全真自测试题 (Part 2: Q3-Q11)、权威答案精解与在线研习资源"><span class="cp-num">p.148</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-129"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -23251,7 +23556,28 @@
           <span class="sheet-meta-badge">Chapter 10 Working With Others · Pages 149–163</span>
           <span class="sheet-meta-edition">Teamwork & Delegation</span>
         </div>
-        <div id="page-149"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch10" aria-label="Chapter 10 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.149–163 · 共 15 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-149">第 149 页 · 学习目标与团队协作开篇</option><option value="page-150">第 150 页 · 核心专业术语表与团队执业基石</option><option value="page-151">第 151 页 · 医疗团队核心要素、卓越团队合作原则与角色边界</option><option value="page-152">第 152 页 · 专栏：个案研讨会实战与团队模式的核心优势</option><option value="page-153">第 153 页 · 机构内照护团队模式：功能制、团队制与责任制护理</option><option value="page-154">第 154 页 · 社区跨学科团队运作、个案经理协调角色与居家照护</option><option value="page-155">第 155 页 · 团队协作核心挑战、职场负面态度化解与专业信任</option><option value="page-156">第 156 页 · 工作委派法定定义、受监管人员与非受监管人员权责</option><option value="page-157">第 157 页 · 加拿大各省工作委派法定程序与非可转让性铁律</option><option value="page-158">第 158 页 · 护士工作委派五大正确黄金原则与决策自审关卡</option><option value="page-159">第 159 页 · 委派决策五阶段严密闭环：评估、规划、培训、监护与成效考核</option><option value="page-160">第 160 页 · 支持工作者在委派中的法定义务、安全边界与汇报要义</option><option value="page-161">第 161 页 · 坚决拒绝接受委派的法定六大红线情形与专业拒绝沟通范式</option><option value="page-162">第 162 页 · 本章核心知识点回顾、居家换药越权两难思维修炼与章末自测 (Part 1)</option><option value="page-163">第 163 页 · 章末全真自测试题 (Part 2: Q3-Q10)、权威答案精解与在线研习资源</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-149" class="cp-chip" id="cp-chip-10-149" data-page="149" onclick="handlePageChipClick(event, 'page-149')" title="第 149 页 · 学习目标与团队协作开篇"><span class="cp-num">p.149</span></a><a href="#page-150" class="cp-chip" id="cp-chip-10-150" data-page="150" onclick="handlePageChipClick(event, 'page-150')" title="第 150 页 · 核心专业术语表与团队执业基石"><span class="cp-num">p.150</span></a><a href="#page-151" class="cp-chip" id="cp-chip-10-151" data-page="151" onclick="handlePageChipClick(event, 'page-151')" title="第 151 页 · 医疗团队核心要素、卓越团队合作原则与角色边界"><span class="cp-num">p.151</span></a><a href="#page-152" class="cp-chip" id="cp-chip-10-152" data-page="152" onclick="handlePageChipClick(event, 'page-152')" title="第 152 页 · 专栏：个案研讨会实战与团队模式的核心优势"><span class="cp-num">p.152</span></a><a href="#page-153" class="cp-chip" id="cp-chip-10-153" data-page="153" onclick="handlePageChipClick(event, 'page-153')" title="第 153 页 · 机构内照护团队模式：功能制、团队制与责任制护理"><span class="cp-num">p.153</span></a><a href="#page-154" class="cp-chip" id="cp-chip-10-154" data-page="154" onclick="handlePageChipClick(event, 'page-154')" title="第 154 页 · 社区跨学科团队运作、个案经理协调角色与居家照护"><span class="cp-num">p.154</span></a><a href="#page-155" class="cp-chip" id="cp-chip-10-155" data-page="155" onclick="handlePageChipClick(event, 'page-155')" title="第 155 页 · 团队协作核心挑战、职场负面态度化解与专业信任"><span class="cp-num">p.155</span></a><a href="#page-156" class="cp-chip" id="cp-chip-10-156" data-page="156" onclick="handlePageChipClick(event, 'page-156')" title="第 156 页 · 工作委派法定定义、受监管人员与非受监管人员权责"><span class="cp-num">p.156</span></a><a href="#page-157" class="cp-chip" id="cp-chip-10-157" data-page="157" onclick="handlePageChipClick(event, 'page-157')" title="第 157 页 · 加拿大各省工作委派法定程序与非可转让性铁律"><span class="cp-num">p.157</span></a><a href="#page-158" class="cp-chip" id="cp-chip-10-158" data-page="158" onclick="handlePageChipClick(event, 'page-158')" title="第 158 页 · 护士工作委派五大正确黄金原则与决策自审关卡"><span class="cp-num">p.158</span></a><a href="#page-159" class="cp-chip" id="cp-chip-10-159" data-page="159" onclick="handlePageChipClick(event, 'page-159')" title="第 159 页 · 委派决策五阶段严密闭环：评估、规划、培训、监护与成效考核"><span class="cp-num">p.159</span></a><a href="#page-160" class="cp-chip" id="cp-chip-10-160" data-page="160" onclick="handlePageChipClick(event, 'page-160')" title="第 160 页 · 支持工作者在委派中的法定义务、安全边界与汇报要义"><span class="cp-num">p.160</span></a><a href="#page-161" class="cp-chip" id="cp-chip-10-161" data-page="161" onclick="handlePageChipClick(event, 'page-161')" title="第 161 页 · 坚决拒绝接受委派的法定六大红线情形与专业拒绝沟通范式"><span class="cp-num">p.161</span></a><a href="#page-162" class="cp-chip" id="cp-chip-10-162" data-page="162" onclick="handlePageChipClick(event, 'page-162')" title="第 162 页 · 本章核心知识点回顾、居家换药越权两难思维修炼与章末自测 (Part 1)"><span class="cp-num">p.162</span></a><a href="#page-163" class="cp-chip" id="cp-chip-10-163" data-page="163" onclick="handlePageChipClick(event, 'page-163')" title="第 163 页 · 章末全真自测试题 (Part 2: Q3-Q10)、权威答案精解与在线研习资源"><span class="cp-num">p.163</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-149"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -25056,7 +25382,28 @@
           <span class="sheet-meta-badge">Chapter 11 Working With Clients and Families · Pages 164–173</span>
           <span class="sheet-meta-edition">Professional Boundaries</span>
         </div>
-        <div id="page-164"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch11" aria-label="Chapter 11 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.164–173 · 共 10 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-164">第 164 页 · 学习目标与服务对象及其家庭照护开篇</option><option value="page-165">第 165 页 · 核心专业术语表与支持性专业关系及职业界限</option><option value="page-166">第 166 页 · 维系职业界限实务、蔡斯夫人案例、尊重与同理心</option><option value="page-167">第 167 页 · 胜任力、自我觉察、维克斯案例与拉夫蒂斯案例</option><option value="page-168">第 168 页 · 表11.1专业关系与友谊对比、独立/依赖/互赖三元模型</option><option value="page-169">第 169 页 · 自尊重建、赋能成功、职业关系中的权力平衡与失衡防范</option><option value="page-170">第 170 页 · 现代家庭多元形态、家庭动力学与支持工作者辅助角色</option><option value="page-171">第 171 页 · 居家照护专栏：辅助主要照料者、冲突家庭应对与沟通中立</option><option value="page-172">第 172 页 · 临床个案精析：斯卡拉家庭矛盾化解与社工跨学科介入</option><option value="page-173">第 173 页 · 本章要点回顾、批判性思维实战研习与章末全真自测题</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-164" class="cp-chip" id="cp-chip-11-164" data-page="164" onclick="handlePageChipClick(event, 'page-164')" title="第 164 页 · 学习目标与服务对象及其家庭照护开篇"><span class="cp-num">p.164</span></a><a href="#page-165" class="cp-chip" id="cp-chip-11-165" data-page="165" onclick="handlePageChipClick(event, 'page-165')" title="第 165 页 · 核心专业术语表与支持性专业关系及职业界限"><span class="cp-num">p.165</span></a><a href="#page-166" class="cp-chip" id="cp-chip-11-166" data-page="166" onclick="handlePageChipClick(event, 'page-166')" title="第 166 页 · 维系职业界限实务、蔡斯夫人案例、尊重与同理心"><span class="cp-num">p.166</span></a><a href="#page-167" class="cp-chip" id="cp-chip-11-167" data-page="167" onclick="handlePageChipClick(event, 'page-167')" title="第 167 页 · 胜任力、自我觉察、维克斯案例与拉夫蒂斯案例"><span class="cp-num">p.167</span></a><a href="#page-168" class="cp-chip" id="cp-chip-11-168" data-page="168" onclick="handlePageChipClick(event, 'page-168')" title="第 168 页 · 表11.1专业关系与友谊对比、独立/依赖/互赖三元模型"><span class="cp-num">p.168</span></a><a href="#page-169" class="cp-chip" id="cp-chip-11-169" data-page="169" onclick="handlePageChipClick(event, 'page-169')" title="第 169 页 · 自尊重建、赋能成功、职业关系中的权力平衡与失衡防范"><span class="cp-num">p.169</span></a><a href="#page-170" class="cp-chip" id="cp-chip-11-170" data-page="170" onclick="handlePageChipClick(event, 'page-170')" title="第 170 页 · 现代家庭多元形态、家庭动力学与支持工作者辅助角色"><span class="cp-num">p.170</span></a><a href="#page-171" class="cp-chip" id="cp-chip-11-171" data-page="171" onclick="handlePageChipClick(event, 'page-171')" title="第 171 页 · 居家照护专栏：辅助主要照料者、冲突家庭应对与沟通中立"><span class="cp-num">p.171</span></a><a href="#page-172" class="cp-chip" id="cp-chip-11-172" data-page="172" onclick="handlePageChipClick(event, 'page-172')" title="第 172 页 · 临床个案精析：斯卡拉家庭矛盾化解与社工跨学科介入"><span class="cp-num">p.172</span></a><a href="#page-173" class="cp-chip" id="cp-chip-11-173" data-page="173" onclick="handlePageChipClick(event, 'page-173')" title="第 173 页 · 本章要点回顾、批判性思维实战研习与章末全真自测题"><span class="cp-num">p.173</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-164"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -26665,7 +27012,28 @@
           <span class="sheet-meta-badge">Chapter 12 Abuse Awareness · Pages 174–193</span>
           <span class="sheet-meta-edition">Mandatory Reporting</span>
         </div>
-        <div id="page-174"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch12" aria-label="Chapter 12 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.174–193 · 共 20 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-174">第 174 页 · 学习目标与虐待欺凌防范认知开篇</option><option value="page-175">第 175 页 · 核心专业术语表与反虐待基本人权基石</option><option value="page-176">第 176 页 · 《加拿大权利与自由宪章》与六大虐待类型全解析</option><option value="page-177">第 177 页 · 专栏 12.1 加拿大人法定权利与自由全貌及图像侵权</option><option value="page-178">第 178 页 · 专栏 12.2 网络欺凌防范与专栏 12.3 刑法非自愿私密图像立法</option><option value="page-179">第 179 页 · 虐待关系特征与专栏 12.4 虐待极高危易感人群剖析</option><option value="page-180">第 180 页 · 虐待诱发诱因、识别指征与安全专栏：成人受虐症状清单 (Part 1)</option><option value="page-181">第 181 页 · 成人受虐症状清单 (Part 2: 经济与忽视)、儿童受虐体征与配偶虐待成因</option><option value="page-182">第 182 页 · 虐待恶性循环三阶段与案例：艾米·卢的性侵创伤与触碰回避</option><option value="page-183">第 183 页 · 儿童虐待与忽视的深远心理破坏及分类</option><option value="page-184">第 184 页 · 衰弱消退综合征与案例：泰勒胎儿酒精谱系障碍与高压家庭</option><option value="page-185">第 185 页 · 长者虐待的高发诱因、易感群体与隐瞒受虐的心理机制</option><option value="page-186">第 186 页 · 机构虐待（粗暴对待 vs 婴儿化贬损语言）与芬妮太太家暴目击案例</option><option value="page-187">第 187 页 · 当服务对象向你倾诉受虐经历时的专业支持指南与倾听原则</option><option value="page-188">第 188 页 · 医护人员执业受暴风险与法定虐待汇报程序铁律</option><option value="page-189">第 189 页 · 安全专栏：遭遇攻击性服务对象时的自我防卫脱身法则</option><option value="page-190">第 190 页 · 职场欺凌、骚扰界定与专栏 12.5 职业健康安全法案雇主法定义务</option><option value="page-191">第 191 页 · 应对职场欺凌四步法、客观取证日志与员工援助计划 (EAP)</option><option value="page-192">第 192 页 · 本章核心知识点回顾、希尔德女士尊严照料批判性思维修炼与自测 (Part 1: Q1-Q3)</option><option value="page-193">第 193 页 · 章末全真自测试题 (Part 2: Q4-Q17)、权威答案精解与在线研习资源</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-174" class="cp-chip" id="cp-chip-12-174" data-page="174" onclick="handlePageChipClick(event, 'page-174')" title="第 174 页 · 学习目标与虐待欺凌防范认知开篇"><span class="cp-num">p.174</span></a><a href="#page-175" class="cp-chip" id="cp-chip-12-175" data-page="175" onclick="handlePageChipClick(event, 'page-175')" title="第 175 页 · 核心专业术语表与反虐待基本人权基石"><span class="cp-num">p.175</span></a><a href="#page-176" class="cp-chip" id="cp-chip-12-176" data-page="176" onclick="handlePageChipClick(event, 'page-176')" title="第 176 页 · 《加拿大权利与自由宪章》与六大虐待类型全解析"><span class="cp-num">p.176</span></a><a href="#page-177" class="cp-chip" id="cp-chip-12-177" data-page="177" onclick="handlePageChipClick(event, 'page-177')" title="第 177 页 · 专栏 12.1 加拿大人法定权利与自由全貌及图像侵权"><span class="cp-num">p.177</span></a><a href="#page-178" class="cp-chip" id="cp-chip-12-178" data-page="178" onclick="handlePageChipClick(event, 'page-178')" title="第 178 页 · 专栏 12.2 网络欺凌防范与专栏 12.3 刑法非自愿私密图像立法"><span class="cp-num">p.178</span></a><a href="#page-179" class="cp-chip" id="cp-chip-12-179" data-page="179" onclick="handlePageChipClick(event, 'page-179')" title="第 179 页 · 虐待关系特征与专栏 12.4 虐待极高危易感人群剖析"><span class="cp-num">p.179</span></a><a href="#page-180" class="cp-chip" id="cp-chip-12-180" data-page="180" onclick="handlePageChipClick(event, 'page-180')" title="第 180 页 · 虐待诱发诱因、识别指征与安全专栏：成人受虐症状清单 (Part 1)"><span class="cp-num">p.180</span></a><a href="#page-181" class="cp-chip" id="cp-chip-12-181" data-page="181" onclick="handlePageChipClick(event, 'page-181')" title="第 181 页 · 成人受虐症状清单 (Part 2: 经济与忽视)、儿童受虐体征与配偶虐待成因"><span class="cp-num">p.181</span></a><a href="#page-182" class="cp-chip" id="cp-chip-12-182" data-page="182" onclick="handlePageChipClick(event, 'page-182')" title="第 182 页 · 虐待恶性循环三阶段与案例：艾米·卢的性侵创伤与触碰回避"><span class="cp-num">p.182</span></a><a href="#page-183" class="cp-chip" id="cp-chip-12-183" data-page="183" onclick="handlePageChipClick(event, 'page-183')" title="第 183 页 · 儿童虐待与忽视的深远心理破坏及分类"><span class="cp-num">p.183</span></a><a href="#page-184" class="cp-chip" id="cp-chip-12-184" data-page="184" onclick="handlePageChipClick(event, 'page-184')" title="第 184 页 · 衰弱消退综合征与案例：泰勒胎儿酒精谱系障碍与高压家庭"><span class="cp-num">p.184</span></a><a href="#page-185" class="cp-chip" id="cp-chip-12-185" data-page="185" onclick="handlePageChipClick(event, 'page-185')" title="第 185 页 · 长者虐待的高发诱因、易感群体与隐瞒受虐的心理机制"><span class="cp-num">p.185</span></a><a href="#page-186" class="cp-chip" id="cp-chip-12-186" data-page="186" onclick="handlePageChipClick(event, 'page-186')" title="第 186 页 · 机构虐待（粗暴对待 vs 婴儿化贬损语言）与芬妮太太家暴目击案例"><span class="cp-num">p.186</span></a><a href="#page-187" class="cp-chip" id="cp-chip-12-187" data-page="187" onclick="handlePageChipClick(event, 'page-187')" title="第 187 页 · 当服务对象向你倾诉受虐经历时的专业支持指南与倾听原则"><span class="cp-num">p.187</span></a><a href="#page-188" class="cp-chip" id="cp-chip-12-188" data-page="188" onclick="handlePageChipClick(event, 'page-188')" title="第 188 页 · 医护人员执业受暴风险与法定虐待汇报程序铁律"><span class="cp-num">p.188</span></a><a href="#page-189" class="cp-chip" id="cp-chip-12-189" data-page="189" onclick="handlePageChipClick(event, 'page-189')" title="第 189 页 · 安全专栏：遭遇攻击性服务对象时的自我防卫脱身法则"><span class="cp-num">p.189</span></a><a href="#page-190" class="cp-chip" id="cp-chip-12-190" data-page="190" onclick="handlePageChipClick(event, 'page-190')" title="第 190 页 · 职场欺凌、骚扰界定与专栏 12.5 职业健康安全法案雇主法定义务"><span class="cp-num">p.190</span></a><a href="#page-191" class="cp-chip" id="cp-chip-12-191" data-page="191" onclick="handlePageChipClick(event, 'page-191')" title="第 191 页 · 应对职场欺凌四步法、客观取证日志与员工援助计划 (EAP)"><span class="cp-num">p.191</span></a><a href="#page-192" class="cp-chip" id="cp-chip-12-192" data-page="192" onclick="handlePageChipClick(event, 'page-192')" title="第 192 页 · 本章核心知识点回顾、希尔德女士尊严照料批判性思维修炼与自测 (Part 1: Q1-Q3)"><span class="cp-num">p.192</span></a><a href="#page-193" class="cp-chip" id="cp-chip-12-193" data-page="193" onclick="handlePageChipClick(event, 'page-193')" title="第 193 页 · 章末全真自测试题 (Part 2: Q4-Q17)、权威答案精解与在线研习资源"><span class="cp-num">p.193</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-174"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -29096,7 +29464,28 @@
           <span class="sheet-meta-badge">Chapter 13 Starting Your Career · Pages 194–214</span>
           <span class="sheet-meta-edition">Resumé & Interview</span>
         </div>
-        <div id="page-194"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch13" aria-label="Chapter 13 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.194–214 · 共 21 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-194">第 194 页 · 学习目标与支持工作者职业起步开篇</option><option value="page-195">第 195 页 · 核心专业术语表与求职前期规划及工作区准备</option><option value="page-196">第 196 页 · 专栏 13.1 求职权威资源库、简历功能与履历区别</option><option value="page-197">第 197 页 · 时间倒序型与功能型简历对比及数字化云端存储</option><option value="page-198">第 198 页 · 全真模板：肖恩·图图西斯时间倒序型标准简历 (埃德蒙顿)</option><option value="page-199">第 199 页 · 全真模板：凯莉·索维功能型技能矩阵标准简历 (汉密尔顿)</option><option value="page-200">第 200 页 · 简历自审六大黄金法则与精准人岗匹配审查</option><option value="page-201">第 201 页 · 职业能力档案集 (Portfolio) 必备材料与功能型简历后半段</option><option value="page-202">第 202 页 · 证明人 (References) 遴选授权原则与求职信 (Cover Letter) 核心结构</option><option value="page-203">第 203 页 · 全真招聘广告剖析 (博德代尔养老院) 与求职信行文艺术</option><option value="page-204">第 204 页 · 全真模板：标准应征求职信 (Cover Letter) 逐段中英解析</option><option value="page-205">第 205 页 · 纸质与线上工作申请表 (Application Forms) 填写真实性铁律</option><option value="page-206">第 206 页 · 专栏 13.2 数字化求职专业素养：邮箱、语音留言与社交媒体审计</option><option value="page-207">第 207 页 · 面试前期系统准备：雇主背景调研、常问问题梳理与模拟演练</option><option value="page-208">第 208 页 · 面试职业着装、无香政策 (Scent-Free) 与身体语言管理</option><option value="page-209">第 209 页 · 专栏 13.3 支持工作者高频经典面试问题与行为情境问答</option><option value="page-210">第 210 页 · 面试礼仪规程、积极倾听技巧与STAR法则答题范式</option><option value="page-211">第 211 页 · 专栏 13.4 应聘者向面试官反向提问清单与非法面试问题防范</option><option value="page-212">第 212 页 · 面试后 24 小时感谢信模板与应聘全流程反思自评</option><option value="page-213">第 213 页 · 录用通知（确定性 vs 条件性录用）与入职前背景体检筛查</option><option value="page-214">第 214 页 · 本章核心要点回顾、背调推荐人失联实战研习与章末全真自测题 (20 题 T/F)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-194" class="cp-chip" id="cp-chip-13-194" data-page="194" onclick="handlePageChipClick(event, 'page-194')" title="第 194 页 · 学习目标与支持工作者职业起步开篇"><span class="cp-num">p.194</span></a><a href="#page-195" class="cp-chip" id="cp-chip-13-195" data-page="195" onclick="handlePageChipClick(event, 'page-195')" title="第 195 页 · 核心专业术语表与求职前期规划及工作区准备"><span class="cp-num">p.195</span></a><a href="#page-196" class="cp-chip" id="cp-chip-13-196" data-page="196" onclick="handlePageChipClick(event, 'page-196')" title="第 196 页 · 专栏 13.1 求职权威资源库、简历功能与履历区别"><span class="cp-num">p.196</span></a><a href="#page-197" class="cp-chip" id="cp-chip-13-197" data-page="197" onclick="handlePageChipClick(event, 'page-197')" title="第 197 页 · 时间倒序型与功能型简历对比及数字化云端存储"><span class="cp-num">p.197</span></a><a href="#page-198" class="cp-chip" id="cp-chip-13-198" data-page="198" onclick="handlePageChipClick(event, 'page-198')" title="第 198 页 · 全真模板：肖恩·图图西斯时间倒序型标准简历 (埃德蒙顿)"><span class="cp-num">p.198</span></a><a href="#page-199" class="cp-chip" id="cp-chip-13-199" data-page="199" onclick="handlePageChipClick(event, 'page-199')" title="第 199 页 · 全真模板：凯莉·索维功能型技能矩阵标准简历 (汉密尔顿)"><span class="cp-num">p.199</span></a><a href="#page-200" class="cp-chip" id="cp-chip-13-200" data-page="200" onclick="handlePageChipClick(event, 'page-200')" title="第 200 页 · 简历自审六大黄金法则与精准人岗匹配审查"><span class="cp-num">p.200</span></a><a href="#page-201" class="cp-chip" id="cp-chip-13-201" data-page="201" onclick="handlePageChipClick(event, 'page-201')" title="第 201 页 · 职业能力档案集 (Portfolio) 必备材料与功能型简历后半段"><span class="cp-num">p.201</span></a><a href="#page-202" class="cp-chip" id="cp-chip-13-202" data-page="202" onclick="handlePageChipClick(event, 'page-202')" title="第 202 页 · 证明人 (References) 遴选授权原则与求职信 (Cover Letter) 核心结构"><span class="cp-num">p.202</span></a><a href="#page-203" class="cp-chip" id="cp-chip-13-203" data-page="203" onclick="handlePageChipClick(event, 'page-203')" title="第 203 页 · 全真招聘广告剖析 (博德代尔养老院) 与求职信行文艺术"><span class="cp-num">p.203</span></a><a href="#page-204" class="cp-chip" id="cp-chip-13-204" data-page="204" onclick="handlePageChipClick(event, 'page-204')" title="第 204 页 · 全真模板：标准应征求职信 (Cover Letter) 逐段中英解析"><span class="cp-num">p.204</span></a><a href="#page-205" class="cp-chip" id="cp-chip-13-205" data-page="205" onclick="handlePageChipClick(event, 'page-205')" title="第 205 页 · 纸质与线上工作申请表 (Application Forms) 填写真实性铁律"><span class="cp-num">p.205</span></a><a href="#page-206" class="cp-chip" id="cp-chip-13-206" data-page="206" onclick="handlePageChipClick(event, 'page-206')" title="第 206 页 · 专栏 13.2 数字化求职专业素养：邮箱、语音留言与社交媒体审计"><span class="cp-num">p.206</span></a><a href="#page-207" class="cp-chip" id="cp-chip-13-207" data-page="207" onclick="handlePageChipClick(event, 'page-207')" title="第 207 页 · 面试前期系统准备：雇主背景调研、常问问题梳理与模拟演练"><span class="cp-num">p.207</span></a><a href="#page-208" class="cp-chip" id="cp-chip-13-208" data-page="208" onclick="handlePageChipClick(event, 'page-208')" title="第 208 页 · 面试职业着装、无香政策 (Scent-Free) 与身体语言管理"><span class="cp-num">p.208</span></a><a href="#page-209" class="cp-chip" id="cp-chip-13-209" data-page="209" onclick="handlePageChipClick(event, 'page-209')" title="第 209 页 · 专栏 13.3 支持工作者高频经典面试问题与行为情境问答"><span class="cp-num">p.209</span></a><a href="#page-210" class="cp-chip" id="cp-chip-13-210" data-page="210" onclick="handlePageChipClick(event, 'page-210')" title="第 210 页 · 面试礼仪规程、积极倾听技巧与STAR法则答题范式"><span class="cp-num">p.210</span></a><a href="#page-211" class="cp-chip" id="cp-chip-13-211" data-page="211" onclick="handlePageChipClick(event, 'page-211')" title="第 211 页 · 专栏 13.4 应聘者向面试官反向提问清单与非法面试问题防范"><span class="cp-num">p.211</span></a><a href="#page-212" class="cp-chip" id="cp-chip-13-212" data-page="212" onclick="handlePageChipClick(event, 'page-212')" title="第 212 页 · 面试后 24 小时感谢信模板与应聘全流程反思自评"><span class="cp-num">p.212</span></a><a href="#page-213" class="cp-chip" id="cp-chip-13-213" data-page="213" onclick="handlePageChipClick(event, 'page-213')" title="第 213 页 · 录用通知（确定性 vs 条件性录用）与入职前背景体检筛查"><span class="cp-num">p.213</span></a><a href="#page-214" class="cp-chip" id="cp-chip-13-214" data-page="214" onclick="handlePageChipClick(event, 'page-214')" title="第 214 页 · 本章核心要点回顾、背调推荐人失联实战研习与章末全真自测题 (20 题 T/F)"><span class="cp-num">p.214</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-194"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -32044,7 +32433,28 @@
           <span class="sheet-meta-badge">Chapter 14 Body Mechanics · Pages 215–258</span>
           <span class="sheet-meta-edition">Transfers & Positioning</span>
         </div>
-        <div id="page-215"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch14" aria-label="Chapter 14 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.215–258 · 共 44 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-215">第 215 页 · 学习目标与身体力学防护原则开篇</option><option value="page-216">第 216 页 · 核心专业术语表与支持工作者日常体能搬抬负荷</option><option value="page-217">第 217 页 · 工伤防范基石：10分钟岗前拉伸热身与全身关节旋转操</option><option value="page-218">第 218 页 · 身体力学三大支柱：支撑面、重心与骨盆倾斜/弓步法则</option><option value="page-219">第 219 页 · 安全专栏：良好身体力学黄金操作准则与零搬抬政策 (No-Lift)</option><option value="page-220">第 220 页 · 失能案主协助装备选型、人机协同与双人/三人团队配合</option><option value="page-221">第 221 页 · 居家与长者照护聚焦：摩擦力 (Friction) 与剪切力 (Shearing) 组织损伤病理</option><option value="page-222">第 222 页 · 剪切力防范全流程：移位单 (Turning Pad) 与引流导管安全保护</option><option value="page-223">第 223 页 · 减摩擦移位神器：滑移单 (Slider Sheets) 与滑移板 (Slider Boards) 规范操作</option><option value="page-224">第 224 页 · 翻身技术总览：常规床边翻身与轴线翻身 (Log-Rolling) 临床适应症</option><option value="page-225">第 225 页 · 操作规程：脊柱创伤案主轴线翻身法 (Log-Rolling) 准备与三人协同入轨</option><option value="page-226">第 226 页 · 操作规程：轴线翻身软枕稳固支撑、DIPPS 舒适体位与术后评估</option><option value="page-227">第 227 页 · 操作规程：协助案主向床头移动 (Moving Up in Bed) 准备与协同发力</option><option value="page-228">第 228 页 · 操作规程：移位单拉平防压疮护理、床栏复位与临床体征评估</option><option value="page-229">第 229 页 · 操作规程：病床至平车转运法 (Bed to Stretcher) 准备与协同滑移</option><option value="page-230">第 230 页 · 操作规程：平车安全护栏锁定、转运防跌倒与反向回床复位</option><option value="page-231">第 231 页 · 床上端坐试耐受 (Dangling) 循环刺激与福氏卧位 (Fowler's) 角度分级</option><option value="page-232">第 232 页 · 操作规程：分段式协助案主向床边移动 (Moving to Side of Bed)</option><option value="page-233">第 233 页 · 操作规程：床边移动动作分解完成、DIPPS 隐私与安全床栏管理</option><option value="page-234">第 234 页 · 操作规程：协助案主在床边端坐双腿下垂 (Dangling) 准备与体位性低血压防范</option><option value="page-235">第 235 页 · 操作规程：床边下垂脉搏监测、头晕眩晕应急处置与安全回床</option><option value="page-236">第 236 页 · 临床核心体位标准：仰卧位 (Supine) 与侧卧位 (Lateral) 减压垫枕规范</option><option value="page-237">第 237 页 · 特殊临床体位：俯卧位 (Prone) 与西姆斯灌肠检查卧位 (Sims') 摆放标准</option><option value="page-238">第 238 页 · 姿势支撑防畸形辅具：足托板、防足下垂夹板、转子卷与分腿枕</option><option value="page-239">第 239 页 · 轮椅与座椅端坐体位标准：90-90-90度角法则与上肢抬高托扶</option><option value="page-240">第 240 页 · 安全专栏：移位 (Transfer) 与起吊 (Lift) 的本质区别及轮椅重置复位</option><option value="page-241">第 241 页 · 移位辅助装备全解析：步态移位带 (Transfer Belt) 与滑移转运板 (Transfer Board)</option><option value="page-242">第 242 页 · 操作规程：移位安全带 (Transfer Belt) 规范佩戴、两指松紧度检验与禁忌症</option><option value="page-243">第 243 页 · 徒手硬抬 (Manual Lift) 致命危害、工伤致残风险与机构安全禁令</option><option value="page-244">第 244 页 · 操作规程：床至轮椅安全转移 (Bed to Chair) 准备、健侧主导与双人站位</option><option value="page-245">第 245 页 · 操作规程：床至轮椅转移发力技巧、双膝顶抵支点与旋转入座</option><option value="page-246">第 246 页 · 操作规程：轮椅坐姿摆正、脚踏板复位与反向回床复位规程</option><option value="page-247">第 247 页 · 操作规程：反向回床动作分解、DIPPS 舒适体位与呼叫铃交付</option><option value="page-248">第 248 页 · 操作规程：马桶及座便椅转移 (To and From Toilet) 准备与衣裤退解</option><option value="page-249">第 249 页 · 操作规程：马桶转移坐下、会阴冲洗消毒与防滑抓杆 (Grab Bars) 规范</option><option value="page-250">第 250 页 · 操作规程：马桶起立协助、便后手部卫生与轮椅平稳回转</option><option value="page-251">第 251 页 · 实战案例研习：支持郭太太 (Mrs. Quouong)——零搬抬政策 (No-Lift) 与同侪违规压力处置</option><option value="page-252">第 252 页 · 操作规程：三人协同平车转运法 (Moving to a Stretcher) 准备与床位平行锁定</option><option value="page-253">第 253 页 · 操作规程：平车滑移单过床推进、高低落差调平与三人默契发力</option><option value="page-254">第 254 页 · 操作规程：平车护栏拉起固定、盖被保暖防风与术后平卧交接</option><option value="page-255">第 255 页 · 操作规程：电动/液压机械升降机 (Mechanical Lift) 悬吊带铺展与挂钩安全锁定</option><option value="page-256">第 256 页 · 操作规程：机械吊机升起平移、立位升降机规范与坐姿平稳着陆</option><option value="page-257">第 257 页 · 本章核心要点精炼回顾、急迫如厕单人困境临床思维修炼与自测题 (Q1-Q17)</option><option value="page-258">第 258 页 · 章末全真执业自测题 (Q18-Q28 T/F & 单选题) 及原版权威官方答案核验</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-215" class="cp-chip" id="cp-chip-14-215" data-page="215" onclick="handlePageChipClick(event, 'page-215')" title="第 215 页 · 学习目标与身体力学防护原则开篇"><span class="cp-num">p.215</span></a><a href="#page-216" class="cp-chip" id="cp-chip-14-216" data-page="216" onclick="handlePageChipClick(event, 'page-216')" title="第 216 页 · 核心专业术语表与支持工作者日常体能搬抬负荷"><span class="cp-num">p.216</span></a><a href="#page-217" class="cp-chip" id="cp-chip-14-217" data-page="217" onclick="handlePageChipClick(event, 'page-217')" title="第 217 页 · 工伤防范基石：10分钟岗前拉伸热身与全身关节旋转操"><span class="cp-num">p.217</span></a><a href="#page-218" class="cp-chip" id="cp-chip-14-218" data-page="218" onclick="handlePageChipClick(event, 'page-218')" title="第 218 页 · 身体力学三大支柱：支撑面、重心与骨盆倾斜/弓步法则"><span class="cp-num">p.218</span></a><a href="#page-219" class="cp-chip" id="cp-chip-14-219" data-page="219" onclick="handlePageChipClick(event, 'page-219')" title="第 219 页 · 安全专栏：良好身体力学黄金操作准则与零搬抬政策 (No-Lift)"><span class="cp-num">p.219</span></a><a href="#page-220" class="cp-chip" id="cp-chip-14-220" data-page="220" onclick="handlePageChipClick(event, 'page-220')" title="第 220 页 · 失能案主协助装备选型、人机协同与双人/三人团队配合"><span class="cp-num">p.220</span></a><a href="#page-221" class="cp-chip" id="cp-chip-14-221" data-page="221" onclick="handlePageChipClick(event, 'page-221')" title="第 221 页 · 居家与长者照护聚焦：摩擦力 (Friction) 与剪切力 (Shearing) 组织损伤病理"><span class="cp-num">p.221</span></a><a href="#page-222" class="cp-chip" id="cp-chip-14-222" data-page="222" onclick="handlePageChipClick(event, 'page-222')" title="第 222 页 · 剪切力防范全流程：移位单 (Turning Pad) 与引流导管安全保护"><span class="cp-num">p.222</span></a><a href="#page-223" class="cp-chip" id="cp-chip-14-223" data-page="223" onclick="handlePageChipClick(event, 'page-223')" title="第 223 页 · 减摩擦移位神器：滑移单 (Slider Sheets) 与滑移板 (Slider Boards) 规范操作"><span class="cp-num">p.223</span></a><a href="#page-224" class="cp-chip" id="cp-chip-14-224" data-page="224" onclick="handlePageChipClick(event, 'page-224')" title="第 224 页 · 翻身技术总览：常规床边翻身与轴线翻身 (Log-Rolling) 临床适应症"><span class="cp-num">p.224</span></a><a href="#page-225" class="cp-chip" id="cp-chip-14-225" data-page="225" onclick="handlePageChipClick(event, 'page-225')" title="第 225 页 · 操作规程：脊柱创伤案主轴线翻身法 (Log-Rolling) 准备与三人协同入轨"><span class="cp-num">p.225</span></a><a href="#page-226" class="cp-chip" id="cp-chip-14-226" data-page="226" onclick="handlePageChipClick(event, 'page-226')" title="第 226 页 · 操作规程：轴线翻身软枕稳固支撑、DIPPS 舒适体位与术后评估"><span class="cp-num">p.226</span></a><a href="#page-227" class="cp-chip" id="cp-chip-14-227" data-page="227" onclick="handlePageChipClick(event, 'page-227')" title="第 227 页 · 操作规程：协助案主向床头移动 (Moving Up in Bed) 准备与协同发力"><span class="cp-num">p.227</span></a><a href="#page-228" class="cp-chip" id="cp-chip-14-228" data-page="228" onclick="handlePageChipClick(event, 'page-228')" title="第 228 页 · 操作规程：移位单拉平防压疮护理、床栏复位与临床体征评估"><span class="cp-num">p.228</span></a><a href="#page-229" class="cp-chip" id="cp-chip-14-229" data-page="229" onclick="handlePageChipClick(event, 'page-229')" title="第 229 页 · 操作规程：病床至平车转运法 (Bed to Stretcher) 准备与协同滑移"><span class="cp-num">p.229</span></a><a href="#page-230" class="cp-chip" id="cp-chip-14-230" data-page="230" onclick="handlePageChipClick(event, 'page-230')" title="第 230 页 · 操作规程：平车安全护栏锁定、转运防跌倒与反向回床复位"><span class="cp-num">p.230</span></a><a href="#page-231" class="cp-chip" id="cp-chip-14-231" data-page="231" onclick="handlePageChipClick(event, 'page-231')" title="第 231 页 · 床上端坐试耐受 (Dangling) 循环刺激与福氏卧位 (Fowler's) 角度分级"><span class="cp-num">p.231</span></a><a href="#page-232" class="cp-chip" id="cp-chip-14-232" data-page="232" onclick="handlePageChipClick(event, 'page-232')" title="第 232 页 · 操作规程：分段式协助案主向床边移动 (Moving to Side of Bed)"><span class="cp-num">p.232</span></a><a href="#page-233" class="cp-chip" id="cp-chip-14-233" data-page="233" onclick="handlePageChipClick(event, 'page-233')" title="第 233 页 · 操作规程：床边移动动作分解完成、DIPPS 隐私与安全床栏管理"><span class="cp-num">p.233</span></a><a href="#page-234" class="cp-chip" id="cp-chip-14-234" data-page="234" onclick="handlePageChipClick(event, 'page-234')" title="第 234 页 · 操作规程：协助案主在床边端坐双腿下垂 (Dangling) 准备与体位性低血压防范"><span class="cp-num">p.234</span></a><a href="#page-235" class="cp-chip" id="cp-chip-14-235" data-page="235" onclick="handlePageChipClick(event, 'page-235')" title="第 235 页 · 操作规程：床边下垂脉搏监测、头晕眩晕应急处置与安全回床"><span class="cp-num">p.235</span></a><a href="#page-236" class="cp-chip" id="cp-chip-14-236" data-page="236" onclick="handlePageChipClick(event, 'page-236')" title="第 236 页 · 临床核心体位标准：仰卧位 (Supine) 与侧卧位 (Lateral) 减压垫枕规范"><span class="cp-num">p.236</span></a><a href="#page-237" class="cp-chip" id="cp-chip-14-237" data-page="237" onclick="handlePageChipClick(event, 'page-237')" title="第 237 页 · 特殊临床体位：俯卧位 (Prone) 与西姆斯灌肠检查卧位 (Sims') 摆放标准"><span class="cp-num">p.237</span></a><a href="#page-238" class="cp-chip" id="cp-chip-14-238" data-page="238" onclick="handlePageChipClick(event, 'page-238')" title="第 238 页 · 姿势支撑防畸形辅具：足托板、防足下垂夹板、转子卷与分腿枕"><span class="cp-num">p.238</span></a><a href="#page-239" class="cp-chip" id="cp-chip-14-239" data-page="239" onclick="handlePageChipClick(event, 'page-239')" title="第 239 页 · 轮椅与座椅端坐体位标准：90-90-90度角法则与上肢抬高托扶"><span class="cp-num">p.239</span></a><a href="#page-240" class="cp-chip" id="cp-chip-14-240" data-page="240" onclick="handlePageChipClick(event, 'page-240')" title="第 240 页 · 安全专栏：移位 (Transfer) 与起吊 (Lift) 的本质区别及轮椅重置复位"><span class="cp-num">p.240</span></a><a href="#page-241" class="cp-chip" id="cp-chip-14-241" data-page="241" onclick="handlePageChipClick(event, 'page-241')" title="第 241 页 · 移位辅助装备全解析：步态移位带 (Transfer Belt) 与滑移转运板 (Transfer Board)"><span class="cp-num">p.241</span></a><a href="#page-242" class="cp-chip" id="cp-chip-14-242" data-page="242" onclick="handlePageChipClick(event, 'page-242')" title="第 242 页 · 操作规程：移位安全带 (Transfer Belt) 规范佩戴、两指松紧度检验与禁忌症"><span class="cp-num">p.242</span></a><a href="#page-243" class="cp-chip" id="cp-chip-14-243" data-page="243" onclick="handlePageChipClick(event, 'page-243')" title="第 243 页 · 徒手硬抬 (Manual Lift) 致命危害、工伤致残风险与机构安全禁令"><span class="cp-num">p.243</span></a><a href="#page-244" class="cp-chip" id="cp-chip-14-244" data-page="244" onclick="handlePageChipClick(event, 'page-244')" title="第 244 页 · 操作规程：床至轮椅安全转移 (Bed to Chair) 准备、健侧主导与双人站位"><span class="cp-num">p.244</span></a><a href="#page-245" class="cp-chip" id="cp-chip-14-245" data-page="245" onclick="handlePageChipClick(event, 'page-245')" title="第 245 页 · 操作规程：床至轮椅转移发力技巧、双膝顶抵支点与旋转入座"><span class="cp-num">p.245</span></a><a href="#page-246" class="cp-chip" id="cp-chip-14-246" data-page="246" onclick="handlePageChipClick(event, 'page-246')" title="第 246 页 · 操作规程：轮椅坐姿摆正、脚踏板复位与反向回床复位规程"><span class="cp-num">p.246</span></a><a href="#page-247" class="cp-chip" id="cp-chip-14-247" data-page="247" onclick="handlePageChipClick(event, 'page-247')" title="第 247 页 · 操作规程：反向回床动作分解、DIPPS 舒适体位与呼叫铃交付"><span class="cp-num">p.247</span></a><a href="#page-248" class="cp-chip" id="cp-chip-14-248" data-page="248" onclick="handlePageChipClick(event, 'page-248')" title="第 248 页 · 操作规程：马桶及座便椅转移 (To and From Toilet) 准备与衣裤退解"><span class="cp-num">p.248</span></a><a href="#page-249" class="cp-chip" id="cp-chip-14-249" data-page="249" onclick="handlePageChipClick(event, 'page-249')" title="第 249 页 · 操作规程：马桶转移坐下、会阴冲洗消毒与防滑抓杆 (Grab Bars) 规范"><span class="cp-num">p.249</span></a><a href="#page-250" class="cp-chip" id="cp-chip-14-250" data-page="250" onclick="handlePageChipClick(event, 'page-250')" title="第 250 页 · 操作规程：马桶起立协助、便后手部卫生与轮椅平稳回转"><span class="cp-num">p.250</span></a><a href="#page-251" class="cp-chip" id="cp-chip-14-251" data-page="251" onclick="handlePageChipClick(event, 'page-251')" title="第 251 页 · 实战案例研习：支持郭太太 (Mrs. Quouong)——零搬抬政策 (No-Lift) 与同侪违规压力处置"><span class="cp-num">p.251</span></a><a href="#page-252" class="cp-chip" id="cp-chip-14-252" data-page="252" onclick="handlePageChipClick(event, 'page-252')" title="第 252 页 · 操作规程：三人协同平车转运法 (Moving to a Stretcher) 准备与床位平行锁定"><span class="cp-num">p.252</span></a><a href="#page-253" class="cp-chip" id="cp-chip-14-253" data-page="253" onclick="handlePageChipClick(event, 'page-253')" title="第 253 页 · 操作规程：平车滑移单过床推进、高低落差调平与三人默契发力"><span class="cp-num">p.253</span></a><a href="#page-254" class="cp-chip" id="cp-chip-14-254" data-page="254" onclick="handlePageChipClick(event, 'page-254')" title="第 254 页 · 操作规程：平车护栏拉起固定、盖被保暖防风与术后平卧交接"><span class="cp-num">p.254</span></a><a href="#page-255" class="cp-chip" id="cp-chip-14-255" data-page="255" onclick="handlePageChipClick(event, 'page-255')" title="第 255 页 · 操作规程：电动/液压机械升降机 (Mechanical Lift) 悬吊带铺展与挂钩安全锁定"><span class="cp-num">p.255</span></a><a href="#page-256" class="cp-chip" id="cp-chip-14-256" data-page="256" onclick="handlePageChipClick(event, 'page-256')" title="第 256 页 · 操作规程：机械吊机升起平移、立位升降机规范与坐姿平稳着陆"><span class="cp-num">p.256</span></a><a href="#page-257" class="cp-chip" id="cp-chip-14-257" data-page="257" onclick="handlePageChipClick(event, 'page-257')" title="第 257 页 · 本章核心要点精炼回顾、急迫如厕单人困境临床思维修炼与自测题 (Q1-Q17)"><span class="cp-num">p.257</span></a><a href="#page-258" class="cp-chip" id="cp-chip-14-258" data-page="258" onclick="handlePageChipClick(event, 'page-258')" title="第 258 页 · 章末全真执业自测题 (Q18-Q28 T/F & 单选题) 及原版权威官方答案核验"><span class="cp-num">p.258</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-215"></div>
                 <div class="editorial-heading-sub">
                   <h3 class="heading-en">OBJECTIVES</h3>
                   <div class="heading-cn">本章学习目标</div>
@@ -36491,7 +36901,28 @@ Clients in bed are positioned in basic bed positions to promote comfort, breathi
           <span class="sheet-meta-badge">Chapter 15 Exercise and Activity · Pages 259–281</span>
           <span class="sheet-meta-edition">ROM & Ambulation</span>
         </div>
-        <div id="page-259"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch15" aria-label="Chapter 15 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.259–281 · 共 23 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-259">第 259 页 · 学习目标与日常机能活动开篇 (Objectives & Activity Foundations)</option><option value="page-260">第 260 页 · 核心专业术语表、去适应综合征与卧床医嘱分级 (Key Terms, Deconditioning & Bed Rest)</option><option value="page-261">第 261 页 · 长期卧床并发症病理机制：关节挛缩、肌肉萎缩与体位性低血压 (Complications of Bed Rest)</option><option value="page-262">第 262 页 · 专栏 15.1：体位性低血压防范全流程与床板/足托板防足下垂 (BOX 15.1 & Supportive Devices)</option><option value="page-263">第 263 页 · 姿势支撑辅具全解析：转子卷、手卷握把、指垫、夹板与床支架 (Trochanter Rolls & Splints)</option><option value="page-264">第 264 页 · 悬吊提臂架 (Trapeze)、运动防挛缩机制与关节活动度 (ROM) 三大分类 (ROM Classifications)</option><option value="page-265">第 265 页 · 儿童游戏聚焦、长者照护文娱活动规划与专栏 15.2：DIPPS 关怀融入 (Focus on Children & LTC)</option><option value="page-266">第 266 页 · 专栏 15.3：关节活动度 (ROM) 黄金操作准则与步行准备 (BOX 15.3 ROM Guidelines & Ambulation)</option><option value="page-267">第 267 页 · 操作规程：全身关节活动度 (ROM) 训练（颈部、肩部全弧度与肘部活动）(ROM Neck & Shoulder)</option><option value="page-268">第 268 页 · 操作规程：前臂旋前旋后、腕关节全向屈伸、拇指对指与手指伸屈 (ROM Forearm & Hands)</option><option value="page-269">第 269 页 · 操作规程：髋关节屈伸外展旋转、膝关节与踝足背屈跖屈翻转 (ROM Hip, Knee & Ankle)</option><option value="page-270">第 270 页 · 操作规程：足趾活动收尾、DIPPS 舒适复位与日常步行 (Ambulation) 临床评估 (ROM Completion)</option><option value="page-271">第 271 页 · 肥胖对关节软骨负荷病理与操作规程：协助案主步行准备及移位带佩戴 (Helping Client Walk Prep)</option><option value="page-272">第 272 页 · 操作规程：步行协同站位、步态纠正指导、平稳回床与体征记录 (Ambulation Execution)</option><option value="page-273">第 273 页 · 失控跌倒力学机制与操作规程：跌倒案主顺势滑移保护技术 (Helping the Falling Client)</option><option value="page-274">第 274 页 · 图解 15.23 贴靠大腿顺势滑落三步法与绝不徒手硬拉原则 (Falling Mechanics Diagram)</option><option value="page-275">第 275 页 · 居家照护聚焦：跌倒骨折脑外伤急救、9-1-1 呼救与无伤协助起立规程 (Home Care Fall Protocol)</option><option value="page-276">第 276 页 · 助行辅具分类：前臂加拿大拐 (Lofstrand) 与腋下拐杖安全维护铁律 (Crutches Safety Rules)</option><option value="page-277">第 277 页 · 手杖 (Cane) 健侧主导三步法与标准助行架 (Walker) 平稳迈步法则 (Canes & Walkers Mechanics)</option><option value="page-278">第 278 页 · 滚轮助行车 (Rollator) 与下肢支具/踝足矫形器 (AFO) 防压疮护理 (Rollators & Braces)</option><option value="page-279">第 279 页 · 专栏 15.4：使用助行架案主坐入轮椅、床边与起立防倾覆规程 (BOX 15.4 Sit & Stand)</option><option value="page-280">第 280 页 · 本章核心知识点精要、双小时 ROM 临床思维修炼与自测选择题 (Q1-Q6) (Key Points & Exam Part 1)</option><option value="page-281">第 281 页 · 章末全真执业自测题 (Q7-Q9 单选 & Q10-Q14 正误题) 与官方标准答案解析 (Official Exam & Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-259" class="cp-chip" id="cp-chip-15-259" data-page="259" onclick="handlePageChipClick(event, 'page-259')" title="第 259 页 · 学习目标与日常机能活动开篇 (Objectives & Activity Foundations)"><span class="cp-num">p.259</span></a><a href="#page-260" class="cp-chip" id="cp-chip-15-260" data-page="260" onclick="handlePageChipClick(event, 'page-260')" title="第 260 页 · 核心专业术语表、去适应综合征与卧床医嘱分级 (Key Terms, Deconditioning & Bed Rest)"><span class="cp-num">p.260</span></a><a href="#page-261" class="cp-chip" id="cp-chip-15-261" data-page="261" onclick="handlePageChipClick(event, 'page-261')" title="第 261 页 · 长期卧床并发症病理机制：关节挛缩、肌肉萎缩与体位性低血压 (Complications of Bed Rest)"><span class="cp-num">p.261</span></a><a href="#page-262" class="cp-chip" id="cp-chip-15-262" data-page="262" onclick="handlePageChipClick(event, 'page-262')" title="第 262 页 · 专栏 15.1：体位性低血压防范全流程与床板/足托板防足下垂 (BOX 15.1 & Supportive Devices)"><span class="cp-num">p.262</span></a><a href="#page-263" class="cp-chip" id="cp-chip-15-263" data-page="263" onclick="handlePageChipClick(event, 'page-263')" title="第 263 页 · 姿势支撑辅具全解析：转子卷、手卷握把、指垫、夹板与床支架 (Trochanter Rolls & Splints)"><span class="cp-num">p.263</span></a><a href="#page-264" class="cp-chip" id="cp-chip-15-264" data-page="264" onclick="handlePageChipClick(event, 'page-264')" title="第 264 页 · 悬吊提臂架 (Trapeze)、运动防挛缩机制与关节活动度 (ROM) 三大分类 (ROM Classifications)"><span class="cp-num">p.264</span></a><a href="#page-265" class="cp-chip" id="cp-chip-15-265" data-page="265" onclick="handlePageChipClick(event, 'page-265')" title="第 265 页 · 儿童游戏聚焦、长者照护文娱活动规划与专栏 15.2：DIPPS 关怀融入 (Focus on Children & LTC)"><span class="cp-num">p.265</span></a><a href="#page-266" class="cp-chip" id="cp-chip-15-266" data-page="266" onclick="handlePageChipClick(event, 'page-266')" title="第 266 页 · 专栏 15.3：关节活动度 (ROM) 黄金操作准则与步行准备 (BOX 15.3 ROM Guidelines & Ambulation)"><span class="cp-num">p.266</span></a><a href="#page-267" class="cp-chip" id="cp-chip-15-267" data-page="267" onclick="handlePageChipClick(event, 'page-267')" title="第 267 页 · 操作规程：全身关节活动度 (ROM) 训练（颈部、肩部全弧度与肘部活动）(ROM Neck & Shoulder)"><span class="cp-num">p.267</span></a><a href="#page-268" class="cp-chip" id="cp-chip-15-268" data-page="268" onclick="handlePageChipClick(event, 'page-268')" title="第 268 页 · 操作规程：前臂旋前旋后、腕关节全向屈伸、拇指对指与手指伸屈 (ROM Forearm & Hands)"><span class="cp-num">p.268</span></a><a href="#page-269" class="cp-chip" id="cp-chip-15-269" data-page="269" onclick="handlePageChipClick(event, 'page-269')" title="第 269 页 · 操作规程：髋关节屈伸外展旋转、膝关节与踝足背屈跖屈翻转 (ROM Hip, Knee & Ankle)"><span class="cp-num">p.269</span></a><a href="#page-270" class="cp-chip" id="cp-chip-15-270" data-page="270" onclick="handlePageChipClick(event, 'page-270')" title="第 270 页 · 操作规程：足趾活动收尾、DIPPS 舒适复位与日常步行 (Ambulation) 临床评估 (ROM Completion)"><span class="cp-num">p.270</span></a><a href="#page-271" class="cp-chip" id="cp-chip-15-271" data-page="271" onclick="handlePageChipClick(event, 'page-271')" title="第 271 页 · 肥胖对关节软骨负荷病理与操作规程：协助案主步行准备及移位带佩戴 (Helping Client Walk Prep)"><span class="cp-num">p.271</span></a><a href="#page-272" class="cp-chip" id="cp-chip-15-272" data-page="272" onclick="handlePageChipClick(event, 'page-272')" title="第 272 页 · 操作规程：步行协同站位、步态纠正指导、平稳回床与体征记录 (Ambulation Execution)"><span class="cp-num">p.272</span></a><a href="#page-273" class="cp-chip" id="cp-chip-15-273" data-page="273" onclick="handlePageChipClick(event, 'page-273')" title="第 273 页 · 失控跌倒力学机制与操作规程：跌倒案主顺势滑移保护技术 (Helping the Falling Client)"><span class="cp-num">p.273</span></a><a href="#page-274" class="cp-chip" id="cp-chip-15-274" data-page="274" onclick="handlePageChipClick(event, 'page-274')" title="第 274 页 · 图解 15.23 贴靠大腿顺势滑落三步法与绝不徒手硬拉原则 (Falling Mechanics Diagram)"><span class="cp-num">p.274</span></a><a href="#page-275" class="cp-chip" id="cp-chip-15-275" data-page="275" onclick="handlePageChipClick(event, 'page-275')" title="第 275 页 · 居家照护聚焦：跌倒骨折脑外伤急救、9-1-1 呼救与无伤协助起立规程 (Home Care Fall Protocol)"><span class="cp-num">p.275</span></a><a href="#page-276" class="cp-chip" id="cp-chip-15-276" data-page="276" onclick="handlePageChipClick(event, 'page-276')" title="第 276 页 · 助行辅具分类：前臂加拿大拐 (Lofstrand) 与腋下拐杖安全维护铁律 (Crutches Safety Rules)"><span class="cp-num">p.276</span></a><a href="#page-277" class="cp-chip" id="cp-chip-15-277" data-page="277" onclick="handlePageChipClick(event, 'page-277')" title="第 277 页 · 手杖 (Cane) 健侧主导三步法与标准助行架 (Walker) 平稳迈步法则 (Canes & Walkers Mechanics)"><span class="cp-num">p.277</span></a><a href="#page-278" class="cp-chip" id="cp-chip-15-278" data-page="278" onclick="handlePageChipClick(event, 'page-278')" title="第 278 页 · 滚轮助行车 (Rollator) 与下肢支具/踝足矫形器 (AFO) 防压疮护理 (Rollators & Braces)"><span class="cp-num">p.278</span></a><a href="#page-279" class="cp-chip" id="cp-chip-15-279" data-page="279" onclick="handlePageChipClick(event, 'page-279')" title="第 279 页 · 专栏 15.4：使用助行架案主坐入轮椅、床边与起立防倾覆规程 (BOX 15.4 Sit & Stand)"><span class="cp-num">p.279</span></a><a href="#page-280" class="cp-chip" id="cp-chip-15-280" data-page="280" onclick="handlePageChipClick(event, 'page-280')" title="第 280 页 · 本章核心知识点精要、双小时 ROM 临床思维修炼与自测选择题 (Q1-Q6) (Key Points & Exam Part 1)"><span class="cp-num">p.280</span></a><a href="#page-281" class="cp-chip" id="cp-chip-15-281" data-page="281" onclick="handlePageChipClick(event, 'page-281')" title="第 281 页 · 章末全真执业自测题 (Q7-Q9 单选 & Q10-Q14 正误题) 与官方标准答案解析 (Official Exam & Key)"><span class="cp-num">p.281</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-259"></div>
                 <div class="editorial-heading-major" id="sec-ch15-p259">
                   <h2 class="heading-en">OBJECTIVES</h2>
                   <div class="heading-cn">本章核心研习目标</div>
@@ -39300,7 +39731,28 @@ C: Lower the client smoothly to the floor by bending at hips and knees, shieldin
           <span class="sheet-meta-badge">Chapter 16 Rehabilitation and Restorative Care · Pages 282–295</span>
           <span class="sheet-meta-edition">Adaptive Devices</span>
         </div>
-        <div id="page-282"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch16" aria-label="Chapter 16 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.282–295 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-282">第 282 页 · 学习目标与康复及恢复性照护开篇 (Objectives & Rehabilitation Foundations)</option><option value="page-283">第 283 页 · 核心专业术语表与康复护理 vs 恢复性照护辨析 (Rehabilitative vs Restorative Care)</option><option value="page-284">第 284 页 · 全人照护五大维度（身心社智灵）与五大经典个案康复目标 (Emphasis on the Whole Person)</option><option value="page-285">第 285 页 · 专栏 16.1：常见康复疾病谱、外骨骼康复机器人与居家评估聚焦 (Rehabilitation Settings & Robotics)</option><option value="page-286">第 286 页 · 专栏 16.2：中风案主居家无障碍环境全真审核清单（室外/室内/厨卫）(Home Review Checklist Part 1)</option><option value="page-287">第 287 页 · 专栏 16.2：居家安全防滑防火清单与多学科康复团队运作机制 (Home Review Part 2 & Rehab Team)</option><option value="page-288">第 288 页 · 深度实战案例研习：杰弗里·谭 (Jeffrey Than) 严重脑创伤全周期多学科康复纪实 (Brain Injury Case Study)</option><option value="page-289">第 289 页 · 家庭在康复中的支柱作用与假肢/矫形器工程学技术 (Role of Family & Prosthetics)</option><option value="page-290">第 290 页 · 进食与个人自理辅助用具全解析：长柄梳刷、扣钮器、穿袜器与取物夹 (Assistive Devices)</option><option value="page-291">第 291 页 · 移位滑板 (Transfer Board) 在轮椅至病床/浴缸安全过桥转移操作标准 (Transfer Board)</option><option value="page-292">第 292 页 · 专栏：以同理心提供慈爱康复照护（DIPPS 人文关怀六大维度深度融入）(Compassionate Care)</option><option value="page-293">第 293 页 · 赋能自立计划 (Reablement) 与康复照护对加拿大长者及医疗体系的综合效益 (Systemic Benefits)</option><option value="page-294">第 294 页 · 本章核心要点精要总结、偏瘫案主抗拒康复愤怒应对执业思维修炼与自测选择题 (Q1-Q7)</option><option value="page-295">第 295 页 · 章末全真执业自测题 (Q8-Q9) 与教材第 295 页原版官方标准答案深度解析 (Official Exam & Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-282" class="cp-chip" id="cp-chip-16-282" data-page="282" onclick="handlePageChipClick(event, 'page-282')" title="第 282 页 · 学习目标与康复及恢复性照护开篇 (Objectives & Rehabilitation Foundations)"><span class="cp-num">p.282</span></a><a href="#page-283" class="cp-chip" id="cp-chip-16-283" data-page="283" onclick="handlePageChipClick(event, 'page-283')" title="第 283 页 · 核心专业术语表与康复护理 vs 恢复性照护辨析 (Rehabilitative vs Restorative Care)"><span class="cp-num">p.283</span></a><a href="#page-284" class="cp-chip" id="cp-chip-16-284" data-page="284" onclick="handlePageChipClick(event, 'page-284')" title="第 284 页 · 全人照护五大维度（身心社智灵）与五大经典个案康复目标 (Emphasis on the Whole Person)"><span class="cp-num">p.284</span></a><a href="#page-285" class="cp-chip" id="cp-chip-16-285" data-page="285" onclick="handlePageChipClick(event, 'page-285')" title="第 285 页 · 专栏 16.1：常见康复疾病谱、外骨骼康复机器人与居家评估聚焦 (Rehabilitation Settings & Robotics)"><span class="cp-num">p.285</span></a><a href="#page-286" class="cp-chip" id="cp-chip-16-286" data-page="286" onclick="handlePageChipClick(event, 'page-286')" title="第 286 页 · 专栏 16.2：中风案主居家无障碍环境全真审核清单（室外/室内/厨卫）(Home Review Checklist Part 1)"><span class="cp-num">p.286</span></a><a href="#page-287" class="cp-chip" id="cp-chip-16-287" data-page="287" onclick="handlePageChipClick(event, 'page-287')" title="第 287 页 · 专栏 16.2：居家安全防滑防火清单与多学科康复团队运作机制 (Home Review Part 2 & Rehab Team)"><span class="cp-num">p.287</span></a><a href="#page-288" class="cp-chip" id="cp-chip-16-288" data-page="288" onclick="handlePageChipClick(event, 'page-288')" title="第 288 页 · 深度实战案例研习：杰弗里·谭 (Jeffrey Than) 严重脑创伤全周期多学科康复纪实 (Brain Injury Case Study)"><span class="cp-num">p.288</span></a><a href="#page-289" class="cp-chip" id="cp-chip-16-289" data-page="289" onclick="handlePageChipClick(event, 'page-289')" title="第 289 页 · 家庭在康复中的支柱作用与假肢/矫形器工程学技术 (Role of Family & Prosthetics)"><span class="cp-num">p.289</span></a><a href="#page-290" class="cp-chip" id="cp-chip-16-290" data-page="290" onclick="handlePageChipClick(event, 'page-290')" title="第 290 页 · 进食与个人自理辅助用具全解析：长柄梳刷、扣钮器、穿袜器与取物夹 (Assistive Devices)"><span class="cp-num">p.290</span></a><a href="#page-291" class="cp-chip" id="cp-chip-16-291" data-page="291" onclick="handlePageChipClick(event, 'page-291')" title="第 291 页 · 移位滑板 (Transfer Board) 在轮椅至病床/浴缸安全过桥转移操作标准 (Transfer Board)"><span class="cp-num">p.291</span></a><a href="#page-292" class="cp-chip" id="cp-chip-16-292" data-page="292" onclick="handlePageChipClick(event, 'page-292')" title="第 292 页 · 专栏：以同理心提供慈爱康复照护（DIPPS 人文关怀六大维度深度融入）(Compassionate Care)"><span class="cp-num">p.292</span></a><a href="#page-293" class="cp-chip" id="cp-chip-16-293" data-page="293" onclick="handlePageChipClick(event, 'page-293')" title="第 293 页 · 赋能自立计划 (Reablement) 与康复照护对加拿大长者及医疗体系的综合效益 (Systemic Benefits)"><span class="cp-num">p.293</span></a><a href="#page-294" class="cp-chip" id="cp-chip-16-294" data-page="294" onclick="handlePageChipClick(event, 'page-294')" title="第 294 页 · 本章核心要点精要总结、偏瘫案主抗拒康复愤怒应对执业思维修炼与自测选择题 (Q1-Q7)"><span class="cp-num">p.294</span></a><a href="#page-295" class="cp-chip" id="cp-chip-16-295" data-page="295" onclick="handlePageChipClick(event, 'page-295')" title="第 295 页 · 章末全真执业自测题 (Q8-Q9) 与教材第 295 页原版官方标准答案深度解析 (Official Exam & Key)"><span class="cp-num">p.295</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-282"></div>
                 <div class="editorial-heading-major" id="sec-ch16-p282">
                   <h2 class="heading-en">OBJECTIVES</h2>
                   <div class="heading-cn">本章核心研习目标</div>
@@ -40752,7 +41204,28 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
           <span class="sheet-meta-badge">Chapter 17 Personal Hygiene · Pages 296–336</span>
           <span class="sheet-meta-edition">Bathing & Perineal Care</span>
         </div>
-        <div id="page-296"></div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch17" aria-label="Chapter 17 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.296–336 · 共 41 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-296">第 296 页 · Chapter Opener: Personal Hygiene & Learning Objectives · 开篇导读与学习目标</option><option value="page-297">第 297 页 · Key Terms & Culture Diversity in Hygiene · 核心专业术语与多元文化卫生实务</option><option value="page-298">第 298 页 · Daily Routine Care (AM/PM/HS Care) & DIPPS · 机构日常例行照护规程与全人关怀</option><option value="page-299">第 299 页 · Compassionate Care (cont'd) & Oral Hygiene Science · 尊严照护原则与口腔微生态/全身健康</option><option value="page-300">第 300 页 · Oral Hygiene Equipment & Observations to Report · 口腔护理专用器械与临床异常体征筛查</option><option value="page-301">第 301 页 · Procedure: Brushing the Client's Teeth (Preparation) · 协助案主刷牙操作规程（术前准备）</option><option value="page-302">第 302 页 · Procedure: Brushing the Client's Teeth (Execution & Safety) · 协助刷牙动作规范与终末处置</option><option value="page-303">第 303 页 · Procedure: Assisting With Bedside Teeth Brushing · 协助床旁自主刷牙标准化规程</option><option value="page-304">第 304 页 · Flossing Importance, Children & Older Persons Focus · 牙线清洁医学机理与特殊人群专栏</option><option value="page-305">第 305 页 · Procedure: Flossing the Client's Teeth · 临床牙线剔牙标准化操作规程</option><option value="page-306">第 306 页 · Mouth Care for the Unconscious Client: Aspiration Prevention · 昏迷案主口腔护理与防误吸窒息铁律</option><option value="page-307">第 307 页 · Procedure: Mouth Care for Unconscious Client (Padded Tongue Blade) · 昏迷口腔护理（侧卧与棉签擦拭）</option><option value="page-308">第 308 页 · Unconscious Mouth Care (Completion) & Intro to Denture Care · 昏迷护理终末处置与义齿结构安全</option><option value="page-309">第 309 页 · Denture Storage, Handling Rules & Care Preparation · 义齿浸泡保存规范与清洁操作准备</option><option value="page-310">第 310 页 · Procedure: Providing Denture Care (Sink Lining & Brushing) · 假牙护理规程（水槽垫巾防摔坏与刷洗）</option><option value="page-311">第 311 页 · Bathing Science, Frequency & Water Temperature Guidelines · 沐浴生理机能、照护频次与双人测水温规程</option><option value="page-312">第 312 页 · Table 17.1: Common Skin Care Products · 表 17.1 常用皮肤照护产品临床特性与禁忌</option><option value="page-313">第 313 页 · Bathing Skin Assessments & Complete Bed Bath Intro · 沐浴全身观察评估要诀与床上擦浴适应证</option><option value="page-314">第 314 页 · Procedure: Giving a Complete Bed Bath (Eyes & Face) · 全套床上擦浴规程（水温测定与眼面部清洗）</option><option value="page-315">第 315 页 · Procedure: Giving a Complete Bed Bath (Arms, Chest & Abdomen) · 床上擦浴（双侧上肢、胸腹部与腋窝）</option><option value="page-316">第 316 页 · Procedure: Giving a Complete Bed Bath (Legs & Feet) · 床上擦浴（双侧下肢、足部浸润与换水）</option><option value="page-317">第 317 页 · Procedure: Giving a Complete Bed Bath (Back, Nails & Completion) · 床上擦浴（背部、指甲修整与终末处置）</option><option value="page-318">第 318 页 · Towel Baths, Bag Baths & Partial Bath Guidelines · 毛巾浴、免洗预湿袋浴与局部擦浴适应证</option><option value="page-319">第 319 页 · Procedure: Giving a Partial Bath · 协助局部擦浴标准化操作规程（关键异味多汗区）</option><option value="page-320">第 320 页 · Tub Baths & Showers: Safety Guidelines & Fall Prevention · 盆浴与淋浴安全指南、防烫伤与防跌倒</option><option value="page-321">第 321 页 · Specialized Tubs: Whirlpool Tubs & Hydraulic Patient Lifts · 水疗漩涡浴缸与液压升降机安全转移</option><option value="page-322">第 322 页 · Shower Chairs, Commodes, Trolleys & Home Bathroom Setup · 轮式淋浴椅、平车浴槽与居家无障碍改造</option><option value="page-323">第 323 页 · Procedure: Assisting With a Tub Bath or Shower (Prep & Transfer) · 协助盆浴或淋浴规程（环境准备与安全位移）</option><option value="page-324">第 324 页 · Tub Bath/Shower Procedure (Completion) & Bathing Challenges · 盆浴淋浴终末规程与抗拒沐浴挑战导引</option><option value="page-325">第 325 页 · Box 17.1 Bathing Guidelines & Dementia Bathing Strategies · 专栏 17.1 沐浴操作总则与认知症温和沐浴实战</option><option value="page-326">第 326 页 · Bathing Incontinence Management & Environmental Comfort · 沐浴中大小便失禁应急处置与保暖尊严维护</option><option value="page-327">第 327 页 · Back Massage: Therapeutic Purposes, Contraindications & Prep · 背部按摩医学机理、禁忌证与润肤露温热规范</option><option value="page-328">第 328 页 · Procedure: Giving a Back Massage (Effleurage & Petrissage) · 协助背部舒缓按摩规程（轻抚法与揉捏法）</option><option value="page-329">第 329 页 · Perineal Care Principles: Asepsis & Clean-to-Dirty Direction · 会阴部护理医学原则、无菌防感染与自洁净向污染</option><option value="page-330">第 330 页 · Procedure: Perineal Care for Female Genitalia (Draping & Prep) · 女性会阴护理规程（对角线遮盖菱形折叠准备）</option><option value="page-331">第 331 页 · Procedure: Female Perineal Care (Labia & Downward Strokes) · 女性会阴清洗动作规范（自上而下一折一换）</option><option value="page-332">第 332 页 · Procedure: Female Perineal Care (Perineum to Anus & Drying) · 女性会阴至肛周清洁、彻底吸干与终末处置</option><option value="page-333">第 333 页 · Procedure: Perineal Care for Male Genitalia (Foreskin & Meatus) · 男性会阴护理（未环切包皮翻起与同心圆擦拭）</option><option value="page-334">第 334 页 · Male Peri-Care (Foreskin Repositioning!) & Menstrual Care · 翻起包皮立即复位防坏疽、阴囊清洁与经期护理</option><option value="page-335">第 335 页 · Chapter Review: Key Points, Critical Thinking Case & Quiz Part 1 · 本章精要复习、会阴违章案例批判与自测题 Q1-Q18</option><option value="page-336">第 336 页 · Chapter Review Questions Q19-Q21 & Official Answer Key · 全真自测题 Q19-Q21 与原版官方标准答案</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-296" class="cp-chip" id="cp-chip-17-296" data-page="296" onclick="handlePageChipClick(event, 'page-296')" title="第 296 页 · Chapter Opener: Personal Hygiene & Learning Objectives · 开篇导读与学习目标"><span class="cp-num">p.296</span></a><a href="#page-297" class="cp-chip" id="cp-chip-17-297" data-page="297" onclick="handlePageChipClick(event, 'page-297')" title="第 297 页 · Key Terms & Culture Diversity in Hygiene · 核心专业术语与多元文化卫生实务"><span class="cp-num">p.297</span></a><a href="#page-298" class="cp-chip" id="cp-chip-17-298" data-page="298" onclick="handlePageChipClick(event, 'page-298')" title="第 298 页 · Daily Routine Care (AM/PM/HS Care) & DIPPS · 机构日常例行照护规程与全人关怀"><span class="cp-num">p.298</span></a><a href="#page-299" class="cp-chip" id="cp-chip-17-299" data-page="299" onclick="handlePageChipClick(event, 'page-299')" title="第 299 页 · Compassionate Care (cont'd) & Oral Hygiene Science · 尊严照护原则与口腔微生态/全身健康"><span class="cp-num">p.299</span></a><a href="#page-300" class="cp-chip" id="cp-chip-17-300" data-page="300" onclick="handlePageChipClick(event, 'page-300')" title="第 300 页 · Oral Hygiene Equipment & Observations to Report · 口腔护理专用器械与临床异常体征筛查"><span class="cp-num">p.300</span></a><a href="#page-301" class="cp-chip" id="cp-chip-17-301" data-page="301" onclick="handlePageChipClick(event, 'page-301')" title="第 301 页 · Procedure: Brushing the Client's Teeth (Preparation) · 协助案主刷牙操作规程（术前准备）"><span class="cp-num">p.301</span></a><a href="#page-302" class="cp-chip" id="cp-chip-17-302" data-page="302" onclick="handlePageChipClick(event, 'page-302')" title="第 302 页 · Procedure: Brushing the Client's Teeth (Execution & Safety) · 协助刷牙动作规范与终末处置"><span class="cp-num">p.302</span></a><a href="#page-303" class="cp-chip" id="cp-chip-17-303" data-page="303" onclick="handlePageChipClick(event, 'page-303')" title="第 303 页 · Procedure: Assisting With Bedside Teeth Brushing · 协助床旁自主刷牙标准化规程"><span class="cp-num">p.303</span></a><a href="#page-304" class="cp-chip" id="cp-chip-17-304" data-page="304" onclick="handlePageChipClick(event, 'page-304')" title="第 304 页 · Flossing Importance, Children & Older Persons Focus · 牙线清洁医学机理与特殊人群专栏"><span class="cp-num">p.304</span></a><a href="#page-305" class="cp-chip" id="cp-chip-17-305" data-page="305" onclick="handlePageChipClick(event, 'page-305')" title="第 305 页 · Procedure: Flossing the Client's Teeth · 临床牙线剔牙标准化操作规程"><span class="cp-num">p.305</span></a><a href="#page-306" class="cp-chip" id="cp-chip-17-306" data-page="306" onclick="handlePageChipClick(event, 'page-306')" title="第 306 页 · Mouth Care for the Unconscious Client: Aspiration Prevention · 昏迷案主口腔护理与防误吸窒息铁律"><span class="cp-num">p.306</span></a><a href="#page-307" class="cp-chip" id="cp-chip-17-307" data-page="307" onclick="handlePageChipClick(event, 'page-307')" title="第 307 页 · Procedure: Mouth Care for Unconscious Client (Padded Tongue Blade) · 昏迷口腔护理（侧卧与棉签擦拭）"><span class="cp-num">p.307</span></a><a href="#page-308" class="cp-chip" id="cp-chip-17-308" data-page="308" onclick="handlePageChipClick(event, 'page-308')" title="第 308 页 · Unconscious Mouth Care (Completion) & Intro to Denture Care · 昏迷护理终末处置与义齿结构安全"><span class="cp-num">p.308</span></a><a href="#page-309" class="cp-chip" id="cp-chip-17-309" data-page="309" onclick="handlePageChipClick(event, 'page-309')" title="第 309 页 · Denture Storage, Handling Rules & Care Preparation · 义齿浸泡保存规范与清洁操作准备"><span class="cp-num">p.309</span></a><a href="#page-310" class="cp-chip" id="cp-chip-17-310" data-page="310" onclick="handlePageChipClick(event, 'page-310')" title="第 310 页 · Procedure: Providing Denture Care (Sink Lining & Brushing) · 假牙护理规程（水槽垫巾防摔坏与刷洗）"><span class="cp-num">p.310</span></a><a href="#page-311" class="cp-chip" id="cp-chip-17-311" data-page="311" onclick="handlePageChipClick(event, 'page-311')" title="第 311 页 · Bathing Science, Frequency & Water Temperature Guidelines · 沐浴生理机能、照护频次与双人测水温规程"><span class="cp-num">p.311</span></a><a href="#page-312" class="cp-chip" id="cp-chip-17-312" data-page="312" onclick="handlePageChipClick(event, 'page-312')" title="第 312 页 · Table 17.1: Common Skin Care Products · 表 17.1 常用皮肤照护产品临床特性与禁忌"><span class="cp-num">p.312</span></a><a href="#page-313" class="cp-chip" id="cp-chip-17-313" data-page="313" onclick="handlePageChipClick(event, 'page-313')" title="第 313 页 · Bathing Skin Assessments & Complete Bed Bath Intro · 沐浴全身观察评估要诀与床上擦浴适应证"><span class="cp-num">p.313</span></a><a href="#page-314" class="cp-chip" id="cp-chip-17-314" data-page="314" onclick="handlePageChipClick(event, 'page-314')" title="第 314 页 · Procedure: Giving a Complete Bed Bath (Eyes & Face) · 全套床上擦浴规程（水温测定与眼面部清洗）"><span class="cp-num">p.314</span></a><a href="#page-315" class="cp-chip" id="cp-chip-17-315" data-page="315" onclick="handlePageChipClick(event, 'page-315')" title="第 315 页 · Procedure: Giving a Complete Bed Bath (Arms, Chest & Abdomen) · 床上擦浴（双侧上肢、胸腹部与腋窝）"><span class="cp-num">p.315</span></a><a href="#page-316" class="cp-chip" id="cp-chip-17-316" data-page="316" onclick="handlePageChipClick(event, 'page-316')" title="第 316 页 · Procedure: Giving a Complete Bed Bath (Legs & Feet) · 床上擦浴（双侧下肢、足部浸润与换水）"><span class="cp-num">p.316</span></a><a href="#page-317" class="cp-chip" id="cp-chip-17-317" data-page="317" onclick="handlePageChipClick(event, 'page-317')" title="第 317 页 · Procedure: Giving a Complete Bed Bath (Back, Nails & Completion) · 床上擦浴（背部、指甲修整与终末处置）"><span class="cp-num">p.317</span></a><a href="#page-318" class="cp-chip" id="cp-chip-17-318" data-page="318" onclick="handlePageChipClick(event, 'page-318')" title="第 318 页 · Towel Baths, Bag Baths & Partial Bath Guidelines · 毛巾浴、免洗预湿袋浴与局部擦浴适应证"><span class="cp-num">p.318</span></a><a href="#page-319" class="cp-chip" id="cp-chip-17-319" data-page="319" onclick="handlePageChipClick(event, 'page-319')" title="第 319 页 · Procedure: Giving a Partial Bath · 协助局部擦浴标准化操作规程（关键异味多汗区）"><span class="cp-num">p.319</span></a><a href="#page-320" class="cp-chip" id="cp-chip-17-320" data-page="320" onclick="handlePageChipClick(event, 'page-320')" title="第 320 页 · Tub Baths & Showers: Safety Guidelines & Fall Prevention · 盆浴与淋浴安全指南、防烫伤与防跌倒"><span class="cp-num">p.320</span></a><a href="#page-321" class="cp-chip" id="cp-chip-17-321" data-page="321" onclick="handlePageChipClick(event, 'page-321')" title="第 321 页 · Specialized Tubs: Whirlpool Tubs & Hydraulic Patient Lifts · 水疗漩涡浴缸与液压升降机安全转移"><span class="cp-num">p.321</span></a><a href="#page-322" class="cp-chip" id="cp-chip-17-322" data-page="322" onclick="handlePageChipClick(event, 'page-322')" title="第 322 页 · Shower Chairs, Commodes, Trolleys & Home Bathroom Setup · 轮式淋浴椅、平车浴槽与居家无障碍改造"><span class="cp-num">p.322</span></a><a href="#page-323" class="cp-chip" id="cp-chip-17-323" data-page="323" onclick="handlePageChipClick(event, 'page-323')" title="第 323 页 · Procedure: Assisting With a Tub Bath or Shower (Prep & Transfer) · 协助盆浴或淋浴规程（环境准备与安全位移）"><span class="cp-num">p.323</span></a><a href="#page-324" class="cp-chip" id="cp-chip-17-324" data-page="324" onclick="handlePageChipClick(event, 'page-324')" title="第 324 页 · Tub Bath/Shower Procedure (Completion) & Bathing Challenges · 盆浴淋浴终末规程与抗拒沐浴挑战导引"><span class="cp-num">p.324</span></a><a href="#page-325" class="cp-chip" id="cp-chip-17-325" data-page="325" onclick="handlePageChipClick(event, 'page-325')" title="第 325 页 · Box 17.1 Bathing Guidelines & Dementia Bathing Strategies · 专栏 17.1 沐浴操作总则与认知症温和沐浴实战"><span class="cp-num">p.325</span></a><a href="#page-326" class="cp-chip" id="cp-chip-17-326" data-page="326" onclick="handlePageChipClick(event, 'page-326')" title="第 326 页 · Bathing Incontinence Management & Environmental Comfort · 沐浴中大小便失禁应急处置与保暖尊严维护"><span class="cp-num">p.326</span></a><a href="#page-327" class="cp-chip" id="cp-chip-17-327" data-page="327" onclick="handlePageChipClick(event, 'page-327')" title="第 327 页 · Back Massage: Therapeutic Purposes, Contraindications & Prep · 背部按摩医学机理、禁忌证与润肤露温热规范"><span class="cp-num">p.327</span></a><a href="#page-328" class="cp-chip" id="cp-chip-17-328" data-page="328" onclick="handlePageChipClick(event, 'page-328')" title="第 328 页 · Procedure: Giving a Back Massage (Effleurage & Petrissage) · 协助背部舒缓按摩规程（轻抚法与揉捏法）"><span class="cp-num">p.328</span></a><a href="#page-329" class="cp-chip" id="cp-chip-17-329" data-page="329" onclick="handlePageChipClick(event, 'page-329')" title="第 329 页 · Perineal Care Principles: Asepsis & Clean-to-Dirty Direction · 会阴部护理医学原则、无菌防感染与自洁净向污染"><span class="cp-num">p.329</span></a><a href="#page-330" class="cp-chip" id="cp-chip-17-330" data-page="330" onclick="handlePageChipClick(event, 'page-330')" title="第 330 页 · Procedure: Perineal Care for Female Genitalia (Draping & Prep) · 女性会阴护理规程（对角线遮盖菱形折叠准备）"><span class="cp-num">p.330</span></a><a href="#page-331" class="cp-chip" id="cp-chip-17-331" data-page="331" onclick="handlePageChipClick(event, 'page-331')" title="第 331 页 · Procedure: Female Perineal Care (Labia & Downward Strokes) · 女性会阴清洗动作规范（自上而下一折一换）"><span class="cp-num">p.331</span></a><a href="#page-332" class="cp-chip" id="cp-chip-17-332" data-page="332" onclick="handlePageChipClick(event, 'page-332')" title="第 332 页 · Procedure: Female Perineal Care (Perineum to Anus & Drying) · 女性会阴至肛周清洁、彻底吸干与终末处置"><span class="cp-num">p.332</span></a><a href="#page-333" class="cp-chip" id="cp-chip-17-333" data-page="333" onclick="handlePageChipClick(event, 'page-333')" title="第 333 页 · Procedure: Perineal Care for Male Genitalia (Foreskin & Meatus) · 男性会阴护理（未环切包皮翻起与同心圆擦拭）"><span class="cp-num">p.333</span></a><a href="#page-334" class="cp-chip" id="cp-chip-17-334" data-page="334" onclick="handlePageChipClick(event, 'page-334')" title="第 334 页 · Male Peri-Care (Foreskin Repositioning!) & Menstrual Care · 翻起包皮立即复位防坏疽、阴囊清洁与经期护理"><span class="cp-num">p.334</span></a><a href="#page-335" class="cp-chip" id="cp-chip-17-335" data-page="335" onclick="handlePageChipClick(event, 'page-335')" title="第 335 页 · Chapter Review: Key Points, Critical Thinking Case & Quiz Part 1 · 本章精要复习、会阴违章案例批判与自测题 Q1-Q18"><span class="cp-num">p.335</span></a><a href="#page-336" class="cp-chip" id="cp-chip-17-336" data-page="336" onclick="handlePageChipClick(event, 'page-336')" title="第 336 页 · Chapter Review Questions Q19-Q21 & Official Answer Key · 全真自测题 Q19-Q21 与原版官方标准答案"><span class="cp-num">p.336</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-296"></div>
                 <div class="editorial-heading-major" id="sec-ch17-p296">
                   <h2 class="heading-en">OBJECTIVES</h2>
                   <div class="heading-cn">本章学习目标与核心能力考核规程</div>
@@ -45577,6 +46050,71 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
       });
     }
 
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
 
     // Initialize reader audio on DOM ready
     window.addEventListener('DOMContentLoaded', initReaderAudio);

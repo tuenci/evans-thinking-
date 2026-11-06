@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：22:15</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch3-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-34">第 34 页 · 学习目标、执业场所全景概览与开篇导读 (Objectives & Workplace Settings)</option><option value="page-35">第 35 页 · 核心专业术语表（急性/慢病/辅助生活/长期照护）(Key Terms: Acute to Supportive)</option><option value="page-36">第 36 页 · 两大执业阵地分野：社区型照护 vs 机构型照护 (Community-Based vs Facility-Based Care)</option><option value="page-37">第 37 页 · 社区照护场所：原住民社区工作挑战与社区健康中心 (Indigenous Communities & Community Centres)</option><option value="page-38">第 38 页 · 居家照护 (Home Care) 执业实录与专栏 3.1 居家照护优势与挑战 (Home Care & Box 3.1 Benefits/Challenges)</option><option value="page-39">第 39 页 · 成人日间康乐计划与辅助生活照护公寓 (Adult Day Programs & Assisted-Living Facilities)</option><option value="page-40">第 40 页 · 长期照护院舍（养老院）：生活环境与温馨家园氛围 (Long-Term Care Homes & Homelike Atmosphere)</option><option value="page-41">第 41 页 · 专栏 3.2：长期照护院舍执业优势与挑战对比表 (Box 3.2 Benefits and Challenges of Working in LTC)</option><option value="page-42">第 42 页 · 退休自理公寓与集体家庭公寓执业解析 (Retirement Homes & Group Homes)</option><option value="page-43">第 43 页 · 专栏 3.3：直接受雇于案主本人的优势与执业挑战 (Box 3.3 Working Directly for Clients)</option><option value="page-44">第 44 页 · 综合医院急症外科、专科病房与亚急性医疗 (Hospitals, Specialized Units & Subacute Care)</option><option value="page-45">第 45 页 · 专栏 3.4：急症综合医院执业利弊对比与从业选择 (Box 3.4 Benefits/Challenges in Hospital Settings)</option><option value="page-46">第 46 页 · 本章核心要点精要总结、工作场所抉择批判性思维与自测题 Q1-Q6 (Key Points, Critical Thinking & Q1-Q6)</option><option value="page-47">第 47 页 · 章末全真执业自测题 (Q7-Q9) 与教材第 47 页官方标准答案深度精解 (Official Exam Q7-Q9 & Answer Key)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-34" class="page-chip-item"><span class="pc-num">p.34</span></a><a href="#page-35" class="page-chip-item"><span class="pc-num">p.35</span></a><a href="#page-36" class="page-chip-item"><span class="pc-num">p.36</span></a><a href="#page-37" class="page-chip-item"><span class="pc-num">p.37</span></a><a href="#page-38" class="page-chip-item"><span class="pc-num">p.38</span></a><a href="#page-39" class="page-chip-item"><span class="pc-num">p.39</span></a><a href="#page-40" class="page-chip-item"><span class="pc-num">p.40</span></a><a href="#page-41" class="page-chip-item"><span class="pc-num">p.41</span></a><a href="#page-42" class="page-chip-item"><span class="pc-num">p.42</span></a><a href="#page-43" class="page-chip-item"><span class="pc-num">p.43</span></a><a href="#page-44" class="page-chip-item"><span class="pc-num">p.44</span></a><a href="#page-45" class="page-chip-item"><span class="pc-num">p.45</span></a><a href="#page-46" class="page-chip-item"><span class="pc-num">p.46</span></a><a href="#page-47" class="page-chip-item"><span class="pc-num">p.47</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-34"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch3" aria-label="Chapter 3 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.34–47 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-34">第 34 页 · 学习目标、执业场所全景概览与开篇导读 (Objectives & Workplace Settings)</option><option value="page-35">第 35 页 · 核心专业术语表（急性/慢病/辅助生活/长期照护）(Key Terms: Acute to Supportive)</option><option value="page-36">第 36 页 · 两大执业阵地分野：社区型照护 vs 机构型照护 (Community-Based vs Facility-Based Care)</option><option value="page-37">第 37 页 · 社区照护场所：原住民社区工作挑战与社区健康中心 (Indigenous Communities & Community Centres)</option><option value="page-38">第 38 页 · 居家照护 (Home Care) 执业实录与专栏 3.1 居家照护优势与挑战 (Home Care & Box 3.1 Benefits/Challenges)</option><option value="page-39">第 39 页 · 成人日间康乐计划与辅助生活照护公寓 (Adult Day Programs & Assisted-Living Facilities)</option><option value="page-40">第 40 页 · 长期照护院舍（养老院）：生活环境与温馨家园氛围 (Long-Term Care Homes & Homelike Atmosphere)</option><option value="page-41">第 41 页 · 专栏 3.2：长期照护院舍执业优势与挑战对比表 (Box 3.2 Benefits and Challenges of Working in LTC)</option><option value="page-42">第 42 页 · 退休自理公寓与集体家庭公寓执业解析 (Retirement Homes & Group Homes)</option><option value="page-43">第 43 页 · 专栏 3.3：直接受雇于案主本人的优势与执业挑战 (Box 3.3 Working Directly for Clients)</option><option value="page-44">第 44 页 · 综合医院急症外科、专科病房与亚急性医疗 (Hospitals, Specialized Units & Subacute Care)</option><option value="page-45">第 45 页 · 专栏 3.4：急症综合医院执业利弊对比与从业选择 (Box 3.4 Benefits/Challenges in Hospital Settings)</option><option value="page-46">第 46 页 · 本章核心要点精要总结、工作场所抉择批判性思维与自测题 Q1-Q6 (Key Points, Critical Thinking & Q1-Q6)</option><option value="page-47">第 47 页 · 章末全真执业自测题 (Q7-Q9) 与教材第 47 页官方标准答案深度精解 (Official Exam Q7-Q9 & Answer Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-34" class="cp-chip" id="cp-chip-3-34" data-page="34" onclick="handlePageChipClick(event, 'page-34')" title="第 34 页 · 学习目标、执业场所全景概览与开篇导读 (Objectives & Workplace Settings)"><span class="cp-num">p.34</span></a><a href="#page-35" class="cp-chip" id="cp-chip-3-35" data-page="35" onclick="handlePageChipClick(event, 'page-35')" title="第 35 页 · 核心专业术语表（急性/慢病/辅助生活/长期照护）(Key Terms: Acute to Supportive)"><span class="cp-num">p.35</span></a><a href="#page-36" class="cp-chip" id="cp-chip-3-36" data-page="36" onclick="handlePageChipClick(event, 'page-36')" title="第 36 页 · 两大执业阵地分野：社区型照护 vs 机构型照护 (Community-Based vs Facility-Based Care)"><span class="cp-num">p.36</span></a><a href="#page-37" class="cp-chip" id="cp-chip-3-37" data-page="37" onclick="handlePageChipClick(event, 'page-37')" title="第 37 页 · 社区照护场所：原住民社区工作挑战与社区健康中心 (Indigenous Communities & Community Centres)"><span class="cp-num">p.37</span></a><a href="#page-38" class="cp-chip" id="cp-chip-3-38" data-page="38" onclick="handlePageChipClick(event, 'page-38')" title="第 38 页 · 居家照护 (Home Care) 执业实录与专栏 3.1 居家照护优势与挑战 (Home Care & Box 3.1 Benefits/Challenges)"><span class="cp-num">p.38</span></a><a href="#page-39" class="cp-chip" id="cp-chip-3-39" data-page="39" onclick="handlePageChipClick(event, 'page-39')" title="第 39 页 · 成人日间康乐计划与辅助生活照护公寓 (Adult Day Programs & Assisted-Living Facilities)"><span class="cp-num">p.39</span></a><a href="#page-40" class="cp-chip" id="cp-chip-3-40" data-page="40" onclick="handlePageChipClick(event, 'page-40')" title="第 40 页 · 长期照护院舍（养老院）：生活环境与温馨家园氛围 (Long-Term Care Homes & Homelike Atmosphere)"><span class="cp-num">p.40</span></a><a href="#page-41" class="cp-chip" id="cp-chip-3-41" data-page="41" onclick="handlePageChipClick(event, 'page-41')" title="第 41 页 · 专栏 3.2：长期照护院舍执业优势与挑战对比表 (Box 3.2 Benefits and Challenges of Working in LTC)"><span class="cp-num">p.41</span></a><a href="#page-42" class="cp-chip" id="cp-chip-3-42" data-page="42" onclick="handlePageChipClick(event, 'page-42')" title="第 42 页 · 退休自理公寓与集体家庭公寓执业解析 (Retirement Homes & Group Homes)"><span class="cp-num">p.42</span></a><a href="#page-43" class="cp-chip" id="cp-chip-3-43" data-page="43" onclick="handlePageChipClick(event, 'page-43')" title="第 43 页 · 专栏 3.3：直接受雇于案主本人的优势与执业挑战 (Box 3.3 Working Directly for Clients)"><span class="cp-num">p.43</span></a><a href="#page-44" class="cp-chip" id="cp-chip-3-44" data-page="44" onclick="handlePageChipClick(event, 'page-44')" title="第 44 页 · 综合医院急症外科、专科病房与亚急性医疗 (Hospitals, Specialized Units & Subacute Care)"><span class="cp-num">p.44</span></a><a href="#page-45" class="cp-chip" id="cp-chip-3-45" data-page="45" onclick="handlePageChipClick(event, 'page-45')" title="第 45 页 · 专栏 3.4：急症综合医院执业利弊对比与从业选择 (Box 3.4 Benefits/Challenges in Hospital Settings)"><span class="cp-num">p.45</span></a><a href="#page-46" class="cp-chip" id="cp-chip-3-46" data-page="46" onclick="handlePageChipClick(event, 'page-46')" title="第 46 页 · 本章核心要点精要总结、工作场所抉择批判性思维与自测题 Q1-Q6 (Key Points, Critical Thinking & Q1-Q6)"><span class="cp-num">p.46</span></a><a href="#page-47" class="cp-chip" id="cp-chip-3-47" data-page="47" onclick="handlePageChipClick(event, 'page-47')" title="第 47 页 · 章末全真执业自测题 (Q7-Q9) 与教材第 47 页官方标准答案深度精解 (Official Exam Q7-Q9 & Answer Key)"><span class="cp-num">p.47</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-34"></div>
                 <div class="editorial-footer-url">
                   <span class="efu-icon">🌐</span>
                   <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
@@ -2037,6 +2086,72 @@
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();

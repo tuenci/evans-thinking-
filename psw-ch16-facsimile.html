@@ -287,12 +287,22 @@
     }
     
     /* Page Selector Box (Dropdown + Chips) */
-    .chapter-page-selector-box {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border-subtle);
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
-    .page-selector-head {
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -300,65 +310,103 @@
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .ps-title-group {
+    .cp-nav-meta {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-    .ps-badge {
+    .cp-badge {
       font-size: 10px;
       font-weight: 750;
-      background: var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 2px 6px;
-      border-radius: 3px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .ps-label {
-      font-size: 12px;
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
     }
-    .ps-dropdown-wrap {
+    .cp-dropdown-wrap {
       min-width: 220px;
       flex: 1;
       max-width: 320px;
     }
-    .page-jump-dropdown {
+    .cp-page-select {
       width: 100%;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
       color: var(--text-main);
       border-radius: 6px;
       cursor: pointer;
       outline: none;
+      transition: border-color 0.15s ease;
     }
-    .page-jump-dropdown:focus {
+    .cp-page-select:focus {
       border-color: var(--accent-navy);
     }
-    .ps-chips-ribbon {
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
-    .page-chip-item {
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 3px 8px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
-      background: var(--bg-canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
-      border-radius: 4px;
       transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
     }
-    .page-chip-item:hover {
+    .cp-chip:hover {
       background: var(--accent-navy);
-      color: #ffffff;
+      color: #ffffff !important;
       border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     
     /* Authentic Typographic Headings (Strictly following original textbook) */
@@ -841,30 +889,31 @@
         <span class="meta-item">专业音频：19:30</span>
         <span class="meta-item"><a href="psw-reader.html#sec-ch16-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
-
-      
-        <div class="chapter-page-selector-box">
-          <div class="page-selector-head">
-            <div class="ps-title-group">
-              <span class="ps-badge">PAGE SELECTOR</span>
-              <span class="ps-label">原书页码直达</span>
-            </div>
-            <div class="ps-dropdown-wrap">
-              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
-                <option value="">-- 选择原书页码快速跳转 --</option>
-                <option value="page-282">第 282 页 · 学习目标与康复及恢复性照护开篇 (Objectives & Rehabilitation Foundations)</option><option value="page-283">第 283 页 · 核心专业术语表与康复护理 vs 恢复性照护辨析 (Rehabilitative vs Restorative Care)</option><option value="page-284">第 284 页 · 全人照护五大维度（身心社智灵）与五大经典个案康复目标 (Emphasis on the Whole Person)</option><option value="page-285">第 285 页 · 专栏 16.1：常见康复疾病谱、外骨骼康复机器人与居家评估聚焦 (Rehabilitation Settings & Robotics)</option><option value="page-286">第 286 页 · 专栏 16.2：中风案主居家无障碍环境全真审核清单（室外/室内/厨卫）(Home Review Checklist Part 1)</option><option value="page-287">第 287 页 · 专栏 16.2：居家安全防滑防火清单与多学科康复团队运作机制 (Home Review Part 2 & Rehab Team)</option><option value="page-288">第 288 页 · 深度实战案例研习：杰弗里·谭 (Jeffrey Than) 严重脑创伤全周期多学科康复纪实 (Brain Injury Case Study)</option><option value="page-289">第 289 页 · 家庭在康复中的支柱作用与假肢/矫形器工程学技术 (Role of Family & Prosthetics)</option><option value="page-290">第 290 页 · 进食与个人自理辅助用具全解析：长柄梳刷、扣钮器、穿袜器与取物夹 (Assistive Devices)</option><option value="page-291">第 291 页 · 移位滑板 (Transfer Board) 在轮椅至病床/浴缸安全过桥转移操作标准 (Transfer Board)</option><option value="page-292">第 292 页 · 专栏：以同理心提供慈爱康复照护（DIPPS 人文关怀六大维度深度融入）(Compassionate Care)</option><option value="page-293">第 293 页 · 赋能自立计划 (Reablement) 与康复照护对加拿大长者及医疗体系的综合效益 (Systemic Benefits)</option><option value="page-294">第 294 页 · 本章核心要点精要总结、偏瘫案主抗拒康复愤怒应对执业思维修炼与自测选择题 (Q1-Q7)</option><option value="page-295">第 295 页 · 章末全真执业自测题 (Q8-Q9) 与教材第 295 页原版官方标准答案深度解析 (Official Exam & Key)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ps-chips-ribbon">
-            <a href="#page-282" class="page-chip-item"><span class="pc-num">p.282</span></a><a href="#page-283" class="page-chip-item"><span class="pc-num">p.283</span></a><a href="#page-284" class="page-chip-item"><span class="pc-num">p.284</span></a><a href="#page-285" class="page-chip-item"><span class="pc-num">p.285</span></a><a href="#page-286" class="page-chip-item"><span class="pc-num">p.286</span></a><a href="#page-287" class="page-chip-item"><span class="pc-num">p.287</span></a><a href="#page-288" class="page-chip-item"><span class="pc-num">p.288</span></a><a href="#page-289" class="page-chip-item"><span class="pc-num">p.289</span></a><a href="#page-290" class="page-chip-item"><span class="pc-num">p.290</span></a><a href="#page-291" class="page-chip-item"><span class="pc-num">p.291</span></a><a href="#page-292" class="page-chip-item"><span class="pc-num">p.292</span></a><a href="#page-293" class="page-chip-item"><span class="pc-num">p.293</span></a><a href="#page-294" class="page-chip-item"><span class="pc-num">p.294</span></a><a href="#page-295" class="page-chip-item"><span class="pc-num">p.295</span></a>
-          </div>
-        </div>
-        
     </header>
 
     <div class="editorial-stream">
-      <div id="page-282"></div>
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch16" aria-label="Chapter 16 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.282–295 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-282">第 282 页 · 学习目标与康复及恢复性照护开篇 (Objectives & Rehabilitation Foundations)</option><option value="page-283">第 283 页 · 核心专业术语表与康复护理 vs 恢复性照护辨析 (Rehabilitative vs Restorative Care)</option><option value="page-284">第 284 页 · 全人照护五大维度（身心社智灵）与五大经典个案康复目标 (Emphasis on the Whole Person)</option><option value="page-285">第 285 页 · 专栏 16.1：常见康复疾病谱、外骨骼康复机器人与居家评估聚焦 (Rehabilitation Settings & Robotics)</option><option value="page-286">第 286 页 · 专栏 16.2：中风案主居家无障碍环境全真审核清单（室外/室内/厨卫）(Home Review Checklist Part 1)</option><option value="page-287">第 287 页 · 专栏 16.2：居家安全防滑防火清单与多学科康复团队运作机制 (Home Review Part 2 & Rehab Team)</option><option value="page-288">第 288 页 · 深度实战案例研习：杰弗里·谭 (Jeffrey Than) 严重脑创伤全周期多学科康复纪实 (Brain Injury Case Study)</option><option value="page-289">第 289 页 · 家庭在康复中的支柱作用与假肢/矫形器工程学技术 (Role of Family & Prosthetics)</option><option value="page-290">第 290 页 · 进食与个人自理辅助用具全解析：长柄梳刷、扣钮器、穿袜器与取物夹 (Assistive Devices)</option><option value="page-291">第 291 页 · 移位滑板 (Transfer Board) 在轮椅至病床/浴缸安全过桥转移操作标准 (Transfer Board)</option><option value="page-292">第 292 页 · 专栏：以同理心提供慈爱康复照护（DIPPS 人文关怀六大维度深度融入）(Compassionate Care)</option><option value="page-293">第 293 页 · 赋能自立计划 (Reablement) 与康复照护对加拿大长者及医疗体系的综合效益 (Systemic Benefits)</option><option value="page-294">第 294 页 · 本章核心要点精要总结、偏瘫案主抗拒康复愤怒应对执业思维修炼与自测选择题 (Q1-Q7)</option><option value="page-295">第 295 页 · 章末全真执业自测题 (Q8-Q9) 与教材第 295 页原版官方标准答案深度解析 (Official Exam & Key)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-282" class="cp-chip" id="cp-chip-16-282" data-page="282" onclick="handlePageChipClick(event, 'page-282')" title="第 282 页 · 学习目标与康复及恢复性照护开篇 (Objectives & Rehabilitation Foundations)"><span class="cp-num">p.282</span></a><a href="#page-283" class="cp-chip" id="cp-chip-16-283" data-page="283" onclick="handlePageChipClick(event, 'page-283')" title="第 283 页 · 核心专业术语表与康复护理 vs 恢复性照护辨析 (Rehabilitative vs Restorative Care)"><span class="cp-num">p.283</span></a><a href="#page-284" class="cp-chip" id="cp-chip-16-284" data-page="284" onclick="handlePageChipClick(event, 'page-284')" title="第 284 页 · 全人照护五大维度（身心社智灵）与五大经典个案康复目标 (Emphasis on the Whole Person)"><span class="cp-num">p.284</span></a><a href="#page-285" class="cp-chip" id="cp-chip-16-285" data-page="285" onclick="handlePageChipClick(event, 'page-285')" title="第 285 页 · 专栏 16.1：常见康复疾病谱、外骨骼康复机器人与居家评估聚焦 (Rehabilitation Settings & Robotics)"><span class="cp-num">p.285</span></a><a href="#page-286" class="cp-chip" id="cp-chip-16-286" data-page="286" onclick="handlePageChipClick(event, 'page-286')" title="第 286 页 · 专栏 16.2：中风案主居家无障碍环境全真审核清单（室外/室内/厨卫）(Home Review Checklist Part 1)"><span class="cp-num">p.286</span></a><a href="#page-287" class="cp-chip" id="cp-chip-16-287" data-page="287" onclick="handlePageChipClick(event, 'page-287')" title="第 287 页 · 专栏 16.2：居家安全防滑防火清单与多学科康复团队运作机制 (Home Review Part 2 & Rehab Team)"><span class="cp-num">p.287</span></a><a href="#page-288" class="cp-chip" id="cp-chip-16-288" data-page="288" onclick="handlePageChipClick(event, 'page-288')" title="第 288 页 · 深度实战案例研习：杰弗里·谭 (Jeffrey Than) 严重脑创伤全周期多学科康复纪实 (Brain Injury Case Study)"><span class="cp-num">p.288</span></a><a href="#page-289" class="cp-chip" id="cp-chip-16-289" data-page="289" onclick="handlePageChipClick(event, 'page-289')" title="第 289 页 · 家庭在康复中的支柱作用与假肢/矫形器工程学技术 (Role of Family & Prosthetics)"><span class="cp-num">p.289</span></a><a href="#page-290" class="cp-chip" id="cp-chip-16-290" data-page="290" onclick="handlePageChipClick(event, 'page-290')" title="第 290 页 · 进食与个人自理辅助用具全解析：长柄梳刷、扣钮器、穿袜器与取物夹 (Assistive Devices)"><span class="cp-num">p.290</span></a><a href="#page-291" class="cp-chip" id="cp-chip-16-291" data-page="291" onclick="handlePageChipClick(event, 'page-291')" title="第 291 页 · 移位滑板 (Transfer Board) 在轮椅至病床/浴缸安全过桥转移操作标准 (Transfer Board)"><span class="cp-num">p.291</span></a><a href="#page-292" class="cp-chip" id="cp-chip-16-292" data-page="292" onclick="handlePageChipClick(event, 'page-292')" title="第 292 页 · 专栏：以同理心提供慈爱康复照护（DIPPS 人文关怀六大维度深度融入）(Compassionate Care)"><span class="cp-num">p.292</span></a><a href="#page-293" class="cp-chip" id="cp-chip-16-293" data-page="293" onclick="handlePageChipClick(event, 'page-293')" title="第 293 页 · 赋能自立计划 (Reablement) 与康复照护对加拿大长者及医疗体系的综合效益 (Systemic Benefits)"><span class="cp-num">p.293</span></a><a href="#page-294" class="cp-chip" id="cp-chip-16-294" data-page="294" onclick="handlePageChipClick(event, 'page-294')" title="第 294 页 · 本章核心要点精要总结、偏瘫案主抗拒康复愤怒应对执业思维修炼与自测选择题 (Q1-Q7)"><span class="cp-num">p.294</span></a><a href="#page-295" class="cp-chip" id="cp-chip-16-295" data-page="295" onclick="handlePageChipClick(event, 'page-295')" title="第 295 页 · 章末全真执业自测题 (Q8-Q9) 与教材第 295 页原版官方标准答案深度解析 (Official Exam & Key)"><span class="cp-num">p.295</span></a>
+        </div>
+      </div>
+    </nav>
+    <div id="page-282"></div>
                 <div class="editorial-heading-major" id="sec-ch16-p282">
                   <h2 class="heading-en">OBJECTIVES</h2>
                   <div class="heading-cn">本章核心研习目标</div>
@@ -1927,6 +1976,72 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
         var text = (c.innerText || '').toLowerCase();
         c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
     }
 
     initLanguageMode();
