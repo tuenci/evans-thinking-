@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 2: The Canadian Health Care System · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --user-font-size: 17px;
+      --bg-page: #f9f8f5;
+      --bg-container: #ffffff;
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --primary-navy: #1e3a8a;
+      --accent-gold: #c29b38;
+      --accent-blue: #2563eb;
+      --border-subtle: #e2e8f0;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    /* Top Sticky App Navigation & Interactive Switcher Bar */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+    }
+    .nav-left { display: flex; align-items: center; gap: 14px; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--primary-navy);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 14px;
+      background: #eff6ff;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: #dbeafe; }
+    .nav-chapter-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-chapter-title .ch-badge {
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+    }
+    
+    /* Center Segmented Language Switcher */
+    .mode-switch-segmented {
+      display: flex;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .mode-seg-btn {
+      padding: 6px 15px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: #0f172a; }
+    .mode-seg-btn.active {
+      background: #ffffff;
+      color: #1e3a8a;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .reading-util-group { display: flex; align-items: center; gap: 6px; }
+    .util-btn {
+      padding: 6px 11px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: #f8fafc; border-color: #94a3b8; color: #0f172a; }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 9999px;
+      padding: 4px 14px 4px 6px;
+    }
+    .play-circle-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 13px;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .play-circle-btn:hover { transform: scale(1.05); background: #1d4ed8; }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10.5px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    
+    /* Warm Paper Theme */
+    html.theme-paper {
+      --bg-page: #f5efe6;
+      --bg-container: #fcf9f2;
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --border-subtle: #e5ded2;
+    }
+    html.theme-paper body { background: #f5efe6; color: #2b2520; }
+    html.theme-paper .top-sticky-bar { background: rgba(245, 239, 230, 0.95); border-bottom-color: #e5ded2; }
+    html.theme-paper .mode-switch-segmented { background: #e9e1d4; border-color: #d8cebe; }
+    html.theme-paper .mode-seg-btn { color: #5c5247; }
+    html.theme-paper .mode-seg-btn.active { background: #fcf9f2; color: #2b2520; }
+    html.theme-paper .util-btn { background: #fcf9f2; border-color: #d8cebe; color: #5c5247; }
+    html.theme-paper .ambient-player { background: #ede6dc; border-color: #d8cebe; }
+    html.theme-paper .editorial-stream,
+    html.theme-paper .chapter-hero-editorial {
+      background: #fcf9f2;
+      border-color: #e5ded2;
+      box-shadow: 0 4px 24px rgba(43, 37, 32, 0.04);
+    }
+    
+    /* Layout Container */
+    .ch-editorial-flow {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 0 16px;
+    }
+    .chapter-hero-editorial {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 40px 42px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 12px;
+    }
+    .hero-title-en {
+      font-size: 30px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 18px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 13px;
+      color: #64748b;
+    }
+    
+    /* Stream Body */
+    .editorial-stream {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 44px 48px;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+    }
+    
+    /* Section Headings */
+    .editorial-section-divider { margin: 64px 0 28px; }
+    .section-divider-bar {
+      height: 2px;
+      background: linear-gradient(to right, #1e3a8a 0%, #93c5fd 60%, transparent 100%);
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+    .section-heading-card {
+      border-left: 4px solid var(--primary-navy);
+      padding-left: 20px;
+    }
+    .section-eyebrow { margin-bottom: 6px; }
+    .section-badge-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1e3a8a;
+      background: #eff6ff;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+    }
+    .sh-title-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: #1e3a8a;
+      line-height: 1.35;
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+    
+    /* Bilingual Paragraphs */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 26px;
+      padding: 12px 18px 14px 20px;
+      border-left: 3px solid transparent;
+      border-radius: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(241, 245, 249, 0.7);
+      border-left-color: #cbd5e1;
+    }
+    .bilingual-paragraph.audio-active {
+      background: #eff6ff;
+      border-left-color: var(--accent-blue);
+      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.08);
+    }
+    .para-play-indicator {
+      position: absolute;
+      left: -24px;
+      top: 14px;
+      font-size: 11px;
+      color: var(--accent-blue);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .bilingual-paragraph:hover .para-play-indicator { opacity: 0.75; }
+    .bilingual-paragraph.audio-active .para-play-indicator { opacity: 1; }
+    
+    .para-en {
+      font-size: var(--user-font-size, 17px);
+      line-height: 1.82;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      font-weight: 420;
+      letter-spacing: -0.01em;
+    }
+    .para-cn {
+      font-size: calc(var(--user-font-size, 17px) - 1.5px);
+      line-height: 1.85;
+      color: var(--text-secondary);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Editorial Boxes */
+    .editorial-box-container {
+      margin: 48px 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .box-banner-header {
+      padding: 16px 24px;
+      color: #ffffff;
+    }
+    .box-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .box-badge-icon { font-size: 14px; }
+    .box-badge-pill {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.95;
+    }
+    .box-title-en {
+      font-size: 18.5px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .box-title-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+    }
+    .box-body-content { padding: 24px 26px; }
+    .box-clause-item {
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+    }
+    .box-clause-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .clause-en { font-size: 15.5px; line-height: 1.7; color: var(--text-main); margin-bottom: 5px; }
+    .clause-cn { font-size: 14.5px; line-height: 1.65; color: var(--text-secondary); }
+    
+    .box-theme-sage { border: 1.5px solid #86efac; }
+    .box-theme-sage .box-banner-header { background: linear-gradient(135deg, #065f46 0%, #047857 100%); }
+    .box-theme-sage .box-body-content { background: #f0fdf4; }
+    
+    .box-theme-teal { border: 1.5px solid #99f6e4; }
+    .box-theme-teal .box-banner-header { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
+    .box-theme-teal .box-body-content { background: #f0fdfa; }
+    
+    .box-theme-lavender { border: 1.5px solid #ddd6fe; }
+    .box-theme-lavender .box-banner-header { background: linear-gradient(135deg, #581c87 0%, #6b21a8 100%); }
+    .box-theme-lavender .box-body-content { background: #faf5ff; }
+    
+    .box-theme-amber { border: 1.5px solid #fde68a; }
+    .box-theme-amber .box-banner-header { background: linear-gradient(135deg, #9a3412 0%, #c2410c 100%); }
+    .box-theme-amber .box-body-content { background: #fffbeb; }
+    
+    .box-theme-terracotta { border: 1.5px solid #cbd5e1; }
+    .box-theme-terracotta .box-banner-header { background: linear-gradient(135deg, #334155 0%, #1e293b 100%); }
+    .box-theme-terracotta .box-body-content { background: #f8fafc; }
+    
+    .box-theme-case { border: 1.5px solid #fed7aa; }
+    .box-theme-case .box-banner-header { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); }
+    .box-theme-case .box-body-content { background: #fffaf0; }
+    
+    /* Key Terms Grid */
+    .key-terms-section {
+      margin: 44px 0;
+      padding: 26px;
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+    .kt-subtitle { font-size: 13px; color: #64748b; margin-bottom: 18px; }
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 14px;
+    }
+    .editorial-term-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      transition: all 0.15s;
+    }
+    .etc-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+    .etc-word { font-size: 15px; color: var(--primary-navy); font-weight: 700; }
+    .etc-ipa { font-size: 12px; color: #94a3b8; font-family: monospace; margin-left: 6px; }
+    .etc-cn-tag { font-size: 12px; font-weight: 600; color: #0369a1; background: #f0f9ff; padding: 2px 8px; border-radius: 4px; }
+    .etc-def-cn { font-size: 13.5px; line-height: 1.55; color: #475569; }
+    
+    /* Quiz Cards */
+    .editorial-quiz-card {
+      margin: 28px 0;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .eq-num { font-size: 12px; font-weight: 700; color: #2563eb; letter-spacing: 0.05em; }
+    .eq-status { font-size: 12px; font-weight: 600; color: #64748b; }
+    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
+    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .eq-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .eq-opt:hover { background: #f1f5f9; border-color: #cbd5e1; }
+    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
+    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
+    .opt-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      flex-shrink: 0;
+    }
+    .opt-text { font-size: 14px; line-height: 1.5; color: #334155; }
+    .btn-toggle-rat {
+      padding: 6px 14px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .eq-rationale-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 6px; }
+    .rat-content { color: #1e293b; }
+    
+    /* Lists */
+    .editorial-list-item {
+      margin-bottom: 12px;
+      padding-left: 14px;
+      position: relative;
+      list-style: none;
+    }
+    .editorial-list-item::before {
+      content: "•";
+      color: var(--primary-navy);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin: 28px 0; }
+    .clinical-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .clinical-table th { background: #f8fafc; padding: 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #1e293b; text-align: left; }
+    .clinical-table td { padding: 12px; border: 1px solid #e2e8f0; color: #334155; }
+    
+    /* Tri-State Mode Directives */
+    html.mode-en .para-cn,
+    html.mode-en .eq-stem-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn { display: none !important; }
+    html.mode-en .para-en { font-size: calc(var(--user-font-size, 17px) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
+    
+    html.mode-cn .para-en,
+    html.mode-cn .eq-stem-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en { display: none !important; }
+    html.mode-cn .para-cn { font-size: calc(var(--user-font-size, 17px) - 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
+    
+    /* Colophon */
+    .editorial-colophon { text-align: center; padding: 48px 24px; color: var(--text-muted); font-size: 13px; }
+    
+    @media (max-width: 900px) {
+      .top-sticky-bar { flex-wrap: wrap; gap: 8px; padding: 8px 14px; }
+      .nav-chapter-title { display: none; }
+      .reading-util-group { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html#toc" class="nav-home-btn">← 返回全书总目录</a>
+      <div class="nav-chapter-title">
+        <span class="ch-badge">CH 02</span>
+        <span>The Canadian Health Care System</span>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">
+        <span class="seg-icon">🌐</span> 中英双语
+      </button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">
+        <span class="seg-icon">🔤</span> 仅英文
+      </button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">
+        <span class="seg-icon">🇨🇳</span> 仅中文
+      </button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">📖 护眼纸色</button>
+        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 2 章 · 点选任意段落开始朗读</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 28:45</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ch-editorial-flow">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-tag">CHAPTER 02</span>
+        <span class="eyebrow-sep">·</span>
+        <span class="eyebrow-desc">SORRENTINO 5TH EDITION · 原版中英双语精研</span>
+      </div>
+      <h1 class="hero-title-en">The Canadian Health Care System</h1>
+      <h2 class="hero-title-cn">加拿大医疗卫生保健体系与全民主管法律</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">📖 Pages 20–33 · 11 道全真自测题</span>
+        <span class="meta-item">🔊 支持段落轻触点读 · 专业真人声原音导学</span>
+      </div>
+    </header>
+
+    <main class="editorial-stream">
+      <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
+                  </div>
+                </div>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<div class="chapter-h1-anchor" style="display:none;">Chapter 2: The Canadian Health Care System</div>
+<div class="chapter-h1-anchor" style="display:none;">第 2 章：加拿大医疗卫生保健体系（原版逐字逐句 14 页全文典藏版）</div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 2 Opener & Learning Objectives (Page 20)</h3>
+                  </div>
+                </div>
+                
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="0.0" data-end="41.04" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Describe medicare and how it has evolved. • Identify the federal, provincial, and territorial roles in the Canadian health care system. • Summarize the principles of medicare described in the Canada Health Act. • Differentiate among primary, secondary, and tertiary health care deliveries. • Identify how the focus of the Canadian health care system is shifting to home care. • Explain why health promotion and disease prevention are important functions of the Canadian health care system. • Recognize the emerging importance of home care and the support worker's role in providing some of these services. <br><br></p>
+                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 阐述加拿大公费全民医疗保险体系（Medicare）的本质特征及其历史演进脉络。 • 明确界定加拿大联邦政府、各省及地区政府在国家医疗卫生体系中各自承担的法定职能与分工。 • 提炼并熟练掌握《加拿大健康法案》（Canada Health Act）所确立的全民医疗五大核心基石原则。 • 准确鉴别与区分初级、二级与三级医疗卫生照护服务（Primary, Secondary, and Tertiary Care）的执业场景与临床内涵。 • 深入理解并辨识加拿大医疗卫生服务重心从传统医院机构向社区居家照护（Home Care）深刻战略转移的时代背景与动因。 • 深入阐释“健康促进”（Health Promotion）与“疾病预防”（Disease Prevention）为何成为现代加拿大医疗卫生体系不可或缺的核心功能。 • 深刻认识居家照护日益凸显的战略地位，以及支持工作者在向案主提供这些基础支持服务中所发挥的关键前沿角色。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【核心专业术语表】Chapter 2 Key Terms (Page 21)</h3>
+                  </div>
+                </div>
+                
+            <div class="key-terms-section">
+              <div class="kt-section-header">
+                <h3 class="kt-title">KEY TERMS · 第 2 章核心专业术语速查表</h3>
+                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+              </div>
+              <div class="terms-editorial-grid">
+            
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>accessibility</strong></strong>
+                      <span class="etc-ipa">/əkˌsɛsəˈbɪləti/</span>
+                    </div>
+                    <span class="etc-cn-tag">可及性 / 获得合理照护原则</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">《加拿大健康法案》五大基石原则之一。明确规定所有居民必须在不受任何额外财务阻碍或歧视的前提下，公平、合理地获得受保医疗服务。 (p. 22)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>benefits</strong></strong>
+                      <span class="etc-ipa">/ˈbɛnɪfɪts/</span>
+                    </div>
+                    <span class="etc-cn-tag">补充医疗保险福利</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">通过所缴纳的保险保费或雇主保险所提供的特定医疗补助服务。例如由牙医执行且消费者无需自付额外费用的牙科医疗项目。 (p. 30)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>Canada Health Act (1984)</strong></strong>
+                      <span class="etc-ipa">/ˈkænədə hɛlθ ækt/</span>
+                    </div>
+                    <span class="etc-cn-tag">《加拿大健康法案》 (1984)</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">奠定加拿大全民公费医疗的联邦核心根本大法。界定了受保医疗服务的法定范围，并确立了各省/地区为获取联邦全额医疗现金拨款所必须严格遵守的五大准则（全面性、普遍性、便携性、可及性与公立管理）。 (p. 21)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>comprehensiveness</strong></strong>
+                      <span class="etc-ipa">/ˌkɒmprɪˈhɛnsɪvnəs/</span>
+                    </div>
+                    <span class="etc-cn-tag">全面性原则</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">《加拿大健康法案》五大基石原则之一。明确规定该保险计划必须全面覆盖医院内所有医学必需服务，以及医师与口腔颌面外科医生所提供的必需治疗。 (p. 22)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>disease prevention</strong></strong>
+                      <span class="etc-ipa">/dɪˈziːz prɪˈvɛnʃən/</span>
+                    </div>
+                    <span class="etc-cn-tag">疾病预防</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">旨在阻止疾病、身体机能损伤或意外创伤发生的一系列前置干预策略与公共卫生行动。 (p. 31)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>health promotion</strong></strong>
+                      <span class="etc-ipa">/hɛlθ prəˈmoʊʃən/</span>
+                    </div>
+                    <span class="etc-cn-tag">健康促进</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">通过为个人、群体和整个社区提供关键卫生科普知识与行动工具，赋权大众做出明智健康抉择，从而全面增进与维护人群健康福祉的战略举措。 (p. 31)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>home care</strong></strong>
+                      <span class="etc-ipa">/hoʊm kɛər/</span>
+                    </div>
+                    <span class="etc-cn-tag">居家照护 / 上门支持服务</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">在服务对象个人居住住所（包括私人家庭、辅助生活居所或持牌照护住所）内所提供的医疗卫生与生活支持服务。 (p. 27)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>medicare</strong></strong>
+                      <span class="etc-ipa">/ˈmɛdɪˌkɛər/</span>
+                    </div>
+                    <span class="etc-cn-tag">加拿大全民公费医疗系统</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">加拿大的全国性医疗卫生保险体系，通过公共税收全额资助，为所有永久居民和公民提供免自费的医学必需医疗服务。 (p. 21)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>portability</strong></strong>
+                      <span class="etc-ipa">/ˌpɔːrtəˈbɪləti/</span>
+                    </div>
+                    <span class="etc-cn-tag">可携带性 / 跨省便携原则</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">《加拿大健康法案》五大基石原则之一。确保居民在跨省求学、搬迁、换工作、境内旅游或在海外短期停留期间，仍能持续享受原居住省份所提供的医疗保障。 (p. 21)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>primary health care delivery</strong></strong>
+                      <span class="etc-ipa">/ˈpraɪmɛri hɛlθ kɛər/</span>
+                    </div>
+                    <span class="etc-cn-tag">初级卫生保健服务</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">居民与医疗保健体系发生的第一道接触点（如家庭医生门诊、执业执照护士门诊、社区诊所或远程健康热线），聚焦于健康促进与早期筛查。 (p. 25)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>public administration</strong></strong>
+                      <span class="etc-ipa">/ˈpʌblɪk ədˌmɪnɪˈstreɪʃən/</span>
+                    </div>
+                    <span class="etc-cn-tag">公立非营利性管理原则</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">《加拿大健康法案》五大基石原则之一。明确规定各省的公费医疗保险计划必须由非营利性的公共法定机构全权行政主管，并向公众及立法机关完全公开负责。 (p. 22)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>quaternary care</strong></strong>
+                      <span class="etc-ipa">/ˈkwɑːtərˌnɛri kɛər/</span>
+                    </div>
+                    <span class="etc-cn-tag">四级前沿超特精专医疗</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">三级医疗（Tertiary Care）的极度专精延伸层级，包含在顶级科研教学医院开展的高难度实验性药物疗法或开创性尖端复杂外科手术。 (p. 26)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>secondary health care delivery</strong></strong>
+                      <span class="etc-ipa">/ˈsɛkənˌdɛri hɛlθ kɛər/</span>
+                    </div>
+                    <span class="etc-cn-tag">二级专业专科医疗服务</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">医疗照护的中级层级，涵盖专业评估、确诊与专科治疗，通常在具备精密医疗仪器设备和专业检验病理实验室的综合医院由专科医师执行。 (p. 26)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>telehealth</strong></strong>
+                      <span class="etc-ipa">/ˈtɛliˌhɛlθ/</span>
+                    </div>
+                    <span class="etc-cn-tag">远程医疗健康呼叫中心</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">设立专用医疗健康电话呼叫中心网络（如安省 Telehealth Ontario / 811 热线），由注册护士 24 小时向致电公众提供专业的健康分诊咨询与就医指引。 (p. 26)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>tertiary health care delivery</strong></strong>
+                      <span class="etc-ipa">/ˈtɜːrʃiˌɛri hɛlθ kɛər/</span>
+                    </div>
+                    <span class="etc-cn-tag">三级高阶专精重症医疗</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">在大型学术研究型教学医院所提供的高难度、高度技术密集型专精医疗服务（如重症监护、复杂心胸外科及神经外科）。 (p. 26)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>traditional healing</strong></strong>
+                      <span class="etc-ipa">/trəˈdɪʃənl ˈhiːlɪŋ/</span>
+                    </div>
+                    <span class="etc-cn-tag">原住民传统医学与身心疗愈</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">融入加拿大原住民传统世界观的身心疗愈知识与实践体系，运用神圣仪式、动植物与矿物草药、能量疗法或身体推拿手法实现全人平衡。 (p. 24)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>universality</strong></strong>
+                      <span class="etc-ipa">/ˌjuːnɪvɜːrˈsæləti/</span>
+                    </div>
+                    <span class="etc-cn-tag">全民普遍受保原则</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">《加拿大健康法案》五大基石原则之一。规定各省全体永久居民在完全相同的条款与条件下，人人享有均等的受保基础医疗卫生服务权利，严禁阶层差异。 (p. 22)</div>
+                  </div>
+                </div>
+                </div></div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第一节：加拿大现行医疗体制总览与 Medicare 核心理念 (Pages 21 - 22)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">崇高信念与全民公费医疗系统概述 (Belief in Universal Access & Medicare)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="41.04" data-end="74.57" data-title="Belief in Universal Access & Medicare" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Most Canadians believe that quality health care should be available to all Canadian citizens, regardless of their ability to pay for services. Canada's national health insurance system, known as medicare, which is envied throughout the world, was developed to achieve this goal. Medicare uses provincial or territorial taxes and federal taxes to pay for all medically necessary health services for all permanent residents. As members of Canada's changing health care system, support workers have an increasingly important role to play. <br><br></p>
+                      <p class="para-cn">绝大多数加拿大人坚信：每一位公民无论个人贫富、无论是否具备即时支付能力，都应当享有获得高品质医疗卫生服务的神圣权利。享誉全球并令世人称羡的加拿大国家医疗保险体系——通称“全民医疗体系”（Medicare）——正是为了践行这一崇高愿景而建立。Medicare 汇集各省/地区税收与联邦政府税收，共同出资全额支付所有永久居民在医学上所必需的一切医疗服务费用。作为身处这一不断变革与重塑的医疗卫生系统中的专业从业者，支持工作者（PSW / HCA）所肩负的使命与角色正变得前所未有的关键与崇高。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">联邦与省/地区交织的医疗管理架构 (An Interlocking Public System)</h4>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 2.1 on page 22)—that are provided in the federal government's Canada Health Act.</h4>
+                    <div class="box-title-cn">BOX 2.1）。</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en"><strong>CANADA'S CURRENT HEALTH CARE SYSTEM</strong> <br><br>Canada's publicly funded health care system is best described as an interlocking set of health insurance plans, with the federal government and the 10 provincial and 3 territorial governments sharing responsibilities within Canada's health care system. The provincial and territorial governments fund health care services with assistance from the federal government. To receive their full share of federal funding for health care, provincial and territorial medicare plans must meet five criteria—comprehensiveness, universality, portability, accessibility, and public administration (see BOX 2.1 on page 22)—that are provided in the federal government's Canada Health Act. <br><br>Medicare provides access to universal, comprehensive coverage for hospital and physician services that are medically necessary. These services are administered and delivered by the provincial and territorial governments to Canadian residents with no payment necessary upon delivery of the service. However, each province or territory is responsible for developing its own health care policies, so some policy inconsistencies may exist from one province to another. <br><br></div>
+                      <div class="clause-cn"><strong>加拿大现行医疗卫生保健体系架构</strong> <br><br>加拿大由公共税收资助的医疗卫生保健体系，最贴切的描述是一个“环环相扣、相互咬合的医疗保险网络”：由加拿大联邦政府与 10 个省政府、3 个地区政府共同分工协作、分级承担管理权责。各省及地区政府在联邦政府财政专项转移支付（Canada Health Transfer, CHT）的鼎力协助下，直接规划、资助并组织实施境内的医疗照护服务。为了有资格全额申领联邦每年拨付的巨额医疗专款，各省与地区的医保计划必须无条件恪守联邦《加拿大健康法案》中所明文规定的五大核心准则：全面性、普遍性、便携性、可及性与公立管理（详见第 22 页 BOX 2.1）。 <br><br>Medicare 为全加居民提供了全面覆盖所有“医学必需”的医院住院与执业医师诊疗服务的普惠保障。这些服务由各省和地区政府直接管理运营并交付到千家万户手中，受助居民在接受诊断治疗的当下<strong>无需掏出钱包支付任何医疗费用（即现场零自付费用）</strong>。然而，由于每个省份与地区拥有制定本辖区具体卫生行政政策的宪法自主权，因此在不同省份之间，具体的资助细节和边缘服务覆盖范围存在一定程度的地区差异与政策不一致。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第二节：《加拿大健康法案》五大基石原则 (Page 22)</h3>
+                  </div>
+                </div>
+                
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-icon">⚖️</span>
+                        <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                      </div>
+                      <h4 class="box-title-en">BOX 2.1 《加拿大健康法案》规定的全民医疗五大准则 (The Five Principles of Medicare)</h4>
+                    </div>
+                  </aside>
+                </div>
+                
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 2.1: The Principles of Medicare, as Listed in the Canada Health Act (1984)</h4>
+                    <div class="box-title-cn">BOX 2.1 专栏文献：《加拿大健康法案》（1984年）确立的全民医疗五大根本基石原则</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en"><strong>BOX 2.1: The Principles of Medicare, as Listed in the Canada Health Act (1984)</strong> <br><br>1. <strong>Comprehensiveness.</strong> The insurance plan must pay for all medically necessary services. In a hospital, all necessary drugs, supplies, and diagnostic tests are covered. A range of necessary services provided outside a hospital are also covered. 2. <strong>Universality.</strong> Every permanent resident of a province or territory is entitled to receive the insured health care services provided by the plan, on similar terms and conditions. 3. <strong>Portability.</strong> People can keep their health care coverage even if they are unemployed, change jobs, relocate between provinces and territories, or travel within Canada or abroad. However, if they are moving, it is their responsibility to inform their province or territory and to register with their new province or territory. During the transition, they will be covered by their previous jurisdiction's health coverage for up to 3 months (see Supporting Mr. Wloch: An Example of Canada's Health Insurance Portability box on page 31). 4. <strong>Accessibility.</strong> People can receive medically necessary services regardless of their income, age, health status, gender, or geographical location. Additional charges (privatization) for publicly insured services are not permitted. 5. <strong>Public administration.</strong> The insurance plan must be run by a public organization on a nonprofit basis. The public organization must be accountable to the citizens and the government of the province or territory. <br><br></div>
+                      <div class="clause-cn"><strong>BOX 2.1 专栏文献：《加拿大健康法案》（1984年）确立的全民医疗五大根本基石原则</strong> <br><br>1. <strong>全面性原则（Comprehensiveness）</strong>：各省医保计划必须全额资助并支付所有医学上必需的医疗服务。在医院住院期间，所有必需的处方药品、医用消耗器材以及生化影像诊断检查全部受保；医院之外由执业医生提供的一系列必需医疗诊治亦在受保之列。 2. <strong>全民普遍受保原则（Universality）</strong>：所在省份或地区的每一位合法永久居民，均在完全相同且公平的法定条款与条件下，享有获得该医保计划所覆盖的所有受保医疗服务的合法权利。 3. <strong>跨省便携与延续性原则（Portability）</strong>：居民在失业、更换工作单位、跨省或跨地区永久搬迁、境内跨省旅行或短期赴海外旅行期间，其享有的公费医疗保障资格绝不因此中断或失效。但是，若发生跨省永久搬迁，居民有法定义务主动通知原籍省份卫生厅，并及时向新迁入省份的卫生管理部门登记建档；在过渡期内，原居住省份将继续为其提供长达 3 个月的过渡医疗保障（参见第 31 页弗洛赫先生跨省迁徙案例）。 4. <strong>平等合理可及性原则（Accessibility）</strong>：全体居民在获得医学必需的诊疗服务时，绝不受其个人经济收入、年龄阶段、既往健康状况、生理性别或所处偏远地理位置的限制或歧视。<strong>绝对严禁</strong>针对公费受保项目向病患额外收取任何“加急费”、“挂号自费”或变相私有化费用！ 5. <strong>公立非营利性统一管理原则（Public Administration）</strong>：医保计划必须由非营利性的公共法定管理机构全权统一运营管理。该公立机构必须保持高度财政与运营透明，直接向全省广大纳税公民以及省立法议会全面负责。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第三节：加拿大医疗体制百年演进史与“最伟大的加拿大人” (Pages 22 - 23)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">早期自费苦难、大萧条与互助萌芽 (Early Challenges & The Great Depression)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="237.22" data-end="306.74" data-title="Early Challenges & The Great Depression" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>The Evolution of Canada's Health Care System</strong> <br><br>In the first part of the twentieth century, individuals in Canada were expected to pay the entire amount of their doctors' bills and hospital fees. Often, there were no "set fees" for services; that is, for the same treatment, a physician could charge one patient a certain amount and another patient an entirely different fee, depending on what the physician thought the patient could afford to pay. Those who could not afford to pay sometimes had to access charity through community agencies such as the Victorian Order of Nurses, the Red Cross, and local churches (FIGURE 2.1), and some people just went without health care altogether. <br><br>The Great Depression of the 1930s had a dramatic effect on Canada's health care system. Families struggled to feed, clothe, and house their members and could not possibly pay their medical bills. A serious illness or stay in a hospital caused financial disaster for many. The cost of care prevented others from even seeking medical treatment, so those who had illnesses and disabilities would instead depend on family members and neighbours to provide care. These hardships inspired Canadians to create a prepaid medical and hospitalization insurance plan. <br><br></p>
+                      <p class="para-cn"><strong>加拿大全民公费医疗体制的百年演进史</strong> <br><br>在 20 世纪前叶，加拿大社会的医疗完全遵循纯市场自费模式，个人必须自行承担全部的诊所看诊账单与住院费用。彼时医疗收费往往没有统一的标准规约：对于完全相同的医疗操作，医生往往凭借自己对病患家庭经济状况的直观判断，向富有者索取高昂费用，而向贫困者收取较少费用。那些完全无力负担诊费的极度贫困底层，只能向加拿大维多利亚护士会（VON）、红十字会以及地方教会等民间慈善机构乞求施舍救助（参见图 2.1），甚至有大量贫民在患病后完全得不到任何医疗救治而悲惨离世。 <br><br>20 世纪 30 年代的“经济大萧条”（The Great Depression）给加拿大医疗卫生体系带来了极其沉重而深刻的剧烈震荡。成千上万的家庭在温饱与住所边缘苦苦挣扎，根本无力支付哪怕一张微薄的医药账单。突如其来的一场严重疾病或一次紧急住院，往往直接导致整个家庭倾家荡产、沦为赤贫。沉重的高昂费用逼得许多患病长者与残疾人士不敢涉足诊所一步，只能完全依赖家属与邻里的简陋看护勉强度日。正是在这场深重的人道灾难与生活苦难中，加拿大人民深刻觉醒，萌生了共同出资构建“预付制全民住院与医疗保险制度”的坚定历史信念。 <br><br></p>
+                    </article>
+                    
+                <figure class="editorial-figure">
+                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
+                  <img src="images/chapter_02/fig_2_1_von_historical.png" alt="Figure 2.1 Historical Victorian Order of Nurses" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                  <figcaption class="ef-caption-en"><strong>图 2.1 历史教学图示：20世纪初期民间慈善机构上门照护</strong><br>*FIGURE 2.1: In the first part of the twentieth century, charitable services were provided by community agencies such as the Victorian Order of Nurses for Canada. (Courtesy VON Canada [Victorian Order of Nurses].)*<br>【教学意图】：直观呈现 20 世纪公费医疗诞生前，加拿大脆弱贫困病患完全依赖 VON 等非营利慈善志愿护士登门救济的真实历史风貌。</figcaption>
+                </figure>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">萨斯喀彻温省的破冰革新与汤米·道格拉斯 (Tommy Douglas & The Birth of Medicare)</h4>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 2.2). By 1972, all provinces and territories had extended their insurance plans to also cover medical services provided outside hospitals. Again, provincial and territorial governments and the federal government shared the health care expenses roughly equally. Modern medicare began that year, giving all permanent residents free access to the same quality of hospital and medical care, regardless of their personal financial status.</h4>
+                    <div class="box-title-cn">BOX 2.2）。截至 1972 年，加拿大所有省份和地区均已顺应时代潮流，全面将公立医保覆盖范围从医院内部拓展至医院外部的门诊就医。在此阶段，各省/地区政府与联邦政府大致均摊了全部医疗公共开支。自此，现代意义上的加拿大全民公费医疗体制宣告全面确立——不论个人贫富贵贱，所有永久居民均平等享有免费获得同等优质医院与诊疗救护的神圣权利。</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en">In 1947, under Premier Tommy Douglas, Saskatchewan became the first province to introduce a public insurance plan that covered the costs of hospital services (BOX 2.2). By 1972, all provinces and territories had extended their insurance plans to also cover medical services provided outside hospitals. Again, provincial and territorial governments and the federal government shared the health care expenses roughly equally. Modern medicare began that year, giving all permanent residents free access to the same quality of hospital and medical care, regardless of their personal financial status. <br><br><strong>BOX 2.2: Tommy Douglas, the "Greatest Canadian"</strong> In the spring of 2004, the Canadian Broadcasting Corporation (CBC) invited Canadians to submit their nominations for the "Greatest Canadian" of all time. Canadians responded with thousands of worthy suggestions. After 6 weeks of voting, Canadians chose Tommy Douglas. You might be wondering who he was and why Canadians are grateful for his contributions to this country. <br><br>Thomas Clement Douglas (1904–1986) reorganized Saskatchewan's post-war employment, social, and public health policies. Douglas's reforms became his legacy, as they formed the basis for Canada's social and health care policies, which continue to exist today. For example, as Canada's health minister (1944–1948), he took the first steps toward what we now call medicare, by: • Establishing a minimum wage and ensuring a maximum 44-hour workweek and paid 2-week vacation leave, rights some workers take for granted today • Overseeing increases in old-age pensions and mother's allowance • Legislating that medical and hospital benefits be given to welfare recipients at no out-of-pocket cost to them at the time of care <br><br>These are just a few of the many contributions that Tommy Douglas made. Without him, Canada would be a very different country today. We can all be grateful for the role he played in making Canada the country that it is. <br><br></div>
+                      <div class="clause-cn">1947 年，在省长汤米·道格拉斯（Tommy Douglas）的无畏魄力推动下，萨斯喀彻温省（Saskatchewan）敢为人先，成为全加拿大乃至北美大陆第一个成功推出公费住院医疗保险计划的省份（详见 BOX 2.2）。截至 1972 年，加拿大所有省份和地区均已顺应时代潮流，全面将公立医保覆盖范围从医院内部拓展至医院外部的门诊就医。在此阶段，各省/地区政府与联邦政府大致均摊了全部医疗公共开支。自此，现代意义上的加拿大全民公费医疗体制宣告全面确立——不论个人贫富贵贱，所有永久居民均平等享有免费获得同等优质医院与诊疗救护的神圣权利。 <br><br><strong>BOX 2.2 历史风云人物专栏：汤米·道格拉斯 —— “最伟大的加拿大人”</strong> 在 2004 年春季，加拿大广播公司（CBC）面向全国公众发起轰动一时的海选征集，推选加拿大建国以来“最伟大的加拿大人”（The Greatest Canadian）。全加民众热烈响应，提交了数万名卓越候选人。历经长达 6 周的全国性全民公投，加拿大人民最终将这一至高无上的历史荣耀桂冠授予了汤米·道格拉斯。学员可能会好奇：这位伟人究竟是谁？为何数代加拿大人至今仍对他怀揣如此无尽的感激？ <br><br>托马斯·克莱门特·道格拉斯（Thomas Clement Douglas，1904–1986）在二战后主政萨省期间，大刀阔斧重构了该省的就业、社会福利与公共卫生政策。他的开创性立法改革成为了他留给国家最宝贵的政治遗产，直接奠定了现代加拿大社会福利与全民医疗制度的基石： • 创立最低法定工资保障制度，确立法宝级的每周最长 44 小时工作制及两周带薪年假权利——这些在当今被视作理所当然的劳工权益，在当年皆由他披荆斩棘率先确立； • 统筹推动提高长者养老金（Old-Age Pensions）及单身母亲扶助津贴； • 颁布历史性法令，强制规定向社会救助领取者提供完全免费的医疗和住院保障，在就医时严禁其自掏腰包。 <br><br>这仅仅是汤米·道格拉斯毕生卓越功勋中的冰山一角。倘若没有他当年的先驱创举，今日的加拿大将呈现出截然不同的冷酷图景。每一位生活在这片土地上的人，都由衷感恩他为塑造一个充满慈爱、公平与温情的加拿大所做出的不朽历史贡献。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第四节：联邦与省/地区政府的法定分工与原住民医疗行动呼吁 (Pages 23 - 25)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">联邦政府的五大核心法定职责 (The Federal Role in Health Care)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="427.44" data-end="484.73" data-title="The Federal Role in Health Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>The Federal Role in Health Care</strong> <br><br>The federal government is responsible for the following: • Administering the Canada Health Act and providing provincial funding • Providing direct delivery of health care services to specific groups, such as First Nations people living on reserves; Inuit peoples; serving members of the Canadian Forces and the Royal Canadian Mounted Police (RCMP); eligible veterans; and inmates of federal penitentiaries • Developing and carrying out government policy and programs that promote health and prevent disease; for example, the federal government approves drugs, assesses health risks posed by environmental hazards, and provides funds to support public health programs such as prenatal health education • Transferring tax money to the provinces and territories to share the cost of medically necessary health care services • Prohibiting service providers (such as physicians) from billing clients extra charges and user fees and ensuring that all the provinces and territories provide the same quality and type of care. <br><br></p>
+                      <p class="para-cn"><strong>联邦政府在医疗卫生中的五大法定职责</strong> <br><br>根据加拿大宪法与《加拿大健康法案》，联邦政府直接履行以下五项国家层面的重大核心权责： 1. <strong>监管法案执行与划拨财政资金</strong>：全权行政主管《加拿大健康法案》的法定遵循情况，依法向各省与地区划拨巨额医疗专项现金转移支付。 2. <strong>向特定法定群体直接提供医疗照护</strong>：直接承担特定特殊人群的直接医疗卫生服务交付，包括：居住在保留地内的第一民族（First Nations）原住民；因纽特（Inuit）族群；加拿大武装部队现役官兵；加拿大皇家骑警（RCMP）现役警员；符合法定优抚条件的退役退伍军人；以及联邦监狱在押服刑犯人。 3. <strong>制定国家卫生政策与疾病预防国家战略</strong>：负责国家层面的处方药品与疫苗上市审批、评估环境有害因素造成的健康风险，并出资资助国家级公共卫生计划（如产前优生优育科普教育）。 4. <strong>税收转移支付共担医疗成本</strong>：通过联邦医疗转移支付（CHT），将中央税收按人口比例返还并拨付给各省及地区，共担必需医疗开销。 5. <strong>铁腕杜绝额外自费乱收费并维护全国统一品质</strong>：严格立法禁止任何医疗服务提供者（如执业医师或诊所）向受助案主巧立名目收取额外费用或自费挂号费，确保各省各地区维持全国一致的受保标准与照护品质。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-icon">📖</span>
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">BOX 2.3 加拿大卫生部在原住民医疗中的历史角色演变 (Health Canada's Role in Indigenous Health Care)</h4>
+                    </div>
+                  </aside>
+                </div>
+                
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">📖</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 2.3: Health Canada's Role in Indigenous Health Care</h4>
+                    <div class="box-title-cn">BOX 2.3 历史文献专栏：加拿大卫生部在原住民健康医疗中的演进编年史</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en"><strong>BOX 2.3: Health Canada's Role in Indigenous Health Care</strong> <br><br>- <strong>1945:</strong> Health services for this population were transferred from the Department of Indian Affairs to Health Canada. - <strong>1962:</strong> Through the new Medical Services Branch, Health Canada started to provide direct health services to First Nations people on reserves and to the Inuit in the North. - <strong>1974:</strong> A governmental policy acknowledged that although no treaty required the government to provide health care to Indigenous people, Health Canada would ensure the availability of services. - <strong>1979:</strong> A new Indian Health Policy stated that uninsured benefits would rely on "professional medical and dental judgement" and recognized "the need for community development, a strong relationship between First Nations people, the federal government, and the Canadian health system." - <strong>Mid-1980s:</strong> Work began so that First Nations, Métis, and Inuit communities would have more control of their own health services. - <strong>1998:</strong> The Canadian government published <em>Gathering Strength: Canada's Aboriginal Action Plan</em>, which emphasized Health Canada's commitment to diabetes and tuberculosis initiatives, the development of the Aboriginal Healing Foundation, and a healing strategy related to Indian residential schools, in partnership with the Department of Indian Affairs and Northern Development. - <strong>2000:</strong> The Medical Services Branch was renamed the First Nations and Inuit Health Branch (FNIHB). <br><br></div>
+                      <div class="clause-cn"><strong>BOX 2.3 历史文献专栏：加拿大卫生部在原住民健康医疗中的演进编年史</strong> <br><br>- <strong>1945 年</strong>：针对原住民群体的医疗卫生事务正式由原印第安事务部移交至加拿大卫生部统筹主管。 - <strong>1962 年</strong>：通过新成立的医疗服务分局（Medical Services Branch），卫生部开始直接为保留地内的第一民族原住民及北部极地因纽特人提供现场面对面的直接医疗卫生服务。 - <strong>1974 年</strong>：联邦政府出台官方政策正式确认：即便早期历史条约未曾明确强制规定政府必须提供医疗保障，加拿大卫生部亦将全力确保原住民享有充分的医疗可及性。 - <strong>1979 年</strong>：颁布全新《印第安人健康政策》，明确受保范围外的补助福利将依托“专业的医学与牙科临床判断”，并深刻认识到“推进社区发展、在第一民族、联邦政府与加拿大医疗卫生体系之间建立牢固纽带的紧迫必要性”。 - <strong>1980 年代中叶</strong>：全面启动赋权进程，使第一民族、梅蒂斯人（Métis）与因纽特社区逐步拥有自主统筹与管理本族群卫生医疗事务的自决控制权。 - <strong>1998 年</strong>：加拿大政府正式发布《凝聚力量：加拿大原住民行动计划》（<em>Gathering Strength</em>），重点落实卫生部对糖尿病与结核病攻坚防范的战略承诺，成立原住民疗愈基金会，并联合相关部门开展针对“原住民寄宿学校历史创伤”的专项身心疗愈救助。 - <strong>2000 年</strong>：正式重组并将医疗服务分局更名为“第一民族与因纽特人健康分局”（FNIHB）。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-icon">⚖️</span>
+                        <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                      </div>
+                      <h4 class="box-title-en">BOX 2.4 加拿大真相与和解委员会关于健康的七大呼吁 (TRC Seven Health Calls to Action)</h4>
+                    </div>
+                  </aside>
+                </div>
+                
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 2.4: Truth and Reconciliation Commission of Canada's Seven Health Calls to Action</h4>
+                    <div class="box-title-cn">BOX 2.4 重大人道文献：加拿大真相与和解委员会（TRC）关于医疗卫生的七项历史性行动呼吁</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en"><strong>BOX 2.4: Truth and Reconciliation Commission of Canada's Seven Health Calls to Action</strong> <br><br>The Truth and Reconciliation Commission of Canada (2015) identified seven Health Calls to Action (Calls 18 to 24) necessary to redress the legacy of residential schools: 18. We call upon the federal, provincial, territorial, and Aboriginal governments to acknowledge that the current state of Aboriginal health in Canada is a direct result of previous Canadian government policies, including residential schools, and to recognize and implement the health-care rights of Aboriginal people as identified in international law, constitutional law, and under the Treaties. 19. We call upon the federal government, in consultation with Aboriginal peoples, to establish measurable goals to identify and close the gaps in health outcomes between Aboriginal and non-Aboriginal communities, and to publish annual progress reports and assess long-term trends... 20. In order to address the jurisdictional disputes concerning Aboriginal people who do not reside on reserves, we call upon the federal government to recognize, respect, and address the distinct health needs of the Métis, Inuit, and off-reserve Aboriginal peoples. 21. We call upon the federal government to provide sustainable funding for existing and new Aboriginal healing centres to address the physical, mental, emotional, and spiritual harms caused by residential schools, and to ensure that the funding of healing centres in Nunavut and the Northwest Territories is a priority. 22. We call upon those who can effect change within the Canadian health-care system to recognize the value of Aboriginal healing practices and use them in the treatment of Aboriginal patients in collaboration with Aboriginal healers and Elders where requested by Aboriginal patients. 23. We call upon all levels of government to: (i) Increase the number of Aboriginal professionals working in the health-care field; (ii) Ensure the retention of Aboriginal health-care providers in Aboriginal communities; (iii) Provide cultural competency training for all healthcare professionals. 24. We call upon medical and nursing schools in Canada to require all students to take a course dealing with Aboriginal health issues, including the history and legacy of residential schools, the United Nations Declaration on the Rights of Indigenous Peoples, Treaties and Aboriginal rights, and Indigenous teachings and practices. <br><br></div>
+                      <div class="clause-cn"><strong>BOX 2.4 重大人道文献：加拿大真相与和解委员会（TRC）关于医疗卫生的七项历史性行动呼吁</strong> <br><br>加拿大真相与和解委员会（TRC，2015年）明确提出了消除原住民寄宿学校深重创伤所必须彻底践行的七大卫生健康行动呼吁（第 18 条至第 24 条）： - <strong>第 18 条</strong>：呼吁联邦、省、地区及原住民政府共同承认：加拿大原住民当前的健康劣势与困境是过去政府错误政策（包括强迫寄宿学校）的直接恶果；并切实承认并全面落实国际法、宪法及历史条约所确立的原住民医疗健康权利。 - <strong>第 19 条</strong>：呼吁联邦政府与原住民深入协商，设立明确可衡量的考核指标，彻底消除原住民与非原住民社区之间的健康差距（涵盖婴儿死亡率、产妇健康、自杀干预、心理健康、成瘾康复及慢性病防治等），并每年向社会公开进展报告。 - <strong>第 20 条</strong>：呼吁联邦政府妥善解决针对非保留地原住民的管辖权法律争议，切实尊重并满足梅蒂斯人（Métis）、因纽特人及离乡非保留地原住民的独特健康需求。 - <strong>第 21 条</strong>：呼吁联邦政府为既有及新建的原住民疗愈中心提供持续长效的财政资助，重点修复寄宿学校所遗留的身体、心理、情绪与灵性四重创伤，并优先保障努纳武特（Nunavut）与西北地区疗愈中心的充足资金。 - <strong>第 22 条</strong>：呼吁加拿大医疗系统决策者充分承认原住民传统医学疗愈体系的崇高价值；在原住民病患主动提出要求时，医护人员必须尊重其意愿，主动邀请原住民传统草药师与长者（Elders）协同开展联合诊治。 - <strong>第 23 条</strong>：呼吁各级政府：(i) 大力扩招并培养原住民医护专业人才；(ii) 确保原住民医护工作者长期扎根并服务于原住民本地社区；(iii) 为全体在职医护人员强制开展文化胜任力（Cultural Competency）与反种族歧视专业培训。 - <strong>第 24 条</strong>：呼吁全加所有医学院与护士院校，强制要求全体在校生必修原住民健康专题课程，系统研习寄宿学校历史创伤、联合国《原住民权利宣言》以及原住民传统医学智慧。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                
+                <figure class="editorial-figure">
+                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
+                  <img src="images/chapter_02/fig_2_2_first_nations_wellness.png" alt="Figure 2.2 First Nations Perspective on Wellness" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                  <figcaption class="ef-caption-en"><strong>图 2.2 教学图示：第一民族关于全人健康与福祉的世界观哲学</strong><br>*FIGURE 2.2: A First Nations perspective on health and wellness. (Source: First Nations Health Authority [FNHA]. [2019].)*<br>【教学意图】：展示原住民神圣的圆形四象限全人健康模型，强调生理（Physical）、智性心理（Mental）、情绪心理（Emotional）与灵性信仰（Spiritual）在家庭与社区环抱中的高度和谐共生。</figcaption>
+                </figure>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第五节：医疗服务交付的三大层级与向居家照护的战略重心转移 (Pages 25 - 28)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">初级、二级、三级与四级医疗服务全貌 (Primary, Secondary, Tertiary & Quaternary Care)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="704.23" data-end="839.57" data-title="Primary, Secondary, Tertiary & Quaternary Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>Primary, Secondary, and Tertiary Health Care Delivery</strong> <br><br>In the past, most health care funding went to hospitals and equipment, and the focus of health care was to make people better after they became ill. The Canadian government has recognized that secondary or tertiary health care delivery, while still important, can be shortened or prevented altogether with adequate preventive measures taken in the primary health care delivery stage. Every province and territory provides primary, secondary, and tertiary health care (FIGURE 2.3). <br><br>• <strong>Primary health care delivery</strong> is the first point of contact that most people have with the health care system (e.g., through a doctor, a nurse, or another health care provider, or perhaps through phone-based or computer-based services). Primary health care delivery usually takes place in the community, but it can also take place within a hospital. Primary health care delivery offers a wide range of services, focusing mostly on health promotion, early diagnosis of disease or disability, and disease prevention. Coordinated primary health care teams include family doctors, nurses, nurse practitioners, and other health care providers. <br><br>• <strong>Secondary health care delivery</strong> includes assessment, diagnosis, treatment, and preventive services that are associated with more complex medical issues. This type of care is generally provided by specialist physicians and other specialized health care providers. An example of secondary health care delivery would be a referral from a family doctor or nurse practitioner to a medical specialist for a specific medical issue that may require diagnosis and treatment. It can take place in the community (such as the specialist doctor's office) or in a hospital. <br><br>• <strong>Tertiary health care delivery</strong> is a specialized, highly technical level of health care that takes place in large research and teaching hospitals. Tertiary health care delivery usually takes place within specialized care units such as a critical care unit and requires advanced diagnostic and treatment support services as well as highly specialized personnel. It is the most expensive level of health care delivery. <br><br>• A new specialized section of tertiary health care delivery is called <strong>quaternary care</strong>, which includes experimental medicines or surgical procedures. Because it is so highly specialized, not every health care centre will offer quaternary care. <br><br></p>
+                      <p class="para-cn"><strong>初级、二级、三级与四级医疗服务交付全景</strong> <br><br>在历史上，加拿大绝大部分医疗财政资金曾全盘涌向大型医院和重型设备，传统医疗理念的重心局限于病人在患病后前往医院求医。然而，现代加拿大政府深刻意识到：二级专科医疗与三级重症医疗固然至关重要，但若能在“初级卫生保健”阶段落实充分的前置预防，绝大多数急难重症完全可以被预防、推迟甚至彻底避免！在加拿大每个省份与地区，均完整提供以下梯次医疗服务（参见图 2.3）： <br><br>• <strong>初级卫生保健（Primary Care）</strong>：绝大多数公民与医疗体系发生的第一道接触点（例如家庭医生门诊、诊所执业护士、社区卫生服务中心或致电 Telehealth 远程健康热线）。初级照护主要立足于社区，亦可在社区医院门诊开展，其核心聚焦于<strong>健康科普宣教、疾病或残障的极早期筛查确诊、以及前置预防干预</strong>。紧密协作的初级团队由家庭医生、注册护士、执业高级护士（NP）及专职健康人员组成。 <br><br>• <strong>二级专业专科医疗（Secondary Care）</strong>：涵盖针对更为复杂的疑难医学健康问题所展开的专科评估、鉴别诊断与专项治疗。此类照护由<strong>专科医生（Specialists，如心脏科专科医师、骨科专科医师）</strong>与各专科医护团队担纲。最典型的途径是：家庭医生在初诊发现病情复杂后，依法向病患出具转诊介绍信（Referral），转介至专科诊所或综合医院接受深层次专科诊治。 <br><br>• <strong>三级高阶专精重症医疗（Tertiary Care）</strong>：在大型医科大学附属研究型教学医院中开展的高精尖、高技术密集型专精医疗服务。三级照护通常依托于医院内的特殊专科监护单元（如心脏重症 ICU、神经外科手术室），需要尖端精密检查设备和国家级医学专家团队保驾护航。这是整个医疗体系中<strong>运营成本最为高昂、技术难度最高</strong>的医疗层级。 <br><br>• <strong>四级超特前沿医疗（Quaternary Care）</strong>：作为三级专精医疗的最新延伸层级，四级医疗专指在极少数顶尖学术科研中心开展的前沿实验性药物临床试验、极罕见病尖端基因疗法或开创性超高难度外科手术。由于其极其专精前沿，绝大多数普通医院并不设立四级医疗单元。 <br><br></p>
+                    </article>
+                    
+                <figure class="editorial-figure">
+                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
+                  <img src="images/chapter_02/fig_2_3_levels_of_care.png" alt="Figure 2.3 Levels of Health Care Comparison" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                  <figcaption class="ef-caption-en"><strong>图 2.3 教学图示：初级、二级与三级医疗服务层级对比</strong><br>*FIGURE 2.3: A brief comparison of primary, secondary, and tertiary levels of health care.*<br>【教学意图】：以阶梯式图示清晰展现初级门诊（Primary Care）、专科转诊（Secondary Care）与教学医院重症手术（Tertiary/Quaternary Care）的服务定位与转诊路径。</figcaption>
+                </figure>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">医院向社区居家照护的战略重心大转移 (The Historical Shift to Home Care)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="839.57" data-end="988.99" data-title="The Historical Shift to Home Care" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>Home Care</strong> <br><br>Over the years, the Canadian health care system has seen a shift in focus from hospital care to home care. Traditionally, people entered the health care system through hospitals. However, over the past two decades, the role and structure of hospitals have changed dramatically. Operating a hospital requires a tremendous amount of money. Over a third of all health care spending goes into running hospitals. Therefore, in order to cut costs, most provincial and territorial governments have reduced the number of hospitals: hundreds of hospitals have closed, merged, or been converted into other types of health care facilities. <br><br>Partly to save money and partly as a result of technological advances, and also to reduce infection rates, clients are now sent home sooner after hospital procedures than they used to be. Each year, fewer clients stay in hospital overnight, and if they do stay overnight, they stay for shorter time periods than they would have in the past. In order to support patients who leave hospitals early, governments have gradually increased spending on home care. Home care is health care and support services provided to people in their places of residence, including private homes, licensed live-in care facilities, and assisted-living facilities (see Chapter 3). Home care is the most common of the community-based services, and support workers are needed and are actively recruited to work in all home care areas. <br><br>Home care was first created to provide care for people who needed at-home assistance after hospital discharge. Today, home care provides community care and support to a wide range of people. Clients include older persons; families with children; people who are living with mental, physical, or developmental disabilities; people with short-term and long-term medical conditions; and people in the recovery, rehabilitative, or final stages of a life-ending disease. Home care services provide assistance to families who need help with a new baby. They enable people with disabilities to get up in the morning and get ready for school or work. They help people adjust to a disability or recover from an illness (FIGURE 2.4). They enable people who are dying to remain at home rather than be admitted to a hospital. <br><br>One major focus of home care is to enable people to remain in their homes, so they can be as healthy as possible and remain independent for as long as possible. For some people, home care replaces hospital or other facility care. For others, home care allows them to maintain their health and independence, thus delaying or preventing admission to a facility. <br><br></p>
+                      <p class="para-cn"><strong>居家照护（Home Care）的崛起与战略重心大转移</strong> <br><br>纵观近数十年的发展历程，加拿大医疗卫生系统经历了一场<strong>从以传统医院为中心向以社区居家照护为核心的深层次历史性战略大转移</strong>。在传统观念中，医院是人们步入医疗体系的唯一主门户。然而在过去二十年间，医院的社会定位与组织架构发生了翻天覆地的剧变。维持一家现代化综合医院的高昂运营需要天文数字般的资金支持——全加超过三分之一的公共医疗开支被消耗在医院运转之中！为了遏制医疗成本的恶性膨胀，绝大多数省份与地区政府断然缩减了急性病床与医院数量：全加上百家医院被依法关停、合并或改建为康复慢病中心。 <br><br>缩减开支的财政刚性需求、现代微创医疗技术的突飞猛进、以及降低医院院内交叉感染率（Nosocomial Infection）的临床要求，共同促成了病患在接受手术后被极快安排出院返回居家的崭新常态。现如今，不仅留院过夜的病患人数逐年锐减，且病患的平均住院日（Length of Stay）相比过去大幅缩水。为了切实兜底并支撑那些提前出院返回家庭的脆弱病患，各省政府将原本用于医院的庞大财政预算持续转移并大幅倾斜至“居家照护”领域！居家照护，是指在服务对象个人居住场所（包括其私人独栋居所、持牌机构住宅或辅助生活居所）内所交付的医疗卫生与全方位生活照料。居家照护已成为加拿大最主流的社区服务形态，一线支持工作者（PSW）更成为全加各地最为紧缺、招聘最为炙手可热的刚需专业人才！ <br><br>居家照护最初设立的初衷，纯粹是为了向出院返家的病患提供过渡期的伤口擦拭与生活协助。而在当今时代，居家照护的服务对象已全方位扩展至全社会的广阔人群：包括独居或患病的高龄长者；抚育婴幼儿的困难家庭；身患心理精神障碍、肢体残疾或智力发育障碍的人士；饱受各类急慢性顽疾困扰的病患；处于创伤康复期的伤者；以及身患绝症处于生命终末期的临终安宁关怀案主。居家照护人员协助年轻母亲为新生儿沐浴换尿布；协助高位截瘫青年清晨起床离床、穿衣洗漱以按时出门上班上学；搀扶中风长者重新适应生活（参见图 2.4）；并让身患晚期癌症的长者能够安详尊严地在自己熟悉的家庭床榻上走完生命最后一程，免除凄凉死在冰冷病房中的遗憾。 <br><br>居家照护的核心执业宗旨，在于<strong>赋能人们有尊严地长久留居在自己的家庭之中，尽一切可能维系其最佳身体健康，并在最长的时间尺度内捍卫其独立自主的生活自理能力</strong>。对许多案主而言，上门居家照护彻底替代了高昂的住院；对更多长者而言，居家照护维系了其身心功能，从而大幅推迟甚至彻底避免了被无奈送入养老院（长期照护机构）的命运。 <br><br></p>
+                    </article>
+                    
+                <figure class="editorial-figure">
+                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
+                  <img src="images/chapter_02/fig_2_4_home_care_assistance.png" alt="Figure 2.4 Support Worker Assists Senior at Home" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                  <figcaption class="ef-caption-en"><strong>图 2.4 教学图示：支持工作者正在为居家独居长者提供生活照护</strong><br>*FIGURE 2.4: This man receives assistance through home care services so he can continue to live by himself at home. (iStockphoto/Dean Mitchell.)*<br>【教学意图】：生动展现居家支持工作者登门协助肢体受限长者，使其能够维系独立自理尊严、持续在熟悉的私人家庭环境中生活的真实场景。</figcaption>
+                </figure>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第六节：居家照护服务四大范畴与省/地区职责分工 (Pages 27 - 29)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">居家照护的核心分类体系 (Four Categories of Home Care Services)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="988.99" data-end="1097.45" data-title="Four Categories of Home Care Services" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>Home Care Services and Funding</strong> <br><br>Support workers provide most home care support services. In most provinces and territories, support services are provided by both public and private agencies that can be either for-profit or not-for-profit organizations. Every province and territory has a publicly funded home care program... All provinces and territories offer: • Client assessment—determining if the person is eligible for services • Case coordination and management (see Chapter 10) • Nursing services • Support services for eligible clients <br><br>Home care services are classified into the following categories: 1. <strong>Personal care services:</strong> These nonmedical services offered through home care, often by support workers, include assisting with activities of daily living (ADLs—e.g., bathing, feeding, mobility, and dressing) and providing comfort care to clients who are dying. 2. <strong>Home support services:</strong> These services, often provided by support workers to clients who live at home, include assisting with home management, assisting with ADLs, and assisting with taking medications. 3. <strong>Professional services:</strong> Therapies and treatments provided by the relevant health care providers, which include nursing care, physiotherapy, occupational therapy, speech therapy, nutrition counselling, social work, respiratory therapy, paramedic and emergency medical technician (EMT) services, nail care, and in-home blood testing. 4. <strong>Support for instrumental activities of daily living (IADLs):</strong> These services, often provided by support workers, include shopping with a client, assisting a client with banking, and teaching a client how to follow a recipe. <br><br>Volunteer services such as Meals on Wheels (FIGURE 2.5) and friendly visiting can be provided by anyone who meets the volunteer criteria. <br><br></p>
+                      <p class="para-cn"><strong>居家照护四大核心服务范畴与公共资助体系</strong> <br><br>在加拿大一线医疗实践中，<strong>支持工作者承担了绝大多数的居家支持操作</strong>。在各省与地区，上门服务是由公立直管机构以及受政府资助委派的私立商业性（For-profit）或非营利性（Not-for-profit）照护机构协同执行。所有省份均无一例外地设立了由公共税收资助的官方居家照护体系，统一向公众提供以下核心服务： • <strong>案主专业评估</strong>：由个案经理全面上门评估，判定案主是否符合政府免费居家照护的准入资格； • <strong>个案统筹与临床管理</strong>：制定个性化长期照护方案（参见第 10 章）； • <strong>专业上门护理</strong>：派遣注册护士处理复杂换药与注射； • <strong>合格案主的一线生活支持服务</strong>：派遣支持工作者上门提供日常生活照料。 <br><br>具体而言，加拿大官方将居家照护细分为以下四大核心职能范畴： 1. <strong>个人身体照护服务（Personal Care Services）</strong>：主要由支持工作者执行的非技术性个人生理照料，涵盖基础日常生活活动（ADLs——如盆浴淋浴擦浴、喂饭协助、床上轴线翻身与轮椅转移、协助穿脱衣物及个人梳理修饰），以及为临终关怀案主提供舒适抚慰护理。 2. <strong>家庭支持维护服务（Home Support Services）</strong>：支持工作者在案主家中开展的家居环境支持，包括协助家庭日常事务管理、整理床铺、基础卫生打扫、协助日常生活活动以及协助督导案主按时自服药物。 3. <strong>专业医护执业服务（Professional Services）</strong>：由持牌注册医护人员登门提供的技术性诊疗与康复服务，包括：专业伤口护理与导尿管更换、物理治疗（PT）、作业康复治疗（OT）、言语语言治疗（ST）、临床营养配餐咨询、注册社会工作者心理疏导、呼吸治疗、急救技术员（EMT）转运、专业医疗修甲、以及上门静脉抽血检验等。 4. <strong>工具性日常生活支持服务（Support for IADLs）</strong>：支持工作者协助维持案主在社区独立生活所需的高阶技能，包括：陪伴案主前往超市采购食品杂货、协助案主前往银行网点处理存取款理财账单、以及耐心指导案主依照健康食谱学习膳食烹饪。 <br><br>此外，社会志愿服务（如著名的“流动爱心送餐”Meals on Wheels，参见图 2.5）以及长者温情结对走访，则由符合资历的民间社会义工通力承担。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-terracotta">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-icon">🏡</span>
+                        <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
+                      </div>
+                      <h4 class="box-title-en">BOX 2.5 居家照护的行政管理与交付模式 (How Home Care Is Governed and Delivered)</h4>
+                    </div>
+                  </aside>
+                </div>
+                
+                <aside class="editorial-box-container box-theme-terracotta">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">🏡</span>
+                      <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 2.5: How Home Care Is Governed and Delivered</h4>
+                    <div class="box-title-cn">BOX 2.5 制度专栏：加拿大各省居家照护的行政主管与服务交付机制</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en"><strong>BOX 2.5: How Home Care Is Governed and Delivered</strong> <br><br>How home care is governed and delivered differs across the provinces and territories. In all jurisdictions, the ministries or departments of health and social or community services are responsible for home care services. These departments monitor the services and decide on budgets, policies, and standards of care. Service delivery involves the following: • Assessing clients' needs • Determining clients' eligibility for government-sponsored professional and support services • Coordinating and monitoring home care services provided by private or not-for-profit agencies • Providing information and referrals to other long-term care services (e.g., volunteer-based community services such as Meals on Wheels), some of which charge user fees to the client • Providing placement services to assisted-living facilities and extended care facilities (known in some provinces as long-term care facilities) <br><br></div>
+                      <div class="clause-cn"><strong>BOX 2.5 制度专栏：加拿大各省居家照护的行政主管与服务交付机制</strong> <br><br>各省与地区在居家照护的行政管理体制与具体落地模式上呈现出鲜明的区域特色。但在所有辖区内，省卫生厅（Ministry of Health）以及社会与社区服务厅均牢牢掌握居家照护的最终行政领导权，负责宏观监督全行业执业水准、严格审批财政预算、制定执业法规并设立全省统一的临床照护标准。各省具体的一线服务交付流程包括以下五大关键环节： • 科学评估受助案主的多维照护需求； • 依法裁定案主是否有资格免费申领政府全额资助的专业护理与生活支持工时； • 严格统筹、调度并持续质控那些由政府购买服务、外包给商业或非营利性机构的一线照护服务； • 为案主提供权威资讯指引，转介至其他长期照护补充服务（如 Meals on Wheels 爱心送餐等民间志愿服务，部分项目仅向案主象征性收取极低原料成本费）； • 全权主导案主入住辅助生活居所（Assisted-Living）及长期照护院舍（Long-Term Care / 养老院）的官方排期评估与轮候安置（Placement Services）。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">表 2.1 全加各省与地区官方医疗保险计划名称一览表 (Table 2.1 Provincial/Territorial Health Insurance Programs)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1152.79" data-end="1200.96" data-title="Table 2.1 Provincial/Territorial Health Insurance Programs" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>TABLE 2.1: Provincial and Territorial Health Insurance Programs</strong> <br><br></p>
+                    </article>
+                    <div class="table-wrap"><table class="clinical-table">
+<thead><tr><th>Province / Territory</th><th>Official Name of Public Health Insurance Plan</th></tr></thead>
+<tbody>
+<tr><td><strong>Alberta</strong></td><td>Alberta Health Care Insurance Plan (AHCIP)</td></tr>
+<tr><td><strong>British Columbia</strong></td><td>Medical Services Plan (MSP)</td></tr>
+<tr><td><strong>Manitoba</strong></td><td>Manitoba Health</td></tr>
+<tr><td><strong>New Brunswick</strong></td><td>Medicare</td></tr>
+<tr><td><strong>Newfoundland and Labrador</strong></td><td>Medical Care Plan (MCP)</td></tr>
+<tr><td><strong>Northwest Territories</strong></td><td>NWT Health Care Insurance Plan</td></tr>
+<tr><td><strong>Nova Scotia</strong></td><td>Medical Services Insurance (MSI)</td></tr>
+<tr><td><strong>Nunavut</strong></td><td>Nunavut Health Care Plan</td></tr>
+<tr><td><strong>Ontario</strong></td><td>Ontario Health Insurance Plan (OHIP)</td></tr>
+<tr><td><strong>Prince Edward Island</strong></td><td>Medicare</td></tr>
+<tr><td><strong>Quebec</strong></td><td>Régie de l'assurance maladie du Québec (RAMQ / Medicare)</td></tr>
+<tr><td><strong>Saskatchewan</strong></td><td>Saskatchewan Medical Care Insurance Plan</td></tr>
+<tr><td><strong>Yukon</strong></td><td>Yukon Health Care Insurance Plan</td></tr>
+</tbody></table></div>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1200.96" data-end="1351.54" data-title="Challenges Facing Medicare" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-cn"><strong>表 2.1 加拿大各省及地区官方全民公费医疗保险计划名称大全</strong> <br><br></p>
+                    </article>
+                    <div class="table-wrap"><table class="clinical-table">
+<thead><tr><th>省份 / 地区</th><th>官方公费医疗保险计划正式法定名称</th><th>行业与民间常用法定缩写</th></tr></thead>
+<tbody>
+<tr><td><strong>阿尔伯塔省 (Alberta)</strong></td><td>Alberta Health Care Insurance Plan</td><td><strong>AHCIP</strong></td></tr>
+<tr><td><strong>卑诗省 (British Columbia)</strong></td><td>Medical Services Plan</td><td><strong>MSP</strong></td></tr>
+<tr><td><strong>曼尼托巴省 (Manitoba)</strong></td><td>Manitoba Health</td><td><strong>Manitoba Health</strong></td></tr>
+<tr><td><strong>新不伦瑞克省 (New Brunswick)</strong></td><td>Medicare</td><td><strong>Medicare</strong></td></tr>
+<tr><td><strong>纽芬兰与拉布拉多省 (Newfoundland & Labrador)</strong></td><td>Medical Care Plan</td><td><strong>MCP</strong></td></tr>
+<tr><td><strong>西北地区 (Northwest Territories)</strong></td><td>NWT Health Care Insurance Plan</td><td><strong>NWT Health</strong></td></tr>
+<tr><td><strong>新斯科舍省 (Nova Scotia)</strong></td><td>Medical Services Insurance</td><td><strong>MSI</strong></td></tr>
+<tr><td><strong>努纳武特地区 (Nunavut)</strong></td><td>Nunavut Health Care Plan</td><td><strong>Nunavut Health</strong></td></tr>
+<tr><td><strong>安大略省 (Ontario)</strong></td><td>Ontario Health Insurance Plan</td><td><strong>OHIP</strong></td></tr>
+<tr><td><strong>爱德华王子岛省 (Prince Edward Island)</strong></td><td>Medicare</td><td><strong>PEI Medicare</strong></td></tr>
+<tr><td><strong>魁北克省 (Quebec)</strong></td><td>Régie de l'assurance maladie du Québec</td><td><strong>RAMQ</strong> (太阳卡)</td></tr>
+<tr><td><strong>萨斯喀彻温省 (Saskatchewan)</strong></td><td>Saskatchewan Medical Care Insurance Plan</td><td><strong>Sask Health</strong></td></tr>
+<tr><td><strong>育空地区 (Yukon)</strong></td><td>Yukon Health Care Insurance Plan</td><td><strong>Yukon Health</strong></td></tr>
+</tbody></table></div>
+
+                <figure class="editorial-figure">
+                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
+                  <img src="images/chapter_02/fig_2_5_meals_on_wheels.png" alt="Figure 2.5 Meals on Wheels Hot Food Delivery" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                  <figcaption class="ef-caption-en"><strong>图 2.5 教学图示：社区流动爱心送餐（Meals on Wheels）正在登门为居家案主递送热食</strong><br>*FIGURE 2.5: Delivery of hot meals to clients in their homes. (U.S. Air Force photo/Airman 1st Class Katrina Heikkinen.)*<br>【教学意图】：直观呈现社区非盈利志愿力量与公共医疗体系协同发力，确保独居衰弱长者每日获得热食营养支持的温馨图景。</figcaption>
+                </figure>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第七节：加拿大医疗体制面临的五大严峻挑战、补充保险与区域改革 (Pages 29 - 30)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">医疗体系承受的前所未有之重压 (Challenges Facing Medicare)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1351.54" data-end="1463.78" data-title="Supplementary Benefits & Regionalization" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>HEALTH CARE CHALLENGES, SUPPLEMENTARY SERVICES, AND TRENDS</strong> <br><br><strong>Challenges</strong> The Canadian health care system has come under stress in recent years. Many factors challenge the country's ability to provide quality, universal health care, and these factors are expected to continue into the future. They include the following: <br><br>• <strong>Worker shortages.</strong> Many rural and remote areas face severe shortages of physicians, nurses, and other health care workers. The growing trend of people moving to bigger cities leaves smaller communities in need of educated workers. There is an increasing need for support workers in both rural and urban settings throughout many provinces. • <strong>Aging of the baby boomer generation (those born between 1945 and 1964).</strong> Canadian society is aging. For the older population to live safely and with dignity and independence, the costs of our health care system will rise. • <strong>Increasing numbers of Canadians require care.</strong> People aged 65 and older are the fastest-growing age group in Canada, and this trend is expected to continue for decades. Many of today's older persons live with one or more chronic health challenges, have mobility issues, or experience a mental health problem, all of which may require medical intervention. • <strong>Aging of health care workers.</strong> Health care workers are also aging. Many studies are investigating the effects of different types of work on older bodies. One finding is that older workers have fewer injuries, but the injuries they have tend to be more severe. • <strong>Long waiting lists for surgeries, diagnostics, and medical procedures.</strong> Long wait times cause stress and a possible worsening of their condition for many clients in need of treatment. • <strong>Long waiting times for admission to long-term care facilities.</strong> Clients who are ill and waiting for long-term care placement must often stay in an acute-care hospital because it is unsafe for them to live at home. Overcrowded hospital units and emergency departments have resulted. To remedy the situation, many hospitals have restructured their care delivery to include continuing care units, where these clients can await long-term care admission. • <strong>The steadily rising cost of care.</strong> Of all the challenges facing the health care system, its rising cost is the greatest. Drugs and technology that help treat diseases and disabilities are better than ever before. However, these advances come at a high price due to the cost of developing them. Building and labour costs, too, are always spiralling upward, and taxpayers bear the burden. <br><br></p>
+                      <p class="para-cn"><strong>加拿大医疗卫生体系面临的七大严峻挑战</strong> <br><br>近年来，加拿大公费医疗体制正承受着前所未有的极限重压。多重结构性深层矛盾正持续冲击国家维系高质量、均等化全民公费医疗的能力，且这些压力在未来数十年内将愈演愈烈： <br><br>1. <strong>医护人力资源极度匮乏（Worker Shortages）</strong>：在广大偏远乡村和北部偏僻地区，执业医师、护士及支持工作者呈现断崖式短缺。人口向特大都市集聚的不可逆趋势，使得小型城镇极度缺乏合格医护人才。在加拿大各省，不论是乡村家庭还是都市社区，支持工作者（PSW）的需求量正呈爆炸式攀升。 2. <strong>“婴儿潮一代”集体步入古稀之年（Aging of Baby Boomers）</strong>：出生于二战后（1945–1964年）极其庞大的婴儿潮一代如今已全线迈入高龄阶段。为了让这一庞大群体能够安全、体面、有尊严且尽可能独立地生活，国家公共医疗财政开支注定呈刚性指数级激增。 3. <strong>亟需长期照护的受助长者基数激增</strong>：65 岁及以上高龄群体是加拿大全社会增长最为迅猛的人口梯队。当今多数长者身体同时罹患一种或数种慢性器质性疾病，伴随肢体活动障碍或认知障碍（失智症），需要长期密集的医疗与护理干预。 4. <strong>医护从业人员自身人口老龄化（Aging of Workers）</strong>：医护队伍本身亦不可阻挡地面临高龄化。医学人体工程学研究表明：年长医护人员凭借丰富经验虽然发生工伤的频次相对较少，但一旦发生扭伤摔伤，其组织创伤与骨折严重程度远超年轻同行，康复极慢。 5. <strong>择期手术、诊断造影与专科诊治排期漫长（Wait Times）</strong>：漫长的手术与核磁CT等待时间，不仅给饱受病痛折磨的案主及其家庭带来沉重精神焦虑，更随时面临基础病情在等待中恶化衰竭的潜在临床风险。 6. <strong>养老院公立床位排期过长致使医院急诊严重压床（ALC 危机）</strong>：由于社区长期照护机构（LTC）床位极度紧缺，大批已脱离生命危险但生活完全无法自理、无法安全返家的患病长者，只能常年滞留在昂贵的急症医院病房（即“备选照护级别”ALC 现象），直接导致各大综合医院急诊室人满为患、一床难求。为破解此僵局，许多医院被迫自建“过渡延续照护单元”（Continuing Care Units），供长者苦等养老院床位。 7. <strong>医疗新技术与人力运营成本的失控飞涨（Rising Costs）</strong>：在所有严峻考验中，<strong>医疗总成本的无底洞式飞涨是最大、最根本的生存威胁</strong>！靶向新药、生物制剂与尖端诊疗仪器的研发上市成本呈天文数字；医疗基建与人力薪酬持续走高，最终全部沉重地压在纳税人的脊梁上。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">补充医疗保险、商业保险与大区化管理改革 (Supplementary Benefits & Regionalization)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1463.78" data-end="1504.39" data-title="Alternative Health Practices" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>Additional (Supplementary) Services & Private Health Insurance</strong> <br><br>Provinces and territories provide coverage to certain people (e.g., older persons, children, and recipients of social assistance) for services that are not generally covered under the publicly funded health care system. These supplementary health benefits often include prescription drugs, dental care, vision care, medical equipment and appliances (e.g., prostheses, wheelchairs), independent-living assistance, and the services of other health care providers such as chiropractors. The level of coverage varies across the country. Additional health insurance, sometimes referred to as benefits, covers services that are not government funded... Those who do not qualify for supplementary benefits under government plans pay for these services with individual, out-of-pocket payments or through private health insurance plans... <br><br><strong>Health Care Trends & Regional Authorities</strong> To reduce some of the pressures placed on our health care system, new ways of providing care have been introduced to Canadians, with the intent of providing quality care while avoiding needless spending. Instead of Canadians' relying on hospitals and doctors, there is a trend toward providing alternative care in clinics, in health care centres, and through home care. Many families now seek medical services not only from doctors but also from nurse practitioners. Medical advances have led to more surgical procedures being done through day surgery on an outpatient basis... <br><br>Most provinces and territories have tried to control costs and improve delivery by decentralizing decision making on health care delivery to the regional or local board level. Such regional authorities are managed by elected and appointed members who oversee hospitals, long-term care homes, home care, and public health services in their areas. As part of these reforms, provincial and territorial governments are now focused on two areas: • Health promotion and disease prevention • Home care <br><br></p>
+                      <p class="para-cn"><strong>政府补充医疗福利、商业私立保险与卫生大区化治理革新</strong> <br><br>为了保障最脆弱群体的生存底线，各省和地区政府通常制定专门政策，向特定特惠群体（如 65 岁以上长者、未成年儿童、以及低收入社会救助金领取者）提供公费医保常规项目之外的<strong>“补充医疗福利”（Supplementary Health Benefits）</strong>。这些补充福利通常涵盖：部分门诊处方药（如安省 ODB 计划）、基础牙科保健、眼科验光配镜、医用矫形辅助器材（假肢、电动轮椅等轮椅设备补贴）、自立生活辅具以及整脊按摩（Chiropractic）等专科理疗。全国各省在此类福利的报销额度上差异极大。 <br><br>凡不符合政府免费补充福利资格的广大普通居民，若需享受上述牙医、眼科、处方药或物理康复，必须自掏腰包全额自费支付，或通过其雇主单位统一购买的<strong>“商业私立健康保险”（Private Health Insurance / Group Benefits）</strong>按比例报销。商业保险的具体承保条款、自付免赔额（Deductibles）及报销上限完全取决于雇主购买的保单险种，各保险公司之间千差万别。若既无政府特惠资格、又无商业保险兜底，案主必须由个人储蓄完全自费承担。 <br><br><strong>现代医疗改革趋势与大区化管理架构</strong> 为了纾解医疗体系承受的重压，加拿大近年来大力推行一系列精益医疗革新举措：全面推行以日间门诊日间微创手术（Day Surgery）替代长期住院；大力普及高级执业护士（Nurse Practitioner, NP）独立坐诊，分担家庭医生的基础就诊压力；并大力推广多学科社区健康服务中心。 <br><br>在宏观行政体制层面，绝大多数省份打破了过去由各个医院各自为政、盲目采购设备的混乱格局，全面推行<strong>“卫生大区化治理改革”（Regionalization / 如安省各区域健康整合网络及卫生局）</strong>。通过建立跨区域卫生管理局，统筹调配该区域内所有医院、长期照护养老院、上门居家照护机构以及公共卫生预防资源，实现医疗资源的集约化高效运转。在这一宏观顶层重塑之下，全加各省与地区政府将卫生财政与政策资源最优先投向了两大战略高地： 1. <strong>健康促进与疾病前置预防（Health Promotion & Disease Prevention）</strong>； 2. <strong>社区居家照护（Home Care）</strong>。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第八节：替代医学、健康促进与支持工作者的前沿预防使命 (Pages 31)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">替代医学与传统医学的融合 (Alternative Health Practices)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1504.39" data-end="1578.22" data-title="Health Promotion & Support Worker's Vital Role" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>Alternative Health Practices</strong> <br><br>Alternative health practices are health treatments that have not been taught or practised in traditional medical communities and offer therapies that differ from standard medical practice (see Chapters 23, 44, and 45). They include massage therapies, homeopathy, herbal medicines (including the use of cannabis), and acupuncture. These practices are gaining widespread acceptance by the same medical community (also known as Western medicine) that once disregarded them and are now often ordered by physicians and used in conjunction with traditional treatments. Many of these services are also now covered by some provincial and territorial health care plans. <br><br></p>
+                      <p class="para-cn"><strong>替代疗法与西方主流医学的有机融合</strong> <br><br><strong>替代健康疗法（Alternative Health Practices）</strong>是指那些未曾纳入西方传统医学院经典教学体系、在操作机理与哲学上异于标准常规医学的各类特色治疗方法（参见第 23、44 及 45 章）。常见形式涵盖注册推拿按摩疗法（RMT）、顺势疗法（Homeopathy）、天然草药与植物提取物疗法（包括医用大麻的应用）、以及传统中医针灸疗法（Acupuncture）。 <br><br>曾经对这些非主流疗法持怀疑甚至排斥态度的西方主流医学界（Western Medicine），如今正全面转变观念，广泛接纳并认可这些传统经验智慧的临床疗效。现如今，执业医师常常根据患者慢性疼痛、神经麻痹或恶心呕吐等临床指征，主动开具针灸或按摩处方，将其作为常规药物手术的重要辅助协同疗法；部分省份的公费医保或雇员商业保险亦已正式将特定替代疗法列入受保支付范围。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">健康促进与疾病预防：支持工作者的非凡价值 (Health Promotion & Support Worker's Vital Role)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1578.22" data-end="1639.9" data-title="Supporting Mr. Wloch: Health Insurance Portability" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en"><strong>Health Promotion and Disease Prevention</strong> <br><br>Traditionally, the purpose of a health care system has been to diagnose, treat, and cure illnesses. A more recent approach to health care, however, involves developing ways to promote health and prevent diseases from occurring. Preventing illness and injury, while keeping people healthy, is more effective and cheaper than providing treatments in hospitals. <br><br>• <strong>Health promotion</strong> refers to strategies that improve or maintain health and independence. • <strong>Disease prevention</strong> refers to strategies that prevent the occurrence of disease or injury. <br><br>Support workers contribute to health promotion and disease prevention and are needed now more than ever because they provide nonmedical care and services that can help prevent major health problems. Take, for example, Mr. Lukovic, who has been on bedrest for a long time. He is at risk for pressure ulcers, pneumonia, and blood clots. To prevent these complications, you, as his support worker, help him keep his skin clean and dry, change his position in bed frequently, and help him perform range-of-motion exercises. By doing these important things for Mr. Lukovic, you can help improve his quality of life now and prevent him from developing illness or disability in the future. <br><br></p>
+                      <p class="para-cn"><strong>健康促进、疾病预防与支持工作者的前沿预防使命</strong> <br><br>在传统医学观念中，医疗体系的唯一功能局限于在疾病发生后进行诊断、用药和手术治愈。然而，现代前沿医疗的核心理念实现了颠覆性升华：<strong>全力探索并实施能够促进大众健康、阻止疾病发生的各种源头治理途径！</strong>防患于未然、保护广大民众远离创伤与病痛，其临床有效性与经济成本效益，远远优于等病入膏肓后再送进 ICU 抢救。 <br><br>• <strong>健康促进（Health Promotion）</strong>：指一切旨在提升、增进并长久维系个体身心健康功能与独立自理自立能力的宏观与微观干预策略。 • <strong>疾病预防（Disease Prevention）</strong>：指一切旨在从根源上阻止特定器质性疾病发生、阻断感染途径或预防人身伤害意外事故的防控策略。 <br><br>支持工作者（PSW）在前沿预防和健康促进中扮演着无可替代的中流砥柱角色——在当今医疗重构格局下，社会对 PSW 的渴求比以往任何历史时期都更为迫切！因为正是支持工作者日复一日所提供的基础、非医疗性贴身照护，在最前线成功阻击了无数足以致命的恶性并发症。以长期绝对卧床的长者卢科维奇先生（Mr. Lukovic）为例：久卧病榻的他时刻面临着罹患致死性深层压疮（褥疮）、坠积性肺炎（Pneumonia）以及下肢深静脉血栓（DVT）的高危风险。为了阻止这些毁灭性并发症的发生，你作为他的专职支持工作者，时刻协助他保持受压皮肤的绝对清洁与干爽，按时每两小时严格为他执行轴线翻身变换体位，并在床旁耐心协助他完成全套四肢关节活动度维持训练（Range-of-Motion Exercises）。通过为你负责的卢科维奇先生严谨执行这些看似微小平凡的照护细节，你不仅当场大幅升华了他的晚年生活品质，更在医学实质上直接挽救了他的生命，阻止了他在未来陷入更为深重的伤残与危局！ <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">临床实战案例：弗洛赫先生跨省迁徙与医保便携性 (Supporting Mr. Wloch: Health Insurance Portability)</h4>
+
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">📋</span>
+                      <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
+                    </div>
+                    <h4 class="box-title-en">Supporting Mr. Wloch: An Example of Health Insurance Portability in Canada</h4>
+                    
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en"><strong>Supporting Mr. Wloch: An Example of Health Insurance Portability in Canada</strong> <br><br>Ivan Wloch is a 65-year-old widower who was seriously injured about 6 months ago in an explosion at the factory where he works, just a few weeks before he was to retire. In the months since his accident, he has been cared for at home by nurses, physiotherapists, and occupational therapists for the severe burns he received to his face and right arm. Since he was also blinded in the accident, he requires support workers to assist him with taking a bus to his various appointments, as well as with his banking and grocery shopping. <br><br>Mr. Wloch, who lives in Manitoba, has decided that he would like to move in with his married daughter, who lives in Nova Scotia. He has been told that his private insurance, through his employer, would still cover his ongoing treatments and support after he moves. He was also informed that he could switch his provincial health insurance once he moves, to ensure ongoing coverage. How can he learn how to switch his provincial health insurance coverage? <br><br></div>
+                      <div class="clause-cn"><strong>临床支持实战案例：弗洛赫先生跨省迁徙 —— 加拿大医保便携性原则生动实践</strong> <br><br>伊万·弗洛赫先生（Ivan Wloch）是一位 65 岁高龄的鳏夫。约 6 个月前，就在他即将正式退休的前数周，他所供职的工厂不幸发生剧烈突发爆炸，致使他身负重伤。在爆炸发生后的这半年里，他一直留在家中接受由注册护士、物理治疗师及作业康复治疗师组成的上门多学科居家照护，以持续治疗他面部与右臂遭受的大面积严重烧伤。由于在剧烈爆炸中不幸双目失明，他如今高度依赖支持工作者（PSW）每日协助他搭乘无障碍公共交通前往各大医院专科诊所复诊，并协助他完成去银行办理业务和去超市采买食品杂货等日常活动。 <br><br>目前常住曼尼托巴省（Manitoba）的弗洛赫先生经过深思熟虑，决定搬迁至新斯科舍省（Nova Scotia）与自己已婚的女儿一家同住。其原雇主处购买的商业团体伤残保险已向他确认：在他跨省搬迁后，仍将全额继续报销其后续的专科康复治疗与生活支持费用。此外，相关社工亦告知他：依据《加拿大健康法案》的法定便携性准则，在他跨省搬家后，可以合法申请转换各省之间的公立医保卡，确保其公费医疗待遇无缝延续。那么，弗洛赫先生应当通过何种合规途径系统了解如何将曼省医保转为新斯科舍省医保的具体行政流程？ <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【本章复习与核心要点回顾】Chapter 2 Review (Page 32)</h3>
+                  </div>
+                </div>
+                
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">核心要点清单 (KEY POINTS)</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="1802.28" data-end="1818.24" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">1. Canada's publicly funded health care system is best described as an interlocking set of 10 provincial and 3 territorial health insurance plans. 2. Medicare provides access to universal, comprehensive coverage for medically necessary hospital and physician services. These services are administered and delivered by the provincial and territorial governments and are provided at no additional cost to the client. 3. To receive their full share of federal funding for health care, the provincial and territorial health insurance plans must meet the five criteria of the Canada Health Act: comprehensiveness, universality, portability, accessibility, and public administration. 4. The Truth and Reconciliation Commission of Canada: Calls to Action (2015) document identified seven Calls to Action for health care that are necessary to redress the legacy of residential schools for Indigenous Canadians. 5. Health care delivery is divided into primary, secondary, and tertiary delivery categories. Primary care is aimed at preventing illness whenever possible. Tertiary health care delivery is the most expensive to deliver. 6. Many factors challenge and stress the Canadian health care system. These factors include: (1) severe shortages of physicians, nurses, and other health care workers in rural areas; (2) the aging of the baby boomer generation; (3) long waiting lists; and (4) the steadily rising cost of care and new technology, which is the greatest challenge. 7. Supplementary health benefits often include prescription drugs, dental care, vision care, medical equipment and appliances, independent-living assistance, and the services of other health care providers, such as chiropractors. The level of coverage varies across the country. 8. Residents may have private insurance plans that pay for these supplementary services. 9. New trends in health care include: (1) alternative care in clinics, (2) health care centres, and (3) home care programs. 10. To control costs, provincial and territorial governments are focusing on: (1) health promotion and disease prevention and (2) home care. 11. Support workers provide most home care support services. 12. In most provinces and territories, support services are provided by for-profit and not-for-profit public and private agencies. Every province and territory has a publicly funded home care program, but the funding per client will vary depending on the province's funding policies. Home care services are classified by (1) personal care services, (2) home support services, (3) nursing and professional services, and (4) support for IADLs. <br><br></p>
+                      <p class="para-cn">1. 加拿大公共税收资助的医疗体制，最精准的定义是一个由 10 个省和 3 个地区医疗保险计划严密交织、分工咬合的全国性协作网络。 2. Medicare 为全民提供免自费、普遍且全面覆盖医学必需的医院住院与医生诊疗服务，由各省/地区直接交付执行，在接受服务时受助者无需自掏腰包。 3. 各省及地区为全额获取联邦财政医疗拨款，必须全面恪守《加拿大健康法案》确立的五大法定准则：全面性、普遍性、便携性、可及性与公立管理。 4. 加拿大真相与和解委员会（TRC，2015）明确颁布了关于医疗卫生的七大行动呼吁，作为消除原住民寄宿学校历史创伤不可或缺的制度举措。 5. 医疗卫生服务划分为初级、二级与三级照护三大梯次。初级保健立足于前置疾病预防；三级高精尖重症医疗则是整个系统中运营成本最为昂贵的层级。 6. 加拿大医疗体系正经受多重深层压力的严酷考验，包括：偏远乡村地区医护人才严重短缺；婴儿潮一代不可阻挡的高龄老龄化；门诊手术与专科检查排期漫长；以及最根本的威胁——医疗技术、前沿新药与运营成本的失控飞涨。 7. 补充医疗福利通常涵盖处方药、牙科、眼科配镜、轮椅假肢等辅具器材以及整脊理疗；各省在具体报销额度上存在地域政策差异。 8. 广大居民主要通过雇主团体或个人出资购买商业私立健康保险，用于报销上述公立受保项目之外的补充医疗费用。 9. 现代医疗创新潮流包括：在社区门诊开展日间微创诊疗、设立综合性社区健康中心、以及全面推进居家照护项目。 10. 为有效遏制成本失控并改善生命质量，各省与地区政府已将战略核心聚焦于两大赛道：健康促进与疾病前置预防，以及大力扩张居家照护。 11. 一线支持工作者（PSW / HCA）承担了全加绝大多数居家生活照料与支持服务的具体执行。 12. 在绝大多数省份和地区，支持服务由受政府资助外包的商业盈利性或非盈利性公共及私立机构负责承办。各省皆有公立居家照护资助大纲，但具体获批工时取决于本省政策；服务体系严格细分为：个人身体照护、家庭生活支持、专业护理康复、以及工具性日常生活（IADLs）协助四大门类。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">临床批判性思维修炼 (CRITICAL THINKING IN PRACTICE)</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="2" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">How do the following issues affect our Canadian health care system: (a) escalating costs of care, (b) privatization of services, (c) continuity of care, and (d) electronic health records? <br><br></p>
+                      <p class="para-cn">试结合加拿大当代社会现实，深入批判性分析以下四大焦点议题如何深层次塑造并影响我国当前的医疗卫生体制走向： (a) <strong>医疗成本的刚性失控飞涨（Escalating costs of care）</strong>：导致政府财政不堪重负，迫使管理层必须推行医院床位精简、推行日间手术，并将医疗重心向成本较低的社区居家预防大幅转移。 (b) <strong>医疗服务的私有化隐患与争议（Privatization of services）</strong>：私立诊所的滋生是否会破坏《加拿大健康法案》的平等可及性原则？是否会催生“有钱人插队就医、贫困者苦苦排队”的二元不公体制？ (c) <strong>临床照护的连续性与无缝衔接（Continuity of care）</strong>：当病患在急性医院、康复中心、家庭医生诊所与上门支持工作者之间流转时，如何确保临床生命体征信息与个性化照护计划不发生脱节断层？ (d) <strong>全数字化电子健康档案的普及（Electronic health records, EHR）</strong>：电子病历如何彻底终结“各机构信息孤岛”，使跨学科团队与一线 PSW 能够在第一时间精准掌握案主最新的用药过敏史与照护注意事项？ <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+    <div class="editorial-quiz-section" style="margin-top:56px; padding-top:32px; border-top:2px solid #e2e8f0;">
+      <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
+        <span class="quiz-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
+        <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 2 章全真自测复习题与详尽临床精解</h3>
+        <p style="font-size:13.5px; color:#166534; margin:0;">原版 11 道标准执业自测题（<strong>Pages 20–33 · 11 道全真自测题</strong>）。点击选项可即时测试并验证对错，查看权威临床实操解析。</p>
+      </div>
+    
+        <div class="editorial-quiz-card" id="q-card-ch2-1">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 01</span>
+            <span class="eq-status" id="q-status-ch2-1">待作答</span>
+          </div>
+          <div class="eq-stem-en">1. Canada's health care system is:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>关于加拿大医疗卫生保健体系的基本属性，下列哪一项表述是完全正确的？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 1, 'A', 'D', 'q-rat-ch2-1', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Strictly a federal responsibility</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 1, 'B', 'D', 'q-rat-ch2-1', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Delivered by government employees</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 1, 'C', 'D', 'q-rat-ch2-1', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Funded by private insurance companies</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 1, 'D', 'D', 'q-rat-ch2-1', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Publicly funded through provincial or territorial and federal taxes</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-1', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-1" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              加拿大医疗体系是典型的公共税收预付制体系（Medicare），由联邦中央税收转移支付（CHT）与各省/地区的公共税收联合出资全额买单。选项 A 错误，因为根据加拿大宪法，医院与医疗的规划交付权属于各省而非联邦；选项 B 错误，一线医生、护士及 PSW 多受雇于独立医院董事会、非营利机构或私立合作机构，绝非政府公务员；选项 C 错误，核心医学必需服务严禁由商业保险替代。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-2">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 02</span>
+            <span class="eq-status" id="q-status-ch2-2">待作答</span>
+          </div>
+          <div class="eq-stem-en">2. Provincial and territorial governments are responsible for:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>根据加拿大现行医疗体制架构，各省及地区政府的核心法定职责在于：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 2, 'A', 'B', 'q-rat-ch2-2', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Paying the full amount of all medical procedures</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 2, 'B', 'B', 'q-rat-ch2-2', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Planning, financing, and delivering their own health care insurance plans</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 2, 'C', 'B', 'q-rat-ch2-2', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Delivering health care services to Indigenous peoples and military personnel</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 2, 'D', 'B', 'q-rat-ch2-2', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Delivering health care services to inmates of federal penitentiaries and to the RCMP</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-2', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-2" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              各省和地区在宪法上直接拥有医疗卫生的管辖自主权，负责制定政策、规划床位、配置资金并组织实施本省医保计划（如安省 OHIP、卑诗省 MSP）。选项 C 和 D 均明确属于**联邦政府（Federal Government）**的直接专属管辖范畴；选项 A 错误，因为省医保仅支付“医学必需”的受保项目，非必需美容整形或自费项目不予支付。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-3">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 03</span>
+            <span class="eq-status" id="q-status-ch2-3">待作答</span>
+          </div>
+          <div class="eq-stem-en">3. Which law ensures that every citizen has access to health care?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>是哪一部具有划时代意义的联邦法律，从国家宪制层面确保了每一位合法居民享有平等获得受保医疗卫生照护的崇高权利？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 3, 'A', 'B', 'q-rat-ch2-3', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">The Medical Care Act</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 3, 'B', 'B', 'q-rat-ch2-3', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">The Canada Health Act</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 3, 'C', 'B', 'q-rat-ch2-3', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">The Long-Term Care Facilities Act</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 3, 'D', 'B', 'q-rat-ch2-3', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">The Hospital Insurance and Diagnostic Services Act</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-3', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-3" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              1984 年通过的《加拿大健康法案》（Canada Health Act）是加拿大医疗保障的根本大法与最高宪章，它将早期分散的法案整合，确立了全加五大根本原则，严禁医疗额外收费，从法律上捍卫了公民享受免费必需医疗的权利。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-4">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 04</span>
+            <span class="eq-status" id="q-status-ch2-4">待作答</span>
+          </div>
+          <div class="eq-stem-en">4. Canadians who travel to other parts of the country still maintain their provincial or territorial health care coverage. Which principle of medicare does this exemplify?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>加拿大居民在前往国内其他省份或地区旅行时，其原本享有的省医疗健康保险依然持续有效，这一制度体现了 Medicare 五大原则中的哪一项？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 4, 'A', 'A', 'q-rat-ch2-4', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Portability</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 4, 'B', 'A', 'q-rat-ch2-4', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Universality</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 4, 'C', 'A', 'q-rat-ch2-4', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Comprehensiveness</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 4, 'D', 'A', 'q-rat-ch2-4', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Public administration</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-4', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-4" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 A</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              便携性（Portability）原则的核心定义正是：居民在跨省旅行、工作调动或跨省搬迁期间，其公费医疗保障资格绝不失效，原居住省份将继续保障其在境内的医疗报销（搬迁时提供长达 3 个月的无缝过渡期）。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-5">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 05</span>
+            <span class="eq-status" id="q-status-ch2-5">待作答</span>
+          </div>
+          <div class="eq-stem-en">5. The most pressing cause of health care reform has been:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>促使当代加拿大各级政府下定决心推行大刀阔斧的医疗体制结构性改革，其背后最迫在眉睫的驱动诱因是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 5, 'A', 'D', 'q-rat-ch2-5', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">The Great Depression</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 5, 'B', 'D', 'q-rat-ch2-5', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Lack of accessibility</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 5, 'C', 'D', 'q-rat-ch2-5', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Lack of available technology</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 5, 'D', 'D', 'q-rat-ch2-5', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Rising costs of providing technology, drugs, and services</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-5', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-5" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              教材明确指出，在加拿大医疗体制面临的所有严峻挑战中，**医疗技术、新药与日常照护费用的“持续恶性攀升”（The steadily rising cost of care）是最大、最根本且最紧迫的威胁**，直接倒逼政府必须关闭冗余医院、缩短住院时间并向成本更低的居家照护战略转移。选项 A 是 1940 年代初创医保的历史背景，并非当代医改的诱因。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-6">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 06</span>
+            <span class="eq-status" id="q-status-ch2-6">待作答</span>
+          </div>
+          <div class="eq-stem-en">6. A recent trend in health care is to focus on:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>纵观当前加拿大医疗卫生发展的最新战略潮流，其资源倾斜的重中之重聚焦于：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 6, 'A', 'D', 'q-rat-ch2-6', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Cutting back on home care services</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 6, 'B', 'D', 'q-rat-ch2-6', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Opening more hospitals in rural areas</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 6, 'C', 'D', 'q-rat-ch2-6', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Cutting back on public health policies</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 6, 'D', 'D', 'q-rat-ch2-6', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Public policy that promotes health and prevents disease</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-6', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-6" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              现代加拿大卫生治理的核心趋势，已从传统的“病后重金治疗”彻底转向源头治理——大力投资于健康科普宣教、疫苗接种、慢性病预防与健康促进，从源头上减少病患流入医院的需求。同时政府正在大幅增加（而非削减）居家照护预算。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-7">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 07</span>
+            <span class="eq-status" id="q-status-ch2-7">待作答</span>
+          </div>
+          <div class="eq-stem-en">7. Immunization programs are an example of a:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>由公共卫生部门组织推进的常规疫苗预防接种计划（Immunization Programs），属于下列哪种卫生服务形态的典型范例？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 7, 'A', 'B', 'q-rat-ch2-7', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Medicare system</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 7, 'B', 'B', 'q-rat-ch2-7', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Disease prevention program</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 7, 'C', 'B', 'q-rat-ch2-7', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Home care service</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 7, 'D', 'B', 'q-rat-ch2-7', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Facility-based treatment</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-7', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-7" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              教材明确将各级政府推广的儿童与成人免疫接种计划列为典型的**“疾病预防”（Disease Prevention）**策略范例，其根本目的在于在病原体侵袭机体之前，建立群体免疫屏障，直接阻断特定烈性传染病的发生。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-8">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 08</span>
+            <span class="eq-status" id="q-status-ch2-8">待作答</span>
+          </div>
+          <div class="eq-stem-en">Question 8</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>加拿大社区居家照护体系（Home Care）最核心、最崇高的服务宗旨在于：</div>
+          <div class="eq-options">
+        
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-8', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-8" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              原书第 27 页明确定义：居家照护的一大核心核心宗旨（One major focus），在于赋能受助者能够长久留居在自己熟悉的私人家庭居所中（Enable people to remain in their homes），尽最大可能维护其自理独立性与尊严，从而延迟或彻底避免过早入住养老机构。选项 A 是执业医师的职责；选项 C 和 D 均非居家照护的宗旨。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-9">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 09</span>
+            <span class="eq-status" id="q-status-ch2-9">待作答</span>
+          </div>
+          <div class="eq-stem-en">Question 9</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>由一线支持工作者（PSW）在居家照护中被合法委派执行的常规服务项目可能包括：</div>
+          <div class="eq-options">
+        
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-9', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-9" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              根据原书第 28 页关于工具性日常生活活动支持（Support for IADLs）的权威界定，支持工作者经常执行包括“陪伴购物、协助案主前往银行理财取款（Assisting a client with banking）、指导学习烹饪”等高阶自立技能支持。选项 B 属于注册呼吸治疗师（RT）的专有法定执业范畴；选项 C 属于物理治疗师助理（PTA）的专职范畴；选项 A 属于家政保洁范畴，PSW 仅被允许执行基本的轻度起居整理，绝非全职保洁员。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-10">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 10</span>
+            <span class="eq-status" id="q-status-ch2-10">待作答</span>
+          </div>
+          <div class="eq-stem-en">10. Which statement about Canadian home care programs is correct?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>关于当今加拿大各省居家照护（Home Care）的发展现实，下列哪一项表述是完全客观且符合事实的？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 10, 'A', 'B', 'q-rat-ch2-10', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">All home care is free to Canadians.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 10, 'B', 'B', 'q-rat-ch2-10', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Provincial government funding is shifting to home care.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 10, 'C', 'B', 'q-rat-ch2-10', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Hospital care is a cheaper and better alternative for most people.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 10, 'D', 'B', 'q-rat-ch2-10', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">All provinces and territories govern their programs in a similar manner.</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-10', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-10" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              原书第 27 页明确阐述：为削减高昂的医院床位成本并顺应人口老龄化趋势，各省政府逐步将巨额财政支出战略性转向社区居家照护（Funding is shifting to home care）。选项 A 错误，因为公立居家照护审批工时有限，超出法定核定额度的额外照料必须自费购买私立服务；选项 C 荒谬，住院成本极为昂贵且长者易发院内感染；选项 D 错误，各省在居家照护的准入标准和资助项目上存在显著的制度不一致性。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch2-11">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 11</span>
+            <span class="eq-status" id="q-status-ch2-11">待作答</span>
+          </div>
+          <div class="eq-stem-en">11. In Canada's provinces and territories, support services are governed by:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在加拿大各省及地区，支持工作者所提供的一线支持照护服务，其终极宏观法规监管与政策领导权归属于：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch2', 11, 'A', 'D', 'q-rat-ch2-11', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Regional health boards</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 11, 'B', 'D', 'q-rat-ch2-11', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">The federal government</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 11, 'C', 'D', 'q-rat-ch2-11', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Private or not-for-profit agencies</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch2', 11, 'D', 'D', 'q-rat-ch2-11', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">The provincial or territorial government</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch2-11', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch2-11" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              原书第 28 页与第 33 页答案明确强调：支持照护服务从根本上由**各省或地区政府（The provincial or territorial government）**全权依法管辖和监管，由省卫生厅直接制定执业标准、决定财政拨款总额并确立服务大纲。各区域卫生局及承办机构皆是在省政府法定授权与制度约束下具体落地执行。
+            </div>
+          </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer class="editorial-colophon">
+      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
+      <p>Chapter 2: The Canadian Health Care System · 双语沉浸学术研读版</p>
+      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch2_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'paper') {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      try {
+        if (isPaper) {
+          localStorage.setItem('psw_theme', 'paper');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        } else {
+          localStorage.setItem('psw_theme', 'default');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        }
+      } catch (e) {}
+    }
+
+    var currentFontSizeIdx = 1;
+    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
+    function adjustFontSize(delta) {
+      currentFontSizeIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontSizeIdx + delta));
+      document.documentElement.style.setProperty('--user-font-size', fontSizes[currentFontSizeIdx]);
+    }
+
+    initLanguageMode();
+
+    function toggleReaderAudioPlay() {
+      if (readerAudio.paused) {
+        readerAudio.play().then(function() {
+          isPlaying = true;
+          document.getElementById('rabPlayBtn').innerText = '⏸';
+        }).catch(function(e) { console.log(e); });
+      } else {
+        readerAudio.pause();
+        isPlaying = false;
+        document.getElementById('rabPlayBtn').innerText = '▶';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var title = el.getAttribute('data-title') || '';
+      readerAudio.currentTime = start;
+      readerAudio.play().then(function() {
+        isPlaying = true;
+        document.getElementById('rabPlayBtn').innerText = '⏸';
+      }).catch(function(e) { console.log(e); });
+
+      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
+      for (var i = 0; i < actives.length; i++) {
+        actives[i].classList.remove('audio-active');
+      }
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 2 章 正在朗读';
+    }
+
+    readerAudio.addEventListener('timeupdate', function() {
+      var cur = readerAudio.currentTime;
+      var dur = readerAudio.duration || 1500;
+      function formatTime(t) {
+        var m = Math.floor(t / 60);
+        var s = Math.floor(t % 60);
+        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+      }
+      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
+
+      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
+      var found = null;
+      for (var i = 0; i < entries.length; i++) {
+        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
+        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
+        if (cur >= start && cur < end) {
+          found = entries[i];
+          break;
+        }
+      }
+      if (found && found !== lastActiveEntry) {
+        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+        found.classList.add('audio-active');
+        lastActiveEntry = found;
+        var title = found.getAttribute('data-title');
+        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 2 章 正在朗读';
+      }
+    });
+
+    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
+      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
+      if (!card) return;
+      var opts = card.querySelectorAll('.eq-opt');
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].classList.remove('selected-correct', 'selected-wrong');
+      }
+      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
+      if (selectedKey === correctKey) {
+        rowEl.classList.add('selected-correct');
+        if (statusEl) {
+          statusEl.innerText = '✅ 回答正确！';
+          statusEl.style.color = '#166534';
+        }
+      } else {
+        rowEl.classList.add('selected-wrong');
+        if (statusEl) {
+          statusEl.innerText = '❌ 回答有误，请查阅下方临床解析';
+          statusEl.style.color = '#991b1b';
+        }
+      }
+      var rat = document.getElementById(ratId);
+      if (rat) rat.style.display = 'block';
+    }
+
+    function toggleRationale(ratId, btnEl) {
+      var box = document.getElementById(ratId);
+      if (!box) return;
+      if (box.style.display === 'none' || !box.style.display) {
+        box.style.display = 'block';
+        btnEl.innerHTML = '<span class="icon">🔽</span> 收起答案与临床精解';
+      } else {
+        box.style.display = 'none';
+        btnEl.innerHTML = '<span class="icon">💡</span> 查看权威答案与临床精解';
+      }
+    }
+  </script>
+</body>
+</html>

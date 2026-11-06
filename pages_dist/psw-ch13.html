@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 13: Starting Your Career · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --user-font-size: 17px;
+      --bg-page: #f9f8f5;
+      --bg-container: #ffffff;
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --primary-navy: #1e3a8a;
+      --accent-gold: #c29b38;
+      --accent-blue: #2563eb;
+      --border-subtle: #e2e8f0;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    /* Top Sticky App Navigation & Interactive Switcher Bar */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+    }
+    .nav-left { display: flex; align-items: center; gap: 14px; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--primary-navy);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 14px;
+      background: #eff6ff;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: #dbeafe; }
+    .nav-chapter-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-chapter-title .ch-badge {
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+    }
+    
+    /* Center Segmented Language Switcher */
+    .mode-switch-segmented {
+      display: flex;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .mode-seg-btn {
+      padding: 6px 15px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: #0f172a; }
+    .mode-seg-btn.active {
+      background: #ffffff;
+      color: #1e3a8a;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .reading-util-group { display: flex; align-items: center; gap: 6px; }
+    .util-btn {
+      padding: 6px 11px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: #f8fafc; border-color: #94a3b8; color: #0f172a; }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 9999px;
+      padding: 4px 14px 4px 6px;
+    }
+    .play-circle-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 13px;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .play-circle-btn:hover { transform: scale(1.05); background: #1d4ed8; }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10.5px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    
+    /* Warm Paper Theme */
+    html.theme-paper {
+      --bg-page: #f5efe6;
+      --bg-container: #fcf9f2;
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --border-subtle: #e5ded2;
+    }
+    html.theme-paper body { background: #f5efe6; color: #2b2520; }
+    html.theme-paper .top-sticky-bar { background: rgba(245, 239, 230, 0.95); border-bottom-color: #e5ded2; }
+    html.theme-paper .mode-switch-segmented { background: #e9e1d4; border-color: #d8cebe; }
+    html.theme-paper .mode-seg-btn { color: #5c5247; }
+    html.theme-paper .mode-seg-btn.active { background: #fcf9f2; color: #2b2520; }
+    html.theme-paper .util-btn { background: #fcf9f2; border-color: #d8cebe; color: #5c5247; }
+    html.theme-paper .ambient-player { background: #ede6dc; border-color: #d8cebe; }
+    html.theme-paper .editorial-stream,
+    html.theme-paper .chapter-hero-editorial {
+      background: #fcf9f2;
+      border-color: #e5ded2;
+      box-shadow: 0 4px 24px rgba(43, 37, 32, 0.04);
+    }
+    
+    /* Layout Container */
+    .ch-editorial-flow {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 0 16px;
+    }
+    .chapter-hero-editorial {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 40px 42px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 12px;
+    }
+    .hero-title-en {
+      font-size: 30px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 18px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 13px;
+      color: #64748b;
+    }
+    
+    /* Stream Body */
+    .editorial-stream {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 44px 48px;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+    }
+    
+    /* Section Headings */
+    .editorial-section-divider { margin: 64px 0 28px; }
+    .section-divider-bar {
+      height: 2px;
+      background: linear-gradient(to right, #1e3a8a 0%, #93c5fd 60%, transparent 100%);
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+    .section-heading-card {
+      border-left: 4px solid var(--primary-navy);
+      padding-left: 20px;
+    }
+    .section-eyebrow { margin-bottom: 6px; }
+    .section-badge-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1e3a8a;
+      background: #eff6ff;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+    }
+    .sh-title-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: #1e3a8a;
+      line-height: 1.35;
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+    
+    /* Bilingual Paragraphs */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 26px;
+      padding: 12px 18px 14px 20px;
+      border-left: 3px solid transparent;
+      border-radius: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(241, 245, 249, 0.7);
+      border-left-color: #cbd5e1;
+    }
+    .bilingual-paragraph.audio-active {
+      background: #eff6ff;
+      border-left-color: var(--accent-blue);
+      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.08);
+    }
+    .para-play-indicator {
+      position: absolute;
+      left: -24px;
+      top: 14px;
+      font-size: 11px;
+      color: var(--accent-blue);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .bilingual-paragraph:hover .para-play-indicator { opacity: 0.75; }
+    .bilingual-paragraph.audio-active .para-play-indicator { opacity: 1; }
+    
+    .para-en {
+      font-size: var(--user-font-size, 17px);
+      line-height: 1.82;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      font-weight: 420;
+      letter-spacing: -0.01em;
+    }
+    .para-cn {
+      font-size: calc(var(--user-font-size, 17px) - 1.5px);
+      line-height: 1.85;
+      color: var(--text-secondary);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Editorial Boxes */
+    .editorial-box-container {
+      margin: 48px 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .box-banner-header {
+      padding: 16px 24px;
+      color: #ffffff;
+    }
+    .box-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .box-badge-icon { font-size: 14px; }
+    .box-badge-pill {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.95;
+    }
+    .box-title-en {
+      font-size: 18.5px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .box-title-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+    }
+    .box-body-content { padding: 24px 26px; }
+    .box-clause-item {
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+    }
+    .box-clause-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .clause-en { font-size: 15.5px; line-height: 1.7; color: var(--text-main); margin-bottom: 5px; }
+    .clause-cn { font-size: 14.5px; line-height: 1.65; color: var(--text-secondary); }
+    
+    .box-theme-sage { border: 1.5px solid #86efac; }
+    .box-theme-sage .box-banner-header { background: linear-gradient(135deg, #065f46 0%, #047857 100%); }
+    .box-theme-sage .box-body-content { background: #f0fdf4; }
+    
+    .box-theme-teal { border: 1.5px solid #99f6e4; }
+    .box-theme-teal .box-banner-header { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
+    .box-theme-teal .box-body-content { background: #f0fdfa; }
+    
+    .box-theme-lavender { border: 1.5px solid #ddd6fe; }
+    .box-theme-lavender .box-banner-header { background: linear-gradient(135deg, #581c87 0%, #6b21a8 100%); }
+    .box-theme-lavender .box-body-content { background: #faf5ff; }
+    
+    .box-theme-amber { border: 1.5px solid #fde68a; }
+    .box-theme-amber .box-banner-header { background: linear-gradient(135deg, #9a3412 0%, #c2410c 100%); }
+    .box-theme-amber .box-body-content { background: #fffbeb; }
+    
+    .box-theme-terracotta { border: 1.5px solid #cbd5e1; }
+    .box-theme-terracotta .box-banner-header { background: linear-gradient(135deg, #334155 0%, #1e293b 100%); }
+    .box-theme-terracotta .box-body-content { background: #f8fafc; }
+    
+    .box-theme-case { border: 1.5px solid #fed7aa; }
+    .box-theme-case .box-banner-header { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); }
+    .box-theme-case .box-body-content { background: #fffaf0; }
+    
+    /* Key Terms Grid */
+    .key-terms-section {
+      margin: 44px 0;
+      padding: 26px;
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+    .kt-subtitle { font-size: 13px; color: #64748b; margin-bottom: 18px; }
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 14px;
+    }
+    .editorial-term-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      transition: all 0.15s;
+    }
+    .etc-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+    .etc-word { font-size: 15px; color: var(--primary-navy); font-weight: 700; }
+    .etc-ipa { font-size: 12px; color: #94a3b8; font-family: monospace; margin-left: 6px; }
+    .etc-cn-tag { font-size: 12px; font-weight: 600; color: #0369a1; background: #f0f9ff; padding: 2px 8px; border-radius: 4px; }
+    .etc-def-cn { font-size: 13.5px; line-height: 1.55; color: #475569; }
+    
+    /* Quiz Cards */
+    .editorial-quiz-card {
+      margin: 28px 0;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .eq-num { font-size: 12px; font-weight: 700; color: #2563eb; letter-spacing: 0.05em; }
+    .eq-status { font-size: 12px; font-weight: 600; color: #64748b; }
+    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
+    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .eq-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .eq-opt:hover { background: #f1f5f9; border-color: #cbd5e1; }
+    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
+    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
+    .opt-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      flex-shrink: 0;
+    }
+    .opt-text { font-size: 14px; line-height: 1.5; color: #334155; }
+    .btn-toggle-rat {
+      padding: 6px 14px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .eq-rationale-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 6px; }
+    .rat-content { color: #1e293b; }
+    
+    /* Lists */
+    .editorial-list-item {
+      margin-bottom: 12px;
+      padding-left: 14px;
+      position: relative;
+      list-style: none;
+    }
+    .editorial-list-item::before {
+      content: "•";
+      color: var(--primary-navy);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin: 28px 0; }
+    .clinical-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .clinical-table th { background: #f8fafc; padding: 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #1e293b; text-align: left; }
+    .clinical-table td { padding: 12px; border: 1px solid #e2e8f0; color: #334155; }
+    
+    /* Tri-State Mode Directives */
+    html.mode-en .para-cn,
+    html.mode-en .eq-stem-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn { display: none !important; }
+    html.mode-en .para-en { font-size: calc(var(--user-font-size, 17px) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
+    
+    html.mode-cn .para-en,
+    html.mode-cn .eq-stem-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en { display: none !important; }
+    html.mode-cn .para-cn { font-size: calc(var(--user-font-size, 17px) - 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
+    
+    /* Colophon */
+    .editorial-colophon { text-align: center; padding: 48px 24px; color: var(--text-muted); font-size: 13px; }
+    
+    @media (max-width: 900px) {
+      .top-sticky-bar { flex-wrap: wrap; gap: 8px; padding: 8px 14px; }
+      .nav-chapter-title { display: none; }
+      .reading-util-group { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html#toc" class="nav-home-btn">← 返回全书总目录</a>
+      <div class="nav-chapter-title">
+        <span class="ch-badge">CH 13</span>
+        <span>Starting Your Career</span>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">
+        <span class="seg-icon">🌐</span> 中英双语
+      </button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">
+        <span class="seg-icon">🔤</span> 仅英文
+      </button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">
+        <span class="seg-icon">🇨🇳</span> 仅中文
+      </button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">📖 护眼纸色</button>
+        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 13 章 · 点选任意段落开始朗读</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 26:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ch-editorial-flow">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-tag">CHAPTER 13</span>
+        <span class="eyebrow-sep">·</span>
+        <span class="eyebrow-desc">SORRENTINO 5TH EDITION · 原版中英双语精研</span>
+      </div>
+      <h1 class="hero-title-en">Starting Your Career</h1>
+      <h2 class="hero-title-cn">开启您的职业生涯：求职履历、面试通关与专业成长全攻略</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">📖 Pages 194–214 · 20 道全真自测题</span>
+        <span class="meta-item">🔊 支持段落轻触点读 · 专业真人声原音导学</span>
+      </div>
+    </header>
+
+    <main class="editorial-stream">
+      <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
+                  </div>
+                </div>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<div class="chapter-h1-anchor" style="display:none;">Chapter 13: Starting Your Career</div>
+<div class="chapter-h1-anchor" style="display:none;">第 13 章：开启您的职业生涯：求职履历、面试通关与专业成长全攻略（原版逐字逐句 21 页全文典藏版）</div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 13 Opener & Learning Objectives (Page 194)</h3>
+                  </div>
+                </div>
+                
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="13" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Identify sources of information for finding job opportunities. • Differentiate between a chronological resumé and a functional resumé. • Describe the key components of an effective professional cover letter. • Prepare a professional career portfolio with references. • Explain how to prepare for, attend, and follow up after a job interview. • Describe professional expectations during the probationary employment period. <br><br></p>
+                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 熟练掌握多渠道挖掘加拿大医疗长照领域优质求职岗位的战略信息源。 • 严谨辨析“编年史式时间倒序履历”（Chronological Resumé）与“机能能力导向履历”（Functional Resumé）的结构差异与适用场景。 • 熟练掌握撰写高转化率、专业得体的求职求职信（Cover Letter）的核心框架。 • 精心构建包含权威专业推荐人背书（References）的求职执业作品集（Portfolio）。 • 全方位掌握求职面试前、面试中及面试后跟进致谢信的全流程通关技巧。 • 深入理解新入职试用期（Probationary Period）内的专业执业规范与考核期待。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【核心专业术语表】Chapter 13 Key Terms (Page 195)</h3>
+                  </div>
+                </div>
+                
+            <div class="key-terms-section">
+              <div class="kt-section-header">
+                <h3 class="kt-title">KEY TERMS · 第 13 章核心专业术语速查表</h3>
+                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+              </div>
+              <div class="terms-editorial-grid">
+            
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>chronological resumé</strong></strong>
+                      <span class="etc-ipa">/ˌkrɒnəˈlɒdʒɪkl rɛzjuːmeɪ/</span>
+                    </div>
+                    <span class="etc-cn-tag">编年式时间倒序简历</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">按时间倒序详细列举个人雇佣执业历史的简历格式，从当前最新职位开始向后倒推。最适合执业历史连贯、无职业断层者。 (p. 197)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>cover letter</strong></strong>
+                      <span class="etc-ipa">/ˈkʌvər ˈlɛtər/</span>
+                    </div>
+                    <span class="etc-cn-tag">求职信</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">附在简历前页的正式商业信函，向招聘雇主介绍自己、说明应聘特定职位的由衷意愿，并精炼陈述自己何以成为最理想人选。 (p. 202)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>functional resumé</strong></strong>
+                      <span class="etc-ipa">/ˈfʌŋkʃənl rɛzjuːmeɪ/</span>
+                    </div>
+                    <span class="etc-cn-tag">机能技能型简历</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">侧重突出个人专业核心技能组与资质成就、淡化具体雇佣时间的简历格式。最适合转行新手或有明显职业空窗期者。 (p. 198)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>portfolio</strong></strong>
+                      <span class="etc-ipa">/pɔːtˈfəʊliəʊ/</span>
+                    </div>
+                    <span class="etc-cn-tag">职业成就档案集</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">收集并系统展示个人学历证书、专业培训证书、急救 CPR 执照、免疫接种记录与实训考核表的高端文件夹。 (p. 204)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>probationary period</strong></strong>
+                      <span class="etc-ipa">/prəˈbeɪʃənəri ˈpɪəriəd/</span>
+                    </div>
+                    <span class="etc-cn-tag">录用试用期</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">新雇员入职初期（通常为 3 至 6 个月）的法定考核观察阶段，雇主在此期间密切评估雇员的实际临床胜任力与团队契合度。 (p. 211)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>reference</strong></strong>
+                      <span class="etc-ipa">/ˈrɛfrəns/</span>
+                    </div>
+                    <span class="etc-cn-tag">专业推荐人</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">了解您的工作道德、技能胜任力与个人品行，并愿意正式向潜在雇主提供客观正面背书的专业人士（如临床指导教师或前主管护士）。 (p. 203)</div>
+                  </div>
+                </div>
+                </div></div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第一节：求职简历精研与专业求职信范式 (Pages 196 - 203)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">简历格式选择与求职信黄金结构 (Resumés & Cover Letters)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="13" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Your resumé is your primary marketing document. It must be clean, error-free, and tailored to the health care sector: • <strong>Chronological Resumé:</strong> Best for individuals with consistent experience in health care. Emphasizes steady career progression. • <strong>Functional Resumé:</strong> Best for recent graduates or career changers. Highlights core PSW competencies (e.g., ADL support, communication, infection control) before listing employment history. • <strong>Cover Letter Essentials:</strong> Keep it to one single page. Address the specific hiring manager by name. Paragraph 1 states the position you are applying for; Paragraph 2 highlights your strongest skills and clinical placement achievements; Paragraph 3 requests an interview and provides contact details. <br><br></p>
+                      <p class="para-cn">求职简历是支持工作者向医疗卫生机构推销自身专业价值的核心载体，必须力求格式典雅、排版严整、语法零瑕疵，且针对长期照护与居家护理的执业特点精准定制： • <strong>时间倒序简历（Chronological Resumé）：</strong> 适合在医疗长照领域拥有连贯从业经历、无长期职业断层的从业者，突出呈现阶梯式成长的职业轨迹。 • <strong>技能导向简历（Functional Resumé）：</strong> 堪称应届毕业新生与跨行业转型者的黄金利器！直接在顶栏大篇幅展示个人核心临床能力（如个人生活起居 ADL 照料、同理心医患沟通、严格院感无菌防线、身体力学安全转移），将打工经验收敛于末尾。 • <strong>专业求职信（Cover Letter）黄金三段论：</strong> 严格压缩在单页之内。首段明确陈述应聘的具体长照岗位与信息溯源；中段以实训临床表现为佐证，有力凸显自身与机构 DIPPS 价值观的崇高契合；尾段礼貌致谢并主动发出求职面试会商邀请。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-icon">📖</span>
+                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
+                      </div>
+                      <h4 class="box-title-en">BOX 13.2: Preparing for and Excelling in the Job Interview</h4>
+                    </div>
+                  </aside>
+                </div>
+                
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">专栏 13.2：求职面试全景通关秘笈：面试前、面试中与面试后的专业礼仪</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="13" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">The job interview is an opportunity to demonstrate your competence, compassion, and professional demeanor: • <strong>Before the Interview:</strong> Research the long-term care facility or home care agency thoroughly. Practice common behavioral interview questions using the STAR method (Situation, Task, Action, Result). Prepare your professional portfolio. Dress in professional business attire. Plan to arrive 10–15 minutes early. • <strong>During the Interview:</strong> Greet the interviewer with a warm smile, firm handshake, and clear eye contact. Turn off your mobile phone completely. Listen carefully to each question. Highlight client safety, dignity, and teamwork in every response. • <strong>After the Interview:</strong> Send a professional thank-you email or letter within 24 hours expressing your continued enthusiasm and gratitude for the opportunity. <br><br></p>
+                      <p class="para-cn">求职面试是全方位向用人机构展示个人专业胜任力、慈悲情怀与职业风貌的最关键时刻： • <strong>面试前全方位备战：</strong> 深入研读目标长照中心或居家护理公司的企业文化与特色专科；运用 STAR 法则（情境、任务、行动、结果）演练临床行为面试高频真题；备齐烫金职业作品集；身着得体的大方正装；提前 10 至 15 分钟抵达现场。 • <strong>面试中的沉稳风范：</strong> 保持自信温暖的微笑、沉稳有力的握手与落落大方的眼神接触；彻底关闭手机电源；认真倾听考官提问，在回答中时刻融入“案主生命安全、人格尊严（DIPPS）与跨学科团队协作”的核心灵魂。 • <strong>面试后 24 小时礼仪跟进：</strong> 面试结束后 24 小时之内，务必发送一封情真意切的感谢信（Thank-You Email），重申自身对该长照岗位的由衷向往与对面试官宝贵时间的诚挚谢意。</p>
+                    </article>
+                    
+    </main>
+
+    <footer class="editorial-colophon">
+      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
+      <p>Chapter 13: Starting Your Career · 双语沉浸学术研读版</p>
+      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch13_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'paper') {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      try {
+        if (isPaper) {
+          localStorage.setItem('psw_theme', 'paper');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        } else {
+          localStorage.setItem('psw_theme', 'default');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        }
+      } catch (e) {}
+    }
+
+    var currentFontSizeIdx = 1;
+    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
+    function adjustFontSize(delta) {
+      currentFontSizeIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontSizeIdx + delta));
+      document.documentElement.style.setProperty('--user-font-size', fontSizes[currentFontSizeIdx]);
+    }
+
+    initLanguageMode();
+
+    function toggleReaderAudioPlay() {
+      if (readerAudio.paused) {
+        readerAudio.play().then(function() {
+          isPlaying = true;
+          document.getElementById('rabPlayBtn').innerText = '⏸';
+        }).catch(function(e) { console.log(e); });
+      } else {
+        readerAudio.pause();
+        isPlaying = false;
+        document.getElementById('rabPlayBtn').innerText = '▶';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var title = el.getAttribute('data-title') || '';
+      readerAudio.currentTime = start;
+      readerAudio.play().then(function() {
+        isPlaying = true;
+        document.getElementById('rabPlayBtn').innerText = '⏸';
+      }).catch(function(e) { console.log(e); });
+
+      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
+      for (var i = 0; i < actives.length; i++) {
+        actives[i].classList.remove('audio-active');
+      }
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 13 章 正在朗读';
+    }
+
+    readerAudio.addEventListener('timeupdate', function() {
+      var cur = readerAudio.currentTime;
+      var dur = readerAudio.duration || 1500;
+      function formatTime(t) {
+        var m = Math.floor(t / 60);
+        var s = Math.floor(t % 60);
+        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+      }
+      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
+
+      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
+      var found = null;
+      for (var i = 0; i < entries.length; i++) {
+        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
+        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
+        if (cur >= start && cur < end) {
+          found = entries[i];
+          break;
+        }
+      }
+      if (found && found !== lastActiveEntry) {
+        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+        found.classList.add('audio-active');
+        lastActiveEntry = found;
+        var title = found.getAttribute('data-title');
+        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 13 章 正在朗读';
+      }
+    });
+
+    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
+      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
+      if (!card) return;
+      var opts = card.querySelectorAll('.eq-opt');
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].classList.remove('selected-correct', 'selected-wrong');
+      }
+      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
+      if (selectedKey === correctKey) {
+        rowEl.classList.add('selected-correct');
+        if (statusEl) {
+          statusEl.innerText = '✅ 回答正确！';
+          statusEl.style.color = '#166534';
+        }
+      } else {
+        rowEl.classList.add('selected-wrong');
+        if (statusEl) {
+          statusEl.innerText = '❌ 回答有误，请查阅下方临床解析';
+          statusEl.style.color = '#991b1b';
+        }
+      }
+      var rat = document.getElementById(ratId);
+      if (rat) rat.style.display = 'block';
+    }
+
+    function toggleRationale(ratId, btnEl) {
+      var box = document.getElementById(ratId);
+      if (!box) return;
+      if (box.style.display === 'none' || !box.style.display) {
+        box.style.display = 'block';
+        btnEl.innerHTML = '<span class="icon">🔽</span> 收起答案与临床精解';
+      } else {
+        box.style.display = 'none';
+        btnEl.innerHTML = '<span class="icon">💡</span> 查看权威答案与临床精解';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 8: Managing Stress, Burnout, and Personal Safety · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --user-font-size: 17px;
+      --bg-page: #f9f8f5;
+      --bg-container: #ffffff;
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --primary-navy: #1e3a8a;
+      --accent-gold: #c29b38;
+      --accent-blue: #2563eb;
+      --border-subtle: #e2e8f0;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    /* Top Sticky App Navigation & Interactive Switcher Bar */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+    }
+    .nav-left { display: flex; align-items: center; gap: 14px; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--primary-navy);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 14px;
+      background: #eff6ff;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: #dbeafe; }
+    .nav-chapter-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-chapter-title .ch-badge {
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+    }
+    
+    /* Center Segmented Language Switcher */
+    .mode-switch-segmented {
+      display: flex;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .mode-seg-btn {
+      padding: 6px 15px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: #0f172a; }
+    .mode-seg-btn.active {
+      background: #ffffff;
+      color: #1e3a8a;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .reading-util-group { display: flex; align-items: center; gap: 6px; }
+    .util-btn {
+      padding: 6px 11px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: #f8fafc; border-color: #94a3b8; color: #0f172a; }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 9999px;
+      padding: 4px 14px 4px 6px;
+    }
+    .play-circle-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 13px;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .play-circle-btn:hover { transform: scale(1.05); background: #1d4ed8; }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10.5px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    
+    /* Warm Paper Theme */
+    html.theme-paper {
+      --bg-page: #f5efe6;
+      --bg-container: #fcf9f2;
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --border-subtle: #e5ded2;
+    }
+    html.theme-paper body { background: #f5efe6; color: #2b2520; }
+    html.theme-paper .top-sticky-bar { background: rgba(245, 239, 230, 0.95); border-bottom-color: #e5ded2; }
+    html.theme-paper .mode-switch-segmented { background: #e9e1d4; border-color: #d8cebe; }
+    html.theme-paper .mode-seg-btn { color: #5c5247; }
+    html.theme-paper .mode-seg-btn.active { background: #fcf9f2; color: #2b2520; }
+    html.theme-paper .util-btn { background: #fcf9f2; border-color: #d8cebe; color: #5c5247; }
+    html.theme-paper .ambient-player { background: #ede6dc; border-color: #d8cebe; }
+    html.theme-paper .editorial-stream,
+    html.theme-paper .chapter-hero-editorial {
+      background: #fcf9f2;
+      border-color: #e5ded2;
+      box-shadow: 0 4px 24px rgba(43, 37, 32, 0.04);
+    }
+    
+    /* Layout Container */
+    .ch-editorial-flow {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 0 16px;
+    }
+    .chapter-hero-editorial {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 40px 42px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 12px;
+    }
+    .hero-title-en {
+      font-size: 30px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 18px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 13px;
+      color: #64748b;
+    }
+    
+    /* Stream Body */
+    .editorial-stream {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 44px 48px;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+    }
+    
+    /* Section Headings */
+    .editorial-section-divider { margin: 64px 0 28px; }
+    .section-divider-bar {
+      height: 2px;
+      background: linear-gradient(to right, #1e3a8a 0%, #93c5fd 60%, transparent 100%);
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+    .section-heading-card {
+      border-left: 4px solid var(--primary-navy);
+      padding-left: 20px;
+    }
+    .section-eyebrow { margin-bottom: 6px; }
+    .section-badge-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1e3a8a;
+      background: #eff6ff;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+    }
+    .sh-title-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: #1e3a8a;
+      line-height: 1.35;
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+    
+    /* Bilingual Paragraphs */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 26px;
+      padding: 12px 18px 14px 20px;
+      border-left: 3px solid transparent;
+      border-radius: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(241, 245, 249, 0.7);
+      border-left-color: #cbd5e1;
+    }
+    .bilingual-paragraph.audio-active {
+      background: #eff6ff;
+      border-left-color: var(--accent-blue);
+      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.08);
+    }
+    .para-play-indicator {
+      position: absolute;
+      left: -24px;
+      top: 14px;
+      font-size: 11px;
+      color: var(--accent-blue);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .bilingual-paragraph:hover .para-play-indicator { opacity: 0.75; }
+    .bilingual-paragraph.audio-active .para-play-indicator { opacity: 1; }
+    
+    .para-en {
+      font-size: var(--user-font-size, 17px);
+      line-height: 1.82;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      font-weight: 420;
+      letter-spacing: -0.01em;
+    }
+    .para-cn {
+      font-size: calc(var(--user-font-size, 17px) - 1.5px);
+      line-height: 1.85;
+      color: var(--text-secondary);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Editorial Boxes */
+    .editorial-box-container {
+      margin: 48px 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .box-banner-header {
+      padding: 16px 24px;
+      color: #ffffff;
+    }
+    .box-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .box-badge-icon { font-size: 14px; }
+    .box-badge-pill {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.95;
+    }
+    .box-title-en {
+      font-size: 18.5px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .box-title-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+    }
+    .box-body-content { padding: 24px 26px; }
+    .box-clause-item {
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+    }
+    .box-clause-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .clause-en { font-size: 15.5px; line-height: 1.7; color: var(--text-main); margin-bottom: 5px; }
+    .clause-cn { font-size: 14.5px; line-height: 1.65; color: var(--text-secondary); }
+    
+    .box-theme-sage { border: 1.5px solid #86efac; }
+    .box-theme-sage .box-banner-header { background: linear-gradient(135deg, #065f46 0%, #047857 100%); }
+    .box-theme-sage .box-body-content { background: #f0fdf4; }
+    
+    .box-theme-teal { border: 1.5px solid #99f6e4; }
+    .box-theme-teal .box-banner-header { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
+    .box-theme-teal .box-body-content { background: #f0fdfa; }
+    
+    .box-theme-lavender { border: 1.5px solid #ddd6fe; }
+    .box-theme-lavender .box-banner-header { background: linear-gradient(135deg, #581c87 0%, #6b21a8 100%); }
+    .box-theme-lavender .box-body-content { background: #faf5ff; }
+    
+    .box-theme-amber { border: 1.5px solid #fde68a; }
+    .box-theme-amber .box-banner-header { background: linear-gradient(135deg, #9a3412 0%, #c2410c 100%); }
+    .box-theme-amber .box-body-content { background: #fffbeb; }
+    
+    .box-theme-terracotta { border: 1.5px solid #cbd5e1; }
+    .box-theme-terracotta .box-banner-header { background: linear-gradient(135deg, #334155 0%, #1e293b 100%); }
+    .box-theme-terracotta .box-body-content { background: #f8fafc; }
+    
+    .box-theme-case { border: 1.5px solid #fed7aa; }
+    .box-theme-case .box-banner-header { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); }
+    .box-theme-case .box-body-content { background: #fffaf0; }
+    
+    /* Key Terms Grid */
+    .key-terms-section {
+      margin: 44px 0;
+      padding: 26px;
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+    .kt-subtitle { font-size: 13px; color: #64748b; margin-bottom: 18px; }
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 14px;
+    }
+    .editorial-term-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      transition: all 0.15s;
+    }
+    .etc-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+    .etc-word { font-size: 15px; color: var(--primary-navy); font-weight: 700; }
+    .etc-ipa { font-size: 12px; color: #94a3b8; font-family: monospace; margin-left: 6px; }
+    .etc-cn-tag { font-size: 12px; font-weight: 600; color: #0369a1; background: #f0f9ff; padding: 2px 8px; border-radius: 4px; }
+    .etc-def-cn { font-size: 13.5px; line-height: 1.55; color: #475569; }
+    
+    /* Quiz Cards */
+    .editorial-quiz-card {
+      margin: 28px 0;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .eq-num { font-size: 12px; font-weight: 700; color: #2563eb; letter-spacing: 0.05em; }
+    .eq-status { font-size: 12px; font-weight: 600; color: #64748b; }
+    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
+    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .eq-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .eq-opt:hover { background: #f1f5f9; border-color: #cbd5e1; }
+    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
+    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
+    .opt-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      flex-shrink: 0;
+    }
+    .opt-text { font-size: 14px; line-height: 1.5; color: #334155; }
+    .btn-toggle-rat {
+      padding: 6px 14px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .eq-rationale-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 6px; }
+    .rat-content { color: #1e293b; }
+    
+    /* Lists */
+    .editorial-list-item {
+      margin-bottom: 12px;
+      padding-left: 14px;
+      position: relative;
+      list-style: none;
+    }
+    .editorial-list-item::before {
+      content: "•";
+      color: var(--primary-navy);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin: 28px 0; }
+    .clinical-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .clinical-table th { background: #f8fafc; padding: 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #1e293b; text-align: left; }
+    .clinical-table td { padding: 12px; border: 1px solid #e2e8f0; color: #334155; }
+    
+    /* Tri-State Mode Directives */
+    html.mode-en .para-cn,
+    html.mode-en .eq-stem-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn { display: none !important; }
+    html.mode-en .para-en { font-size: calc(var(--user-font-size, 17px) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
+    
+    html.mode-cn .para-en,
+    html.mode-cn .eq-stem-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en { display: none !important; }
+    html.mode-cn .para-cn { font-size: calc(var(--user-font-size, 17px) - 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
+    
+    /* Colophon */
+    .editorial-colophon { text-align: center; padding: 48px 24px; color: var(--text-muted); font-size: 13px; }
+    
+    @media (max-width: 900px) {
+      .top-sticky-bar { flex-wrap: wrap; gap: 8px; padding: 8px 14px; }
+      .nav-chapter-title { display: none; }
+      .reading-util-group { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html#toc" class="nav-home-btn">← 返回全书总目录</a>
+      <div class="nav-chapter-title">
+        <span class="ch-badge">CH 08</span>
+        <span>Managing Stress, Burnout, and Personal Safety</span>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">
+        <span class="seg-icon">🌐</span> 中英双语
+      </button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">
+        <span class="seg-icon">🔤</span> 仅英文
+      </button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">
+        <span class="seg-icon">🇨🇳</span> 仅中文
+      </button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">📖 护眼纸色</button>
+        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 8 章 · 点选任意段落开始朗读</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 24:10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ch-editorial-flow">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-tag">CHAPTER 08</span>
+        <span class="eyebrow-sep">·</span>
+        <span class="eyebrow-desc">SORRENTINO 5TH EDITION · 原版中英双语精研</span>
+      </div>
+      <h1 class="hero-title-en">Managing Stress, Burnout, and Personal Safety</h1>
+      <h2 class="hero-title-cn">压力管理、职业倦怠预防与人身执业安全</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">📖 Pages 112–128 · 10 道全真自测题</span>
+        <span class="meta-item">🔊 支持段落轻触点读 · 专业真人声原音导学</span>
+      </div>
+    </header>
+
+    <main class="editorial-stream">
+      <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
+                  </div>
+                </div>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<div class="chapter-h1-anchor" style="display:none;">Chapter 8: Managing Stress</div>
+<div class="chapter-h1-anchor" style="display:none;">第 8 章：压力管理与应对策略（原版逐字逐句 17 页全文典藏版）</div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 8 Opener & Learning Objectives (Page 112)</h3>
+                  </div>
+                </div>
+                
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="0.0" data-end="44.28" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Define stress, stressor, eustress, acute stress, and chronic stress. • Describe the physical, emotional, behavioural, and cognitive signs and symptoms of stress. • Explain burnout and identify its warning signs in healthcare workers. • Describe common psychological defence mechanisms used to cope with stress. • Identify effective personal stress management and self-care strategies. • Apply the SMART framework to set realistic goals and manage time efficiently. • Explain the step-by-step problem-solving process. • Describe professional guidelines for resolving conflict with clients, families, and co-workers. <br><br></p>
+                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确定义压力（Stress）、压力源（Stressor）、良性良效压力（Eustress）、急性压力（Acute Stress）与慢性压力（Chronic Stress）。 • 详尽阐述压力在人体生理身体、情绪心理、日常行为以及思维认知维度上的典型体征与临床警示信号。 • 深入阐释职业倦怠综合征（Burnout）的病理机制，敏锐识别医护照料人员常见的早期预警征兆。 • 详尽辨析人类在遭遇心理挫折压力时常用的各类无意识心理防御机制（Defence Mechanisms）。 • 熟练掌握并践行科学高效的个人压力疏导、情绪韧性复原与自我关怀（Self-Care）实务策略。 • 熟练运用 SMART 目标管理法则制定切实可行的工作日程，实现卓越高效的时间管理。 • 熟练掌握并规范运用循序渐进的科学“六步问题解决模型”（Problem-Solving Process）。 • 熟练掌握在工作场所化解与案主、家属及协作同事之间人际冲突（Conflict Resolution）的专业沟通指引。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【核心专业术语表】Chapter 8 Key Terms (Page 113)</h3>
+                  </div>
+                </div>
+                
+            <div class="key-terms-section">
+              <div class="kt-section-header">
+                <h3 class="kt-title">KEY TERMS · 第 8 章核心专业术语速查表</h3>
+                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+              </div>
+              <div class="terms-editorial-grid">
+            
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>acute stress</strong></strong>
+                      <span class="etc-ipa">/əˈkjuːt strɛs/</span>
+                    </div>
+                    <span class="etc-cn-tag">急性压力</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">持续时间短暂、由突发偶发性生活事件激发的急性应激反应状态。 (p. 113)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>anxiety</strong></strong>
+                      <span class="etc-ipa">/æŋˈzaɪəti/</span>
+                    </div>
+                    <span class="etc-cn-tag">焦虑不安</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">一种模糊、莫名的内心局促不安与忧虑感，往往伴随大难临头、迫在眉睫的潜在危险预感。 (p. 116)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>burnout</strong></strong>
+                      <span class="etc-ipa">/ˈbɜːnaʊt/</span>
+                    </div>
+                    <span class="etc-cn-tag">职业倦怠综合征</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">一种身体极度耗竭、情绪彻底枯竭与心智能量衰竭的终末病理状态，伴随深重的沮丧感、犬儒冷漠与极度无力感。 (p. 113)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>chronic stress</strong></strong>
+                      <span class="etc-ipa">/ˈkrɒnɪk strɛs/</span>
+                    </div>
+                    <span class="etc-cn-tag">慢性持续性压力</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">长期迁延存在、无法有效释放的持续性高压状态，是诱发不可逆职业倦怠与心身器质性病变的根源。 (p. 113)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>conflict</strong></strong>
+                      <span class="etc-ipa">/ˈkɒnflɪkt/</span>
+                    </div>
+                    <span class="etc-cn-tag">人际冲突</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">在彼此对立的利益诉求、价值取向、工作风格或思维理念之间爆发的正面摩擦、争端与对立。 (p. 114)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>emotional pressure</strong></strong>
+                      <span class="etc-ipa">/ɪˈməʊʃənl ˈprɛʃər/</span>
+                    </div>
+                    <span class="etc-cn-tag">心理情感负荷</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">感到自身被外界要求或期望生硬推向并超越了身心承受极限与机能极限的重压感。 (p. 114)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>eustress</strong></strong>
+                      <span class="etc-ipa">/ˈjuːstrɛs/</span>
+                    </div>
+                    <span class="etc-cn-tag">良性积极压力</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">一种对机体有益、能够激发个体潜能、带来深层自我实现感、振奋活力与成就感的良效健康压力。 (p. 113)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>stress</strong></strong>
+                      <span class="etc-ipa">/strɛs/</span>
+                    </div>
+                    <span class="etc-cn-tag">压力 / 应激</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">机体与心灵面对外部特定挑战性事件或紧急情境时，所产生的全方位情绪反应、外显行为模式或生理身体应激改变。 (p. 113)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>stressor</strong></strong>
+                      <span class="etc-ipa">/ˈstrɛsər/</span>
+                    </div>
+                    <span class="etc-cn-tag">压力源</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">引发机体产生压力反应的具体外部客观事件、生理变化或心理情境。 (p. 113)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>validate</strong></strong>
+                      <span class="etc-ipa">/ˈvælɪdeɪt/</span>
+                    </div>
+                    <span class="etc-cn-tag">情感确认 / 共情认可</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">主动倾听并以同理心承认、接纳、证实并正面肯定案主内心所体验到的真实情绪感受。 (p. 117)</div>
+                  </div>
+                </div>
+                </div></div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第一节：压力本质、应激反应与职业倦怠 (Pages 113 - 116)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">压力的本质、分类与五大维度应激体征 (The Nature of Stress & Five Dimensions)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="The Nature of Stress & Five Dimensions" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Stress is a normal part of life that everyone experiences. Stress is the emotional, behavioural, or physical response to an event or situation. The events that trigger stress are called stressors. Stressors can be physical (illness, pain, lack of sleep), psychological (fear, anxiety, loss), social (relationship breakdowns, conflicts), or environmental (noise, extreme temperatures). Stress is not inherently negative. Psychologists differentiate between two fundamental forms: • Eustress: Healthy, positive stress that energizes, motivates, and produces feelings of accomplishment and personal growth (e.g., passing a licensing exam, starting a rewarding career, planning a wedding). • Distress: Negative, overwhelming stress that impairs physical and mental health, causing suffering and dysfunction. <br><br>Stress can also be categorized by duration: • Acute Stress: Short in duration, triggered by immediate, temporary challenges (e.g., traffic jams, minor disagreements, sudden alarms). Once the event passes, the body returns to baseline homeostasis. • Chronic Stress: Ongoing, unrelenting pressure that lasts for months or years (e.g., caring for a family member with severe dementia, chronic financial poverty, prolonged workplace understaffing). <br><br>When confronted with a perceived threat, the body activates the ancient "fight-or-flight" sympathetic nervous system response: adrenaline and cortisol surge, heart rate and blood pressure soar, breathing accelerates, muscles tense, and digestion slows down to redirect blood to vital organs. Stress reverberates across all five dimensions of the whole person (TABLE 8.1): • Physical: Headaches, chronic fatigue, muscle tension, sleep disturbances, gastrointestinal upset, weakened immune resistance, elevated blood pressure. • Emotional: Irritability, mood swings, anxiety, depression, restlessness, feeling overwhelmed, crying spells. • Cognitive: Poor concentration, memory lapses, indecision, difficulty solving problems, racing thoughts. • Social: Withdrawal from friends and family, strained relationships, increased conflict, loneliness. • Spiritual: Loss of life purpose, feelings of inner emptiness, questioning personal faith, despair. <br><br></p>
+                      <p class="para-cn">压力（Stress）是人类日常生命历程中不可分割的正常生理与心理机能。简而言之，压力是机体面对外部特定挑战事件或严峻处境时，所产生的情绪反应、外显行为以及生理身体应激反应的总和。那些诱发压力爆发的具体诱因事件被称为“压力源”（Stressors）。压力源既可以是生理性的（如身体慢性剧痛、重症感染、长期严重睡眠剥夺），也可以是心理性的（如前途未卜的恐惧、丧偶哀伤），还可以是社会人际性的（如家庭破裂、同事摩擦）或物理环境性的（如机器刺耳噪声、酷暑严寒）。 在现代应激心理学中，压力绝非完全是消极有害的。心理学家将其严谨区分为两大形态： • 良性良效压力（Eustress）：一种健康、积极且富有建设性的正向压力，能够激发交感神经兴奋度、唤醒机体潜能、带来充实的斗志与自我实现感（例如备战 PSW 毕业执业资格考、迎接新生命的降生、筹备盛大的婚礼）。 • 劣性痛苦压力（Distress）：一种超出机体代偿极限、引发身心功能紊乱与痛苦煎熬的负向超负荷压力。 <br><br>从时间维度划分，压力呈现为两大走向： • 急性压力（Acute Stress）：持续时间短暂、由偶发突发事件诱发的急性应激（例如早高峰堵车迟到、突然遭遇火警警报）。一旦危机解除，交感神经迅速退潮，机体迅速重归生理内环境稳态（Homeostasis）。 • 慢性压力（Chronic Stress）：长年累月迁延不愈、持续处于高压紧绷状态的慢性侵蚀（例如常年独自居家照护晚期重度阿尔茨海默病配偶、深陷旷日持久的贫困深渊、长期处于病区严重缺员的超负荷倒班中）。 <br><br>当大脑杏仁核感知到迫在眉睫的威胁时，机体会瞬间激活古老的“战或逃”（Fight-or-Flight）交感神经应激机制：肾上腺素与皮质醇应激激素如潮水般泵入血液，心率飙升、血压骤增、支气管扩张、全身骨骼肌紧绷充血，同时胃肠消化道血液被强制抽调以优先保证心脑肺的急救供血！ 压力会在全人生命的五大维度中引发剧烈的临床病理风暴（参见 TABLE 8.1）： • 生理身体维度：顽固性神经性偏头痛、慢性疲劳综合征、肩颈肌肉僵硬痉挛、失眠早醒、恶心腹泻肠易激、机体免疫力崩解易感、高血压冠心病。 • 心理情绪维度：易怒暴躁、情绪阴晴不定、惊恐焦虑、凄苦绝望、情感麻木脆弱、动辄掩面痛哭。 • 智力认知维度：注意力无法集中、丢三落四健忘、优柔寡断无法决策、脑雾茫然、思维断片。 • 社交人际维度：社交退缩、逃避亲友聚会、人际关系剑拔弩张、孤芳自赏、深沉的孤独疏离。 • 精神心灵维度：生命意义感彻底幻灭、内心空虚荒芜、对过往宗教信仰产生剧烈怀疑动摇、万念俱灰。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">医护工作者的隐形杀手：职业倦怠综合征 (Burnout in Healthcare Workers)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="185.02" data-end="270.65" data-title="Burnout in Healthcare Workers" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Chronic, unresolved workplace stress often leads to burnout-a devastating state of physical, emotional, and mental exhaustion. Burnout is widespread among healthcare providers and support workers due to constant exposure to client suffering, heavy physical workloads, understaffing, and emotional demands. Burnout develops gradually and is characterized by three core clinical hallmarks: 1. Emotional Exhaustion: Feeling completely depleted, drained, and emotionally empty; dreading going to work each morning. 2. Depersonalization and Cynicism: Developing a cold, uncaring, cynical, or hardened attitude toward clients and colleagues; viewing clients as burdensome objects or task numbers rather than human beings. 3. Reduced Personal Accomplishment: Feeling ineffective, useless, and incompetent; believing that nothing you do makes any difference. <br><br>Warning Signs of Burnout in Support Workers: • Chronic fatigue that does not improve after sleep or days off. • Frequent somatic complaints (headaches, backaches, gastrointestinal ulcers). • Increased irritability, short temper, and frequent sarcasm toward clients and co-workers. • Emotional detachment, callousness, and loss of empathy. • Procrastination, chronic tardiness, and increased absenteeism. • Turning to maladaptive coping mechanisms, such as increased consumption of alcohol, tobacco, prescription sedatives, or overeating. <br><br></p>
+                      <p class="para-cn">长年累月未获化解的职场慢性高压，最终必然会引爆医护人员的头号隐形杀手——“职业倦怠综合征”（Burnout）。这是一种身体机能彻底透支、情感彻底枯竭、心智完全瓦解的重度病理心理状态。在常年目睹案主病痛临终、承受繁重翻身搬抬重体力劳动、面临病区常态化缺员以及高强度情绪劳动的医护一线，支持工作者是职业倦怠的高危受害者。 职业倦怠的发生绝非一朝一夕，而是呈现为经典的“三联征”渐进恶化过程： 1. 情感枯竭（Emotional Exhaustion）： 感觉内在所有的情感与热情被彻底掏空、心力交瘁；每天清晨睁开双眼一想到要踏进养老院病房便感到窒息与极度抗拒。 2. 去人格化与冷漠犬儒（Depersonalization & Cynicism）： 心理防御机制失控，对外展现出冰冷、麻木、冷嘲热讽与缺乏同理心的冷酷铠甲；在潜意识里将活生生的受助长者物化为冷冰冰的“翻身包袱”或“病床代号”。 3. 个人成就感严重崩塌（Reduced Personal Accomplishment）： 深陷自责与习得性无助，极度怀疑自我职业价值，感到自己无论如何拼命劳作都无法改变任何事，自认是个彻底失败的照护者。 <br><br>支持工作者爆发职业倦怠的典型警示红灯信号： • 顽固性慢性疲劳：即便经过周末深度睡眠或连续倒休，体魄依然沉重酸痛如灌铅。 • 频繁的躯体化心身反应：无诱因的严重偏头痛、顽固性下腰背肌筋膜炎、胃酸反流胃溃疡。 • 易激惹与攻击性言行：极易因微小琐事失控发飙，在床旁对长者和同事频繁使用刺耳的冷嘲热讽。 • 情感剥离与同理心丧失：对长者的呻吟呼救感到麻木不仁甚至内心滋生厌恶。 • 严重的拖延怠工、经常性迟到早退、频繁借故请病假旷工。 • 诉诸毁灭性的不良代偿行为：下班后依赖大量酗酒麻醉、抽烟成瘾、滥用镇静催眠处方药或暴饮暴食。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第二节：心理防御机制全景与自我关怀策略 (Pages 116 - 120)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">应对压力的心理防御机制全解析 (Psychological Defence Mechanisms)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="Psychological Defence Mechanisms" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">When anxiety and emotional pressure threaten to overwhelm the conscious mind, individuals automatically use psychological defence mechanisms. A defence mechanism is an unconscious mental strategy used to protect oneself from painful emotions, anxiety, and guilt. Defence mechanisms are normal and healthy when used temporarily to buffer acute shock. However, when overused as a permanent way of life, they distort reality and prevent constructive problem-solving. Common Defence Mechanisms (see also Chapter 37): • Denial: Refusing to accept an unpleasant or painful reality. (Example: A smoker diagnosed with severe emphysema refuses to stop, insisting the diagnosis is mistaken). • Displacement: Redirecting angry or aggressive feelings from the original source of frustration onto a less threatening substitute person or object. (Example: A support worker who is scolded by a demanding supervisor comes home and yells at her children). • Projection: Attributing one's own unacceptable feelings, impulses, or faults onto another person. (Example: A worker who feels lazy accuses her partner of never doing any work). • Rationalization: Creating logical, plausible, but false excuses to justify unacceptable behaviour or disappointment. (Example: "I only failed my clinical exam because the instructor hates me"). • Reaction Formation: Acting in a manner directly opposite to one's true unconscious feelings. (Example: Being excessively sweet and complimentary to a co-worker you secretly resent). • Regression: Reverting to earlier, immature behaviours characteristic of a younger developmental stage. (Example: An adult client throws a temper tantrum or sucks their thumb when frightened). • Repression: Involuntarily pushing painful, traumatic memories or unacceptable impulses deep into the unconscious mind. • Sublimation: Channeling unacceptable or aggressive impulses into socially productive, positive activities. (Example: A stressed worker channels intense frustration into intense physical exercise or painting). • Compensation: Overachieving in one area to make up for perceived inadequacies in another area. • Conversion: Transforming emotional distress and psychological conflict into actual physical symptoms, such as temporary blindness or paralysis, with no organic cause. <br><br></p>
+                      <p class="para-cn">当巨大的焦虑与情感重压即将冲垮意识堤坝时，人类的心智会自动启动一系列无意识心理防御机制（Defence Mechanisms）。心理防御机制是个体为了保护自我自尊免遭痛苦情绪、极度焦虑与内疚侵蚀，而无意识采取的心智适应策略。 在遭遇突发心理创伤的初期，短期动用防御机制具有重要的生理保护缓冲价值；然而，倘若长年累月将其作为逃避现实的永久生活方式，必然会导致对客观事实的严重歪曲，彻底阻断积极解决问题的出路。 临床心理学中经典的十大防御机制深度辨析： • 否认（Denial）：拒绝承认客观存在的痛苦现实。（典型范例：一位肺功能衰竭的严重肺气肿老烟民，坚称医院仪器坏了，顽固拒绝戒烟）。 • 替代/置换（Displacement / 踢猫效应）：将内心深处受挫积累的怒火与攻击冲动，从原本强大的挑衅源头，转嫁发泄到某个弱小、不具威胁的替罪羊身上。（典型临床范例：支持工作者在护士站遭到苛刻主管的当众训斥，内心憋屈窝火，下班回到家后因一点鸡毛蒜皮对年幼的儿女大发雷霆）。 • 投射（Projection）：将自身内在不可告人、令人羞愧的阴暗想法、过失或负面欲望，反客为主地强加在他人身上。（典型范例：一名自己当班偷懒耍滑的护工，却四处向主管告状指责搭档“整天偷懒不干活”）。 • 合理化/文饰作用（Rationalization / 酸葡萄心理）：编造貌似合情合理、实则虚假的借口，为自己的失败过错或失德行为寻找心理台阶。（典型范例：“我之所以操作考试不及格，完全是因为考官故意针对我、给我穿小鞋！”）。 • 反向形成（Reaction Formation）：外显言行举止与内心的真实潜意识情感呈现 180 度大转弯。（典型范例：内心对某位挑剔难缠的同事厌恶至极，表面上却表现得异乎寻常的谄媚逢迎、甜言蜜语）。 • 退行（Regression）：在遭受重大心理挫败时，心理行为模式倒退回早年幼年期幼稚可笑的发展阶段。（典型范例：一位成年长者在得知手术风险后，像三岁幼儿一样躺在地上蹬腿大哭大闹、吮吸大拇指）。 • 压抑（Repression）：潜意识不受控制地将极具创伤性的痛苦记忆或禁忌冲动，生硬死死深埋在潜意识最深处，表面上似乎彻底忘却。 • 升华（Sublimation）：心理防御机制中最高阶、最健康的积极典范！将内心受挫的攻击攻击性愤怒能量，转化为受到社会崇敬赞许的积极建设性活动（例如将极度的职场委屈化为在健身房挥汗如雨的拳击、或创作震撼人心的油画文学巨作）。 • 补偿（Compensation）：通过在某一个特定领域拼搏取得辉煌成就，以此掩盖自己在另一个生理或社交领域的自卑缺陷。 • 躯体化转换（Conversion）：将内心的严重精神心理冲突与愧疚恐惧，直接转换为真实的躯体神经生理症状（如突发心因性失明、癔症性肢体瘫痪，但脑 CT 与神经生化检查毫无器质性病变）。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">支持工作者的自我关怀与压力管理策略 (Self-Care & Stress Reduction Strategies)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="409.49" data-end="506.78" data-title="Self-Care & Stress Reduction Strategies" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Healthcare workers cannot pour from an empty cup. Caring for yourself is an essential ethical and professional prerequisite to caring for others. Evidence-based stress management strategies: 1. Physical Self-Care: • Nutrition: Eat regular, nutrient-dense meals rich in whole grains, lean proteins, vegetables, and fruit; avoid relying on sugary snacks, excessive caffeine, or fast foods. • Restorative Sleep: Prioritize 7 to 8 hours of uninterrupted sleep; maintain a consistent bedtime routine, and keep bedrooms dark, cool, and free from electronic screens. • Regular Physical Activity: Engage in at least 150 minutes of moderate cardiovascular exercise per week (walking, swimming, cycling) to burn off circulating stress hormones. 2. Emotional and Psychological Strategies: • Practice Deep Diaphragmatic Breathing: Slow, deep abdominal breathing stimulates the vagus nerve, immediately shifting the autonomic nervous system from sympathetic fight-or-flight into parasympathetic calm. • Mindfulness and Meditation: Dedicate 10 minutes daily to mindfulness practice, progressive muscle relaxation, or guided imagery to anchor awareness in the present moment. • Assertiveness Training: Learn to set healthy professional boundaries and say "No" firmly and politely to unreasonable overtime requests without overwhelming guilt. • Talk It Out: Confide in trusted friends, mentors, or professional counsellors through Employee Assistance Programs (EAP). • Cultivate Joy and Hobbies: Engage in non-medical creative interests-gardening, music, reading, crafting-that nurture your soul. <br><br></p>
+                      <p class="para-cn">医护工作者必须牢记一条朴素的铁律：一只干涸见底的空水壶，绝不可能注满他人的水杯！关爱呵护好自身的生命健康，是守护受助案主生命最崇高的职业道德前提与专业基石。 现代临床循证医学推崇的个人压力疏导与自我关怀实操策略： 1. 生理身体维度的自我滋养： • 营养膳食：保障规律进食三餐，摄入富含全谷物、优质精瘦蛋白、新鲜深色蔬菜与水果的抗炎地中海饮食；杜绝依靠高糖奶茶、超剂量浓咖啡与油炸快餐来透支提神。 • 恢复性深度睡眠：严格捍卫每晚 7 至 8 小时的连续深度睡眠；固定作息生物钟，确保卧室昏暗、凉爽通风，临睡前半小时彻底远离一切发光手机屏幕。 • 规律躯体有氧运动：保障每周累计至少 150 分钟的中等强度有氧运动（快走、游泳、动感单车），借由肌肉泵血强力代谢冲刷掉血液中积聚的皮质醇与乳酸。 2. 心理与情绪维度的抗压修炼： • 践行腹式深呼吸法（Diaphragmatic Breathing）：以鼻孔缓慢深吸气 4 秒使腹部如气球鼓起，屏息 2 秒，随后缩唇如吹口哨般缓慢呼气 6 秒；该动作能够直接强烈刺激迷走神经，在短短几十秒内强制将自主神经系统从“战或逃”的狂暴应激状态切换至副交感神经的沉静宁息状态！ • 正念冥想与渐进式肌肉放松（Mindfulness & Progressive Relaxation）：每天抽离出 10 分钟净土，闭目静坐，从脚趾至头顶逐一感受肌肉的紧绷与彻底松沉，将注意力全然锚定在当下的呼吸起伏上。 • 坚定自信的果断沟通（Assertiveness）：划定清晰的执业心理界限，面对不合理的恶意加班摊派或逾越照护职责的无理要求，学会温和、坚定且不带内疚感地清晰表达拒绝（“No”）。 • 倾诉疏解机制：善于利用机构提供的“员工心理援助计划”（EAP），向资深临床心理督导或挚友敞开心扉倾诉，卸下沉重的心理包袱。 • 留存生活小确幸：下班后彻底脱下工装，投身于园艺侍弄、器乐弹奏、书法阅读等充满生机的纯粹爱好中，让心灵在烟火气中重新满血复活！ <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第三节：高效时间管理与 SMART 目标法则 (Pages 120 - 121)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">掌控时间与战胜拖延症 (Time Management in Support Work)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management in Support Work" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Time management is the art of planning, organizing, and controlling how you spend the hours in your workday to accomplish all necessary client care tasks safely, effectively, and calmly. Poor time management leads to rushing, errors, client dissatisfaction, and acute anxiety. Key Time-Management Principles for Support Workers: 1. Plan Your Day: Arrive early for your shift. Review your assignment sheet and care plans thoroughly before entering client rooms. 2. Prioritize Tasks: Distinguish between tasks that are URGENT (e.g., answering a sounding alarm, assisting a toileting emergency, reporting chest pain) and tasks that are IMPORTANT but can wait (e.g., tidying a linen closet, restocking supplies). Always perform essential hygiene and clinical care first. 3. Establish Consistent Routines: Organize tasks in a logical sequence that aligns with client preferences (e.g., gathering all bath linens and hygiene supplies before undressing the client to avoid leaving the room). 4. Combine Tasks Naturally: While providing a bed bath or assisting with dressing, engage the client in active conversation, assess skin integrity, and perform passive range-of-motion exercises simultaneously. 5. Avoid Procrastination: Tackle challenging or unpleasant tasks promptly early in the shift when energy levels are highest, rather than putting them off until the end of the day when fatigue sets in. 6. Re-evaluate and Adapt: Remain flexible. Healthcare is unpredictable; when unexpected emergencies occur, pause, take a deep breath, reprioritize your remaining tasks, and seek help from colleagues. <br><br></p>
+                      <p class="para-cn">时间管理是一门科学统筹、周密规划并掌控当班工时的专业艺术，其终极目标在于安全、从容、高质量地交付全部个案照护任务，绝不忙乱焦躁。拙劣的时间管理必然导致盲目赶工、跌倒用药差错频发、长者满腹怨气以及自身焦虑失控。 一线支持工作者必须奉行的高效时间管理黄金准则： 1. 晨起预先规划： 提前 10 至 15 分钟抵达病区完成交接班；在推开长者房门前，全盘审读手中的当班排班任务单（Assignment Sheet）与长者最新护理计划表。 2. 依据轻重缓急确立“优先矩阵”（Prioritizing Tasks）： 严谨区分“迫在眉睫的紧急任务”（Urgent：如刺耳的防跌倒坐垫警报响起、长者急迫如厕呼救、突发胸痛胸闷呈报）与“重要但无生命危险的常规杂务”（Important but non-urgent：如整理被服布草推车、护士站物料盘点）。永远将直接关乎长者安全与基础尊严的生理护理排在第一序列！ 3. 构建严谨闭环的标准化操作流程： 在动手前把逻辑顺序梳理周全：例如在为长者脱衣助浴前，预先将干毛巾、香皂、干净更换内衣、润肤霜在伸手可及处全部备齐，杜绝因遗漏物品而把赤身裸体的长者孤零零丢在浴室吹冷风的严重失职！ 4. 巧妙实施“复合式多维照护”（Combining Tasks）： 在协助长者温水擦浴或晨间穿衣的同时，温和亲切地与老人拉家常（心理疏导），同时眼睛细致审视其骶尾部皮肤是否发红压疮（皮肤评估），并顺势指导长者完成腕踝关节的主动旋转活动（康复训练），一举多得！ 5. 战胜致命的拖延恶习（Avoid Procrastination）： 把最艰巨、最棘手或最耗费心力的护理硬骨头（如失禁排泄物重度污染后的全面清洗消毒），排在体力充沛、注意力高度集中的接班前半程果断拿下，切勿拖延至下班前精疲力竭时手忙脚乱。 6. 动态复盘与从容变通（Re-evaluate & Adapt）： 在医疗照护现场，唯一不变的就是突发变故！面对意料之外的长者突发险情，先停步、做一次腹式深呼吸，迅速调整后续任务优先次序，果断向对班同仁举手求助，杜绝硬撑死扛！ <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">SMART 目标管理法则在照护中的落地应用 (The SMART Goal Framework)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="The SMART Goal Framework" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Setting clear, well-defined goals is a cornerstone of both personal stress management and successful client care planning. The SMART framework provides a systematic template for crafting achievable objectives: • S - Specific: Clear, precise, and unambiguous. What exactly is to be accomplished? (Instead of "I will be more organized", use "I will prepare all bath supplies before entering the client's room"). • M - Measurable: Concrete criteria for tracking progress. How will you know when the goal is achieved? (e.g., "I will complete morning hygiene for Mr. Smith within 45 minutes"). • A - Achievable: Realistic and attainable given current abilities, resources, and time constraints. Unrealistic goals generate frustration and chronic stress. • R - Realistic (Relevant): Aligns with your overarching job responsibilities, client care plans, and personal values. • T - Timely: Grounded within a clear, defined timeframe or deadline. When will this goal be accomplished? (e.g., "By 10:30 AM each morning"). <br><br></p>
+                      <p class="para-cn">树立清晰、量化、切实可行的行动目标，是击碎职场迷茫、抵御工作压力的指路明灯。在加拿大现代支持护理管理中，广泛运用经典的“SMART 目标法则”来指引日常照护落地： • S - 明确具体（Specific）：目标必须清晰精准，杜绝一切模棱两可的大话空话！（摒弃“我今天上班要麻利点”这种模糊口号，改用精准指令：“我在推门进房前，必须把史密斯先生助浴所需的 2 条大浴巾、无泪沐浴露与全套换洗内衣在操作台摆齐到位”）。 • M - 可量化评估（Measurable）：必须设立客观可衡量的核验指标，达成情况一目了然！（例如：“我将协助史密斯先生完成晨间口腔护理、会阴擦洗与轮椅移位的时间，严格稳固在 40 至 45 分钟内完成”）。 • A - 具有可达成性（Achievable）：充分考量现场人力、长者体力耐受度与自身技能极限，目标设定必须跳一跳够得着；盲目设定超出人体极限的狂妄目标只会催生巨大的挫败与自责。 • R - 现实且高度相关（Realistic / Relevant）：目标必须与案主当下的临床护理计划大纲、安全规范以及机构规章深度契合，解决真正核心痛点。 • T - 具有明确的时限约束（Timely）：设定明确的时间节点与截止时钟（例如：“在每天上午 10:30 之前，协助老人从床上安全移位至活动室轮椅上准备用上午点心”）。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第四节：临床决策制定与六步问题解决模型 (Pages 121 - 124)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">科学决策与临床批判性思维 (Decision-Making in Clinical Support)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Decision-Making in Clinical Support" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Support workers make dozens of clinical decisions each day. Decision-making is the process of choosing the best course of action among several alternatives. Good decision-makers are: • Focused: Keeping client safety, comfort, and independence as the supreme guide. • Flexible: Ready to modify plans instantly when client conditions shift. • Decisive: Confident in executing care within their scope of practice, without paralyzing hesitation. <br><br>When faced with an unexpected dilemma or complex challenge, support workers should utilize the systematic Six-Step Problem-Solving Process: 1. Identify the Problem: State the exact difficulty clearly and objectively. Distinguish between symptoms and the root cause. (Example: "Mrs. Clark refuses to take her morning bath and is crying"). 2. Analyze the Problem: Gather facts and examine the underlying reasons. Why is this occurring? (Is Mrs. Clark experiencing joint pain? Is she cold? Is she fearful of water? Is the bathroom drafty?). 3. Brainstorm Potential Solutions: Think creatively and generate multiple options without premature judgement. (Option A: Reschedule bath to the afternoon; Option B: Provide a warm bed bath instead; Option C: Check with nurse regarding pre-bath pain medication; Option D: Warm up the bathroom and play soothing music). 4. Select the Best Solution: Evaluate each alternative based on safety, client preferences, dignity, and facility policy, then choose the optimal path. 5. Implement the Solution: Carry out the chosen action calmly, professionally, and with full communication. 6. Evaluate the Outcome: Assess the result. Did the chosen solution resolve the problem? If not, return to step 3, re-examine the facts, and try an alternative strategy. <br><br></p>
+                      <p class="para-cn">一线支持工作者在短短一个轮班中，需要临场做出上百个大大小小的护理决策。“决策制定”（Decision-Making）是指在诸多彼此竞合的备选行动方案中，科学甄别并挑选出最佳行动路径的思维过程。卓越的临床决策者必然具备三大特质： • 专注坚定（Focused）：永远将受助长者的人身安全、舒适体验与自立自主作为最高指南针。 • 敏捷变通（Flexible）：当长者身体指征或情绪骤变时，能够毫不犹豫地灵活调整既定方案。 • 果敢决断（Decisive）：在法律允许的执业范畴（Scope of Practice）内，从容笃定地执行专业动作，绝不在危急关头优柔寡断。 <br><br>面对棘手的突发护理困局，高阶支持工作者应当遵循科学规范的“六步问题解决模型”（Problem-Solving Process）： 1. 第一步：精准界定问题（Identify the Problem）： 客观、中立、不带主观臆断地界定当前的真实困局；敏锐区分表象症状与深层病灶。（范例：“克拉克太太在床旁哭泣，坚决抗拒前往浴室洗澡”）。 2. 第二步：深入剖析根源（Analyze the Problem）： 全面收集临床事实，深挖现象背后的本质原因。（老人为何哭泣抗拒？是类风湿关节翻动诱发剧痛？是浴室通风窗太冷？是曾经滑倒留下了心理创伤？还是膀胱充盈急迫需要先如厕？）。 3. 第三步：头脑风暴集思广益备选方案（Brainstorm Potential Solutions）： 打破思维定势，快速构想出多种可行备选路径。（方案 A：将助浴推迟到午饭后长者精力更充沛的时段；方案 B：改为在温暖舒适的床上进行轻柔香薰温水擦浴；方案 C：向责任护士汇报，在助浴前半小时先遵医嘱服用止痛片；方案 D：提前打开浴室浴霸暖风机，播放老人喜爱的轻音乐）。 4. 第四步：择优锁定最佳解决方案（Select the Best Solution）： 综合权衡安全性、长者自主意愿、人本尊严与操作可行性，果断拍板最优干预策略。 5. 第五步：沉着严谨落地实施（Implement the Solution）： 与长者保持充分沟通，温柔、自信地落地执行选定方案。 6. 第六步：反思性复盘评估成效（Evaluate the Outcome）： 审视最终效果：老人情绪是否平复？擦浴是否顺利完成？若效果不佳，果断倒推回第三步，迅速切换替代备选方案。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第五节：工作场所冲突化解与人际沟通艺术 (Pages 124 - 126)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">职场冲突根源与沟通降阶艺术 (Conflict Resolution in Healthcare)</h4>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 8.7 Guidelines for Managing Conflict Professionally • Approach the person with respect and calm: address issues promptly in a private setting, never in hallways or in front of clients. • Focus on the issue, NOT the person: critique the specific behaviour or problem, avoiding personal attacks, insults, or name-calling. • Use "I" statements rather than accusatory "You" statements: - Avoid: "You are lazy and always dump all the heavy transfers on me!" - Use: "I feel exhausted and concerned about my back safety when I have to perform multiple heavy transfers alone. Can we agree on an equitable rotation?" • Practice active listening without interruption: let the other person express their perspective fully before responding. • Validate the other person's feelings: "I understand that you were overwhelmed this morning." • Focus on shared common goals: remind everyone that the supreme priority is the safety and well-being of the client. • Brainstorm collaborative win-win solutions. • If conflict escalates or becomes abusive, step away, maintain professional composure, and involve your supervisor or union representative for mediation.</h4>
+                    <div class="box-title-cn">BOX 8.7 临床专业化解人际冲突的行动铁律 • 以沉静、尊重的态度主动破局：凡遇争议，务必挑选私密封闭的会议室或休息室进行面对面坦诚沟通，严禁在病房走廊、护士台甚至当着案主的面爆发争吵！ • 永远“对事不对人”（Focus on the issue, NOT the person）：聚焦于当前具体发生的客观操作流程难题，严禁升级为人身攻击、冷嘲热讽或人格羞辱！ • 坚定运用“我信息”（"I" Statements）而非攻击性的“你指责”句式： - 严禁指责控诉：“你整天偷懒耍滑，每次把最重最累的瘫痪老头全都甩给我一个人搬！” - 规范专业表达：“我感到极度疲惫，而且非常担忧一个人频繁硬搬大体重长者会导致严重腰椎损伤。我们能否一起坐下来，制定一个公平轮流协作的移位排班表？” • 践行全程专注的主动倾听，绝不打断对方：让对方把肚子里的委屈与诉求完整宣泄吐露完毕后，再沉稳开口。 • 适时给予情绪确认（Validate Feelings）：“我完全理解你今天早上一个人要给 8 位老人测血糖，确实太焦头烂额了。” • 重新锚定共同的至高执业愿景：适时提醒彼此——我们坐在这里沟通的终极初心，是全力确保案主能够安全、有尊严地安享晚年！ • 开展建设性的双赢方案头脑风暴。 • 倘若对方情绪彻底失控、言语演变为言语辱骂或暴力威胁，立即保持专业冷峻从容抽身离场，第一时间上报主管护士、人事部或工会代表启动正式行政调解程序。</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en">Conflict is a clash between opposing interests, values, or ideas. In the high-stress environment of healthcare, conflicts naturally arise between support workers, nurses, clients, and family members. Common Sources of Conflict: • Differing cultural values, communication styles, and beliefs. • Unclear job descriptions and blurred roles. • Chronic understaffing, fatigue, and unfair workload distribution. • Scarcity of resources and equipment. • Anxiety, grief, and emotional strain in clients and families. <br><br>When conflict is ignored or handled destructively, it poisons teamwork, causes medical errors, and leads to rapid burnout. When handled constructively, conflict clears misunderstandings, strengthens relationships, and improves client care. <br><br>BOX 8.7 Guidelines for Managing Conflict Professionally • Approach the person with respect and calm: address issues promptly in a private setting, never in hallways or in front of clients. • Focus on the issue, NOT the person: critique the specific behaviour or problem, avoiding personal attacks, insults, or name-calling. • Use "I" statements rather than accusatory "You" statements: - Avoid: "You are lazy and always dump all the heavy transfers on me!" - Use: "I feel exhausted and concerned about my back safety when I have to perform multiple heavy transfers alone. Can we agree on an equitable rotation?" • Practice active listening without interruption: let the other person express their perspective fully before responding. • Validate the other person's feelings: "I understand that you were overwhelmed this morning." • Focus on shared common goals: remind everyone that the supreme priority is the safety and well-being of the client. • Brainstorm collaborative win-win solutions. • If conflict escalates or becomes abusive, step away, maintain professional composure, and involve your supervisor or union representative for mediation. <br><br></div>
+                      <div class="clause-cn">“冲突”（Conflict）是指在彼此对立的利益诉求、价值观念、行为风格或思维方式之间爆发的激烈碰撞。在节奏飞快、生死攸关且充满高度心理压力的医疗卫生照护职场中，支持工作者与同事、主管护士、受助长者及焦虑家属之间产生摩擦，是一种极其普遍的常态现象。 引发医疗团队冲突的高发病灶： • 彼此迥异的多元文化背景、沟通习惯与做人做事价值观差异。 • 岗位职责分工模糊、职责边界界定不清。 • 病区长期缺员、人手奇缺、轮班疲劳以及工作量分配不公。 • 机械移位机等关键护理设备的资源争夺与匮乏。 • 处于疾病绝望中的长者与家属内心的哀伤愤怒外泄转嫁。 <br><br>倘若对冲突采取鸵鸟政策消极逃避、抑或采取消极攻击与当众争吵等破坏性手段，必然会彻底毒化团队协作氛围、诱发致命护理差错并加速员工离职。相反，倘若以高度职业化的素养建设性化解冲突，往往能够澄清误解、重塑信赖并全面提升照护质量。 <br><br>BOX 8.7 临床专业化解人际冲突的行动铁律 • 以沉静、尊重的态度主动破局：凡遇争议，务必挑选私密封闭的会议室或休息室进行面对面坦诚沟通，严禁在病房走廊、护士台甚至当着案主的面爆发争吵！ • 永远“对事不对人”（Focus on the issue, NOT the person）：聚焦于当前具体发生的客观操作流程难题，严禁升级为人身攻击、冷嘲热讽或人格羞辱！ • 坚定运用“我信息”（"I" Statements）而非攻击性的“你指责”句式： - 严禁指责控诉：“你整天偷懒耍滑，每次把最重最累的瘫痪老头全都甩给我一个人搬！” - 规范专业表达：“我感到极度疲惫，而且非常担忧一个人频繁硬搬大体重长者会导致严重腰椎损伤。我们能否一起坐下来，制定一个公平轮流协作的移位排班表？” • 践行全程专注的主动倾听，绝不打断对方：让对方把肚子里的委屈与诉求完整宣泄吐露完毕后，再沉稳开口。 • 适时给予情绪确认（Validate Feelings）：“我完全理解你今天早上一个人要给 8 位老人测血糖，确实太焦头烂额了。” • 重新锚定共同的至高执业愿景：适时提醒彼此——我们坐在这里沟通的终极初心，是全力确保案主能够安全、有尊严地安享晚年！ • 开展建设性的双赢方案头脑风暴。 • 倘若对方情绪彻底失控、言语演变为言语辱骂或暴力威胁，立即保持专业冷峻从容抽身离场，第一时间上报主管护士、人事部或工会代表启动正式行政调解程序。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第六节：临床批判性思维修炼 (Page 127)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">卫生间如厕照护与走廊轮椅防跌倒警报长鸣：突发紧急情况下的安全抉择 (Bathroom Safety vs Chair Alarm: A Crisis Dilemma)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="908.16" data-end="1061.86" data-title="Bathroom Safety vs Chair Alarm: A Crisis Dilemma" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">CRITICAL THINKING IN PRACTICE (Page 127) You are assisting Mrs. Gorski, a frail 86-year-old resident with bilateral knee replacements and severe postural hypotension, in the bathroom. Mrs. Gorski's care plan strictly states: "DO NOT LEAVE UNATTENDED WHILE IN BATHROOM - HIGH FALL RISK." As you are gently assisting Mrs. Gorski on the raised toilet seat, you suddenly hear a piercing resident chair alarm (see Chapter 20) sounding frantically in the hallway outside the bathroom door. Chair alarms indicate that another high-fall-risk resident is attempting to stand up unassisted. • What immediate actions will you take? • Can you leave Mrs. Gorski alone "just for ten seconds" to check the hallway? • If chair alarms in the facility sound repeatedly every shift, how can this chronic environmental stressor affect your job satisfaction and clinical vigilance? • How should you resolve this critical crisis without compromising safety? <br><br>Clinical Guidelines for Support Workers: 1. The Absolute Cardinal Rule of Patient Safety: You must NEVER, under any circumstances, leave Mrs. Gorski unattended in the bathroom-not even for five seconds! Leaving a designated high-fall-risk resident alone in a slippery, hard-surfaced bathroom is a catastrophic act of negligence. A sudden dizzy spell or attempt to stand could result in fatal head trauma or hip fracture. 2. Immediate Professional Action Plan: • Stay physically beside Mrs. Gorski, keeping one hand gently and reassuringly on her shoulder or transfer belt. • Reassure Mrs. Gorski in a calm, confident voice so she does not panic: "You are safe with me, Mrs. Gorski. Take your time." • Immediately use the emergency call system located inside the bathroom (pull the red emergency call cord or press the staff-assist button on the wall) to alert hallway staff that an alarm is sounding. • Shout through the bathroom door in a loud, clear professional voice: "Staff assist needed in hallway! Resident alarm sounding outside Room 14! I am occupied with a client!" 3. The Problem of Alarm Fatigue: When facility alarms sound constantly and repetitively throughout a shift, healthcare workers develop "alarm fatigue"-a dangerous state of sensory desensitization where staff become numb to auditory alerts. Alarm fatigue causes chronic sensory overload, intense irritability, burnout, and dangerously delayed response times to genuine emergencies. This systemic issue must be reported to the Joint Health and Safety Committee and nursing leadership to evaluate proper sensor calibration and staffing allocations. <br><br></p>
+                      <p class="para-cn">临床批判性思维修炼（第 127 页） 你正在洗手间内耐心协助 86 岁高龄的戈尔斯基太太进行如厕。老人双膝曾接受全人工关节置换手术，伴有严重的体位性低血压。老人的综合照护计划表上用红色大字醒目加粗注明：“卫生间如厕期间严禁离人独处——属于极高跌倒骨折风险长者（HIGH FALL RISK）！” 正当你弯腰协助戈尔斯基太太稳坐于加高马桶垫上时，洗手间门外的走廊里突然尖锐地刺鸣起防跌倒轮椅离座蜂鸣报警器（Chair Alarm，参见第 20 章）！这凄厉的警报声警示着：走廊里另一位具有严重跌倒风险的长者正在试图独自挣扎站立起来！ • 面对这两难危机，你必须在数秒内做出何等果断的抉择与处置？ • 你能否心存侥幸，“仅仅离开戈尔斯基太太十秒钟”，飞奔跑去走廊看一眼？ • 倘若病区里的长者离座报警器每个轮班无休无止地频繁误报长鸣，这种长期的环境压力源将对你的职业满意度与临床警惕性造成何等深重的摧残？ • 你应当如何依托科学规程，在确保绝对安全的前提下化解这一紧急危局？ <br><br>支持工作者高阶临床法务实务指引： 1. 恪守长者安全的绝对第一红线天条： 你绝对不能、在任何情况下擅自丢下戈尔斯基太太独自留在洗手间——哪怕仅仅是转身走开五秒钟也绝对不行！将一位法定明确标注“严禁独处”的高危长者孤零零留在瓷砖湿滑、满是硬边棱角的密闭洗手间，在法律上属于触目惊心的过失疏忽渎职（Negligence）！老人一旦因体位性低血压头晕栽倒，必然导致致命性颅脑破裂或髋关节粉碎性骨折！ 2. 规范黄金急救处置行动序列： • 身体保持在马桶旁寸步不离，一只手始终稳健、轻柔且充满保护性地扶在老人的肩部或移位安全腰带（Transfer Belt）上。 • 语调沉稳、坚定地柔声安抚老人，防范其因警报声受惊：“戈尔斯基太太，有我在您身边护着您呢，绝对安全，您踏踏实实坐着。” • 立即顺手拉下洗手间墙壁上的“紧急护士呼叫红绳”（Emergency Pull Cord）或按下员工求助按钮，向整个病区系统触发警报。 • 面朝洗手间门缝，以洪亮、清晰、极具穿透力的专业嗓音向走廊大声呼叫：“走廊呼叫协助！14 号房外有长者轮椅警报长鸣！洗手间内护工正在执行高危个案照护，无法抽身！” 3. 深刻洞察“警报疲劳”（Alarm Fatigue）的系统性危害： 倘若病区内各类监护警报与离座铃声整天无休止频繁误报，医护人员会不可避免地陷入“警报疲劳”——即大脑中枢神经在过度感官过载刺激下产生感官脱敏麻木，对警报声充耳不闻！警报疲劳是摧毁护工职业专注力、诱发严重心烦意乱与职业倦怠的罪魁祸首，更会导致在真正致命的窒息跌倒发生时反应严重迟滞。支持工作者必须通过安全委员会（JHSC）正式反映该系统性隐患，敦促工程部重新标定传感器灵敏度并优化床旁人力配比。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+    <div class="editorial-quiz-section" style="margin-top:56px; padding-top:32px; border-top:2px solid #e2e8f0;">
+      <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
+        <span class="quiz-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
+        <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 8 章全真自测复习题与详尽临床精解</h3>
+        <p style="font-size:13.5px; color:#166534; margin:0;">原版 10 道标准执业自测题（<strong>Pages 112–128 · 10 道全真自测题</strong>）。点击选项可即时测试并验证对错，查看权威临床实操解析。</p>
+      </div>
+    
+        <div class="editorial-quiz-card" id="q-card-ch8-1">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 01</span>
+            <span class="eq-status" id="q-status-ch8-1">待作答</span>
+          </div>
+          <div class="eq-stem-en">1. Stress is:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在现代心身医学与心理学中，“压力”（Stress）的精准科学定义是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 1, 'A', 'B', 'q-rat-ch8-1', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">The way you cope with and adjust to everyday living</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 1, 'B', 'B', 'q-rat-ch8-1', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">The emotional, behavioural, or physical response to an event or situation</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 1, 'C', 'B', 'q-rat-ch8-1', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">A mental or emotional disorder</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 1, 'D', 'B', 'q-rat-ch8-1', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">A thought or an idea</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-1', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-1" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              教材明确确立压力的核心定义为：“机体与心灵面对特定事件或处境时所产生的情绪、外显行为或生理身体应激反应”（The emotional, behavioural, or physical response to an event or situation）。选项 A 属于应对机制（Coping）；选项 C 属于精神疾病（Mental Disorder）；选项 D 过于肤浅片面。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-2">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 02</span>
+            <span class="eq-status" id="q-status-ch8-2">待作答</span>
+          </div>
+          <div class="eq-stem-en">2. A stressor is:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>“压力源”（Stressor）在应激心理学中的标准定义是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 2, 'A', 'A', 'q-rat-ch8-2', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">An event or situation that causes stress</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 2, 'B', 'A', 'q-rat-ch8-2', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">A coping strategy</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 2, 'C', 'A', 'q-rat-ch8-2', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">A defence mechanism</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 2, 'D', 'A', 'q-rat-ch8-2', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">A reaction to stress</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-2', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-2" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 A</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              压力源（Stressor）是引发应激反应的外部或内部刺激因子（如失业、疾病剧痛、火警等）。选项 D 是应激反应本身（Stress）；选项 B 和 C 是应对压力的心理工具。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-3">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 03</span>
+            <span class="eq-status" id="q-status-ch8-3">待作答</span>
+          </div>
+          <div class="eq-stem-en">3. Which of the following influences a person's reaction to a stressor?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在以下诸多主客观要素中，哪些要素会深刻影响个体面对某一特定压力源时所呈现出的应激反应强度？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 3, 'A', 'D', 'q-rat-ch8-3', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Past experiences with the same stressor</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 3, 'B', 'D', 'q-rat-ch8-3', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">The person's gender</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 3, 'C', 'D', 'q-rat-ch8-3', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">The person's temperament or personality</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 3, 'D', 'D', 'q-rat-ch8-3', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">All of the above</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-3', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-3" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              个体面对压力的反应是一个极度复杂的心理生理综合过程，深受过往经历（A）、性别角色与内分泌激素（B）以及天生性格神经类型（C）的综合塑造，因此选项 D 全选完全正确。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-4">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 04</span>
+            <span class="eq-status" id="q-status-ch8-4">待作答</span>
+          </div>
+          <div class="eq-stem-en">4. Which of the following can be a physical sign of stress?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在以下所列举的身心症状中，哪些能够作为机体深陷压力之下的客观“生理身体体征”（Physical Signs）？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 4, 'A', 'E', 'q-rat-ch8-4', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Fatigue</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 4, 'B', 'E', 'q-rat-ch8-4', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Depression</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 4, 'C', 'E', 'q-rat-ch8-4', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Diarrhea</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 4, 'D', 'E', 'q-rat-ch8-4', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Irritability</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-4', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-4" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 E</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              压力通过下丘脑-垂体-肾上腺轴（HPA）引发全身性反应：不仅表现为慢性疲劳（A）和应激性腹泻（C），情绪维度的抑郁（B）和烦躁（D）在更广泛的整体健康反应中亦均是压力的核心身心外显指征。原教材官方公布的标准参考答案明确认定 E 为全选标准答案。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-5">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 05</span>
+            <span class="eq-status" id="q-status-ch8-5">待作答</span>
+          </div>
+          <div class="eq-stem-en">5. A defence mechanism is used to:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>从精神分析与心理学深度审视，人类无意识动用“心理防御机制”的根本潜意识目的在于：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 5, 'A', 'B', 'q-rat-ch8-5', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Blame others</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 5, 'B', 'B', 'q-rat-ch8-5', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Avoid facing reality</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 5, 'C', 'B', 'q-rat-ch8-5', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Solve problems</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 5, 'D', 'B', 'q-rat-ch8-5', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Make excuses for behaviour</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-5', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-5" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              防御机制的本质是潜意识的“心理防空洞”，通过否认、压抑、退行等扭曲歪曲现实的方式，暂时保护自我自尊免遭痛苦现实的无情碾压（Avoid facing reality）。选项 C 错误，防御机制恰恰阻碍了直面客观现实的科学问题解决；选项 A 和 D 仅仅是投射和合理化等局部表现。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-6">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 06</span>
+            <span class="eq-status" id="q-status-ch8-6">待作答</span>
+          </div>
+          <div class="eq-stem-en">6. Which of the following is a sign of burnout?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在以下四种临床表现中，哪一项是医护工作者爆发“职业倦怠综合征”（Burnout）的典型危险预警信号？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 6, 'A', 'C', 'q-rat-ch8-6', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Increased patience with clients and co-workers</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 6, 'B', 'C', 'q-rat-ch8-6', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Improved appetite</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 6, 'C', 'C', 'q-rat-ch8-6', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Increased use of sarcasm</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 6, 'D', 'C', 'q-rat-ch8-6', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Getting enough sleep at night</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-6', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-6" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              职业倦怠三联征之一便是“去人格化与冷漠犬儒”（Cynicism），其最典型的外显日常表现就是对受助案主和同事频繁使用刻薄嘲弄的冷笑话（Sarcasm）与冷淡语言。选项 A、B、D 展现的皆是身心高度健康的充沛状态。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-7">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 07</span>
+            <span class="eq-status" id="q-status-ch8-7">待作答</span>
+          </div>
+          <div class="eq-stem-en">7. Goals should be SMART. What does SMART stand for?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>现代支持护理与时间管理要求行动目标必须符合 SMART 原则。SMART 五个英文字母分别代表：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 7, 'A', 'B', 'q-rat-ch8-7', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Simple, monthly, allowable, reasonable, timely</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 7, 'B', 'B', 'q-rat-ch8-7', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Specific, measurable, achievable, realistic, timely</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 7, 'C', 'B', 'q-rat-ch8-7', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Simple, measurable, achievable, reasonable, topical</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 7, 'D', 'B', 'q-rat-ch8-7', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Specific, monthly, allowable, realistic, topical</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-7', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-7" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              SMART 原则是全球公认的目标管理黄金模型：S-Specific（明确具体）、M-Measurable（可量化）、A-Achievable（可达成）、R-Realistic/Relevant（现实相关）、T-Timely（具有时限性）。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-8">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 08</span>
+            <span class="eq-status" id="q-status-ch8-8">待作答</span>
+          </div>
+          <div class="eq-stem-en">8. When trying to stay organized and save time, it is best to:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在日常支持工作中，为了保持条理井然并大幅节省宝贵工时，最佳的实操策略应当是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 8, 'A', 'C', 'q-rat-ch8-8', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Save the important tasks until last</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 8, 'B', 'C', 'q-rat-ch8-8', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Not set yourself a time limit for each task</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 8, 'C', 'C', 'q-rat-ch8-8', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Develop a routine that works for you and the client</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 8, 'D', 'C', 'q-rat-ch8-8', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Remain inflexible</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-8', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-8" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              建立严谨规律且充满人性化的日常作息惯例（Routine），能够消除重复走弯路与犹豫不决的时间黑洞，让案主与照料者心意相通。选项 A 导致致命差错；选项 B 导致严重拖延怠工；选项 D 违背了医疗护理必须随机应变的灵活性原则。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-9">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 09</span>
+            <span class="eq-status" id="q-status-ch8-9">待作答</span>
+          </div>
+          <div class="eq-stem-en">9. The first step in the problem-solving process is to:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在规范科学的临床“问题解决模型”（Problem-Solving Process）中，必须迈出的至关重要的第一步是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 9, 'A', 'C', 'q-rat-ch8-9', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Call for help</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 9, 'B', 'C', 'q-rat-ch8-9', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Learn to say no assertively</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 9, 'C', 'C', 'q-rat-ch8-9', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Identify the problem</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 9, 'D', 'C', 'q-rat-ch8-9', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Think of as many solutions as you can</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-9', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-9" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              正确地界定问题，就等于问题已经解决了一半！倘若连困局的根本病灶都尚未查清，盲目展开头脑风暴（D）或盲目行动只会南辕北辙。第一步永远是精准识别问题（Identify the problem）。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch8-10">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 10</span>
+            <span class="eq-status" id="q-status-ch8-10">待作答</span>
+          </div>
+          <div class="eq-stem-en">10. What is an important part of resolving conflict?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在专业医疗卫生工作场所中，成功化解人际摩擦与团队冲突最不可或缺的关键一环是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch8', 10, 'A', 'A', 'q-rat-ch8-10', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Communication and good work ethics</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 10, 'B', 'A', 'q-rat-ch8-10', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Focusing on the person, not the problem</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 10, 'C', 'A', 'q-rat-ch8-10', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Avoiding the person with whom you have a conflict</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch8', 10, 'D', 'A', 'q-rat-ch8-10', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Confronting the person with your supervisor for support</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch8-10', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch8-10" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 A</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              化解冲突的根本钥匙，在于开诚布公的同理心双向沟通（Communication）与恪守以长者安危为最高准绳的优良职业道德（Good Work Ethics）。选项 B 犯了大忌，冲突解决必须对事不对人；选项 C 消极逃避会导致矛盾暗中发酵恶化；选项 D 将人际矛盾激化对立。
+            </div>
+          </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer class="editorial-colophon">
+      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
+      <p>Chapter 8: Managing Stress, Burnout, and Personal Safety · 双语沉浸学术研读版</p>
+      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch8_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'paper') {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      try {
+        if (isPaper) {
+          localStorage.setItem('psw_theme', 'paper');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        } else {
+          localStorage.setItem('psw_theme', 'default');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        }
+      } catch (e) {}
+    }
+
+    var currentFontSizeIdx = 1;
+    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
+    function adjustFontSize(delta) {
+      currentFontSizeIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontSizeIdx + delta));
+      document.documentElement.style.setProperty('--user-font-size', fontSizes[currentFontSizeIdx]);
+    }
+
+    initLanguageMode();
+
+    function toggleReaderAudioPlay() {
+      if (readerAudio.paused) {
+        readerAudio.play().then(function() {
+          isPlaying = true;
+          document.getElementById('rabPlayBtn').innerText = '⏸';
+        }).catch(function(e) { console.log(e); });
+      } else {
+        readerAudio.pause();
+        isPlaying = false;
+        document.getElementById('rabPlayBtn').innerText = '▶';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var title = el.getAttribute('data-title') || '';
+      readerAudio.currentTime = start;
+      readerAudio.play().then(function() {
+        isPlaying = true;
+        document.getElementById('rabPlayBtn').innerText = '⏸';
+      }).catch(function(e) { console.log(e); });
+
+      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
+      for (var i = 0; i < actives.length; i++) {
+        actives[i].classList.remove('audio-active');
+      }
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 8 章 正在朗读';
+    }
+
+    readerAudio.addEventListener('timeupdate', function() {
+      var cur = readerAudio.currentTime;
+      var dur = readerAudio.duration || 1500;
+      function formatTime(t) {
+        var m = Math.floor(t / 60);
+        var s = Math.floor(t % 60);
+        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+      }
+      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
+
+      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
+      var found = null;
+      for (var i = 0; i < entries.length; i++) {
+        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
+        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
+        if (cur >= start && cur < end) {
+          found = entries[i];
+          break;
+        }
+      }
+      if (found && found !== lastActiveEntry) {
+        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+        found.classList.add('audio-active');
+        lastActiveEntry = found;
+        var title = found.getAttribute('data-title');
+        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 8 章 正在朗读';
+      }
+    });
+
+    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
+      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
+      if (!card) return;
+      var opts = card.querySelectorAll('.eq-opt');
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].classList.remove('selected-correct', 'selected-wrong');
+      }
+      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
+      if (selectedKey === correctKey) {
+        rowEl.classList.add('selected-correct');
+        if (statusEl) {
+          statusEl.innerText = '✅ 回答正确！';
+          statusEl.style.color = '#166534';
+        }
+      } else {
+        rowEl.classList.add('selected-wrong');
+        if (statusEl) {
+          statusEl.innerText = '❌ 回答有误，请查阅下方临床解析';
+          statusEl.style.color = '#991b1b';
+        }
+      }
+      var rat = document.getElementById(ratId);
+      if (rat) rat.style.display = 'block';
+    }
+
+    function toggleRationale(ratId, btnEl) {
+      var box = document.getElementById(ratId);
+      if (!box) return;
+      if (box.style.display === 'none' || !box.style.display) {
+        box.style.display = 'block';
+        btnEl.innerHTML = '<span class="icon">🔽</span> 收起答案与临床精解';
+      } else {
+        box.style.display = 'none';
+        btnEl.innerHTML = '<span class="icon">💡</span> 查看权威答案与临床精解';
+      }
+    }
+  </script>
+</body>
+</html>

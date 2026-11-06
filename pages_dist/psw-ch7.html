@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 7: Caring About Culture and Diversity · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --user-font-size: 17px;
+      --bg-page: #f9f8f5;
+      --bg-container: #ffffff;
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --primary-navy: #1e3a8a;
+      --accent-gold: #c29b38;
+      --accent-blue: #2563eb;
+      --border-subtle: #e2e8f0;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    /* Top Sticky App Navigation & Interactive Switcher Bar */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+    }
+    .nav-left { display: flex; align-items: center; gap: 14px; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--primary-navy);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 14px;
+      background: #eff6ff;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: #dbeafe; }
+    .nav-chapter-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-chapter-title .ch-badge {
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+    }
+    
+    /* Center Segmented Language Switcher */
+    .mode-switch-segmented {
+      display: flex;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .mode-seg-btn {
+      padding: 6px 15px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: #0f172a; }
+    .mode-seg-btn.active {
+      background: #ffffff;
+      color: #1e3a8a;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .reading-util-group { display: flex; align-items: center; gap: 6px; }
+    .util-btn {
+      padding: 6px 11px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: #f8fafc; border-color: #94a3b8; color: #0f172a; }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 9999px;
+      padding: 4px 14px 4px 6px;
+    }
+    .play-circle-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 13px;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .play-circle-btn:hover { transform: scale(1.05); background: #1d4ed8; }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10.5px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    
+    /* Warm Paper Theme */
+    html.theme-paper {
+      --bg-page: #f5efe6;
+      --bg-container: #fcf9f2;
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --border-subtle: #e5ded2;
+    }
+    html.theme-paper body { background: #f5efe6; color: #2b2520; }
+    html.theme-paper .top-sticky-bar { background: rgba(245, 239, 230, 0.95); border-bottom-color: #e5ded2; }
+    html.theme-paper .mode-switch-segmented { background: #e9e1d4; border-color: #d8cebe; }
+    html.theme-paper .mode-seg-btn { color: #5c5247; }
+    html.theme-paper .mode-seg-btn.active { background: #fcf9f2; color: #2b2520; }
+    html.theme-paper .util-btn { background: #fcf9f2; border-color: #d8cebe; color: #5c5247; }
+    html.theme-paper .ambient-player { background: #ede6dc; border-color: #d8cebe; }
+    html.theme-paper .editorial-stream,
+    html.theme-paper .chapter-hero-editorial {
+      background: #fcf9f2;
+      border-color: #e5ded2;
+      box-shadow: 0 4px 24px rgba(43, 37, 32, 0.04);
+    }
+    
+    /* Layout Container */
+    .ch-editorial-flow {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 0 16px;
+    }
+    .chapter-hero-editorial {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 40px 42px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 12px;
+    }
+    .hero-title-en {
+      font-size: 30px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 18px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 13px;
+      color: #64748b;
+    }
+    
+    /* Stream Body */
+    .editorial-stream {
+      background: var(--bg-container);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 44px 48px;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+    }
+    
+    /* Section Headings */
+    .editorial-section-divider { margin: 64px 0 28px; }
+    .section-divider-bar {
+      height: 2px;
+      background: linear-gradient(to right, #1e3a8a 0%, #93c5fd 60%, transparent 100%);
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+    .section-heading-card {
+      border-left: 4px solid var(--primary-navy);
+      padding-left: 20px;
+    }
+    .section-eyebrow { margin-bottom: 6px; }
+    .section-badge-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1e3a8a;
+      background: #eff6ff;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+    }
+    .sh-title-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: #1e3a8a;
+      line-height: 1.35;
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+    
+    /* Bilingual Paragraphs */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 26px;
+      padding: 12px 18px 14px 20px;
+      border-left: 3px solid transparent;
+      border-radius: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(241, 245, 249, 0.7);
+      border-left-color: #cbd5e1;
+    }
+    .bilingual-paragraph.audio-active {
+      background: #eff6ff;
+      border-left-color: var(--accent-blue);
+      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.08);
+    }
+    .para-play-indicator {
+      position: absolute;
+      left: -24px;
+      top: 14px;
+      font-size: 11px;
+      color: var(--accent-blue);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .bilingual-paragraph:hover .para-play-indicator { opacity: 0.75; }
+    .bilingual-paragraph.audio-active .para-play-indicator { opacity: 1; }
+    
+    .para-en {
+      font-size: var(--user-font-size, 17px);
+      line-height: 1.82;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      font-weight: 420;
+      letter-spacing: -0.01em;
+    }
+    .para-cn {
+      font-size: calc(var(--user-font-size, 17px) - 1.5px);
+      line-height: 1.85;
+      color: var(--text-secondary);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Editorial Boxes */
+    .editorial-box-container {
+      margin: 48px 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .box-banner-header {
+      padding: 16px 24px;
+      color: #ffffff;
+    }
+    .box-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .box-badge-icon { font-size: 14px; }
+    .box-badge-pill {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.95;
+    }
+    .box-title-en {
+      font-size: 18.5px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .box-title-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+    }
+    .box-body-content { padding: 24px 26px; }
+    .box-clause-item {
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+    }
+    .box-clause-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .clause-en { font-size: 15.5px; line-height: 1.7; color: var(--text-main); margin-bottom: 5px; }
+    .clause-cn { font-size: 14.5px; line-height: 1.65; color: var(--text-secondary); }
+    
+    .box-theme-sage { border: 1.5px solid #86efac; }
+    .box-theme-sage .box-banner-header { background: linear-gradient(135deg, #065f46 0%, #047857 100%); }
+    .box-theme-sage .box-body-content { background: #f0fdf4; }
+    
+    .box-theme-teal { border: 1.5px solid #99f6e4; }
+    .box-theme-teal .box-banner-header { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
+    .box-theme-teal .box-body-content { background: #f0fdfa; }
+    
+    .box-theme-lavender { border: 1.5px solid #ddd6fe; }
+    .box-theme-lavender .box-banner-header { background: linear-gradient(135deg, #581c87 0%, #6b21a8 100%); }
+    .box-theme-lavender .box-body-content { background: #faf5ff; }
+    
+    .box-theme-amber { border: 1.5px solid #fde68a; }
+    .box-theme-amber .box-banner-header { background: linear-gradient(135deg, #9a3412 0%, #c2410c 100%); }
+    .box-theme-amber .box-body-content { background: #fffbeb; }
+    
+    .box-theme-terracotta { border: 1.5px solid #cbd5e1; }
+    .box-theme-terracotta .box-banner-header { background: linear-gradient(135deg, #334155 0%, #1e293b 100%); }
+    .box-theme-terracotta .box-body-content { background: #f8fafc; }
+    
+    .box-theme-case { border: 1.5px solid #fed7aa; }
+    .box-theme-case .box-banner-header { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); }
+    .box-theme-case .box-body-content { background: #fffaf0; }
+    
+    /* Key Terms Grid */
+    .key-terms-section {
+      margin: 44px 0;
+      padding: 26px;
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+    .kt-subtitle { font-size: 13px; color: #64748b; margin-bottom: 18px; }
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 14px;
+    }
+    .editorial-term-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      transition: all 0.15s;
+    }
+    .etc-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+    .etc-word { font-size: 15px; color: var(--primary-navy); font-weight: 700; }
+    .etc-ipa { font-size: 12px; color: #94a3b8; font-family: monospace; margin-left: 6px; }
+    .etc-cn-tag { font-size: 12px; font-weight: 600; color: #0369a1; background: #f0f9ff; padding: 2px 8px; border-radius: 4px; }
+    .etc-def-cn { font-size: 13.5px; line-height: 1.55; color: #475569; }
+    
+    /* Quiz Cards */
+    .editorial-quiz-card {
+      margin: 28px 0;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .eq-num { font-size: 12px; font-weight: 700; color: #2563eb; letter-spacing: 0.05em; }
+    .eq-status { font-size: 12px; font-weight: 600; color: #64748b; }
+    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
+    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .eq-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .eq-opt:hover { background: #f1f5f9; border-color: #cbd5e1; }
+    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
+    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
+    .opt-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      flex-shrink: 0;
+    }
+    .opt-text { font-size: 14px; line-height: 1.5; color: #334155; }
+    .btn-toggle-rat {
+      padding: 6px 14px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .eq-rationale-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 6px; }
+    .rat-content { color: #1e293b; }
+    
+    /* Lists */
+    .editorial-list-item {
+      margin-bottom: 12px;
+      padding-left: 14px;
+      position: relative;
+      list-style: none;
+    }
+    .editorial-list-item::before {
+      content: "•";
+      color: var(--primary-navy);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin: 28px 0; }
+    .clinical-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .clinical-table th { background: #f8fafc; padding: 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #1e293b; text-align: left; }
+    .clinical-table td { padding: 12px; border: 1px solid #e2e8f0; color: #334155; }
+    
+    /* Tri-State Mode Directives */
+    html.mode-en .para-cn,
+    html.mode-en .eq-stem-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn { display: none !important; }
+    html.mode-en .para-en { font-size: calc(var(--user-font-size, 17px) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
+    
+    html.mode-cn .para-en,
+    html.mode-cn .eq-stem-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en { display: none !important; }
+    html.mode-cn .para-cn { font-size: calc(var(--user-font-size, 17px) - 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
+    
+    /* Colophon */
+    .editorial-colophon { text-align: center; padding: 48px 24px; color: var(--text-muted); font-size: 13px; }
+    
+    @media (max-width: 900px) {
+      .top-sticky-bar { flex-wrap: wrap; gap: 8px; padding: 8px 14px; }
+      .nav-chapter-title { display: none; }
+      .reading-util-group { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html#toc" class="nav-home-btn">← 返回全书总目录</a>
+      <div class="nav-chapter-title">
+        <span class="ch-badge">CH 07</span>
+        <span>Caring About Culture and Diversity</span>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">
+        <span class="seg-icon">🌐</span> 中英双语
+      </button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">
+        <span class="seg-icon">🔤</span> 仅英文
+      </button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">
+        <span class="seg-icon">🇨🇳</span> 仅中文
+      </button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">📖 护眼纸色</button>
+        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 7 章 · 点选任意段落开始朗读</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 21:40</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ch-editorial-flow">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-tag">CHAPTER 07</span>
+        <span class="eyebrow-sep">·</span>
+        <span class="eyebrow-desc">SORRENTINO 5TH EDITION · 原版中英双语精研</span>
+      </div>
+      <h1 class="hero-title-en">Caring About Culture and Diversity</h1>
+      <h2 class="hero-title-cn">多元文化尊重、跨文化沟通与包容性照护</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">📖 Pages 96–111 · 12 道全真自测题</span>
+        <span class="meta-item">🔊 支持段落轻触点读 · 专业真人声原音导学</span>
+      </div>
+    </header>
+
+    <main class="editorial-stream">
+      <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
+                  </div>
+                </div>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<div class="chapter-h1-anchor" style="display:none;">Chapter 7: Caring About Culture and Diversity</div>
+<div class="chapter-h1-anchor" style="display:none;">第 7 章：关怀多元文化与多样性（原版逐字逐句 16 页全文典藏版）</div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 7 Opener & Learning Objectives (Page 96)</h3>
+                  </div>
+                </div>
+                
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">学习目标 (Objectives)</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="0.0" data-end="51.12" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Define diversity and explain Canada's "cultural mosaic" philosophy. • Distinguish between ethnicity and culture. • Identify common prejudices, stereotypes, and biases that hinder client-centred care. • Define ageism, racism, sexism, and homophobia, and describe their impact on clients. • Describe how culture influences family structure, health beliefs, illness practices, and end-of-life care. • Identify cultural differences in nonverbal communication, personal space, eye contact, and touch. • Explain the concepts of cultural competence, cultural safety, and cultural humility. • Apply guidelines for providing culturally sensitive and respectful support to clients from diverse backgrounds. <br><br></p>
+                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确定义“多样性”（Diversity），并深刻阐述加拿大所秉持的“文化马赛克”（Cultural Mosaic）国家多元哲学。 • 严谨鉴别与区分“族裔归属”（Ethnicity）与“文化系统”（Culture）的深层内涵。 • 敏锐识别阻碍“以服务对象为中心照护”的常见社会偏见、刻板印象与认知偏狭。 • 准确定义年龄歧视（Ageism）、种族主义（Racism）、性别歧视（Sexism）与同性恋恐惧症（Homophobia），并阐明其对受助者的身心伤害。 • 深入阐述多元文化如何深远塑造家庭组织形态、健康信念、对疾病与疼痛的表达反应以及临终关怀习俗。 • 熟练掌握不同文化在非言语沟通、个人身体空间距离（Personal Space）、视线眼神接触以及身体触碰习俗上的巨大差异。 • 深刻领会“文化胜任力”（Cultural Competence）、“文化安全”（Cultural Safety）与“文化谦逊”（Cultural Humility）的前沿照护哲学。 • 将兼具文化敏感度与尊重的照护指引准则，精准、审慎地运用于跨文化背景案主的日常临床实操中。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">【核心专业术语表】Chapter 7 Key Terms (Page 97)</h3>
+                  </div>
+                </div>
+                
+            <div class="key-terms-section">
+              <div class="kt-section-header">
+                <h3 class="kt-title">KEY TERMS · 第 7 章核心专业术语速查表</h3>
+                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+              </div>
+              <div class="terms-editorial-grid">
+            
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>ageism</strong></strong>
+                      <span class="etc-ipa">/ˈeɪdʒɪzəm/</span>
+                    </div>
+                    <span class="etc-cn-tag">年龄歧视</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">基于对特定年龄群体（尤其是高龄长者）所持有的消极刻板印象与偏见，表现出的不耐烦、不宽容或歧视排斥态度。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>assimilate</strong></strong>
+                      <span class="etc-ipa">/əˈsɪmɪleɪt/</span>
+                    </div>
+                    <span class="etc-cn-tag">文化同化</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">少数群体逐渐放弃自身的原有民族传统，全面接纳并融入主流社会的风俗文化过程。 (p. 99)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>bias</strong></strong>
+                      <span class="etc-ipa">/ˈbaɪəs/</span>
+                    </div>
+                    <span class="etc-cn-tag">偏见 / 偏倚立场</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">妨碍个体做出客观、公正、不偏不倚判断的先入为主的主观主张与认知倾向。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>blended family</strong></strong>
+                      <span class="etc-ipa">/ˈblɛndɪd ˈfæmɪli/</span>
+                    </div>
+                    <span class="etc-cn-tag">重组家庭</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">由再婚夫妻及两名以上子女构成的家庭，其中至少一名子女为其中一方的亲生子女，且至少一名为继子女。 (p. 103)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>cisgender</strong></strong>
+                      <span class="etc-ipa">/sɪsˈdʒɛndər/</span>
+                    </div>
+                    <span class="etc-cn-tag">顺性别</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">个人内在的心理性别认同与出生时被指定的生理性别完全相契合一致的个体。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>cultural competence</strong></strong>
+                      <span class="etc-ipa">/ˈkʌltʃərəl ˈkɒmpɪtəns/</span>
+                    </div>
+                    <span class="etc-cn-tag">文化胜任力</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">医护工作者能够跨越文化鸿沟，与来自不同文化、性别、宗教或社会经济背景的案主进行高效、得体沟通与合作的专业综合素养。 (p. 101)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>cultural conflict</strong></strong>
+                      <span class="etc-ipa">/ˈkʌltʃərəl ˈkɒnflɪkt/</span>
+                    </div>
+                    <span class="etc-cn-tag">文化冲突</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">当来自某种文化背景的人士企图将自身的价值观与行为准则强加给另一种文化背景人群时，所引发的负面心理抵触、误解与对立行为。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>cultural safety</strong></strong>
+                      <span class="etc-ipa">/ˈkʌltʃərəl ˈseɪfti/</span>
+                    </div>
+                    <span class="etc-cn-tag">文化安全</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">医疗健康体系主动营造一个充满包容尊重、彻底消除权力压迫，让案主在就医过程中能够自由表达其文化认同、感到完全安全舒适的照护环境。 (p. 101)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>culture</strong></strong>
+                      <span class="etc-ipa">/ˈkʌltʃər/</span>
+                    </div>
+                    <span class="etc-cn-tag">文化</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">一个特定人群所共同拥有的特质总和，涵盖语言符号、价值取向、宗教信仰、风俗习惯、生活方式、行为潜规则、音乐艺术与代际传承的传统。 (p. 98)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>diversity</strong></strong>
+                      <span class="etc-ipa">/daɪˈvɜːsɪti/</span>
+                    </div>
+                    <span class="etc-cn-tag">多样性 / 多元共存</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">具有不同文化、种族、信仰、年龄与生活方式的独特个体在社会中和睦共存、百花齐放的和谐状态。 (p. 97)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>ethnic identity</strong></strong>
+                      <span class="etc-ipa">/ˈɛθnɪk aɪˈdɛntɪti/</span>
+                    </div>
+                    <span class="etc-cn-tag">族裔认同感</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">个体基于共同的历史记忆、母语方言以及传统习俗，在内心深处对特定族群所产生的强烈归属感与认同。 (p. 98)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>ethnicity</strong></strong>
+                      <span class="etc-ipa">/ɛθˈnɪsɪti/</span>
+                    </div>
+                    <span class="etc-cn-tag">族裔归属</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">一群人所共同共享的历史渊源、语言文字、地理故土、国籍发源、宗教信仰或集体族群认同。 (p. 98)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>ethnocentrism</strong></strong>
+                      <span class="etc-ipa">/ˌɛθnəʊˈsɛntrɪzəm/</span>
+                    </div>
+                    <span class="etc-cn-tag">民族中心主义 / 文化优越感</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">盲目坚信自身所属的民族文化优于其他一切文化、并习惯用自身文化标尺衡量批判其他群体的狭隘心理。 (p. 98)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>homophobia</strong></strong>
+                      <span class="etc-ipa">/ˌhəʊməˈfəʊbiə/</span>
+                    </div>
+                    <span class="etc-cn-tag">同性恋恐惧症 / 恐同偏见</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">对同性恋群体，或对被识别为女同性恋、男同性恋、双性恋、跨性别、性别存疑或双灵人（LGBTQ2）所持有的负面敌意、排斥与不容忍态度。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>LGBTQ2</strong></strong>
+                      <span class="etc-ipa">/ˌɛl dʒiː biː tiː kjuː tuː/</span>
+                    </div>
+                    <span class="etc-cn-tag">多元性别与性取向群体</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">涵盖女同性恋（Lesbian）、男同性恋（Gay）、双性恋（Bisexual）、跨性别（Transgender）、酷儿（Queer）、质疑者（Questioning）与双灵人（Two-Spirit）的统称。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>nuclear family</strong></strong>
+                      <span class="etc-ipa">/ˈnjuːkliər ˈfæmɪli/</span>
+                    </div>
+                    <span class="etc-cn-tag">核心家庭</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">由合法伴侣及一名或多名婚生/领养子女共同居住在同一屋檐下、共同承担抚养教育义务的传统家庭形态。 (p. 103)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>personal space</strong></strong>
+                      <span class="etc-ipa">/ˈpɜːsənl speɪs/</span>
+                    </div>
+                    <span class="etc-cn-tag">个人身体空间距离</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">环绕在一个人身体四周无形的心理安全防护区域，他人若未经许可贸然侵入会引发本能的不安与防御。 (p. 107)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>prejudice</strong></strong>
+                      <span class="etc-ipa">/ˈprɛdʒʊdɪs/</span>
+                    </div>
+                    <span class="etc-cn-tag">偏见</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">在缺乏充分客观了解与证据的前提下，单凭某人所属的群体标签（如肤色、地域），对其品行能力做出的先入为主之武断负面评判。 (p. 99)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>racism</strong></strong>
+                      <span class="etc-ipa">/ˈreɪsɪzəm/</span>
+                    </div>
+                    <span class="etc-cn-tag">种族主义</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">基于身体外观体貌或文化习俗的差异，自视优越、并对其他特定肤色人种进行制度性贬损、歧视或排斥的恶劣行径。 (p. 98)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>same-sex family</strong></strong>
+                      <span class="etc-ipa">/seɪm sɛks ˈfæmɪli/</span>
+                    </div>
+                    <span class="etc-cn-tag">同性家庭</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">由处于相爱亲密伴侣关系中的同性别成年人共同组建的家庭单元；他们可能抚养或未抚养子女。 (p. 103)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>sexism</strong></strong>
+                      <span class="etc-ipa">/ˈsɛksɪzəm/</span>
+                    </div>
+                    <span class="etc-cn-tag">性别歧视</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">基于一个人的生理性别所抱持的偏见、刻板定型与不平等对待。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>single-parent families</strong></strong>
+                      <span class="etc-ipa">/ˈsɪŋɡl ˈpeərənt ˈfæmɪliz/</span>
+                    </div>
+                    <span class="etc-cn-tag">单亲家庭</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">由一位成年家长单独抚养一名或多名子女、且家中无常住伴侣协助共同生活的家庭单元（又称独自养育家庭 Lone-Parent Families）。 (p. 103)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>stereotype</strong></strong>
+                      <span class="etc-ipa">/ˈstɛriətaɪp/</span>
+                    </div>
+                    <span class="etc-cn-tag">刻板印象</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">将过度简单化、夸大其词或僵化武断的特征，盲目套用到某一特定群体的所有成员身上的思维偏见。 (p. 100)</div>
+                  </div>
+                </div>
+                
+                <div class="editorial-term-card">
+                  <div class="etc-header">
+                    <div class="etc-en-block">
+                      <strong class="etc-word"><strong>transgender</strong></strong>
+                      <span class="etc-ipa">/trænzˈdʒɛndər/</span>
+                    </div>
+                    <span class="etc-cn-tag">跨性别</span>
+                  </div>
+                  <div class="etc-body">
+                    <div class="etc-def-cn">个人内在的心理性别认同与出生时被赋予的生理性别不相符、或不符合传统二元性别规范的个体。 (p. 100)</div>
+                  </div>
+                </div>
+                </div></div>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第一节：加拿大马赛克文化、族裔认同与多样性全貌 (Pages 98 - 103)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">加拿大文化马赛克与多元共存 (The Canadian Cultural Mosaic & Diversity)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="51.12" data-end="144.5" data-title="The Canadian Cultural Mosaic & Diversity" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Respect for diversity is one of the most vital professional values that every support worker must embody. Diversity is the state of different individuals and cultures coexisting. During your career as a support worker, you will care for and work with people whose lifestyles, religious beliefs, dietary habits, cultural customs, and rituals are very different from your own. Canada has one of the most culturally diverse populations in the world. Unlike the American philosophy of the "melting pot"-which historically pressured immigrants to assimilate and abandon their distinct traditions to blend into a single homogenous culture-Canada embraces the philosophy of the "cultural mosaic". In a mosaic, each distinct ethnic and cultural community is actively encouraged to retain, celebrate, and share its unique language, cultural traditions, cuisine, and heritage, while contributing as a vibrant, interconnected piece of the whole Canadian nation. Culture refers to the characteristics of a group of people, including language, values, beliefs, customs, habits, ways of life, rules for behaviour, music, and traditions. Culture is learned, shared, and passed down from generation to generation. It is dynamic and evolves over time. Ethnicity refers to the sharing of a common history, language, geography, national origin, religion, or identity. A person's ethnic identity gives them a sense of shared belonging. However, support workers must understand that not everyone within an ethnic group shares the exact same culture, beliefs, or practices. <br><br></p>
+                      <p class="para-cn">对“多样性”（Diversity）的至高尊重，是每一位在加拿大执业的支持工作者必须融入血液的核心职业素养。所谓“多样性”，是指具有不同文化背景、宗教信仰、性取向与生命历程的个体在同一个社会空间中包容共生。在你的职业生涯中，你所照护的案主以及与你并肩作战的同事，其生活习俗、精神信仰、饮食禁忌与人生仪式往往与你自身的生活经验截然不同。 加拿大拥有举世瞩目的多元文化人口结构。与美国历史上倡导的“文化熔炉”（Melting Pot）理念——即施压新移民迅速被主流文化“同化”（Assimilate）、放弃原有母国传统融入单一同质化大熔炉不同，加拿大庄严推行“文化马赛克”（Cultural Mosaic）的国家宪政哲学。在马赛克艺术拼图中，每一个独特的族裔与文化群体，都被真诚鼓励保留其母语方言、风俗传统、艺术信仰与独特遗产，如同斑斓剔透的彩色瓷片，各自绽放独特光彩，共同拼接成加拿大这幅包容绚烂的国家整体画卷！ “文化”（Culture）是一个群体所共享的特征总和，涵盖语言符号、道德价值观、宗教宇宙观、风俗礼仪、生活习惯、不成文的行为准则、音乐饮食以及代际传承的历史传统。文化是在后天社会化进程中习得、共享并随时代变迁动态演进的。 “族裔归属”（Ethnicity）则是指一群人所共同拥有的历史记忆、地理故土、共同语言、国籍渊源、宗教传统或集体族群认同。“族裔认同”（Ethnic Identity）赋予个体深层的文化根基与群体归属感。然而，优秀的专业支持工作者必须时刻保持清醒：切勿把同一种族或族裔简单机械地划上等号——即便来自同一族群，个体之间的受教育背景、家庭教养与现代文化认同亦存在极其显著的个性化差异！ <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">破除社会偏见、刻板印象与年龄歧视 (Dismantling Prejudices, Stereotypes & Ageism)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="144.5" data-end="269.69" data-title="Dismantling Prejudices, Stereotypes & Ageism" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Prejudice is an attitude that forms an opinion or prejudges an individual based solely on their membership in a group, rather than on their individual character. When prejudice is translated into external actions, it becomes discrimination. A stereotype is an overly simple, rigid, or exaggerated view of a group of people that assumes every member of that group has the exact same characteristics. In contrast, a generalization is a broad observation about cultural tendencies that acknowledges that individual differences always exist. Support workers must NEVER rely on stereotypes when providing care. Harmful forms of prejudice in health care: • Racism: Feelings of superiority over, and hatred, prejudice, or intolerance toward, a person or group based on race or skin colour. • Sexism: Prejudice or unequal treatment based on gender. • Homophobia: Irrational fear, hatred, or intolerance directed toward LGBTQ2 individuals. • Ageism: Feelings of impatience, prejudice, or negative stereotypes directed toward older adults. <br><br><br><br></p>
+                    </article>
+                    
+                <div class="editorial-box-opener" style="margin-top:36px;">
+                  <aside class="editorial-box-container box-theme-sage">
+                    <div class="box-banner-header">
+                      <div class="box-badge-row">
+                        <span class="box-badge-icon">⚖️</span>
+                        <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                      </div>
+                      <h4 class="box-title-en">BOX 7.1: Ageism and Age Discrimination: Ontario Human Rights Commission Fact Sheet</h4>
+                    </div>
+                  </aside>
+                </div>
+                
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">专栏 7.1：年龄歧视与老年维权：安大略省人权委员会（OHRC）官方权威维权事实清单</h3>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="269.69" data-end="371.18" data-title="Family Structures & Cultural Health Beliefs" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">The term <em>ageism</em> refers to two concepts: a socially constructed way of thinking about older persons based on negative attitudes and stereotypes about aging, and a tendency to structure society on the basis of an assumption that everyone is young, thereby failing to respond appropriately to the real needs of older persons. <br><br>Ageism is often a cause of individual acts of age discrimination and also discrimination that is more systemic in nature, such as in the design and implementation of services, programs, and facilities. Age discrimination involves treating persons in an unequal fashion due to age in a way that is contrary to human rights law. The <em>Ontario Human Rights Code</em> prohibits age discrimination in: • Employment • Housing accommodation • Goods, services, and facilities • Contracts • Membership in trade and vocational associations <br><br>Age discrimination is often not taken as seriously as other forms of discrimination. However, it can have the same economic, social, and psychological impact as any other form of discrimination. To combat ageism it is necessary to raise public awareness about its existence and to dispel common stereotypes and misperceptions about aging. Aging is a highly individual experience, and it is not possible to generalize about the skills and abilities of an older person based on age. Human rights principles require people to be treated as individuals and assessed on their own merits, instead of on the basis of assumptions. It is important to recognize that older persons make significant contributions to our society and that we must not limit their potential. Source: Adapted from Ontario Human Rights Commission. (2014). Ageism and age discrimination (fact sheet). <br><br></p>
+                      <p class="para-cn"><strong>“年龄歧视”（Ageism）在现代人权法学中包含两大核心层级：</strong> 1. 基于对衰老过程的消极负面偏见与刻板印象，而在全社会构建出的对高龄长者的陈腐偏见思维方式； 2. 整个社会体制在规划建筑设计、公共服务与制度安排时，往往默认假定“所有人都是身手矫健的年轻力壮者”，从而在制度层面上未能正视并妥善响应老年群体的真实生活需求。 <br><br>年龄歧视不仅诱发针对个别长者的冷漠歧视行为，更催生了更具破坏力的<strong>“系统性制度歧视”</strong>（Systemic Discrimination）——例如在长期照护设施、医院急诊分诊与公共交通的设计落地中将长者边缘化。《安大略省人权法典》（Ontario Human Rights Code）在以下五大核心领域明令禁止一切基于年龄的不平等待遇： • 劳动力就业与雇佣（Employment） • 住房租赁与安居保障（Housing accommodation） • 商品流通、公共医疗与社会服务设施（Goods, services, and facilities） • 商业与民事合同签署（Contracts） • 行业工会与职业协会会员资格（Membership in trade associations） <br><br>在现实社会中，年龄歧视往往未被赋予与种族歧视同等严重的严打关注度；然而，其对长者所造成的经济剥夺、社会孤立与深层心理摧残，绝不亚于任何其他类型的恶性歧视！破除年龄歧视的关键，在于在临床照护与公众意识中牢固树立：<strong>衰老是一个高度个性化的生命历程，绝不可仅凭生理年龄就武断判定一位长者的认知心智与行动潜能！</strong> 每一位长者都应当作为独立而有尊严的生命个体受到平视与尊重。 <br><br>• Myth: "All older adults are forgetful, confused, and senile." Reality: Confusion and dementia are symptoms of underlying disease, NOT normal parts of healthy aging! The majority of older adults retain mental clarity. • Myth: "Older people are rigid, incapable of learning new things, and cannot use technology." Reality: Older adults are lifelong learners who regularly adapt to new devices, smartphones, and skills when taught with patience. • Myth: "Older people have no interest in intimacy or sexuality." Reality: The human need for warmth, affection, close relationships, and sexual intimacy persists throughout the entire human lifespan. • Myth: "Older adults are unhappy, lonely, and depressed." Reality: Many older adults report higher levels of life satisfaction, emotional stability, and gratitude than younger populations. <br><br>“偏见”（Prejudice）是一种在缺乏充分客观证据的前提下，先入为主地单凭某人所属的群体标签（如肤色、口音、地域、年龄），对其品德素质做出武断评判的狭隘心理态度。当内在的偏见外化为现实中的排斥行为时，便演化为赤裸裸的“歧视”（Discrimination）。 “刻板印象”（Stereotype）是一种将过度简化、僵化武断或夸大其词的标签，生搬硬套到该群体全体成员身上的思维惰性（例如“某族裔的人肯定吝啬”、“老年人必然顽固糊涂”）。与此相反，科学的“合理推论/归纳”（Generalization）则是基于流行病学统计做出的宏观趋势观察，但时时刻刻清醒牢记个体差异始终存在！支持工作者在临床照护中，严禁以刻板印象预设案主的任何需求！ 在医疗健康领域必须坚决根除的有害偏见： • 种族主义（Racism）：基于种族体貌特征自视高人一等，并对有色人种实施制度性排斥贬损的恶劣行径。 • 性别歧视（Sexism）：基于生理性别或性别认同施加的不平等对待。 • 恐同症（Homophobia）：对 LGBTQ2 多元性别与性少数群体的盲目排斥、敌意或冷漠对待。 • 年龄歧视（Ageism）：针对长者群体所抱持的不耐烦、嫌弃、不公正偏见与负面定型思维。 <br><br>BOX 7.1 破除年龄歧视：针对老年群体的荒谬迷思与临床真相 • 荒谬迷思一：“人一旦上了年纪，必然脑子糊涂、记不住事、变成老糊涂。” 科学真相：定向力障碍与痴呆症是特定大脑神经退行性疾病（如阿尔茨海默病）的病理表现，绝非正常衰老的必然生理过程！绝大多数高龄长者终生保持心智清晰敏锐！ • 荒谬迷思二：“老年人顽固守旧，根本学不会新鲜事物，无法使用现代数码科技。” 科学真相：长者具备卓越的终身学习潜能；只要给予耐心的讲解与字体放大支持，长者能够熟练使用智能手机与平板电脑与远方儿孙视频互动！ • 荒谬迷思三：“老年人对亲密情感与性生活毫无兴趣，清心寡欲。” 科学真相：人类对温暖拥抱、深情爱抚、心灵依恋与性亲密的生理与心理渴求，贯穿全人类从生到死的整个生命周期，绝不会随着皱纹增长而消失！ • 荒谬迷思四：“所有老人都孤苦伶仃、怨天尤人、沉溺在重度抑郁中。” 科学真相：社会心理学调查显示，许多阅尽千帆的长者拥有比浮躁年轻人更高的生活满足感、情绪平稳度与生活幸福感！ <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第二节：文化对健康信念、疾病应对与沟通的影响 (Pages 103 - 108)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">文化对家庭结构与疾病因果观的塑造 (Family Structures & Cultural Health Beliefs)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="371.18" data-end="463.13" data-title="Cross-Cultural Communication, Touch & Space" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Culture shapes how people view family structure, authority, health, and sickness: 1. Family Structures: • Nuclear Family: Two parents and their children living together under one roof. • Extended Family: Multi-generational households including grandparents, parents, children, aunts, uncles, and cousins living together or cooperating closely. In many Asian, African, and Indigenous cultures, elders are revered as decision-makers. • Blended Family: Reconstructed families with stepparents and stepchildren. • Same-Sex Family: Two adults of the same gender in a loving partnership raising children or living together. • Single-Parent Family: One adult raising children independently. <br><br>2. Cultural Beliefs About Causes of Illness: Different cultures explain the onset of sickness through distinct worldviews: • Supernatural or Spiritual Forces: In some cultures, illness is viewed as punishment from God, an attack by evil spirits, witchcraft, or the result of a curse. Cures may involve prayer, rituals, amulets, and traditional medicine people. • Natural Harmony and Balance: Many Eastern and Indigenous philosophies (such as Traditional Chinese Medicine and Ayurveda) view health as a delicate balance between opposite forces (Yin and Yang, hot and cold, mind, body, and nature). Sickness is caused by disharmony or energy blockage, treated through acupuncture, herbal remedies, and dietary balancing. • Biomedical (Scientific) Model: Mainstream Western medicine views illness as the result of biological malfunctions, bacterial or viral infections, genetic mutations, or trauma, treated via pharmaceuticals and surgery. <br><br></p>
+                      <p class="para-cn">文化深刻规约并塑造着人们如何看待家庭伦理、孝道权威、健康成因与疾病应对： 1. 多元家庭组织形态： • 核心家庭（Nuclear Family）：由两名夫妻伴侣与其子女共同生活在同一屋檐下的现代家庭形态。 • 大家族大家庭（Extended Family）：祖孙三代甚至四代同堂，涵盖祖父母、父母、子女、叔伯姑表共同居住或紧密互助。在许多亚洲、非洲、拉美及加拿大原住民文化中，家族长者享有至高无上的道德尊严与最终决策权。 • 重组家庭（Blended Family）：由离异再婚夫妻、继父母与前婚继子女拼接融合的新型家庭。 • 同性家庭（Same-Sex Family）：两位同性爱人基于法律与爱情结成伴侣共同生活或抚育后代的家庭单元。 • 单亲家庭（Single-Parent Family）：由父亲或母亲一人独立抚养子女的家庭。 <br><br>2. 文化对于疾病成因的多元哲学诠释： 不同文化传统对于人类为何会罹患重病，持有截然不同的宇宙观解释： • 超自然或神灵惩戒观：在某些传统文化中，重疾被视为触怒神灵的惩罚、恶灵缠身、巫术诅咒或宿世恶业报应。其康复干预往往重度依托于宗庙祈福、驱邪仪式、佩戴护身符以及寻求传统萨满巫医的灵魂净化。 • 阴阳自然平衡与天地和谐观：许多东方医学与原住民传统哲学（如传统中医 TCM、印度阿育吠陀、北美原住民药轮文化）视健康为天地阴阳、五行生克、寒热失调或身心灵与大自然生态失衡的外在病理投射。疾病是气血淤阻、经络失衡的产物；其调治重在借助草药食疗、针灸推拿与天人合一的心灵归位。 • 西医现代生物科学模型（Biomedical Model）：主流现代西方医学将疾病视作外来致病菌病毒感染、细胞恶变基因突变、代谢内分泌紊乱或物理组织创伤的生化机械故障，依赖化学靶向药物、无菌抗生素与外科手术予以干预。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">跨文化非言语沟通、身体距离与触碰禁忌 (Cross-Cultural Communication, Touch & Space)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="463.13" data-end="559.61" data-title="Cultural Safety & Practical Guidelines" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">Nonverbal communication is deeply influenced by cultural rules: • Personal Space: In Western Canadian society, people typically maintain an arm's length (about 1 metre) of personal space during casual conversations. People from Mediterranean, Middle Eastern, and Latin American cultures often stand much closer and feel comfortable with close physical proximity. • Eye Contact: In mainstream North American culture, maintaining direct eye contact is perceived as honesty, confidence, and respect. However, in many Indigenous, Asian, and Middle Eastern traditions, direct, prolonged eye contact with authority figures or elders is considered disrespectful, confrontational, or rude; lowering the eyes is a sign of profound deference. • Touch and Physical Contact: In some cultures, a handshake, hug, or touching someone's shoulder is a natural expression of warmth. In contrast, in many conservative Islamic, Orthodox Jewish, or traditional Asian cultures, physical touch between unrelated individuals of opposite sexes is strictly prohibited by religious modesty laws. Furthermore, in many Buddhist cultures, the head is sacred-touching a client's head (even to adjust hair or hats) without explicit warning and permission is an offensive taboo. • Expression of Pain: Some cultures encourage open, loud weeping and verbal groaning as a healthy release of pain; other cultures (such as Scandinavian or traditional East Asian) emphasize stoicism, emotional restraint, and silent endurance, hiding severe pain from health workers. <br><br></p>
+                      <p class="para-cn">非言语肢体沟通往往蕴含着极深厚的文化潜规则，极易在无意间触发文化冲突： • 个人身体空间距离（Personal Space）：在典型加拿大英法裔主流社交礼仪中，普通交谈时双方通常保持一臂之长（约 1 米）的心理安全物理距离。然而在来自地中海、中东及拉丁美洲文化背景的人士眼中，近距离促膝长谈是热情亲切的自然表现，拉开距离反而被视为冷漠敌意。 • 眼神视线接触（Eye Contact）：在北美主流文化中，直视对方的眼睛被誉为坦诚、自信、专注与礼貌的标杆。然而在加拿大原住民、东亚传统以及某些中东文化中，长时间毫不退缩地直视长者、医者或权威人士的眼睛，被视为极具挑衅性、傲慢与大逆不道的冒犯行为；微微垂下视线、谦恭倾听反而是崇高的尊老敬道表现！ • 身体触碰与抚触禁忌（Touch and Physical Contact）：在某些文化中，握手、拍肩与拥抱是表达同情关怀的本能动作。但在极其虔诚的伊斯兰教传统、正统犹太教规以及某些保守亚洲文化中，异性非亲属之间的任何躯体肢体接触受到严苛宗教戒律的禁止！此外，在广阔的东南亚与佛教文化传统中，人的“头部”被视为灵魂寄托的神圣禁地——在未提前柔声解释并获得长者首肯前，绝不可擅自用手去摸长者的头发或抚弄其头顶，否则将被视为极其无礼的亵渎！ • 疼痛与痛苦的情绪表达差异（Expression of Pain）：在某些文化土壤中，大声号哭、捶胸顿足是宣泄躯体剧痛与哀伤的健康合理方式；而在许多秉持隐忍克制传统的文化群体中，当事人往往咬牙苦撑、面不改色，对医护人员隐瞒难以忍受的剧烈绞痛，这要求照护人员必须敏锐通过出汗、肌肉紧绷等生理客观体征捕捉其疼痛真相。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第三节：文化胜任力与文化安全照护实务准则 (Pages 108 - 109)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">文化安全、文化谦逊与实务指引 (Cultural Safety & Practical Guidelines)</h4>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 7.2 Guidelines for Culturally Sensitive Care • Never make assumptions about a client's beliefs based on their skin colour or country of origin; always ask respectfully: "What personal traditions or preferences are important for us to know as we support you?" • Learn about the diverse cultures in your local community. • Respect cultural and religious objects: never touch or move sacred items (such as Indigenous medicine pouches, sweetgrass braids, Sikh turbans or kanga combs, rosaries, or prayer rugs) without permission. • Accommodate dietary practices and religious fasts (such as Halal, Kosher, vegetarianism, Hindu beef abstinence, or Ramadan fasting) within safety guidelines. • Facilitate spiritual rituals and provide quiet, private space for prayer and visits from spiritual leaders. • If language barriers exist, use official, trained medical interpreters; NEVER rely on young children to translate complex medical information. • Treat every client with unconditional positive regard, patience, and compassion.</h4>
+                    <div class="box-title-cn">BOX 7.2 临床一线践行跨文化敏感度与尊重的行动指南 • 严禁“以貌取人”或凭护照出生地主观臆断案主的习俗！始终以诚恳尊重的态度当面询问：“为了最好地照料您的生活，请问您有哪些特别珍视的个人生活传统或宗教习惯需要我们全力配合？” • 积极主动学习你所服务的当地社区中常见移民群体与原住民的文化风俗。 • 严禁随意翻动圣物：对于案主佩戴或床头摆放的宗教神圣信物（如加拿大原住民药囊 Medicine Pouch、用于烟熏仪式的香草辫 Sweetgrass、锡克教徒的缠头头巾 Turban 与木梳 Kanga、天主教念珠或伊斯兰祈祷毯），未获案主允许绝不可擅自触摸或随意挪动！ • 严格尊重饮食禁忌与宗教斋戒习惯：在健康安全的前提下，严格配合清真（Halal）、犹太洁食（Kosher）、印度教不食牛肉、素食主义以及伊斯兰斋月白昼禁食等饮食方案。 • 为案主的宗教祈祷仪式提供私密、安静的独立物理空间，热情协助联络牧师、神父、阿訇或原住民长者进病房探视祈福。 • 面对语言障碍时，必须通过正规具备资质的专业医用翻译员进行沟通，严禁让未成年幼童在床旁翻译复杂的医学病情与用药医嘱！ • 始终以无条件的接纳、宽容、耐心与充满慈悲的爱心对待每一位案主。</div>
+                  </div>
+                  <div class="box-body-content">
+                    <div class="box-clause-item">
+                      <div class="clause-en">Providing culturally safe and culturally competent care requires cultural humility-acknowledging that you do not know everything about another person's culture and humbly asking the client to educate you about their personal traditions. Ethnocentrism is the belief that one's own culture is superior to others. Support workers must continuously examine their own biases and eliminate ethnocentrism from their practice. Cultural safety goes beyond cultural awareness; it means creating a healthcare environment where clients feel entirely safe to express their identity without fear of prejudice, bias, or loss of service. <br><br>BOX 7.2 Guidelines for Culturally Sensitive Care • Never make assumptions about a client's beliefs based on their skin colour or country of origin; always ask respectfully: "What personal traditions or preferences are important for us to know as we support you?" • Learn about the diverse cultures in your local community. • Respect cultural and religious objects: never touch or move sacred items (such as Indigenous medicine pouches, sweetgrass braids, Sikh turbans or kanga combs, rosaries, or prayer rugs) without permission. • Accommodate dietary practices and religious fasts (such as Halal, Kosher, vegetarianism, Hindu beef abstinence, or Ramadan fasting) within safety guidelines. • Facilitate spiritual rituals and provide quiet, private space for prayer and visits from spiritual leaders. • If language barriers exist, use official, trained medical interpreters; NEVER rely on young children to translate complex medical information. • Treat every client with unconditional positive regard, patience, and compassion. <br><br></div>
+                      <div class="clause-cn">在多元文化社会中交付“文化安全”的高阶支持照护，其核心灵魂在于践行“文化谦逊”（Cultural Humility）——即心怀敬畏地承认自己永远不可能通晓世界上所有的文化习俗，怀抱最大的谦卑与善意，主动请教案主：“请问在您的传统习惯中，有哪些重要的细节是我们照料您时必须注意的？” “民族中心主义”（Ethnocentrism）是指盲目认为自己生长的文化才是世界上唯一正确、高级、理所应当的文明形态。专业支持工作者必须时时刻刻审视并剔除内心的偏见，杜绝用自己的文化标尺评判他人。 “文化安全”（Cultural Safety）绝不仅停留在泛泛的“文化知晓”，而是指在临床病房与居家环境中，彻底清除权力不平等与微歧视，让来自任何小众弱势群体的案主在接受个人护理时，感到百分之百的心灵安全与人格尊严！ <br><br>BOX 7.2 临床一线践行跨文化敏感度与尊重的行动指南 • 严禁“以貌取人”或凭护照出生地主观臆断案主的习俗！始终以诚恳尊重的态度当面询问：“为了最好地照料您的生活，请问您有哪些特别珍视的个人生活传统或宗教习惯需要我们全力配合？” • 积极主动学习你所服务的当地社区中常见移民群体与原住民的文化风俗。 • 严禁随意翻动圣物：对于案主佩戴或床头摆放的宗教神圣信物（如加拿大原住民药囊 Medicine Pouch、用于烟熏仪式的香草辫 Sweetgrass、锡克教徒的缠头头巾 Turban 与木梳 Kanga、天主教念珠或伊斯兰祈祷毯），未获案主允许绝不可擅自触摸或随意挪动！ • 严格尊重饮食禁忌与宗教斋戒习惯：在健康安全的前提下，严格配合清真（Halal）、犹太洁食（Kosher）、印度教不食牛肉、素食主义以及伊斯兰斋月白昼禁食等饮食方案。 • 为案主的宗教祈祷仪式提供私密、安静的独立物理空间，热情协助联络牧师、神父、阿訇或原住民长者进病房探视祈福。 • 面对语言障碍时，必须通过正规具备资质的专业医用翻译员进行沟通，严禁让未成年幼童在床旁翻译复杂的医学病情与用药医嘱！ • 始终以无条件的接纳、宽容、耐心与充满慈悲的爱心对待每一位案主。 <br><br></div>
+                    </div>
+                  </div>
+                </aside>
+                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">第四节：临床批判性思维修炼 (Page 110)</h3>
+                  </div>
+                </div>
+                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">不通英语的院舍长者频繁按铃呼叫：语言障碍、文化焦虑与主动巡查策略 (Addressing Language Barriers & Cultural Anxiety)</h4>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="7" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                      <div class="para-play-indicator">▶</div>
+                      <p class="para-en">CRITICAL THINKING IN PRACTICE (Page 110) Mr. Zhang is an 81-year-old resident who recently moved from China into a Canadian long-term care facility. Mr. Zhang does not speak or understand English. He has mild heart failure and generalized mobility limitations. Throughout your morning shift, Mr. Zhang uses his bedside call bell repeatedly-ringing it 15 times within four hours. When you answer the bell, some of his needs are urgent (needing urgent assistance to the commode), but other times he simply points to the window, smiles anxiously, or motions for a cup of warm water. You notice a distinct clinical pattern: Mr. Zhang rings his call bell significantly more often in the late evening, immediately after his family leaves after visiting hours, and whenever more than 30 minutes pass without a staff member entering his room. • How might this behavioural pattern be invaluable in updating Mr. Zhang's personalized care plan? • What are the root causes of Mr. Zhang's frequent call bell use? • How can you and the health care team proactively decrease his anxiety and promote cultural safety? <br><br>Clinical Guidelines for Support Workers: 1. Root-Cause Clinical Analysis: Mr. Zhang's frequent call bell use is NOT "demanding" or "manipulative" behaviour. It is a profound manifestation of cultural disorientation, acute loneliness, fear of abandonment, and language isolation. Being unable to communicate in English in an unfamiliar Western institution makes him terrified that if an emergency occurs, no one will come to save him. When his family leaves, his anxiety spikes exponentially. 2. Invaluable Care Plan Adjustments: His behavioural pattern clearly proves that reactive care (waiting for him to ring the bell) is failing him and exhausting staff. The care plan should be transformed into proactive rounding (checking on Mr. Zhang every 25-30 minutes before he feels compelled to ring). 3. Proactive Cultural Safety Strategies: • Establish a regular proactive rounding schedule: pop into his room with a warm smile, check his comfort, offer warm water, and assist with toileting before he rings. • Create a bilingual pictorial communication board with clear photos, English words, and Chinese characters (e.g., photos for "Toilet / 如厕", "Warm Water / 温水", "Pain / 疼痛", "Cold / 寒冷", "Tired / 疲劳"). • Learn 4-5 basic Mandarin courteous greeting words ("Ni Hao / 你好", "Xie Xie / 谢谢"). • Encourage his family to bring familiar items: Chinese television programs or radio stations, framed family photos, favourite warm teas, and familiar cultural blankets to normalize his living environment. • Coordinate with the recreation department to pair him with Chinese-speaking volunteers or staff. <br><br></p>
+                      <p class="para-cn">临床批判性思维修炼（第 110 页） 81 岁高龄的张先生近期从中国移居加拿大，刚入住养老院不久。老人完全不懂英语、无法用英文进行日常口语交流。张先生患有轻度慢性心力衰竭伴全身运动机能衰退。 在你白班执业的短短四个小时内，张先生床头的紧急呼叫电铃刺耳地响了整整 15 次！每当你匆匆推门跑进病房时，有时老人的需求确实十分紧急（如心衰利尿后急迫需要如厕协助）；但在许多时候，老人仅仅是神色慌张地指指窗外、局促不安地微笑、或者用手势比划着想喝一口温热的开水。 你敏锐观察到了一个极具价值的临床规律：张先生按铃的高峰期，高度集中在天色渐暗的傍晚、探视时间结束后亲生儿女挥泪离去的瞬间，以及房间房门关闭超过 30 分钟无护工进门巡视的孤寂时刻！ • 老人的这一行为规律，对于责任护士修订张先生的个性化综合照护计划有何重大指导意义？ • 导致张先生频繁按铃呼叫的深层身心与文化根源究竟是什么？ • 你与跨学科照护团队应当如何主动出击，彻底排遣其内心恐惧、营造真正的文化安全环境？ <br><br>支持工作者高阶临床法务实务指引： 1. 深入病灶：透视频繁按铃背后的深层文化与心理危机： 张先生的频繁按铃，绝非世俗眼中的“故意找茬挑剔”或“娇气难伺候”！这是一位异国老人深陷文化休克（Cultural Shock）、极端语言孤立与濒死遗弃恐惧（Fear of Abandonment）的呼救信号！身处语言不通的异国养老院，四壁皆是金发碧眼的陌生面孔，老人内心充满了恐惧：他害怕自己万一心衰突发喘不上气，由于不会说英语而活活窒息在异乡床上！儿女离去更彻底抽空了他的安全感。按铃是他确认“这个世界还有人管我、我还没有被彻底抛弃”的唯一心理生命线！ 2. 照护计划的根本战略转型：从被动应召到主动巡房： 这一规律无可辩驳地警示团队：一味坐在护士站等待老人按铃的被动照料模式彻底失效了，既让老人终日惶惶不安，又让护工疲于奔命！照护计划必须立即重构为“主动巡防干预机制”（Proactive Rounding）——在老人按铃之前，护工主动推门出现在老人床前！ 3. 文化安全落地战术清单： • 设定每 25 至 30 分钟一次的主动巡房节奏：护工面带温和微笑主动推门探视，主动递上一杯温热开水、主动询问是否需要如厕，彻底消除老人“无人照料”的焦虑。 • 制作图文并茂的“中英双语沟通卡片板”：贴上色彩鲜艳的特写照片并附上中英文对照（如标注“如厕 Toilet”、“喝水 Warm Water”、“疼痛 Pain”、“冷 Cold”、“睡觉 Bedtime”），老人动动手指即可瞬间准确表达真实意图。 • 责任支持工作者主动学习 4 至 5 句地道的中文问候短语（如“你好”、“谢谢”、“不客气”、“舒服吗”），几句带着温度的母语瞬间就能瓦解长者内心的戒备与恐惧。 • 动员长者儿女协助开展文化环境营造：为老人房间配置中文电视台或华语收音机、床头摆上全家福相框、换上老人熟悉的传统薄被棉垫，让病房充满故土的熟悉气息。 • 协调院内康乐社工部，联系社区华人义工或讲国语的探视志愿者定期上门陪伴聊天。 <br><br></p>
+                    </article>
+                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+    <div class="editorial-quiz-section" style="margin-top:56px; padding-top:32px; border-top:2px solid #e2e8f0;">
+      <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
+        <span class="quiz-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
+        <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 7 章全真自测复习题与详尽临床精解</h3>
+        <p style="font-size:13.5px; color:#166534; margin:0;">原版 12 道标准执业自测题（<strong>Pages 96–111 · 12 道全真自测题</strong>）。点击选项可即时测试并验证对错，查看权威临床实操解析。</p>
+      </div>
+    
+        <div class="editorial-quiz-card" id="q-card-ch7-1">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 01</span>
+            <span class="eq-status" id="q-status-ch7-1">待作答</span>
+          </div>
+          <div class="eq-stem-en">1. T / F: Culture influences people's attitudes and beliefs but not their behaviours.</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误：文化只会深刻影响人们的内在态度与观念信仰，但绝不会规约和影响人们的外在行为举止。</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 1, 'T', 'F', 'q-rat-ch7-1', this)">
+              <span class="opt-badge">T</span>
+              <span class="opt-text">True · 正确</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 1, 'F', 'F', 'q-rat-ch7-1', this)">
+              <span class="opt-badge">F</span>
+              <span class="opt-text">False · 错误</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-1', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-1" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 F (False · 错误)</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              文化不仅塑造内隐的价值观与信仰，更直接规定了外显的礼仪举止、饮食偏好、如厕习惯、目光接触以及与人打交道的具体行为模式（Behaviours）。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-2">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 02</span>
+            <span class="eq-status" id="q-status-ch7-2">待作答</span>
+          </div>
+          <div class="eq-stem-en">2. T / F: Believing that all members of a group share the same characteristics is an example of stereotyping.</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误：盲目坚信某一社会群体内部的所有成员必然具有完全相同的性格与行为特征，这是典型的刻板印象（Stereotyping）。</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 2, 'T', 'T', 'q-rat-ch7-2', this)">
+              <span class="opt-badge">T</span>
+              <span class="opt-text">True · 正确</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 2, 'F', 'T', 'q-rat-ch7-2', this)">
+              <span class="opt-badge">F</span>
+              <span class="opt-text">False · 错误</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-2', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-2" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 T (True · 正确)</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              刻板印象的核心就是“一概而论”，无视群体内部生动活泼的个体差异性，将死板简化的标签强加在所有人身上。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-3">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 03</span>
+            <span class="eq-status" id="q-status-ch7-3">待作答</span>
+          </div>
+          <div class="eq-stem-en">3. T / F: Everyone has a culture.</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误：世界上每一个人都不可避免地拥有并生活在特定的文化之中。</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 3, 'T', 'T', 'q-rat-ch7-3', this)">
+              <span class="opt-badge">T</span>
+              <span class="opt-text">True · 正确</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 3, 'F', 'T', 'q-rat-ch7-3', this)">
+              <span class="opt-badge">F</span>
+              <span class="opt-text">False · 错误</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-3', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-3" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 T (True · 正确)</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              没有任何人生活在文化的真空中。每一个人生于斯长于斯，其语言、思维、偏好皆是特定文化社会化塑造的产物。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-4">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 04</span>
+            <span class="eq-status" id="q-status-ch7-4">待作答</span>
+          </div>
+          <div class="eq-stem-en">4. T / F: Everyone within an ethnic group shares the same culture.</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误：属于同一民族或同一族裔群体的每一个人，必然毫无例外地共享完全相同的文化信仰与行为准则。</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 4, 'T', 'F', 'q-rat-ch7-4', this)">
+              <span class="opt-badge">T</span>
+              <span class="opt-text">True · 正确</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 4, 'F', 'F', 'q-rat-ch7-4', this)">
+              <span class="opt-badge">F</span>
+              <span class="opt-text">False · 错误</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-4', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-4" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 F (False · 错误)</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              即便同属于华人、英裔或原住民，由于居住地域、移民代际、宗派信仰、教育经历与现代世俗化程度不同，个体之间的文化取向大相径庭，切不可盲目机械归类。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-5">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 05</span>
+            <span class="eq-status" id="q-status-ch7-5">待作答</span>
+          </div>
+          <div class="eq-stem-en">5. T / F: Each individual responds differently to cultural influences.</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误：每一个独特的个体对于自身文化传统的约束与影响，所做出的心理认同与行为反应均因人而异、截然不同。</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 5, 'T', 'T', 'q-rat-ch7-5', this)">
+              <span class="opt-badge">T</span>
+              <span class="opt-text">True · 正确</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 5, 'F', 'T', 'q-rat-ch7-5', this)">
+              <span class="opt-badge">F</span>
+              <span class="opt-text">False · 错误</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-5', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-5" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 T (True · 正确)</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              人具有自主性。有人极其虔诚地恪守古老习俗，有人则高度现代世俗化，必须尊重每个个体的独特性。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-6">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 06</span>
+            <span class="eq-status" id="q-status-ch7-6">待作答</span>
+          </div>
+          <div class="eq-stem-en">6. T / F: Everyone responds positively to a hug or to a pat on the back.</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误：世界上所有人对于热情的拥抱或拍肩膀等肢体触碰，都会产生本能的积极正面喜悦反应。</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 6, 'T', 'F', 'q-rat-ch7-6', this)">
+              <span class="opt-badge">T</span>
+              <span class="opt-text">True · 正确</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 6, 'F', 'F', 'q-rat-ch7-6', this)">
+              <span class="opt-badge">F</span>
+              <span class="opt-text">False · 错误</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-6', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-6" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 F (False · 错误)</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              不同文化对于触碰的耐受度与宗教禁忌大相径庭！在许多传统保守或宗教群体中，随意拥抱或拍打异性被视为不可容忍的性骚扰或亵渎，必须极其慎重。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-7">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 07</span>
+            <span class="eq-status" id="q-status-ch7-7">待作答</span>
+          </div>
+          <div class="eq-stem-en">7. T / F: Although a person's experiences and situation may change over time, their culture never changes.</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误：虽然一个人的生活经历和处境会随着时间推移而改变，但一个人的文化观念永远不可能发生任何改变。</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 7, 'T', 'F', 'q-rat-ch7-7', this)">
+              <span class="opt-badge">T</span>
+              <span class="opt-text">True · 正确</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 7, 'F', 'F', 'q-rat-ch7-7', this)">
+              <span class="opt-badge">F</span>
+              <span class="opt-text">False · 错误</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-7', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-7" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 F (False · 错误)</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              文化是流动的活水而非僵死的冰块。随着移居新国度、接触多元思潮与生活阅历的累积，个体的文化观念与价值体系终生都在持续调适与演进。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-8">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 08</span>
+            <span class="eq-status" id="q-status-ch7-8">待作答</span>
+          </div>
+          <div class="eq-stem-en">8. Which of the following statements is true?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>关于族裔与文化，下列哪一项表述是完全符合客观事实的真理？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 8, 'A', 'C', 'q-rat-ch7-8', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Ethnicity refers to a group of people who share similar interests.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 8, 'B', 'C', 'q-rat-ch7-8', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">A country usually has one ethnic group.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 8, 'C', 'C', 'q-rat-ch7-8', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">A person's culture influences health and illness practices.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 8, 'D', 'C', 'q-rat-ch7-8', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">People within an ethnic community always dress and think alike.</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-8', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-8" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              文化直接决定了人们如何看待疾病因果、如何配合用药、如何表达剧痛与如何安排临终救治。选项 A 混淆了族裔与兴趣俱乐部；选项 B 错误，绝大多数现代国家都是多民族国家；选项 D 是僵化荒谬的刻板偏见。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-9">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 09</span>
+            <span class="eq-status" id="q-status-ch7-9">待作答</span>
+          </div>
+          <div class="eq-stem-en">9. Which of the following statements is true?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在以下四个选项中，哪一项陈述是完全正确的？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 9, 'A', 'B', 'q-rat-ch7-9', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Culture rarely influences communication.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 9, 'B', 'B', 'q-rat-ch7-9', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Culture may affect roles and responsibilities within families.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 9, 'C', 'B', 'q-rat-ch7-9', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">All people respond to cultural influences in the same way.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 9, 'D', 'B', 'q-rat-ch7-9', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Canadians view health care and illness usually in the same way.</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-9', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-9" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              文化决定了在家庭内部究竟由谁掌握话语权（例如长子负责签字、或妻子负责全权照护），深刻规约了家庭角色的职责分配。选项 A 错误，文化极大地规约非言语与言语沟通；选项 C 错误，个体反应千差万别；选项 D 错误，加拿大多元文化导致健康观高度丰富多元。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-10">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 10</span>
+            <span class="eq-status" id="q-status-ch7-10">待作答</span>
+          </div>
+          <div class="eq-stem-en">10. Mr. Greene asks to see his spiritual advisor. You should:</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>在病房执业中，受助案主格林先生向你提出请求，希望能安排与他的精神导师/宗教神职人员会面。你应当采取的标准应对策略是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 10, 'A', 'A', 'q-rat-ch7-10', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">Report his request to your supervisor.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 10, 'B', 'A', 'q-rat-ch7-10', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">Question why he wants the meeting.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 10, 'C', 'A', 'q-rat-ch7-10', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Offer to introduce him to your spiritual advisor.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 10, 'D', 'A', 'q-rat-ch7-10', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Tell him to phone his spiritual advisor himself.</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-10', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-10" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 A</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              满足案主的精神信仰需求是全人照护的核心一环。支持工作者听到诉求后，应立即上报责任护士与社工部，由机构官方协助联络相应派别的神父、牧师或阿訇并安排独立安静的探访场地。选项 B 侵犯了老人的内心信仰隐私；选项 C 犯了强行推销个人宗教信仰的职业大忌；选项 D 属于冷漠推诿。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-11">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 11</span>
+            <span class="eq-status" id="q-status-ch7-11">待作答</span>
+          </div>
+          <div class="eq-stem-en">11. Which statement is correct?</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>关于偏见与刻板印象，下列哪一项科学论断是完全正确的？</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 11, 'A', 'D', 'q-rat-ch7-11', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">We should all judge people on the basis of their group membership.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 11, 'B', 'D', 'q-rat-ch7-11', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">In some situations, prejudice is acceptable.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 11, 'C', 'D', 'q-rat-ch7-11', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">Prejudice frequently leads to respect.</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 11, 'D', 'D', 'q-rat-ch7-11', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">Stereotypes are often associated with prejudice.</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-11', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-11" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              刻板印象为偏见提供了认知层面的伪合理化借口，而偏见反过来进一步强化固化刻板印象，二者交织滋生歧视。选项 A 鼓励歧视；选项 B 违背人权底线；选项 C 颠倒黑白。<br><br>---
+            </div>
+          </div>
+        </div>
+        
+        <div class="editorial-quiz-card" id="q-card-ch7-12">
+          <div class="eq-header">
+            <span class="eq-num">QUESTION 12</span>
+            <span class="eq-status" id="q-status-ch7-12">待作答</span>
+          </div>
+          <div class="eq-stem-en">12. Mr. Jones rides a motorcycle and refers to himself as a "biker." He likes to wear clothing that signifies membership in his motorcycle club, and he prefers to spend time with his other "biker" friends. This description is of a(n):</div>
+          <div class="eq-stem-cn"><strong>中文题意：</strong>琼斯先生酷爱骑乘重型机车，并将自己骄傲地称为一名“机车骑手”（Biker）。他酷爱穿戴印有俱乐部徽标的皮质工装马甲，最喜欢与他的骑手兄弟们形影不离地聚会兜风。这段描述所呈现的琼斯先生所属的群体属性是：</div>
+          <div class="eq-options">
+        
+            <div class="eq-opt" onclick="checkAnswer('ch7', 12, 'A', 'B', 'q-rat-ch7-12', this)">
+              <span class="opt-badge">A</span>
+              <span class="opt-text">ethnic group</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 12, 'B', 'B', 'q-rat-ch7-12', this)">
+              <span class="opt-badge">B</span>
+              <span class="opt-text">cultural group</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 12, 'C', 'B', 'q-rat-ch7-12', this)">
+              <span class="opt-badge">C</span>
+              <span class="opt-text">religious group</span>
+            </div>
+            
+            <div class="eq-opt" onclick="checkAnswer('ch7', 12, 'D', 'B', 'q-rat-ch7-12', this)">
+              <span class="opt-badge">D</span>
+              <span class="opt-text">racial group</span>
+            </div>
+            
+          </div>
+          <div class="eq-actions">
+            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch7-12', this)">
+              <span class="icon">💡</span> 查看权威答案与临床精解
+            </button>
+          </div>
+          <div class="eq-rationale-box" id="q-rat-ch7-12" style="display:none;">
+            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
+            <div class="rat-content">
+              <strong>临床实操解析与知识点溯源：</strong><br>
+              文化（Culture）的广义内涵包括拥有独特的语言黑话、服装徽记、行为准则与价值认同的亚文化群体（Subculture）。机车俱乐部成员拥有独特的穿搭、骑行礼仪与聚集仪式，构成典型的文化群体范例。这绝非生物学生理种族（D）、血缘民族（A）或宗教神权组织（C）。
+            </div>
+          </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer class="editorial-colophon">
+      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
+      <p>Chapter 7: Caring About Culture and Diversity · 双语沉浸学术研读版</p>
+      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch7_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'paper') {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      try {
+        if (isPaper) {
+          localStorage.setItem('psw_theme', 'paper');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        } else {
+          localStorage.setItem('psw_theme', 'default');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        }
+      } catch (e) {}
+    }
+
+    var currentFontSizeIdx = 1;
+    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
+    function adjustFontSize(delta) {
+      currentFontSizeIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontSizeIdx + delta));
+      document.documentElement.style.setProperty('--user-font-size', fontSizes[currentFontSizeIdx]);
+    }
+
+    initLanguageMode();
+
+    function toggleReaderAudioPlay() {
+      if (readerAudio.paused) {
+        readerAudio.play().then(function() {
+          isPlaying = true;
+          document.getElementById('rabPlayBtn').innerText = '⏸';
+        }).catch(function(e) { console.log(e); });
+      } else {
+        readerAudio.pause();
+        isPlaying = false;
+        document.getElementById('rabPlayBtn').innerText = '▶';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var title = el.getAttribute('data-title') || '';
+      readerAudio.currentTime = start;
+      readerAudio.play().then(function() {
+        isPlaying = true;
+        document.getElementById('rabPlayBtn').innerText = '⏸';
+      }).catch(function(e) { console.log(e); });
+
+      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
+      for (var i = 0; i < actives.length; i++) {
+        actives[i].classList.remove('audio-active');
+      }
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 7 章 正在朗读';
+    }
+
+    readerAudio.addEventListener('timeupdate', function() {
+      var cur = readerAudio.currentTime;
+      var dur = readerAudio.duration || 1500;
+      function formatTime(t) {
+        var m = Math.floor(t / 60);
+        var s = Math.floor(t % 60);
+        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+      }
+      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
+
+      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
+      var found = null;
+      for (var i = 0; i < entries.length; i++) {
+        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
+        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
+        if (cur >= start && cur < end) {
+          found = entries[i];
+          break;
+        }
+      }
+      if (found && found !== lastActiveEntry) {
+        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+        found.classList.add('audio-active');
+        lastActiveEntry = found;
+        var title = found.getAttribute('data-title');
+        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 7 章 正在朗读';
+      }
+    });
+
+    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
+      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
+      if (!card) return;
+      var opts = card.querySelectorAll('.eq-opt');
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].classList.remove('selected-correct', 'selected-wrong');
+      }
+      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
+      if (selectedKey === correctKey) {
+        rowEl.classList.add('selected-correct');
+        if (statusEl) {
+          statusEl.innerText = '✅ 回答正确！';
+          statusEl.style.color = '#166534';
+        }
+      } else {
+        rowEl.classList.add('selected-wrong');
+        if (statusEl) {
+          statusEl.innerText = '❌ 回答有误，请查阅下方临床解析';
+          statusEl.style.color = '#991b1b';
+        }
+      }
+      var rat = document.getElementById(ratId);
+      if (rat) rat.style.display = 'block';
+    }
+
+    function toggleRationale(ratId, btnEl) {
+      var box = document.getElementById(ratId);
+      if (!box) return;
+      if (box.style.display === 'none' || !box.style.display) {
+        box.style.display = 'block';
+        btnEl.innerHTML = '<span class="icon">🔽</span> 收起答案与临床精解';
+      } else {
+        box.style.display = 'none';
+        btnEl.innerHTML = '<span class="icon">💡</span> 查看权威答案与临床精解';
+      }
+    }
+  </script>
+</body>
+</html>
