@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="mode-bilingual">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
   <style>
     :root {
+      --user-font-size: 17px;
       --bg-page: #f9f8f5;
       --bg-container: #ffffff;
-      --text-main: #0f172a;
+      --text-main: #1e293b;
       --text-secondary: #475569;
       --text-muted: #94a3b8;
       --primary-navy: #1e3a8a;
@@ -33,9 +34,10 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       padding-bottom: 120px;
+      transition: background 0.2s, color 0.2s;
     }
     
-    /* Top Sticky App Navigation & Audio Player Bar */
+    /* Top Sticky App Navigation & Interactive Switcher Bar */
     .top-sticky-bar {
       position: sticky;
       top: 0;
@@ -48,6 +50,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
       box-shadow: 0 1px 8px rgba(0,0,0,0.03);
     }
     
@@ -67,6 +70,7 @@
       border-radius: 9999px;
       border: 1px solid #bfdbfe;
       transition: all 0.2s;
+      white-space: nowrap;
     }
     .nav-home-btn:hover {
       background: #dbeafe;
@@ -89,14 +93,78 @@
       color: #64748b;
     }
     
+    /* Center Segmented Language Switcher */
+    .mode-switch-segmented {
+      display: flex;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .mode-seg-btn {
+      padding: 6px 15px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover {
+      color: #0f172a;
+    }
+    .mode-seg-btn.active {
+      background: #ffffff;
+      color: #1e3a8a;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+    }
+    
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    /* Reading Utilities */
+    .reading-util-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .util-btn {
+      padding: 6px 11px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .util-btn:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+      color: #0f172a;
+    }
+    
     .ambient-player {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 9999px;
-      padding: 5px 16px 5px 8px;
+      padding: 4px 14px 4px 6px;
     }
     
     .play-circle-btn {
@@ -110,7 +178,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
       transition: transform 0.15s, background 0.15s;
     }
     .play-circle-btn:hover {
@@ -123,25 +191,72 @@
       flex-direction: column;
     }
     .player-track-title {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 600;
       color: var(--text-main);
-      max-width: 260px;
+      max-width: 200px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     .player-track-time {
-      font-size: 11px;
+      font-size: 10.5px;
       color: var(--text-muted);
       font-variant-numeric: tabular-nums;
     }
     
-    /* Layout Container */
+    /* ========================================================
+       WARM PAPER READING THEME (护眼纸质模式)
+       ======================================================== */
+    html.theme-paper {
+      --bg-page: #f5efe6;
+      --bg-container: #fcf9f2;
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --border-subtle: #e5ded2;
+    }
+    html.theme-paper body {
+      background: #f5efe6;
+      color: #2b2520;
+    }
+    html.theme-paper .top-sticky-bar {
+      background: rgba(245, 239, 230, 0.95);
+      border-bottom-color: #e5ded2;
+    }
+    html.theme-paper .mode-switch-segmented {
+      background: #e9e1d4;
+      border-color: #d8cebe;
+    }
+    html.theme-paper .mode-seg-btn {
+      color: #5c5247;
+    }
+    html.theme-paper .mode-seg-btn.active {
+      background: #fcf9f2;
+      color: #2b2520;
+    }
+    html.theme-paper .util-btn {
+      background: #fcf9f2;
+      border-color: #d8cebe;
+      color: #5c5247;
+    }
+    html.theme-paper .ambient-player {
+      background: #ede6dc;
+      border-color: #d8cebe;
+    }
+    html.theme-paper .editorial-stream,
+    html.theme-paper .chapter-hero-editorial {
+      background: #fcf9f2;
+      border-color: #e5ded2;
+      box-shadow: 0 4px 24px rgba(43, 37, 32, 0.04);
+    }
+    
+    /* ========================================================
+       LAYOUT & EDITORIAL TYPOGRAPHY
+       ======================================================== */
     .ch5-editorial-flow {
-      max-width: 880px;
-      margin: 32px auto 0;
-      padding: 0 20px;
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 0 16px;
     }
     
     /* Hero Header */
@@ -149,9 +264,9 @@
       background: var(--bg-container);
       border: 1px solid var(--border-subtle);
       border-radius: 20px;
-      padding: 44px 44px 32px;
+      padding: 40px 42px 30px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     
     .hero-eyebrow {
@@ -167,7 +282,7 @@
     }
     
     .hero-title-en {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 750;
       line-height: 1.25;
       color: var(--text-main);
@@ -176,7 +291,7 @@
     }
     
     .hero-title-cn {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 600;
       color: var(--text-secondary);
       margin-bottom: 20px;
@@ -195,8 +310,8 @@
     
     /* Page Navigation Ribbon */
     .page-jump-ribbon {
-      margin-top: 24px;
-      padding-top: 18px;
+      margin-top: 22px;
+      padding-top: 16px;
       border-top: 1px solid #f1f5f9;
       display: flex;
       align-items: center;
@@ -237,8 +352,8 @@
       background: var(--bg-container);
       border: 1px solid var(--border-subtle);
       border-radius: 20px;
-      padding: 48px 52px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      padding: 44px 48px;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
     }
     
     /* Page Anchor Marker (Subtle divider, not a wall) */
@@ -246,7 +361,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      margin: 64px 0 40px;
+      margin: 56px 0 36px;
       opacity: 0.85;
     }
     .marker-line-left, .marker-line-right {
@@ -273,47 +388,74 @@
       font-weight: 400;
     }
     
-    /* Section Headings */
-    .editorial-section-heading {
-      margin: 48px 0 24px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #f1f5f9;
+    /* ========================================================
+       SECTION DIVIDERS & HEADINGS (明确区分前后阅读)
+       ======================================================== */
+    .editorial-section-divider {
+      margin: 64px 0 28px;
+    }
+    .section-divider-bar {
+      height: 2px;
+      background: linear-gradient(to right, #1e3a8a 0%, #93c5fd 60%, transparent 100%);
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+    .section-heading-card {
+      border-left: 4px solid var(--primary-navy);
+      padding-left: 20px;
+    }
+    .section-eyebrow {
+      margin-bottom: 6px;
+    }
+    .section-badge-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1e3a8a;
+      background: #eff6ff;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
     }
     .sh-title-en {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text-main);
+      font-size: 23px;
+      font-weight: 750;
+      color: #1e3a8a;
+      line-height: 1.35;
       margin-bottom: 4px;
       letter-spacing: -0.01em;
     }
     .sh-title-cn {
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--text-secondary);
+      font-size: 16.5px;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
     }
     
     /* Bilingual Paragraphs */
     .bilingual-paragraph {
       position: relative;
-      margin-bottom: 24px;
-      padding: 12px 16px 12px 18px;
+      margin-bottom: 26px;
+      padding: 12px 18px 14px 20px;
       border-left: 3px solid transparent;
-      border-radius: 6px;
-      transition: all 0.2s ease;
+      border-radius: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
     }
     .bilingual-paragraph:hover {
-      background: rgba(241, 245, 249, 0.65);
+      background: rgba(241, 245, 249, 0.7);
       border-left-color: #cbd5e1;
     }
     .bilingual-paragraph.audio-active {
       background: #eff6ff;
       border-left-color: var(--accent-blue);
-      box-shadow: 0 2px 14px rgba(37, 99, 235, 0.08);
+      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.08);
     }
     .para-play-indicator {
       position: absolute;
-      left: -22px;
+      left: -24px;
       top: 14px;
       font-size: 11px;
       color: var(--accent-blue);
@@ -328,41 +470,43 @@
     }
     
     .para-en {
-      font-size: 16.5px;
-      line-height: 1.75;
+      font-size: var(--user-font-size, 17px);
+      line-height: 1.82;
       color: var(--text-main);
       margin-bottom: 8px;
-      font-weight: 450;
+      font-weight: 420;
+      letter-spacing: -0.01em;
     }
     .para-cn {
-      font-size: 15px;
-      line-height: 1.7;
+      font-size: calc(var(--user-font-size, 17px) - 1.5px);
+      line-height: 1.85;
       color: var(--text-secondary);
       font-weight: 400;
+      letter-spacing: 0.01em;
     }
     
     /* Lists */
     .editorial-list-block {
-      margin: 20px 0 28px;
+      margin: 22px 0 30px;
     }
     .editorial-list {
       list-style: none;
       padding-left: 0;
     }
     .editorial-list-item {
-      margin-bottom: 14px;
-      padding-left: 12px;
+      margin-bottom: 16px;
+      padding-left: 14px;
       position: relative;
     }
     .item-en {
-      font-size: 16px;
-      line-height: 1.65;
+      font-size: var(--user-font-size, 17px);
+      line-height: 1.75;
       color: var(--text-main);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
     .item-cn {
-      font-size: 14.5px;
-      line-height: 1.6;
+      font-size: calc(var(--user-font-size, 17px) - 1.5px);
+      line-height: 1.75;
       color: var(--text-secondary);
     }
     
@@ -370,7 +514,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 12px 0 16px;
+      margin: 12px 0 18px;
       padding: 8px 16px;
       background: #fefce8;
       border: 1px solid #fef08a;
@@ -380,78 +524,166 @@
       color: #854d0e;
     }
     
-    /* Editorial Callout Panels (Statutory Boxes & Case Studies) */
-    .editorial-panel {
-      margin: 36px 0;
+    /* ========================================================
+       EDITORIAL BOX CONTAINERS (明确独立底色与框框标识)
+       ======================================================== */
+    .editorial-box-container {
+      margin: 48px 0;
       border-radius: 14px;
-      padding: 26px 28px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
-    }
-    .panel-statutory-box {
-      background: #fbfdfc;
-      border: 1px solid #d1fae5;
-      border-left: 4px solid #059669;
-    }
-    .panel-case-study {
-      background: #fffcf8;
-      border: 1px solid #fed7aa;
-      border-left: 4px solid #ea580c;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     
-    .panel-header {
-      margin-bottom: 18px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+    .box-banner-header {
+      padding: 16px 24px;
+      color: #ffffff;
     }
-    .panel-badge {
+    .box-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .box-badge-icon {
+      font-size: 14px;
+    }
+    .box-badge-pill {
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      display: inline-block;
-      margin-bottom: 6px;
+      opacity: 0.95;
     }
-    .panel-statutory-box .panel-badge { color: #059669; }
-    .panel-case-study .panel-badge { color: #ea580c; }
-    
-    .panel-title-en {
-      font-size: 19px;
+    .box-title-en {
+      font-size: 18.5px;
       font-weight: 700;
-      color: var(--text-main);
+      line-height: 1.35;
+      color: #ffffff;
       margin-bottom: 4px;
     }
-    .panel-title-cn {
-      font-size: 15px;
+    .box-title-cn {
+      font-size: 14.5px;
       font-weight: 500;
-      color: var(--text-secondary);
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
     }
     
-    .panel-clause {
-      margin-bottom: 14px;
-      padding-bottom: 12px;
-      border-bottom: 1px dashed rgba(0,0,0,0.05);
+    .box-body-content {
+      padding: 24px 26px;
     }
-    .panel-clause:last-child {
+    
+    .box-clause-item {
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+    }
+    .box-clause-item:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: none;
     }
+    .box-source-citation {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      font-style: italic;
+      opacity: 0.85;
+    }
+    
     .clause-en {
       font-size: 15.5px;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--text-main);
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
     .clause-cn {
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 14.5px;
+      line-height: 1.65;
       color: var(--text-secondary);
+    }
+    
+    /* 1. box-theme-sage (Statutory Boxes 5.1 & 5.2) */
+    .box-theme-sage {
+      border: 1.5px solid #86efac;
+    }
+    .box-theme-sage .box-banner-header {
+      background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+    }
+    .box-theme-sage .box-body-content {
+      background: #f0fdf4;
+    }
+    
+    /* 2. box-theme-teal (Dignity Box 5.3) */
+    .box-theme-teal {
+      border: 1.5px solid #99f6e4;
+    }
+    .box-theme-teal .box-banner-header {
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+    }
+    .box-theme-teal .box-body-content {
+      background: #f0fdfa;
+    }
+    
+    /* 3. box-theme-lavender (Privacy Box 5.4) */
+    .box-theme-lavender {
+      border: 1.5px solid #ddd6fe;
+    }
+    .box-theme-lavender .box-banner-header {
+      background: linear-gradient(135deg, #581c87 0%, #6b21a8 100%);
+    }
+    .box-theme-lavender .box-body-content {
+      background: #faf5ff;
+    }
+    
+    /* 4. box-theme-amber (Negligent Acts Box 5.5) */
+    .box-theme-amber {
+      border: 1.5px solid #fde68a;
+    }
+    .box-theme-amber .box-banner-header {
+      background: linear-gradient(135deg, #9a3412 0%, #c2410c 100%);
+    }
+    .box-theme-amber .box-body-content {
+      background: #fffbeb;
+    }
+    
+    /* 5. box-theme-terracotta (Focus on LTC) */
+    .box-theme-terracotta {
+      border: 1.5px solid #cbd5e1;
+    }
+    .box-theme-terracotta .box-banner-header {
+      background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    }
+    .box-theme-terracotta .box-body-content {
+      background: #f8fafc;
+    }
+    
+    /* 6. box-theme-blue (Objectives) */
+    .box-theme-blue {
+      border: 1.5px solid #bae6fd;
+    }
+    .box-theme-blue .box-banner-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+    }
+    .box-theme-blue .box-body-content {
+      background: #f0f9ff;
+    }
+    
+    /* 7. box-theme-case (Clinical Case Studies) */
+    .box-theme-case {
+      border: 1.5px solid #fed7aa;
+    }
+    .box-theme-case .box-banner-header {
+      background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%);
+    }
+    .box-theme-case .box-body-content {
+      background: #fffaf0;
     }
     
     /* Key Terms Grid */
     .key-terms-section {
-      margin: 40px 0;
-      padding: 24px;
+      margin: 44px 0;
+      padding: 26px;
       background: #f8fafc;
       border: 1px solid var(--border-subtle);
       border-radius: 14px;
@@ -472,14 +704,14 @@
     
     .terms-editorial-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 14px;
     }
     .editorial-term-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 10px;
-      padding: 14px 16px;
+      padding: 16px;
       transition: all 0.15s;
     }
     .editorial-term-card:hover {
@@ -489,87 +721,108 @@
     .etc-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 8px;
-    }
-    .etc-en-block {
-      display: flex;
       align-items: baseline;
-      gap: 8px;
+      margin-bottom: 8px;
     }
     .etc-word {
       font-size: 15px;
+      color: var(--primary-navy);
       font-weight: 700;
-      color: var(--text-main);
     }
     .etc-ipa {
       font-size: 12px;
-      color: #64748b;
+      color: #94a3b8;
       font-family: monospace;
+      margin-left: 6px;
     }
     .etc-cn-tag {
       font-size: 12px;
       font-weight: 600;
-      background: #eff6ff;
-      color: #1e40af;
+      color: #0369a1;
+      background: #f0f9ff;
       padding: 2px 8px;
       border-radius: 4px;
     }
     .etc-def-en {
-      font-size: 13px;
+      font-size: 13.5px;
+      line-height: 1.55;
       color: #334155;
-      line-height: 1.5;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .etc-def-cn {
-      font-size: 12.5px;
+      font-size: 13px;
+      line-height: 1.55;
       color: #64748b;
-      line-height: 1.5;
     }
     .etc-ref {
-      color: #94a3b8;
       font-size: 11px;
+      color: #94a3b8;
     }
     
-    /* Figures */
+    /* Figures and Plates */
     .editorial-figure, .editorial-plate {
       margin: 36px 0;
-      padding: 20px 24px;
+      padding: 22px 24px;
       background: #f8fafc;
-      border-left: 3px solid #64748b;
-      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
     }
     .ef-tag, .ep-tag {
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.06em;
-      color: #64748b;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 6px;
+      color: #64748b;
+      margin-bottom: 8px;
     }
     .ef-caption-en, .ep-title {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--text-main);
       margin-bottom: 4px;
     }
     .ef-caption-cn, .ep-desc {
-      font-size: 13.5px;
+      font-size: 14.5px;
       color: var(--text-secondary);
+      line-height: 1.6;
     }
     .ef-source {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 6px;
+      font-size: 12px;
+      color: #94a3b8;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Footer URL */
+    .editorial-footer-url {
+      margin: 24px 0 36px;
+      padding: 14px 18px;
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+    .efu-label {
+      font-weight: 600;
+      color: #475569;
+    }
+    .efu-link {
+      color: var(--accent-blue);
+      text-decoration: underline;
+      word-break: break-all;
     }
     
-    /* Quiz Cards */
+    /* Quiz Card */
     .editorial-quiz-card {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
+      margin: 28px 0;
       padding: 24px;
-      margin: 24px 0;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
     }
     .eq-header {
       display: flex;
@@ -702,22 +955,106 @@
       font-size: 11px;
     }
     
+    /* ========================================================
+       TRI-STATE LANGUAGE SWITCHING DIRECTIVES
+       ======================================================== */
+    /* 1. English Only Mode */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .sh-title-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .panel-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .quiz-q-cn,
+    html.mode-en .quiz-opt-cn,
+    html.mode-en .quiz-ans-cn,
+    html.mode-en .cn-block,
+    html.mode-en .marker-text-cn,
+    html.mode-en .cc-text-cn,
+    html.mode-en .ef-caption-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-en .para-en {
+      font-size: calc(var(--user-font-size, 17px) + 0.5px);
+      line-height: 1.85;
+      margin-bottom: 22px;
+    }
+
+    /* 2. Chinese Only Mode */
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .sh-title-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .panel-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .quiz-q-en,
+    html.mode-cn .quiz-opt-en,
+    html.mode-cn .quiz-ans-en,
+    html.mode-cn .en-block,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    html.mode-cn .para-cn {
+      font-size: calc(var(--user-font-size, 17px) - 0.5px);
+      line-height: 1.9;
+      color: var(--text-main);
+      margin-bottom: 22px;
+    }
+
+    html.mode-cn .editorial-list-item {
+      padding-left: 20px;
+    }
+    html.mode-cn .editorial-list-item::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      font-size: 16px;
+      color: var(--primary-navy);
+      font-weight: bold;
+    }
+
+    /* 3. Bilingual Mode */
+    html.mode-bilingual .para-en {
+      margin-bottom: 8px;
+    }
+    html.mode-bilingual .para-cn {
+      margin-top: 0;
+    }
+
     /* Responsive */
-    @media (max-width: 768px) {
-      .top-sticky-bar { padding: 10px 14px; }
+    @media (max-width: 900px) {
+      .top-sticky-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 14px;
+      }
       .nav-chapter-title { display: none; }
-      .player-track-title { max-width: 140px; }
+      .reading-util-group { display: none; }
+    }
+    @media (max-width: 600px) {
+      .player-track-title { max-width: 120px; }
+      .editorial-stream { padding: 24px 16px; border-radius: 12px; }
+      .box-banner-header { padding: 12px 16px; }
+      .box-body-content { padding: 16px; }
       .ch5-editorial-flow { padding: 0 10px; margin-top: 16px; }
       .chapter-hero-editorial { padding: 28px 20px 24px; }
       .hero-title-en { font-size: 24px; }
       .hero-title-cn { font-size: 17px; }
-      .editorial-stream { padding: 28px 20px; }
       .terms-editorial-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <!-- Top Bar with Ambient Audio Player -->
+  <!-- Top Bar with Ambient Audio Player and Interactive Switcher -->
   <div class="top-sticky-bar">
     <div class="nav-left">
       <a href="psw-reader.html#toc" class="nav-home-btn">← 返回全书总目录</a>
@@ -726,11 +1063,34 @@
         <span>Legislation: The Client's Rights and Your Rights</span>
       </div>
     </div>
-    <div class="ambient-player">
-      <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
-      <div class="player-meta">
-        <span class="player-track-title" id="rabCurrentTitle">第 5 章 · 点选任意段落开始朗读</span>
-        <span class="player-track-time" id="rabCurTime">00:00 / 23:15</span>
+    
+    <!-- Center Segmented Language Switcher -->
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">
+        <span class="seg-icon">🌐</span> 中英双语
+      </button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">
+        <span class="seg-icon">🔤</span> 仅英文
+      </button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">
+        <span class="seg-icon">🇨🇳</span> 仅中文
+      </button>
+    </div>
+
+    <div class="nav-right">
+      <!-- Reading Utilities -->
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色 (Warm Paper)">📖 护眼纸色</button>
+        <button class="util-btn" onclick="adjustFontSize(-1)" title="减小字号">A-</button>
+        <button class="util-btn" onclick="adjustFontSize(1)" title="放大字号">A+</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 5 章 · 点选任意段落开始朗读</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 23:15</span>
+        </div>
       </div>
     </div>
   </div>
@@ -765,73 +1125,89 @@
       <!-- Continuous Narrative Body -->
       <main class="editorial-stream">
     <div id="page-59"></div>
-                <aside class="editorial-panel panel-statutory-box">
-                  <div class="panel-header">
-                    <span class="panel-badge">STATUTORY REGULATION · 教材法规专栏</span>
-                    <h4 class="panel-title-en">OBJECTIVES</h4>
-                    <div class="panel-title-cn">本章学习与执业考核目标</div>
+                <aside class="editorial-box-container box-theme-blue">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">🎯</span>
+                      <span class="box-badge-pill">LEARNING OBJECTIVES · 本章学习与执业考核核心目标</span>
+                    </div>
+                    <h4 class="box-title-en">OBJECTIVES</h4>
+                    <div class="box-title-cn">本章学习与执业考核目标</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">After reading this chapter, the learner should be able to do the following:</div>
                       <div class="clause-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标：</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Explain the basic rights protected by the Canadian Charter of Rights and Freedoms and the provincial and territorial human rights codes.</div>
                       <div class="clause-cn">阐述《加拿大权利与自由宪章》以及各省与地区人权法典所保护的基本权利。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Describe client rights.</div>
                       <div class="clause-cn">详尽描述服务对象（Clients）所享有的各项合法权利。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Identify ways support workers can respect their client's rights.</div>
                       <div class="clause-cn">指出支持工作者在日常工作中尊重服务对象各项权利的具体途径与方法。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Describe the difference between criminal law and civil law.</div>
                       <div class="clause-cn">阐明刑法（Criminal Law）与民法（Civil Law）的根本法律属性界限与责任差异。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Describe how negligence, defamation, assault, battery, false imprisonment, and invasion of privacy apply to the support worker's job.</div>
                       <div class="clause-cn">阐述过失疏忽、诽谤、恐吓/侵犯人身意图、人身侵害、非法拘禁以及侵犯隐私等侵权责任在支持工作者执业中的具体适用与认定。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Define electronic privacy and describe how confidentiality can be maintained electronically.</div>
                       <div class="clause-cn">定义电子隐私权，并阐述在电子通信与数字化工作中维护信息保密性的实操要则。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">List the types of legislation that address support workers' rights and duties.</div>
                       <div class="clause-cn">列举规制与保障支持工作者法定权益与执业职责的各大类法律法规。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Apply the information in this chapter to clinical practice properly.</div>
                       <div class="clause-cn">将本章所确立的法律与伦理规约精准、审慎地运用于实际临床护理照护实践中。</div>
                     </div>
                     </div></aside>
 
+                <div class="editorial-footer-url">
+                  <span class="efu-icon">🌐</span>
+                  <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
+                  <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+                </div>
+                
             <div class="page-anchor-marker" id="page-60">
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 60 · 原书第 60 页</span>
+                <span class="marker-text-en">Page 60</span>
+                <span class="marker-text-cn">· 原书第 60 页</span>
                 <span class="marker-badge">IMG_6889.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">KEY TERMS</h3>
-                  <div class="sh-title-cn">核心专业术语表 (原版 28 词全文收录)</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">KEY TERMS</h3>
+                    <div class="sh-title-cn">核心专业术语表 (原版 28 词全文收录)</div>
+                  </div>
                 </div>
                 
                 <div class="key-terms-section">
@@ -1378,13 +1754,14 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 61 · 原书第 61 页</span>
+                <span class="marker-text-en">Page 61</span>
+                <span class="marker-text-cn">· 原书第 61 页</span>
                 <span class="marker-badge">IMG_6890.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">You and your clients are entitled to a number of legal rights. The foundation of a good client-worker relationship is a basic understanding of the rights of the client, the worker's rights, and the legal responsibilities of the worker. As a support worker, how you conduct yourself at work and how you relate to your clients are determined by:</p>
                   <p class="para-cn">您与您的服务对象（Clients）均享有诸多受法律保护的法定权利。构建良好且互信之护患关系的基石，在于对案主合法权利、支持工作者自身权利、以及照护人员法定法律责任的深刻理解。作为一名专业个人支持工作者（PSW），您在工作中的行为操守以及与服务对象的互动模式，均受制于以下三大核心准则：</p>
@@ -1409,35 +1786,47 @@
                     </ul>
 </div>
 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Whereas ethics could be said to be rules of conduct that guide society when deciding what is right and what is wrong, and what is good and what is bad, legislation tells society what it can and cannot do. Legislation is a body of laws that govern the behaviour of a country's residents. In Canada, legislation helps to make sure that all health care clients receive safe and skillful care and enjoy the privacy that all people deserve. Enforced by the courts, legislation also protects clients' rights and health care providers' rights.</p>
                   <p class="para-cn">如果说道德伦理是指导社会判定是非对错、扬善抑恶的崇高行为准则，那么立法（Legislation）则是国家向全社会明确宣示'能做什么'与'绝不能做什么'的强制性刚性边界。立法是规制该国居民行为规范的整套成文法总和。在加拿大，法律法规强力保障所有接受医疗照护的案主都能获得安全、规范且高技能的专业照料，并享有每个人应得的生活隐私。经由各级司法法院强制执行，法规既坚定捍卫案主的法定权益，亦严格保护医疗卫生提供者的合法执业权利。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">UNDERSTANDING RIGHTS</h3>
-                  <div class="sh-title-cn">理解权利的本质：道德权利与法定权利</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">UNDERSTANDING RIGHTS</h3>
+                    <div class="sh-title-cn">理解权利的本质：道德权利与法定权利</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">A right is something to which a person is justly entitled. Some rights, sometimes called moral rights, are based on a sense of fairness or ethics. For example, when you and a classmate arrange to study together, you have the right to expect that the classmate will show up and be prepared to work. In another example, if you discussed a personal matter with a friend, you have the right to expect that your friend will not repeat this information to others. These rights are not based on written laws. They are based on moral principles: Commitments should be honoured, and secrets should be kept.</p>
                   <p class="para-cn">权利（Right）是一个人依法或依理应当正当享有之利益与资格。某些权利（通常被称为道德权利 Moral Rights）根植于人际公平感或社会伦理共识。例如，当您与一位同学约定共同温习功课时，您有权期望对方准时出席并做好学习准备；又如，当您向一位挚友倾诉个人隐私时，您有权期望对方绝不会将此事向他人传播。此类权利并非载于成文法律，而是建立在崇高道德法则之上：契约承诺应当恪守，他人隐私秘密应当保守。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Rights that are formally recognized in law are legal rights based on rules and principles outlined in the law and enforced by society. For example, various laws give you the rights to vote, to receive medical care, to own property, and to receive fair treatment if accused of a crime. Laws reflect the values of the society that created them. Canadians enjoy rights and freedoms that enable a life of equality and dignity.</p>
                   <p class="para-cn">在法律条文中获得正式确认与保护的权利被称为法定权利（Legal Rights）。它们以成文法所载的条文原则为依据，并由整个社会国家机器予以强制保障。例如，多项成文法律赋予公民选举投票权、获取医疗救治的权利、持有私人财产的权利、以及在遭受犯罪指控时享有公平公正司法审判的权利。法律深刻映射着造就它的社会的核心价值观。全体加拿大人享有各项受法律保护的权利与自由，以保障每个人能够过上有尊严且平等的体面生活。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">BASIC HUMAN RIGHTS IN CANADA</h3>
-                  <div class="sh-title-cn">加拿大的基本人权保障与宪章精神</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">BASIC HUMAN RIGHTS IN CANADA</h3>
+                    <div class="sh-title-cn">加拿大的基本人权保障与宪章精神</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">The Canadian Charter of Rights and Freedoms is federal legislation that applies to all Canadians regardless of where they live. As part of the Canadian Constitution, the Charter applies at the federal level, so all provincial and territorial laws must be consistent with its rules. The Charter lists the basic rights and freedoms to which all Canadians are entitled. They include the following:</p>
                   <p class="para-cn">《加拿大权利与自由宪章》（The Canadian Charter of Rights and Freedoms）是一部适用于全体加拿大居民的联邦根本大法，无论其居住于何省何地。作为加拿大宪法的神圣组成部分，宪章在联邦最高法律层级生效，因此所有省份和地区的法律均必须与宪章规约保持绝对高度一致。宪章庄严列举了全体加拿大人依法享有的根本权利与自由，核心包括以下各项：</p>
@@ -1482,24 +1871,30 @@
                     </ul>
 </div>
 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">(The Charter is also discussed in Chapters 7 and 12 as this legislation pertains to the topics discussed there.)</p>
                   <p class="para-cn">（《宪章》的相关法规要点亦将在本书第 7 章与第 12 章中结合人际多元化与安全防护等专题展开深度研讨。）</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Each Canadian province and territory also has a human rights code. These codes reaffirm the principle that all people are entitled to equal rights and opportunities-such as the same type and quality of support services-without discrimination because of race, ethnicity, religion, gender, age, or disability.</p>
                   <p class="para-cn">加拿大每一个省份与地区亦均颁布有自身辖区的人权法典（Human Rights Code）。这些人权法典庄严重新申明了一项普世准则：所有人均享有平等的法定权利与发展机遇——例如享有接受同等类型与卓越品质个人支持照料服务的平等权利——绝不因种族、民族、宗教信仰、性别、年龄或身心残疾而遭受任何不公歧视。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">BASIC RIGHTS OF PEOPLE RECEIVING HEALTH SERVICES</h3>
-                  <div class="sh-title-cn">接受卫生保健服务人群的基本法定权利与人权法案</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">BASIC RIGHTS OF PEOPLE RECEIVING HEALTH SERVICES</h3>
+                    <div class="sh-title-cn">接受卫生保健服务人群的基本法定权利与人权法案</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="46.7" data-end="162.2" data-title="Understanding Rights and Legal Foundations" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">The Human Rights Act is provincial and territorial legislation based on the Canadian Human Rights Act and applies to its specific province or territory. Each Human Rights Act is intended to (1) prevent discrimination and (2) promote and advance human rights in that jurisdiction. Some of the issues addressed by the Human Rights Act of each province or territory include the following:</p>
                   <p class="para-cn">各省及地区《人权法案》（Human Rights Act）是各辖区依据联邦《加拿大人权法案》精神制定的地方性法规，适用于其各自省区。每部《人权法案》的法定主旨均在于：(1) 坚决预防并惩治歧视行为；(2) 在该管辖区内全面促进并推进基本人权的保障与实现。各省或地区《人权法案》所规制的核心法律事项涵盖以下要点（注：本清单前半部分见下，后半部分跨页顺延至第 62 页）：</p>
@@ -1543,7 +1938,8 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 62 · 原书第 62 页</span>
+                <span class="marker-text-en">Page 62</span>
+                <span class="marker-text-cn">· 原书第 62 页</span>
                 <span class="marker-badge">IMG_6891.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
@@ -1551,7 +1947,7 @@
             
                     <div class="continuation-callout">
                       <span class="cc-icon">📌</span>
-                      <span class="cc-text">承接第 61 页底正文：《人权法案》所规制事项（续）/ Continued from Page 61 Human Rights Act List:</span>
+                      <span class="cc-text-cn">承接第 61 页底正文：《人权法案》所规制事项（续）/ Continued from Page 61 Human Rights Act List:</span>
                     </div>
                     <div class="editorial-list-block">
 <ul class="editorial-list">
@@ -1588,121 +1984,130 @@
                     </ul>
 </div>
 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="162.2" data-end="246.9" data-title="Human Rights Codes & Long-Term Care Legislation" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="268.0" data-end="355.0" data-title="Complex-Care Facility Legislation & Box 5.1" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">As well, all provinces and territories have legislation that addresses the rights and freedoms of people using health care services. Your clients, however, may be unable to exercise their rights because of illness or injury; physical, cognitive, or mental challenges; or old age, if the client is frail, confused, or isolated.</p>
                   <p class="para-cn">此外，加拿大所有省份与地区均颁布有专门规制使用医疗卫生保健服务人群合法权利与自由的法律法规。然而，您的服务对象往往可能因患病或负伤、身体残疾、认知或心理精神障碍、或者因高龄衰弱、思维意识混乱或社会孤立，而无法独立行使或捍卫其法定权利。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="162.2" data-end="246.9" data-title="Human Rights Codes & Long-Term Care Legislation" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="268.0" data-end="355.0" data-title="Complex-Care Facility Legislation & Box 5.1" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">The laws governing health care have different titles across the country and may differ in details. You should be aware of the acts that govern your province or territory, which can easily be found on the Internet. Provincial and territorial governments constantly revise health care legislation and introduce new laws to protect the rights of people receiving care in facilities and in the community.</p>
                   <p class="para-cn">规制医疗护理的法律在全国各地的正式名称不尽相同，具体条文细节亦有所差异。您必须清楚知晓规制您所在省份或地区的具体法案（这些法律均可在官方互联网上便捷检索）。各省与地区政府持续对医疗保健法规进行修订，并不断推出新法律，以强力捍卫在照护机构内及社区家庭中接受照料人群的各项合法权利。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="162.2" data-end="246.9" data-title="Human Rights Codes & Long-Term Care Legislation" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="268.0" data-end="355.0" data-title="Complex-Care Facility Legislation & Box 5.1" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Health care legislation consists of acts and regulations. An act is another term for a law. Regulations are detailed rules that implement the requirements of the act. Most health care acts consist of general requirements for maintaining health, safety, and well-being. For example, British Columbia's Community Care and Assisted Living Act sets out general requirements for the licensing, administration, operation, and inspection of long-term care facilities and also sets out broad standards of care. The Residential Care Regulation, which accompanies the Act, sets out detailed rules for meeting those broad standards of care. BOX 5.1 outlines some of the rules covered in British Columbia's Residential Care Regulation, as well as regulations in other provinces such as Manitoba, Nova Scotia, Saskatchewan, and Ontario.</p>
                   <p class="para-cn">医疗卫生法规体系主要由成文法案（Acts）与行政法规细则（Regulations）共同构成。法案是成文法律的正式代名词。规程细则是落实并执行法案法定要求的具体详尽规则。大多数医疗法案确立了维护健康、安全与生活安康的总体性要求。例如，卑诗省《社区照料与协助生活法》（Community Care and Assisted Living Act）确立了长期照护机构牌照审批、行政管理、日常运营及法定监察的总体原则，并制定了广泛的照护基准。伴随该法案实施的《住院照料规程》（Residential Care Regulation）则规定了满足上述广泛照料标准的详尽实操准则。专栏 5.1 概括了卑诗省《住院照料规程》以及曼尼托巴、新斯科舍、萨斯喀彻温和安大略等省份法规所涵盖的核心规定。</p>
                 </article>
                 
-                <aside class="editorial-panel panel-statutory-box">
-                  <div class="panel-header">
-                    <span class="panel-badge">STATUTORY REGULATION · 教材法规专栏</span>
-                    <h4 class="panel-title-en">BOX 5.1 Some Complex-Care Facility Issues Controlled by Legislation (British Columbia,1 Manitoba,2 Nova Scotia,3 Saskatchewan,4 Ontario5)</h4>
-                    <div class="panel-title-cn">专栏 5.1：受法定法律规制的复杂护理与长期照护机构核心运营事项（涵盖卑诗省、曼省、新斯科舍省、萨省、安省等）</div>
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与住户权利法案专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 5.1 Some Complex-Care Facility Issues Controlled by Legislation (British Columbia,1 Manitoba,2 Nova Scotia,3 Saskatchewan,4 Ontario5)</h4>
+                    <div class="box-title-cn">专栏 5.1：受法定法律规制的复杂护理与长期照护机构核心运营事项（涵盖卑诗省、曼省、新斯科舍省、萨省、安省等）</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Bedroom requirements - space, furnishings, privacy, windows, and lighting</div>
                       <div class="clause-cn">卧室建筑与居住标准——空间面积、家具配置、私密隔帘、采光窗户与照明安全</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Room temperature and water temperature</div>
                       <div class="clause-cn">室内居住恒温标准与生活热水温度强制限值（严防烫伤事故）</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Bathrooms and bathing facilities</div>
                       <div class="clause-cn">无障碍卫生间设施与安全专业助浴洗澡设备配置</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Safety requirements, including fire safety and call systems</div>
                       <div class="clause-cn">法定安全技术规范，包括全建筑消防火警系统与床头/卫浴紧急呼叫系统</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Mobility and access</div>
                       <div class="clause-cn">室内外无障碍通行、轮椅活动半径与通道走廊扶手规范</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Dining area, lounges, recreation, and outside activity area</div>
                       <div class="clause-cn">餐饮就餐区、多功能长者休息厅、室内康乐室及室外安全绿化活动区</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Social activities and recreation programs</div>
                       <div class="clause-cn">丰富多样的社交文娱活动与专业康乐疗愈项目规划执行</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Care and supervision; care plans</div>
                       <div class="clause-cn">全天候护理照料与临床监管；量身定制的个性化照护计划（Care Plans）</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Confidentiality and privacy</div>
                       <div class="clause-cn">受助者健康档案信息机密性与人身生活隐私的严密保障</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Neglect and abuse</div>
                       <div class="clause-cn">坚决杜绝任何形式的虐待（Abuse）与疏于照料（Neglect），实行法定强制报告</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Use of restraints</div>
                       <div class="clause-cn">对使用身体或化学约束（Restraints）实行极其严苛的医学审批、最小化与定时巡查</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Preparation and service of food</div>
                       <div class="clause-cn">食品卫生安全储存、营养均衡烹制与符合吞咽能力的配餐饮食服务</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Medication safety; administration of medication; medication records</div>
                       <div class="clause-cn">药品安全储存监管、药物辅助服药/给药规范及药物管理档案（MAR）精准核对</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Access to health services; oral health</div>
                       <div class="clause-cn">保障受助者便捷获取全面医疗健康诊疗服务与专业口腔口腔卫生的神圣权利</div>
                     </div>
                     </div></aside>
 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="162.2" data-end="246.9" data-title="Human Rights Codes & Long-Term Care Legislation" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="268.0" data-end="355.0" data-title="Complex-Care Facility Legislation & Box 5.1" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Some provincial and territorial governments do not have regulations that lay out detailed rules. Instead, they issue standards that expand on their legislation. For example, Alberta's long-term care legislation is accompanied by standards called Continuing Care Health Service Standards. Regardless of whether detailed rules are contained in regulations or standards, all live-in facilities in a province or territory must abide by these rules. Not to do so could result in removal of their licences.</p>
                   <p class="para-cn">部分省份和地区政府并未专门颁布名为规程的细则，而是通过颁布专门标准（Standards）来对其立法进行具体化拓展。例如，阿尔伯塔省的长期照护立法伴随有称为《持续照护卫生服务标准》（Continuing Care Health Service Standards）的法定规范。无论这些详尽规则是载于规程还是标准之中，所在省份或地区的所有全寄宿制照护机构均必须无条件恪守这些规范。未遵守规定将直接导致被依法吊销执业运营牌照的严重法律后果。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Bill of Rights</h3>
-                  <div class="sh-title-cn">住户权利法案（Bill of Rights）：法规与标准的浓缩总结</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Bill of Rights</h3>
+                    <div class="sh-title-cn">住户权利法案（Bill of Rights）：法规与标准的浓缩总结</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="162.2" data-end="246.9" data-title="Human Rights Codes & Long-Term Care Legislation" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="268.0" data-end="355.0" data-title="Complex-Care Facility Legislation & Box 5.1" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">There is no single list of rights afforded to all Canadians receiving care in facilities and in the community. However, some provinces, such as British Columbia, Manitoba and Ontario, have created a bill of rights for clients, which is essentially a summary of the lengthy rules contained in regulations and standards. For example, consider British Columbia's Residents' Bill of Rights for long-term care clients (BOX 5.2).</p>
                   <p class="para-cn">目前加拿大尚未出台一部适用于全国所有在机构与社区接受照料人群的统一人权清单。然而，部分省份（例如卑诗省、曼尼托巴省和安大略省）已专门为受助案主制定了权利法案（Bill of Rights），其本质上是对繁复冗长的规程细则与照护标准的精炼浓缩总结。例如，请研读卑诗省专门针对长期照护住院案主制定的《住户权利法案》（专栏 5.2）。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="162.2" data-end="246.9" data-title="Human Rights Codes & Long-Term Care Legislation" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="268.0" data-end="355.0" data-title="Complex-Care Facility Legislation & Box 5.1" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Some facilities and agencies write their own bills of rights based on provincial or territorial laws. Clients must receive a written list of their rights. As a support worker, you must know the provincial or territorial laws and your employer policy regarding client rights.</p>
                   <p class="para-cn">许多医疗养老机构和社区服务社亦会依据省级或地区法律编撰符合自身院舍特色的权利法案。服务对象在入住或接受服务时，必须获得一份书面的权利清单。作为一名支持工作者，您必须对规制案主权利的省际法律以及您雇主机构的具体政策做到烂熟于胸。</p>
@@ -1712,46 +2117,50 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 63 · 原书第 63 页</span>
+                <span class="marker-text-en">Page 63</span>
+                <span class="marker-text-cn">· 原书第 63 页</span>
                 <span class="marker-badge">IMG_6892.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <aside class="editorial-panel panel-statutory-box">
-                  <div class="panel-header">
-                    <span class="panel-badge">STATUTORY REGULATION · 教材法规专栏</span>
-                    <h4 class="panel-title-en">BOX 5.2 British Columbia's Residents' Bill of Rights</h4>
-                    <div class="panel-title-cn">专栏 5.2：加拿大卑诗省《长期护理院住户权利法案》（法定全文精解）</div>
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与住户权利法案专栏</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 5.2 British Columbia's Residents' Bill of Rights</h4>
+                    <div class="box-title-cn">专栏 5.2：加拿大卑诗省《长期护理院住户权利法案》（法定全文精解）</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Commitment to Care<br>1. An adult person in care has the right to a care plan developed:<br>(a) specifically for him or her, and<br>(b) on the basis of his or her unique abilities, physical, social and emotional needs, and cultural, and spiritual preferences.</div>
                       <div class="clause-cn">照护承诺（Commitment to Care）<br>1. 接受照料的成年受助案主有权拥有为其量身定制的专属照护计划：<br>(a) 专为其个人特异性需求量身定制编制；并且<br>(b) 紧密基于其独特的身心机能、生理机能、社交与情感需求、以及文化信仰与精神寄托偏好。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Rights to Health, Safety and Dignity<br>2. An adult person in care has the right to the protection and promotion of his or her health, safety and dignity, including a right to all of the following:<br>(a) to be treated in a manner, and to live in an environment, that promotes his or her health, safety and dignity;<br>(b) to be protected from abuse and neglect;<br>(c) to have his or her lifestyle and choices respected and supported, and to pursue social, cultural, religious, spiritual and other interests;<br>(d) to have his or her personal privacy respected, including in relation to his or her records, bedroom, belongings and storage spaces;<br>(e) to receive visitors and to communicate with visitors in private;<br>(f) to keep and display personal possessions, pictures and furnishings in his or her bedroom.</div>
                       <div class="clause-cn">健康、安全与尊严权利（Rights to Health, Safety and Dignity）<br>2. 成年受助案主享有其健康、人身安全与人格尊严获得保护与促进的权利，具体包括以下全部法定权益：<br>(a) 在能全面促进其健康、安全与尊严的方式下获得对待，并在促进尊严的环境中生活；<br>(b) 受到绝对保护，免受任何身体、言语、心理、性或经济上的虐待（Abuse）与疏于照料（Neglect）；<br>(c) 其生活方式与个人自主选择获得充分尊重与支持，并有权追求其社交、文化、宗教、精神及其他个人兴趣；<br>(d) 个人生活与信息隐私权获得尊重，包括其健康档案、卧室、私人物品与储物空间的隐私；<br>(e) 在不受打扰的私密空间接待访客并与访客展开私密交谈沟通；<br>(f) 在其个人卧室内存放、摆放并陈列私人物品、家庭纪念照片与个人家具。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Rights to Participation and Freedom of Expression<br>3. An adult person in care has the right to participate in his or her own care and to freely express his or her views, including a right to all of the following:<br>(a) to participate in the development and implementation of his or her care plan;<br>(b) to establish and participate in a resident or family council to represent the interests of persons in care;<br>(c) to have his or her family or representative participate on a resident or family council on their own behalf;<br>(d) to have access to a fair and effective process to express concerns, make complaints or resolve disputes within the facility;<br>(e) to be informed as to how to make a complaint to an authority outside the facility;<br>(f) to have his or her family or representative exercise the rights under this clause on his or her behalf.</div>
                       <div class="clause-cn">参与权与表达自由权利（Rights to Participation and Freedom of Expression）<br>3. 成年受助案主有权深度参与其自身的照护事务并自由表达个人观点，具体包括以下全部权益：<br>(a) 亲自深度参与其照护计划的制定、评估与具体临床实施；<br>(b) 发起组建并积极参与住户自治委员会或家属委员会，以代表全体受助者的共同利益；<br>(c) 允许其家属或法定代表代理其参与住户或家属委员会；<br>(d) 享有获得公正、高效且透明之机构内部申诉处理流程的权利，以自由表达关切、提出正式投诉或化解争议纠纷；<br>(e) 充分知晓如何向机构外部法定监管机构提出正式投诉的法定渠道与程序；<br>(f) 由其家属或法定代表代理其行使本条款项下的各项法定权利。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Rights to Transparency and Accountability<br>4. An adult person in care has the right to transparency and accountability, including a right to all of the following:<br>(a) to have ready access to copies of all laws, rules and policies affecting a service provided to him or her;<br>(b) to have ready access to a copy of the most recent routine inspection record made under the Act;<br>(c) to be informed in advance of all charges, fees and other amounts that he or she must pay for accommodation and services received through the facility;<br>(d) if any part of the cost of accommodation or services is prepaid, to receive at the time of prepayment a written statement setting out the terms and conditions under which a refund may be made;<br>(e) to have his or her family or representative informed of the matters described in this clause.</div>
                       <div class="clause-cn">透明度与法定问责权利（Rights to Transparency and Accountability）<br>4. 成年受助案主享有对机构运营透明度与法定问责的权利，具体包括以下各项权利：<br>(a) 便捷查阅并获取规制向其所提供服务的所有现行法律、法规及机构内部政策文本副本；<br>(b) 便捷查阅并获取依据本法案对该机构所做出的最新常规行政监察与合规评估记录副本；<br>(c) 提前充分获知其因接受机构住宿及各项照护服务而必须由其个人支付的所有收费、服务费及其他全部款项明细；<br>(d) 若住宿或照护服务的任何部分费用系预先支付，有权在预付时获得一份书面凭证，详尽载明退费条件与法定退款细则；<br>(e) 其家属或法定代理人同样享有充分获知本条款所载全部事项的知情权。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Scope of Rights<br>5. The rights set out in clauses 2, 3 and 4 are subject to:<br>(a) what is reasonably practical given the physical, mental and emotional circumstances of the person in care;<br>(b) the need to protect and promote the health or safety of the person in care or another person in care; and<br>(c) the rights of other persons in care.</div>
                       <div class="clause-cn">法定权利的行使范畴与合理界限（Scope of Rights）<br>5. 上述第 2、3、4 条所确立的各项法定权利，其实施受制于以下合理法律边界：<br>(a) 在综合考量受助案主现实的身体、心理精神及情感状况后，在合理可行的限度内予以落实；<br>(b) 基于保护并促进该案主自身或其他受助案主健康或人身安全之绝对必要性；以及<br>(c) 不得侵犯或减损院舍内其他受助案主的合法权利。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-source-citation">
                       <div class="clause-en">Adapted from Government of British Columbia. (2009). Residents' bill of rights. https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/accountability/policy-and-standards.</div>
                       <div class="clause-cn">本标准改编自加拿大卑诗省政府（2009年颁布）《住院住户权利法案》（Residents' Bill of Rights），官方标准网址：https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/accountability/policy-and-standards。</div>
                     </div>
@@ -1761,13 +2170,14 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 64 · 原书第 64 页</span>
+                <span class="marker-text-en">Page 64</span>
+                <span class="marker-text-cn">· 原书第 64 页</span>
                 <span class="marker-badge">IMG_6893.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="370.0" data-end="429.4" data-title="Promoting Dignity & Moral Rights" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="448.0" data-end="500.0" data-title="Federal vs Provincial Healthcare Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Generally, all clients have the following rights, which are a combination of moral and legal rights:</p>
                   <p class="para-cn">总体而言，所有受助服务对象均享有以下各项根本权利（这些权利是有机融合的道德权利与法定权利的统一体）：</p>
@@ -1802,7 +2212,7 @@
                     </ul>
 </div>
 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="370.0" data-end="429.4" data-title="Promoting Dignity & Moral Rights" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="448.0" data-end="500.0" data-title="Federal vs Provincial Healthcare Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">The Aphasia Institute of Ontario introduced the first-ever pictographic version of the Ontario Residents' Bill of Rights in 2005 (FIGURE 5.1). In live-in facilities, it must be posted near the text version of the Residents' Bill of Rights. This pictogram offers effective ways to communicate with clients who retain thinking and social skills but have difficulty expressing themselves when speaking, understanding the speech of others, and reading and writing.</p>
                   <p class="para-cn">安大略省失语症研究所（Aphasia Institute）于 2005 年首创推出了全球首部图示版《安省住户权利法案》（图 5.1）。在所有寄宿制养老照护机构中，该图示版海报必须紧邻张贴于文字版权利法案旁。这种图示表达法为那些保留有思维认知和社交愿望、但在口语表达、听力理解或阅读书写方面存在严重失语障碍的案主，提供了极其高效的视觉化沟通桥梁。</p>
@@ -1815,30 +2225,36 @@
                   <div class='ef-source'>(Source: Aphasia Institute [2005]. Residents' bill of rights: Pictograph. Toronto. http://www.aphasia.ca/shop/ontario-residents-bill-of-rights/.)</div>
                 </figure>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">The Right to Be Treated With Dignity and Respect</h3>
-                  <div class="sh-title-cn">享有获得人格尊严与崇高尊重的神圣权利</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">The Right to Be Treated With Dignity and Respect</h3>
+                    <div class="sh-title-cn">享有获得人格尊严与崇高尊重的神圣权利</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="370.0" data-end="429.4" data-title="Promoting Dignity & Moral Rights" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="448.0" data-end="500.0" data-title="Federal vs Provincial Healthcare Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">The right to dignity is both an ethical principle and a legal obligation throughout Canada. It is also a guiding principle of caregiving, as emphasized throughout this textbook under the acronym DIPPS (Dignity, Independence, Individualized care, Preferences, Privacy, and Safety).</p>
                   <p class="para-cn">人格尊严权在全加拿大范围内既是一项崇高的执业伦理准则，更是一项不可逾越的法定强制义务。它构成了贯穿本书始终的核心照护哲学支柱——即 DIPPS 原则（尊严 Dignity、独立 Independence、个体化个性化照料 Individualized care、自主偏好 Preferences、隐私机密 Privacy、以及人身安全 Safety）。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="370.0" data-end="429.4" data-title="Promoting Dignity & Moral Rights" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="448.0" data-end="500.0" data-title="Federal vs Provincial Healthcare Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Most health care legislation aims to protect and promote the client's dignity. For example, British Columbia's Community Care and Assisted Living Act states that facilities must be operated 'in a manner that will maintain the spirit, dignity, and individuality of the client being cared for.' Ontario's Long-Term Care Act states that the client has the right to be dealt with 'in a courteous and respectful manner ... that respects the client's dignity' and in a manner that 'recognizes the client's individuality and that is sensitive to and responds to the client's needs and preferences, including preferences based on ethnic, spiritual, linguistic, familial and cultural factors.'</p>
                   <p class="para-cn">绝大多数医疗卫生立法均以坚决维护与促进案主的人格尊严为终极宗旨。例如，卑诗省《社区照料与协助生活法》明确载明：院舍设施的运营必须'以维护受助案主的精神风貌、人格尊严及独特个性为神圣准绳'。安大略省《长期照护法》同样重申：案主有权'在礼貌尊重、恪守案主尊严的方式下获得对待'，并以'充分认可案主的个体特异性、敏锐感知并积极响应其基于族裔、精神信仰、语言习惯、家庭与文化背景等维度的偏好与需求'的方式提供照料。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="370.0" data-end="429.4" data-title="Promoting Dignity & Moral Rights" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="448.0" data-end="500.0" data-title="Federal vs Provincial Healthcare Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Respecting the client's dignity is a basic and important part of support work. For most people, dignity and independence go together. To respect your clients' dignity, encourage them to be independent, allowing them to do as much for themselves as possible (FIGURE 5.2). For example, if a frail older man can put on his shoes, let him do so. It may save you time to put his shoes on for him. However, letting him do it himself helps him maintain some independence.</p>
                   <p class="para-cn">尊重案主的人格尊严是个人支持工作中至关重要的立足之本。对绝大多数人而言，尊严感与独立自主是紧密相连、不可分割的。为了尊重案主的尊严，您应当全力鼓励他们保持独立，允许并支持他们尽可能亲力亲为处理个人事务（图 5.2）。例如，如果一位体弱的高龄长者能够自己穿鞋，就请耐心让他自己穿。替他穿鞋或许能为您省下几分钟时间，但放手让他自己完成，却能极大帮助他维系宝贵的生活自理能力与个人独立尊严。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="370.0" data-end="429.4" data-title="Promoting Dignity & Moral Rights" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="448.0" data-end="500.0" data-title="Federal vs Provincial Healthcare Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Be careful not to make any assumptions about a client's abilities, interests, and limitations. By making assumptions, you may discourage them from doing tasks and activities that they can do. Observe what your client is capable of doing, and check the care plan. A client who is dependent in one area is not necessarily dependent in all areas. For example, Mrs. Mukherjee needs help getting out of a chair. However,</p>
                   <p class="para-cn">在工作中务必保持高度审慎，切忌对案主的功能机能、个人兴趣和生理局限做任何主观臆断。凭空臆断往往会挫伤他们的自尊心，并剥夺他们本可独立完成日常活动的机会。细致观察您的服务对象究竟具备哪些实际能力，并严格核对照护计划（Care Plan）。案主在某一生活领域需要协助，绝不意味着他们在所有维度都丧失自理能力。例如，慕克吉太太（Mrs. Mukherjee）从椅子上站起时需要人搀扶，然而——（跨页接第 65 页首）</p>
@@ -1848,7 +2264,8 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 65 · 原书第 65 页</span>
+                <span class="marker-text-en">Page 65</span>
+                <span class="marker-text-cn">· 原书第 65 页</span>
                 <span class="marker-badge">IMG_6894.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
@@ -1861,7 +2278,7 @@
                   <div class='ef-source'>(iStockphoto/Wavebreakmedia.)</div>
                 </figure>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="429.4" data-end="554.8" data-title="Privacy, Confidentiality & The Oath" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="500.0" data-end="554.8" data-title="Client Rights in Everyday Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">she can feed herself. Mr. Simpson needs help shaving, but he can comb his hair and brush his teeth. Mrs. MacDonald can easily walk by herself, but because of Alzheimer's disease, she may wander off and needs to be supported in a secure environment.</p>
                   <p class="para-cn">（承接第 64 页底）她完全能够独立进餐；辛普森先生（Mr. Simpson）刮胡须时需要照护者协助，但他完全可以自己梳头和刷牙；麦克唐纳太太（Mrs. MacDonald）日常步行非常平稳敏捷，但由于患有阿尔茨海默病（Alzheimer's disease），她可能会出现无意识游荡走失的风险，因此需要在一个安全受控的环境中接受专业照护支持。</p>
@@ -1874,47 +2291,59 @@
                   <div class='ef-source'>(Source: Sorrentino, S. A., & Remmert, L. [2012]. Mosby's textbook for nursing assistants [8th ed., p. 98]. Mosby.)</div>
                 </figure>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="429.4" data-end="554.8" data-title="Privacy, Confidentiality & The Oath" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="500.0" data-end="554.8" data-title="Client Rights in Everyday Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Respecting people's dignity means relating to them the way you would want to be related to if you were in their position. Speak respectfully to them, keeping in mind their hearing or sight limitations if they have any (FIGURE 5.3). In support work, how you relate to a client is just as important as the care you provide. Treating clients with dignity provides them with emotional support and greatly contributes to their quality of life. BOX 5.3 lists ways of respecting the client's dignity.</p>
                   <p class="para-cn">尊重他人的尊严，意味着设身处地——以您若处在对方病患处境时所期盼被对待的方式去对待他们。以礼貌尊敬的态度与他们交谈，并时刻留意对方是否伴有听力衰退或视力减退等生理局限（图 5.3）。在支持工作中，您与案主的沟通互动方式，与您所提供的具体物理护理操作同等关键。以充满尊严的方式对待案主，能赋予其强大的情感支撑，并极大跃升其生命晚期的生活质量。专栏 5.3 列举了在日常执业中恪守案主尊严的具体黄金法则。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">The Right to Privacy and Confidentiality</h3>
-                  <div class="sh-title-cn">享有隐私与信息机密性的法定权利</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">The Right to Privacy and Confidentiality</h3>
+                    <div class="sh-title-cn">享有隐私与信息机密性的法定权利</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="429.4" data-end="554.8" data-title="Privacy, Confidentiality & The Oath" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="500.0" data-end="554.8" data-title="Client Rights in Everyday Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">People using health care services have the right to personal privacy. They have the right to receive care in private and in a way that does not expose their bodies unnecessarily. Only staff members involved in the client's care should see, handle, or examine the client's body.</p>
                   <p class="para-cn">所有使用医疗照护服务的人群依法享有神圣的人身隐私权。他们有权在完全私密的环境中接受照料，且身体绝不遭受任何不必要或未经遮挡的暴露。唯有直接参与该案主临床护理的医疗照护团队人员，方有资格查看、触碰或医学检查案主的身体。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="429.4" data-end="554.8" data-title="Privacy, Confidentiality & The Oath" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="500.0" data-end="554.8" data-title="Client Rights in Everyday Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Information about the client's care, treatment, and condition is confidential (see Chapter 1). All provinces and territories have legislation that protects the privacy and confidentiality of clients' health information. This legislation is usually called a privacy act. Privacy acts provide guidelines to facilities and agencies on how to collect, use, and disclose personal health information. Most agencies require that all staff (and usually volunteers and students) sign an oath of confidentiality, a pledge that promises that the signer will respect and guard personal and private information about a client, family, or agency (see Chapter 9). When in doubt about whether or not to discuss something that you saw in regard to the client, you should always follow your employer's policies.</p>
                   <p class="para-cn">有关案主的一切照料方案、治疗记录及健康身体状况均属绝密信息（参见第 1 章）。加拿大所有省份与地区均颁布有捍卫案主个人健康信息隐私与机密性的法律，此类法律通常被称为《隐私保护法》（Privacy Act）。隐私法对医疗照护机构和社区机构在如何采集、使用与披露个人健康信息方面做出了强制性法定规范。绝大多数机构均严正要求全体雇员（乃至学生与志愿者）在入职第一天必须签署《保密誓词》（Oath of Confidentiality）——这是一份庄严承诺，誓约签署者将恪守并严密守护案主、其家庭及机构的一切私密隐私信息（参见第 9 章）。如果您对工作中所见所闻是否可以对外谈及产生任何疑虑，必须严格服从雇主的保密政策，保持绝对缄默。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="429.4" data-end="554.8" data-title="Privacy, Confidentiality & The Oath" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="500.0" data-end="554.8" data-title="Client Rights in Everyday Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Some home care agencies use camera cell phones, electronic tablets, or smartphones to document certain information about a client, such as to record the healing progression of a wound, or the presence of bruising on the client. In any case, the health care worker must follow the agency's policies regarding the client's right to privacy, how to send a client's information, and how to dispose of this information after the information has been sent, to prevent unauthorized release of information. Most agencies supply their own camera smartphones for this purpose. In this case, the phone is blocked from any social media sites, and it must be turned in after the health care worker's shift is over.</p>
                   <p class="para-cn">部分家庭护理机构会使用配备摄像头的手机、电子平板或智能手机来记录案主的特定临床信息，例如追踪记录伤口的愈合进展，或记录案主身体出现淤青压疮的客观情况。无论在何种情形下，医疗护理人员均必须严格恪守机构关于案主隐私权的规章政策，规范传输案主信息，并在信息安全发送后立即按照合规流程销毁或清除这些数据，严防任何未经授权的敏感信息泄露。大多数机构会为这一专用用途配发机构自有的定制工作手机；在此类设备上，所有社交媒体应用均被系统级严格屏蔽封锁，且在护理人员交接班下班时必须立即上交归还机构统一保管。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="429.4" data-end="554.8" data-title="Privacy, Confidentiality & The Oath" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="500.0" data-end="554.8" data-title="Client Rights in Everyday Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Providing for privacy and confidentiality shows respect for the client and protects the client's dignity. BOX 5.4 lists measures that show respect for privacy and confidentiality.</p>
                   <p class="para-cn">切实捍卫案主的个人隐私与信息机密性，不仅彰显了对案主的深切尊重，更能强力庇护案主的人格尊严。专栏 5.4（见第 67 页）详尽列举了在日常执业中尊重隐私与保密性的各项黄金实操守则。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Electronic Privacy</h3>
-                  <div class="sh-title-cn">数字化时代的电子隐私权（Electronic Privacy）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Electronic Privacy</h3>
+                    <div class="sh-title-cn">数字化时代的电子隐私权（Electronic Privacy）</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="429.4" data-end="554.8" data-title="Privacy, Confidentiality & The Oath" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="500.0" data-end="554.8" data-title="Client Rights in Everyday Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Almost everyone now uses some method of electronic communication-we routinely use our home computers, tablets, or smartphones to communicate with and send pictures to others. There are websites dedicated to allowing users to look at pictures or video clips of other people doing things, almost in real time. For instance, when a celebrity was photographed in compromising circumstances with a</p>
                   <p class="para-cn">在当今时代，几乎每个人都在使用某种形式的电子通信——我们日常习惯于使用家用电脑、平板电脑或智能手机与他人交流并互发照片。网络上甚至涌现出大量专门供用户近乎实时浏览他人私密生活照片或视频短片的社交网站。例如，曾有一位知名公众人物在极其尴尬私密的场合下被偷拍到与一名——（跨页接第 66 页）</p>
@@ -1924,95 +2353,105 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 66 · 原书第 66 页</span>
+                <span class="marker-text-en">Page 66</span>
+                <span class="marker-text-cn">· 原书第 66 页</span>
                 <span class="marker-badge">IMG_6895.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <aside class="editorial-panel panel-statutory-box">
-                  <div class="panel-header">
-                    <span class="panel-badge">STATUTORY REGULATION · 教材法规专栏</span>
-                    <h4 class="panel-title-en">BOX 5.3 Respecting the Client's Right to Dignity</h4>
-                    <div class="panel-title-cn">专栏 5.3：在日常执业中恪守案主人格尊严的黄金法则（实操准则）</div>
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">🤝</span>
+                      <span class="box-badge-pill">DIGNITY IN PRACTICE · 人格尊严执业黄金守则</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 5.3 Respecting the Client's Right to Dignity</h4>
+                    <div class="box-title-cn">专栏 5.3：在日常执业中恪守案主人格尊严的黄金法则（实操准则）</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Make eye contact with the client if culturally appropriate, and listen attentively (see FIGURE 5.3).</div>
                       <div class="clause-cn">在符合文化习俗的前提下，与服务对象保持温暖真诚的目光接触，并全神贯注地倾听其表达（参见图 5.3）。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Stand or sit close to the client, as appropriate. Use touch if you are sure the client would approve. Respect cultural differences regarding touching and personal space preferences (see Chapter 7).</div>
                       <div class="clause-cn">在适当时机靠近案主站立或坐下。若确信案主认可并乐意接受，可施加具有抚慰效果的专业肢体触碰。高度尊重不同族裔在肢体触碰与人际安全距离偏好上的文化差异（详见第 7 章）。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Be patient. Provide kind and thoughtful care.</div>
                       <div class="clause-cn">保持由衷的耐心。提供充满善意、体贴入微的专业人性化护理照料。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Say 'please' and 'thank you,' and practise other common acts of courtesy.</div>
                       <div class="clause-cn">常说'请'和'谢谢'，在每一个护理细节中践行文明礼貌与敬人举止。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Never yell at, scold, embarrass, laugh at, or be sarcastic toward the client.</div>
                       <div class="clause-cn">严厉禁止对案主大声呵斥、责备训斥、使其当众难堪、嘲讽耻笑或冷嘲热讽。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Respect the client's belongings and property. Do not touch personal possessions unless you have a reason to and have the client's permission. Be sure to put items back where you found them.</div>
                       <div class="clause-cn">高度尊重案主的私人物品与财产。除非具备明确正当的护理理由并事先征得案主明确许可，否则切勿擅自翻动其个人所有物。使用后务必物归原处。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Address an adult client by title and last name, unless the client tells you otherwise. Never call a client by first name, pet names such as 'honey,' 'dear,' 'grandpa,' or any other such term.</div>
                       <div class="clause-cn">称呼成年案主时应使用正式尊称加姓氏（如史密斯先生、布朗女士），除非案主本人明确要求其他称呼。切勿直呼其名，更严禁使用轻浮的昵称（如'甜心'、'亲爱的'、'老爷爷'等）。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Tell your supervisor about the client's complaints or concerns about the agency, facility, or services.</div>
                       <div class="clause-cn">案主若对服务机构、院舍设施或护理服务提出任何不满投诉或关切疑虑，必须第一时间如实向主管护士汇报反馈。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Reinforce clients' independence by allowing them to do things for themselves. Avoid creating dependency.</div>
                       <div class="clause-cn">全力支持并强化案主的独立自理能力，鼓励并放手让他们自己完成力所能及的事情。坚决避免助长不必要的病态依赖心理。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Assist the client with personal care and grooming whenever necessary. Make sure the client has:<br>• A neat and clean appearance<br>• A clean-shaven face or groomed beard<br>• Trimmed and clean nails<br>• Dentures, hearing aids, glasses, and other prostheses available, as appropriate<br>• Clean and properly fitted and fastened clothing<br>• Shoes and socks or hose properly applied and fastened<br>• Extra clothing for warmth, as needed, such as a sweater or lap blanket</div>
                       <div class="clause-cn">在必要时协助案主进行个人卫生照料与仪容修饰。务必确保案主具备：<br>• 整洁体面的个人仪容外观<br>• 刮洗干净的面部胡须或修剪整齐的胡型<br>• 修剪平整且干干净净的手脚指甲<br>• 假牙、助听器、老花镜及其他义肢辅助器具均已按需正确佩戴妥当<br>• 穿着干净、合身舒适且纽扣拉链系好的体面衣物<br>• 妥善穿好并系牢鞋子与袜裤<br>• 根据室温防寒保暖需要，随时备好额外的保暖毛衣或膝盖保暖盖毯</div>
                     </div>
                     </div></aside>
 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="670.7" data-end="760.3" data-title="Informed Consent & Scope of Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="612.0" data-title="Respecting the Client's Dignity (Box 5.3)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">woman other than his wife, the image was shared worldwide and resulted in the celebrity's devastated wife filing for divorce immediately.</p>
                   <p class="para-cn">（承接第 65 页底）非其妻子的女性在一起的合影，该照片瞬间在全球互联网上疯传，直接导致其备受打击的妻子立即向法院提出离婚诉讼。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="670.7" data-end="760.3" data-title="Informed Consent & Scope of Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="612.0" data-title="Respecting the Client's Dignity (Box 5.3)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">In today's age of electronic communication, people tend to forget that everyone has the right to privacy. In health care, electronic privacy could be defined as a person's right not to have their image, words, or character description or comments about their reputation made public by electronic means. (See Chapter 9 for more discussion on electronic communication.) It is wrong, both ethically and now legally in most provinces, to post pictures, names, or discussions about your clients, no matter how 'nice' you think you are being to that client, on any social media site (see the Supporting Mrs. Jones: Social Media Versus a Client's Right to Confidentiality box for an example of how one client's privacy rights were violated).</p>
                   <p class="para-cn">在当今高度数字化的电子通信时代，人们往往淡忘了每个人依法享有的隐私权。在医疗保健领域，电子隐私权（Electronic Privacy）被定义为：个人依法享有的、绝不容许其个人肖像、言谈原话、人格特征描写或涉及其声誉的言论被通过任何电子媒介向公众公开发布与传播的法定权利（关于电子通信的深度研读参见第 9 章）。无论您主观上自认为对案主有多么'友善'，在任何社交媒体平台（微信朋友圈、Facebook、Instagram、TikTok 等）发布案主的照片、姓名或谈论其病情，在伦理上均属重大过错，且在绝大多数省份已被明确确立为违法行为（参见第 68 页专栏'支援琼斯太太：社交媒体发布与案主保密权的惨痛冲突'案例）。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">The Right to Give or Withhold Informed Consent</h3>
-                  <div class="sh-title-cn">知情同意权：自决同意或拒绝医疗照护方案的神圣权利</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">The Right to Give or Withhold Informed Consent</h3>
+                    <div class="sh-title-cn">知情同意权：自决同意或拒绝医疗照护方案的神圣权利</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="670.7" data-end="760.3" data-title="Informed Consent & Scope of Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="612.0" data-title="Respecting the Client's Dignity (Box 5.3)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">All people have the right to decide for themselves whether or not they agree to medical treatment, health care, or personal care services. Such agreement is called consent. All provinces and territories have legislation that describes when and how consent is to be obtained.</p>
                   <p class="para-cn">所有人均享有完全自主的法定权利，自行决定是否同意接受某种医疗治疗、健康保健或个人生活照护服务。这种经充分考量后表达的首肯与许可被称为知情同意（Consent）。加拿大所有省份和地区均颁布有明确的法律，详细规制在何种情形下、必须依照何种法定程序获取当事人的有效同意。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="670.7" data-end="760.3" data-title="Informed Consent & Scope of Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="612.0" data-title="Respecting the Client's Dignity (Box 5.3)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">For consent to be valid, it must be informed consent, which is based on having received accurate and complete information. This information is provided to the client by the facility, agency, or physician. Consent is informed when the client clearly understands the following:</p>
                   <p class="para-cn">为了使同意具备法律效力，该同意必须是知情同意（Informed Consent）——即完全建立在当事人已事先获悉精准、完整且充分信息的基础之上。这些关键医疗信息必须由医疗机构、服务社或主治医师直接向案主当面详尽告知。唯有在案主对以下 8 项核心要素达成清晰透彻的理解时，所签署的同意方被法律认定为有效知情同意：</p>
@@ -2062,7 +2501,7 @@
                     </ul>
 </div>
 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="670.7" data-end="760.3" data-title="Informed Consent & Scope of Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="612.0" data-title="Respecting the Client's Dignity (Box 5.3)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">When a client enters a facility or hires an agency, they sign a form giving general consent to treatment (see 'Advance Directive,' below). Special consent forms, however, are required for surgery and other</p>
                   <p class="para-cn">当案主正式入住养老照护机构或与家庭护理服务社签约时，通常会签署一份《常规治疗一般同意书》（General Consent，详见下文'预立医疗指示'）。然而，针对外科手术以及其他——（跨页接第 67 页）</p>
@@ -2072,81 +2511,85 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 67 · 原书第 67 页</span>
+                <span class="marker-text-en">Page 67</span>
+                <span class="marker-text-cn">· 原书第 67 页</span>
                 <span class="marker-badge">IMG_6896.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <aside class="editorial-panel panel-statutory-box">
-                  <div class="panel-header">
-                    <span class="panel-badge">STATUTORY REGULATION · 教材法规专栏</span>
-                    <h4 class="panel-title-en">BOX 5.4 Respecting the Client's Right to Privacy</h4>
-                    <div class="panel-title-cn">专栏 5.4：在临床与居家工作中捍卫案主隐私权的黄金实操守则</div>
+                <aside class="editorial-box-container box-theme-lavender">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">🔒</span>
+                      <span class="box-badge-pill">PRIVACY STANDARD · 案主隐私权法定保障守则</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 5.4 Respecting the Client's Right to Privacy</h4>
+                    <div class="box-title-cn">专栏 5.4：在临床与居家工作中捍卫案主隐私权的黄金实操守则</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Knock on the client's door and wait for permission to enter.</div>
                       <div class="clause-cn">进入案主居室前务必先轻声敲门，并在门外耐心等待案主应答许可后再行进入。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Ask others in the room to leave before giving care to the client. To stay, they must have the client's permission.</div>
                       <div class="clause-cn">在为案主实施各项照护操作前，礼貌请房间内的其他探访人员暂时回避离开。他人若需留下，必须事先获得案主本人的明确首肯许可。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Close the door, and use curtains or screens when providing care or whenever the client requests it. Also, close drapes and window shades.</div>
                       <div class="clause-cn">在实施护理操作期间，或当案主提出私密要求时，务必随手关好房门、拉拢床周隔帘或架设屏风；同时务必拉严窗帘与遮光百叶窗。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Drape the client properly during personal care and procedures. Expose only the body part involved in the treatment or procedure.</div>
                       <div class="clause-cn">在进行洗浴、穿衣、导尿等个人卫生照料时，使用大毛巾或遮盖被规范妥善遮盖案主身体。只暴露正在进行处置的局部身体部位，严禁不必要的躯体暴露。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Keep the client covered when moving them through a facility's corridors and elevators.</div>
                       <div class="clause-cn">使用轮椅或平车推行案主穿行于机构走廊、大厅和电梯时，务必使用合体保暖的盖毯将案主身体妥善遮盖包裹。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Close the bathroom door when the client is using the bathroom. If the client needs help, stay in the bathroom with the client, and keep the door closed.</div>
                       <div class="clause-cn">案主如厕入浴时，务必关严卫生间门。若案主需要照护协助，支持工作者应留在卫生间内陪伴看护，并始终保持门处于关闭状态。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Do not open or read the client's mail or personal documents (FIGURE 5.4).</div>
                       <div class="clause-cn">严厉禁止擅自拆开、翻阅或偷看案主的任何私人信件、账单或个人文件（参见图 5.4）。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Do not touch or examine the client's belongings without permission.</div>
                       <div class="clause-cn">未经案主事先许可，切勿随意触碰、翻动或检查案主的私人物品与柜内财物。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Allow the client to visit with others in the facility and to use the telephone in private.</div>
                       <div class="clause-cn">为案主创造条件，允许其在院舍设施内与亲友私密交谈，并在不受任何人旁听打扰的环境下私密接打电话。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Do not pry into the client's private life or ask for personal information that is not necessary for your work.</div>
                       <div class="clause-cn">绝不窥探打听案主的个人私生活，严禁打听或索要与您当班照料职责毫无直接关联的个人信息。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Keep all personal and health care information about the client confidential.</div>
                       <div class="clause-cn">对案主的所有个人背景、病情诊断及医疗护理信息严守绝对机密。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Never post any information or images about a client or agency on social media (see Chapter 9).</div>
                       <div class="clause-cn">绝对禁止在任何社交媒体平台公开发布涉及案主或雇主机构的任何文字信息、讨论或照片视频（详见第 9 章）。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Do not discuss a client with your family, friends, or the client's family. Talk about the client only with your supervisor and members of the health care team who need to know.</div>
                       <div class="clause-cn">切勿向您自己的家人、朋友、乃至案主的其他非指定亲友谈论案主病情隐私。唯有直接参与救治且具备'知情必要（Need-to-know）'的主管护士与医护团队成员，方可就案主病情展开专业沟通讨论。</div>
                     </div>
@@ -2159,30 +2602,36 @@
                   <div class='ef-source'>(iStockphoto/sturti.)</div>
                 </figure>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="760.3" data-end="840.0" data-title="Advance Directives & Health Care Directives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="612.0" data-end="670.7" data-title="Respecting the Client's Privacy (Box 5.4)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">complex and invasive procedures. The physician is responsible for informing the client about all aspects of the surgery or procedure. The support worker is never responsible for obtaining written consent or giving medical information. As a support worker, you may or may not be allowed to witness clients' signatures on consent forms. Know your employer's policy regarding consent forms.</p>
                   <p class="para-cn">（承接第 66 页底）复杂及侵入性医疗处置，法律强制要求必须签署专门的《知情同意书》（Special Consent Forms）。主治医师负有无可推卸的法定责任，就手术或侵入性处置的所有临床细节向案主当面详尽告知。支持工作者绝无资格、亦绝不负责向案主索取书面同意书或向其解释医疗病情信息。作为支持工作者，雇主政策可能会明令禁止（或在极其受限条件下允许）您作为证人签署知情同意见证签名。您必须对雇主关于知情同意书签字见证的具体政策做到烂熟于胸。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Advance Directive</h3>
-                  <div class="sh-title-cn">预立医疗指示（Advance Directive）与生命晚期自主决策</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Advance Directive</h3>
+                    <div class="sh-title-cn">预立医疗指示（Advance Directive）与生命晚期自主决策</div>
+                  </div>
                 </div>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="760.3" data-end="840.0" data-title="Advance Directives & Health Care Directives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="612.0" data-end="670.7" data-title="Respecting the Client's Privacy (Box 5.4)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">An advance directive (also known as an advance care directive) is a legal document that allows clients to convey their decisions about their own end-of-life care, whether they live at home or in a live-in facility. This document is signed ahead of time, often when a client is admitted to an extended care facility, and is usually completed as part of advance care planning in consultation with the client, next of kin (usually the substitute decision maker for health care-called the power of attorney or proxy in some provinces), and the agency's director of care or administrator. The substitute decision maker for personal care may-but does not have to-set out the person's wishes regarding care and treatment. Advance directive documents (and regulations about them) vary from province to province throughout the country.</p>
                   <p class="para-cn">预立医疗指示（Advance Directive，亦称预先照护指示 Advance Care Directive）是一份具有法律约束力的正式文书，允许案主在其认知清晰健全时，预先表达并传达其在生命晚期（End-of-life care）所期盼或拒绝的医疗照料意愿，无论其身居自家还是住在寄宿照护院舍中。该文件系提前签署，通常在案主入住长期照料机构时，作为全面预先照护规划（Advance Care Planning）的核心环节，由案主本人在与最近亲属（通常为医疗代理人/授权代表 Power of Attorney / Proxy）、机构护理总监或院长充分研商后共同完成签署。针对个人生活照护的法定代理人有权（但非必须）载明案主关于具体照护与治疗的意向偏好。预立指示的文件格式与法定监管条款在加拿大全国各省份间略有差异。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="760.3" data-end="840.0" data-title="Advance Directives & Health Care Directives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="612.0" data-end="670.7" data-title="Respecting the Client's Privacy (Box 5.4)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">Advance directives provide a way for clients to communicate their wishes to their families, friends, and health care providers and are intended to avoid confusion later on, when the clients are perhaps less cognitively aware of their surroundings.</p>
                   <p class="para-cn">预立医疗指示为案主提供了一条清晰而坚定的途径，能够跨越时空向其家属亲友及专业医护团队传达真实意愿，其终极法律与伦理宗旨在于杜绝日后当案主逐渐丧失对周遭环境认知感知能力时，家属与医疗团队陷入无休止的道德困境与决策混乱。</p>
                 </article>
                 
-                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="760.3" data-end="840.0" data-title="Advance Directives & Health Care Directives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
+                <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="612.0" data-end="670.7" data-title="Respecting the Client's Privacy (Box 5.4)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">In an advance directive, a person can state whether they wish to accept or refuse medical care under certain circumstances. It can address such issues as the following:</p>
                   <p class="para-cn">在预立医疗指示中，立约人可以明确列明在特定生命危急或终末期状态下，其究竟是选择接受还是坚决拒绝特定的医疗生命维持手段。该文书通常深入规制以下核心医疗干预事项：</p>
@@ -2216,39 +2665,49 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 68 · 原书第 68 页</span>
+                <span class="marker-text-en">Page 68</span>
+                <span class="marker-text-cn">· 原书第 68 页</span>
                 <span class="marker-badge">IMG_6897.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <aside class="editorial-panel panel-case-study">
-                  <div class="panel-header">
-                    <span class="panel-badge">CLINICAL CASE STUDY · 临床案例思维修炼</span>
-                    <h4 class="panel-title-en">Supporting Mrs. Jones: Social Media Versus a Client's Right to Confidentiality</h4>
-                    <div class="panel-title-cn">临床反思个案：支援琼斯太太：社交媒体滥用与案主保密权的严重冲突</div>
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">📋</span>
+                      <span class="box-badge-pill">CLINICAL CASE STUDY · 真实临床案例实务思维修炼</span>
+                    </div>
+                    <h4 class="box-title-en">Supporting Mrs. Jones: Social Media Versus a Client's Right to Confidentiality</h4>
+                    <div class="box-title-cn">临床反思个案：支援琼斯太太：社交媒体滥用与案主保密权的严重冲突</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Jane (not her real name) was a student support worker who was very fond of one particular client, Mrs. Jones, to whom she provided support care in her home. On the client's birthday, Jane took a picture of her on her cellphone and posted the picture on a social networking site. The picture showed Mrs. Jones smiling and wearing a hat with a cellophane bow that had been taken from the wrapping of a birthday present.</div>
                       <div class="clause-cn">简（Jane，化名）是一名个人支持工作者专业的在读学生，她非常喜爱自己上门提供居家护理的一位特定长者——琼斯太太（Mrs. Jones）。在老太太生日那天，简掏出自己的私人手机为老太太拍了一张照片，并随手发布到了社交网络平台上。照片中，琼斯太太面带微笑，头上戴着一顶用生日礼物包装盒上的玻璃纸蝴蝶结做成的滑稽小帽子。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Mrs. Jones's teenage grandchildren, who live in another city, happened to come across this site, where they saw the picture of their grandmother. The grandchildren showed it to their parents, who were shocked and horrified that their mother (usually a very proper woman) was displayed in such an undignified manner. When they questioned their mother, she recalled that it was the student who took her picture. The client's children called the student's school and filed a formal complaint.</div>
                       <div class="clause-cn">琼斯太太居住在另一个城市的十几岁的孙辈们偶然在社交网络上浏览到了这张照片，赫然认出了自己的祖母。孩子们立即将照片拿给父母看；琼斯太太的儿女们感到万分震惊与出离愤怒，因为他们的母亲一生极其端庄注重体统，如今竟在公共网络上被以如此轻浮、毫无尊严的滑稽形象公之于众。当家属致电母亲核实时，老人才回忆起确实是那位实习学生用手机拍了照。老人的儿女随即愤怒致电简所在的护理院校，正式提出了严重的法律侵权投诉。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">The school's lawyer agreed that the student violated the client's right to privacy by posting her picture on the Internet without her permission. The lawyer also reminded the school of its obligation to inform students that they must destroy any client information (printed or electronic) in such a way that it cannot be retrieved or reassembled. The student was eventually asked to leave her support worker program because her actions went against the oath of confidentiality that she had signed in the first week of her program.</div>
                       <div class="clause-cn">院校法律顾问在审视案情后严正认定：该名学生在未经案主明确法定许可的情况下将照片上传至互联网，严重侵犯了案主的隐私权与保密权。律师同时警告校方，学校负有法定义务强制教育学生，必须彻底销毁任何涉及案主的印刷版或电子版信息，且销毁程度必须达到无法检索与物理复原的最高安全标准。最终，该名实习学生被学院勒令退学并永久开除学籍——因为她的这一轻率举动彻底背叛并撕毁了她在入学第一周所庄严签署的《保密誓词》（Oath of Confidentiality）。</div>
                     </div>
                     </div></aside>
 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Living Will</h3>
-                  <div class="sh-title-cn">生前预嘱（Living Will）及其在加拿大的法律定位</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Living Will</h3>
+                    <div class="sh-title-cn">生前预嘱（Living Will）及其在加拿大的法律定位</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="670.7" data-title="Clinical Case: Social Media vs Confidentiality" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2263,9 +2722,15 @@
                   <p class="para-cn">与预立医疗指示类似，单纯的生前预嘱在很多法律情境下同样不具备绝对的法定强制执行力（参见第 69 页专栏'支援勒布伦夫人：生前预嘱具有法定强制执行力吗？'案例），但它能发挥极其有力的道德劝导效能，促使并引导家属在面临生死抉择时做出最大限度恪守案主真实意愿的决定。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Substitute Decision Makers for Personal Care or for Property</h3>
-                  <div class="sh-title-cn">法定代理决策人（Substitute Decision Makers）：人身照料与财产监管</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Substitute Decision Makers for Personal Care or for Property</h3>
+                    <div class="sh-title-cn">法定代理决策人（Substitute Decision Makers）：人身照料与财产监管</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="670.7" data-title="Clinical Case: Social Media vs Confidentiality" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2274,9 +2739,15 @@
                   <p class="para-cn">尚未达到法定成年年龄的案主（通常为 18 岁以下），以及因身心疾病丧失为自身人身或财产做出知情自主决策能力的案主，法律强制要求必须由另一位具备完全行为能力的人代其行使知情同意权。在加拿大，通用的法学称谓为'替代决策人'或'法定代理人'（Substitute Decision Maker，简称 SDM）。在绝大多数省份，人们通常将依法拥有此项代理权的人称为持有授权委托书的人（Power of Attorney，简称 POA；关于授权委托书的深度法律规约详见本书第 47 章）。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Substitute Decision Maker for Personal Care</h3>
-                  <div class="sh-title-cn">人身生活与医疗照料法定代理人（Proxy / Power of Attorney for Personal Care）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Substitute Decision Maker for Personal Care</h3>
+                    <div class="sh-title-cn">人身生活与医疗照料法定代理人（Proxy / Power of Attorney for Personal Care）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="670.7" data-title="Clinical Case: Social Media vs Confidentiality" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2297,9 +2768,15 @@
                   <p class="para-cn">若您的服务对象设立有法定代理人，该代理人将与医护多学科团队展开深入临床咨询研商，代表案主做出各项合规决策。加拿大所有省份和地区均颁布有专门规制替代决策人法定权限与行使程序的立法体系。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Substitute Decision Maker for Property</h3>
-                  <div class="sh-title-cn">财产与财务资产法定代理人（Estate Trustee / Guardian of Property）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Substitute Decision Maker for Property</h3>
+                    <div class="sh-title-cn">财产与财务资产法定代理人（Estate Trustee / Guardian of Property）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="554.8" data-end="670.7" data-title="Clinical Case: Social Media vs Confidentiality" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2312,31 +2789,35 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 69 · 原书第 69 页</span>
+                <span class="marker-text-en">Page 69</span>
+                <span class="marker-text-cn">· 原书第 69 页</span>
                 <span class="marker-badge">IMG_6898.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <aside class="editorial-panel panel-case-study">
-                  <div class="panel-header">
-                    <span class="panel-badge">CLINICAL CASE STUDY · 临床案例思维修炼</span>
-                    <h4 class="panel-title-en">Supporting Mme. LeBrun: Is a Living Will Enforceable?</h4>
-                    <div class="panel-title-cn">临床反思个案：支援勒布伦夫人：生前预嘱具有绝对的法定强制执行力吗？</div>
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">📋</span>
+                      <span class="box-badge-pill">CLINICAL CASE STUDY · 真实临床案例实务思维修炼</span>
+                    </div>
+                    <h4 class="box-title-en">Supporting Mme. LeBrun: Is a Living Will Enforceable?</h4>
+                    <div class="box-title-cn">临床反思个案：支援勒布伦夫人：生前预嘱具有绝对的法定强制执行力吗？</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Mme. Violette LeBrun lives in a province that issues an organ donor section on her health card. Mme. LeBrun indicated that she would like her organs to be donated upon her death. She also instructed her friends and family that if anything happened, she did not want to be kept alive on life support. Mme. LeBrun even purchased over the Internet a 'living will kit,' filled it out, and gave it to her lawyer for safekeeping until the time came for her family to make this decision.</div>
                       <div class="clause-cn">维奥莱特·勒布伦夫人（Mme. Violette LeBrun）居住在一个在省健康医保卡上设有专属器官捐献登记栏的省份。勒布伦夫人在医保卡上明确勾选签署，声明自己愿意在死后无偿捐献器官。她还多次郑重叮嘱身边的亲朋好友：若日后突发任何不测，她绝不希望依靠人工生命支持系统痛苦苟延残喘。勒布伦夫人甚至从互联网上专门邮购了一份《生前预嘱工具包》（Living Will Kit），极其认真地逐项填写完毕，并正式委托交付给自己的私人律师妥善保管，以便在日后家属面临决策的关键时刻能够出示。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Later, Mme. LeBrun was involved in a head-on motor vehicle accident and was declared brain-dead by the emergency department doctor. She was placed on life support until her family could be notified. Her family immediately rushed to the emergency department and then were shown Mme. LeBrun's organ donor request on her health card that indicated her wish to donate her organs. Her family were then asked if they would give permission for Mme. LeBrun's organs to be taken from her body.</div>
                       <div class="clause-cn">然而不幸降临，勒布伦夫人在一次严重的机动车正面相撞惨烈车祸中遭受重创，被急诊科医生正式宣告脑死亡。在紧急通知家属赶来期间，医生为她连上了生命维持系统。她的家属在惊闻噩耗后以最快速度赶到急诊抢救室；急诊医生向家属出示了勒布伦夫人医保卡上生前亲笔签署的器官捐献意愿书，并依照法定流程征询家属是否正式签署器官获取同意书，允许医生从其遗体上摘取器官救治他人。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Mme. LeBrun's husband and daughter, both in a state of shock, refused to allow the doctors to retrieve any of Mme. LeBrun's organs. They decided that 'Mom had been through enough pain' and asked for her to be taken off the life-support system. Her body was then sent to the funeral home that her family specified.</div>
                       <div class="clause-cn">然而，勒布伦夫人的丈夫与女儿此刻完全处于极度悲痛与应激休克状态，他们坚决拒绝在器官获取同意书上签字，决不允许医生摘取其任何器官。他们痛苦地一致认定：'妈妈生前已经承受了太多惨烈的车祸剧痛，绝不能再让她遭受解剖折磨'，并执意要求医生立即撤除所有人工生命支持设备。最终，医护团队只能完全遵从家属的现场决定；勒布伦夫人的遗体随即被运送至家属指定的殡仪馆办理后事。</div>
                     </div>
@@ -2360,9 +2841,15 @@
                   <p class="para-cn">绝大多数成年人均立有遗嘱（Will）——这是一份神圣的法定文件，庄严声明立约人身后希望将其名下合法财产具体分配（或移交给）何人。遗嘱必须在立约人思维完全清晰、认知健全无损的状态下订立，经执业律师法定见证，并长久归档保存在律师事务所中。许多长者亦会将遗嘱的正式副本存放在高度安全的防火保险箱或银行贵宾保险库中。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">After the Client Dies</h3>
-                  <div class="sh-title-cn">案主离世后的法定处置规约与遗体决策权限</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">After the Client Dies</h3>
+                    <div class="sh-title-cn">案主离世后的法定处置规约与遗体决策权限</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="840.0" data-end="921.7" data-title="Supporting Mme. LeBrun & Living Wills" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2371,9 +2858,15 @@
                   <p class="para-cn">在案主不幸离世后，原有的医疗照护法定代理人或财产代理人并不能自动决定如何处置死者的遗体。关于是否将死者遗体移交殡仪馆准备后事或实施安葬的法定决策权，必须严格由死者生前遗嘱中指名指定的遗产受托人（Estate Trustee）、死者的合法配偶或成年子女、或者在发生争议时由法院专门指定的遗产管理人（Administrator）来行使。（若案主生前未立任何遗嘱而离世，省或地区法院将依法指派一名遗产管理人全权清算分割死者的遗产）。在绝大多数省份和地区，如果该遗产受托人为男性，被称为遗嘱执行人（Executor）；若为女性，则在法学上被称为女性遗嘱执行人（Executrix）。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">The Right to Autonomy</h3>
-                  <div class="sh-title-cn">自决权（Autonomy）：案主对自身生活的主宰掌控权</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">The Right to Autonomy</h3>
+                    <div class="sh-title-cn">自决权（Autonomy）：案主对自身生活的主宰掌控权</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="840.0" data-end="921.7" data-title="Supporting Mme. LeBrun & Living Wills" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2382,9 +2875,15 @@
                   <p class="para-cn">自主权（Autonomy），亦称自决权（Self-determination），意味着一个人享有充分的自由与自主选择权，做出深刻影响自身生命轨迹的各项决定（参见第 4 章）或生命晚期医疗选择（参见第 47 章）。所有接受医疗卫生服务的人群在针对自身照护方案和日常生活方式做决定时，均享有不可剥夺的自主权。案主依法享有全面参与其入住机构、出院安排、或在机构间转院调配等关键事务的权利（参见第 70 页'聚焦长期照护：自决权'专栏）。无论是在寄宿制照护院舍还是在家中接受护理，他们均享有深度参与自身照护与治疗方案评估与制定的神圣权利。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">UNDERSTANDING LEGAL ISSUES</h3>
-                  <div class="sh-title-cn">透彻理解核心法律范畴：刑法、民法与侵权法</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">UNDERSTANDING LEGAL ISSUES</h3>
+                    <div class="sh-title-cn">透彻理解核心法律范畴：刑法、民法与侵权法</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="840.0" data-end="921.7" data-title="Supporting Mme. LeBrun & Living Wills" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2397,7 +2896,8 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 70 · 原书第 70 页</span>
+                <span class="marker-text-en">Page 70</span>
+                <span class="marker-text-cn">· 原书第 70 页</span>
                 <span class="marker-badge">IMG_6899.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
@@ -2421,9 +2921,15 @@
                   <p class="para-cn">民法规制的则是平等民事主体之间的人身与财产法律关系。例如，商业合同纠纷、婚姻离婚、或子女收养等相关法律均属民法范畴。侵权行为（Tort）是指一个人对另一个人的身体、精神或财产所实施的民事违法侵害行为。实施侵权行为的加害人可能会被受害人直接起诉至民事法院索赔。侵权行为在法律上分为过失侵权（Unintentional Torts）与故意侵权（Intentional Torts）。过失侵权的最典型代表是过失疏忽（Negligence）；故意侵权的典型代表则涵盖：人身侵害意图恐吓（Assault）、人身接触侵害（Battery）、非法拘禁（False Imprisonment）、侵犯隐私（Invasion of Privacy）以及名誉诽谤（Defamation of Character）。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Negligence</h3>
-                  <div class="sh-title-cn">过失疏忽（Negligence）的核心法律构成与执业成因</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Negligence</h3>
+                    <div class="sh-title-cn">过失疏忽（Negligence）的核心法律构成与执业成因</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="921.7" data-end="1014.8" data-title="Criminal Law vs Civil Law & Torts" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2446,30 +2952,33 @@
                     </ul>
 </div>
 
-                <aside class="editorial-panel panel-statutory-box">
-                  <div class="panel-header">
-                    <span class="panel-badge">STATUTORY REGULATION · 教材法规专栏</span>
-                    <h4 class="panel-title-en">FOCUS ON LONG-TERM CARE: Autonomy</h4>
-                    <div class="panel-title-cn">聚焦长期照护机构：住户自决权与个性化生活选择</div>
+                <aside class="editorial-box-container box-theme-terracotta">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">🏡</span>
+                      <span class="box-badge-pill">FOCUS ON PRACTICE · 长期照护实务聚焦：住户自决权</span>
+                    </div>
+                    <h4 class="box-title-en">FOCUS ON LONG-TERM CARE: Autonomy</h4>
+                    <div class="box-title-cn">聚焦长期照护机构：住户自决权与个性化生活选择</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Long-term care clients have the right to choose activities, schedules, and care based on personal preferences. They have the right to choose when to get up and go to bed, what to wear, how to spend their time, and what to eat (FIGURE 5.5). They are also free to form friendships and receive visitors inside and outside the facility. They have the right to share a room with their spouse or partner if they wish to and if a room is available. They also have the right to manage their own financial affairs or receive an accounting of transactions done on their behalf.</div>
                       <div class="clause-cn">长期照料院舍的住院案主享有基于个人偏好自由选择日常活动、起居作息时间表以及照护细节的法定权利。他们有权自主决定何时起床与就寝、挑选自己喜爱的服装穿着、决定如何安排个人闲暇时光、以及在膳食菜单中挑选所喜爱的食物（图 5.5）。他们同样享有完全的社交自由，可以在机构内外自由结交朋友、接待亲友访客。如果案主夫妇均入住院舍且有空余双人间，他们依法享有与配偶或伴侣同居一室的神圣权利。此外，他们享有独立管理个人财务资产、或随时要求调阅代其处理的各项账目明细收据的权利。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">To have autonomy, people need (and have the right to) complete and accurate information about their health condition, care, and treatment. However, if clients ask you about their condition, their care, or your employer's policies, you need to inform your supervisor, and that person will provide the client with this information. Remember, you must not discuss diagnoses or health conditions with clients.</div>
                       <div class="clause-cn">为了真正践行自主自决，人们必须事先获悉（且依法享有充分知情权）关于其身体健康状况、照料方案及医学处置的完整且精准的信息。然而，作为个人支持工作者，若案主向您打听其病情诊断、复杂治疗方案或雇主的核心政策时，您必须立即向主管护士汇报，由主管护士或主治医师亲自向案主进行官方病情告知与专业解释。切记：支持工作者绝不可私下与案主讨论其疾病诊断（Diagnoses）或病理转归。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Also, when you are providing client care, make sure your clients know your name and title, and remember to explain procedures before performing them.</div>
                       <div class="clause-cn">此外，在每一次向案主提供照护服务前，务必确保案主清楚知晓您的真实姓名与专业职务头衔，并牢记在施加任何操作前必须用通俗亲切的语言向案主详尽解释操作步骤。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">Personal choice is important for quality of life, dignity, and self-respect, so respect for an individual's personal preference is emphasized throughout this book. As a support worker, you must allow your clients to make choices whenever it is safely possible.</div>
                       <div class="clause-cn">个性化自主选择是跃升长者生活品质、维系人格尊严与自我价值感的生命线，因此本书在每一章节中均反复强调用心尊重个体的自主偏好。作为一名支持工作者，只要在确保人身安全的前提下，您必须创造一切条件允许并赋权案主自主做出生活选择。</div>
                     </div>
@@ -2486,7 +2995,8 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 71 · 原书第 71 页</span>
+                <span class="marker-text-en">Page 71</span>
+                <span class="marker-text-cn">· 原书第 71 页</span>
                 <span class="marker-badge">IMG_6900.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
@@ -2513,9 +3023,15 @@
                   <p class="para-cn">即便您在工作中极其称职且审慎尽责，案主有时仍可能因不可抗力或疾病转归而发生机体受损。严格遵循雇主规章规范、精准详实地记录每一次护理操作，具有至关重要的法律防护价值。您所书写留存的正式护理记录（Charting），日后将成为在法庭上强力保护您免受过失疏忽刑事或民事指控的决定性法律证据！例如，一位长期卧床的重度衰弱长者背部发生了严重的压力性损伤压疮（Pressure Sores）。家属愤怒指控机构，咬定护工长时间让老人平躺未予翻身。然而，您的临床记录白纸黑字精准载明：您严格按照照护计划每隔 1 小时按时为其定时翻身与体位减压。这份法定文书无可辩驳地证实您完全履行了合规照护义务，压疮并非由您的渎职所致。反之，若您当时未逐次记录翻身实况，法庭将在法律上直接推定您根本未做翻身照料（'若未记录，即视同未做'；关于法律护理文书书写的深度剖析详见第 26 章）。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Assault and Battery</h3>
-                  <div class="sh-title-cn">威胁恐吓（Assault）与人身接触侵害（Battery）的法定界定</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Assault and Battery</h3>
+                    <div class="sh-title-cn">威胁恐吓（Assault）与人身接触侵害（Battery）的法定界定</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1014.8" data-end="1147.1" data-title="Negligence and Intentional Torts in Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2530,50 +3046,53 @@
                   <p class="para-cn">作为支持工作者，您并不需要在实施每一次日常生活护理前索取复杂的书面签名同意书。然而，您必须时刻敏锐洞悉并绝对尊重案主的当下意愿。即便案主此前曾签署过同意书，法律赋予其在任何时间、无条件单方面撤回同意的神圣权利！在开展任何操作前，务必先用通俗易懂的语言向案主清晰阐明您将要进行的操作，并切实确认案主对此表示同意。同意的表达可以是口头的（一句平静的'好的'或'可以'），也可以是体态语肢体配合（例如温和点头、主动侧翻身体以便进行背部抚触涂抹、或主动伸出手臂以便测量血压）。一旦案主当场表示反对或拒绝您的——（跨页接第 72 页）</p>
                 </article>
                 
-                <aside class="editorial-panel panel-statutory-box">
-                  <div class="panel-header">
-                    <span class="panel-badge">STATUTORY REGULATION · 教材法规专栏</span>
-                    <h4 class="panel-title-en">BOX 5.5 Examples of Negligent Acts Committed by Support Workers</h4>
-                    <div class="panel-title-cn">专栏 5.5：支持工作者在临床照护中最易触犯的 8 大过失疏忽侵权典型判例</div>
+                <aside class="editorial-box-container box-theme-amber">
+                  <div class="box-banner-header">
+                    <div class="box-badge-row">
+                      <span class="box-badge-icon">⚠️</span>
+                      <span class="box-badge-pill">LEGAL RED FLAG · 临床侵权过失 8 大典型案例与警示</span>
+                    </div>
+                    <h4 class="box-title-en">BOX 5.5 Examples of Negligent Acts Committed by Support Workers</h4>
+                    <div class="box-title-cn">专栏 5.5：支持工作者在临床照护中最易触犯的 8 大过失疏忽侵权典型判例</div>
                   </div>
-                  <div class="panel-body">
+                  <div class="box-body-content">
                 
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A support worker leaves the bed in the raised position. The client falls out of bed and breaks his hip.</div>
                       <div class="clause-cn">支持工作者在完成晨间护理后忘记将病床降至最低安全位。案主下床时不慎跌落致髋关节严重粉碎性骨折。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A support worker raises the bed rails when the care plan states that they should be left down. The client falls while trying to climb over the bed rails.</div>
                       <div class="clause-cn">照护计划明确规定床边护栏必须放下，支持工作者却擅自拉起护栏。案主在夜间试图翻越护栏如厕时不慎头朝下跌落致严重颅脑损伤。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A support worker does not raise the bed rails when the care plan states they should be raised. The client falls out of bed.</div>
                       <div class="clause-cn">照护计划明确载明该高危长者睡觉时必须升起双侧安全护栏，支持工作者疏忽未予拉起。案主在睡眠中翻身滚落坠床受伤。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A support worker does not check the temperature of the bath water. The client is burned.</div>
                       <div class="clause-cn">支持工作者在协助长者泡澡前未用温度计和手腕测试水温。热水温度过高直接导致长者全身大面积二级烫伤。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A support worker drops a client's dentures. The dentures break.</div>
                       <div class="clause-cn">支持工作者在清洗案主的全口假牙时未在水池内铺垫防护毛巾，假牙滑脱摔在坚硬水池中碎裂损毁。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A client complains to the support worker of chest pain and difficulty breathing. The support worker does not report the complaints to the supervisor. The client has a heart attack and dies.</div>
                       <div class="clause-cn">案主向支持工作者明确诉说胸口压榨样剧痛且呼吸困难。工作者疏忽大意未向主管护士紧急汇报；案主突发急性心肌梗死不幸心跳骤停猝死。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A client calls for help using the call bell. The support worker ignores the call. The client goes into shock because of sudden, severe bleeding.</div>
                       <div class="clause-cn">案主频繁按响床头紧急呼叫铃求救。支持工作者擅离职守充耳不闻；案主因突发急性消化道大出血未获及时救治而陷入重度失血性休克。</div>
                     </div>
                     
-                    <div class="panel-clause">
+                    <div class="box-clause-item">
                       <div class="clause-en">A support worker does not secure a client's garden gate. The client, who has Alzheimer's disease, wanders out onto the street and is hit by a car.</div>
                       <div class="clause-cn">支持工作者离开庭院时未顺手锁紧安全门栓。患有阿尔茨海默病的重度失智长者无意识游荡走失至公路中央，惨遭过往疾驰车辆撞倒重伤。</div>
                     </div>
@@ -2583,7 +3102,8 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 72 · 原书第 72 页</span>
+                <span class="marker-text-en">Page 72</span>
+                <span class="marker-text-cn">· 原书第 72 页</span>
                 <span class="marker-badge">IMG_6901.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
@@ -2601,9 +3121,15 @@
                   <p class="para-cn">在部分省份和地区，注册医疗卫生专业人员（如 RN/RPN）可以依法将超出支持工作者常规执业范畴的特定任务正式委派授权（Delegate）给工作者实施（详见第 10、40 及 45 章关于任务委派的法定要求）。然而，若支持工作者擅自实施了超越自身常规执业范围的操作，且该操作从未经注册医护人员依据法定规程正式委派与临床教学考核通过，支持工作者在法律事实上即构成对案主的人身侵害（Assault）！深刻透彻理解自身岗位职责边界、并在合规边界内安全执业，是每一位支持工作者无可推卸的法定责任。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">False Imprisonment</h3>
-                  <div class="sh-title-cn">非法拘禁（False Imprisonment）与约束工具的滥用</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">False Imprisonment</h3>
+                    <div class="sh-title-cn">非法拘禁（False Imprisonment）与约束工具的滥用</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1147.1" data-end="1200.0" data-title="Refusal of Treatment & Scope Boundaries" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2612,9 +3138,15 @@
                   <p class="para-cn">非法拘禁是指对他人的人身行动自由施加非法的约束、拘禁或限制。例如，采用反锁大门等非法手段强行阻止案主离开照护机构，在法律上即构成非法拘禁罪。同样，在未获法定医学指征与审批的情况下，对案主擅自使用身体或化学约束（Restraints，详见第 20 章）亦直接构成非法拘禁侵权与违法犯罪。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Invasion of Privacy</h3>
-                  <div class="sh-title-cn">侵犯隐私权（Invasion of Privacy）的法律认定</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Invasion of Privacy</h3>
+                    <div class="sh-title-cn">侵犯隐私权（Invasion of Privacy）的法律认定</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1147.1" data-end="1200.0" data-title="Refusal of Treatment & Scope Boundaries" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2623,9 +3155,15 @@
                   <p class="para-cn">每一位服务对象均依法享有神圣权利，绝不容许其个人姓名、肖像照片、私密事务、健康医疗记录或任何个人信息在未获其明确知情同意的前提下被公之于众。肆意践踏这一底线构成侵犯隐私权，这是侵权法上明确追责的侵权类型。您的雇主机构会强制要求您入职时签署《保密誓词》（参见第 65 页），该法律文书具有强大的约束效力，强制要求您对因执业操作获悉的案主及雇主的一切信息严守绝对机密。签署该协议在法律上确立了您的法定义务，严禁向任何第三方披露因工作而知晓的案主隐私。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Defamation of Character</h3>
-                  <div class="sh-title-cn">名誉诽谤（Defamation of Character）：书面诽谤与口头诽谤</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Defamation of Character</h3>
+                    <div class="sh-title-cn">名誉诽谤（Defamation of Character）：书面诽谤与口头诽谤</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1147.1" data-end="1200.0" data-title="Refusal of Treatment & Scope Boundaries" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2653,9 +3191,15 @@
                     </ul>
 </div>
 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Freedom of Information</h3>
-                  <div class="sh-title-cn">信息自由与政府信息公开法（Freedom of Information）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Freedom of Information</h3>
+                    <div class="sh-title-cn">信息自由与政府信息公开法（Freedom of Information）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1147.1" data-end="1200.0" data-title="Refusal of Treatment & Scope Boundaries" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2676,9 +3220,15 @@
                   <p class="para-cn">加拿大各省份与地区亦颁布有规制获取地方政府信息与强化个人隐私保障的专门法规。例如，安大略省颁布的《信息自由与隐私保护法》（Freedom of Information and Protection of Privacy Act，简称 FIPPA）广泛适用于安省各政府部委、公立机构、各专业监管委员会、公立社区学院以及各区域卫生局。在魁北克省，同名法规严密规制公共机构所持有的文件获取与公民个人健康信息的全流程保密安全。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">YOUR LEGAL RIGHTS</h3>
-                  <div class="sh-title-cn">照护工作者自身的法定合法权益（劳动与职业安全保障）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">YOUR LEGAL RIGHTS</h3>
+                    <div class="sh-title-cn">照护工作者自身的法定合法权益（劳动与职业安全保障）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1147.1" data-end="1200.0" data-title="Refusal of Treatment & Scope Boundaries" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2691,7 +3241,8 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 73 · 原书第 73 页</span>
+                <span class="marker-text-en">Page 73</span>
+                <span class="marker-text-cn">· 原书第 73 页</span>
                 <span class="marker-badge">IMG_6902.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
@@ -2703,9 +3254,15 @@
                   <p class="para-cn">（承接第 72 页底）全面涵盖人权保障、职业健康与安全（OH&S）、雇佣劳动基准、劳工劳资关系、工伤赔偿（WCB）、长期照护院舍监管以及社区卫生服务立法。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Human Rights Legislation for Workers</h3>
-                  <div class="sh-title-cn">劳动者人权立法：反歧视与杜绝职场霸凌骚扰</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Human Rights Legislation for Workers</h3>
+                    <div class="sh-title-cn">劳动者人权立法：反歧视与杜绝职场霸凌骚扰</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1200.0" data-end="1251.8" data-title="Worker's Rights & Occupational Safety" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2714,9 +3271,15 @@
                   <p class="para-cn">各省《人权法典》全力守护照护者的根本基本人权。该立法严正确立：雇主机构必须一视同仁地平等对待所有劳动者，绝不容许基于工作者的族裔渊源、肤色、性别、性取向、宗教信仰、年龄或身心残疾进行任何歧视。即便服务对象或案人家属提出歧视性排斥要求，雇主与职业中介机构亦绝不得顺从歧视！人权法庄严宣告：工作者在职场中依法享有绝对免受来自雇主管理层、案主/家属、或任何同事之职场骚扰（亦称职场霸凌 Workplace Bullying）的神圣权利（详见第 12 章）。骚扰在法律上被界定为：通过恶意言语或不当举止，使他人遭受烦扰、折磨、人格侮辱或心理担忧焦虑。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Occupational Health and Safety (OH&S) Legislation</h3>
-                  <div class="sh-title-cn">职业健康与安全立法（OH&S）：雇主义务与劳动者三大法定权利</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Occupational Health and Safety (OH&S) Legislation</h3>
+                    <div class="sh-title-cn">职业健康与安全立法（OH&S）：雇主义务与劳动者三大法定权利</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1200.0" data-end="1251.8" data-title="Worker's Rights & Occupational Safety" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2756,9 +3319,15 @@
                   <p class="para-cn">职业健康与安全法还详尽规制了职场中所使用的各类危险化学品的标识、储存与应急处理规范。加拿大全国统一实行的《工作场所危险品信息系统》（WHMIS，详见第 20 章）是一项国家级法定规约，专门为劳动者提供关于危险化学品安全操作、防毒防护以及潜在健康毒害风险的权威数据与标签培训。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Employment Standards, Labour Relations, and Workers' Compensation (WCB)</h3>
-                  <div class="sh-title-cn">雇佣劳动基准、工会劳资关系与工伤赔偿保险（WCB）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Employment Standards, Labour Relations, and Workers' Compensation (WCB)</h3>
+                    <div class="sh-title-cn">雇佣劳动基准、工会劳资关系与工伤赔偿保险（WCB）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1200.0" data-end="1251.8" data-title="Worker's Rights & Occupational Safety" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2779,9 +3348,15 @@
                   <p class="para-cn">各省与地区均颁布有专门的《工伤赔偿法》（Workers' Compensation Legislation，如安省 WSIB、卑诗省 WorkSafeBC 等），详尽规制劳动者在当班执业期间发生意外工伤或职业病时，如何获得及时的医疗报销、薪资损失补偿与终身伤残康复救助。通常情况下，员工自准时打卡报到上班直至当班交接班结束离开岗位，均被法律推定处于在岗执业状态。若因公出行（如社区居家上门护理往返），在公干旅途中发生的交通事故与意外伤害同样纳入工伤赔偿保险的法定赔付范畴。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Long-Term Care Facilities Legislation</h3>
-                  <div class="sh-title-cn">长期照护机构专门立法体系（牌照审批、运营监察与法律问责）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Long-Term Care Facilities Legislation</h3>
+                    <div class="sh-title-cn">长期照护机构专门立法体系（牌照审批、运营监察与法律问责）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1200.0" data-end="1251.8" data-title="Worker's Rights & Occupational Safety" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2794,7 +3369,8 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 74 · 原书第 74 页</span>
+                <span class="marker-text-en">Page 74</span>
+                <span class="marker-text-cn">· 原书第 74 页</span>
                 <span class="marker-badge">IMG_6903.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
@@ -2806,9 +3382,15 @@
                   <p class="para-cn">（承接第 73 页底）医疗照护病历档案（Health Care Records）的法定义务，乃至全体在岗照护人员所必须具备的最低专业受训资质与学历准入门槛，均在法规中做出了详尽严苛的明文规定。</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">Community Services Legislation</h3>
-                  <div class="sh-title-cn">社区卫生与居家照护服务专门立法体系</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">Community Services Legislation</h3>
+                    <div class="sh-title-cn">社区卫生与居家照护服务专门立法体系</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1251.8" data-end="1300.0" data-title="Community Services & Documentation Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2827,20 +3409,33 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 75 · 原书第 75 页</span>
+                <span class="marker-text-en">Page 75</span>
+                <span class="marker-text-cn">· 原书第 75 页</span>
                 <span class="marker-badge">IMG_6904.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">CHAPTER REVIEW</h3>
-                  <div class="sh-title-cn">本章核心知识体系总结与复习</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">CHAPTER REVIEW</h3>
+                    <div class="sh-title-cn">本章核心知识体系总结与复习</div>
+                  </div>
                 </div>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">KEY POINTS</h3>
-                  <div class="sh-title-cn">全章核心执业知识要点精粹（11 大考点梳理）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">KEY POINTS</h3>
+                    <div class="sh-title-cn">全章核心执业知识要点精粹（11 大考点梳理）</div>
+                  </div>
                 </div>
                 <div class="editorial-list-block">
 <ul class="editorial-list">
@@ -2902,9 +3497,15 @@
                     </ul>
 </div>
 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">CRITICAL THINKING IN PRACTICE: Mrs. Lopez</h3>
-                  <div class="sh-title-cn">临床审辩思维修炼个案：洛佩兹太太（Mrs. Lopez）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">CRITICAL THINKING IN PRACTICE: Mrs. Lopez</h3>
+                    <div class="sh-title-cn">临床审辩思维修炼个案：洛佩兹太太（Mrs. Lopez）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1300.0" data-end="1395.0" data-title="Balancing Client Care & Worker Safety (Mrs. Lopez)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -2913,9 +3514,15 @@
                   <p class="para-cn">洛佩兹太太（Mrs. Lopez）患有认知症痴呆（详见第 38 章），且双下肢重度虚弱无力。她日常依赖轮椅代步，却频繁在未呼叫协助的情况下擅自试图站立起身。当您协助她如厕排便时，她有时会烦躁并企图用指甲抓挠您。在这一极具挑战的真实临床场景中：您将如何安全、体面地满足她的各项基本生理照护需求？洛佩兹太太试图抓挠您的行为是否构成法律意义上的违法犯罪？作为她的专业个人支持工作者，您自身依法享有何种合法权利与安全保护？</p>
                 </article>
                 
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">REVIEW QUESTIONS</h3>
-                  <div class="sh-title-cn">全章自测复习题（单项选择题 1 至 2）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">REVIEW QUESTIONS</h3>
+                    <div class="sh-title-cn">全章自测复习题（单项选择题 1 至 2）</div>
+                  </div>
                 </div>
                 
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1300.0" data-end="1395.0" data-title="Balancing Client Care & Worker Safety (Mrs. Lopez)" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -3016,15 +3623,22 @@
               <div class="marker-line-left"></div>
               <div class="marker-pill">
                 <span class="marker-icon">📖</span>
-                <span class="marker-text">Page 76 · 原书第 76 页</span>
+                <span class="marker-text-en">Page 76</span>
+                <span class="marker-text-cn">· 原书第 76 页</span>
                 <span class="marker-badge">IMG_6905.HEIC</span>
               </div>
               <div class="marker-line-right"></div>
             </div>
             
-                <div class="editorial-section-heading">
-                  <h3 class="sh-title-en">REVIEW QUESTIONS (CONTINUED: QUESTIONS 3 - 12)</h3>
-                  <div class="sh-title-cn">全章自测复习题（单选题 3 至 12 全真精解）</div>
+                <div class="editorial-section-divider">
+                  <div class="section-divider-bar"></div>
+                  <div class="section-heading-card">
+                    <div class="section-eyebrow">
+                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                    </div>
+                    <h3 class="sh-title-en">REVIEW QUESTIONS (CONTINUED: QUESTIONS 3 - 12)</h3>
+                    <div class="sh-title-cn">全章自测复习题（单选题 3 至 12 全真精解）</div>
+                  </div>
                 </div>
                 
                 <div class="editorial-quiz-card" id="q-card-ch5-3">
@@ -3485,6 +4099,68 @@
     var isPlaying = false;
     var lastActiveEntry = null;
 
+    /* Mode Switching Logic */
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try {
+        localStorage.setItem('psw_lang_mode', mode);
+      } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try {
+        saved = localStorage.getItem('psw_lang_mode') || 'bilingual';
+      } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'paper') {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      try {
+        if (isPaper) {
+          localStorage.setItem('psw_theme', 'paper');
+          if (btn) btn.innerText = '⚪ 默认白底';
+        } else {
+          localStorage.setItem('psw_theme', 'default');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        }
+      } catch (e) {}
+    }
+
+    var currentFontSizeIdx = 1;
+    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
+    function adjustFontSize(delta) {
+      currentFontSizeIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontSizeIdx + delta));
+      document.documentElement.style.setProperty('--user-font-size', fontSizes[currentFontSizeIdx]);
+    }
+
+    initLanguageMode();
+
+    /* Audio Playback */
     function toggleReaderAudioPlay() {
       if (readerAudio.paused) {
         readerAudio.play().then(function() {
