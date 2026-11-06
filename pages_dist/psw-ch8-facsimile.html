@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 8: Managing Stress, Burnout, and Personal Safety · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
+      background: var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+    }
+    .ps-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html#sec-ch8" class="nav-home-btn">← 返回全书总目录</a>
+      <div class="nav-chapter-title">
+        <span class="ch-badge">CH 08</span>
+        <span>Managing Stress, Burnout, and Personal Safety</span>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 8 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 24:10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 08 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Managing Stress, Burnout, and Personal Safety</h1>
+      <h2 class="hero-title-cn">压力管理、职业倦怠预防与人身执业安全</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 112–128 · 10 道全真自测题</span>
+        <span class="meta-item">专业音频：24:10</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch8-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+
+      
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-112">第 112 页 · 学习目标与压力管理开篇</option><option value="page-113">第 113 页 · 核心专业术语表与大健康压力源概述</option><option value="page-114">第 114 页 · 表8.1 压力影响全人五大维度与常见生活变故</option><option value="page-115">第 115 页 · 专栏 8.1 急性压力生理体征与压力源反应因子</option><option value="page-116">第 116 页 · 专栏 8.2 慢性压力、专栏 8.3 情绪行为体征与长者儿童压力</option><option value="page-117">第 117 页 · 心理防御机制、情感验证与支持工作者自身压力调适</option><option value="page-118">第 118 页 · 专栏 8.4 深呼吸静心法与专栏 8.5 渐进式肌肉冥想</option><option value="page-119">第 119 页 · 职业倦怠成因、专栏：凯茜的职业倦怠案例与自救策略</option><option value="page-120">第 120 页 · 时间管理原则、SMART目标设定与多元文化时间观</option><option value="page-121">第 121 页 · 工作日常规划提问清单、专栏：帕吉特太太的日程选择</option><option value="page-122">第 122 页 · 专栏 8.6 时间管理省时技巧、决断力与问题解决流程</option><option value="page-123">第 123 页 · 问题解决四步法：识别与分析问题、主管汇报十项触发线</option><option value="page-124">第 124 页 · 专栏：高太太的观察沟通、专栏：塞缪尔斯太太的赋能方案</option><option value="page-125">第 125 页 · 职场与医患冲突化解、专栏：多元文化应对冲突的差异</option><option value="page-126">第 126 页 · 专栏 8.7 冲突化解核心十二步法则与学生成绩争议实操</option><option value="page-127">第 127 页 · 本章核心知识点、椅子报警器思维修炼与章末全真自测试题 (Part 1)</option><option value="page-128">第 128 页 · 章末全真自测试题 (Part 2) 与官方参考答案</option>
+              </select>
+            </div>
+          </div>
+          <div class="ps-chips-ribbon">
+            <a href="#page-112" class="page-chip-item"><span class="pc-num">p.112</span></a><a href="#page-113" class="page-chip-item"><span class="pc-num">p.113</span></a><a href="#page-114" class="page-chip-item"><span class="pc-num">p.114</span></a><a href="#page-115" class="page-chip-item"><span class="pc-num">p.115</span></a><a href="#page-116" class="page-chip-item"><span class="pc-num">p.116</span></a><a href="#page-117" class="page-chip-item"><span class="pc-num">p.117</span></a><a href="#page-118" class="page-chip-item"><span class="pc-num">p.118</span></a><a href="#page-119" class="page-chip-item"><span class="pc-num">p.119</span></a><a href="#page-120" class="page-chip-item"><span class="pc-num">p.120</span></a><a href="#page-121" class="page-chip-item"><span class="pc-num">p.121</span></a><a href="#page-122" class="page-chip-item"><span class="pc-num">p.122</span></a><a href="#page-123" class="page-chip-item"><span class="pc-num">p.123</span></a><a href="#page-124" class="page-chip-item"><span class="pc-num">p.124</span></a><a href="#page-125" class="page-chip-item"><span class="pc-num">p.125</span></a><a href="#page-126" class="page-chip-item"><span class="pc-num">p.126</span></a><a href="#page-127" class="page-chip-item"><span class="pc-num">p.127</span></a><a href="#page-128" class="page-chip-item"><span class="pc-num">p.128</span></a>
+          </div>
+        </div>
+        
+    </header>
+
+    <div class="editorial-stream">
+      <div id="page-112"></div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">OBJECTIVES</h3>
+                  <div class="heading-cn">本章学习与执业考核目标</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="0.0" data-end="44.28" data-title="Objectives & Chapter Opener" onclick="playParagraphAudio(this)">
+                      <p class="para-en">After reading this chapter, the learner should be able to do the following:</p>
+                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标：</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe how stress can affect all dimensions of health.</strong></div>
+                      <div class="item-cn">详尽阐述压力如何深刻冲击全人健康的五大核心维度（身体、情绪、社交、认知、精神）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• List the signs of stress.</strong></div>
+                      <div class="item-cn">系统列举机体在遭遇急性和慢性压力时呈现的生理、情绪与行为警讯表征。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe common stressors.</strong></div>
+                      <div class="item-cn">深入剖析在日常生活与临床执业中常见的核心压力源（生活剧变、情感重压、失控感、人际冲突）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Discuss how people use defence mechanisms to cope with stress.</strong></div>
+                      <div class="item-cn">系统探讨人类在抵御心理重压时常用的各项无意识心理防御机制（Defence Mechanisms）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Identify ways to support clients who are stressed.</strong></div>
+                      <div class="item-cn">熟练掌握并践行协助受助案主疏导化解身心重压的专业人本支持策略。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Define SMART goals.</strong></div>
+                      <div class="item-cn">准确阐明并熟练运用黄金目标设定的 SMART 原则（具体、可衡量、可达成、现实、有时限）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe positive ways to manage stress.</strong></div>
+                      <div class="item-cn">详尽描述通过培养自我意识、劳逸平衡、正向思维与深呼吸等积极有效的压力管理心法。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Describe stress-reducing methods that may improve a person's decision-making and problem-solving abilities.</strong></div>
+                      <div class="item-cn">阐述有助于减轻心理压力并显著提升临床决策（Decision-Making）与问题解决（Problem-Solving）能力的系统方法。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Identify ways to deal with stress and conflict in the workplace.</strong></div>
+                      <div class="item-cn">准确指出在医护职场中以专业姿态化解医患、家属及同仁之间人际冲突（Conflict Resolution）的实操准则。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <div class="editorial-footer-url">
+                  <span class="efu-icon">🌐</span>
+                  <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
+                  <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+                </div>
+                
+            <div class="page-anchor-marker" id="page-113">
+              <span class="marker-pill">p. 113</span>
+            </div>
+            
+                <div class="key-terms-master-container" id="kt-container-ch8">
+                  <div class="kt-toolbar">
+                    <div class="kt-toolbar-left">
+                      <h3 class="kt-title">Key Terms · 核心专业术语表（全 10 词速查）</h3>
+                    </div>
+                    <div class="kt-toolbar-right">
+                      <div class="kt-mode-toggle">
+                        <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch8', 'table')">速查词表</button>
+                        <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch8', 'cards')">精研卡片</button>
+                      </div>
+                      <div class="kt-search-box">
+                        <input type="text" class="kt-search-input" placeholder="搜索中英文术语 (Filter terms)..." oninput="filterGlossary('ch8', this.value)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mode 1: Compact Table View (Default) -->
+                  <div class="kt-view-table active" id="kt-table-view-ch8">
+                    <div class="table-wrap">
+                      <table class="kt-compact-table">
+                        <thead>
+                          <tr>
+                            <th style="width: 26%;">英文术语 / 国际音标</th>
+                            <th style="width: 22%;">中文对照 / 出处</th>
+                            <th style="width: 52%;">教材标准学术释义与临床界定</th>
+                          </tr>
+                        </thead>
+                        <tbody id="kt-table-body-ch8">
+                
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">acute stress</strong>
+                              <span class="kt-ipa">/əˈkjuːt strɛs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">急性压力</span>
+                              <span class="kt-ref">p. 113</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A type of stress that is short in duration.</div>
+                              <div class="kt-def-cn">由特定突发刺激事件骤然引发、通常持续时间较为短暂的应激反应状态。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">anxiety</strong>
+                              <span class="kt-ipa">/æŋˈzaɪəti/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">焦虑</span>
+                              <span class="kt-ref">p. 116</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A vague, uneasy feeling, often including a sense of impending danger or harm.</div>
+                              <div class="kt-def-cn">一种模糊、令人极度不安的负面情绪，往往伴随着对迫在眉睫的潜在危险或人身伤害的悬心恐慌感。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">burnout</strong>
+                              <span class="kt-ipa">/ˈbɜːnaʊt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">职业倦怠 / 身心耗竭</span>
+                              <span class="kt-ref">p. 113</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A state of physical, emotional, and mental exhaustion that results in feelings of discouragement, negativity, and powerlessness.</div>
+                              <div class="kt-def-cn">长期暴露于高强度严苛工作压力下所导致的身体、情绪与心理的三重极端耗竭状态，表现为极度沮丧、消极厌世与无能为力感。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">chronic stress</strong>
+                              <span class="kt-ipa">/ˈkrɒnɪk strɛs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">慢性压力 / 持续性压力</span>
+                              <span class="kt-ref">p. 113</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Ongoing stress that can lead to burnout.</div>
+                              <div class="kt-def-cn">长期迁延不愈、潜伏日久的慢性持续应激状态，极易直接诱发机体器质性病变与职业倦怠。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">conflict</strong>
+                              <span class="kt-ipa">/ˈkɒnflɪkt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">冲突 / 对立</span>
+                              <span class="kt-ref">p. 114</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A clash between opposing interests and ideas.</div>
+                              <div class="kt-def-cn">对立双方在利益诉求、价值观念、行为方式或核心理念上的激烈碰撞与交锋对抗。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">emotional pressure</strong>
+                              <span class="kt-ipa">/ɪˈməʊʃənl ˈprɛʃər/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">情绪重压 / 心理负荷</span>
+                              <span class="kt-ref">p. 114</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The feeling of being pushed beyond one's limits or abilities.</div>
+                              <div class="kt-def-cn">感到自身正被外界环境或内在苛求强行推向超越自身心理极限或能力边界的窒息压迫感。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">eustress</strong>
+                              <span class="kt-ipa">/ˈjuːstrɛs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">积极良性压力</span>
+                              <span class="kt-ref">p. 113</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A type of stressor that is healthy and gives one a feeling of fulfillment or other positive feelings.</div>
+                              <div class="kt-def-cn">一种对机体身心有益的健康压力形态，能激发斗志、带来充实成就感与积极向上的心流体验。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">stress</strong>
+                              <span class="kt-ipa">/strɛs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">压力 / 应激</span>
+                              <span class="kt-ref">p. 113</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The emotional, behavioural, or physical response to an event or situation.</div>
+                              <div class="kt-def-cn">机体面对特定外在事件刺激或生存处境时，所产生的复杂情绪、行为举止与生理机能的综合应激响应。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">stressor</strong>
+                              <span class="kt-ipa">/ˈstrɛsər/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">压力源 / 促应激因子</span>
+                              <span class="kt-ref">p. 113</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">An event or situation that causes stress.</div>
+                              <div class="kt-def-cn">打破机体内外稳态、诱发个体产生压力应激反应的一切外在事件、环境或内在刺激情境。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">validate</strong>
+                              <span class="kt-ipa">/ˈvælɪdeɪt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">情感验证 / 确认接纳</span>
+                              <span class="kt-ref">p. 117</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">To acknowledge, recognize, or confirm the client's feelings.</div>
+                              <div class="kt-def-cn">以深切的同理心，发自内心明确承认、领会并郑重确认受助案主内心感受的真实性与合理性。</div>
+                            </td>
+                          </tr>
+                    
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="kt-expand-bar" id="kt-expand-bar-table-ch8">
+                      <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch8', 'table')">
+                        展开全部 10 个专业术语 ▼
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Mode 2: Cards Deck View -->
+                  <div class="kt-view-cards" id="kt-cards-view-ch8" style="display:none;">
+                    <div class="terms-editorial-grid" id="kt-cards-grid-ch8">
+                
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">acute stress</strong>
+                            <span class="etc-ipa">/əˈkjuːt strɛs/</span>
+                          </div>
+                          <span class="etc-cn-tag">急性压力</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A type of stress that is short in duration. <span class="etc-ref">(p. 113)</span></div>
+                          <div class="etc-def-cn">由特定突发刺激事件骤然引发、通常持续时间较为短暂的应激反应状态。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">anxiety</strong>
+                            <span class="etc-ipa">/æŋˈzaɪəti/</span>
+                          </div>
+                          <span class="etc-cn-tag">焦虑</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A vague, uneasy feeling, often including a sense of impending danger or harm. <span class="etc-ref">(p. 116)</span></div>
+                          <div class="etc-def-cn">一种模糊、令人极度不安的负面情绪，往往伴随着对迫在眉睫的潜在危险或人身伤害的悬心恐慌感。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">burnout</strong>
+                            <span class="etc-ipa">/ˈbɜːnaʊt/</span>
+                          </div>
+                          <span class="etc-cn-tag">职业倦怠 / 身心耗竭</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A state of physical, emotional, and mental exhaustion that results in feelings of discouragement, negativity, and powerlessness. <span class="etc-ref">(p. 113)</span></div>
+                          <div class="etc-def-cn">长期暴露于高强度严苛工作压力下所导致的身体、情绪与心理的三重极端耗竭状态，表现为极度沮丧、消极厌世与无能为力感。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">chronic stress</strong>
+                            <span class="etc-ipa">/ˈkrɒnɪk strɛs/</span>
+                          </div>
+                          <span class="etc-cn-tag">慢性压力 / 持续性压力</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Ongoing stress that can lead to burnout. <span class="etc-ref">(p. 113)</span></div>
+                          <div class="etc-def-cn">长期迁延不愈、潜伏日久的慢性持续应激状态，极易直接诱发机体器质性病变与职业倦怠。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">conflict</strong>
+                            <span class="etc-ipa">/ˈkɒnflɪkt/</span>
+                          </div>
+                          <span class="etc-cn-tag">冲突 / 对立</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A clash between opposing interests and ideas. <span class="etc-ref">(p. 114)</span></div>
+                          <div class="etc-def-cn">对立双方在利益诉求、价值观念、行为方式或核心理念上的激烈碰撞与交锋对抗。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">emotional pressure</strong>
+                            <span class="etc-ipa">/ɪˈməʊʃənl ˈprɛʃər/</span>
+                          </div>
+                          <span class="etc-cn-tag">情绪重压 / 心理负荷</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The feeling of being pushed beyond one's limits or abilities. <span class="etc-ref">(p. 114)</span></div>
+                          <div class="etc-def-cn">感到自身正被外界环境或内在苛求强行推向超越自身心理极限或能力边界的窒息压迫感。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">eustress</strong>
+                            <span class="etc-ipa">/ˈjuːstrɛs/</span>
+                          </div>
+                          <span class="etc-cn-tag">积极良性压力</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A type of stressor that is healthy and gives one a feeling of fulfillment or other positive feelings. <span class="etc-ref">(p. 113)</span></div>
+                          <div class="etc-def-cn">一种对机体身心有益的健康压力形态，能激发斗志、带来充实成就感与积极向上的心流体验。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">stress</strong>
+                            <span class="etc-ipa">/strɛs/</span>
+                          </div>
+                          <span class="etc-cn-tag">压力 / 应激</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The emotional, behavioural, or physical response to an event or situation. <span class="etc-ref">(p. 113)</span></div>
+                          <div class="etc-def-cn">机体面对特定外在事件刺激或生存处境时，所产生的复杂情绪、行为举止与生理机能的综合应激响应。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">stressor</strong>
+                            <span class="etc-ipa">/ˈstrɛsər/</span>
+                          </div>
+                          <span class="etc-cn-tag">压力源 / 促应激因子</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">An event or situation that causes stress. <span class="etc-ref">(p. 113)</span></div>
+                          <div class="etc-def-cn">打破机体内外稳态、诱发个体产生压力应激反应的一切外在事件、环境或内在刺激情境。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">validate</strong>
+                            <span class="etc-ipa">/ˈvælɪdeɪt/</span>
+                          </div>
+                          <span class="etc-cn-tag">情感验证 / 确认接纳</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">To acknowledge, recognize, or confirm the client's feelings. <span class="etc-ref">(p. 117)</span></div>
+                          <div class="etc-def-cn">以深切的同理心，发自内心明确承认、领会并郑重确认受助案主内心感受的真实性与合理性。</div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                    <div class="kt-expand-bar" id="kt-expand-bar-cards-ch8">
+                      <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch8', 'cards')">
+                        展开全部 10 张精研术语卡片 ▼
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">This chapter deals with four key challenges support workers face in the workplace: (1) handling stress, (2) managing time, (3) making decisions, and (4) solving problems. As a support worker, if you can manage time well, make wise decisions, and solve problems, you will have less stress. Much of what is discussed in this chapter can be used to deal with issues in your personal as well as your professional life.</p>
+                      <p class="para-cn">本章全面聚焦支持工作者在临床职场中所面临的四大核心职业生存挑战：(1) 驾驭与应对压力；(2) 科学高效管理时间；(3) 审慎做出专业决策；(4) 系统化解决临床难题。作为一名支持工作者，如果你能够游刃有余地管理时间、做出明智冷静的决策并高效排疑解难，你自身所承受的职业压力必将大幅消减。本章所阐述的深邃智慧与实操法则，不仅适用于前线医护实务，更能全方位赋能你的个人生活。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">For example, Marissa became a support worker because she likes helping people. She feels great compassion for her clients. Most of the time, she likes her job, but she sometimes worries that she is not doing her best.</p>
+                      <p class="para-cn">让我们以玛丽莎（Marissa）的亲身经历为例：她当初毅然选择成为一名支持工作者，是因为她发自内心热爱助人，对身处困境的受助案主怀抱极深的慈悲之情。在绝大多数时候她非常热爱这份神圣的职业；然而在日常工作中，她时常陷入一种内疚恐慌——总担心自己未能尽善尽美。她时常感到被繁重的任务压得喘不过气、整天手忙脚乱，并在紧急关头深陷难以决断的瘫痪困境。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">She feels stressed and rushed and has trouble making decisions. She discusses her feelings with her supervisor, who encourages her to take a time-management course. Her supervisor also offers to help Marissa become a better decision maker and problem solver. As a result, she is able to recognize when clients are under stress, and she can try to help them reduce their stress.</p>
+                      <p class="para-cn">敏锐的玛丽莎没有任由负面情绪蔓延，而是主动向其主管护士敞开心扉倾诉。主管极具前瞻性地鼓励她进修时间管理专项课程，并手把手指导她如何锤炼决断力与问题拆解能力。经过系统蜕变，玛丽莎不仅自身的工作节奏井井有条，更能敏锐洞察案主细微的压力警讯，进而以从容的心境协助案主排解心理重压。</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-01">
+                  <h2 class="heading-en">STRESS</h2>
+                  <div class="heading-cn">压力的本质：生理机制与大健康维度</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Stress is a normal part of life that everyone experiences at one time or another. Stress is the emotional, behavioural, or physical response to an event or situation.</p>
+                      <p class="para-cn">压力是生命历程中不可或缺的客观常态，普天之下的每一个人都曾经历过压力的洗礼。压力是机体面对特定外在事件刺激或情境时，所爆发出的情绪波动、行为代偿或生理神经反应。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">People face various types of stress in their lives, some positive and some negative. Eustress is a type of stress that is healthy and gives one a feeling of fulfillment or other positive feelings. Acute stress is short in duration, whereas chronic stress is ongoing.</p>
+                      <p class="para-cn">人在一生中会遭遇形形色色的压力形态，其中既有负面消耗性的恶性压力，亦有滋养身心的积极良性压力。“积极压力”（Eustress）是一种有益于身心健康的压力源，它能激发人体的潜能、赋予人强烈的成就感与崇高的价值体验。“急性压力”（Acute Stress）通常发作迅猛但持续时间较短；而“慢性压力”（Chronic Stress）则是长期迁延不愈、潜伏日久的慢性持续磨损。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Stress affects the whole person. It can have positive or negative effects in all dimensions—the physical, emotional, social, intellectual (cognitive), and spiritual (TABLE 8.1). Chronic stress can lead to burnout—a state of physical, emotional, and mental exhaustion.</p>
+                      <p class="para-cn">压力深刻影响着一个“完整的人”（The Whole Person）。正如图表 8.1 所详尽呈现，压力如同双刃剑，在全人健康的五大核心维度——身体机能、情绪心理、人际社交、智力认知以及精神灵性层面，均可产生显著的正向促进或毁灭性负向冲击。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">A person experiencing burnout feels discouraged, negative, and powerless. We discuss the topic of burnout in more detail on page 119. For some individuals with underlying mental health issues, severe or prolonged stress may trigger the onset of mental health symptoms, especially if the client experiences changes in eating or sleeping, increases use of drugs or alcohol, or feels impulses to engage in reckless behaviour (also see Chapter 37).</p>
+                      <p class="para-cn">长期的慢性压力若得不到及时干预，必然滑向灾难性的“职业倦怠”（Burnout）——这是一种身心完全枯竭透支的极度虚脱状态，深陷倦怠者会感到万念俱灰、消极厌世与彻底的虚无无能（详见第119页对倦怠的深度剖析）。更为危急的是，对于那些本身存在潜在精神心理脆弱性的个体而言，严重或持续的重压极易直接诱发重度精神心理疾病的发作——尤其是当案主已出现睡眠与饮食骤变、酗酒滥用药物、或产生自残冲动时，必须立即引起整个医护团队的最高警觉（详见第37章）。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Sources of Stress</h3>
+                  <div class="heading-cn">临床与日常核心压力源剖析</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Stress can be caused by various factors, called stressors. The more frequently the stressor occurs and the longer it lasts, the more likely it is to affect the person's health.</p>
+                      <p class="para-cn">诱发机体产生压力的各类内外刺激因素统称为“压力源”（Stressors）。压力源发生的频次越高、持续的时间跨度越长，其对个体身心健康造成的不可逆破坏力就越巨大。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Stressors that last for a few minutes to a few hours—for example, daily irritations—usually create only mild stress. Stressors that last for months or years, such as persistent illness, disability, or family relationship problems, can cause severe stress. Some common stressors are discussed below.</p>
+                      <p class="para-cn">仅持续数分钟至数小时的短暂压力源（如生活日常琐事摩擦），通常仅引发轻度一过性压力；然而，那些长达数月乃至数年迁延不休的恶性压力源（如重度慢性不可逆疾病、终生躯体残障或破碎撕裂的家庭亲情危机），则会造成极其凶险的重度身心创伤。以下重点解析临床中最为常见的核心压力源。</p>
+                    </article>
+                    
+                <div class="editorial-heading-micro">
+                  <h4 class="heading-en">Changes</h4>
+                  <div class="heading-cn">生活巨变与适应负荷</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Whether it is positive or negative, change is always a source of stress. Regardless of age, many people find change difficult, while others seem to embrace it without exhibiting signs of stress.</p>
+                      <p class="para-cn">无论是充满喜悦的正向变迁（如升职、结婚），还是令人扼腕的负面挫折，一切“变化”（Change）在本质上都是极其剧烈的压力源！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Key Terms & Concept of Stress" onclick="playParagraphAudio(this)">
+                      <p class="para-en">For example, most older persons have lived through numerous changes and personal difficulties. Many of them are still able to adapt well to new changes in health status or to the loss of partners and friends. Meanwhile, some younger adults can be very negatively affected by life changes and personal loss.</p>
+                      <p class="para-cn">无分老幼，许多人在面对生活的剧烈打破时感到步履维艰，而另一些人则似乎能泰然处之、毫无应激表征。例如，绝大多数高龄长者在漫长的一生中历经无数历史沧桑与坎坷磨难，许多长者在步入晚年面对自身器官衰退或挚友伴侣相继离世时，依然展现出令人惊叹的超凡心理韧性与自如适应力；与此形成鲜明对比的是，许多心智尚未完全成熟的青年人在遭遇微小的人生变故或失恋失业时，却极易被击得粉碎、深陷绝望。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-114">
+              <span class="marker-pill">p. 114</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Table 8.1 Stress Across Health Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Common life changes include the following: • Death of a loved one • Divorce • Loss of a job • Increase in financial obligations • Marriage • Move to a new home • Chronic illness or injury • Emotional problems (depression, anxiety, anger, grief, guilt, low self-esteem) (see Chapter 37) • Caring for a sick or aging family member • A traumatic event, such as a natural disaster, theft, rape, or violence against the person or a loved one.</p>
+                      <p class="para-cn">在人类一生中，常见的重大生活巨变包括以下关键事件：
+• 挚爱至亲的离世；
+• 婚姻破裂与离异；
+• 遭遇失业或职业中断；
+• 经济负债或家庭财政负担剧增；
+• 缔结婚姻步入新家庭；
+• 迁入陌生的新居环境；
+• 身患不可逆慢性重病或遭遇意外致残创伤；
+• 爆发深层情绪危机（抑郁、焦虑、愤怒、哀恸、内疚或自尊坍塌，详见第37章）；
+• 长期承担全天候照护重病或失能垂暮亲属的重托；
+• 亲历重大创伤性恶性事件（如自然灾难、重大盗窃、性侵暴力或针对自身及亲属的残酷人身伤害）。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Emotional Pressure</h3>
+                  <div class="heading-cn">情绪重压与不可逾越的苛求</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Table 8.1 Stress Across Health Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Emotional pressure is the feeling of being pushed beyond one's limits or abilities. People feel pressure for different reasons, including being rushed, having too many demands on them, and feeling unable to fulfill others' expectations (FIGURE 8.1).</p>
+                      <p class="para-cn">“情绪重压”（Emotional Pressure）是个体感到自身正被逼迫超越其生理承受极限或能力边界的窒息压迫感。导致人们深陷重压的原因极其繁杂：包括被不断催促赶进度、被强加过多不合理的严苛要求、以及深感自身无论如何努力都绝无可能达成他人的厚重期望（图 8.1）。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Table 8.1 Stress Across Health Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">People sometimes put pressure on themselves by setting goals that are difficult or impossible to achieve. For example, Penelope is frustrated with herself because she fails to lose 15 pounds in 1 month and, as a result, she feels stress. Clearly, her goal was too difficult to achieve.</p>
+                      <p class="para-cn">在许多时候，这种致命的重压恰恰是人们画地为牢自我强加的——即设定了脱离实际、根本不可能达成的虚假宏愿。例如，佩内洛普（Penelope）因未能达成“在短短一个月内疯狂减重15磅”的目标而对自己深感绝望沮丧，陷入重度应激；很显然，这种不切实际的严苛目标本身，正是其痛苦压力的根源所在。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-115">
+              <span class="marker-pill">p. 115</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 8.1: Physical Signs and Symptoms of Acute Stress</h4>
+                    <div class="box-title-cn">专栏 8.1：临床生理学——急性压力发作时的机体物理征象与警讯表征</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">• Rapid pulse (tachycardia)<br>• Rapid respirations<br>• Increased blood pressure (hypertension spike)<br>• Rapid speech, higher-pitched voice<br>• Dry mouth<br>• A 'lump' in the throat (globus sensation)<br>• 'Butterflies' in the stomach<br>• Nausea<br>• Diarrhea<br>• Sweaty palms<br>• Sore muscles in neck, arms, and back<br>• Perspiration (profuse sweating)<br>• Urinary frequency<br>• Urinary urgency<br>• Difficulty sleeping (insomnia)<br>• Change in appetite<br>• Change in weight</div>
+                      <div class="clause-cn">• 脉搏剧烈骤增（心动过速）；<br>• 呼吸急促浅短；<br>• 血压陡然飙升；<br>• 语速反常加快，语调显著拔高尖锐；<br>• 口干舌燥；<br>• 喉头产生严重的异物哽咽感（咽喉梅核气感）；<br>• 胃部痉挛翻江倒海感（胃部翻腾感）；<br>• 恶心欲呕；<br>• 突发应激性腹泻；<br>• 手心冰凉盗汗；<br>• 颈部、双臂及背部骨骼肌高度痉挛紧绷酸痛；<br>• 全身大汗淋漓；<br>• 尿频；<br>• 尿急；<br>• 入睡极其困难（急性失眠）；<br>• 食欲骤降或病态暴食；<br>• 短期内体重发生急剧波动。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Lack of Control</h3>
+                  <div class="heading-cn">失控感：自主自决权的剥夺</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.1 Signs of Acute Stress & Stressors" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Some people experience stress when they feel they cannot control what happens to them and to the environment around them and they instead have to depend on someone else. For example, loss of work, economic hardship, violence, illness, discrimination, and death of a loved one all cause stress. Not being able to control one's own behaviour is also a stressor.</p>
+                      <p class="para-cn">当人们感到自身对降临在自己头上的命运、以及四周的生存环境彻底丧失了支配掌控权，被迫不得不将生命交由他人摆布支配时，便会产生摧毁性的失控压力。例如，突然失业、陷入经济赤贫、遭遇人身暴力侵犯、罹患绝症、遭受不公歧视以及痛失骨肉等，都会瞬间剥夺个体的控制感。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.1 Signs of Acute Stress & Stressors" onclick="playParagraphAudio(this)">
+                      <p class="para-en">For example, Ms. Kumar wants to quit smoking. She tries and fails, and she is angry at her apparent lack of self-control. As a result, she feels stress, to which she responds by smoking.</p>
+                      <p class="para-cn">更为残酷的是，无法掌控自身的恶习行为同样是极大的内生压力源：例如库马尔女士（Ms. Kumar）立志戒烟，几经艰苦尝试却屡屡复吸失败；她对自身意志力的脆弱感到无比愤怒自责，这种挫败感激起了巨大的心理压力，而滑稽而悲凉的是，她应对这种自责压力的方式，竟然是下意识地抽更多的烟！</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Conflict, School Demands & Daily Frustrations</h3>
+                  <div class="heading-cn">人际冲突、学业负荷与日常挫折感</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.1 Signs of Acute Stress & Stressors" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Conflict is a clash between opposing interests and ideas. Conflicts with a partner, friend, child, co-worker, or client are serious sources of stress. People also experience conflict within themselves when sorting out their problems or making decisions.</p>
+                      <p class="para-cn">“冲突”（Conflict）是对立利益与冲突观念之间的剧烈交锋。与伴侣、挚友、子女、职场同仁或受助案主爆发的摩擦对立，是现代人最剧烈的精神重压源泉。此外，个体在面对两难伦理抉择、面临重大人生取舍时，内心所爆发的深层自我天人交战，同样属于毁灭性的内在冲突。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.1 Signs of Acute Stress & Stressors" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Students often become stressed by heavy workloads of assignments, tests, exams, and clinical placements. Many also face the demands of their family, as they are not only students but also partners, parents, children, employees, and so on, with responsibilities outside school. Families often have difficulty understanding that the student in the house may not be able to do everything the person did before returning to school.</p>
+                      <p class="para-cn">正在攻读医护专业学位的学生们，往往时刻承受着如山般繁重的课业压力——海量专业作业、严苛的技能考核、期末大考以及高强度的临床医院实训轮转（Clinical Placements）。许多学员往往还背负着沉重的家庭重担：在踏入校园的同时，他们同时为人父母、为人伴侣、为人子女或兼职打工；然而，身边的亲属往往极难真正设身处地理解，这位重返校园深造的家庭成员，早已绝无精力再去兼顾过去包揽的繁重家务！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.1 Signs of Acute Stress & Stressors" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Frustrations can sometimes cause stress—for example, losing car keys, being stuck in traffic, or oversleeping. As a support worker, you may encounter frustrations such as having to manage with insufficient staff to complete all the required care or being sent to another floor, where the clients are unfamiliar, to cover for someone else.</p>
+                      <p class="para-cn">生活琐碎挫折同样能汇聚成巨大的应激洪流——例如清晨找不到车钥匙、早高峰被死死堵在高速路上、或是闹钟未响意外睡过头。而在支持工作者的临床前线，你每天都可能遭遇极度令人心力交瘁的挫败场景：例如科室因突发减员而严重缺编，你必须以一人之力承担双倍案主的基础全流程照护；或者在上班第一分钟被临时抽调至完全陌生的病区楼层，替生病的同事顶班面对一屋子素不相识的危重案主！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.1 Signs of Acute Stress & Stressors" onclick="playParagraphAudio(this)">
+                      <p class="para-en">People's reactions to a frustrating situation vary. For some, any unexpected incident can cause stress.</p>
+                      <p class="para-cn">每个人对挫折的神经耐受力千差万别，对某些高度敏感脆弱的人而言，任何微小的突发意外都能瞬间引爆神经崩溃。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Individual Responses to Stress</h3>
+                  <div class="heading-cn">个体面对压力源时的异质性响应机制</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.1 Signs of Acute Stress & Stressors" onclick="playParagraphAudio(this)">
+                      <p class="para-en">People may respond differently to the same stressor. A person's responses to stressors are influenced by several factors, including: • Perception of personal control and feelings of competence • Availability of social supports • Cognitive awareness • Temperament or personality • Past experiences with the same or similar stressors • The number of other stressors being experienced • The nature, severity, and duration of the stressor.</p>
+                      <p class="para-cn">面对完全相同的外部压力源，不同个体的生理与心理反应截然不同！决定一个人应激抗压耐受度的核心多元变量涵盖：
+• 对自身掌控力与专业能力的自我认知评估；
+• 可触达的家庭与社会支持系统的坚实程度；
+• 认知觉察与理性审视水平；
+• 先天神经气质类型与性格心理韧性；
+• 既往面对同类危机事件时的成功应对经验储备；
+• 当前生活中正在同时承受的其他并发压力源的总量叠加；
+• 压力源本身的性质、残酷程度与持续时间跨度。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-116">
+              <span class="marker-pill">p. 116</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-lavender">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 8.2: Physical Signs and Symptoms of Chronic Stress</h4>
+                    <div class="box-title-cn">专栏 8.2：临床病理学——慢性迁延性压力对全身机能的不可逆损害表征</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">• Chronic headache (tension headaches, migraines)<br>• Mood swings<br>• Anxiety (a vague, uneasy feeling, often including a sense of impending danger or harm)<br>• Substance abuse (alcohol, prescription drugs)<br>• Memory disturbances (cognitive decline, brain fog)<br>• Weakening of immune system function, which can result in frequent attacks of cold and flu<br>• Cardiovascular diseases ranging from heart attacks to strokes; increased blood pressure<br>• Bowel disorders (irritable bowel syndrome, ulcers)<br>• Decreased sexual drive (libido loss)<br>• Sleeplessness (chronic severe insomnia)</div>
+                      <div class="clause-cn">• 顽固性慢性头痛（肌紧张性头痛或偏头痛反复发作）；<br>• 严重的情绪剧烈波动失控；<br>• 慢性焦虑（长期沉浸在模糊不安、大难临头的濒死恐慌感中）；<br>• 物质依赖与药物滥用（借酒浇愁或镇静安眠药成瘾）；<br>• 记忆功能重度紊乱（脑雾、健忘与执行机能减退）；<br>• 免疫系统机能崩溃，导致全身抵抗力急剧衰退，频繁爆发上呼吸道感染或感冒顽疾；<br>• 严重心脑血管病变（高血压恶化、急性心肌梗死乃至致命性脑卒中中风）；<br>• 胃肠道器质性紊乱（肠易激综合征、应激性消化性溃疡）；<br>• 性欲显著减退或丧失；<br>• 顽固性长期失眠伴早醒梦魇。</div>
+                    </div>
+                    </div></aside>
+
+                <aside class="editorial-box-container box-theme-amber">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 8.3: Emotional and Behavioural Signs and Symptoms of Stress</h4>
+                    <div class="box-title-cn">专栏 8.3：行为心理学——压力引发的情绪爆发与失常行为谱系</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">• Anxiety<br>• Depression<br>• Anger<br>• Worry<br>• Fear<br>• Burnout<br>• Irritability<br>• Loss of self-esteem<br>• Fatigue<br>• Dissatisfaction<br>• Forgetfulness<br>• Poor concentration<br>• Difficulty focusing or following directions<br>• Emotional outbursts, including yelling or crying<br>• Smoking<br>• Drinking<br>• Talking obsessively about the stressor</div>
+                      <div class="clause-cn">• 病理性焦虑；<br>• 情绪重度抑郁绝望；<br>• 暴躁易怒；<br>• 终日忧心忡忡；<br>• 莫名惊恐；<br>• 身心全面耗竭倦怠；<br>• 极度缺乏耐心、烦躁不安；<br>• 自我价值感坍塌自卑；<br>• 躯体极度疲惫无力；<br>• 对一切产生深层不满厌倦；<br>• 严重健忘遗忘；<br>• 注意力极难集中；<br>• 丧失专注力、无法遵循工作指令；<br>• 情绪失控歇斯底里大爆发（突然尖叫咆哮或崩溃痛哭）；<br>• 报复性疯狂吸烟；<br>• 嗜酒买醉；<br>• 强迫性喋喋不休反复诉说压力源。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">FOCUS ON OLDER PERSONS: Stress in Late Life</h3>
+                  <div class="heading-cn">长者照护专栏：高龄长者的晚年独特压力源与精神寄托</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.2 Chronic Stress, Box 8.3 & Age Groups" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Some of the common stressors faced by older persons include the following: • Loss of spouse, other family members, friends, and, unfortunately, sometimes grandchildren • Health problems • Economic worries, since a large number of older adults are on a limited, fixed income • Increased dependency on another person to help with personal care, finances, or housekeeping • Loneliness and isolation • Decline in abilities because of the normal aging process. Although they may face numerous stressors, older persons can cope with stress equally well as other adults. Many older persons rely on their spirituality to cope with illness or severe stress.</p>
+                      <p class="para-cn">高龄长者在垂暮之年所承受的压力源具有极其沉重的生命悲剧色彩，常见压力包括：
+• 伴侣离世、同辈手足及至交好友相继凋零，甚至白发人送黑发人痛失孙辈；
+• 全身多系统慢性器质性病变与顽固躯体疼痛折磨；
+• 经济拮据困窘——绝大多数独居长者完全依赖微薄固定的养老金艰难度日；
+• 自主自理能力丧失，在个人洗漱、财务支配与家务琐事上对他人产生深度的被动依赖；
+• 无法排遣的深层孤独与社会剥夺隔离；
+• 伴随生理衰老过程必然降临的感官、智力与肢体机能退化。
+尽管面对如此沉重的人生至暗，大量高龄长者依然凭借漫长岁月沉淀出的智慧，展现出丝毫不逊于年轻人的超凡心理抗压能力！许多长者往往依靠深邃虔诚的精神宗教信仰，在疾病与绝境中汲取抚慰身心的崇高平静力量。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">FOCUS ON CHILDREN: Stress Manifestations in Youth</h3>
+                  <div class="heading-cn">儿童与青少年专栏：未成年人压力反应的非言语化与行为倒退</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.2 Chronic Stress, Box 8.3 & Age Groups" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Infants and children also react to stressors and may show the same signs of stress as adults do. For example, a child under stress might have stomach aches, irritability, changes in appetite, or changes in sleep patterns.</p>
+                      <p class="para-cn">婴幼儿与未成年儿童同样极其敏感地承受着压力的肆虐，并呈现出与成人惊人相似的应激体征：例如身处重压下的儿童常频繁主诉躯体不明原因的剧烈腹痛胃痛、情绪反常烦躁易怒、食欲陡降或睡眠夜惊。未成年人由于大脑皮层与言语表达机制尚未发育成熟，往往极难通过成熟的词汇倾诉其内心的恐惧绝望，而是本能地通过外显的异常“行动”（Actions）来释放其无助感受。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="44.28" data-end="185.02" data-title="Box 8.2 Chronic Stress, Box 8.3 & Age Groups" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Children might not be able to communicate their feelings very well in words and are more likely to indicate how they feel with their actions. A child's behaviour that is out of the ordinary may be a sign of stress—for example, a normally content baby cries for an hour after being overstimulated; a fully toilet-trained 4-year-old suddenly begins to wet the bed after his mother becomes seriously ill; or a usually calm adolescent begins to engage in physical fights with peers after his parents' divorce.</p>
+                      <p class="para-cn">儿童一切反常突兀的行为模式，正是其身处心理重压的紧急求救警讯——例如：一个平时极其乖巧安详的婴儿，在受到嘈杂过度刺激后持续尖叫啼哭整整一小时；一个早已能够完全自主如厕的4岁男童，在其母亲身患绝症入院后突然剧烈“退行”（Regression）频繁夜间尿床；或者一个素来温顺内向的中学生，在父母突遭离婚变故后突然在校园里与同龄人爆发恶性肢体斗殴！</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-117">
+              <span class="marker-pill">p. 117</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-02">
+                  <h2 class="heading-en">DEFENCE MECHANISMS IN TIMES OF STRESS</h2>
+                  <div class="heading-cn">应激状态下的心理防御机制与情感验证</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Most people use defence mechanisms at one time or another, especially when they are under stress. Defence mechanisms are used to delay—or avoid altogether—uncomfortable feelings such as anxiety, guilt, stress, or embarrassment. In this way, they relieve stress by helping the person avoid facing a troubling reality (see Chapter 9).</p>
+                      <p class="para-cn">绝大多数人在人生的某个关头都曾无意识地动用过“心理防御机制”（Defence Mechanisms），尤其是在遭遇深层心理重压之时。心理防御机制的核心生理目的，是用来延缓、甚至彻底回避那些令人极度痛苦的情绪体验——如排山倒海般的焦虑、负罪感、心理重压或无地自容的难堪。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">For example, a client in a facility is upset that her daughter is not able to visit her frequently. She blames the city bus system since she believes that if the buses were more reliable, her daughter would visit more often. Even though she focuses her anger on the bus system, she really is disappointed with her daughter.</p>
+                      <p class="para-cn">通过这种方式，它协助个体暂时逃避去直面残酷惨痛的现实，从而在表面上缓解即时的应激痛苦（详见第9章）。例如，长期照护机构中的一位住院老太太因女儿极少前来探望而心如刀割；然而，在与护理员交谈时，她却愤怒地将所有矛头全部指向城市公交系统——坚信正是因为市内公交线路班次极不准点，女儿才无法经常来看她。尽管老太太将狂风暴雨般的怒火宣泄在公交车上，她内心深处真正绝望失望的，其实是亲生女儿对她的冷漠疏离！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">When working with clients who are under stress, being able to recognize their defence mechanisms is useful. Understanding defence mechanisms gives you insight into what your clients may really be feeling.</p>
+                      <p class="para-cn">在照护身处重压下的服务对象时，具备敏锐辨识其潜意识心理防御机制的专业眼光具有无可替代的临床价值。深刻洞察防御机制，能赋予支持工作者一双看穿假象的慧眼，直抵案主内心深处被层层包裹的真实创痛。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">You can help them by being empathetic to their feelings, by trying to validate their feelings, and by providing compassionate care. Validation means to acknowledge, recognize, or confirm the client's feelings (see Chapter 38).</p>
+                      <p class="para-cn">你可以通过给予至诚的同理共情、主动进行“情感验证”（Validation）、并倾注无微不至的慈悲照料来真正赋能案主。“情感验证”（Validation）是指用坚定而温和的话语，真诚承认、领会并郑重确认案主当下内心痛苦感受的完全合理性与真实性（详见第38章）。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">As a support worker, you must recognize the common responses to stress in your clients. Tell your supervisor when you notice a client showing signs of stress, such as loss of appetite or sleep, a change in behaviour or mood, or increased use of alcohol or other substances.</p>
+                      <p class="para-cn">作为专职支持工作者，你必须熟练捕捉案主呈现出的各种常见应激反应。一旦你察觉案主表现出严重的压力警讯（如食欲废绝、彻夜难眠、性格行为突变或酗酒服药激增），必须立即且毫无保留地向主管护士如实汇报！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Remember, your role is to observe and report. It is not within your scope of practice to diagnose clients by using defence mechanism (or diagnostic) terms; instead, you need to describe the client's behaviour when reporting it.</p>
+                      <p class="para-cn">在此，必须时刻恪守职业执业范围边界（Scope of Practice）：你的法定神圣天职是“客观观察并严谨汇报”（Observe and Report）——绝对严禁支持工作者擅自使用任何心理防御机制或精神病学诊断术语去随意给案主‘下诊断定性’！在向上级汇报时，你只能且必须使用纯客观的词汇去详尽描述案主外在展现的具体行为事实！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">It is important, however, to be familiar with these terms when they are used, as an understanding of them will help you when giving care to your client. For example, when a client complains of headache and nausea, do not assume that the client is suffering from stress, because these could also be symptoms of a physical condition. Rather, note and report your observations, since professionals such as nurses and social workers can help clients cope with stress.</p>
+                      <p class="para-cn">然而，在专业沟通中熟练理解这些学术术语依然至关重要，它能极大地深化你对病情的理解。例如，当一位案主向你哭诉剧烈头痛恶心时，切勿自作聪明武断认定其只是“压力太大”，因为这极有可能是脑出血或严重颅内高压的危急生理体征！客观记录所见所闻并迅速汇报，让注册护士、主治医师与临床社工等跨学科团队介入处置，才是确保案主生命安全的唯一守则！</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-03">
+                  <h2 class="heading-en">MANAGING STRESS IN YOUR LIFE</h2>
+                  <div class="heading-cn">支持工作者自身的职场压力自律与健康维系</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Stress is common among health care workers, particularly in support work, which can be very demanding. You may feel physical stress from all the lifting, moving, and carrying that you are required to do every day. You may feel cognitive stress while trying to do many things at the same time.</p>
+                      <p class="para-cn">在医疗卫生健康战线上，医护人员承受职业压力是极其普遍的严峻现实——尤其是专职前线支持工作者，其工作强度与身心负荷堪称极限挑战：
+• 你每天都在承受着繁重的“躯体物理压力”（Physical Stress）：高强度的搬运移位、协助翻身、轮椅转运与繁重器械推拉，使骨骼肌肉系统长年处于极限受压边缘；
+• 你时刻承受着巨大的“认知脑力超载压力”（Cognitive Stress）：在一心多用的极限多任务环境下疲于奔命——例如一位案主每次看见你路过门口就大喊要便盆，而隔壁另一位压疮危重案主必须严格每隔15分钟予以轴向翻身减压；
+• 你更无时无刻不在直面深重的“情绪情感压力”（Emotional Stress）：常年累月与饱受绝症折磨、形单影只、极度虚弱甚至濒临死亡的长者朝夕相处；你更必须频繁面对那些深陷极度悲痛绝望、甚至怒火中烧的病患与暴躁家属。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">For example, a client asks for the bedpan every time you walk by the room, and another needs to be turned and repositioned every 15 minutes. You may feel emotional stress from working with clients who are sick, lonely, frail, or dying. You may also work with clients or family members who are angry or distressed.</p>
+                      <p class="para-cn">例如，一位全天候侍奉重病卧床丈夫的精疲力竭的妻子，刚刚在单位遭到刻薄上司强制加班的训斥，回到病房时便借题发挥将漫天怒火全部撒向正在给她丈夫换药的你！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">For example, a wife who is the primary caregiver for her ill husband is angry with her boss for insisting that she always stay late at work. She may direct her anger toward you, or you might feel upset for her. Depending on how you react, such situations can cause severe stress.</p>
+                      <p class="para-cn">如果你缺乏成熟的专业情绪隔离机制，此类场景将瞬间引爆你自身的毁灭性急性应激！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Managing stress is essential, so do not ignore the signs of stress; watch for them. Letting stress build can result in burnout or illness.</p>
+                      <p class="para-cn">学会科学驾驭压力是支持工作者得以终身执业的生命护城河！时刻敏锐监测自身出现的压力警讯，绝不可麻木漠视——任由职业压力在体内恶性累积，必将导致心身疾病的大爆发甚至职业生涯的毁灭。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="270.65" data-end="409.49" data-title="12 Psychological Defence Mechanisms & Validation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Not dealing properly and immediately with stress can cause some support workers to take out their frustrations on their clients or someone in their personal lives, leading to abuse or neglect, which cannot be allowed to happen. The following strategies can help in managing stress: • Develop self-awareness • Take care of your needs • Think positively.</p>
+                      <p class="para-cn">前线最凶险的临床伦理陷阱是：未能及时疏导心理重压的支持工作者，极易在无意识中将自身积压的满腔愤懑与挫败感，通过冷漠、粗暴动作甚至蓄意拖延发泄在无辜脆弱的受助案主身上，从而直接演变成骇人听闻的“虐待与忽视”（Abuse and Neglect）违法犯罪——这是无论在法律上还是职业伦理上都绝对坚决零容忍的红线！为了守住身心底线，支持工作者必须深刻践行三大黄金自律心法：树立深沉的自我觉察意识、果断捍卫自身生理与情感刚需、保持积极乐观的理性认知。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-118">
+              <span class="marker-pill">p. 118</span>
+            </div>
+            
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Stress-Management Strategies (Continued)</h3>
+                  <div class="heading-cn">支持工作者压力疏导实战高阶心法</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="409.49" data-end="506.78" data-title="Box 8.4 Deep Breathing & Box 8.5 Progressive Relaxation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">• Assert yourself. Nonassertive people say 'yes' to things when they really want to say 'no.' They take on tasks when they have no time for them. They also give in to the demands of others without considering their own needs. Never agree to do more than you can do safely (see Chapter 23).\n• Ask others for help and support. To avoid stress, you have to accept that you cannot do everything yourself. Assert yourself at work and in your home life.</p>
+                      <p class="para-cn">• 坚定捍卫自身边界（Assert Yourself）：缺乏自我坚定主张的人，往往在内心明明极度渴望说“不”时，嘴上却懦弱地违心答应“好”！他们总在自身已经分身乏术时依然硬着头皮揽下额外任务，毫无底线地迎合他人的苛求而彻底牺牲自身的安康。请牢记一条职业安全铁律：永远绝对不要答应承担任何超越你安全能力范围的工作（详见第23章）！\n• 勇敢向他人求助并组建支持系统：要想从根本上瓦解慢性压力，你必须首先在哲学上坦然接纳一个真理——你不是全能的上帝，你绝不可能独自包揽所有事情！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="409.49" data-end="506.78" data-title="Box 8.4 Deep Breathing & Box 8.5 Progressive Relaxation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">If you need help with an assignment, tell your supervisor. At home, let your family know that you need their help and support. Discuss sharing household duties with your roommates, siblings, spouse, or children. Let them know what you need and expect, and take the time to explain to them how to do the activities you usually do. Be encouraging, and avoid being critical if things are not done to your standard.\n• Practise calming exercises. As soon as you feel the first sign of stress, find a way to calm yourself (BOX 8.4).</p>
+                      <p class="para-cn">在职场中若任务超负荷，立即向主管护士据实求援；在家庭生活中，坦诚告知家人你需要他们的分担与支持。坐下来与伴侣、子女或室友深入探讨家务分工，清晰告知你的合理期望，并耐心地示范指导他们如何操作；给予充分的赞许鼓励，切勿因家人初次操作未达你的苛刻标准而刻薄挑剔。\n• 熟练掌握即时静心舒缓技术：一旦察觉到压力警讯的苗头，立即采取身心舒缓干预（详见专栏 8.4）。在紧急关头，与其卷入激化对抗的应激泥潭，不如在确保安全的前提下暂时退后几步让自己冷静下来。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="409.49" data-end="506.78" data-title="Box 8.4 Deep Breathing & Box 8.5 Progressive Relaxation" onclick="playParagraphAudio(this)">
+                      <p class="para-en">If necessary, walk away to calm down rather than engage yourself in a stressful situation. Some people, for example, do daily meditation to cope with stress (BOX 8.5). Others take a moment to change their thoughts into more positive ones to reduce their stress.\n• Practice healthy lifestyle habits. Adopting a lifestyle that includes healthy eating habits, getting enough sleep, avoiding smoking, minimizing alcohol intake, not abusing drugs, exercising regularly, and reducing caffeine and sugar intake can lead to better stress management.\n• Learn to accept the things you cannot change. You cannot control the behaviour of other people. However, you can choose to change how you react to that behaviour.\n• Understand how change itself can be stressful. In the workplace, we are constantly being affected by changes such as budget cuts, changing technology, and staffing issues.</p>
+                      <p class="para-cn">例如，每天定时践行静心冥想（详见专栏 8.5），或在心中按下暂停键，用积极的认知重塑来替换负面的灾难化思维。\n• 恪守严谨健康的生活方式：均衡营养膳食、确保充足高质量睡眠、坚决远离烟草、节制酒精摄入、严禁滥用镇静毒麻药品、坚持规律的有氧与力量训练，并主动大幅压缩高咖啡因饮料与精制糖的摄入。\n• 坦然接纳你无法改变的客观现实：你永远无法掌控他人的言行举止；然而，你拥有至高无上的绝对自由，去自主抉择你对他人言行所做出的反应！\n• 深刻领悟“变动本身就是巨大的压力”：在当今医疗职场中，各级机构无时无刻不在经历预算缩减裁员、医疗信息系统迭代更新、以及排班轮转剧变等冲击，学会顺应变迁是保持身心不败的法宝。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 8.4: Calming Yourself When Feeling Stress</h4>
+                    <div class="box-title-cn">专栏 8.4：临床身心医学——遭遇急性压力时的腹式深呼吸即时平静技术</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">• Close your eyes (if safe to do so), and take deep, slow breaths. Relax your stomach muscles. Breathe in through your nose and out through your mouth. Your stomach should rise about 3 cm (1 inch) as you breathe in. As you inhale, count slowly up to 4. As you exhale, count slowly back down to 1. Pause between breaths. Continue breathing slowly and rhythmically until you feel yourself relaxing.\n• If you feel your muscles tensing, relax them. People tend to clench their jaws and tighten their necks and backs when they are under stress. Relax your muscles, from your face down to your feet.\n• If possible, take a few minutes to yourself. Remove yourself from the stressful situation. However, never leave a client unless it is safe to do so.</div>
+                      <div class="clause-cn">• 在确保现场环境绝对安全的前提下，轻轻闭上双眼，进行深沉、缓慢的节律性腹式呼吸。彻底放松腹部肌肉，用鼻腔深沉吸气，用微张的嘴唇徐徐呼气。随着空气充分充盈肺底，你的腹部应当随之自然向外隆起约 3 厘米（1 英寸）。在吸气过程中，在心中缓慢默数：1、2、3、4；在呼气过程中，缓慢倒数：4、3、2、1。在每次呼吸交替之间自然停顿屏息片刻。保持这种深长、平稳、富有韵律的呼吸节奏，直到感到紧绷的神经彻底松弛下来。\n• 敏锐扫描全身肌肉：人们在深陷重压时，往往会不由自主地下意识咬紧牙关、耸起肩膀并剧烈紧绷颈背部肌肉。请有意识地自上而下逐一释放紧张，从面部咬肌、颈肩、胸背一路放松直至脚趾。\n• 在条件允许时，给自己争取短暂的几分钟独处时间，将自己从充满火药味的应激高压现场暂时物理隔离。然而切记一条红线：除非确认案主处于绝对生理安全状态，否则绝对严禁擅自脱离岗位遗弃案主！</div>
+                    </div>
+                    </div></aside>
+
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 8.5: Meditation and Progressive Relaxation</h4>
+                    <div class="box-title-cn">专栏 8.5：身心放松指南——居家渐进式肌肉放松与专注力冥想实操指南</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">• At home, sit in a comfortable position in a quiet place. Turn off the phone.\n• Pick a word that can be repeated during meditation. Single-syllable words, such as 'one,' are very effective.\n• Relax all muscle groups, beginning with the head and working progressively down to the feet.\n• Breathe in slowly through the nose, and exhale slowly through the mouth.\n• Silently repeat the chosen word while inhaling and exhaling.\n• Focus your thoughts on this rhythmic chanting and breathing for 10 minutes.\n• Allow images and thoughts to flow freely.</div>
+                      <div class="clause-cn">• 居家期间，选择一处绝对不受侵扰的静谧房间，以最舒适惬意的姿势端坐，彻底关闭手机等所有电子干扰。\n• 为自己选定一个在冥想期间用于锚定思绪的专属单音节词汇（例如最简单的数字词汇“One”或“静”，极为高效）。\n• 系统放松全身各大骨骼肌群：从头部头皮与面部微肌肉开始，顺次沿着颈项、肩胛、双臂、胸腹、大腿、小腿直至足底渐进式逐一释放紧绷。\n• 经由鼻腔缓慢深吸气，经由口腔温和徐徐呼气。\n• 在吸气与呼气的每一个来回中，在脑海深处平静无声地默念那个选定的专注词汇。\n• 将全部神识与注意力高度凝聚于这一富有韵律的呼吸与默念之中，持续专注保持整整 10 分钟。\n• 允许脑海中的各种杂念与画面如水流般自然划过，不抓取、不抗拒、不评判，任其自由消散流走。</div>
+                    </div>
+                    
+                    <div class="box-source-citation">
+                      <div class="clause-en">Source: Based on Potter, P. A., Perry, A. G., Ross-Kerr, J. C., et al. (2014). Canadian fundamentals of nursing (5th ed., p. 758). Harcourt Canada.</div>
+                      <div class="clause-cn">权威文献溯源：改编自加拿大护理学权威教参《加拿大基础护理学》（第5版，第758页）。</div>
+                    </div>
+                    </div></aside>
+
+            <div class="page-anchor-marker" id="page-119">
+              <span class="marker-pill">p. 119</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="185.02" data-end="270.65" data-title="Burnout in Support Work & Supporting Kathy" onclick="playParagraphAudio(this)">
+                      <p class="para-en">• Use laughter as a stress reliever: Some of the many psychological and physiological benefits to laughter include encouraging relaxation and restful sleep, improving mood, reducing stress, improving a person's resiliency, improving brain function, and counteracting depression.\n• Understand the effect that social media can have on your mood. Social media can cause anxiety and depression in people because they compare how they measure up to their friends' social media pages.</p>
+                      <p class="para-cn">• 善用幽默与欢笑作为破除压力的天然良药：由衷的欢笑能带来无可估量的生理与心理益处——它能强力诱发全身骨骼肌深度放松、显著提升深度睡眠质量、促进内啡肽分泌改善情绪、大幅消减应激皮质醇水平、增强个体的逆境自愈韧性、活化大脑神经突触机能，并强力抵抗抑郁情绪。\n• 深刻警惕社交媒体对个人心理健康的毒化侵蚀：现代社交网络是诱发青年与医护人员深层焦虑与抑郁的隐形元凶！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="185.02" data-end="270.65" data-title="Burnout in Support Work & Supporting Kathy" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Posts on social media will usually only show people who are having fun, are well dressed, and are surrounded by friends. People who compare their sometimes-complicated lives to the lives of others through a social media lens might feel that their lives are less glamorous and less fun, and this can lead them to feel lonelier, less popular, and more isolated as a result. If this happens, they might be better off limiting their access to social media.</p>
+                      <p class="para-cn">人们总是习惯于拿自己真实生活中狼狈琐碎的琐事，去盲目攀比他人朋友圈里精心修饰摆拍的虚假完美动态。在社交媒体上，人们展现的永远是光鲜亮丽的华服盛宴、环球旅行与高朋满座的奢靡瞬间；那些透过社交网络滤镜去审视自身艰辛现实的人，极易产生自身生活“暗淡无光、毫无吸引力”的挫败自卑感，进而滑向深重的孤独、被孤立与绝望深渊。一旦察觉到这种负面心理苗头，最明智的自救之策就是立即果断限制、甚至彻底断绝翻看社交网络！</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Job Burnout in Healthcare</h3>
+                  <div class="heading-cn">医护职业倦怠（Job Burnout）的深度剖析</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="185.02" data-end="270.65" data-title="Burnout in Support Work & Supporting Kathy" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Burnout is common among health care workers because these helping professions can be very demanding physically, emotionally, and mentally (see Supporting Kathy: Support Workers Can Face Burnout Also). As discussed earlier, severe or prolonged stress can lead to burnout, which is a state of physical, emotional, and mental exhaustion caused by long-term exposure to demanding work situations. Like stress, burnout can have negative consequences for your health, such as insomnia, weight gain or loss, depression, anxiety, and other emotional difficulties.</p>
+                      <p class="para-cn">“职业倦怠”（Job Burnout）在全体医护从业人员中极其高发，因为这种以助人为核心使命的神圣职业，在生理、情绪与精神心智层面的消耗堪称极限挑战（参见专栏《支持凯茜：支持工作者同样深陷职业倦怠的残酷现实》）。长期处于不可承受的高压工况下，机体必将陷入彻底的“职业倦怠”——即身心处于全面透支枯竭的瘫痪状态。倦怠不仅摧毁职业热情，更对机体造成毁灭性打击：引发顽固性神经衰弱性失眠、体重急剧暴涨或消瘦脱相、重度抑郁症、广泛性焦虑症以及严重的精神人格危机。</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Increasing criticism of others or sarcasm at work.</strong></div>
+                      <div class="item-cn">在职场中对同事或案主变得越来越尖酸刻薄、言语充满讽刺挖苦与挑剔非难。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Changed sleep habits (persistent insomnia, frequent nightmares, unrefreshing sleep).</strong></div>
+                      <div class="item-cn">睡眠作息彻底崩塌紊乱（长期顽固失眠、频遭噩梦惊醒、醒后全身酸痛依然极度疲惫）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Fatigue—for example, having trouble getting the day started.</strong></div>
+                      <div class="item-cn">病态慢性重度疲惫感——例如早晨在闹钟响后无论如何都无法爬起床，感到开启新的一天犹如登天般绝望。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Changed appetite (compulsive binge eating or complete loss of appetite).</strong></div>
+                      <div class="item-cn">食欲出现病态极端扭曲（强迫性暴饮暴食或食不知味彻底厌食）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Less patience with clients and co-workers.</strong></div>
+                      <div class="item-cn">对服务对象、案居家属及同仁的耐心归零，动辄烦躁摔打物品、态度极其粗暴恶劣。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Self-medicating—using food, drugs, or alcohol to feel better.</strong></div>
+                      <div class="item-cn">病态“自我麻痹性用药”——通过疯狂暴食、大肆酗酒买醉或滥用处方安眠药毒麻药品来麻痹自身痛苦神经。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Kathy: Support Workers Can Face Burnout Also</h4>
+                    <div class="box-title-cn">临床个案思维修炼：支持凯茜——20年资深支持工作者身陷重度职业倦怠的典型写照与应对</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Kathy is a support worker who has been working at the same continuing care facility for over 20 years. If asked if she likes her job, she would say, 'It pays the bills.' You have noticed that she arrives at work a few minutes late every day and takes longer breaks than the other employees do. When everyone else is getting up to go back to work after their break time ends, Kathy announces, 'Well, I'm going to the bathroom.' She then returns to the unit 5 to 10 minutes after everyone else. You suspect that she goes outside to have another cigarette because she usually smells strongly of tobacco upon her return.</div>
+                      <div class="clause-cn">凯茜（Kathy）是一名已经在同一家长期照护养老机构连续任职超过20年的资深老牌支持工作者。如果有人问她究竟是否喜欢这份工作，她总会冷冷地撇撇嘴回答：“凑合干呗，为了养家糊口付账单罢了。”在日常工作中你细心观察到：凯茜每天上班总会雷打不动地迟到几分钟，且每次休息时间总比规定时间拖得更长。当休息室里所有其他同事都准时起身返回病房病区投入工作时，凯茜总会慢悠悠地宣布：“得嘞，我还得上一趟洗手间呢。”随后，她总是在其他人全面开工5到10分钟之后才磨磨蹭蹭溜回病区；你强烈怀疑她其实是借故溜到后院偷偷抽烟去了，因为每次归来时她浑身上下都散发着极其浓烈呛人的二手烟味。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">You do not enjoy working with Kathy because she is opinionated and occasionally rude to you when you ask her questions. You have also seen her being abrupt with some of the more challenging or demanding residents. Kathy rarely smiles and hardly ever speaks to you. She usually talks only to the other senior staff.</div>
+                      <div class="clause-cn">你内心深处极度不愿与凯茜同班搭档，因为她性格极其自负偏狭，每当你初来乍到虚心向她请教临床问题时，她总表现得极其不耐烦甚至出言不逊、冷嘲热讽。你还多次亲眼目睹她在照护那些伴有重度认知障碍、情绪烦躁或诉求繁琐的高挑战性住户长者时，态度粗暴生硬、动作推搡毫无温情。凯茜脸上从来没有任何笑容，平日里对你视若空气、极少搭理，整天唯独只跟病区里另外几位资格同样很老的老员工扎堆抱团抱怨唠叨。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Today, at change-of-shift report, the nurse reports that Mrs. Price—a client you liked very much—has died. Kathy says loudly, 'Good. One less person I've got to toilet.' Lately, you have been thinking about doing something to address Kathy's attitude but do not know where to begin. You do not want to quit because the facility is located conveniently just down the street from where you live. What should you do?</div>
+                      <div class="clause-cn">今天交接班晨会上，主管注册护士沉痛宣布：病区里一位平日里极受大家喜爱、性格无比慈祥温和的高龄住户普赖斯太太（Mrs. Price）不幸安详离世。就在所有人肃穆哀悼的瞬间，凯茜竟当着所有交班医护的面极其冷血地大声嚷嚷道：“死了倒好！这下老娘少伺候一个拉屎撒尿的！”凯茜这一泯灭人性的残酷言行令你毛骨悚然、彻底震惊出离愤怒！近来，你一直苦苦思索必须采取行动来彻底制止凯茜这种严重违背职业伦理与人本底线的恶劣态度，却苦于不知从何切入；你绝不想辞职离开，因为这家机构离你的住处只有几分钟步行路程、地理位置极佳。作为同班同事，面对凯茜这种典型的重度职业倦怠与伦理沦丧，你究竟应当如何科学合规地处置解决？</div>
+                    </div>
+                    </div></aside>
+
+            <div class="page-anchor-marker" id="page-120">
+              <span class="marker-pill">p. 120</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-04">
+                  <h2 class="heading-en">TIME MANAGEMENT</h2>
+                  <div class="heading-cn">专业时间管理与人生优先级排序法则</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Time management, which is essential to reducing stress, is important in support work. You can use time-management strategies in all aspects of your life. If you reduce your overall stress levels, stress at work will also decrease.</p>
+                      <p class="para-cn">科学的时间管理（Time Management）是从源头上扑灭职业压力的根本法宝，更是支持工作者立足前线的核心专业技能。时间管理策略能贯穿并赋能你人生的每一个维度：只要你降低了个人生活中的整体混乱与压力，职场中的压迫感也必将随之大幅消解。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">To manage your time, you must identify your priorities. Doing so helps you stay focused on what is important to you. While you are at work, providing competent, compassionate care is a priority. To determine your priorities outside of work, ask yourself these questions: • What do I value most in life? • What gives me satisfaction? • What principles do I want to live my life by?</p>
+                      <p class="para-cn">要做到精细掌控时间，首要铁律是“精准识别你的生命优先级”（Priorities）——这能确保你的注意力始终如激光般聚焦于生命中真正重要的事情之上。在岗位执业期间，提供兼具专业胜任力与人本温度的慈悲照料，永远是压倒一切的第一绝对优先级！而在下班后的私人生活中，要想厘清自身的真实优先级，请真诚扣问自己三个核心灵魂问题：
+• 在漫长的人生旅途中，我内心深处最珍视的究竟是什么？• 究竟何种事业与体验能带给我最由衷的深层满足感？</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">You may identify a large number of priorities. Take some time to decide which ones are the most important. Assign a number to each, with 1 being the most important and 10 being the least important. Now you are ready to turn your priorities into goals.</p>
+                      <p class="para-cn">• 我立志依循何种神圣的人生原则与价值观去度过此生？你可能会罗列出极其庞大的愿望清单；请花时间静心审视，将它们严格依循重要性从 1 到 10 进行梯次编号排序（1 代表生命中不可动摇的至高优先级，10 代表权重最低项）。完成这一灵魂排序之后，你便做好了将抽象优先级转化为具体行动目标的坚实准备！</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Setting SMART Goals</h3>
+                  <div class="heading-cn">黄金目标设定法则：SMART 五大准则深度解析</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Setting goals for yourself will help you manage time and stress. Your goals should give you direction and motivate you to take action.</p>
+                      <p class="para-cn">为自己确立清晰明晰的行动目标，是击碎拖延、掌控时间与抵御压力的最强大武器。真正的目标应当如同灯塔赋予你笃定的前行方向，并源源不断激发你躬身入局的行动意志。从你的第一优先级开始逐级推进拆解，直至第十项。切记：同一时期内绝对不要确立超过 10 个以上的目标，否则你必将分散精力、彻底丧失战略专注力！每一个合格卓越的目标，必须严格百分之百符合现代管理学著名的 SMART 五大黄金法度：
+• **S (Specific) —— 具体明确**：目标绝不可大而化之。例如，笼统地说“我要减肥”根本不是合格的目标；而确立“在今年3月31日之前成功减重5公斤”，则是极其具体、能赋予你清晰聚焦方向的明确目标。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Start with your priority number 1, and work down the list to number 10. Do not set more than 10 goals, or you may lose your focus. Your goals should be SMART: Specific, Measurable, Achievable, Realistic, and Timely.</p>
+                      <p class="para-cn">\n• **M (Measurable) —— 可量化评估**：目标必须拥有清晰客观的量化标尺，让你能时刻精确监测自身是否正在取得实质性进展。上述目标包含了“5公斤”与“3月底”双重量化指针。\n• **A (Achievable) —— 可行可达成**：目标应当兼具挑战性与落地可行性。在确立目标时，必须审慎评估自身愿意且能够投入多少精力和时间成本。一个宏大目标往往需要拆解为两到三个支柱步骤（如制定详细膳食营养方案与每周三次体能训练计划）。\n• **R (Realistic) —— 现实合理**：目标必须客观考量自身所拥有的时间、物质资源与身体实际机能。例如用3个月减重5公斤极其现实合理；然而，如果你在这3个月期间恰好计划进行长达数周的远途度假，那么这一目标在此特定时期就完全脱离实际。\n• **T (Timely) —— 拥有明确截止时限**：设定铁定的目标达成截止日期能极大强化个体的承诺感与自律执行力。将大目标切分为梯次时间节点（如细化为每个月必须达成减重1.6公斤），随着每一阶段性成果的稳扎稳打落地，你将收获无比强大的自豪自信，从而被源源不断激励着向更高峰迈进！</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Respecting Diversity: Cultural Concepts of Time</h4>
+                    <div class="box-title-cn">专栏：尊重多样性——多元文化中时间观念与守时尺度的巨大差异</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">As a support worker, you must remember that some people may not value keeping strict adherence to time schedules. When working in the community, you could be scheduled to arrive in your client's home for 9:00 a.m. but then find that your client is not ready for your appointment and would like you to wait and chat until she is ready. Talk to your supervisor if adhering to the schedule is an ongoing problem with your client. In facilities, late starts could create a challenge for both workers and clients when a routine has to be followed.</div>
+                      <div class="clause-cn">作为一名受过严格训练的支持工作者，你必须深刻知晓：并非所有文化背景的人都抱持着像现代西方工业文明那样严苛精确到秒钟的机械守时观念！在社区居家上门护理中，排班表可能明文规定你必须在早晨 9:00 准时抵达案主居所；然而当你准时敲开门时，往往会发现案主甚至连晨起衣服都尚未换好，反而热情地拉着你的手邀请你先坐下来悠闲喝茶闲聊片刻。如果这种文化时间观念的错位已严重影响到后续家庭的行程排期，请及时向主管护士如实汇报以寻求协调；而在制度化长期照护机构中，某个晨间护理流程的严重拖延，则会对后续整个护理团队的作息带来连锁反应式的严峻挑战。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Planning Your Life and Your Work</h3>
+                  <div class="heading-cn">生命与职场的统筹运筹规划法则</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Well-organized people have weekly and daily plans and include their personal and professional goals in their planning. Goals are easier to achieve when time is spent planning at the start of each week. For example, every Sunday, Raj, a busy support worker who has a wife and two children, plans his week.</p>
+                      <p class="para-cn">凡是工作生活井井有条的卓越人士，无一例外都拥有严谨的周度与日度规划，并将个人与职业目标深刻融合进统筹日程之中。每周伊始提前运筹规划，目标落地的成功率将呈几何级倍增！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">He is working the evening shift this week, which means his wife must pick up the children, make dinner, and take them to after-school activities. Since Raj's wife is going to be out of town on Thursday, Raj makes a note to arrange for his sister to look after the children that day. One of Raj's goals is to build a backyard hockey rink, as he promised his children. He decides to work on the rink each day before leaving for work.</p>
+                      <p class="para-cn">让我们以拉杰（Raj）——一位身兼丈夫与两个孩子父亲的繁忙支持工作者为例：每个周日傍晚，他都会雷打不动地花半小时规划整周日程。本周他被排定上晚班，这意味着其妻子必须承担接送孩子、做晚饭与照料课外活动的重担；而得知妻子周四因公务必须出差去外地，拉杰立即周密提前备忘，协调安排自己的姐姐在周四下午协助照料孩子。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="506.78" data-end="606.82" data-title="Time Management, SMART Goals & Diversity in Time" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Raj reviews his work schedule for the week. His supervisor has asked him to coach a new support worker, which means he will be taking the new support worker on client visits. Since one of his clients may be uncomfortable with the presence of another support worker, his supervisor has asked him to call the client ahead to prepare him for the new worker. Raj makes a note to telephone this client on Monday.</p>
+                      <p class="para-cn">拉杰本周的一大私人承诺是为孩子们在后院浇筑一个简易冰球场，他果断决定每天午后离家上班前抽出固定一小时动工。随后他严谨审视本周的临床排班表：主管护士委托他带教指导一位新入职的见习支持工作者，这意味着他需要携新人共同入户家访；考虑到其中一位案主性格极度内向敏感、对陌生人的突然闯入极易产生恐慌抗拒，主管要求拉杰提前致电做好心理疏导，拉杰立即在周一早晨的记事本上郑重写下了这一致电任务。通过提前周密运筹，一切危机都在萌芽中被化解。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-121">
+              <span class="marker-pill">p. 121</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Daily planning and scheduling are important to meeting goals. Review your assignment sheet and the care plan for each client, and decide how you will approach each task.</p>
+                      <p class="para-cn">精准的日度规划与流程调度是达成目标的决胜关键。在交接班的第一时间，仔细研读今日的任务分配单（Assignment Sheet）与每位案主的最新护理计划（Care Plan），提前构思并锁定各项照护任务的执行路径。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">If you prepare ahead of time (the night before or just before your shift), you will not have to spend the valuable time you have with clients scheduling tasks. However, just because you have prepared does not mean that you will never have to change a schedule once it has been set. You must stay flexible and responsive to the needs of the client (see the Supporting Mrs. Paget: Daily Planning box).</p>
+                      <p class="para-cn">只要你提前谋篇布局（前一天晚上或接班前数分钟），你就绝无需在踏入案主病房的珍贵黄金时间里仓皇手忙脚乱地临时排程。然而必须谨记：提前做好周密计划并不意味着死守成规绝不更改！你必须时刻保持高度的敏捷弹性，以灵活的姿态随时响应案主突发的个性化身心需求（参见专栏《支持帕吉特太太：每日日程规划中的选择权赋能》）。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Use your planning and scheduling time to think about problems that might arise. Review the tasks on your list.</p>
+                      <p class="para-cn">在每日运筹排程的黄金时间里，你必须主动进行前瞻性推演，深思可能遭遇的潜在瓶颈障碍。审视任务清单，为每项操作精准预估所需耗时。要将排程水平提升至艺术境界，请对照以下六大核心推演问题进行审视：
+• 案主当前的真实身心核心诉求与至高优先级是什么？• 每项照护操作或活动具体需要消耗多少分钟？</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Plan how much time each task will take. To improve scheduling, ask yourself these questions: • What are the client's needs and priorities? • How much time will each task or activity require? • When will I do each task or activity? • Can I organize my time so that some of the tasks overlap? • Have I allowed time for the unexpected? • Is there anyone with whom I should coordinate these activities?</p>
+                      <p class="para-cn">• 我将在哪个时间窗口执行该项任务？• 我是否能巧妙统筹安排，使某些不冲突的任务实现高效协同并行（Overlap）？• 我是否预留了应对突发危机的弹性冗余缓冲时间（Buffer Time）？• 我是否需要与注册护士、物理理疗师或家属进行跨专业协同配合？</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Giving each task a time limit will help you stay focused and complete a task on time. See BOX 8.6 for ways to manage your time and stay organized. At the end of your workday, compare what you planned to do with what you actually did. Did you accomplish what you planned?</p>
+                      <p class="para-cn">为每一项具体的照护操作设定明晰的时间界限，能强力驱动你的心流保持高度聚焦，确保任务准时高质量封顶。专栏 8.6 系统总结了支持工作者保持高效条理的省时秘笈。在每日下班交班前，务必花三分钟进行“日终复盘”：将清晨的计划执行表与全天的实际落地成果进行严谨比对。你是否全部达成了既定目标？</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">If not, try to identify why. Did problems arise? Were there interruptions? Was it a poor schedule?</p>
+                      <p class="para-cn">若未能达成，务必探寻根本诱因：是现场爆发了紧急意外事故？是频繁遭遇外部无谓干扰打断？还是最初的时间规划本身脱离实际？</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Mrs. Paget: Daily Planning</h4>
+                    <div class="box-title-cn">临床个案实战：支持帕吉特太太——如何在紧凑日程中为失能长者赋能自决选择权</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Chona is a support worker in a long-term care facility. Before her morning shift begins, she reviews her assignment sheet and the care plans for each of the clients she supports. The care plan notes that Mrs. Paget, a new client, requires assistance in making decisions for herself and that all care providers should help Mrs. Paget make decisions by providing choices.</div>
+                      <div class="clause-cn">乔娜（Chona）是一家现代化长期照护机构的优秀支持工作者。在每日清晨白班开工前，她都会极其专注地研读任务分配单与管辖案主的最新护理计划。护理计划中格外醒目地标注着一条核心医嘱：新入住的帕吉特太太（Mrs. Paget）在自主自决决策方面存在轻度心理障碍，全体照护团队必须在日常实务中通过提供‘有限选择权’（Providing Choices）的方式，耐心协助并赋能帕吉特太太重塑自我决策能力。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Chona considers the choices that she could provide for Mrs. Paget during the day. She decides that she can offer Mrs. Paget two sets of clothes to wear for the day, two different items for breakfast, and two different items for lunch. As she provides morning care, Chona can familiarize Mrs. Paget with the activities that are available during the morning and offer Mrs. Paget her choices. After lunch, she can talk to her about activities available for the afternoon and again offer her choices. Planning these choices in advance will help Chona keep her day on schedule. There may be other opportunities during the day when Mrs. Paget can be given choices as situations occur. Chona will need to include in her plan time for completing flow charts and reporting to the charge nurse.</div>
+                      <div class="clause-cn">乔娜在脑海中飞速推演全天可以为老人巧妙预设的赋能选择方案。她决定在清晨协助穿衣时，从衣柜里精心挑选出两套不同风格的得体衣裳供老人自主挑选其一；在早餐配餐时提供两种营养餐食选项；在午餐时同样提供两款可口主食供其抉择。在清晨协助晨间基础洗漱期间，乔娜温和地向老人介绍院内上午开展的各类丰富活动项目，并鼓励老人自主挑选其最向往的项目；在午餐过后，她再次就下午的休闲文娱活动与老人商榷并提供自主选择。在排程中提前将这些选择权节点布局完毕，不仅绝不会拖延整体工作进度，反而使全天的照护节奏更加顺畅高效！此外，乔娜严谨地在日程表中为文书流水账记录（Flow Charts）与向主管护士进行阶段性汇报预留了充裕的时间。这正是专业人本照护与时间管理的极致融合。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-major" id="sec-05">
+                  <h2 class="heading-en">DECISION MAKING</h2>
+                  <div class="heading-cn">临床审慎决策的艺术与三大核心心法</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">As a support worker, you make numerous decisions in the course of your workday as you organize your time, make a schedule, and provide care to clients. For example, you decide: • The order in which you are going to carry out tasks • The equipment and supplies you need for each task • The amount of time to spend with each client • When a problem or an observation needs to be reported immediately • Whether you need help to complete a task • Whether you need to consult with your supervisor • Whether you will accept or refuse a delegated task.</p>
+                      <p class="para-cn">作为前线支持工作者，在每日漫长繁重的照护流水线上，你时刻都在做出至关重要的临床决策：
+• 统筹抉择执行各项复杂照护任务的先后优先级次序；
+• 精准抉择每项操作必须携带的专业器械与消耗性医护耗材；
+• 科学分配在每位案主床前驻留陪伴与操作的时间额度；
+• 敏锐决断某一突发临床异常表征究竟是否必须立即、第一时间向主管护士拉响警报；
+• 决断单人操作是否安全、是否必须立即呼叫同事协同进行双人转运；
+• 决断某一疑难情境是否必须向主管寻求专业法定指导；
+• 决断是否应当依法接受或断然拒绝某项超出自身执业范围的委派操作（Delegated Task，详见第23章）。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Skills You Need to Make Decisions</h3>
+                  <div class="heading-cn">卓越临床决策所必备的核心技能</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Do you know anyone who always seems to make the right decisions? Such people are usually decisive and calm. The following skills will help improve your decision making: • Focus.</p>
+                      <p class="para-cn">你身边是否有这样一种人，无论面临何等纷繁复杂的危急关头，似乎总能神奇地做出极其明智正确的抉择？此类卓越人士的共同特质永远是“沉着决断”（Decisive and Calm）。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="606.82" data-end="676.1" data-title="Daily Planning Questions & Decision Making" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Focus requires concentration, involvement, and commitment. Focus on the client and the task at hand to make the right decisions. Focusing includes asking questions and listening actively (FIGURE 8.2).</p>
+                      <p class="para-cn">要全面升华自身的临床决策水平，必须深度锤炼三大核心技能：
+• **战略专注力（Focus）**：极致的专注需要全神贯注的凝神、全身心的深层投入以及不可动摇的敬业承诺。唯有将全部心神如聚光镜般牢牢锁定在眼前这位受助案主与正在执行的手头任务上，你方能做出零差错的精准抉择。专注力涵盖了主动探询高质量问题、以及以极度专注的同理心进行积极倾听（图 8.2）。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-122">
+              <span class="marker-pill">p. 122</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 8.6: Tips to Save Time and Stay Organized in Order to Reduce Stress</h4>
+                    <div class="box-title-cn">专栏 8.6：实战秘笈——支持工作者节约时间、保持井井有条与击碎压力的十四条黄金准则</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">• Follow the assignment sheet or the care plan.\n• Remember the client's needs and priorities.\n• Know what tasks need to be done at a certain time.\n• Set yourself time limits; work within those limits unless a client's needs are more pressing.\n• Develop routines that work for you and for the client.\n• Allow for more time than you need when possible.\n• Remain flexible at all times.\n• Start with the tasks that must get done.\n• Before starting tasks, prepare by gathering all necessary equipment and familiarizing yourself with the task and the client.\n• Remind yourself not to get sidetracked by nonessential things.\n• Ask advice from co-workers, friends, and family on how they reduce stress and improve organization.\n• Use a calendar to note down important dates and reminders.\n• Make sure that you have the necessary equipment and supplies before you start a task.\n• Put equipment and supplies back in their proper place after the task has been completed.</div>
+                      <div class="clause-cn">• 严格依循任务分配单（Assignment Sheet）与护理计划（Care Plan）纲领行事；\n• 始终将案主的真实身心核心诉求与尊严置于至高首位；\n• 清晰掌握哪些法定关键操作必须在严格的特定时间窗口完成（如定时翻身或配合服药）；\n• 为自身每项操作确立明晰的时间界限，并在界限内高效作业——除非案主突发更为迫切的生理安危诉求；\n• 磨合摸索出一套既符合你自身高效节奏、又令案主身心完全适应舒适的固定作息流程；\n• 凡在条件允许之时，排程时务必多预留出充裕的弹性缓冲时间；\n• 时刻保持高度的敏捷机动弹性，随时准备应对突发变更；\n• 晨间永远优先锁定并动手执行那些‘必须百分之百按时完成’的刚性核心硬任务；\n• 在动手操作前，做足功课：一次性齐备全部所需专业器械耗材，并全面温习该案主的特殊禁忌习惯；\n• 保持警醒，时刻告诫自身切勿被任何枝微末节、无关紧要的琐碎琐事分散注意力；\n• 虚心向前辈同行、资深同事求教他们保持井井有条与高效减压的独家实战秘笈；\n• 善用便携日程本或电子日历，密密记录下所有关键截止节点与备忘录；\n• 在步入病房前，反复双重核验是否已一次性备齐所有毛巾、无菌敷料、换洗衣物与消毒用品；\n• 操作完毕后，必须严格遵循院感与 5S 规范，立即将所有医疗器械耗材物归原位、擦拭消毒。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Flexibility and Decisiveness in Decision Making</h3>
+                  <div class="heading-cn">决策中的敏捷弹性与当机立断</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Box 8.6 Time-Saving Tips & Problem Solving" onclick="playParagraphAudio(this)">
+                      <p class="para-en">• Flexibility. You need to be flexible and responsive. Involve clients in decisions that affect them, and be ready to adapt in response to a client's needs. Remember, each client is an individual with unique needs, which are affected by age, culture, and health status.</p>
+                      <p class="para-cn">• **敏捷弹性（Flexibility）**：你必须时刻保持随机应变的敏捷身手与敏锐响应力。凡涉及关乎案主切身利益的照护抉择，必须主动邀请案主深度参与；时刻准备根据案主当下的机能状态做出动态调整。请铭记：普天之下的每一位案主都是独一无二的生命个体，其身心需求深受年龄、文化背景与病理状态的深刻塑造。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Box 8.6 Time-Saving Tips & Problem Solving" onclick="playParagraphAudio(this)">
+                      <p class="para-en">For example, (1) Mr. Johnston, 91, lives in a facility and has no family or friends living nearby. He tells you he feels lonely. You decide to chat with him while helping him bathe; (2) Ms. Chow, 35, is recovering at home after surgery. She tells you she feels exhausted.</p>
+                      <p class="para-cn">让我们对比两个极其经典的临床案例：(1) 91岁高龄的约翰斯顿先生（Mr. Johnston）居住在养老院，膝下无儿无女举目无亲，老人向你倾诉他内心感到无边无际的孤独。你当机立断：在协助其晨间沐浴的整个流程中，充满温情地与其亲切唠家常，用温暖的话语驱散其内心的孤寂；(2) 35岁的周女士（Ms. Chow）刚经历大手术正在居家康复，她疲惫地向你哭诉全身精疲力竭。深知倾听与言语发声对于术后重症患者而言同样是极大的体力消耗，你在协助周女士沐浴的全程中保持绝对的温柔静默，动作极其轻柔利落，并在洗漱完毕后贴心地询问其是否需要拉上窗帘安静补觉——完全相同的‘协助沐浴’任务，却因为你对不同案主生命特质的敏捷洞察，而展现出截然相反、却同样登峰造极的个性化人本温情！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Box 8.6 Time-Saving Tips & Problem Solving" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Since listening and talking can be tiring, you remain quiet while helping Ms. Chow with her bath. You ask her if she would like to rest afterward, and she says yes. The same task is done differently because you responded to each client's unique needs.\n• Decisiveness. Stick to your decisions unless they are not working. Indecisiveness on your part can upset clients; they expect you to be confident and competent.\n• Learn to say no—firmly, positively, and tactfully.</p>
+                      <p class="para-cn">\n• **当机立断的决断力（Decisiveness）**：一旦深思熟虑做出了专业决策，便坚决笃定执行——除非事实证明该方案行不通。你的摇摆不定、优柔寡断会瞬间在案主心中引爆巨大的恐慌与不安全感；案主时刻渴望看到你笃定自信、技术过硬的专业形象！\n• **学会优雅而坚定地拒绝**：以坚定不移、态度正向且极富人际沟通技巧的方式（Firmly, Positively, and Tactfully），对不合理或不安全的要求果断说‘不’！</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-06">
+                  <h2 class="heading-en">PROBLEM SOLVING</h2>
+                  <div class="heading-cn">临床科学问题解决四步闭环法</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Box 8.6 Time-Saving Tips & Problem Solving" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Problem solving is a process that requires identifying and analyzing a problem, finding a solution, and devising a plan to apply that solution. Identify the Problem: You must first determine if you have a problem and what it is. Ask yourself the following questions: • Is the situation or issue affecting you, a co-worker, your supervisor, or one of your clients? • Should you be concerned about the situation? • Can you influence or contribute to a positive outcome? • Does the issue require immediate attention?</p>
+                      <p class="para-cn">科学的问题解决（Problem-Solving）是一门严谨的现代临床认知科学，涵盖四大环环相扣的核心流程：精准识别问题、深度剖析问题诱因、穷尽寻找最佳解决方案、以及周密制定落地实施方案。\n**第一步：精准识别问题（Identify the Problem）**：在动手之前，你首先必须冷静判别眼前究竟是否存在真实的问题，以及该问题的本质核心究竟是什么。请向自己提出以下四个关键判别问题：\n• 当前的突发状况或争议，是否正在切实对你自身、同事、主管护士或某位案主造成实质性负面冲击？\n• 你是否理当对此状况感到担忧？\n• 你自身的专业介入，是否能够切实影响并促成正向积极的结局？\n• 该事项是否必须立即获得紧迫干预？</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-123">
+              <span class="marker-pill">p. 123</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Consider the following two examples:\n1. Miles helps Mr. Rossi, 85, get dressed in the mornings. Most days, Mr. Rossi chooses to wear the same tattered sweater. Miles is tired of seeing it on him.</p>
+                      <p class="para-cn">请深度对比以下两则发人深省的临床经典案例：\n**案例一**：迈尔斯（Miles）每天清晨协助85岁高龄的罗西先生（Mr. Rossi）穿衣。在绝大多数日子里，罗西先生总坚持挑选同一件穿得有些磨损破旧的老毛衣。迈尔斯整天看在眼里感到十分腻烦，且明知衣柜里还整齐挂着好几件崭新的漂亮毛衣。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">He knows that Mr. Rossi has other sweaters. However, when Miles considers the above questions, he answers no to each. He knows that the sweater is clean, that Mr. Rossi enjoys wearing it, and that he has the right to choose what he wears. Miles decides that this situation is not a problem.\n2. Cheryl assists Mr. McDonald, 88, with lunch in the dining room of a long-term care facility.</p>
+                      <p class="para-cn">然而，当迈尔斯冷静对照上述四大判别问题进行灵魂自省时，他对每一个问题的回答全都是‘否’！迈尔斯深知这件破旧毛衣洗得干干净净，穿上它能带给老人无与伦比的安全感与温暖记忆，且老人依法享有决定自身着装的崇高自决权！迈尔斯据此得出英明结论：这根本不是什么客观临床问题，纯属自身的主观审美偏狭在作祟！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">He chooses tomato soup for lunch. After one spoonful, he refuses to eat. Cheryl is concerned. She knows that if Mr. McDonald does not eat, he tends to get dizzy and may fall. She knows this situation is a problem that requires her immediate attention.</p>
+                      <p class="para-cn">\n**案例二**：谢丽尔（Cheryl）在长期照护机构餐厅协助88岁的麦克唐纳先生（Mr. McDonald）共进午餐。老人在餐单上挑选了番茄浓汤；然而刚尝了一小勺，老人便紧闭双唇坚决抗拒进食。谢丽尔瞬间警觉起来：她深知老人患有严重低血糖症，若午餐热量摄入不足，午后必将突发眩晕并极易导致跌倒骨折等生命危险！谢丽尔当机立断：这绝非微不足道的琐事，而是一个必须立即获得就地处置的紧迫临床真实问题！</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Analyze the Problem & 10 Supervisor Consultation Triggers</h3>
+                  <div class="heading-cn">第二步：深度剖析问题与向主管汇报之十大法定触发线</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Once you know you have a problem, think about what kind of problem it is. Decide if it is one that you can solve on your own.</p>
+                      <p class="para-cn">一旦确认眼前确实存在真实危机，立即进入深度剖析阶段：厘清该问题的病理与伦理属性，审慎评估这是否属于你自身执业范围内有权独立处置的范畴。时刻查阅护理计划以明确工作边界。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Consult the assignment sheet or care plan to make sure you know what is expected of you. Remember to consult your supervisor when:\n• There is an emergency\n• You observe a change in the client's condition or normal functioning\n• The client becomes ill—for example, the client vomits, has diarrhea, or develops a fever\n• The client is in distress\n• You believe the client's safety is at risk\n• A problem involving medications exists\n• The client complains about their condition or care\n• The client asks you a question about their diagnosis, condition, or treatment plans\n• The client or family member asks you to do something that goes against the care plan\n• You have a conflict with a client or family member\n• A question or problem arises and you need help to deal with it.</p>
+                      <p class="para-cn">必须时刻牢记向主管护士进行法定请示汇报的【十大临床触发红线】：\n1. 现场爆发任何危及生命体征的急性紧急医疗险情；\n2. 你亲眼观察到案主的病情、意识状态或日常基础机能发生反常恶化；\n3. 案主突发急性病理性症状——如突发喷射性呕吐、严重水样腹泻或体温异常升高发热；\n4. 案主陷入呼吸困难、严重胸痛或剧烈心理惊恐悲痛等显著痛苦状态；\n5. 你确信案主所处的物理环境或行动存在坠床、跌倒等严重人身安全隐患；\n6. 暴露出任何涉及药物用药（漏服、误服、拒药或严重副反应）的疑难状况；\n7. 案主对自身的健康状况或所接受的医疗护理服务提出严厉投诉不满；\n8. 案主向你探询关于其医学疾病诊断、病理预后或重大治疗手术方案等专业问题（必须由医师或注册护士负责告知，支持工作者严禁越权诊断解答！）；\n9. 案主或其家属强烈要求你执行某项与既定护理计划完全背道而驰的操作；\n10. 你与案主或家属之间爆发无法调和的人际冲突摩擦，或遇到任何自身无力安全化解的复杂难题！</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Find a Solution & Devise a Plan</h3>
+                  <div class="heading-cn">第三步与第四步：寻找解决方案与制定富有创意的行动闭环</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Analyzing a problem involves communication. Ask the client questions about the problem, and listen attentively to the answers. Remember to pay attention to verbal as well as nonverbal messages (see the Supporting Mrs. Kao: Asking, Listening, and Observing box on page 124). Do not make assumptions about the cause of a problem. For instance, in example 2 above, when Cheryl asks Mr. McDonald why he does not want to eat, he says that he has a sore on the inside of his cheek where he bit himself the other day. She can tell by his expression that his mouth hurts. Cheryl knows that Mr. McDonald's care plan does not specify a special diet. He is able to eat anything from the available menu. She therefore decides to try solving the problem by urging him to select softer foods until his mouth heals.</p>
+                      <p class="para-cn">深度剖析问题离不开高质量的临床沟通。主动探询案主并全神贯注倾听，时刻高度审视言语背后隐藏的微表情与非言语肢体语言（参见第124页专栏《支持高太太：探询、倾听与细致观察》）；坚决切忌凭主观臆想去揣测病因！在上述案例二中，当谢丽尔蹲下身柔声询问麦克唐纳先生为何拒绝喝汤时，老人才痛苦坦承：原来他前两天不小心咬破了口腔内壁黏膜，现在溃疡剧痛难忍！谢丽尔敏锐核查其护理计划，确认老人并未被医嘱限制饮食形态；据此她敏锐意识到：酸度极高且滚烫的番茄浓汤正剧烈刺激着伤口创面！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">She should notify her supervisor of her observations, as well as report and record Mr. McDonald's complaints. She should also notify her supervisor if his discomfort increases.\n\nFind a Solution: Think of as many solutions as you can. Decide which is the most practical and helpful, but always be sure that it is safe. Try the solution to see if it works. For example, Cheryl thinks that the tomato soup may be too hot and acidic for Mr. McDonald's sore mouth. She suggests he try a cooler, blander meal. He chooses macaroni and cheese. He is able to eat it without discomfort. Cheryl later reports to her supervisor what she did to try to remedy Mr. McDonald's sore in his mouth and whether it was effective. She also needs to document this information in his chart (see Chapter 26).\n\nDevise a Plan: The planning part of the problem-solving process may involve creativity.</p>
+                      <p class="para-cn">\n\n**第三步：寻找最佳解决方案（Find a Solution）**：开动脑筋构思多元预案，遴选出最务实、最具帮扶价值且绝对百分之百安全的方案予以实施！谢丽尔温和建议老人尝试一份温凉清淡的餐食，老人欣然挑选了温热软糯的通心粉配芝士（Macaroni and Cheese），果然顺利无痛进食完毕。谢丽尔随后向主管汇报了口腔溃疡观察与餐食替代措施，并在护理病历中严谨记录。\n\n**第四步：制定富有创意的行动闭环（Devise a Plan）**：解决复杂的临床困局往往需要饱含同理心的前瞻创意！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="676.1" data-end="790.75" data-title="Problem-Solving Steps & 10 Supervisor Triggers" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Do not be afraid to try a plan, as long as it is safe. Consider Ruth's creative solution to a problem: Ruth's client, Mrs. Klassen, is in the early stages of Alzheimer's disease. Mrs. Klassen is upset because she cannot remember her grandson's name. He will be visiting the next day, and she wants to be able to call him by his name. Ruth has the grandson's name listed on the care plan. She then gently suggests a way to help Mrs. Klassen remember it. They find a picture of her grandson and write his name on it. Ruth then tapes the picture to the wall by the phone. Mrs. Klassen will have the picture handy when her grandson visits. Ruth records this event on the task sheet. At her next visit with Mrs. Klassen, she asks her if their solution worked (see the Supporting Mrs. Samuels: Creative Solutions box on page 124 for another example).</p>
+                      <p class="para-cn">只要确保安全无害，请勇敢尝试富有人性温度的创新方案。让我们赞赏支持工作者鲁思（Ruth）的非凡创意：她的案主克拉森太太（Mrs. Klassen）正处于阿尔茨海默病早期，老人因突然想不起亲孙子的名字而悲痛啼哭——孙子明天就要登门探视，老人极度渴望能在开门瞬间亲切喊出孙子的乳名！鲁思查阅护理计划找到了孙子的姓名，随后极具创意地找到一张孙子的清晰近照，用大号粗笔工整写上名字，小心翼翼地用胶带张贴在床头电话旁的醒目墙壁上！第二天孙子进门时，老人一抬头便能清晰看见照片与名字，尊严得以完美保全！</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-124">
+              <span class="marker-pill">p. 124</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Mrs. Kao: Asking, Listening, and Observing</h4>
+                    <div class="box-title-cn">临床实战专栏：支持高太太——探询、倾听与细致观察在识别隐性疼痛中的极致运用</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Emma, a support worker on a surgical ward in a hospital, is assigned to help Mrs. Kao do range-of-motion (ROM) exercises after her surgery. When Mrs. Kao refuses, Emma asks her why she does not want to do the exercises. Mrs. Kao says that her legs ache and she does not feel like moving them. Emma tries to encourage Mrs. Kao and asks her if the nurse explained why the exercises are important. Mrs. Kao says she knows why the exercises are important. Emma suggests that Mrs. Kao start by moving her toes, but when she does move her toes, Emma sees her grimace. She asks Mrs. Kao if she is in pain, and Mrs. Kao says, 'No, I'm not in pain.'\n\nEmma realizes that there is nothing more that she can do or say. She has asked Mrs. Kao the right questions, listened to her responses, and observed her behaviour. It is not her job to assess or diagnose Mrs. Kao's problem. So she informs her supervisor of her conversation with Mrs. Kao and reports that Mrs. Kao grimaced when she moved her toes. She is careful to quote Mrs. Kao's exact words.</div>
+                      <div class="clause-cn">艾玛（Emma）是医院外科手术综合病房的一名专职支持工作者，今天负责协助术后卧床的高太太（Mrs. Kao）进行双下肢关节活动度康复训练（ROM Exercises）。当高太太紧皱眉头表示坚决抗拒时，艾玛没有强制蛮干，而是蹲下身温和询问老人究竟因何抗拒。高太太推脱说双腿发酸浑身乏力不想动弹；艾玛耐心地鼓励她并询问护士是否已向其宣教过术后及早活动对预防下肢深静脉血栓的至关重要性，高太太点头表示完全明白。艾玛随后退一步折中提议：‘那我们先轻轻动一动脚趾头好吗？’然而就在老人勉强挪动脚趾的瞬间，艾玛敏锐地捕捉到老人的面部肌肉瞬间因剧痛而剧烈抽搐痛苦扭曲（Grimace）！艾玛关切地探询：‘高太太，您是不是伤口在剧烈疼痛？’老人出于文化上的隐忍克制，却依然强颜欢笑坚称：‘不，我一点都不痛。’\n\n艾玛瞬间深刻领悟：作为支持工作者，她已经把探询、倾听与体态观察做到了极致；她绝不可强行逼迫老人继续训练，而给老人的疼痛下病理评估诊断更超越了其法定执业范围！艾玛立即妥善安置好老人，快步走向护士站向主管护士据实汇报整段对话，并重点呈报了老人活动脚趾时面部剧烈痛苦扭曲的非言语体征，同时一字不差地准确引述了高太太‘嘴上坚称不痛’的原始原话。负责护士立即进屋评估，果然发现老人术后镇痛泵发生导管堵塞，及时排除了凶险隐患！</div>
+                    </div>
+                    </div></aside>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Mrs. Samuels: Creative Solutions</h4>
+                    <div class="box-title-cn">临床个案实战：支持塞缪尔斯太太——在重度绝症母职受挫中运用人本创新的赋能方案</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Josephine's client, Mrs. Samuels, 34, is a single mother who is receiving chemotherapy for ovarian cancer. Mrs. Samuels has three boys, aged 9 years, 5 years, and 20 months. Mrs. Samuels tells Josephine that ever since she became ill she does not feel that she is doing enough for her children.\n\nJosephine asks Mrs. Samuels what sorts of things she misses doing for her children. Mrs. Samuels says that she wishes she could dress her two little boys in the morning. She also regrets not being able to drive her older boy to after-school activities. Josephine decides to look for opportunities to consult and involve Mrs. Samuels in the care of her children. As the 5-year-old gets ready for school the next morning, Josephine suggests to him that he ask his mother to zip up his jacket and help him put on his mittens and hat. Later, she asks Mrs. Samuels what she would like the baby to wear that day.</div>
+                      <div class="clause-cn">支持工作者约瑟芬（Josephine）的社区居家服务对象塞缪尔斯太太（Mrs. Samuels）年仅34岁，是一位正在接受严峻卵巢癌术后全身大剂量化疗的年轻单亲母亲，独自抚养三个年幼的儿子（9岁、5岁和刚满20个月的蹒跚幼童）。在一次入户探访中，被化疗剧烈呕吐与骨髓抑制折磨得骨瘦如柴的母亲失声痛哭：自从病倒以来，她感到自己彻底成了一个废人，再也无法像过去那样为孩子们尽到一个合格母亲的天职。\n\n约瑟芬满怀同理心地坐在年轻母亲身旁，柔声探询她眼下内心最渴望、最怀念为孩子们亲手做的是哪些事情。年轻母亲哽咽着回答：她最怀念每天清晨亲手为两个年幼的孩子穿衣戴帽，并深深懊悔自身现在虚弱得再也无法开车接送大儿子参加课外活动。富有爱心与专业智慧的约瑟芬当机立断：必须在日常家政照护中创造一切可能的机会，让患癌母亲重新深度介入对骨肉的照料！第二天早晨5岁二儿子准备上学时，约瑟芬没有代劳穿衣，而是拉着孩子的小手走到母亲床前，轻声鼓励孩子让妈妈亲手帮他拉上夹克拉链并戴好棉手套；随后，约瑟芬将20个月大的幼童抱到床边，真诚请示母亲今天希望为宝宝挑选哪一件小睡衣。看着孩子在自己怀中撒娇、亲手拉上那条拉链，年轻母亲眼中重新泛起了久违的生命光芒！这种富有创意的赋能照护，正是 DIPPS 人本关怀的至高境界。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-major" id="sec-07">
+                  <h2 class="heading-en">DEALING WITH CONFLICT</h2>
+                  <div class="heading-cn">职场与医患冲突化解的黄金法则</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Supporting Mrs. Kao, Mrs. Samuels & Dealing With Conflict" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Some problems can be resolved at once, but others take longer. Interpersonal problems, which are a common cause of stress, may take weeks to solve. People bring their own values, attitudes, opinions, experiences, and expectations to the work setting.</p>
+                      <p class="para-cn">在医疗体系中，某些机械性故障可以立竿见影予以排除，然而涉及人际沟通与心理摩擦的深层矛盾，往往需要耗费数周乃至数月方能彻底化解。来自不同文化背景的人们，必然携带着各自固有的价值观、处世哲学、偏见习惯与职业期待走入共同的职场；碰撞与分歧在所难免，误解、争执甚至群体动荡便应运而生。职场冲突往往围绕极其具体的日常现实矛盾爆发——例如排班倒班不均、突发请假缺勤、工作量分配不公以及照护质量的彼此挑剔等。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Supporting Mrs. Kao, Mrs. Samuels & Dealing With Conflict" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Differences often lead to conflict, and disagreements, misunderstandings, arguments, and unrest can occur. Conflicts may arise over issues or events—for example, work schedules, absences, and the amount and quality of work performed. The problems must be worked out to avoid unkind words or actions.</p>
+                      <p class="para-cn">矛盾必须以极其专业克制的姿态正面迎击化解，坚决杜绝任何恶言相向或报复性怠工！一旦职场人际环境恶化沦为充满敌意的战场，最终沦为受害者的一定是无辜脆弱的受助案主！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Supporting Mrs. Kao, Mrs. Samuels & Dealing With Conflict" onclick="playParagraphAudio(this)">
+                      <p class="para-en">When the work environment becomes unpleasant, care of clients is affected. You may occasionally experience conflict with clients or their families or with your co-workers or supervisors. In dealing with any conflict, remember that caring for the client's needs is always your first priority. It is important for you to identify your usual response to conflict: • Do you wait and avoid dealing with the problem, hoping it will go away? • Are you agreeable and nonassertive even at the expense of your personal work ethics? • Do you feel you must win at any cost?</p>
+                      <p class="para-cn">在漫长的执业生涯中，你或多或少必将直面与案主、家属、同事或主管的各种摩擦；请时刻牢记一条钢铁法则：在任何冲突风暴中，捍卫受助案主的核心身心安全与需求永远是第一绝对优先级！首先，请诚实检视自身面对冲突时的潜意识本能反应风格：\n• 你是否习惯于当鸵鸟消极拖延回避，盲目幻想着矛盾会自行烟消云散？\n• 你是否毫无原则地一味妥协退让，甚至不惜践踏自身的职业操守以维持表面的虚假和谐？\n• 还是你骨子里极具攻击侵略性，固执地认定自己必须不惜一切代价在这场争执中彻底‘战胜并压垮对方’？</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-125">
+              <span class="marker-pill">p. 125</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Conflict With Clients, Families, Co-workers & Diversity" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Remember that clients and family members can respond differently to conflict. In a conflict situation, you need to step back and think about how you, your client, or a client's family member is responding to the conflict and talk to your supervisor about how to resolve it.\n\nConflict between you and a client could occur because the client's behaviour is challenging. For example, Mrs. Jones had been out to a doctor's appointment in the morning and is refusing to eat her lunch. You know it is important that she eat something. If you do not recognize that Mrs. Jones is too tired and you persist in trying to get her to eat, the conflict could escalate. Perhaps you should allow Mrs. Jones to rest first and eat later, and you should report this decision to your supervisor.</p>
+                      <p class="para-cn">必须深刻洞察：受助案主与其家属在面对冲突危机时的心理应激反应千差万别。一旦现场爆发冲突火苗，你必须强制自身后退一步冷静抽离，以审慎的客观目光审视彼此的应激机制，并主动向主管护士寻求化解指引。\n\n**与案主之间的冲突化解**：此类冲突往往因案主呈现出的高挑战性行为而诱发。例如，高龄的琼斯太太（Mrs. Jones）上午刚刚在医院经历了一场极其折腾的漫长专科就诊，回到机构时精疲力竭、坚决拒绝咽下任何午餐。你深知老人必须摄入热量维持血糖；然而，如果你缺乏临床共情、未能洞察到老人此时此刻大脑神经正处于极度疲劳衰竭状态，而是一味机械地逼迫老人赶紧吃，冲突必将瞬间失控升级！</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Conflict With Clients, Families, Co-workers & Diversity" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Report all conflicts with clients to your supervisor, including ones that you have resolved. You can prevent conflict from escalating by remaining calm and respectful, understanding the client's needs and feelings, and recognizing the reason for the client's behaviour.\n\nConflict can also occur between you and the client's family members. It is important to remember that in most cases, they are only trying to ensure the best care for their family member who is ill. The conflict usually occurs because of a failure to understand the nursing care plan, the reasons for a change in the client's condition or treatment, or the policies of the facility or agency. You should listen to the family's concerns in a calm, nonjudgemental way. If your explanation does not satisfy them, contact your supervisor to ensure that the situation does not worsen. Even if you have made the situation better, you must still report the family members' concerns to your supervisor.\n\nConflict between co-workers can have a negative effect on the care of clients.</p>
+                      <p class="para-cn">最明智的专业决断是：顺应老人的生理诉求，协助老人先行安睡卧床小憩一小时，待其体力恢复后再温热饭菜端到床前，并将这一灵活调整如实向主管汇报。支持工作者必须牢记一条职业纪律：与案主爆发的一切冲突——即便你凭借高超技能已在现场完美平息化解——也必须全部毫无保留地向主管护士进行法定汇报！\n\n**与案居家属之间的冲突化解**：必须时刻体恤：在绝大多数情况下，家属之所以言辞激烈甚至挑剔找茬，背后全是对其重病亲属刻骨铭心的深情与极度恐慌！家属的冲突摩擦往往源自对复杂护理计划的技术性误解、对案主病情急性恶化诱因的认知盲区、或是对机构繁琐规章制度的不解。面对情绪激动的家属，你必须以极其沉稳、克制且彻底免除道德审判的姿态专注倾听；如果你的现场专业解释未能平息家属的疑虑，立即请出主管护士介入沟通以防矛盾激化。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Conflict With Clients, Families, Co-workers & Diversity" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Unresolved conflict causes stress and hinders communication and teamwork. To some extent, such conflict is unavoidable since you are not always going to agree with your supervisors or team members. Applying some of the principles outlined in BOX 8.7 can help you resolve conflicts. You do not need to report conflicts with co-workers if they have been resolved. However, if you cannot resolve a conflict, discuss it with your supervisor. Communication and work ethics are essential in preventing and resolving conflicts. Identify and solve problems before they become major issues.</p>
+                      <p class="para-cn">哪怕你已经凭真诚成功化解了家属的心结，依然必须在交接班时将家属的所有关切顾虑向主管严谨建档汇报。\n\n**同仁同事之间的职场冲突化解**：同事之间的内耗与冷战，是对临床照料质量最致命的慢性毒药！未解的矛盾不仅摧毁个人身心健康，更彻底瘫痪了团队跨专业协作。既然在工作中观点分歧在所难免，全面践行专栏 8.7 的冲突化解十二法则便是破局之道。在职场伦理上，如果你与同事之间的业务摩擦已通过坦诚私下沟通达成了彻底和解，你无需向上级多此一举汇报；然而，一旦双方沟通破裂、矛盾陷入僵局，必须立即向主管护士寻求仲裁调解。在重大危机爆发之前掐灭火苗，是顶级医护团队的职业修养。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Respecting Diversity: Different People Deal With Conflict in Different Ways</h4>
+                    <div class="box-title-cn">专栏：尊重多样性——多元文化背景下应对人际冲突的处理风格与沟通差异</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Differences in communicating may be influenced by a person's culture, an individual's discomfort in dealing with conflict, or the way the person's family dealt with conflict. Some people value an indirect method of communication for reasons of face-saving, harmony, or long-term gains versus short-term gains.\n\nAt all times, when dealing with clients, families, co-workers, and supervisors, keep the following in mind:\n• Depending on the culture, family, or specific situation, some people may simply deny that a problem exists (or may downplay the problem).\n• Taking action could cause displeasure, so some people may choose not to address the conflict.\n• Some may choose to blame others for the problem.\n• Some people may not respond verbally at all.\n\nTalk to your supervisor, who may have more knowledge of the background of your client or co-worker and may provide information and guidance.</div>
+                      <div class="clause-cn">面对人际冲突时的应对举止，深受一个人原生家庭的处事烙印、深层文化传统以及自身对冲突场面的恐惧焦虑程度所左右。在许多非西方传统文化（如东亚、东南亚及中东文化）中，人们极度推崇‘迂回委婉的间接沟通’（Indirect Method of Communication）——旨在维护彼此的体面与尊严（Face-Saving）、捍卫群体的表面大局和谐，并注重长远人际生态而非争一日之短长。\n\n在日常与案主、家属、同事及各级主管打交道时，请时刻谨记以下跨文化冲突应对四大陆地特征：\n• 受特定文化传统熏陶或家庭潜移默化影响，某些群体在面对严重争端时，第一反应往往是本能地彻底否认危机的存在（或极力轻描淡写将其粉饰太平）；\n• 出于担心公开挑明矛盾会彻底撕破脸皮引来人际灾难，许多人宁可选择打落牙齿和血吞、也绝不主动正视或化解冲突；\n• 另一些群体在遭遇受挫时，本能的防御机制是气急败坏地将所有过错全部推诿甩锅给他人；\n• 还有许多文化群体在面对激烈指责时，会选择完全彻底的冷暴力沉默不语！\n遇到此类跨文化沟通僵局时，及时向主管护士请教——主管往往拥有更为深厚多元的个案文化背景知识，能为你提供极具针对性的破局指引。</div>
+                    </div>
+                    </div></aside>
+
+            <div class="page-anchor-marker" id="page-126">
+              <span class="marker-pill">p. 126</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 8.7: Managing Conflict (12 Core Principles)</h4>
+                    <div class="box-title-cn">专栏 8.7：现代人际沟通——有效化解人际冲突的十二项专业黄金法则</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">• Approach the person with whom you have a conflict, and ask to talk with them privately.\n• Be polite and professional in your approach.\n• Agree on a time and place to talk.\n• Talk in a private setting. Others should not see or hear you and another person having what might seem like an argument.\n• Explain the problem and what is bothering you. Give facts, and describe specific behaviours. Focus on the problem, not on the person. For example, say, 'I need to know when you cannot help me so that I can make other plans.' Avoid criticizing the person—for example, saying, 'You are always late and never call to let me know.'\n• Listen to the person's response. Do not interrupt.\n• Identify ways to resolve the problem. Offer your own thoughts, and ask for the other person's ideas.\n• Schedule a date and a time to review the situation.\n• Thank the person for meeting with you.\n• Implement the solutions.\n• Review the situation, as needed.\n• If you are unable to resolve the conflict, ask your supervisor for some time to talk privately. Explain the situation, and ask for advice in solving the problem. Give facts and specific examples.</div>
+                      <div class="clause-cn">1. 主动走向与你存在分歧争执的当事人，以从容的姿态礼貌邀请对方进行一次私下当面沟通；\n2. 在整个接触沟通全程中，时刻保持极致的礼貌、克制与高度专业职业素养；\n3. 双方共同商定一个彼此均感到从容无压力的沟通时间与安静地点；\n4. 坚决必须在绝对私密隔音的环境中闭门交谈！绝对严禁在走廊、护士站或案主面前爆发任何在外人看来疑似激烈争吵的场面；\n5. 清晰明确地阐明困扰你的核心症结与客观事实，详尽描述具体的客观行为事实！**【至高核心法则：对事不对人，聚焦问题本身而非攻击人格！】**例如应当专业地表达：‘我需要提前明确知晓你何时无法协助我，以便我能及时调整排程寻求其他备选预案。’坚决杜绝进行人身攻击或贴道德标签——例如绝不可指着对方鼻子斥责：‘你这个人总是自私迟到，从来都不提前打电话通知我！’\n6. 全神贯注倾听对方的完整辩解与诉求，在对方陈述完毕前绝对严禁中途粗暴打断！\n7. 共同头脑风暴探讨化解僵局的多元预案：主动坦诚贡献你的建设性构想，并诚恳征求对方的创新破局思路；\n8. 双方明确敲定一个后续共同复盘评估解决方案落地效果的具体日期与时限；\n9. 在会谈结束时，由衷感谢对方拨冗参会、坦诚交流；\n10. 双方严格恪守约定，一丝不苟将达成的共识方案付诸临床实操；\n11. 根据既定时限节点，双方再次复盘检视争议是否已彻底根除；\n12. 若双方尽最大努力仍陷入无法调和的死胡同，主动向主管护士正式预约一次私密汇报会谈：呈报全部客观事实与第一手具体案例，虚心恳请主管介入裁决指引。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Student / Clinical Scenario: Managing an Academic Conflict</h3>
+                  <div class="heading-cn">学员实战场景模拟：面对重大学业成绩争议时的专业化解步骤</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Box 8.7 Managing Conflict & Grade Dispute Scenario" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Scenario: Your teacher has just handed back a major assignment, and you do not understand why you have received such a low mark. You face the choice of becoming very upset, complaining to other students about the teacher, becoming discouraged and dropping out of the program, or managing this conflict.</p>
+                      <p class="para-cn">【经典实战模拟案例】：专业任课教授刚刚发还了一份权重极高的核心学业期末大作业，当你翻开卷面时瞬间惊呆了——你完全无法理解自己为何会得到如此残酷的低分！此时此刻，你面临着四种截然不同的人生抉择：是当场失控暴怒？是在背后向其他同学恶毒诋毁攻击教授？</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="790.75" data-end="908.16" data-title="Box 8.7 Managing Conflict & Grade Dispute Scenario" onclick="playParagraphAudio(this)">
+                      <p class="para-en">To manage this conflict, you should do the following: • Ask to talk privately with the teacher. • Set a time and private place to talk. • Explain the problem, and ask the teacher to review the assignment with you so that you can understand where you made errors or did not meet the required standards. • Listen carefully to the teacher's explanation. • Calmly explain why you feel your mark should be higher. • Offer your ideas on how to resolve the problem, and ask for the teacher's ideas. • Set a time to review the situation. Allow 10 days for a response. • Thank the teacher for meeting with you. • Implement the solution you have arrived at.</p>
+                      <p class="para-cn">是一蹶不振彻底灰心丧气申请退学？还是以一名成熟专业医护精英的姿态，全面依据冲突化解准则化解危机？明智的执业路径必须依循以下专业规范闭环展开：\n• 主动向任课教师提出私下单独交流的诚恳请求；\n• 共同约定一个双方不被打扰的安静私密办公室与时间窗口；\n• 礼貌呈明你的困惑，恳请教授对照评分量规（Rubric）逐条为你复盘解析作业，以便你彻底搞清自己究竟在哪些核心知识点上存在严重疏漏或未达临床行业法定标准；\n• 极其专注、虚心地聆听教授的每一条权威点评与剖析指引；\n• 在全面听取教授意见后，极其冷静、摆出文献论据详尽阐明你认为特定评分点值得商榷上调的客观学术理由；\n• 主动提出你认为兼顾学术标准与补救弥补的建设性方案（如申请对争议章节重写提交补充论证），并真诚征询教授的裁决指导；\n• 敲定最终复盘结果的正式通知时限（通常给予教务评审团队大约 10 个工作日的处理周期）；\n• 庄重感谢教授拨冗悉心指导与对话；\n• 彻底摒弃情绪内耗，百分之百严格落实最终商定的补救解决方案！</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-127">
+              <span class="marker-pill">p. 127</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-08">
+                  <h2 class="heading-en">CHAPTER REVIEW</h2>
+                  <div class="heading-cn">本章复习、核心知识要点与审辩思维修炼</div>
+                </div>
+                
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">KEY POINTS</h3>
+                  <div class="heading-cn">本章核心专业知识点归纳</div>
+                </div>
+                <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Stress is the emotional, behavioural, or physical response to an event or situation.</strong></div>
+                      <div class="item-cn">压力（Stress）是个体在面对外在特定事件或处境刺激时，所爆发出的情绪、行为或躯体生理机能的综合应激反应。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Stress can affect all aspects of a person's life, including physical, emotional, cognitive, social, and spiritual aspects.</strong></div>
+                      <div class="item-cn">压力深刻冲击着人类生命的所有维度，涵盖身体生理、心理情绪、认知思维、人际社交与灵性精神五大基石。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• As a support worker, you need to recognize the signs of stress in yourself, your clients, and their families.</strong></div>
+                      <div class="item-cn">作为支持工作者，你必须具备极高的警觉性，时刻敏锐洞察自身、受助案主及其家属身上所流露出的压力警讯。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Some common stressors affect us all: change, pressure, lack of control, conflict, school, and daily frustrations.</strong></div>
+                      <div class="item-cn">深刻影响现代人的核心普适性压力源包括：生活环境变迁、情绪重压、失控感、人际冲突摩擦、学业负荷以及日常琐事挫折。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Ways to manage stress include developing self-awareness, taking care of one's own needs, thinking positively, asserting oneself, asking others for help and support, practising calming exercises, and learning to accept the things that cannot be changed.</strong></div>
+                      <div class="item-cn">战胜职业压力的黄金心法包括：培养深刻的自我觉察、捍卫自身健康刚需、保持积极乐观认知、坚定维护自身边界、勇敢组建互助支持网络、勤练腹式深呼吸舒缓技巧、并坦然接纳不可改变的客观现实。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• We all have defence mechanisms to deal with stress (see Chapters 9 and 37).</strong></div>
+                      <div class="item-cn">人类潜意识中普遍存在着抵御心理重压的本能心理防御机制（详见第9章与第37章）。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Setting SMART goals helps with managing time and stress. Goals should be Specific, Measurable, Achievable, Realistic, and Timely.</strong></div>
+                      <div class="item-cn">确立清晰明晰的 SMART 目标是化解时间危机与压力的强大法宝；目标必须具备明确性、可衡量性、可达成性、现实性与时效性。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Support workers make many decisions each day so must be focused, flexible, and decisive.</strong></div>
+                      <div class="item-cn">支持工作者每天身处多任务临床火线，必须锤炼出高度的战略专注力、敏捷应变弹性以及当机立断的强大决断魄力。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• As a support worker, you will need to be able to identify problems that you can solve yourself and ones you need your supervisor's help to solve. When faced with a problem, identify the problem, analyze the problem, find a solution, and then devise a plan.</strong></div>
+                      <div class="item-cn">在前线实务中，必须清晰界定哪些问题属于自身权限内可独立解决的范畴，哪些必须坚决上报主管协助排险。面对疑难困局，坚决落实‘识别问题、剖析原因、寻找对策、制定方案’四步闭环法。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Conflict can occur between you and your co-workers, clients, or clients' families or within your own family. You need to be aware of how to deal with conflict in any of these situations.</strong></div>
+                      <div class="item-cn">冲突摩擦随时可能爆发于你与同仁、案主、家属甚至原生家庭之间；掌握并践行对事不对人的专业化解法则，是保障临床医疗安全与职业幸福感的最强护盾。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">CRITICAL THINKING IN PRACTICE</h3>
+                  <div class="heading-cn">临床审辩思维修炼实操案例（卫生间陪护 vs 走廊轮椅报警器骤响）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="908.16" data-end="1061.86" data-title="Chapter Review, Critical Thinking (Chair Alarm) & Quiz Part 1" onclick="playParagraphAudio(this)">
+                      <p class="para-en">You are assisting a resident in the bathroom. The resident is not to be left alone while in the bathroom. You hear another resident's chair alarm sound in the hallway outside the door. What will you do? If the chair alarm sounds repeatedly, how can this affect your job satisfaction?</p>
+                      <p class="para-cn">【极其惊心动魄的高难度临床两难决策模拟】：你正在卫生间内专心协助一位高跌倒风险的高龄住院住户如厕。根据该案主的专属护理计划与安全防范铁律：**该长者在卫生间期间绝对、严禁脱离视线独留一人（Never Left Alone）！**就在此时，卫生间门外的走廊通道上突然骤然刺耳地尖叫起另一位患有重度认知障碍长者的防跌倒轮椅离座警报器（Chair Alarm，详见第20章）！警报声撕心裂肺、预示着门外那位长者正在试图挣扎站起且随时面临致命坠地骨折！面对这千钧一发的两难伦理危机，你应当如何做出绝对零差错的精准决策与行动？如果这种走廊警报器在整班执业期间频繁反复刺耳骤响，将对你的职业心理健康与工作满意度造成何等剧烈的负面冲击？</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-128">
+              <span class="marker-pill">p. 128</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="8" data-start="908.16" data-end="1061.86" data-title="Quiz Part 2 & Online Resources" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Review questions for Chapter 8 are fully compiled into the independent practice bank, aligned with the Ontario Support Worker certification examination standards.</p>
+                      <p class="para-cn">第八章全真自测试题已全部独立收录于章末全真自测复习题库中，严格对标安省 PSW 执业资格认证考纲标准。</p>
+                    </article>
+                    
+                <div class="editorial-footer-url">
+                  <span class="efu-icon">🌐</span>
+                  <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
+                  <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+                </div>
+                
+    </div>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch8_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+      } else {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
