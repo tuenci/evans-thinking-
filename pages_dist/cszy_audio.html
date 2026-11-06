@@ -178,14 +178,6 @@
       align-items: start;
     }
 
-    @media (max-width: 960px) {
-      .app-container {
-        grid-template-columns: 1fr;
-        padding-top: 74px;
-        gap: 24px;
-      }
-    }
-
     /* ========================================================
        LEFT COLUMN: PLAYER HERO CARD
        ======================================================== */
@@ -194,10 +186,35 @@
       top: 76px;
     }
 
-    @media (max-width: 960px) {
+    /* Responsive Adaptation for Tablet/Phone Portrait & Screens <= 980px */
+    @media screen and (orientation: portrait), screen and (max-width: 980px) {
+      .app-container {
+        grid-template-columns: 1fr;
+        padding-top: 76px;
+        gap: 24px;
+        max-width: 780px;
+        margin: 0 auto;
+      }
+
       .player-column {
         position: relative;
         top: 0;
+        width: 100%;
+      }
+
+      .player-card {
+        padding: 28px 24px 24px;
+        border-radius: 24px;
+      }
+
+      .transcript-card {
+        min-height: auto;
+        padding: 26px 24px;
+        border-radius: 24px;
+      }
+
+      .transcript-body {
+        max-height: 58vh;
       }
     }
 

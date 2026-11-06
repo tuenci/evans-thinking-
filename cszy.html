@@ -462,6 +462,69 @@
   }
 
   /* Top Floating Capsule Toolbar */
+  
+  /* Segmented Control for View Modes (Bilingual / Chinese / English) */
+  .view-segmented-control {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 9999px;
+    padding: 2px;
+    gap: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  body.theme-dark .view-segmented-control {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  body.theme-sepia .view-segmented-control {
+    background: rgba(126, 112, 96, 0.1);
+    border-color: rgba(126, 112, 96, 0.18);
+  }
+
+  .seg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary, #555);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    outline: none;
+    line-height: 1.2;
+  }
+  .seg-btn:hover {
+    color: var(--text-primary, #000);
+  }
+  .seg-btn.active {
+    background: #FFFFFF;
+    color: #C98A2C;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+  body.theme-dark .seg-btn {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  body.theme-dark .seg-btn:hover {
+    color: #FFFFFF;
+  }
+  body.theme-dark .seg-btn.active {
+    background: #3A3A3C;
+    color: #E2B874;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  }
+  body.theme-sepia .seg-btn.active {
+    background: #F4ECDF;
+    color: #8C6527;
+    box-shadow: 0 2px 6px rgba(126, 112, 96, 0.18);
+  }
+
   .top-toolbar {
     position: fixed;
     top: 14px;
@@ -481,12 +544,138 @@
     transform: translateY(0);
     opacity: 1;
   }
-  body.theme-dark .top-toolbar {
+  body.theme-dark 
+  /* Segmented Control for View Modes (Bilingual / Chinese / English) */
+  .view-segmented-control {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 9999px;
+    padding: 2px;
+    gap: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  body.theme-dark .view-segmented-control {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  body.theme-sepia .view-segmented-control {
+    background: rgba(126, 112, 96, 0.1);
+    border-color: rgba(126, 112, 96, 0.18);
+  }
+
+  .seg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary, #555);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    outline: none;
+    line-height: 1.2;
+  }
+  .seg-btn:hover {
+    color: var(--text-primary, #000);
+  }
+  .seg-btn.active {
+    background: #FFFFFF;
+    color: #C98A2C;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+  body.theme-dark .seg-btn {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  body.theme-dark .seg-btn:hover {
+    color: #FFFFFF;
+  }
+  body.theme-dark .seg-btn.active {
+    background: #3A3A3C;
+    color: #E2B874;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  }
+  body.theme-sepia .seg-btn.active {
+    background: #F4ECDF;
+    color: #8C6527;
+    box-shadow: 0 2px 6px rgba(126, 112, 96, 0.18);
+  }
+
+  .top-toolbar {
     background: rgba(30, 30, 32, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
   }
-  body.theme-sepia .top-toolbar {
+  body.theme-sepia 
+  /* Segmented Control for View Modes (Bilingual / Chinese / English) */
+  .view-segmented-control {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 9999px;
+    padding: 2px;
+    gap: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  body.theme-dark .view-segmented-control {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  body.theme-sepia .view-segmented-control {
+    background: rgba(126, 112, 96, 0.1);
+    border-color: rgba(126, 112, 96, 0.18);
+  }
+
+  .seg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary, #555);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    outline: none;
+    line-height: 1.2;
+  }
+  .seg-btn:hover {
+    color: var(--text-primary, #000);
+  }
+  .seg-btn.active {
+    background: #FFFFFF;
+    color: #C98A2C;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+  body.theme-dark .seg-btn {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  body.theme-dark .seg-btn:hover {
+    color: #FFFFFF;
+  }
+  body.theme-dark .seg-btn.active {
+    background: #3A3A3C;
+    color: #E2B874;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  }
+  body.theme-sepia .seg-btn.active {
+    background: #F4ECDF;
+    color: #8C6527;
+    box-shadow: 0 2px 6px rgba(126, 112, 96, 0.18);
+  }
+
+  .top-toolbar {
     background: rgba(244, 236, 223, 0.9);
     border: 1px solid rgba(126, 112, 96, 0.2);
   }
@@ -1184,7 +1373,70 @@
   }
 
   @media (max-width: 768px) {
-    .top-toolbar {
+    
+  /* Segmented Control for View Modes (Bilingual / Chinese / English) */
+  .view-segmented-control {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 9999px;
+    padding: 2px;
+    gap: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  body.theme-dark .view-segmented-control {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  body.theme-sepia .view-segmented-control {
+    background: rgba(126, 112, 96, 0.1);
+    border-color: rgba(126, 112, 96, 0.18);
+  }
+
+  .seg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary, #555);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    outline: none;
+    line-height: 1.2;
+  }
+  .seg-btn:hover {
+    color: var(--text-primary, #000);
+  }
+  .seg-btn.active {
+    background: #FFFFFF;
+    color: #C98A2C;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+  body.theme-dark .seg-btn {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  body.theme-dark .seg-btn:hover {
+    color: #FFFFFF;
+  }
+  body.theme-dark .seg-btn.active {
+    background: #3A3A3C;
+    color: #E2B874;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  }
+  body.theme-sepia .seg-btn.active {
+    background: #F4ECDF;
+    color: #8C6527;
+    box-shadow: 0 2px 6px rgba(126, 112, 96, 0.18);
+  }
+
+  .top-toolbar {
       display: none !important;
     }
     .toolbar-trigger-btn {
@@ -2757,9 +3009,34 @@
     else setTheme('light');
   }
 
+    function switchView(mode) {
+    if (mode === 'zh') mode = 'zh-only';
+    if (mode === 'en') mode = 'en-only';
+    if (mode === 'bi' || mode === 'bilingual') mode = 'bilingual';
+    setViewMode(mode);
+  }
+
+  function setViewMode(mode) {
+    applyViewMode(mode);
+  }
+
+  function cycleMobileView() {
+    cycleMobileViewMode();
+  }
+
+  function cycleMobileViewMode() {
+    if (currentView === 'bilingual') setViewMode('zh-only');
+    else if (currentView === 'zh-only') setViewMode('en-only');
+    else setViewMode('bilingual');
+  }
+
   function applyViewMode(mode) {
+    if (mode === 'zh') mode = 'zh-only';
+    if (mode === 'en') mode = 'en-only';
+    if (mode === 'bi') mode = 'bilingual';
+
     document.body.classList.remove('view-bilingual', 'view-zh-only', 'view-en-only');
-    document.querySelectorAll('.tool-btn[id^="btn-view-"]').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.seg-btn, .tool-btn[id^="btn-view-"]').forEach(b => b.classList.remove('active'));
     
     if (mode === 'zh-only') {
       document.body.classList.add('view-zh-only');
@@ -2771,29 +3048,19 @@
       if (b) b.classList.add('active');
     } else {
       document.body.classList.add('view-bilingual');
-      const b = document.getElementById('btn-view-bi');
+      const b = document.getElementById('btn-view-bilingual') || document.getElementById('btn-view-bi');
       if (b) b.classList.add('active');
     }
 
     const dockLabel = document.getElementById('dock-view-label');
     if (dockLabel) {
-      if (mode === 'zh-only') dockLabel.textContent = '仅中文';
-      else if (mode === 'en-only') dockLabel.textContent = 'English';
+      if (mode === 'zh-only') dockLabel.textContent = '中';
+      else if (mode === 'en-only') dockLabel.textContent = 'EN';
       else dockLabel.textContent = '双语';
     }
 
     currentView = mode;
     localStorage.setItem('regeneration_view', mode);
-  }
-
-  function setViewMode(mode) {
-    applyViewMode(mode);
-  }
-
-  function cycleMobileViewMode() {
-    if (currentView === 'bilingual') setViewMode('zh-only');
-    else if (currentView === 'zh-only') setViewMode('en-only');
-    else setViewMode('bilingual');
   }
 
   function applyFontScale() {
