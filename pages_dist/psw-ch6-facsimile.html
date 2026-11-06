@@ -1,0 +1,2876 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 6: Health, Wellness, Illness, and Disability · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
+      background: var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+    }
+    .ps-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html#sec-ch6" class="nav-home-btn">← 返回全书总目录</a>
+      <div class="nav-chapter-title">
+        <span class="ch-badge">CH 06</span>
+        <span>Health, Wellness, Illness, and Disability</span>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 6 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 26:30</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 06 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Health, Wellness, Illness, and Disability</h1>
+      <h2 class="hero-title-cn">健康、全人福祉、疾病与残障实务应对</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 77–95 · 11 道全真自测题</span>
+        <span class="meta-item">专业音频：26:30</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch6-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+
+      
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-77">第 77 页 · 学习目标与开篇导读</option><option value="page-78">第 78 页 · 核心专业术语表 (Key Terms)</option><option value="page-79">第 79 页 · 全人健康理念与健康维度</option><option value="page-80">第 80 页 · 生理、情绪、社交与精神健康</option><option value="page-81">第 81 页 · 认知健康与健康安康连续谱</option><option value="page-82">第 82 页 · 加拿大 12 大关键健康决定因素</option><option value="page-83">第 83 页 · 专栏 6.1 健康决定因素：加拿大 vs WHO</option><option value="page-84">第 84 页 · 案例分析：杰森的健康决定因素链条</option><option value="page-85">第 85 页 · 个人健康行为、儿童发展与基因秉赋</option><option value="page-86">第 86 页 · 医疗服务、性别、文化与原住民健康</option><option value="page-87">第 87 页 · 急性疾病 vs 持续性慢性疾病分类</option><option value="page-88">第 88 页 · 疾病与残疾伴随的重大生活转变与丧失</option><option value="page-89">第 89 页 · 专栏 6.2 面对疾病与残疾的身心防御反应</option><option value="page-90">第 90 页 · 案例分析：维塔利先生的自尊与抑郁危机</option><option value="page-91">第 91 页 · 以 DIPPS 为指导的慈悲关怀与人本支持</option><option value="page-92">第 92 页 · 专栏 6.3 残障人士包容性语言指引 (上)</option><option value="page-93">第 93 页 · 专栏 6.3 残障人士包容性语言指引 (下)</option><option value="page-94">第 94 页 · 本章要点回顾与批判性思维 (Q1-Q9)</option><option value="page-95">第 95 页 · 本章自测题精解与权威答案 (Q10-Q11)</option>
+              </select>
+            </div>
+          </div>
+          <div class="ps-chips-ribbon">
+            <a href="#page-77" class="page-chip-item"><span class="pc-num">p.77</span></a><a href="#page-78" class="page-chip-item"><span class="pc-num">p.78</span></a><a href="#page-79" class="page-chip-item"><span class="pc-num">p.79</span></a><a href="#page-80" class="page-chip-item"><span class="pc-num">p.80</span></a><a href="#page-81" class="page-chip-item"><span class="pc-num">p.81</span></a><a href="#page-82" class="page-chip-item"><span class="pc-num">p.82</span></a><a href="#page-83" class="page-chip-item"><span class="pc-num">p.83</span></a><a href="#page-84" class="page-chip-item"><span class="pc-num">p.84</span></a><a href="#page-85" class="page-chip-item"><span class="pc-num">p.85</span></a><a href="#page-86" class="page-chip-item"><span class="pc-num">p.86</span></a><a href="#page-87" class="page-chip-item"><span class="pc-num">p.87</span></a><a href="#page-88" class="page-chip-item"><span class="pc-num">p.88</span></a><a href="#page-89" class="page-chip-item"><span class="pc-num">p.89</span></a><a href="#page-90" class="page-chip-item"><span class="pc-num">p.90</span></a><a href="#page-91" class="page-chip-item"><span class="pc-num">p.91</span></a><a href="#page-92" class="page-chip-item"><span class="pc-num">p.92</span></a><a href="#page-93" class="page-chip-item"><span class="pc-num">p.93</span></a><a href="#page-94" class="page-chip-item"><span class="pc-num">p.94</span></a><a href="#page-95" class="page-chip-item"><span class="pc-num">p.95</span></a>
+          </div>
+        </div>
+        
+    </header>
+
+    <div class="editorial-stream">
+      <div id="page-77"></div>
+                <aside class="editorial-box-container box-theme-blue">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">OBJECTIVES</h4>
+                    <div class="box-title-cn">本章学习与执业能力考核目标</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">After reading this chapter, the learner should be able to do the following:</div>
+                      <div class="clause-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标：</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Differentiate between the current definition of health and the one used in the past.</div>
+                      <div class="clause-cn">准确辨析当代健康定义与 19 世纪传统生物医学消极定义之间的本质飞跃。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Describe the concept of holism and explain how it affects the role of a support worker.</div>
+                      <div class="clause-cn">阐述“全人理念”（Holism）的核心内涵，并解释其如何指导支持工作者的执业角色。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Explain the current concepts of health and wellness.</div>
+                      <div class="clause-cn">深入阐释当代健康（Health）与安康（Wellness）的科学概念。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Describe the 12 aspects of our health and environment that are beyond our immediate control (known as the determinants of health).</div>
+                      <div class="clause-cn">系统阐述超出个人直接控制范畴的 12 项宏观健康与生活环境决定因素（即健康的决定因素）。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Describe how health can be achieved in all dimensions of life.</div>
+                      <div class="clause-cn">阐明如何在生命的各大维度中全面达成健康与平衡。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Explain the effects of culture, stigma, and discrimination on clients who have illnesses and disabilities.</div>
+                      <div class="clause-cn">阐释文化背景、社会污名化（Stigma）与歧视对身患疾病与残疾案主的深重影响。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Describe personal factors that can influence health.</div>
+                      <div class="clause-cn">阐述影响个人健康的内在生活方式、心理防御与行为抉择因素。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Explain how people, families, or communities who follow good holistic health practices can still become very ill.</div>
+                      <div class="clause-cn">科学解释为何践行良好全人健康生活方式的个人、家庭或社区仍可能遭受严重疾病侵袭。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Explain common reactions to illness and disability.</div>
+                      <div class="clause-cn">详尽剖析案主遭遇突发疾病与渐进性残疾时的常见身心防御与情绪行为反应。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Describe change and loss associated with illness and disability.</div>
+                      <div class="clause-cn">系统阐述疾病与残障给案主日常生活、心理自尊及独立自理能力带来的深远转变与丧失。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-footer-url">
+                  <span class="efu-icon">🌐</span>
+                  <span class="efu-label">Elsevier Evolve 官方教参研习配套资源库：</span>
+                  <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+                </div>
+                
+            <div class="page-anchor-marker" id="page-78">
+              <span class="marker-pill">p. 78</span>
+            </div>
+            
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">KEY TERMS</h3>
+                  <div class="heading-cn">核心专业术语表 (全 27 词全文收录)</div>
+                </div>
+                
+                <div class="key-terms-master-container" id="kt-container-ch6">
+                  <div class="kt-toolbar">
+                    <div class="kt-toolbar-left">
+                      <h3 class="kt-title">Key Terms · 核心专业术语表（全 27 词速查）</h3>
+                    </div>
+                    <div class="kt-toolbar-right">
+                      <div class="kt-mode-toggle">
+                        <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch6', 'table')">速查词表</button>
+                        <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch6', 'cards')">精研卡片</button>
+                      </div>
+                      <div class="kt-search-box">
+                        <input type="text" class="kt-search-input" placeholder="搜索中英文术语 (Filter terms)..." oninput="filterGlossary('ch6', this.value)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mode 1: Compact Table View (Default) -->
+                  <div class="kt-view-table active" id="kt-table-view-ch6">
+                    <div class="table-wrap">
+                      <table class="kt-compact-table">
+                        <thead>
+                          <tr>
+                            <th style="width: 26%;">英文术语 / 国际音标</th>
+                            <th style="width: 22%;">中文对照 / 出处</th>
+                            <th style="width: 52%;">教材标准学术释义与临床界定</th>
+                          </tr>
+                        </thead>
+                        <tbody id="kt-table-body-ch6">
+                
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">attitude</strong>
+                              <span class="kt-ipa">/ˈætɪtjuːd/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">健康态度</span>
+                              <span class="kt-ref">p. 85</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A person's beliefs, values, or opinions toward engaging in healthy behaviours.</div>
+                              <div class="kt-def-cn">个人对于参与健康促进行为、采纳积极生活方式所秉持的核心信念、价值观或主观看法。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">cognitive health</strong>
+                              <span class="kt-ipa">/ˈkɒɡnɪtɪv hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">认知健康</span>
+                              <span class="kt-ref">p. 81</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Well-being in the intellectual dimension, achieved through an active, creative mind.</div>
+                              <div class="kt-def-cn">在智力维度的良好状态，通过保持大脑活跃、具备创造性思维与终身学习能力而达成。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">determinants of health</strong>
+                              <span class="kt-ipa">/dɪˈtɜːmɪnənts ɒv hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">健康的决定因素</span>
+                              <span class="kt-ref">p. 82</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The most important factors—such as lifestyle, environment, human biology, and health services—that determine health status in an individual or a community.</div>
+                              <div class="kt-def-cn">决定个人或社区整体健康状况的最核心综合因素，包括生活方式、生活环境、人类生物学遗传以及卫生服务可及性。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">dimensions of health</strong>
+                              <span class="kt-ipa">/dɪˈmɛnʃənz ɒv hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">健康的维度</span>
+                              <span class="kt-ref">p. 79</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">All aspects of a person's health—physical, emotional, social, spiritual, cognitive. Holistic health considers all of these aspects.</div>
+                              <div class="kt-def-cn">构成一个人健康的全部维度——身体、情绪、社交、精神与认知。全人健康理念将所有这些维度视为不可分割的整体。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">disability</strong>
+                              <span class="kt-ipa">/ˌdɪsəˈbɪlɪti/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">残疾 / 机能丧失</span>
+                              <span class="kt-ref">p. 87</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The loss of physical or mental function.</div>
+                              <div class="kt-def-cn">身体或心理生理功能的受损或丧失。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">discrimination</strong>
+                              <span class="kt-ipa">/dɪˌskrɪmɪˈneɪʃən/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">歧视</span>
+                              <span class="kt-ref">p. 92</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The unfair treatment of people on the basis of such aspects as their physical characteristics, health history, or group membership.</div>
+                              <div class="kt-def-cn">基于身体特征、健康病史、社会阶层、族群或文化身份等属性对特定人群施加的不公正、不平等待遇。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">emotional health</strong>
+                              <span class="kt-ipa">/ɪˈməʊʃənl hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">情绪健康</span>
+                              <span class="kt-ref">p. 80</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Well-being in the emotional dimension, achieved when people feel good about themselves.</div>
+                              <div class="kt-def-cn">情绪维度的良好状态；当个体拥有积极的自我认同、良好的自控力与环境适应韧性时达成。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">environmental health</strong>
+                              <span class="kt-ipa">/ɪnˌvaɪrənˈmɛntl hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">环境健康</span>
+                              <span class="kt-ref">p. 84</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">According to the World Health Organization, 'all the physical, chemical, and biological factors external to a person and all the related factors impacting behaviours.'</div>
+                              <div class="kt-def-cn">世界卫生组织定义为：个体外部所有的物理、化学与生物因素，以及所有影响人类行为的相关环境因素的总和。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">equitable</strong>
+                              <span class="kt-ipa">/ˈɛkwɪtəbl/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">公正合理的 / 公平的</span>
+                              <span class="kt-ref">p. 83</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Fair, reasonable, and just.</div>
+                              <div class="kt-def-cn">符合社会正义、公平合理且无特权偏倚的状态。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">gender</strong>
+                              <span class="kt-ipa">/ˈdʒɛndər/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">社会性别</span>
+                              <span class="kt-ref">p. 85</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The roles, personality traits, attitudes, behaviours, values, and relative power and influence assigned to the sexes by society.</div>
+                              <div class="kt-def-cn">社会基于生理性别所赋予个人的角色期待、性格特质、态度行为、价值观以及相对的社会权力与影响力。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">genetic endowment</strong>
+                              <span class="kt-ipa">/dʒɪˈnɛtɪk ɪnˈdaʊmənt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">遗传禀赋 / 基因构成</span>
+                              <span class="kt-ref">p. 84</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The genetic makeup that predisposes an individual to adopt certain behaviours that affect health status.</div>
+                              <div class="kt-def-cn">决定个体生理素质与疾病易感倾向的先天遗传基因生物学构成。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">health</strong>
+                              <span class="kt-ipa">/hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">健康</span>
+                              <span class="kt-ref">p. 79</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A state of well-being in all dimensions of one's life.</div>
+                              <div class="kt-def-cn">个体在生命全部维度中达到的一种安康与良好状态。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">holism</strong>
+                              <span class="kt-ipa">/ˈhəʊlɪzəm/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">全人理念</span>
+                              <span class="kt-ref">p. 79</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A concept that considers the whole person; the whole person has physical, social, emotional, cognitive, and spiritual dimensions.</div>
+                              <div class="kt-def-cn">一种将服务对象视为完整有机体的哲学与照护理念；全人由身体、社交、情绪、认知与精神五大维度交融构成。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">holistic health</strong>
+                              <span class="kt-ipa">/həʊˈlɪstɪk hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">全人健康</span>
+                              <span class="kt-ref">p. 79</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">A state of well-being in all dimensions of one's life.</div>
+                              <div class="kt-def-cn">个体在生理、心理、社交、认知与精神所有维度全面协调平衡的理想良好状态。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">illness</strong>
+                              <span class="kt-ipa">/ˈɪlnɪs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">疾病</span>
+                              <span class="kt-ref">p. 87</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The loss of physical or mental health.</div>
+                              <div class="kt-def-cn">身体或心理生理健康的丧失或受损状态。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">marginalize</strong>
+                              <span class="kt-ipa">/ˈmɑːdʒɪnəlaɪz/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">边缘化 / 社会排斥</span>
+                              <span class="kt-ref">p. 85</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The act of excluding people who are not part of the majority culture.</div>
+                              <div class="kt-def-cn">排斥、孤立非主流文化群体或脆弱社会群体的行为与社会现象。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">optimal health</strong>
+                              <span class="kt-ipa">/ˈɒptɪməl hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">最优健康状态</span>
+                              <span class="kt-ref">p. 85</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">State of achievable maximum well-being in each of the five dimensions: physical, emotional, social, cognitive, and spiritual.</div>
+                              <div class="kt-def-cn">个体在自身条件约束下，在身体、情绪、社交、认知与精神五大维度中所能达到的最大可能安康状态。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">personal empowerment</strong>
+                              <span class="kt-ipa">/ˈpɜːsənl ɪmˈpaʊəmənt/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">个人赋权 / 自主掌控感</span>
+                              <span class="kt-ref">p. 87</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Understanding and accepting that you can make your own healthy lifestyle choices, free from the influences of others.</div>
+                              <div class="kt-def-cn">深刻认识并确信自己拥有独立做出健康生活方式抉择的自决权利与行动能力，免受外界消极影响。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">physical health</strong>
+                              <span class="kt-ipa">/ˈfɪzɪkl hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">身体健康 / 生理健康</span>
+                              <span class="kt-ref">p. 79</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Well-being in the physical dimension, achieved when the body is strong, fit, and free from disease.</div>
+                              <div class="kt-def-cn">身体维度的良好状态，当机体强健、适应力强且免受病痛困扰时达成。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">primary prevention strategies</strong>
+                              <span class="kt-ipa">/ˈpraɪməri prɪˈvɛnʃən ˈstrætədʒiz/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">一级预防策略</span>
+                              <span class="kt-ref">p. 87</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Strategies that are aimed at preventing a disease or illness by reducing its risk factors.</div>
+                              <div class="kt-def-cn">旨在通过降低已知危险因素来直接阻断疾病发生的根本性防范措施（如接种疫苗、改善营养）。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">prognosis</strong>
+                              <span class="kt-ipa">/prɒɡˈnəʊsɪs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">预后</span>
+                              <span class="kt-ref">p. 88</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The expected course of recovery, which may range from full recovery to death, based on the usual outcome of the illness.</div>
+                              <div class="kt-def-cn">基于某种疾病的典型转归规律，对病情未来发展演变以及恢复前景（从完全康复到死亡）的医学预测。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">psychosocial health</strong>
+                              <span class="kt-ipa">/ˌsaɪkəʊˈsəʊʃəl hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">心理社会健康</span>
+                              <span class="kt-ref">p. 79</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Well-being in the social, emotional, intellectual, and spiritual dimensions of one's life.</div>
+                              <div class="kt-def-cn">个体在社交、情绪、智力与精神等非生理维度的良好适应与福祉状态。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">social health</strong>
+                              <span class="kt-ipa">/ˈsəʊʃəl hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">社交健康</span>
+                              <span class="kt-ref">p. 80</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Well-being in the social dimension, achieved when people have stable and satisfying relationships.</div>
+                              <div class="kt-def-cn">社交维度的良好状态，通过与家庭、朋友及社群建立稳定、互相支持且令人满意的亲密关系而达成。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">social support system</strong>
+                              <span class="kt-ipa">/ˈsəʊʃəl səˈpɔːt ˈsɪstɪm/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">社会支持系统</span>
+                              <span class="kt-ref">p. 80</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">An informal group of people who help each other or others outside the group.</div>
+                              <div class="kt-def-cn">一个由家人、朋友、邻里或社团构成的非正式互助网络，在成员面临生活危机时提供物质与情感依靠。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">spiritual health</strong>
+                              <span class="kt-ipa">/ˈspɪrɪtʃuəl hɛlθ/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">精神健康</span>
+                              <span class="kt-ref">p. 80</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Well-being in the spiritual dimension achieved through the belief in a purpose greater than the self.</div>
+                              <div class="kt-def-cn">精神维度的良好状态，通过坚信生命具有超越自我的崇高意义、使命感及对是非伦理的清醒理解而达成。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">stigma</strong>
+                              <span class="kt-ipa">/ˈstɪɡmə/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">社会污名 / 偏见病耻感</span>
+                              <span class="kt-ref">p. 91</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">Social shame associated with a particular circumstance, quality, or person that causes one to feel shame or embarrassment—for example, the stigma of being fired from a job.</div>
+                              <div class="kt-def-cn">与某种特定境遇、生理缺陷或特定人群相关联的社会性耻辱烙印，导致当事人产生深重的自卑、内疚或社交回避。</div>
+                            </td>
+                          </tr>
+                    
+                          <tr class="kt-table-row kt-folded-row" style="display:none;">
+                            <td class="kt-cell-term">
+                              <strong class="kt-word">wellness</strong>
+                              <span class="kt-ipa">/ˈwɛlnɪs/</span>
+                            </td>
+                            <td class="kt-cell-cn">
+                              <span class="etc-cn-tag">安康 / 整体健康境界</span>
+                              <span class="kt-ref">p. 85</span>
+                            </td>
+                            <td class="kt-cell-def">
+                              <div class="kt-def-en">The achievement of the best health possible in all dimensions of one's life.</div>
+                              <div class="kt-def-cn">在生命全部维度中所达成的最佳可能健康平衡状态与积极生活追求。</div>
+                            </td>
+                          </tr>
+                    
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="kt-expand-bar" id="kt-expand-bar-table-ch6">
+                      <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch6', 'table')">
+                        展开全部 27 个专业术语 ▼
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Mode 2: Cards Deck View -->
+                  <div class="kt-view-cards" id="kt-cards-view-ch6" style="display:none;">
+                    <div class="terms-editorial-grid" id="kt-cards-grid-ch6">
+                
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">attitude</strong>
+                            <span class="etc-ipa">/ˈætɪtjuːd/</span>
+                          </div>
+                          <span class="etc-cn-tag">健康态度</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A person's beliefs, values, or opinions toward engaging in healthy behaviours. <span class="etc-ref">(p. 85)</span></div>
+                          <div class="etc-def-cn">个人对于参与健康促进行为、采纳积极生活方式所秉持的核心信念、价值观或主观看法。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">cognitive health</strong>
+                            <span class="etc-ipa">/ˈkɒɡnɪtɪv hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">认知健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Well-being in the intellectual dimension, achieved through an active, creative mind. <span class="etc-ref">(p. 81)</span></div>
+                          <div class="etc-def-cn">在智力维度的良好状态，通过保持大脑活跃、具备创造性思维与终身学习能力而达成。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">determinants of health</strong>
+                            <span class="etc-ipa">/dɪˈtɜːmɪnənts ɒv hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">健康的决定因素</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The most important factors—such as lifestyle, environment, human biology, and health services—that determine health status in an individual or a community. <span class="etc-ref">(p. 82)</span></div>
+                          <div class="etc-def-cn">决定个人或社区整体健康状况的最核心综合因素，包括生活方式、生活环境、人类生物学遗传以及卫生服务可及性。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">dimensions of health</strong>
+                            <span class="etc-ipa">/dɪˈmɛnʃənz ɒv hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">健康的维度</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">All aspects of a person's health—physical, emotional, social, spiritual, cognitive. Holistic health considers all of these aspects. <span class="etc-ref">(p. 79)</span></div>
+                          <div class="etc-def-cn">构成一个人健康的全部维度——身体、情绪、社交、精神与认知。全人健康理念将所有这些维度视为不可分割的整体。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">disability</strong>
+                            <span class="etc-ipa">/ˌdɪsəˈbɪlɪti/</span>
+                          </div>
+                          <span class="etc-cn-tag">残疾 / 机能丧失</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The loss of physical or mental function. <span class="etc-ref">(p. 87)</span></div>
+                          <div class="etc-def-cn">身体或心理生理功能的受损或丧失。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">discrimination</strong>
+                            <span class="etc-ipa">/dɪˌskrɪmɪˈneɪʃən/</span>
+                          </div>
+                          <span class="etc-cn-tag">歧视</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The unfair treatment of people on the basis of such aspects as their physical characteristics, health history, or group membership. <span class="etc-ref">(p. 92)</span></div>
+                          <div class="etc-def-cn">基于身体特征、健康病史、社会阶层、族群或文化身份等属性对特定人群施加的不公正、不平等待遇。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">emotional health</strong>
+                            <span class="etc-ipa">/ɪˈməʊʃənl hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">情绪健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Well-being in the emotional dimension, achieved when people feel good about themselves. <span class="etc-ref">(p. 80)</span></div>
+                          <div class="etc-def-cn">情绪维度的良好状态；当个体拥有积极的自我认同、良好的自控力与环境适应韧性时达成。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">environmental health</strong>
+                            <span class="etc-ipa">/ɪnˌvaɪrənˈmɛntl hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">环境健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">According to the World Health Organization, 'all the physical, chemical, and biological factors external to a person and all the related factors impacting behaviours.' <span class="etc-ref">(p. 84)</span></div>
+                          <div class="etc-def-cn">世界卫生组织定义为：个体外部所有的物理、化学与生物因素，以及所有影响人类行为的相关环境因素的总和。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">equitable</strong>
+                            <span class="etc-ipa">/ˈɛkwɪtəbl/</span>
+                          </div>
+                          <span class="etc-cn-tag">公正合理的 / 公平的</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Fair, reasonable, and just. <span class="etc-ref">(p. 83)</span></div>
+                          <div class="etc-def-cn">符合社会正义、公平合理且无特权偏倚的状态。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">gender</strong>
+                            <span class="etc-ipa">/ˈdʒɛndər/</span>
+                          </div>
+                          <span class="etc-cn-tag">社会性别</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The roles, personality traits, attitudes, behaviours, values, and relative power and influence assigned to the sexes by society. <span class="etc-ref">(p. 85)</span></div>
+                          <div class="etc-def-cn">社会基于生理性别所赋予个人的角色期待、性格特质、态度行为、价值观以及相对的社会权力与影响力。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">genetic endowment</strong>
+                            <span class="etc-ipa">/dʒɪˈnɛtɪk ɪnˈdaʊmənt/</span>
+                          </div>
+                          <span class="etc-cn-tag">遗传禀赋 / 基因构成</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The genetic makeup that predisposes an individual to adopt certain behaviours that affect health status. <span class="etc-ref">(p. 84)</span></div>
+                          <div class="etc-def-cn">决定个体生理素质与疾病易感倾向的先天遗传基因生物学构成。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">health</strong>
+                            <span class="etc-ipa">/hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A state of well-being in all dimensions of one's life. <span class="etc-ref">(p. 79)</span></div>
+                          <div class="etc-def-cn">个体在生命全部维度中达到的一种安康与良好状态。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">holism</strong>
+                            <span class="etc-ipa">/ˈhəʊlɪzəm/</span>
+                          </div>
+                          <span class="etc-cn-tag">全人理念</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A concept that considers the whole person; the whole person has physical, social, emotional, cognitive, and spiritual dimensions. <span class="etc-ref">(p. 79)</span></div>
+                          <div class="etc-def-cn">一种将服务对象视为完整有机体的哲学与照护理念；全人由身体、社交、情绪、认知与精神五大维度交融构成。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">holistic health</strong>
+                            <span class="etc-ipa">/həʊˈlɪstɪk hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">全人健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">A state of well-being in all dimensions of one's life. <span class="etc-ref">(p. 79)</span></div>
+                          <div class="etc-def-cn">个体在生理、心理、社交、认知与精神所有维度全面协调平衡的理想良好状态。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">illness</strong>
+                            <span class="etc-ipa">/ˈɪlnɪs/</span>
+                          </div>
+                          <span class="etc-cn-tag">疾病</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The loss of physical or mental health. <span class="etc-ref">(p. 87)</span></div>
+                          <div class="etc-def-cn">身体或心理生理健康的丧失或受损状态。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">marginalize</strong>
+                            <span class="etc-ipa">/ˈmɑːdʒɪnəlaɪz/</span>
+                          </div>
+                          <span class="etc-cn-tag">边缘化 / 社会排斥</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The act of excluding people who are not part of the majority culture. <span class="etc-ref">(p. 85)</span></div>
+                          <div class="etc-def-cn">排斥、孤立非主流文化群体或脆弱社会群体的行为与社会现象。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">optimal health</strong>
+                            <span class="etc-ipa">/ˈɒptɪməl hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">最优健康状态</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">State of achievable maximum well-being in each of the five dimensions: physical, emotional, social, cognitive, and spiritual. <span class="etc-ref">(p. 85)</span></div>
+                          <div class="etc-def-cn">个体在自身条件约束下，在身体、情绪、社交、认知与精神五大维度中所能达到的最大可能安康状态。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">personal empowerment</strong>
+                            <span class="etc-ipa">/ˈpɜːsənl ɪmˈpaʊəmənt/</span>
+                          </div>
+                          <span class="etc-cn-tag">个人赋权 / 自主掌控感</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Understanding and accepting that you can make your own healthy lifestyle choices, free from the influences of others. <span class="etc-ref">(p. 87)</span></div>
+                          <div class="etc-def-cn">深刻认识并确信自己拥有独立做出健康生活方式抉择的自决权利与行动能力，免受外界消极影响。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">physical health</strong>
+                            <span class="etc-ipa">/ˈfɪzɪkl hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">身体健康 / 生理健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Well-being in the physical dimension, achieved when the body is strong, fit, and free from disease. <span class="etc-ref">(p. 79)</span></div>
+                          <div class="etc-def-cn">身体维度的良好状态，当机体强健、适应力强且免受病痛困扰时达成。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">primary prevention strategies</strong>
+                            <span class="etc-ipa">/ˈpraɪməri prɪˈvɛnʃən ˈstrætədʒiz/</span>
+                          </div>
+                          <span class="etc-cn-tag">一级预防策略</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Strategies that are aimed at preventing a disease or illness by reducing its risk factors. <span class="etc-ref">(p. 87)</span></div>
+                          <div class="etc-def-cn">旨在通过降低已知危险因素来直接阻断疾病发生的根本性防范措施（如接种疫苗、改善营养）。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">prognosis</strong>
+                            <span class="etc-ipa">/prɒɡˈnəʊsɪs/</span>
+                          </div>
+                          <span class="etc-cn-tag">预后</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The expected course of recovery, which may range from full recovery to death, based on the usual outcome of the illness. <span class="etc-ref">(p. 88)</span></div>
+                          <div class="etc-def-cn">基于某种疾病的典型转归规律，对病情未来发展演变以及恢复前景（从完全康复到死亡）的医学预测。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">psychosocial health</strong>
+                            <span class="etc-ipa">/ˌsaɪkəʊˈsəʊʃəl hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">心理社会健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Well-being in the social, emotional, intellectual, and spiritual dimensions of one's life. <span class="etc-ref">(p. 79)</span></div>
+                          <div class="etc-def-cn">个体在社交、情绪、智力与精神等非生理维度的良好适应与福祉状态。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">social health</strong>
+                            <span class="etc-ipa">/ˈsəʊʃəl hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">社交健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Well-being in the social dimension, achieved when people have stable and satisfying relationships. <span class="etc-ref">(p. 80)</span></div>
+                          <div class="etc-def-cn">社交维度的良好状态，通过与家庭、朋友及社群建立稳定、互相支持且令人满意的亲密关系而达成。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">social support system</strong>
+                            <span class="etc-ipa">/ˈsəʊʃəl səˈpɔːt ˈsɪstɪm/</span>
+                          </div>
+                          <span class="etc-cn-tag">社会支持系统</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">An informal group of people who help each other or others outside the group. <span class="etc-ref">(p. 80)</span></div>
+                          <div class="etc-def-cn">一个由家人、朋友、邻里或社团构成的非正式互助网络，在成员面临生活危机时提供物质与情感依靠。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">spiritual health</strong>
+                            <span class="etc-ipa">/ˈspɪrɪtʃuəl hɛlθ/</span>
+                          </div>
+                          <span class="etc-cn-tag">精神健康</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Well-being in the spiritual dimension achieved through the belief in a purpose greater than the self. <span class="etc-ref">(p. 80)</span></div>
+                          <div class="etc-def-cn">精神维度的良好状态，通过坚信生命具有超越自我的崇高意义、使命感及对是非伦理的清醒理解而达成。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">stigma</strong>
+                            <span class="etc-ipa">/ˈstɪɡmə/</span>
+                          </div>
+                          <span class="etc-cn-tag">社会污名 / 偏见病耻感</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">Social shame associated with a particular circumstance, quality, or person that causes one to feel shame or embarrassment—for example, the stigma of being fired from a job. <span class="etc-ref">(p. 91)</span></div>
+                          <div class="etc-def-cn">与某种特定境遇、生理缺陷或特定人群相关联的社会性耻辱烙印，导致当事人产生深重的自卑、内疚或社交回避。</div>
+                        </div>
+                      </div>
+                    
+                      <div class="editorial-term-card kt-folded-card" style="display:none;">
+                        <div class="etc-header">
+                          <div class="etc-en-block">
+                            <strong class="etc-word">wellness</strong>
+                            <span class="etc-ipa">/ˈwɛlnɪs/</span>
+                          </div>
+                          <span class="etc-cn-tag">安康 / 整体健康境界</span>
+                        </div>
+                        <div class="etc-body">
+                          <div class="etc-def-en">The achievement of the best health possible in all dimensions of one's life. <span class="etc-ref">(p. 85)</span></div>
+                          <div class="etc-def-cn">在生命全部维度中所达成的最佳可能健康平衡状态与积极生活追求。</div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                    <div class="kt-expand-bar" id="kt-expand-bar-cards-ch6">
+                      <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch6', 'cards')">
+                        展开全部 27 张精研术语卡片 ▼
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="Historical Perspective & Key Terms" onclick="playParagraphAudio(this)">
+                      <p class="para-en">There is nothing you can't do, if you set your mind to it. Anything is possible. My disability is that I cannot use my legs. My handicap is your negative perception of that disability, and thus of me. — Rick Hansen, Canadian accessibility activist and athlete with spinal cord injury.</p>
+                      <p class="para-cn">“世上无难事，只要你下定决心。一切皆有可能。我的残疾仅仅在于我无法使用我的双腿；而真正阻碍我的障碍，是你们对这种残疾——乃至对我本人的消极成见。” —— 里克·汉森（Rick Hansen），加拿大著名无障碍运动倡导者、脊髓损伤残奥运动员。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="Historical Perspective & Key Terms" onclick="playParagraphAudio(this)">
+                      <p class="para-en">A support worker's job is to help clients achieve or maintain optimal health. But what exactly is 'optimal' health?</p>
+                      <p class="para-cn">支持工作者的根本职责是协助服务对象达成或维持最优健康状态。然而，究竟什么是“最优”健康？</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="Historical Perspective & Key Terms" onclick="playParagraphAudio(this)">
+                      <p class="para-en">This chapter examines the concepts and experiences of health and wellness as well as illness and disability and will also explain what optimal health is. A support worker providing care to a client who lives with an illness or disability might be tempted to focus on the medical condition rather than on the whole person. However, by trying to understand what the person may be experiencing, support workers can provide better, more compassionate care and support.</p>
+                      <p class="para-cn">本章将系统剖析健康与安康、以及疾病与残障的核心概念与真实体验，阐明最优健康状态的真谛。支持工作者在为身患疾病或残疾的案主提供照护时，往往容易陷入单纯关注其医疗病症的误区，而忽视了案主作为一个完整的人（The Whole Person）。唯有设身处地去深切理解案主正在经历的内心波澜与生活剧变，我们方能提供更卓越、更具人本温度的慈悲关怀与专业支持。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-79">
+              <span class="marker-pill">p. 79</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-01">
+                  <h2 class="heading-en">HEALTH AND WELLNESS</h2>
+                  <div class="heading-cn">健康与安康的现代核心理念</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">All caregivers need to understand how health practices, lifestyle, and social status can influence a person's health. As a support worker, you must focus your care and support on improving (or maximizing) a person's health potential, whatever that potential may be.</p>
+                      <p class="para-cn">所有的医护照料者都必须深刻理解：个人的健康行为、生活方式以及所处的社会经济地位，究竟如何深层塑造其整体健康状况。作为一名专业支持工作者，您的照护与支持重心必须始终聚焦于：无论服务对象当前的生理潜能如何，全力协助其提升并最大化发挥其内在的健康潜能。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Past Definitions of Health</h3>
+                  <div class="heading-cn">传统医学对健康的消极定义：未生病即健康</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">The definition of the term health has changed over the years. At the end of the 1800s, health was defined by what it was not: Health was the state of not being sick.</p>
+                      <p class="para-cn">“健康”这一核心术语的定义历经了长达一个多世纪的演进。在 19 世纪末期，医学界对健康的界定采取的是“排除法”：健康仅仅被定义为“未处于患病状态”。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">At that time, the leading causes of death were diseases that spread from one person to another. Pneumonia, tuberculosis, and influenza, for example, were frequent killers. Anyone lucky enough to avoid being infected during an outbreak was considered healthy.</p>
+                      <p class="para-cn">在那个时代，导致人类死亡的首要死因是各种在人与人之间肆虐传播的烈性传染病——例如肺炎、肺结核与流感，皆是夺走无数生命的头号杀手。在疫情爆发期间，任何侥幸未被感染的人便被视作健康个体。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">During the first half of the twentieth century, vaccinations, antibiotics, health education, and cleaner living conditions reduced the spread of diseases. People were living longer and getting sick less often. But were they healthy?</p>
+                      <p class="para-cn">进入 20 世纪上半叶，随着疫苗免疫接种的普及、抗生素的发明、公共卫生教育的推广以及居住卫生环境的显著改善，烈性传染病的肆虐得到了极大遏制。人类的平均寿命显著延长，患病频率大幅降低。然而，人们真的就此获得健康了吗？</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Modern Definitions of Health</h3>
+                  <div class="heading-cn">现代健康定义：超越无病状态的五维全人福祉</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">During the latter part of the twentieth century, people started to realize that health is more than just the absence of disease. As they recognized that health is affected by factors such as lifestyle and environment, discussions of health began to focus more on the person rather than on the absence or presence of disease. A whole person has physical, emotional, social, cognitive, and spiritual dimensions.</p>
+                      <p class="para-cn">在 20 世纪下半叶，现代医学与人文学界开始深刻认识到：健康绝不仅仅意味着机体没有疾病。随着人们逐渐体认到生活方式、生态环境与社会压力对生命的深刻影响，关于健康的探讨开始彻底从单纯关注“疾病的存在与否”，转向全方位聚焦于“人本身”（The Person）。一个完整的人，是由身体、情绪、社交、认知与精神五大维度交融而成的有机体。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Psychosocial health is well-being in the social, emotional, intellectual, and spiritual dimensions of one's life. A holistic approach to health care takes into account a client's psychosocial well-being and health as well as their physical health. Few people enjoy perfect psychosocial health throughout their lives.</p>
+                      <p class="para-cn">心理社会健康（Psychosocial Health）正是指个体在社交、情绪、智力与精神等非生理维度的良好适应与福祉状态。秉持全人理念的照护途径（Holistic Approach）要求工作者在关注案主生理机能的同时，对其心理社会福祉给予同等崇高的重视。在现实生命历程中，极少有人能够终其一生拥有十全十美的心理社会健康。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Holism focuses on all these dimensions of health. Each dimension relates to and depends on the others.</p>
+                      <p class="para-cn">全人理念（Holism）的核心旨归在于统摄考量健康的所有维度。生命中的每一个维度都与其他维度紧密关联、休戚与共。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Current views on health give importance to holistic health—a state of well-being in all dimensions of one's life (FIGURE 6.1). Providing holistic health care means caring for all dimensions of the person, not just the physical aspect.</p>
+                      <p class="para-cn">当代健康科学高度推崇全人健康（Holistic Health）——即个体在生命全部维度中达成的一种综合性良好状态（见图 6.1）。提供全人健康照护，意味着支持工作者必须倾心关照案主生命的完整面貌，而绝非仅仅着眼于其肉体病患。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">A widely accepted definition of health is that of the World Health Organization (WHO): 'Health is a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity.' In more recent years, the WHO has also recognized that health includes the ability to lead a socially and economically productive life.</p>
+                      <p class="para-cn">全球范围内公认度最高的权威健康定义由世界卫生组织（WHO）确立：“健康不仅是没有疾病或虚弱，而是一种在身体、心理与社会适应方面的完满良好状态。”近年来，世界卫生组织进一步深化了该内涵，指出真正的健康还必须涵盖个体能够过上具有社会交往价值与经济创造生产力的充实生活。</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-02">
+                  <h2 class="heading-en">Dimensions of Health</h2>
+                  <div class="heading-cn">健康的五大核心维度</div>
+                </div>
+                
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Physical Health</h3>
+                  <div class="heading-cn">身体健康维度（Physical Health）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="47.04" data-end="134.11" data-title="The Concept of Health & Holism" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Influenced by genetics and lifestyle, physical health is achieved when the body is strong, fit, and free from disease. The following factors contribute to the physical health of all people, including caregivers:</p>
+                      <p class="para-cn">身体健康受到遗传基因与日常生活方式的双重深层影响；当人体机能强健、体能充沛且免受病痛侵袭时，即达成了理想的身体健康。以下核心积极因素对于全人类（包括前线专业照料者自身）维护身体健康至关重要：</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Following a nutritious diet according to Canada's Dietary Guidelines (see Chapter 27)</strong></div>
+                      <div class="item-cn">严格遵循加拿大膳食营养指南，摄入均衡、多样化的优质营养饮食（详见第 27 章）</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Exercising regularly</strong></div>
+                      <div class="item-cn">坚持规律的体育锻炼与身体机能活动</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Living in a smoke-free environment</strong></div>
+                      <div class="item-cn">生活在远离一手及二手烟草烟雾的无烟洁净环境中</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Drinking alcohol moderately or not at all</strong></div>
+                      <div class="item-cn">严格限制酒精摄入量，做到适度饮酒或完全滴酒不沾</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Having a good night's sleep</strong></div>
+                      <div class="item-cn">保证充足、优质且符合生理规律的夜间深度睡眠</div>
+                    </li>
+                    </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-80">
+              <span class="marker-pill">p. 80</span>
+            </div>
+            <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Maintaining optimal body weight according to body mass index</strong></div>
+                      <div class="item-cn">依据身体质量指数（BMI）将体重长久保持在最佳健康科学区间</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Following safety practices, such as using seat belts and wearing bike helmets</strong></div>
+                      <div class="item-cn">时刻恪守安全防范准则，例如乘车必须系紧安全带、骑行自行车必须佩戴合格安全头盔</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Seeking medical attention when needed</strong></div>
+                      <div class="item-cn">当机体出现异常警示征象时，及时寻求专业医疗诊断与干预，杜绝拖延</div>
+                    </li>
+                    </ul>
+</div>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Support workers have an important role in maintaining clients' physical health. For instance, they help ensure a clean, safe, and comfortable environment; may prepare nutritious meals; and may assist clients with physical activity.</p>
+                      <p class="para-cn">支持工作者在维护案主的身体健康方面扮演着不可或缺的关键基石角色。例如，工作者协助确保照护环境的清洁、安全与舒适；遵照医嘱准备营养可口的三餐；并在日常生活中耐心协助案主安全进行身体功能锻炼与肢体活动。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Emotional Health</h3>
+                  <div class="heading-cn">情绪健康维度（Emotional Health）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Emotional health is not merely the absence of negative emotions but the ability to function well in and adapt appropriately to circumstances, whatever they may be. When people feel good about themselves, they are emotionally healthy. They have strong self-esteem, self-control, and self-awareness.</p>
+                      <p class="para-cn">情绪健康绝不仅仅是没有负面情绪，而是一种无论身处何种艰难顺逆处境，皆能保持良好机能运转与适度心理适应的强大心理弹性。当一个人对自己拥有积极悦纳的感觉时，他便处于情绪健康状态。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">They are able to give and receive from others without worrying about being hurt or rejected. In contrast, emotionally unhealthy people may be depressed or have intense feelings of insecurity. When upset, they may feel overwhelmed and become aggressive.</p>
+                      <p class="para-cn">他们具备坚定的自我价值感（自尊）、卓越的情绪自控力与深刻的自我认知。他们能够坦然给予他人关爱并欣然接受他人的支持，而无需时刻担忧遭受伤害或被拒绝。相反，情绪处于亚健康或病态的人往往深陷抑郁、自责或强烈的极度不安全感中；一旦遭遇挫折，他们往往容易被负面情绪彻底压垮并表现出破坏性的攻击行为。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Emotional health varies throughout one's life. For example, Mr. Szabo was a confident and happy person and enjoyed many social relationships.</p>
+                      <p class="para-cn">情绪健康在人的一生中是动态波动的。例如，萨博先生（Mr. Szabo）曾经是一位极其自信、开朗豁达并拥有广泛亲密社交圈的人。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">However, at the age of 60, a series of tragedies destroyed his emotional health: His daughter died in a car accident, his grandson died from a drug overdose, and Mr. Szabo himself suffered a heart attack. While recovering from the heart attack, he experienced major depression. This example shows that even emotionally strong individuals cannot always withstand misfortune and suffering without experiencing depression or a blow to their resilience.</p>
+                      <p class="para-cn">然而到了 60 岁时，一系列突如其来的灭顶之灾摧毁了他的心理防线：他的爱女在一场车祸中不幸丧生，他的孙子因药物过量猝死，随后萨博先生本人亦突发严重急性心肌梗死。在从心脏病发作中勉强康复的漫长过程中，他陷入了临床重度抑郁症。这个极具冲击力的真实临床案例深刻揭示：即便曾经在心理上极其坚强韧性的个体，在面临接踵而至的巨大生活灾难与痛苦时，亦无法完全免疫抑郁的发作或心理防线的崩塌。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Support workers work with emotionally healthy clients as well as those with emotional difficulties. You need to learn to read your clients' emotions so that you can respond in a caring manner.</p>
+                      <p class="para-cn">在执业实务中，支持工作者既会遇到情绪健康的案主，也会长期面对遭受情绪与心理重创的案主。您必须学会敏锐观察、倾听并体察案主的情绪暗流，从而能够以真正富于同理心与专业温度的方式给予人本关怀。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Social Health</h3>
+                  <div class="heading-cn">社交健康维度（Social Health）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Social health is achieved through stable and satisfying relationships. Socially healthy people treat others with respect, warmth, and openness. They like and trust others. People with poor social health may show little regard for others and may use others for their own gain.</p>
+                      <p class="para-cn">社交健康是通过建立并维系稳定、温暖且令人满意的人际与社会关系而达成的。社交健康的人以尊重、友善与开放的胸怀对待身边的每一个人；他们真心喜欢并能够真诚信任他人。相反，社交机能受损的人往往对他人漠不关心，甚至为了满足一己私利而冷酷利用、操纵他人。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Few people enjoy strong social health all through life. Feelings of isolation and loneliness are common among older persons and people who have lost their partners, friends, or other social relationships.</p>
+                      <p class="para-cn">极少有人能在漫长的生命全周期中始终拥有强大的社交健康。孤独与社会隔离感在广大高龄长者中尤为普遍，尤其是那些痛失挚爱伴侣、多年挚友或由于疾病丧失社交圈的人群。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">New immigrants are also at risk for poor social health. Being in an unfamiliar place and not speaking the local language can be very socially isolating.</p>
+                      <p class="para-cn">新移民同样是面临严重社交隔离的高危弱势群体——置身于完全陌生的异国文化环境中，语言沟通障碍会筑起高耸的心理藩篱，带来极度深沉的社会疏离感。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Most people have friends and acquaintances who help them meet their needs. These needs may be practical, such as a ride to work. Others may be deeper, such as comfort, emotional support, and encouragement; reassurance of one's self-worth; and help, guidance, and advice.</p>
+                      <p class="para-cn">大多数人在日常生活中都会依靠朋友与熟人网络来满足各层次的生命需求。这些需求有的是现实而实务层面的（如搭车上班、应急借宿）；而有的则是深层次的心理精神寄托——例如伤痛时的慰藉、情感依靠与鼓励、对自己生命价值的确认、以及迷茫困境时的专业指引与真诚建议。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">A social support system is an informal group of people who help each other or others outside the group. Research has shown that social support systems help improve overall health. Indeed, social support may be as important to wellness as a nutritious diet, a smoke-free environment, and regular exercise.</p>
+                      <p class="para-cn">社会支持系统（Social Support System）是一个由家人、朋友、邻里或社区互助团体自发构成的非正式互助网络。长期的流行病学研究证实：强大的社会支持系统能显著提升人体的整体生理与心理健康水平。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Social support systems can provide food, housing, financial aid, and emotional support during crises. They can make it possible for ill and frail people to continue to stay in their homes rather than move to a live-in facility.</p>
+                      <p class="para-cn">事实上，对于个体的长期安康而言，社会支持的抗病价值绝不亚于优质营养膳食、无烟洁净环境与规律体育锻炼！在危机爆发时，社会支持网络能够为成员提供食物、遮风避雨的居所、应急经济资助以及不可替代的情感支柱。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Social supports may also help people living with dementia stay in their homes longer. Support workers may be key members of a client's social support system. As a support worker, you provide practical support, such as help with activities of daily living (ADLs) and home management, and emotional support by practising compassionate care.</p>
+                      <p class="para-cn">正是有了社会支持的托举，才使得无数身患严重慢病与虚弱的高龄长者能够继续长久留住在自己熟悉的家中接受居家照护，而非被迫过早迁入封闭式的机构。社会支持亦能极大延缓认知症患者失去独立生活能力的时间。在临床实务中，支持工作者往往正是案主最核心的社会支持支柱之一——您不仅通过协助完成日常生活活动（ADLs）与家政打理提供扎实的实操保障，更通过践行慈悲关怀为案主注入弥足珍贵的情感依靠。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Spiritual Health</h3>
+                  <div class="heading-cn">精神健康维度（Spiritual Health）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Spiritual health is achieved through belief in a purpose greater than the self. It may or may not involve being a member of a formal religion or even believing in a higher being.</p>
+                      <p class="para-cn">精神健康是通过坚信生命中存在着某种超越自我局限的更高意义、使命与崇高归宿而达成的。这种精神追求可能表现为加入某个正规的宗教信仰团体，也可能完全不涉及宗教或神明信仰。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Physical, Emotional & Social Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">People who are spiritually healthy tend to have a clear understanding of what they believe to be right and wrong, and their behaviours often reflect their beliefs. They feel their life has meaning. They are generally more concerned about personal fulfillment than about material things.</p>
+                      <p class="para-cn">精神健康的人往往对是非善恶具有极为清晰坚定的伦理体悟，其言谈举止亦时刻体现其内心的价值观。他们深信自己的生命绝非虚度、而是富于意义的。在面对人生物欲诱惑时，他们通常更热切地追求心灵的丰盈与内在的自我实现，而非单纯的物质财富积累。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-81">
+              <span class="marker-pill">p. 81</span>
+            </div>
+            
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Cognitive Health</h3>
+                  <div class="heading-cn">认知健康维度（Cognitive Health）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Cognitive & Spiritual Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Cognitive health is achieved by keeping the mind active and creative throughout life. An active mind is open to new ideas and experiences and can analyze, reason, and solve problems.</p>
+                      <p class="para-cn">认知健康是通过终身保持大脑思维的活跃、敏锐与创造力而达成的。一个充满活力的头脑始终对新思想、新经验与新知识保持开放包容的态度，具备独立分析、逻辑推理与解决复杂生活问题的智慧。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Cognitive & Spiritual Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Lifelong learning helps keep the mind sharp. People with good cognitive health are able to adapt to change and are curious about the world around them. Support workers can support clients' cognitive health by encouraging them to stay mentally active—for example, by reading, doing puzzles, playing games, and participating in hobbies and social activities.</p>
+                      <p class="para-cn">终身学习（Lifelong Learning）是保持大脑神经元通路敏锐如新的最佳良方。具备良好认知健康的人能够坦然顺应时代与生活的变迁，对身处的广阔世界始终抱有热忱的探索求知欲。支持工作者在日常照护中可以通过多种方式赋能案主的认知健康——例如，鼓励并陪伴他们阅读报章书籍、做填字拼图游戏、下棋对弈、参与艺术手工创作以及融入各类智力与社交活动。</p>
+                    </article>
+                    
+                <div class="editorial-heading-major" id="sec-03">
+                  <h2 class="heading-en">Achieving Health and Wellness</h2>
+                  <div class="heading-cn">健康与安康的达成：动态流动的健康连续谱</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Cognitive & Spiritual Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Health and wellness are not static conditions. They lie on a continuum with optimal health or wellness on one end and extreme ill health on the other end. A person's place on the continuum shifts depending on factors such as life circumstances and how the person adjusts to them.</p>
+                      <p class="para-cn">健康与安康绝非一成不变的静止固化状态。在现代全人医学视域下，它们处于一个动态流动的连续谱（Continuum）之上：一端代表着巅峰的最优健康与丰盛安康（Optimal Health / Wellness），而另一端则代表着濒临崩溃的极度病态与虚弱（Extreme Ill Health）。个体在这一生命连续谱上的具体位置始终处于动态位移之中，取决于其当前遭遇的生活变故、外在压力以及当事人应对调适此类危机的综合能力。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="134.11" data-end="249.74" data-title="Cognitive & Spiritual Dimensions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Wellness is the achievement of the best health possible in all dimensions of one's life. Even a person with a chronic illness or physical disability can achieve wellness by maximizing their potential in all dimensions of life.</p>
+                      <p class="para-cn">安康（Wellness）是指一个人在自身既定生理条件限制下，在生命的全部维度中所能达成的最佳可能健康境界。即便是一位身患不可逆慢性退行性疾病或终身肢体残疾的案主，只要其在情绪、社交、认知与精神维度充分发掘并最大化实现其内在潜能，依然能够骄傲地达成属于他的丰盛安康状态！</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-82">
+              <span class="marker-pill">p. 82</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-04">
+                  <h2 class="heading-en">DETERMINANTS OF HEALTH</h2>
+                  <div class="heading-cn">健康的决定因素：超越个人控制的宏观生态</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="249.74" data-end="350.0" data-title="Determinants of Health & Income Inequality" onclick="playParagraphAudio(this)">
+                      <p class="para-en">People used to think that health is entirely a matter of individual choice. However, we now know that factors beyond an individual's immediate control have a major influence on health. In spite of holistic health practices, people (or even an entire community) could become very ill if they live close to a toxic waste dump or live several hundred kilometres away from the closest hospital and are unable to access health care when they need it.</p>
+                      <p class="para-cn">在过去，人们普遍存在一种肤浅偏见，认为健康完全取决于个人的主观行为抉择与道德自律。然而现代公共卫生科学雄辩地证实：大量远远超出个人直接控制范畴的宏观外部系统性因素，对个体的健康结局起着决定性支配作用！即便一个人极其自律地践行全人健康生活方式，但若其不幸被迫居住在有毒工业废料倾倒场隔壁，或是居住在距离最近的现代医院数百公里之遥且在突发急症时根本无法获得救治的偏远荒原，个人乃至整个族群社区依然会不可避免地深陷绝症与病痛深渊。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="249.74" data-end="350.0" data-title="Determinants of Health & Income Inequality" onclick="playParagraphAudio(this)">
+                      <p class="para-en">In Canada, we know that achieving individual health is an important part of a community's health. To ensure the health of all Canadians, we need to improve not only the quality of health care that is available to Canadians but also their living conditions.</p>
+                      <p class="para-cn">在加拿大国家发展战略中，实现每个公民的个体健康是保障整个社会社区繁荣福祉的核心基石。为了切实保障所有加拿大人的生命健康，国家不仅必须持续提升全民公费医疗服务的品质与均等化可及性，更必须从根本上改善广大国民的底线生活生存条件。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="249.74" data-end="350.0" data-title="Determinants of Health & Income Inequality" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Realizing that health may be influenced by factors beyond a person's immediate control, Health Canada has tried to identify those factors and to focus its efforts on addressing them. These factors are known as the social determinants of health. Canada's version of these social determinants is slightly different from the WHO's version (BOX 6.1).</p>
+                      <p class="para-cn">基于对“健康深受非个人直接控制之宏观系统影响”的深刻体认，加拿大卫生部系统确立并持续攻坚这些关键瓶颈因素——它们被称为“健康的社会决定因素”（Social Determinants of Health）。加拿大官方制定的国家版本清单，与世界卫生组织的全球通用版本存在着精妙而务实的本土化对照（见专栏 6.1）。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-83">
+              <span class="marker-pill">p. 83</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 6.1: Social Determinants of Health: A Comparison Between Canada's Version and the World Health Organization's (WHO's) Version</h4>
+                    <div class="box-title-cn">专栏 6.1：健康社会决定因素对照：加拿大国家版本与世界卫生组织（WHO）全球版本深度对比</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">While a number of countries have identified determinants of health for their citizens, the World Health Organization (WHO) has identified what it considers to be the global determinants of health.</div>
+                      <div class="clause-cn">虽然许多国家都为其国民确立了各自的健康决定因素，但世界卫生组织（WHO）确立了其认为放之四海而皆准的全球关键健康决定因素。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">World Health Organization (WHO): 10 Social Determinants of Health:<br>• The social gradient<br>• Stress<br>• Early life<br>• Social exclusion<br>• Unemployment<br>• Social support<br>• Addiction<br>• Food<br>• Transport</div>
+                      <div class="clause-cn">世界卫生组织（WHO）确立的 10 大健康社会决定因素：<br>• 社会阶梯与贫富梯度（The social gradient）<br>• 慢性压力（Stress）<br>• 生命早期经历（Early life）<br>• 社会排斥与边缘化（Social exclusion）<br>• 失业与生计剥夺（Unemployment）<br>• 社会支持网络（Social support）<br>• 成瘾行为（Addiction）<br>• 营养与食品安全（Food）<br>• 交通与出行便利（Transport）</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Canada: 12 Determinants of Health:<br>• Income and social status<br>• Social support networks<br>• Education and literacy<br>• Employment and working conditions<br>• Social environments<br>• Physical environments<br>• Personal health practices and coping skills<br>• Healthy child development<br>• Biology and genetic endowment<br>• Health services<br>• Gender<br>• Culture</div>
+                      <div class="clause-cn">加拿大公共卫生署确立的 12 项国家关键健康决定因素：<br>• 收入水平与社会地位（Income and social status）<br>• 社会支持网络（Social support networks）<br>• 受教育水平与读写素养（Education and literacy）<br>• 就业与工作安全环境（Employment and working conditions）<br>• 社会人文环境（Social environments）<br>• 物理与生态环境（Physical environments）<br>• 个人健康行为与应对技能（Personal health practices and coping skills）<br>• 健康儿童早期发展（Healthy child development）<br>• 人类生物学与遗传基因（Biology and genetic endowment）<br>• 医疗卫生服务可及性（Health services）<br>• 社会性别认同与权力结构（Gender）<br>• 多元文化背景与族群包容（Culture）</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Comparing the two lists below, for the WHO versus Canada, why do you think Canada has included more determinants of health in their list? Are there any others that you would add to the list?<br>Sources: World Health Organization. (2020). Social determinants of health; Government of Canada. (2019). Social determinants of health and health inequities.</div>
+                      <div class="clause-cn">对比上述两份权威清单，为何加拿大官方版本特别凸显了受教育读写素养、社会性别以及多元文化族群包容？在您所经历的临床多元文化照护实务中，您认为还有哪些不为人知的关键因素应当被载入健康保障的崇高行列？<br>文献来源：世界卫生组织（2020）《健康社会决定因素报告》；加拿大政府（2019）《社会决定因素与健康不平等白皮书》。</div>
+                    </div>
+                    </div></aside>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="249.74" data-end="380.0" data-title="Box 6.1 Determinants of Health & Case Study: Jason" onclick="playParagraphAudio(this)">
+                      <p class="para-en">The 12 identified social determinants of health focus on the 'bigger picture' of the broad range of personal, social, economic, and environmental factors that determine individual and population health.</p>
+                      <p class="para-cn">加拿大官方确立的这 12 项健康社会决定因素，彻底超越了微观病理学视角，宏阔审视由个人特质、社会支持、经济基础与自然环境交织而成的“大生态图景”，全方位决定着广大国民个体的寿命质量与整个国家的健康根基。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">1. Income and Social Status</h3>
+                  <div class="heading-cn">第 1 项决定因素：收入水平与社会地位（Income and Social Status）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="249.74" data-end="380.0" data-title="Box 6.1 Determinants of Health & Case Study: Jason" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Health status improves at each step up the income and social hierarchy. High income determines living conditions such as safe housing and the ability to buy sufficient nutritious food. The healthiest Canadians are generally those with higher incomes and higher levels of education.</p>
+                      <p class="para-cn">在社会阶梯与收入分配的每一个层级跃升中，国民的整体健康水平均呈现出显著的正向梯度改善。充裕的收入直接决定了个人能否负担得起结构安全防寒的体面住房、能否长年购买充足新鲜的健康有机食品。统计数据无情表明：全加拿大健康状态最优、慢性病发病率最低的人群，绝大多数正是那些高收入且接受过精英高等教育的阶层。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">2. Social Support Networks</h3>
+                  <div class="heading-cn">第 2 项决定因素：社会支持网络（Social Support Networks）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="249.74" data-end="380.0" data-title="Box 6.1 Determinants of Health & Case Study: Jason" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Support from families, friends, and communities is associated with better health. Such social support networks can be very important in helping people deal with difficult situations and solve problems as well as in maintaining a sense of control over the circumstances of their life.</p>
+                      <p class="para-cn">来自血脉亲人、挚友伙伴以及温暖包容的社区网络的坚实支持，与卓越的健康状况高度正相关。当个体面临突发厄运、失业或伤病时，社会支持网络能够提供无可替代的应急援助、合力化解现实危机，并赋予当事人对于自身生命际遇不可动摇的掌控感与尊严。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-84">
+              <span class="marker-pill">p. 84</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">CASE STUDY: Jason and His Determinants of Health</h4>
+                    <div class="box-title-cn">临床案例实操思维修炼：杰森与他的健康决定因素链条反思</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">This deceivingly simple story illustrates how Jason's environment and life situation (also known as his determinants of health) can affect his health. Every Canadian's health is influenced by their own determinants of health.</div>
+                      <div class="clause-cn">这个看似极其简单的生活问答故事，深刻揭示了杰森所处的生长环境与生活处境（即其生命中的健康决定因素）是如何一步步导致其健康破产的。每一个加拿大人的身体命运，无一不被其背后的决定因素网络深层锁定：</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">• 'Why is Jason in the hospital?'<br>  'Because he has a bad infection in his leg.'<br>• 'But why does he have an infection?'<br>  'Because he has a cut on his leg, and it got infected.'<br>• 'But why does he have a cut on his leg?'<br>  'Because he was playing in the junkyard next to his apartment building, and there was some sharp, jagged steel there that he fell on.'<br>• 'But why was he playing in a junkyard?'<br>  'Because his neighbourhood is kind of run down. A lot of kids play there, and there is no one to supervise them.'<br>• 'But why does he live in that neighbourhood?'<br>  'Because his parents can't afford a nicer place to live.'<br>• 'But why can't his parents afford a nicer place to live?'<br>  'Because his Dad is unemployed and his Mom is sick.'<br>• 'But why is his Dad unemployed?'<br>  'Because he doesn't have much education and he can't find a job.'<br>• 'But why...?'<br>Source: Adapted from Towards a healthy future: Second report on the health of Canadians. Public Health Agency of Canada.</div>
+                      <div class="clause-cn">• “杰森为什么会住进医院？”<br>  “因为他的腿部遭受了极其严重的感染。”<br>• “但是他为什么会发生腿部感染？”<br>  “因为他的腿被严重割破划伤，未能得到妥善消毒包扎，进而恶化化脓。”<br>• “但是他的腿为什么会被割伤？”<br>  “因为他在自家简陋公寓楼旁的废铁垃圾堆放场玩耍，失足摔倒在尖锐生锈的破铁板上。”<br>• “但是他为什么偏偏要在危险的废铁垃圾场里玩？”<br>  “因为他居住的街区极其贫困衰败，附近根本没有安全的儿童公园，孩子们只能在那里玩，而且根本没有成年人有空监护管教他们。”<br>• “但是他们全家为什么必须住在那样破败危险的贫民街区？”<br>  “因为他的父母微薄的收入根本负担不起更安全、环境更好的体面住房。”<br>• “但是他的父母为什么负担不起更好的住所？”<br>  “因为他的父亲长期失业在家，而母亲长年重病卧床。”<br>• “但是他的父亲为什么会长期失业？”<br>  “因为他文化程度很低，没有一技之长，在竞争激烈的劳动力市场上根本找不到一份能够维持生计的工作。”<br>• “但是究竟为什么……？”<br>文献来源：加拿大公共卫生署《迈向健康未来：加拿大人健康状况第二次国家报告》。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">3. Education and Literacy</h3>
+                  <div class="heading-cn">第 3 项决定因素：受教育程度与读写素养（Education and Literacy）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="350.0" data-end="410.0" data-title="Employment, Working Conditions & Environments" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Health status improves with higher levels of education. Education is closely tied to socioeconomic status; it equips people with knowledge and skills for problem solving and gives them a sense of control over life circumstances. It also increases job opportunities and income security.</p>
+                      <p class="para-cn">国民的健康水平伴随受教育程度的提升而显著攀升。教育与个人的社会经济地位密不可分：优良的教育不仅赋予人们分析问题、解决复杂危机的知识与技能，更赋予当事人对自身生命航向的信心与掌控力。此外，良好的读写素养能极大拓展就业空间，从根本上奠定终身的经济与健康安全。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">4. Employment and Working Conditions</h3>
+                  <div class="heading-cn">第 4 项决定因素：就业保障与工作安全条件（Employment and Working Conditions）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="350.0" data-end="410.0" data-title="Employment, Working Conditions & Environments" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Unemployment, underemployment, and stressful or unsafe work are associated with poor health. People who have more control over their work circumstances and fewer stress-related demands on the job are healthier and often live longer than those in more stressful or riskier jobs.</p>
+                      <p class="para-cn">长期失业、不充分就业（打零工）以及长期暴露在高度心理压力或高危物理隐患的工作环境中，必然导致严重的健康损耗。统计表明，那些对自身工作环境拥有较多自主话语权、职场压力需求适度且劳动保护健全的劳动者，其整体身体素质与寿命显著超越那些长期在严苛、高危或剥削性岗位上透支生命的劳动者。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">5. Social Environments</h3>
+                  <div class="heading-cn">第 5 项决定因素：社会人际与社区生态环境（Social Environments）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="350.0" data-end="410.0" data-title="Employment, Working Conditions & Environments" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Social environments include the civic vitality of communities, social networks, and community safety. A healthy social environment provides support, security, and a sense of belonging.</p>
+                      <p class="para-cn">社会人文环境涵盖了社区基层的公民活力、互助网络、公共治安与社会凝聚力。一个健康、和谐且充满人文关怀的社会环境，能够为其中的每一位居民提供强大的精神归属感、人身安全感与危难时刻的兜底保护。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">6. Physical Environments</h3>
+                  <div class="heading-cn">第 6 项决定因素：物理与自然生态生活环境（Physical Environments）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="350.0" data-end="410.0" data-title="Employment, Working Conditions & Environments" onclick="playParagraphAudio(this)">
+                      <p class="para-en">The physical environment includes safe drinking water, clean air, safe houses, workplaces, communities, and roads. Factors such as air pollution, water contamination, secondhand smoke, and unsafe building conditions have a direct and negative impact on health.</p>
+                      <p class="para-cn">物理生态环境涵盖了清洁安全的饮用水源、清新的空气质量、结构牢固防寒的住宅、合规安全的工作场所、维护良好的公共道路与无障碍社区基础设施。空气严重污染、水源化学污染、室内二手烟雾萦绕以及老旧破损的危险建筑物，都会对机体呼吸、心血管与免疫系统产生直接、不可逆的剧毒破坏。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-85">
+              <span class="marker-pill">p. 85</span>
+            </div>
+            
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">7. Personal Health Practices and Coping Skills</h3>
+                  <div class="heading-cn">第 7 项决定因素：个人健康行为与心理应对技能（Personal Health Practices and Coping Skills）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="380.0" data-end="437.93" data-title="Personal Health Practices, Coping Skills & Genetics" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Personal practices such as balanced eating, physical activity, not smoking, moderate or no alcohol consumption, and effective stress coping prevent disease and promote well-being. Coping skills help individuals deal with life challenges without resorting to harmful health behaviours.</p>
+                      <p class="para-cn">诸如均衡饮食、适量运动、坚决戒烟、滴酒不沾或极度克制、以及科学有效的压力疏导等个人健康行为，是预防慢性退行性疾病、维护终身安康的根本屏障。良好的心理应对技能能够协助个体在遭受生命暴击与沉重生活压力时，通过健康的心理机制排解化解，而不至于滑入吸毒、酗酒、暴饮暴食等自毁性不良行为的泥潭。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">8. Healthy Child Development</h3>
+                  <div class="heading-cn">第 8 项决定因素：健康儿童早期发展（Healthy Child Development）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="380.0" data-end="437.93" data-title="Personal Health Practices, Coping Skills & Genetics" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Early childhood development—from conception through age six—has a profound and lasting effect on brain development, emotional security, learning, and adult health status. Positive early experiences set the foundation for lifelong physical and mental well-being.</p>
+                      <p class="para-cn">从母体受孕直至 6 岁之前的儿童生命早期发展阶段，对人脑神经元突触的发育架构、情绪依恋安全感、认知学习能力以及成年乃至老年的生理健康状况，具有决定性、不可逆的深远终身影响。温暖、充实且备受呵护的早期童年经历，是铸就个体一生身心健康最坚不可摧的基石。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">9. Biology and Genetic Endowment</h3>
+                  <div class="heading-cn">第 9 项决定因素：人类生物学与遗传基因禀赋（Biology and Genetic Endowment）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="380.0" data-end="437.93" data-title="Personal Health Practices, Coping Skills & Genetics" onclick="playParagraphAudio(this)">
+                      <p class="para-en">The basic biology and organic makeup of the human body are fundamental determinants of health. Genetic endowment provides an inherited predisposition to certain illnesses, but lifestyle and environmental factors can modify or influence whether these genetic predispositions result in active disease.</p>
+                      <p class="para-cn">人类人体的基本生物学构造与遗传基因禀赋，是决定机体健康的基础底色。先天的基因构成赋予了个体对某些特定重大器质性疾病（如心脑血管疾病、糖尿病、某些恶性肿瘤）的家族遗传易感倾向；然而现代表观遗传学证实：后天积极的生活方式干预、无污染的生活环境与健康的心理状态，往往能够极大地调节、抑制甚至逆转这些遗传易感基因的显性发作！</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Personal Factors That Can Influence Health</h3>
+                  <div class="heading-cn">影响健康的五大核心个人内在因素</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="380.0" data-end="437.93" data-title="Personal Health Practices, Coping Skills & Genetics" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Personal factors that influence health include: (1) personal life skills, (2) stress, (3) personal beliefs about health care, (4) social relationships and belonging, and (5) a sense of control over one's life circumstances.</p>
+                      <p class="para-cn">深层左右个体健康维度的五大核心个人内在因素具体包括：(1) 个人生活自理与问题化解技能，(2) 心理与生理慢性压力水平，(3) 对现代医学与自我保健的内在核心信念与态度，(4) 人际社交亲密关系与社群归属感，以及 (5) 对自身生命际遇与前途的内在掌控感（自决权）。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-86">
+              <span class="marker-pill">p. 86</span>
+            </div>
+            
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">10. Health Services</h3>
+                  <div class="heading-cn">第 10 项决定因素：卫生医疗保健服务的可及性（Health Services）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="410.0" data-end="437.93" data-title="Health Services, Gender & Culture" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Health services, particularly those designed to maintain and promote health, prevent disease, and restore health and function, contribute to population health. Equitable access to healthcare services across rural, remote, and urban communities is a fundamental pillar of health in Canada.</p>
+                      <p class="para-cn">医疗卫生服务体系——尤其是那些专门致力于促进国民健康、预防早期疾病、治疗急性创伤以及促进肢体与神经机能康复的全方位服务——直接构成了全民族健康水准的坚强后盾。保障广袤农村、极地偏远社区与现代化大都市之间医疗资源配置的公正合理（Equitable Access），是加拿大全民医保制度坚守的核心立国柱石。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">11. Gender</h3>
+                  <div class="heading-cn">第 11 项决定因素：社会性别（Gender）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="410.0" data-end="437.93" data-title="Health Services, Gender & Culture" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Gender refers to the array of socially determined roles, personality traits, attitudes, behaviours, values, relative power, and influence that society ascribes to the two sexes on a differential basis. Gender norms influence health behaviours, risk-taking, vulnerability to certain conditions, and access to healthcare.</p>
+                      <p class="para-cn">社会性别是指社会基于生理性别差异，而人为赋予男女两性的不同社会角色分工、性格期待、行为举止范式、社会相对权力与话语权体系。刻板的社会性别规范深刻左右着两性的健康求医行为、冒险倾向、特定职业疾病的易感暴露风险、乃至在家庭与社会中获得医疗救助的难易程度。</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">12. Culture & Indigenous Peoples' Health</h3>
+                  <div class="heading-cn">第 12 项决定因素：多元文化背景与原住民健康福祉（Culture & Indigenous Health）</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="410.0" data-end="437.93" data-title="Health Services, Gender & Culture" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Culture influences how people interact with the health care system, their health beliefs, and dietary practices. Some people face health risks due to a socio-economic environment shaped by marginalization, stigmatization, and cultural loss. In Canada, Indigenous peoples face unique health challenges rooted in the historical legacy of colonization, residential schools, and systemic inequities.</p>
+                      <p class="para-cn">文化背景深层左右着个体与现代医疗卫生系统的互动模式、对疾病起因与治疗方式的文化认同信仰、以及世代相传的饮食与生活习俗。许多少数族裔与边缘化群体，长期生活在遭受社会排斥、文化偏见甚至歧视压迫的不良社会环境中，承受着沉重的身心创伤。在加拿大，第一民族、因纽特人与梅蒂斯人等原住民群体所面临的严峻健康失衡与代际创伤，根源于殖民掠夺、寄宿学校残酷同化体制的历史遗留祸患以及当今社会依然存在的深层系统性不公。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-87">
+              <span class="marker-pill">p. 87</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-05">
+                  <h2 class="heading-en">ILLNESS AND DISABILITY</h2>
+                  <div class="heading-cn">疾病与残疾的本质与临床分类</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="437.93" data-end="480.0" data-title="Illness vs Disability & Acute vs Persistent Conditions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Illness is the loss of physical or mental health. Disability is the loss of physical or mental function. Although people often use the terms interchangeably, they are distinct concepts. A person can have a disability (such as blindness or paraplegia) and still enjoy excellent overall health.</p>
+                      <p class="para-cn">疾病（Illness）是指身体生理或心理健康的受损与丧失。残疾（Disability）是指身体生理功能或神经精神活动机能的缺失与丧失。尽管日常生活中人们经常将这两个词混为一谈，但在医学与社会学层面，它们是截然不同的两个科学概念！一个患有严重残疾的个体（例如盲人或因外伤截瘫而使用轮椅的运动员），只要其各个器官系统代谢良好、心理充满活力且善于自我管理，依然可以享有极其卓越的整体身心健康！</p>
+                    </article>
+                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Acute Illness vs. Persistent (Chronic) Illness</h3>
+                  <div class="heading-cn">急性疾病与持续性（慢性）疾病的病理与照护鉴别</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="437.93" data-end="480.0" data-title="Illness vs Disability & Acute vs Persistent Conditions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">An acute illness appears suddenly and lasts for a short time, usually less than 3 months. Recovery is usually complete. Examples include influenza, pneumonia, appendicitis, and strep throat.</p>
+                      <p class="para-cn">急性疾病（Acute Illness）起病急骤，病程短暂（通常持续时间短于 3 个月）。在接受及时有效的医学干预后，机体通常能够获得彻底、完全的康复。典型临床范例包括流行性感冒、急性大叶性肺炎、急性阑尾炎以及链球菌性咽峡炎等。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="437.93" data-end="480.0" data-title="Illness vs Disability & Acute vs Persistent Conditions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">A persistent illness (chronic illness) is an ongoing, slow, or progressive illness that lasts for months or years. It cannot be cured, but its symptoms and progression can be managed through treatment, lifestyle changes, and supportive care. Examples include diabetes, arthritis, multiple sclerosis, heart disease, and dementia.</p>
+                      <p class="para-cn">持续性疾病（又称慢性疾病，Chronic / Persistent Illness）是一种长期持续、病程迁延、通常进展缓慢且往往伴随终身的慢性病理状态，持续时间长达数月乃至数十年之久。现阶段现代医学尚无法将其彻底根治，但通过科学规律的药物治疗、积极的生活方式干预、无微不至的居家照护与心理疏导，其临床症状可以得到极好控制，疾病的恶化演变速度亦能被大幅延缓。典型范例包括糖尿病、退行性骨关节炎、多发性硬化症（MS）、慢性心力衰竭以及阿尔茨海默病等认知症。</p>
+                    </article>
+                    
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="437.93" data-end="480.0" data-title="Illness vs Disability & Acute vs Persistent Conditions" onclick="playParagraphAudio(this)">
+                      <p class="para-en">A terminal illness is an illness or condition from which the person will not recover and that will eventually cause death. Examples include advanced cancers and end-stage organ failure.</p>
+                      <p class="para-cn">终末期绝症（Terminal Illness）则是指以目前的医疗水平已完全无法逆转、病情呈进行性不可逆衰竭、并最终必然导致患者生命走向终结的疾病阶段。典型范例包括各种晚期广泛转移的恶性肿瘤以及终末期器官衰竭。</p>
+                    </article>
+                    
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Mrs. Davidson: Coping With a Life-Altering Diagnosis</h4>
+                    <div class="box-title-cn">临床个案支持：戴维森夫人的多发性硬化症（MS）应对与赋能历程</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Mrs. Davidson, 38 years old, was diagnosed with multiple sclerosis (MS). She felt overwhelmed by fear and uncertainty about how her mobility and independence would be affected.</div>
+                      <div class="clause-cn">年仅 38 岁的戴维森夫人被确诊患有多发性硬化症（MS）。面对这一可能逐渐剥夺其行动能力的生命宣判，她内心充斥着对未来瘫痪、失去自理能力及拖累家庭的巨大恐惧与迷茫绝望。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Her support worker helped her focus on what she could still do, supported her in modifying her home environment, and encouraged her to participate in a local MS support group. Within a year, she regained her confidence and adapted successfully.</div>
+                      <div class="clause-cn">她的专职支持工作者运用积极赋能的专业理念，耐心引导她将注意力从“已经失去的能力”转移到“依然完好的残存潜能与生活价值”之上；协助她重新改造了家居环境以防跌倒；并真诚鼓励她融入当地的 MS 病友互助支持社群。短短一年间，她重新找回了自尊与生活的掌控感，成功实现了与慢病的和平共处。</div>
+                    </div>
+                    </div></aside>
+
+            <div class="page-anchor-marker" id="page-88">
+              <span class="marker-pill">p. 88</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-06">
+                  <h2 class="heading-en">Change and Loss Associated With Illness and Disability</h2>
+                  <div class="heading-cn">疾病与残疾伴随的重大生活转变与丧失</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="480.0" data-end="519.91" data-title="Causes of Disability & Box 6.2 Supporting Independence" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Illness and disability usually affect all aspects of a client's life. The client and their family must cope with profound changes and painful losses:</p>
+                      <p class="para-cn">严重的疾病与残疾绝不仅仅是身体器质上的病变，它会如地震般剧烈震荡并撕裂案主生命的每一个维度。案主本人及其至亲家属，必须直面并痛苦适应生活模式的一系列剧变与深重丧失：</p>
+                    </article>
+                    <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Change in routine: Daily schedules are completely disrupted by medical appointments, rehabilitation sessions, and physical limitations.</strong></div>
+                      <div class="item-cn">生活节律的彻底打破：以往规律从容的日常生活节律，被接踵而至的就医服药、痛苦繁重的康复训练以及因行动不便导致的漫长等待彻底打碎撕裂。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Change in work and leisure: Clients often face reduced hours, job loss, early retirement, and the inability to continue cherished recreational hobbies.</strong></div>
+                      <div class="item-cn">职业发展与休闲社交的丧失：案主常常被迫缩减工时、丧失心爱的职业甚至被迫提早退休；曾经带给他们无限欢愉的远足、跳舞或体育运动再也无法涉足。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Change in life plans: Travel dreams, career ambitions, and retirement expectations must be indefinitely postponed or permanently abandoned.</strong></div>
+                      <div class="item-cn">人生远景规划的被迫幻灭：曾经悉心规划的环球旅行、事业晋升宏图乃至安享天伦的退休美梦，在残酷的伤病面前被迫无限期搁置甚至永远化作泡影。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Change in emotional health: Chronic pain, progressive physical decline, and the uncertainty of prognosis cause profound emotional vulnerability.</strong></div>
+                      <div class="item-cn">情绪心理防线的动荡撕裂：与顽固慢性疼痛的日夜搏斗、身体机能的不可逆衰退、以及疾病未来转归的极度不确定性，令案主的心灵时刻处于脆弱煎熬之中。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Change in sexual functioning: Physical disability, chronic fatigue, medication side effects, or altered body image can severely impact intimate relationships.</strong></div>
+                      <div class="item-cn">性心理与亲密机能的深远改变：肢体残障、剧烈疲劳、药物不良反应以及手术导致的体象改变，常常沉重打击案主的自尊，令亲密关系的维系面临空前挑战。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Loss of independence: Needing assistance with basic activities of daily living (bathing, dressing, toileting) strips away self-reliance.</strong></div>
+                      <div class="item-cn">独立自主自尊的严重剥夺：连如厕、更衣、洗澡这些曾经极其隐私、轻而易举的日常基本自理活动，都必须完全仰仗他人协助，极易让案主产生自身已沦为家庭累赘的绝望感。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Loss of dignity: Feeling exposed during intimate care procedures or losing bladder and bowel control can cause intense feelings of humiliation.</strong></div>
+                      <div class="item-cn">人性尊严的重创感：在接受最私密的身体护理时不得不暴露于他人面前，或是遭遇无法自控的尿失禁、大便失禁，往往带给案主刻骨铭心的羞辱感与自尊坍塌。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Loss of body part or function: Surgical amputation of a limb, mastectomy, or loss of sight, hearing, or speech evokes intense grief.</strong></div>
+                      <div class="item-cn">身体肢体或生理器官功能的永久丧失：因手术截肢、乳腺癌根治术失去乳房，或是因神经病变彻底丧失视力、听力与言语交流能力，都会引发形同丧亲般的深巨哀伤。</div>
+                    </li>
+                    </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-89">
+              <span class="marker-pill">p. 89</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-lavender">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 6.2: Common Reactions to Illness and Disability</h4>
+                    <div class="box-title-cn">专栏 6.2：案主面对突发疾病与残疾时的常见身心防御与情绪行为反应</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Fear and anxiety: Facing fear of severe pain, total dependency, financial disaster, abandonment, and death.</div>
+                      <div class="clause-cn">恐惧与剧烈焦虑（Fear and Anxiety）：当遭遇严重病患时，案主内心充斥着对剧烈肉体痛苦的恐惧、对彻底丧失自理沦为累赘的恐惧、对家庭经济破产的恐惧、乃至对死亡本身的巨大惊恐。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Sadness and grief: Grieving multiple compound losses—loss of position in the family, loss of income, loss of mobility, and shattered dreams.</div>
+                      <div class="clause-cn">深沉悲伤与多重哀恸（Sadness and Grief）：面临复合型的巨大丧失——家庭顶梁柱地位的丧失、稳定收入的断流、自由行动能力的丧失以及美好未来的破灭，案主处于极其深沉的居丧悲痛之中。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Denial: Refusing to acknowledge the reality of the illness or minimizing its severity: 'The doctors are wrong; there is nothing wrong with me.' Denial is an unconscious defense mechanism that protects against immediate psychological collapse, but prolonged denial dangerously delays essential medical treatment.</div>
+                      <div class="clause-cn">心理否认与回避（Denial）：拒绝正视患病的残酷现实，或是极力粉饰、贬低病情的严重性：“医生肯定是搞错了，我的身体棒得很！”否认在早期是一种无意识的心理自我保护机制，防止脆弱的心智被巨大的噩耗瞬间击溃；但若长期深陷否认，将导致案主断然拒绝配合关键的治疗与护理。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Anger: Directing frustration and rage at doctors, caregivers, family members, or God: 'Why me? What did I do to deserve this?' Anger is often a mask for profound fear and underlying helplessness.</div>
+                      <div class="clause-cn">愤怒与怨恨宣泄（Anger）：将内心的委屈、挫败与绝望，无差别地宣泄投射到医生、前线护理人员、挚爱亲属甚至神明身上：“为什么偏偏是我？我到底造了什么孽要受这种折磨？！”支持工作者必须清醒认识到：案主的暴躁与怒火，本质上是他内心极度恐惧与无助感的痛苦面具！</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Feelings of helplessness and powerlessness: Lacking control over their body, medical choices, and daily schedule.</div>
+                      <div class="clause-cn">无助感与失控感（Feelings of Helplessness and Powerlessness）：深感自己对每况愈下的身体机能彻底无能为力，在繁复的医疗安排面前毫无发言权，甚至连何时翻身、何时进食都由他人摆布。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Guilt: Blaming themselves for causing the illness or tormenting themselves for being an emotional and financial burden on their family.</div>
+                      <div class="clause-cn">内疚自责与心理负罪感（Guilt）：疯狂自责，认为是自己过去的不良生活习惯导致了这场灾难，或是因自己沉重的医药费与护理需求而深感拖累了子孙至亲，内心痛苦万分。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Depression: Overwhelming feelings of hopelessness, worthlessness, apathy, and despair that interfere with the desire to live or participate in care.</div>
+                      <div class="clause-cn">重度抑郁与绝望厌世（Depression）：持续笼罩在铺天盖地的绝望、自卑、万念俱灰与虚无感之中，对一切曾经热爱的事物彻底丧失兴趣，甚至拒绝进食、放弃求生意志。</div>
+                    </div>
+                    </div></aside>
+
+            <div class="page-anchor-marker" id="page-90">
+              <span class="marker-pill">p. 90</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Supporting Mr. Vitale: The Effect of Serious Illness on Self-Esteem</h4>
+                    <div class="box-title-cn">临床个案支持：维塔利先生因中风致残导致的自尊与重度抑郁危机</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Mr. Vitale was an active, proud building contractor who led complex construction projects. At age 62, he suffered a massive stroke that left him with left-sided hemiplegia and severe dysphagia. Unable to walk, feed himself, or work, he felt completely worthless, refused all visitors, and lashed out angrily at staff during morning care.</div>
+                      <div class="clause-cn">维塔利先生（Mr. Vitale）曾经是一位极其受人尊敬、雷厉风行且充满自豪感的资深建筑承包商，常年统领复杂的重大工程。然而在 62 岁那年，一场灾难性的严重急性脑卒中击倒了他，造成其左侧肢体彻底偏瘫并伴有严重的吞咽障碍。再也无法独立行走、无法自己端碗进食、亦无法重返工地的残酷现实，令其雄心自尊荡然无存。他深感自己已经彻底沦为废人，断然谢绝一切老友探视，并在清晨接受翻身洗漱等护理时，向护理人员大发雷霆、恶语相向。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">His primary support worker realized that Mr. Vitale's anger was a defense against overwhelming depression and helplessness. Instead of retaliating or taking his angry outbursts personally, she listened with profound compassion, validated his grief, gave him choices in his morning routine, and celebrated small daily milestones. Over several months, Mr. Vitale began to engage in his physical therapy and re-established contact with his grandchildren.</div>
+                      <div class="clause-cn">他的专责支持工作者敏锐地觉察到：维塔利先生看似不可理喻的怒火，实则是抵御内心滔天绝望与失控感的脆弱心理屏障。面对案主的冷嘲热讽与暴怒，工作者从未还嘴抱怨，更未将其视作针对个人的攻击；相反，她报以无比深厚的悲悯与尊重，积极倾听并接纳他的哀伤；在晨间护理中处处征询他的意见，赋予他充分的选择权；并在他每一次微小的复健进步时给予真诚赞赏。在数月持之以恒的人本关怀下，维塔利先生封冻的心灵逐渐融化，终于主动投入康复锻炼，并重新敞开怀抱迎接儿孙的探望。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">The Grieving Process and Depression</h3>
+                  <div class="heading-cn">悲伤应对历程与重度抑郁的区别</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="590.0" data-end="656.66" data-title="Denial, Anger, Fear, Depression & Case Study: Davidson" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Grief is a natural and necessary emotional response to loss. Dr. Elisabeth Kübler-Ross identified common stages of grief: denial, anger, bargaining, depression, and acceptance. People do not move through these stages in a linear sequence; they often move back and forth between stages or experience multiple emotions simultaneously. When feelings of sadness become prolonged, pervasive, and prevent basic functioning, the client may be suffering from clinical depression, which requires professional evaluation and support.</p>
+                      <p class="para-cn">哀伤（Grief）是人类在面临重大丧失时一种完全自然且不可逾越的心灵疗愈历程。著名精神医学大师伊丽莎白·库伯勒-罗斯博士提出了经典的悲伤五阶段理论：否认、愤怒、讨价还价、抑郁与最终接纳。必须谨记，人类绝不会机械式地按线性步骤走过这些阶段；他们常常在不同阶段间反复穿梭拉锯，或是同时交织体验多种激烈的情感冲突。然而，当这种悲痛与绝望情绪持续长达数月不退、彻底摧毁个体的基本社会功能时，案主往往已由正常的悲伤演变为了病理性的临床重度抑郁症，必须立即由跨学科医疗团队介入专业评估与治疗支持。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-91">
+              <span class="marker-pill">p. 91</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-teal">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">Providing Compassionate Care: Caring for Clients With Illnesses or Disabilities</h4>
+                    <div class="box-title-cn">临床实务准则：以 DIPPS 原则为指导的慈悲关怀与人本支持</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Dignity: Treat clients with profound respect; never treat them like children; speak in an adult tone; actively listen to their concerns without judgment.</div>
+                      <div class="clause-cn">尊严（Dignity）：给予案主至高无上的人格尊重；严禁采用逗弄婴儿般的幼稚口吻与案主对话；始终以平视成人的专业成熟语调沟通；真诚倾听其内心倾诉，不做道德评判。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Independence: Encourage clients to do as much for themselves as possible, even if tasks take longer; promote self-reliance to maintain self-esteem.</div>
+                      <div class="clause-cn">自立（Independence）：耐心鼓励并协助案主在自身能力范围内独立完成生活琐事，即便其动作极其迟缓，亦绝不可为了省事而粗暴大包大揽；捍卫自立即是捍卫案主的自尊生机。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Privacy: Expose only body parts actively being washed; knock before entering; maintain absolute confidentiality regarding health records and personal disclosures.</div>
+                      <div class="clause-cn">隐私（Privacy）：在进行会阴与身体擦洗时，严格遵循局部遮盖原则，仅暴露正在清洁的部位；进入居室前必须轻声敲门并等待允许；对案主的全部健康档案与生活隐私恪守绝对的职业保密誓言。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Preference: Involve clients in all care decisions; respect their choices regarding clothing, bathing times, meals, and daily activities.</div>
+                      <div class="clause-cn">偏好（Preference）：确保案主全过程深度参与照护决策；由其自主决断今日穿着何种服饰、何种水温更衣沐浴、品尝何种食物以及如何编排一日闲暇时光。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Safety: Adhere strictly to safe transfer techniques, proper body mechanics, and environmental hazard reduction to protect clients from falls and injuries.</div>
+                      <div class="clause-cn">安全（Safety）：时刻严守人体力学转运操作规范，科学规范使用机械吊篮与助行设备；细致排查并清除地面湿滑与障碍物隐患，确保案主在万无一失的安全屏障中生活。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-heading-major" id="sec-07">
+                  <h2 class="heading-en">Stigma and Discrimination</h2>
+                  <div class="heading-cn">社会偏见、污名化与歧视</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="620.0" data-end="656.66" data-title="Grief, Reintegration & Family Impact (Case: Vitale)" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Stigma is a mark of disgrace associated with a particular circumstance, quality, or person that causes one to feel shame or embarrassment. Discrimination is the unfair treatment of people on the basis of their physical characteristics, health history, or group membership. People living with physical or mental disabilities, chronic conditions (such as HIV, hepatitis, or severe arthritis), or cognitive impairments frequently experience painful stigma and discrimination in employment, housing, and social interactions.</p>
+                      <p class="para-cn">社会污名（Stigma）是指与某种特定健康状况、身体缺陷或特定身份相伴生的社会性羞辱烙印，令当事人承受深重的羞耻感与无地自容的折磨。歧视（Discrimination）则是指基于身体特征、既往健康病史、社会阶层或族群身份等外部属性，对特定人群施加的不公正、不平等的排斥与差别待遇。长期与严重身心残疾、慢性传染病（如艾滋病毒感染、肝炎）或认知功能障碍相伴生活的人士，在求职就业、租房安居与公共社交互动中，常常遭受残酷的隐性或显性污名与歧视冷眼。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-92">
+              <span class="marker-pill">p. 92</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-terracotta">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 6.3: Living With Disabilities — Focus on the Person, Not the Disability (Part 1)</h4>
+                    <div class="box-title-cn">专栏 6.3：倡导残障人士积极社会形象的法定专业包容性语言规范指引（第一部分：核心原则与权威对照表）</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">General Guidelines: Words have profound power. The language we use shapes societal attitudes and individual dignity. Support workers must champion people-first language, which emphasizes the human being first before their medical condition or physical limitation.</div>
+                      <div class="clause-cn">通用核心原则：言语拥有无可估量的深层力量；我们所使用的每一个词汇，都在深刻塑造着整个社会的偏见与文明底线。支持工作者必须身体力行推行“人本在先”（People-First Language）的专业语言体系——永远将“有血有肉的人”置于首位，而非将其窄化为其所患的病症或肢体局限。</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">• The word disabled is an adjective, not a noun. People are not conditions. Therefore, avoid 'the disabled' and use 'people with disabilities' or 'persons living with disabilities'.<br>• Avoid stereotyping people with disabilities as either tragic victims or inspirational superheroes for simply living their daily lives. Use objective, nonemotional, nonjudgemental language.</div>
+                      <div class="clause-cn">• 在现代人权与语言学标准中，“残疾”（disabled）永远是一个形容词，绝对不可用作指代群体的名词！人永远高于其身体状况！因此，坚决禁止使用冷漠居高临下的“残废人集合体”（the disabled），而必须严谨使用“生活伴随残障的人士”（people with disabilities / persons living with disabilities）。<br>• 坚决摒弃对残障人士的两极化病态定型思维——既不要将其悲情化为“苦难悲剧牺牲品”，也不要轻率将其拔高为仅仅因为独立完成穿衣如厕等日常生活便冠以“感动生命的超级英雄”。以平视、尊重、客观接纳的专业姿态待之。</div>
+                    </div>
+                    </div></aside>
+
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="656.66" data-end="710.0" data-title="Stigma, Discrimination & Box 6.3 People-First Language" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Authoritative Terminology Table: Instead of outdated, offensive terms, professional support workers must use respectful, people-first language:</p>
+                      <p class="para-cn">权威专业术语规范对照表：前线医护支持工作者严禁使用陈旧歧视性词汇，必须全面换用充满尊重的人本专业词汇：</p>
+                    </article>
+                    
+                <div class="editorial-table-container">
+                  <div class="table-wrap">
+                    <table class="editorial-content-table">
+                <thead><tr>
+<th>陈旧弃用词汇 (Deprecated Terms)</th>
+<th>规范法定倡导用语 (Preferred Terms)</th>
+<th>临床语言学与人权考量 (Rationale)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Cripple, crippled, lame (瘸子/跛子/残废)</td>
+<td style="color:#15803d; font-weight:600;">Person living with a mobility impairment / disability</td>
+<td>聚焦于个体的人性尊严，而非身体缺陷</td>
+</tr>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Deaf-mute, deaf and dumb (聋哑人)</td>
+<td style="color:#15803d; font-weight:600;">Person who is deaf (手语使用者大写 Deaf)</td>
+<td>“哑”字带有贬义且医学上不准确</td>
+</tr>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Epileptic (癫痫病患者作为名词)</td>
+<td style="color:#15803d; font-weight:600;">Person who lives with epilepsy</td>
+<td>人绝不等于某种发作性疾病</td>
+</tr>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Fit, attack, spell (抽风/发作)</td>
+<td style="color:#15803d; font-weight:600;">Seizure (癫痫发作)</td>
+<td>采用标准医学中性名词，消除病耻感</td>
+</tr>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Handicapped, the handicapped (残障废人)</td>
+<td style="color:#15803d; font-weight:600;">Person living with a disability</td>
+<td>“Handicapped”源于古英语乞讨隐喻，已淘汰</td>
+</tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                
+            <div class="page-anchor-marker" id="page-93">
+              <span class="marker-pill">p. 93</span>
+            </div>
+            
+                <aside class="editorial-box-container box-theme-terracotta">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 6.3: Living With Disabilities — Focus on the Person, Not the Disability (Part 2)</h4>
+                    <div class="box-title-cn">专栏 6.3：倡导残障人士积极社会形象的法定专业语言指引（第二部分：权威词汇对照续表）</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-source-citation">
+                      <div class="clause-en">Source: Adapted from Human Resources and Skills Development Canada. (2006). A way with words and images. Suggestions for the portrayal of people with disabilities. Employment and Social Development Canada.</div>
+                      <div class="clause-cn">权威文献溯源：改编自加拿大联邦人力资源与技能发展部（HRSDC, 2006）《图文之道：关于残障人士社会形象刻画与包容性语言的法定指南建议》。</div>
+                    </div>
+                    </div></aside>
+
+                <div class="editorial-table-container">
+                  <div class="table-wrap">
+                    <table class="editorial-content-table">
+                <thead><tr>
+<th>陈旧弃用词汇 (Deprecated Terms)</th>
+<th>规范法定倡导用语 (Preferred Terms)</th>
+<th>临床语言学与人权考量 (Rationale)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Confined to a wheelchair / Wheelchair-bound</td>
+<td style="color:#15803d; font-weight:600;">Person who uses a wheelchair (轮椅使用者)</td>
+<td>轮椅是赋予案主出行自由的工具，而非束缚的牢笼</td>
+</tr>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Mentally retarded, moron, idiot (弱智/白痴)</td>
+<td style="color:#15803d; font-weight:600;">Person with an intellectual or developmental disability</td>
+<td>国际人权宪章明令废止一切智力辱蔑性词汇</td>
+</tr>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Victim of stroke / Suffers from arthritis</td>
+<td style="color:#15803d; font-weight:600;">Person who had a stroke / Person living with arthritis</td>
+<td>拒绝将案主受害者化，强调积极共存与康复主体性</td>
+</tr>
+<tr>
+<td style="color:#b91c1c; font-weight:600;">Handicapped parking / bathroom</td>
+<td style="color:#15803d; font-weight:600;">Accessible parking / Accessible bathroom (无障碍设施)</td>
+<td>设施的本质在于提供平等无障碍的物理环境可及性</td>
+</tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Focus on Long-Term Care: Supporting Independence</h3>
+                  <div class="heading-cn">长期照护实务聚焦：全力支持案主的自立与残存机能</div>
+                </div>
+                
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="710.0" data-end="750.67" data-title="Box 6.3 (Part 2) Terminology Table & Dignity" onclick="playParagraphAudio(this)">
+                      <p class="para-en">In long-term care settings, maintaining the client's independence is essential to their quality of life. Even small acts of independence—such as brushing their own teeth, holding a cup, or choosing what sweater to wear—boost self-esteem and prevent physical decline. Support workers must resist the temptation to 'take over' tasks just to save time; patience and empowerment are the true hallmarks of professional excellence.</p>
+                      <p class="para-cn">在长期照护院舍等机构环境中，竭尽全力维系并激发案主的自立机能，是决定其生命品质的最核心要素。哪怕是极其微小的自立举动——例如让案主用颤抖的双手自己刷牙、自己捧起水杯饮水、或是自主挑选今天想穿哪一件羊毛衫——都能极大地重塑其内在自尊，并从神经反射层面有效延缓肢体机能的退化衰亡。专业支持工作者必须坚决克制住“嫌案主动作成效慢而索性全盘代劳包办”的不良倾向；多一分耐心守候、多一分放手赋能，方显前线专业护理的非凡境界与人本温度。</p>
+                    </article>
+                    
+            <div class="page-anchor-marker" id="page-94">
+              <span class="marker-pill">p. 94</span>
+            </div>
+            
+                <div class="editorial-heading-major" id="sec-08">
+                  <h2 class="heading-en">CHAPTER REVIEW</h2>
+                  <div class="heading-cn">本章复习与临床核心考点归纳</div>
+                </div>
+                <div class="editorial-list-block">
+<ul class="editorial-list">
+
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• A whole person has physical, emotional, social, cognitive, and spiritual dimensions.</strong></div>
+                      <div class="item-cn">一个完整的人是一个由身体、情绪、社交、认知与精神五大维度有机交融的整体。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Holism involves considering all dimensions of health (physical, emotional, social, cognitive, and spiritual); optimal (complete) health is a state of achievable maximum well-being in all of these dimensions.</strong></div>
+                      <div class="item-cn">全人理念（Holism）强调统筹考量生命的全部五大健康维度；最优（完满）健康状态是指个体在自身条件下所能达到的最大可能综合安康状态。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Health lies on a continuum with optimal health or wellness on one end and extreme ill health on the other end. A person's place on the continuum shifts depending on factors such as life circumstances and how the person can adjust to them.</strong></div>
+                      <div class="item-cn">健康处于一个动态流动的连续谱之上：一端是最优安康，另一端则是极度重病。个体在连续谱上的位移，取决于其生活际遇以及应对调整能力的强弱。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Personal factors that can influence the dimensions of health are (1) personal life skills, (2) stress, (3) personal beliefs about health care, (4) social relationships and belonging, and (5) a sense of control.</strong></div>
+                      <div class="item-cn">深层左右个人健康维度的五大内在要素为：(1) 个人生活自理技能，(2) 压力应对，(3) 健康保健观念信念，(4) 社会人际与归属感，以及 (5) 自我掌控感。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• The influences on health that are beyond a person's immediate control are called determinants of health. The 12 determinants of health focus on the 'bigger picture' of where we live—that is, our environment—and the way it affects our health.</strong></div>
+                      <div class="item-cn">超出个人直接掌控范畴的宏观系统性影响因素被称为健康的决定因素。加拿大 12 大健康决定因素全面聚焦于宏观生活大生态及其对国民健康的塑造。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Illness is the loss of physical or mental health, whereas disability is the loss of physical or mental function.</strong></div>
+                      <div class="item-cn">疾病是指身体生理或心理健康的丧失；而残疾则是指身体或神经精神活动功能的缺失或丧失。</div>
+                    </li>
+                    
+                    <li class="editorial-list-item">
+                      <div class="item-en"><strong>• Illness or disability usually affects all aspects of a client's life, and no two clients will experience illness or disability in the same way.</strong></div>
+                      <div class="item-cn">严重的疾病与残障往往会撕裂案主生命的各个层面，且没有任何两个案主面对疾病与残疾的心理感受和应对体验是完全相同的。</div>
+                    </li>
+                    </ul>
+</div>
+
+                <aside class="editorial-box-container box-theme-case">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">CRITICAL THINKING IN PRACTICE: Mr. Jaynz’s Routine</h4>
+                    <div class="box-title-cn">临床批判性思维修炼：杰恩兹先生的晨间日常与温热麦片案例</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                    <div class="box-clause-item">
+                      <div class="clause-en">Mr. Jaynz has always eaten warm cereal for breakfast and before bedtime. Why are routines such as eating warm cereal important to people? How can varying his routine affect Mr. Jaynz?</div>
+                      <div class="clause-cn">长者杰恩兹先生（Mr. Jaynz）几十年来始终雷打不动地在清晨早餐和每晚就寝前必须吃上一碗温热的燕麦片。临床批判性反思：诸如吃热麦片这般看似微不足道的生活日常规矩，为何对身患疾病或迁入院舍的长者至关重要？倘若粗暴打乱或剥夺这一生活惯例，将对杰恩兹先生的身心产生何种恶劣影响？</div>
+                    </div>
+                    
+                    <div class="box-clause-item">
+                      <div class="clause-en">Clinical Rationale: Routines provide a profound sense of security, predictability, and personal control in environments where clients have lost much of their independence. Forcing a sudden disruption in Mr. Jaynz's cherished routine communicates disrespect, strips away his sense of autonomy, and can trigger severe anxiety, confusion, and resistance to care.</div>
+                      <div class="clause-cn">权威临床指引精解：在机构照护或患病环境中，案主往往已经失去了对身体和生活绝大部分事务的掌控；而几十年来熟悉的日常生活惯例，正是他们维系心理安全感、生活可预测性与掌控自尊的最后锚桩！若工作者为了自身操作方便而擅自打破这一惯例，不仅是对案主偏好（Preference）的无礼漠视，更会瞬间摧毁其安全感，诱发强烈的焦虑、失控恐慌乃至激惹拒护行为。</div>
+                    </div>
+                    </div></aside>
+
+            <div class="page-anchor-marker" id="page-95">
+              <span class="marker-pill">p. 95</span>
+            </div>
+            
+                    <article class="bilingual-paragraph audio-trackable" data-ch="6" data-start="850.0" data-end="898.56" data-title="Critical Thinking Review & Evolve Resources" onclick="playParagraphAudio(this)">
+                      <p class="para-en">Chapter Review complete with Practice Exam Questions 10 and 11 and comprehensive clinical rationales. All 11 questions are integrated into the independent Practice Exam Sheet.</p>
+                      <p class="para-cn">本章复习全部完成，包含第 10 与第 11 道全真考题与深度临床精解。全章 11 道标准自测题已全面收敛至独立自测习题库中。</p>
+                    </article>
+                    
+    </div>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch6_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+      } else {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
