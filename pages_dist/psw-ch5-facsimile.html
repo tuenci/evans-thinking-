@@ -2859,16 +2859,16 @@
   </div>
 
   <script>
-    let readerAudio = new Audio('audio/psw/ch5_master.mp3');
-    let isPlaying = false;
-    let lastActiveEntry = null;
+    var readerAudio = new Audio('audio/psw/ch5_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
 
     function toggleReaderAudioPlay() {
       if (readerAudio.paused) {
-        readerAudio.play().then(() => {
+        readerAudio.play().then(function() {
           isPlaying = true;
           document.getElementById('rabPlayBtn').innerText = '⏸';
-        }).catch(e => console.log(e));
+        }).catch(function(e) { console.log(e); });
       } else {
         readerAudio.pause();
         isPlaying = false;
@@ -2877,68 +2877,81 @@
     }
 
     function playParagraphAudio(el) {
-      const start = parseFloat(el.dataset.start);
-      const title = el.dataset.title || '';
+      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var title = el.getAttribute('data-title') || '';
       readerAudio.currentTime = start;
-      readerAudio.play().then(() => {
+      readerAudio.play().then(function() {
         isPlaying = true;
         document.getElementById('rabPlayBtn').innerText = '⏸';
-      }).catch(e => console.log(e));
+      }).catch(function(e) { console.log(e); });
 
-      document.querySelectorAll('.bilingual-entry.audio-active').forEach(b => b.classList.remove('audio-active'));
+      var actives = document.querySelectorAll('.bilingual-entry.audio-active');
+      for (var i = 0; i < actives.length; i++) {
+        actives[i].classList.remove('audio-active');
+      }
       el.classList.add('audio-active');
       lastActiveEntry = el;
-      document.getElementById('rabCurrentTitle').innerText = title ?  : '第 5 章 正在朗读';
+      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 5 章 正在朗读';
     }
 
-    readerAudio.addEventListener('timeupdate', () => {
-      const cur = readerAudio.currentTime;
-      const dur = readerAudio.duration || 1395;
-      const formatTime = (t) => {
-        const m = Math.floor(t / 60);
-        const s = Math.floor(t % 60);
-        return ;
-      };
-      document.getElementById('rabCurTime').innerText = ;
+    readerAudio.addEventListener('timeupdate', function() {
+      var cur = readerAudio.currentTime;
+      var dur = readerAudio.duration || 1395;
+      function formatTime(t) {
+        var m = Math.floor(t / 60);
+        var s = Math.floor(t % 60);
+        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+      }
+      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
 
-      // Highlight active entry
-      const entries = document.querySelectorAll('.bilingual-entry.audio-trackable');
-      let found = null;
-      entries.forEach(entry => {
-        const start = parseFloat(entry.dataset.start);
-        const end = parseFloat(entry.dataset.end);
+      var entries = document.querySelectorAll('.bilingual-entry.audio-trackable');
+      var found = null;
+      for (var i = 0; i < entries.length; i++) {
+        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
+        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
         if (cur >= start && cur < end) {
-          found = entry;
+          found = entries[i];
+          break;
         }
-      });
+      }
 
       if (found && found !== lastActiveEntry) {
         if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
         found.classList.add('audio-active');
         lastActiveEntry = found;
-        document.getElementById('rabCurrentTitle').innerText = found.dataset.title ?  : '第 5 章 正在朗读';
+        var title = found.getAttribute('data-title');
+        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : '第 5 章 正在朗读';
       }
     });
 
     function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
-      const card = document.getElementById();
-      const opts = card.querySelectorAll('.quiz-opt');
-      opts.forEach(el => el.classList.remove('selected-correct', 'selected-wrong'));
-      const statusEl = document.getElementById();
+      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
+      if (!card) return;
+      var opts = card.querySelectorAll('.quiz-opt');
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].classList.remove('selected-correct', 'selected-wrong');
+      }
+      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
       if (selectedKey === correctKey) {
         rowEl.classList.add('selected-correct');
-        statusEl.innerText = '✅ 回答正确！';
-        statusEl.style.color = '#166534';
+        if (statusEl) {
+          statusEl.innerText = '✅ 回答正确！';
+          statusEl.style.color = '#166534';
+        }
       } else {
         rowEl.classList.add('selected-wrong');
-        statusEl.innerText = '❌ 回答有误，请查阅下方临床解析';
-        statusEl.style.color = '#991b1b';
+        if (statusEl) {
+          statusEl.innerText = '❌ 回答有误，请查阅下方临床解析';
+          statusEl.style.color = '#991b1b';
+        }
       }
-      document.getElementById(ratId).style.display = 'block';
+      var rat = document.getElementById(ratId);
+      if (rat) rat.style.display = 'block';
     }
 
     function toggleRationale(ratId, btnEl) {
-      const box = document.getElementById(ratId);
+      var box = document.getElementById(ratId);
+      if (!box) return;
       if (box.style.display === 'none' || !box.style.display) {
         box.style.display = 'block';
         btnEl.innerHTML = '<span class="icon">🔽</span> 收起答案与临床精解';
