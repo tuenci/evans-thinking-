@@ -23,17 +23,35 @@
       --border-subtle: #eae2d5;
       --border-strong: #d8cebf;
       
-      --box-sage-bg: #f0f6f2;
-      --box-sage-border: #cee0d4;
-      --box-blue-bg: #f0f5fc;
-      --box-blue-border: #cbdcf7;
-      --box-amber-bg: #fcf7ee;
-      --box-amber-border: #fae4c0;
-      --box-purple-bg: #f7f4fc;
-      --box-purple-border: #e3d9f5;
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
     }
     
-    /* Theme: Pure White */
     html.theme-white {
       --bg-canvas: #ffffff;
       --bg-card: #f8fafc;
@@ -43,13 +61,8 @@
       --text-muted: #94a3b8;
       --border-subtle: #e2e8f0;
       --border-strong: #cbd5e1;
-      --box-sage-bg: #f2f8f4;
-      --box-blue-bg: #f1f6fd;
-      --box-amber-bg: #fdf8ef;
-      --box-purple-bg: #f9f5fd;
     }
     
-    /* Theme: Night OLED */
     html.theme-night {
       --bg-canvas: #121214;
       --bg-card: #1c1c1f;
@@ -60,19 +73,25 @@
       --accent-navy: #60a5fa;
       --border-subtle: #27272a;
       --border-strong: #3f3f46;
-      --box-sage-bg: #14211a;
-      --box-sage-border: #1e3a2b;
-      --box-blue-bg: #131c2e;
-      --box-blue-border: #1f3154;
-      --box-amber-bg: #231b11;
-      --box-amber-border: #3d2d18;
-      --box-purple-bg: #1f1629;
-      --box-purple-border: #38244f;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
     html { scroll-behavior: smooth; }
-    a, .editorial-footer-url { word-break: break-all; }
     body {
       background: var(--bg-canvas);
       color: var(--text-main);
@@ -88,12 +107,12 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      height: 50px;
+      height: 48px;
       background: var(--bg-overlay);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 0 20px;
+      padding: 0 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,20 +124,17 @@
       text-decoration: none;
       color: var(--accent-navy);
       font-weight: 600;
-      font-size: 12.5px;
+      font-size: 12px;
       padding: 5px 12px;
       background: var(--bg-card);
       border-radius: 9999px;
       border: 1px solid var(--border-subtle);
       transition: all 0.15s ease;
       white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
     .nav-home-btn:hover { background: var(--border-subtle); }
     .nav-chapter-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--text-main);
       display: flex;
@@ -137,7 +153,6 @@
       font-weight: 700;
     }
     
-    /* Segmented Language Switcher */
     .mode-switch-segmented {
       display: flex;
       background: var(--border-subtle);
@@ -147,7 +162,7 @@
       flex-shrink: 0;
     }
     .mode-seg-btn {
-      padding: 5px 13px;
+      padding: 5px 12px;
       border: none;
       background: transparent;
       border-radius: 9999px;
@@ -169,10 +184,10 @@
       font-weight: 700;
     }
     
-    .nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .reading-util-group { display: flex; align-items: center; gap: 4px; }
     .util-btn {
-      padding: 5px 10px;
+      padding: 5px 9px;
       border: 1px solid var(--border-subtle);
       background: var(--bg-card);
       border-radius: 6px;
@@ -180,7 +195,6 @@
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
-      transition: all 0.15s ease;
       white-space: nowrap;
     }
     .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
@@ -195,8 +209,8 @@
       padding: 3px 12px 3px 4px;
     }
     .play-circle-btn {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: var(--accent-navy);
       color: #ffffff;
@@ -205,10 +219,8 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 11px;
-      transition: transform 0.15s, background 0.15s;
+      font-size: 10px;
     }
-    .play-circle-btn:hover { transform: scale(1.06); }
     .player-meta { display: flex; flex-direction: column; }
     .player-track-title {
       font-size: 11px;
@@ -219,27 +231,26 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .player-track-time { font-size: 10px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
     
-    /* Golden Reading Canvas - Zero Nested Borders */
+    /* Golden Reading Canvas */
     .reading-canvas,
     .ch-editorial-flow,
     .ch5-editorial-flow {
       width: 100%;
       max-width: 740px;
       margin: 0 auto;
-      padding: 36px 24px 100px;
+      padding: 32px 20px 100px;
       background: transparent;
-      border: none;
-      box-shadow: none;
       box-sizing: border-box;
     }
     
+    /* Chapter Hero */
     .chapter-hero-editorial {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 14px;
-      padding: 32px 28px 24px;
+      padding: 30px 26px 22px;
       margin-bottom: 32px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
@@ -252,7 +263,7 @@
       margin-bottom: 10px;
     }
     .hero-title-en {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 750;
       line-height: 1.25;
       color: var(--text-main);
@@ -275,221 +286,144 @@
       color: var(--text-muted);
     }
     
-    .page-jump-ribbon {
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border-subtle);
-      max-width: 100%;
-      overflow: hidden;
+      gap: 6px;
     }
-    .ribbon-label { font-size: 11.5px; font-weight: 600; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
-    .ribbon-scroll { display: flex; gap: 4px; overflow-x: auto; min-width: 0; flex: 1; -webkit-overflow-scrolling: touch; }
-    .ribbon-chip {
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 2px 7px;
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
       background: var(--border-subtle);
       color: var(--text-secondary);
-      border-radius: 4px;
-      white-space: nowrap;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
     }
-    .ribbon-chip:hover { background: var(--accent-navy); color: #fff; }
-    
-    .editorial-stream {
-      width: 100%;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    /* 4-Tier Thematic & Heading Hierarchy */
-    /* Tier 1: Major Section Banner */
-    .editorial-major-section {
-      margin: 56px 0 24px;
-      padding: 24px 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-left: 5px solid var(--accent-navy);
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    }
-    .section-banner-head .section-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 750;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: var(--accent-navy);
-      padding: 3px 9px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .section-banner-head .section-title-en {
-      font-size: 22px;
-      font-weight: 750;
-      color: var(--text-main);
-      line-height: 1.35;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .section-banner-head .section-title-cn {
-      font-size: 16px;
+    .ps-label {
+      font-size: 12px;
       font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
+      color: var(--text-muted);
     }
-    .section-banner-head .section-title-universal {
-      font-size: 20px;
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
       font-weight: 750;
       color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .section-banner-head .section-summary-tag {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      padding-top: 10px;
-      border-top: 1px dashed var(--border-subtle);
-      line-height: 1.5;
-    }
-
-    /* Tier 2: Clinical Sub-topic Card */
-    .editorial-subtopic-card {
-      margin: 36px 0 16px;
-      padding: 14px 18px;
-      background: rgba(30, 58, 138, 0.035);
-      border-left: 3.5px solid var(--accent-navy);
-      border-radius: 0 8px 8px 0;
-    }
-    html.theme-night .editorial-subtopic-card {
-      background: rgba(96, 165, 250, 0.06);
-      border-left-color: #60a5fa;
-    }
-    .subtopic-tag {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent-navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
       margin-bottom: 4px;
     }
-    html.theme-night .subtopic-tag {
-      color: #60a5fa;
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
     }
-    .subtopic-title-en {
-      font-size: 17.5px;
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
       margin-bottom: 3px;
     }
-    .subtopic-title-cn {
+    .editorial-heading-sub .heading-cn {
       font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
-    .subtopic-title-universal {
-      font-size: 16.5px;
-      font-weight: 700;
-      color: var(--text-main);
-    }
 
-    /* Tier 3: Micro-topic Row */
-    .editorial-microtopic-row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
+    .editorial-heading-micro {
       margin: 24px 0 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
     }
-    .micro-bullet {
-      color: var(--accent-navy);
-      font-size: 12px;
-    }
-    html.theme-night .micro-bullet {
-      color: #60a5fa;
-    }
-    .micro-title-en {
+    .editorial-heading-micro .heading-en {
       font-size: 15.5px;
       font-weight: 700;
       color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .micro-title-cn {
+    .editorial-heading-micro .heading-cn {
       font-size: 13.5px;
       font-weight: 500;
       color: var(--text-secondary);
-    }
-    .micro-title-universal {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-main);
+      display: inline-block;
     }
 
-    /* Tier 4: Chapter Thematic Navigation Jumpbar */
-    .chapter-thematic-nav {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-    }
-    .thematic-nav-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .thematic-nav-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .topic-chip {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-subtle);
-      padding: 4px 10px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s ease;
-    }
-    .topic-chip:hover {
-      background: var(--accent-navy);
-      color: #ffffff;
-      border-color: var(--accent-navy);
-    }
-    .topic-chip .chip-num {
-      font-size: 10px;
-      font-weight: 700;
-      opacity: 0.75;
-    }
-
-    /* Legacy section divider fallback */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
-    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
-    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
-    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
-    
-    /* Bilingual Paragraphs */
+    /* Bilingual Paragraphs - No play buttons */
     .bilingual-paragraph {
       position: relative;
-      margin-bottom: 24px;
-      padding: 8px 12px 10px 14px;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
       border-left: 3px solid transparent;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
@@ -501,26 +435,23 @@
       background: rgba(30, 58, 138, 0.05);
       border-left-color: var(--accent-navy);
     }
-    .para-play-indicator { display: none; }
-    
+        
     .para-en {
       font-size: var(--font-base);
-      line-height: 1.8;
+      line-height: 1.78;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-weight: 420;
-      letter-spacing: -0.005em;
     }
     .para-cn {
       font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.85;
+      line-height: 1.82;
       color: var(--text-secondary);
       font-weight: 400;
-      letter-spacing: 0.005em;
       margin-bottom: 0;
     }
     
-    /* Distinct Callout Boxes */
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
     .editorial-box-container {
       margin: 36px 0;
       border-radius: 12px;
@@ -528,33 +459,24 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); }
-    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); }
-    .box-theme-amber, .box-theme-terracotta { background: var(--box-amber-bg); border-color: var(--box-amber-border); }
-    .box-theme-case, .box-theme-purple { background: var(--box-purple-bg); border-color: var(--box-purple-border); }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
     
     .box-banner-header {
       padding: 14px 18px 12px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    .box-badge-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-    .box-badge-pill {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.025);
     }
     .box-title-en {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 16.5px;
+      font-weight: 750;
       color: var(--text-main);
-      line-height: 1.4;
+      line-height: 1.35;
       margin-bottom: 3px;
     }
     .box-title-cn {
@@ -563,309 +485,291 @@
       color: var(--text-secondary);
     }
     .box-body-content {
-      padding: 14px 18px 18px;
+      padding: 18px 20px;
     }
     .box-clause-item {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
     }
     .box-clause-item:last-child {
-      border-bottom: none;
+      margin-bottom: 0;
       padding-bottom: 0;
+      border-bottom: none;
     }
     .clause-en {
-      font-size: 15px;
+      font-size: calc(var(--font-base) * 0.94);
       line-height: 1.7;
       color: var(--text-main);
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
     .clause-cn {
-      font-size: 14px;
+      font-size: calc(var(--font-base) * 0.9);
       line-height: 1.75;
       color: var(--text-secondary);
     }
     .box-source-citation {
-      padding: 10px 0 0;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
       font-size: 12px;
-      color: var(--text-muted);
-      border-top: 1px dashed var(--border-subtle);
-      margin-top: 12px;
-    }
-    
-    /* Page Anchor Marker */
-    .page-anchor-marker {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 36px 0 24px;
-      color: var(--text-muted);
-      font-size: 12px;
-    }
-    .page-anchor-marker::before,
-    .page-anchor-marker::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border-subtle);
-    }
-    .marker-pill {
-      padding: 2px 10px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 9999px;
-      font-size: 11.5px;
-      font-weight: 600;
+      font-style: italic;
       color: var(--text-muted);
     }
-    .marker-sec {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    
-    /* Lists */
-    .editorial-list {
-      list-style: none;
-      padding: 0;
-      margin: 16px 0 24px;
-    }
-    .editorial-list-item {
-      margin-bottom: 12px;
-      padding-left: 18px;
-      position: relative;
-    }
-    .editorial-list-item::before {
-      content: "•";
-      color: var(--accent-navy);
-      font-weight: bold;
-      position: absolute;
-      left: 4px;
-      top: 0;
-    }
-    .item-en {
-      font-size: var(--font-base);
-      line-height: 1.75;
-      color: var(--text-main);
-      margin-bottom: 3px;
-    }
-    .item-cn {
-      font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-    
-    /* Terms Grid */
-    .key-terms-section { margin: 40px 0; }
-    .kt-section-header { margin-bottom: 20px; }
-    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
-    .kt-subtitle { font-size: 13px; color: var(--text-muted); }
-    .terms-editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-    }
-    .editorial-term-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 14px 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
-    }
-    .etc-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 8px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .etc-word { font-size: 15px; color: var(--text-main); font-weight: 700; }
-    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 6px; font-style: italic; }
-    .etc-cn-tag {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--accent-navy);
-      background: rgba(30, 58, 138, 0.08);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .etc-def-en { font-size: 13px; line-height: 1.6; color: var(--text-main); margin-bottom: 6px; }
-    .etc-def-cn { font-size: 12.5px; line-height: 1.65; color: var(--text-secondary); }
-    
-    /* Quizzes */
-    .editorial-quiz-section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border-subtle); }
-    .editorial-quiz-card {
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 20px 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .eq-num { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); }
-    .eq-status { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); line-height: 1.5; margin-bottom: 6px; }
-    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
-    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
-    .eq-opt {
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
       cursor: pointer;
-      background: var(--bg-canvas);
       transition: all 0.15s ease;
     }
-    .eq-opt:hover { background: var(--border-subtle); }
-    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
-    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
-    .opt-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--border-subtle);
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-main);
-      flex-shrink: 0;
-    }
-    .opt-text { font-size: 13.5px; line-height: 1.5; color: var(--text-main); }
-    .btn-toggle-rat {
-      padding: 6px 12px;
+    .kt-toggle-btn.active {
       background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
       border: 1px solid var(--border-subtle);
       border-radius: 6px;
       font-size: 12px;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
+      transition: all 0.15s ease;
     }
-    .eq-rationale-box {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
       border-radius: 8px;
-      font-size: 13px;
-      line-height: 1.6;
+      padding: 14px;
     }
-    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 4px; }
-    .rat-content { color: #1e293b; }
-    
-    /* Tables */
-    .table-wrap { overflow-x: auto; margin: 24px 0; }
-    .clinical-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-    .clinical-table th { background: var(--border-subtle); padding: 10px 12px; border: 1px solid var(--border-subtle); font-weight: 700; color: var(--text-main); text-align: left; }
-    .clinical-table td { padding: 10px 12px; border: 1px solid var(--border-subtle); color: var(--text-secondary); }
-    
-    /* Tri-State Language Immersion Directives */
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
     html.mode-en .para-cn,
     html.mode-en .item-cn,
     html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
-    html.mode-en .sh-title-cn,
-    html.mode-en .section-title-cn,
-    html.mode-en .subtopic-title-cn,
-    html.mode-en .micro-title-cn,
-    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
-    html.mode-en .marker-text-cn,
-    html.mode-en .eq-stem-cn { display: none !important; }
-    html.mode-en .para-en { font-size: calc(var(--font-base) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
-    
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
     html.mode-cn .para-en,
     html.mode-cn .item-en,
     html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
-    html.mode-cn .sh-title-en,
-    html.mode-cn .section-title-en,
-    html.mode-cn .subtopic-title-en,
-    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
-    html.mode-cn .marker-text-en,
-    html.mode-cn .eq-stem-en { display: none !important; }
-    html.mode-cn .para-cn { font-size: calc(var(--font-base) * var(--font-cn-scale) + 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
-    
-    /* Colophon */
-    .editorial-colophon { text-align: center; padding: 48px 20px; color: var(--text-muted); font-size: 12.5px; line-height: 1.7; }
-    
-    /* Strict Mobile Responsive Layout */
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
     @media (max-width: 768px) {
-      .top-sticky-bar {
-        height: 44px;
-        padding: 0 10px;
-        gap: 6px;
-        flex-wrap: nowrap;
-        overflow: hidden;
-      }
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
       .nav-chapter-title { display: none; }
-      .nav-home-btn { padding: 4px 8px; font-size: 11.5px; }
-      .mode-switch-segmented { padding: 2px; gap: 1px; }
-      .mode-seg-btn { padding: 4px 8px; font-size: 11px; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
       .reading-util-group { display: none; }
-      .ambient-player { padding: 0; background: transparent; border: none; }
-      .player-meta { display: none; }
-      .play-circle-btn { width: 30px; height: 30px; font-size: 12px; }
-      
-      .reading-canvas,
-      .ch-editorial-flow,
-      .ch5-editorial-flow {
-        padding: 14px 16px 80px;
-        max-width: 100%;
-      }
-      .chapter-hero-editorial {
-        padding: 18px 16px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
       .hero-title-en { font-size: 22px; }
-      .hero-title-cn { font-size: 15.5px; }
-      
-      .editorial-major-section {
-        padding: 16px 14px;
-        margin: 36px 0 16px;
-        border-radius: 10px;
-      }
-      .section-banner-head .section-title-en { font-size: 18.5px; }
-      .section-banner-head .section-title-cn { font-size: 15px; }
-      .section-banner-head .section-title-universal { font-size: 17px; }
-      
-      .editorial-subtopic-card {
-        padding: 10px 12px;
-        margin: 24px 0 12px;
-      }
-      .subtopic-title-en { font-size: 16px; }
-      .subtopic-title-cn { font-size: 13.5px; }
-      .subtopic-title-universal { font-size: 15px; }
-      
-      .editorial-microtopic-row {
-        margin: 18px 0 8px;
-        flex-wrap: wrap;
-      }
-      .micro-title-en { font-size: 14.5px; }
-      .micro-title-cn { font-size: 13px; }
-      
-      .thematic-nav-chips { gap: 4px; }
-      .topic-chip { padding: 3px 8px; font-size: 11px; }
-      
-      .box-banner-header { padding: 12px 14px 10px; }
-      .box-body-content { padding: 12px 14px 14px; }
-      .bilingual-paragraph { padding: 6px 10px 8px 12px; margin-bottom: 20px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <div class="top-sticky-bar">
     <div class="nav-left">
-      <a href="psw-reader.html#toc" class="nav-home-btn">← 目录</a>
+      <a href="psw-reader.html#sec-ch4" class="nav-home-btn">← 返回全书总目录</a>
       <div class="nav-chapter-title">
         <span class="ch-badge">CH 04</span>
         <span>Ethics in Support Work</span>
@@ -873,22 +777,20 @@
     </div>
     
     <div class="mode-switch-segmented" id="langModeSwitch">
-      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英</button>
-      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">EN</button>
-      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">中</button>
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
     </div>
 
     <div class="nav-right">
       <div class="reading-util-group">
-        <button class="util-btn" onclick="cycleTheme()" id="themeBtn" title="切换暖纸/纯白/夜读">纸色</button>
-        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
-        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
       </div>
 
       <div class="ambient-player">
-        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()" title="播放/暂停音频">▶</button>
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
         <div class="player-meta">
-          <span class="player-track-title" id="rabCurrentTitle">CH 4 · 点选段落即读</span>
+          <span class="player-track-title" id="rabCurrentTitle">第 4 章 · 点选段落收听</span>
           <span class="player-track-time" id="rabCurTime">00:00 / 19:50</span>
         </div>
       </div>
@@ -902,27 +804,32 @@
       <h2 class="hero-title-cn">职业伦理、行为守则与临床困境决断</h2>
       <div class="hero-meta-bar">
         <span class="meta-item">Pages 48–58 · 11 道全真自测题</span>
-        <span class="meta-item">轻触段落即可播放真人原声导读</span>
+        <span class="meta-item">专业音频：19:50</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch4-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
+
       
-        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
-          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
-          <div class="thematic-nav-chips">
-            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 伦理学本质、道德价值</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 医疗卫生伦理四大基石</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 职业人际界限、利益冲</a>
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-48">第 48 页</option><option value="page-49">第 49 页</option><option value="page-50">第 50 页</option><option value="page-54">第 54 页</option>
+              </select>
+            </div>
           </div>
-        </nav>
-        
-      
-        <div class="page-jump-ribbon">
-          <span class="ribbon-label">原书页码检索:</span>
-          <div class="ribbon-scroll">
-            <a href="#page-48" class="ribbon-chip">p.48</a><a href="#page-49" class="ribbon-chip">p.49</a><a href="#page-50" class="ribbon-chip">p.50</a><a href="#page-54" class="ribbon-chip">p.54</a>
+          <div class="ps-chips-ribbon">
+            <a href="#page-48" class="page-chip-item"><span class="pc-num">p.48</span></a><a href="#page-49" class="page-chip-item"><span class="pc-num">p.49</span></a><a href="#page-50" class="page-chip-item"><span class="pc-num">p.50</span></a><a href="#page-54" class="page-chip-item"><span class="pc-num">p.54</span></a>
           </div>
         </div>
         
     </header>
 
-    <main class="editorial-stream">
+    <div class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
@@ -930,43 +837,204 @@
                           <span class="marker-pill">Page 48</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-01">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 4 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
+                <div class="editorial-heading-major" id="sec-01">
+                  <h2 class="heading-en">Chapter 4 Opener & Learning Objectives</h2>
+                  <div class="heading-cn">开篇导读与学习目标</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="0.0" data-end="31.63" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Explain the difference between ethics and the law. • Identify the four basic principles of health care ethics. • Describe a support worker's code of ethics. • Explain how personal and professional values guide the support worker. • Identify the professional boundaries that support workers must maintain. • Describe a framework for ethical decision making. • Identify what to do when faced with an ethical dilemma in the workplace. <br><br></p>
-                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 深刻辨析并阐明“职业伦理准则”（Ethics）与“国家法定法规”（The Law）之间的本质分野与互补联系。 • 熟练掌握并准确阐释现代医疗卫生伦理学的四大核心基石原则（自主、行善、不伤害、公正）。 • 详尽阐述并深刻领会支持工作者（PSW / HCA）法定执业伦理守则（Code of Ethics）的内涵要义。 • 深入剖析个人价值观与专业职业价值观如何协同指引支持工作者在错综复杂的临床一线作出合规抉择。 • 准确界定并严格恪守支持工作者在与案主及其家属打交道时必须誓死捍卫的职业界限（Professional Boundaries）。 • 熟练掌握科学规范的“临床伦理困境决策四步分析框架”（Ethical Decision-Making Framework）。 • 明确掌握在工作场所遭遇尖锐伦理道德困境或目睹违规虐待时依法合规的应对策略与吹哨人举报流程（Whistleblowing）。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Objectives</h3>
+                  <div class="heading-cn">学习目标</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="0.0" data-end="31.63" data-title="Objectives" onclick="playParagraphAudio(this)">
+                          <p class="para-en">After reading this chapter, the learner should be able to do the following: • Explain the difference between ethics and the law. • Identify the four basic principles of health care ethics. • Describe a support worker's code of ethics. • Explain how personal and professional values guide the support worker. • Identify the professional boundaries that support workers must maintain. • Describe a framework for ethical decision making. • Identify what to do when faced with an ethical dilemma in the workplace. <br><br></p>
+                          <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 深刻辨析并阐明“职业伦理准则”（Ethics）与“国家法定法规”（The Law）之间的本质分野与互补联系。 • 熟练掌握并准确阐释现代医疗卫生伦理学的四大核心基石原则（自主、行善、不伤害、公正）。 • 详尽阐述并深刻领会支持工作者（PSW / HCA）法定执业伦理守则（Code of Ethics）的内涵要义。 • 深入剖析个人价值观与专业职业价值观如何协同指引支持工作者在错综复杂的临床一线作出合规抉择。 • 准确界定并严格恪守支持工作者在与案主及其家属打交道时必须誓死捍卫的职业界限（Professional Boundaries）。 • 熟练掌握科学规范的“临床伦理困境决策四步分析框架”（Ethical Decision-Making Framework）。 • 明确掌握在工作场所遭遇尖锐伦理道德困境或目睹违规虐待时依法合规的应对策略与吹哨人举报流程（Whistleblowing）。 <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-49">
                           <span class="marker-pill">Page 49</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-02">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 4 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
-                  </div>
-                </section>
+                <div class="editorial-heading-major" id="sec-02">
+                  <h2 class="heading-en">Chapter 4 Key Terms</h2>
+                  <div class="heading-cn">核心专业术语表</div>
+                </div>
                 
-            <div class="key-terms-section">
-              <div class="kt-section-header">
-                <h3 class="kt-title">KEY TERMS · 第 4 章核心专业术语速查表</h3>
-                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+            <div class="key-terms-master-container" id="kt-container-ch4">
+              <div class="kt-toolbar">
+                <div class="kt-toolbar-left">
+                  <h3 class="kt-title">Key Terms · 第 4 章核心专业术语表（全 10 词速查）</h3>
+                </div>
+                <div class="kt-toolbar-right">
+                  <div class="kt-mode-toggle">
+                    <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch4', 'table')">速查词表</button>
+                    <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch4', 'cards')">精研卡片</button>
+                  </div>
+                  <div class="kt-search-box">
+                    <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch4', this.value)">
+                  </div>
+                </div>
               </div>
-              <div class="terms-editorial-grid">
-            
+
+              <!-- Mode 1: Compact Table -->
+              <div class="kt-view-table active" id="kt-table-view-ch4">
+                <div class="table-wrap">
+                  <table class="kt-compact-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 28%;">英文术语 / 国际音标</th>
+                        <th style="width: 22%;">中文对照</th>
+                        <th style="width: 50%;">教材标准学术释义与临床界定</th>
+                      </tr>
+                    </thead>
+                    <tbody id="kt-table-body-ch4">
+                      
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>autonomy</strong></strong>
+                    <span class="kt-ipa">/ɔːˈtɒnəmi/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">自主自决原则</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">个体享有自主做出关乎自身生活与身体健康照护重大决策的崇高自由与选择权，亦称“自我决定权”（Self-Determination）。 (p. 51)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>beneficence</strong></strong>
+                    <span class="kt-ipa">/bɪˈnɛfɪsəns/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">行善原则 / 慈惠利他</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">医护伦理基石之一。时刻以增进服务对象的最大利益为出发点，积极采取行动行善事、抚慰创伤、促进康复。 (p. 52)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>code of ethics</strong></strong>
+                    <span class="kt-ipa">/koʊd əv ˈɛθɪks/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">职业伦理准则 / 道德守则</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">由专业协会、行业学会或雇主机构颁布的正式书面道德行为规范总纲，明确规制从业人员所必须履行的崇高职业义务与道德标准。 (p. 51)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>ethical dilemma</strong></strong>
+                    <span class="kt-ipa">/ˈɛθɪkəl daɪˈlɛmə/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">伦理困境 / 道德两难局势</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">面临两项或多项相互冲突且各有法理道德依据的选择，且选择任何一方都必然导致违背另一方伦理准则的进退维谷之道德危局。 (p. 55)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>ethics</strong></strong>
+                    <span class="kt-ipa">/ˈɛθɪks/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">伦理学 / 道德准则</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">在人类社会实践中用以甄别与权衡是非曲直、善恶美丑的哲学原理、根本准则与崇高道德信念总和。 (p. 49)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>justice</strong></strong>
+                    <span class="kt-ipa">/ˈdʒʌstɪs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">公平正义原则</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">医护伦理基石之一。不论案主的社会阶层、个人贫富、种族国籍、信仰偏见或脾气性情如何，全体病患均享有均等、公正、无偏见的同等照料与资源分配。 (p. 53)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>morals</strong></strong>
+                    <span class="kt-ipa">/ˈmɒrəlz/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">道德伦常观念</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">个体或社群内部深植于心底的关于良善与恶劣、得体与失格的基本道德是非观念与良心底线。 (p. 49)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>nonmaleficence</strong></strong>
+                    <span class="kt-ipa">/ˌnɒn-məˈlɛfɪsəns/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">不伤害原则 / 避害戒律</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">希波克拉底医学誓言首要戒律。在任何临床操作中，誓死确保绝不对服务对象造成任何身体残害、心理创伤、情感折磨或财务损害。 (p. 52)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>values</strong></strong>
+                    <span class="kt-ipa">/ˈvæljuːz/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">价值观与人生信条</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">个人所珍视、崇奉并视为极其珍贵或神圣的深层精神信念，是支配个体言行举止与价值判断的根本罗盘。 (p. 49)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>whistleblowing</strong></strong>
+                    <span class="kt-ipa">/ˈwɪslˌbloʊɪŋ/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">吹哨举报 / 内部揭丑报告</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">当从业人员在工作场所目睹雇主、同事发生严重违法乱纪、残暴虐待案主、贪腐或重大医疗过失且内部监管失效时，依规向外部监管机构或上级法定机关进行实名或匿名检举揭发的正义之举。 (p. 56)</div>
+                  </td>
+                </tr>
+                
+                    </tbody>
+                  </table>
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-table-ch4">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch4', 'table')">
+                    展开全部 10 个专业术语 ▼
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mode 2: Cards Deck -->
+              <div class="kt-view-cards" id="kt-cards-view-ch4" style="display:none;">
+                <div class="terms-editorial-grid" id="kt-cards-grid-ch4">
+                  
                 <div class="editorial-term-card">
                   <div class="etc-header">
                     <div class="etc-en-block">
@@ -1045,7 +1113,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>morals</strong></strong>
@@ -1058,7 +1126,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>nonmaleficence</strong></strong>
@@ -1071,7 +1139,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>values</strong></strong>
@@ -1084,7 +1152,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>whistleblowing</strong></strong>
@@ -1096,655 +1164,193 @@
                     <div class="etc-def-cn">当从业人员在工作场所目睹雇主、同事发生严重违法乱纪、残暴虐待案主、贪腐或重大医疗过失且内部监管失效时，依规向外部监管机构或上级法定机关进行实名或匿名检举揭发的正义之举。 (p. 56)</div>
                   </div>
                 </div>
-                </div></div>
-<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-cards-ch4">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch4', 'cards')">
+                    展开全部 10 张精研术语卡片 ▼
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-49">
                           <span class="marker-pill">Pages 49 - 50</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-03">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第一节：伦理学本质、道德价值观与文化底蕴</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Ethics vs The Law</h3><div class="subtopic-title-cn">伦理与法律的本质分野</div>
+                <div class="editorial-heading-major" id="sec-03">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第一节：伦理学本质、道德价值观与文化底蕴</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="31.63" data-end="90.46" data-title="Ethics vs The Law" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en"><strong>THE INFLUENCE OF CULTURE ON BELIEFS, VALUES, MORALS, AND ETHICS</strong> <br><br>The term <strong>ethics</strong> refers to the principles or values that guide us when differentiating right from wrong and good from bad. <strong>Morals</strong> are the fundamental principles of behaviour that each person considers right and wrong. Our morals and values are shaped by our family, culture, religion, and life experiences. <br><br><strong>Ethics and the Law:</strong> It is essential to understand the difference between ethics and the law. Laws are rules of conduct made by a governing authority that are enforced through the legal system. Laws dictate what you <em>must</em> or <em>must not</em> do; if you break a law, you can be penalized, fined, or imprisoned. <br><br>Ethics, on the other hand, deals with what you <em>should</em> or <em>should not</em> do. They represent higher professional and moral expectations. While unethical behaviour is not always illegal, it violates professional standards and can result in disciplinary action, termination of employment, or loss of professional credibility. <br><br></p>
-                      <p class="para-cn"><strong>文化背景对个人信念、价值观、道德与伦理的深层塑造</strong> <br><br><strong>伦理准则（Ethics）</strong>是指引导人类在复杂的现实生活中甄别“是非曲直”（Right from Wrong）以及“善恶美丑”（Good from Bad）的系统性道德哲学原理与行为准绳。<strong>道德观念（Morals）</strong>则是个体内心深处所固守的、判定何为正当与何为失德的根本做人良知底线。我们每个人的道德信条与核心价值观，皆在漫长的岁月中被我们原生家庭的言传身教、民族文化传承、宗教灵性信仰以及独特的人生际遇深刻塑造。 <br><br><strong>伦理与法律的本质分野：</strong> 支持工作者必须在认知深处彻底厘清“道德伦理”与“国家法律”之间的本质差异： • <strong>法律（The Law）</strong>是由国家最高立法机关依法制定、并依托司法公权力强制执行的社会公共行为底线。法律极其刚性地宣判一个人在社会中<strong>“必须做什么”（Must do）</strong>以及<strong>“绝对严禁做什么”（Must not do）</strong>。触犯法律将直接引来行政拘留、民事索赔、高额罚款乃至刑事入狱判刑。 • <strong>伦理（Ethics）</strong>则是在法律底线之上的更高崇高境界，探讨的是一个人在面临良心考验时<strong>“应当做什么”（Should do）</strong>以及<strong>“不应当做什么”（Should not do）</strong>。不道德的失德行径并不一定会直接触犯刑律，但它极度背离了崇高的行业准则与医患互信，将直接招致严厉的行业纪律处分、被机构即刻开除除名、并彻底断送其一生的职业信誉！ <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Ethics vs The Law</h3>
+                  <div class="heading-cn">伦理与法律的本质分野</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="31.63" data-end="90.46" data-title="Ethics vs The Law" onclick="playParagraphAudio(this)">
+                          <p class="para-en"><strong>THE INFLUENCE OF CULTURE ON BELIEFS, VALUES, MORALS, AND ETHICS</strong> <br><br>The term <strong>ethics</strong> refers to the principles or values that guide us when differentiating right from wrong and good from bad. <strong>Morals</strong> are the fundamental principles of behaviour that each person considers right and wrong. Our morals and values are shaped by our family, culture, religion, and life experiences. <br><br><strong>Ethics and the Law:</strong> It is essential to understand the difference between ethics and the law. Laws are rules of conduct made by a governing authority that are enforced through the legal system.</p>
+                          <p class="para-cn"><strong>文化背景对个人信念、价值观、道德与伦理的深层塑造</strong> <br><br><strong>伦理准则（Ethics）</strong>是指引导人类在复杂的现实生活中甄别“是非曲直”（Right from Wrong）以及“善恶美丑”（Good from Bad）的系统性道德哲学原理与行为准绳。<strong>道德观念（Morals）</strong>则是个体内心深处所固守的、判定何为正当与何为失德的根本做人良知底线。我们每个人的道德信条与核心价值观，皆在漫长的岁月中被我们原生家庭的言传身教、民族文化传承、宗教灵性信仰以及独特的人生际遇深刻塑造。<br><br><strong>伦理与法律的本质分野：</strong> 支持工作者必须在认知深处彻底厘清“道德伦理”与“国家法律”之间的本质差异： • <strong>法律（The Law）</strong>是由国家最高立法机关依法制定、并依托司法公权力强制执行的社会公共行为底线。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="31.63" data-end="90.46" data-title="Ethics vs The Law" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Laws dictate what you <em>must</em> or <em>must not</em> do; if you break a law, you can be penalized, fined, or imprisoned. <br><br>Ethics, on the other hand, deals with what you <em>should</em> or <em>should not</em> do. They represent higher professional and moral expectations. While unethical behaviour is not always illegal, it violates professional standards and can result in disciplinary action, termination of employment, or loss of professional credibility. <br><br></p>
+                          <p class="para-cn">法律极其刚性地宣判一个人在社会中<strong>“必须做什么”（Must do）</strong>以及<strong>“绝对严禁做什么”（Must not do）</strong>。触犯法律将直接引来行政拘留、民事索赔、高额罚款乃至刑事入狱判刑。• <strong>伦理（Ethics）</strong>则是在法律底线之上的更高崇高境界，探讨的是一个人在面临良心考验时<strong>“应当做什么”（Should do）</strong>以及<strong>“不应当做什么”（Should not do）</strong>。不道德的失德行径并不一定会直接触犯刑律，但它极度背离了崇高的行业准则与医患互信，将直接招致严厉的行业纪律处分、被机构即刻开除除名、并彻底断送其一生的职业信誉！<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-case">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
-                      </div>
-                      <h4 class="box-title-en">临床案例：梅德韦杰夫先生拒绝照护背后的文化创伤 (Supporting Mr. Medvjed)</h4>
-                    </div>
-                  </aside>
-                </div>
-                
                 <aside class="editorial-box-container box-theme-case">
                   <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
-                    </div>
-                    <h4 class="box-title-en">Supporting Mr. Medvjed: How Past Experiences Can Affect One's Beliefs</h4>
-                    
+                    <h4 class="box-title-en">Supporting Mr. Medvjed</h4>
+                    <div class="box-title-cn">临床案例：梅德韦杰夫先生拒绝照护背后的文化创伤</div>
                   </div>
                   <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en"><strong>Supporting Mr. Medvjed: How Past Experiences Can Affect One's Beliefs</strong> <br><br>Mr. Medvjed, 78, is a resident in a long-term care facility who survived forced labour in a concentration camp during World War II. When a support worker enters his room and announces it is time for a mandatory shower, Mr. Medvjed becomes agitated, shouts, and violently resists being undressed. <br><br>A support worker who is insensitive to Mr. Medvjed's background might label him as "uncooperative" or "aggressive." However, understanding his history reveals that being forced into an enclosed shower room triggers severe trauma memories of wartime gas chambers and dehumanization. In health care ethics, respecting the client's past, their autonomy, and their dignity requires modifying the routine—offering a gentle sponge bath in bed and ensuring he feels safe and in control. <br><br></div>
-                      <div class="clause-cn"><strong>临床案例剖析：梅德韦杰夫先生的故事 —— 既往人生创伤如何深刻塑造当下的应激反应</strong> <br><br>现年 78 岁高龄的梅德韦杰夫先生（Mr. Medvjed）是长期照护院舍内的一位住院案主。在二战期间，年轻的他曾亲历集中营的严酷苦役与非人折磨并奇迹生还。某天清晨，一名不知情的新人支持工作者径直推开他的房门，用命令式的生硬口吻宣布“现在必须去浴室集中冲凉淋浴”。梅德韦杰夫先生瞬间陷入极度惊恐慌乱，愤怒咆哮并拼死反抗他人撕扯脱下自己的衣物。 <br><br>一名缺乏文化敏感度（Cultural Sensitivity）的平庸照护者，往往会草率地在交班报告上为长者扣上“不配合照护”、“具有攻击性暴力倾向”的冷酷标签。然而，真正深谙全人伦理关怀的专业人员，能够深刻洞察长者反常举止背后的深重创伤：被强行推进封闭瓷砖淋浴室的恐怖场景，瞬间诱发了他脑海深处关于二战集中营毒气室与同胞被屠戮的毁灭性创伤记忆（PTSD）！在医疗卫生伦理中，尊重案主的心灵创伤、捍卫其自主自决权与人格尊严，要求我们果断改变刻板生硬的机械流程——当场温情停止强行淋浴，改为在床旁为其提供温和尊严的床上擦浴，确保长者在整个照护过程中深刻感受到绝对的安全感与对自己身体的掌控权。 <br><br></div>
-                    </div>
-                  </div>
-                </aside>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                <div class="box-clause-item">
+                  <div class="clause-en"><strong>Supporting Mr. Medvjed: How Past Experiences Can Affect One's Beliefs</strong> <br><br>Mr. Medvjed, 78, is a resident in a long-term care facility who survived forced labour in a concentration camp during World War II. When a support worker enters his room and announces it is time for a mandatory shower, Mr. Medvjed becomes agitated, shouts, and violently resists being undressed. <br><br>A support worker who is insensitive to Mr. Medvjed's background might label him as "uncooperative" or "aggressive." However, understanding his history reveals that being forced into an enclosed shower room triggers severe trauma memories of wartime gas chambers and dehumanization. In health care ethics, respecting the client's past, their autonomy, and their dignity requires modifying the routine—offering a gentle sponge bath in bed and ensuring he feels safe and in control. <br><br></div>
+                  <div class="clause-cn"><strong>临床案例剖析：梅德韦杰夫先生的故事 —— 既往人生创伤如何深刻塑造当下的应激反应</strong> <br><br>现年 78 岁高龄的梅德韦杰夫先生（Mr. Medvjed）是长期照护院舍内的一位住院案主。在二战期间，年轻的他曾亲历集中营的严酷苦役与非人折磨并奇迹生还。某天清晨，一名不知情的新人支持工作者径直推开他的房门，用命令式的生硬口吻宣布“现在必须去浴室集中冲凉淋浴”。梅德韦杰夫先生瞬间陷入极度惊恐慌乱，愤怒咆哮并拼死反抗他人撕扯脱下自己的衣物。 <br><br>一名缺乏文化敏感度（Cultural Sensitivity）的平庸照护者，往往会草率地在交班报告上为长者扣上“不配合照护”、“具有攻击性暴力倾向”的冷酷标签。然而，真正深谙全人伦理关怀的专业人员，能够深刻洞察长者反常举止背后的深重创伤：被强行推进封闭瓷砖淋浴室的恐怖场景，瞬间诱发了他脑海深处关于二战集中营毒气室与同胞被屠戮的毁灭性创伤记忆（PTSD）！在医疗卫生伦理中，尊重案主的心灵创伤、捍卫其自主自决权与人格尊严，要求我们果断改变刻板生硬的机械流程——当场温情停止强行淋浴，改为在床旁为其提供温和尊严的床上擦浴，确保长者在整个照护过程中深刻感受到绝对的安全感与对自己身体的掌控权。 <br><br></div>
+                </div>
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-50">
                           <span class="marker-pill">Pages 50 - 53</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-04">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第二节：医疗卫生伦理四大基石原则</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Principle of Autonomy</h3><div class="subtopic-title-cn">自主自决与知情同意原则</div>
+                <div class="editorial-heading-major" id="sec-04">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第二节：医疗卫生伦理四大基石原则</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="141.72" data-end="231.17" data-title="Principle of Autonomy" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en"><strong>THE PRINCIPLES OF HEALTH CARE ETHICS</strong> <br><br>Health care ethics is founded on four universal principles: 1. <strong>Autonomy (Self-Determination):</strong> Autonomy is the freedom of mentally competent individuals to make decisions about their own lives and bodies. In health care, this means clients have the right to accept or refuse any care, treatment, or medication. Informed consent is a direct application of autonomy: a client must be fully informed about the nature, benefits, and risks of a procedure before agreeing to it. As long as a person is mentally competent, they have the right to make decisions—even if caregivers believe those decisions are unwise. <br><br>2. <strong>Beneficence:</strong> Beneficence means doing good and acting in the best interests of the client. In daily support work, beneficence involves promoting well-being, providing compassionate comfort care, encouraging independence, and taking positive steps to help the client flourish. <br><br>3. <strong>Nonmaleficence:</strong> Nonmaleficence means doing no harm. This includes protecting clients from physical injury, verbal abuse, neglect, emotional distress, and exploitation. It also requires support workers to follow safety guidelines, practice proper infection control, and report errors or hazards immediately. <br><br>4. <strong>Justice:</strong> Justice means fairness and equality. All clients are entitled to the same high quality of care, attention, and compassion, regardless of their age, race, religion, gender, disability, economic status, or personality. <br><br></p>
-                      <p class="para-cn"><strong>现代医疗卫生伦理四大基石原则</strong> <br><br>现代生命伦理学巍然屹立在四大普遍神圣原则之上： <br><br>1. <strong>自主自决原则（Autonomy / Self-Determination）</strong>：指具备心智行为能力的个体，拥有对其个人生活起居与自身肉体边界享有自主抉择的崇高自由。在临床实践中，这意味着案主拥有完全合法的法定权利去<strong>接受或断然拒绝（Accept or Refuse）任何医疗处置、生活护理或药物治疗！</strong>“知情同意”（Informed Consent）正是自主原则的直接临床体现：在对案主实施任何操作前，必须向其讲明操作的性质、潜在获益与伴随风险。<strong>只要案主神志清楚、具备心智认知能力，他就拥有做出最终决定的神圣主权——即便医护人员在主观上认为他的这一决定极为不明智甚至荒唐！</strong> <br><br>2. <strong>慈惠行善原则（Beneficence）</strong>：要求照护者在所有执业活动中，始终以“促进案主的最大福祉”为出发点。在日常支持工作中，行善体现在付出仁爱慈悲、保障身心舒适、全力激发长者的自立潜能、并积极采取一切有利于长者康复的建设性行动。 <br><br>3. <strong>不伤害原则（Nonmaleficence）</strong>：希波克拉底医学誓言的首要铁律——“绝不给病患带来伤害”（First, do no harm）。它不仅严厉禁止任何形式的肉体施暴、言语侮辱虐待、忽视遗弃、精神折磨或经济剥削；更要求支持工作者时刻保持高度警觉，严格落实防跌倒规范与洗手院感防护，一旦发生操作差错或发现安全隐患，必须以对生命负责的勇气当场如实上报。 <br><br>4. <strong>公平正义原则（Justice）</strong>：指在照护资源分配与服务态度上的绝对公正与均等。无论案主是谈笑风生的温和长者，还是整日咒骂挑剔的刁钻病患；无论其腰缠万贯还是依靠低保救济，全体受助者均平等享有同等水准的专业技能、充足工时与同理关怀，严禁阶层偏袒与差别待遇。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Principle of Autonomy</h3>
+                  <div class="heading-cn">自主自决与知情同意原则</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="141.72" data-end="231.17" data-title="Principle of Autonomy" onclick="playParagraphAudio(this)">
+                          <p class="para-en"><strong>THE PRINCIPLES OF HEALTH CARE ETHICS</strong> <br><br>Health care ethics is founded on four universal principles: 1. <strong>Autonomy (Self-Determination):</strong> Autonomy is the freedom of mentally competent individuals to make decisions about their own lives and bodies. In health care, this means clients have the right to accept or refuse any care, treatment, or medication.</p>
+                          <p class="para-cn"><strong>现代医疗卫生伦理四大基石原则</strong> <br><br>现代生命伦理学巍然屹立在四大普遍神圣原则之上： <br><br>1. <strong>自主自决原则（Autonomy / Self-Determination）</strong>：指具备心智行为能力的个体，拥有对其个人生活起居与自身肉体边界享有自主抉择的崇高自由。在临床实践中，这意味着案主拥有完全合法的法定权利去<strong>接受或断然拒绝（Accept or Refuse）任何医疗处置、生活护理或药物治疗！</strong>“知情同意”（Informed Consent）正是自主原则的直接临床体现：在对案主实施任何操作前，必须向其讲明操作的性质、潜在获益与伴随风险。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="141.72" data-end="231.17" data-title="Principle of Autonomy" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Informed consent is a direct application of autonomy: a client must be fully informed about the nature, benefits, and risks of a procedure before agreeing to it. As long as a person is mentally competent, they have the right to make decisions—even if caregivers believe those decisions are unwise. <br><br>2. <strong>Beneficence:</strong> Beneficence means doing good and acting in the best interests of the client. In daily support work, beneficence involves promoting well-being, providing compassionate comfort care, encouraging independence, and taking positive steps to help the client flourish. <br><br>3. <strong>Nonmaleficence:</strong> Nonmaleficence means doing no harm.</p>
+                          <p class="para-cn"><strong>只要案主神志清楚、具备心智认知能力，他就拥有做出最终决定的神圣主权——即便医护人员在主观上认为他的这一决定极为不明智甚至荒唐！</strong> <br><br>2. <strong>慈惠行善原则（Beneficence）</strong>：要求照护者在所有执业活动中，始终以“促进案主的最大福祉”为出发点。在日常支持工作中，行善体现在付出仁爱慈悲、保障身心舒适、全力激发长者的自立潜能、并积极采取一切有利于长者康复的建设性行动。<br><br>3. <strong>不伤害原则（Nonmaleficence）</strong>：希波克拉底医学誓言的首要铁律——“绝不给病患带来伤害”（First, do no harm）。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="141.72" data-end="231.17" data-title="Principle of Autonomy" onclick="playParagraphAudio(this)">
+                          <p class="para-en">This includes protecting clients from physical injury, verbal abuse, neglect, emotional distress, and exploitation. It also requires support workers to follow safety guidelines, practice proper infection control, and report errors or hazards immediately. <br><br>4. <strong>Justice:</strong> Justice means fairness and equality. All clients are entitled to the same high quality of care, attention, and compassion, regardless of their age, race, religion, gender, disability, economic status, or personality. <br><br></p>
+                          <p class="para-cn">它不仅严厉禁止任何形式的肉体施暴、言语侮辱虐待、忽视遗弃、精神折磨或经济剥削；更要求支持工作者时刻保持高度警觉，严格落实防跌倒规范与洗手院感防护，一旦发生操作差错或发现安全隐患，必须以对生命负责的勇气当场如实上报。<br><br>4. <strong>公平正义原则（Justice）</strong>：指在照护资源分配与服务态度上的绝对公正与均等。无论案主是谈笑风生的温和长者，还是整日咒骂挑剔的刁钻病患；无论其腰缠万贯还是依靠低保救济，全体受助者均平等享有同等水准的专业技能、充足工时与同理关怀，严禁阶层偏袒与差别待遇。<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-lavender">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">ETHICAL STANDARD · 职业伦理与隐私保密准则</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 4.1 支持工作者职业伦理守则范本 (A Sample Code of Ethics)</h4>
-                    </div>
-                  </aside>
-                </div>
-                
                 <aside class="editorial-box-container box-theme-lavender">
                   <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">ETHICAL STANDARD · 职业伦理与隐私保密准则</span>
-                    </div>
-                    <h4 class="box-title-en">BOX 4.1: A Sample Code of Ethics for Support Workers</h4>
-                    <div class="box-title-cn">BOX 4.1 核心规范专栏：支持工作者职业伦理守则（加拿大行业法定范本）</div>
+                    <h4 class="box-title-en">A Sample Code of Ethics</h4>
+                    <div class="box-title-cn">BOX 4.1 支持工作者职业伦理守则范本</div>
                   </div>
                   <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en"><strong>BOX 4.1: A Sample Code of Ethics for Support Workers</strong> <br><br>Support workers are expected to adhere to the following code of ethics: 1. Provide high-quality personal care and support that promotes the client's physical, psychological, social, and spiritual well-being. 2. Value and respect each client's dignity, independence, individuality, privacy, and preferences (DIPPS). 3. Maintain client confidentiality at all times, sharing information only with designated members of the multidisciplinary team. 4. Protect the client from physical, emotional, sexual, and financial abuse or neglect, and report suspected abuse immediately. 5. Work within your established scope of practice and follow your employer's policies and procedures. 6. Maintain professional boundaries and avoid conflicts of interest, never accepting substantial gifts, loans, or personal favours from clients. 7. Maintain competence through lifelong learning and continuous professional development. 8. Work collaboratively and respectfully with colleagues and multidisciplinary team members. <br><br></div>
-                      <div class="clause-cn"><strong>BOX 4.1 核心规范专栏：支持工作者职业伦理守则（加拿大行业法定范本）</strong> <br><br>全体支持工作者在执业生涯中，必须誓死恪守以下八大崇高职业伦理信条： 1. <strong>提供高品质全人照护</strong>：倾注精湛专业技能，全面增进服务对象在身体生理、心理情绪、社交人际与灵性信仰全维度的生命福祉。 2. <strong>践行 DIPPS 人本照护基石</strong>：全心珍视并捍卫每位受助案主的人格尊严（Dignity）、独立自立（Independence）、个性差异（Individualized care）、隐私保密（Privacy）与个人偏好意愿（Preferences）。 3. <strong>誓死捍卫病患隐私信息保密性</strong>：无论任何场合，严守案主隐私机密，严禁向无关外人泄露任何案主隐私，仅在受邀跨学科团队内依规分享必需照护资讯。 4. <strong>誓死保护长者远离一切形式的虐待遗弃</strong>：坚决守护脆弱案主免遭任何肢体摧残、言语侮辱、性侵犯、经济剥削或忽视遗弃，一旦察觉虐待苗头必须依规当场紧急上报。 5. <strong>严守法定执业范围红线</strong>：严禁越权涉足法律禁止未受监管人员执行的高危医疗禁区，一丝不苟贯彻雇主各项政策与标准规程。 6. <strong>誓死筑牢职业人际界限</strong>：严禁公私不分与利益冲突，<strong>绝对严禁收受案主任何有价礼品、金钱小费、私人借贷或索取个人私利！</strong> 7. <strong>持之以恒坚持终身进修</strong>：通过持续温习、参加学术工作坊与继续教育，确保自身操作技能与临床知识时刻处于时代前沿。 8. <strong>精诚团结开展多学科协作</strong>：以谦逊端庄、互相尊重的崇高团队精神，与护士、医生、治疗师及护理同行紧密配合。 <br><br></div>
-                    </div>
-                  </div>
-                </aside>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-case">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 4.2 临床伦理困境案例深度推演 (Ethical Dilemmas Scenarios 1 & 2)</h4>
-                    </div>
-                  </aside>
-                </div>
                 
+                <div class="box-clause-item">
+                  <div class="clause-en"><strong>BOX 4.1: A Sample Code of Ethics for Support Workers</strong> <br><br>Support workers are expected to adhere to the following code of ethics: 1. Provide high-quality personal care and support that promotes the client's physical, psychological, social, and spiritual well-being. 2. Value and respect each client's dignity, independence, individuality, privacy, and preferences (DIPPS). 3. Maintain client confidentiality at all times, sharing information only with designated members of the multidisciplinary team. 4. Protect the client from physical, emotional, sexual, and financial abuse or neglect, and report suspected abuse immediately. 5. Work within your established scope of practice and follow your employer's policies and procedures. 6. Maintain professional boundaries and avoid conflicts of interest, never accepting substantial gifts, loans, or personal favours from clients. 7. Maintain competence through lifelong learning and continuous professional development. 8. Work collaboratively and respectfully with colleagues and multidisciplinary team members. <br><br></div>
+                  <div class="clause-cn"><strong>BOX 4.1 核心规范专栏：支持工作者职业伦理守则（加拿大行业法定范本）</strong> <br><br>全体支持工作者在执业生涯中，必须誓死恪守以下八大崇高职业伦理信条： 1. <strong>提供高品质全人照护</strong>：倾注精湛专业技能，全面增进服务对象在身体生理、心理情绪、社交人际与灵性信仰全维度的生命福祉。 2. <strong>践行 DIPPS 人本照护基石</strong>：全心珍视并捍卫每位受助案主的人格尊严（Dignity）、独立自立（Independence）、个性差异（Individualized care）、隐私保密（Privacy）与个人偏好意愿（Preferences）。 3. <strong>誓死捍卫病患隐私信息保密性</strong>：无论任何场合，严守案主隐私机密，严禁向无关外人泄露任何案主隐私，仅在受邀跨学科团队内依规分享必需照护资讯。 4. <strong>誓死保护长者远离一切形式的虐待遗弃</strong>：坚决守护脆弱案主免遭任何肢体摧残、言语侮辱、性侵犯、经济剥削或忽视遗弃，一旦察觉虐待苗头必须依规当场紧急上报。 5. <strong>严守法定执业范围红线</strong>：严禁越权涉足法律禁止未受监管人员执行的高危医疗禁区，一丝不苟贯彻雇主各项政策与标准规程。 6. <strong>誓死筑牢职业人际界限</strong>：严禁公私不分与利益冲突，<strong>绝对严禁收受案主任何有价礼品、金钱小费、私人借贷或索取个人私利！</strong> 7. <strong>持之以恒坚持终身进修</strong>：通过持续温习、参加学术工作坊与继续教育，确保自身操作技能与临床知识时刻处于时代前沿。 8. <strong>精诚团结开展多学科协作</strong>：以谦逊端庄、互相尊重的崇高团队精神，与护士、医生、治疗师及护理同行紧密配合。 <br><br></div>
+                </div>
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
                 <aside class="editorial-box-container box-theme-case">
                   <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
-                    </div>
-                    <h4 class="box-title-en">BOX 4.2: Ethical Dilemmas in Support Work</h4>
-                    <div class="box-title-cn">BOX 4.2 临床实战推演：支持工作遭遇的典型伦理两难困境（情境一与情境二）</div>
+                    <h4 class="box-title-en">Ethical Dilemmas Scenarios 1 & 2</h4>
+                    <div class="box-title-cn">BOX 4.2 临床伦理困境案例深度推演</div>
                   </div>
                   <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en"><strong>BOX 4.2: Ethical Dilemmas in Support Work</strong> <br><br><strong>Scenario 1: Autonomy vs. Beneficence (The Cold Winter Coat)</strong> Mrs. Gable, 84, lives in supportive housing. She insists on going for a walk outdoors in freezing minus 15°C weather wearing only a thin cardigan sweater, refusing to wear her heavy winter coat. As a support worker, you are torn between respecting her autonomy (she is mentally competent and has the right to choose her clothing) and practicing beneficence/nonmaleficence (protecting her from hypothermia and frostbite). <em>Resolution:</em> You cannot physically force Mrs. Gable into the coat, as that would constitute assault. Instead, use creative problem-solving: gently educate her on the extreme cold, offer stylish warm alternatives (scarf, blanket), suggest a shorter walk, or accompany her with the coat in hand. If safety remains compromised, report to the supervisor immediately. <br><br><strong>Scenario 2: Autonomy vs. Safety (Refusal of the Walking Cane)</strong> Mr. Henderson, 79, has severe balance issues and is at extreme risk of falling. His care plan mandates using a four-pronged cane when ambulating. Mr. Henderson refuses to use the cane today, saying, "It makes me look like an invalid." <em>Resolution:</em> You cannot physically restrain or force Mr. Henderson. After explaining the rationale and potential fall consequences, you must respect his choice while staying within arm's reach to offer safety standby assistance. Document the refusal and report to the supervising nurse promptly. <br><br></div>
-                      <div class="clause-cn"><strong>BOX 4.2 临床实战推演：支持工作遭遇的典型伦理两难困境（情境一与情境二）</strong> <br><br><strong>实战情境一：案主自主权（Autonomy）与照护者行善避害（Beneficence）的剧烈冲突 —— 刺骨严冬里的单薄开衫</strong> 现年 84 岁的盖布尔太太（Mrs. Gable）居住在支持型公寓内。在室外气温骤降至零下 15°C 的暴风雪严冬，长者执意只套一件极其单薄的羊毛开衫就要推门外出散步，坚决拒绝穿上厚重的羽绒冬大衣。此时，支持工作者陷入了剧烈的良心拉锯：一方面必须尊重长者的自主自决权（长者心智完全健全清晰，法律赋予其自主挑选着装的权利）；另一方面，行善与避害原则又如重锤敲击你的良心（若任由其受冻，长者将在数分钟内遭遇急性体温过低症与严重冻伤）。 <em>【权威破解指引】</em>：<strong>绝对严禁采用肢体暴力将长者强行按倒套上大衣，因为在法律上强行按压身体构成刑事袭击（Assault）！</strong>此时必须运用前沿去升级沟通智慧：绝不与长者言语争吵，而是温情告知室外呼啸的寒风，拿出一件既保暖又符合其审美的大围巾或披肩；建议先在温暖的室内连廊散步，或由你怀抱厚大衣贴身陪同外出几分钟让其亲身体验严寒。若其生命安全面临不可控险情，第一时间电话通报主管护士。 <br><br><strong>实战情境二：自决权与防跌倒安全的博弈 —— 拒绝使用四脚手杖</strong> 79 岁的亨德森先生（Mr. Henderson）伴有严重前庭平衡功能失调，属于极高跌倒骨折风险案主。其官方护理计划明文规定：长者在行走时必须使用四脚防滑拐杖。但今天长者坚决拒绝拄拐，气冲冲地抱怨：“拄着这破玩意儿让我看起来像个彻底废掉的废人！” <em>【权威破解指引】</em>：支持工作者绝不能使用武力强行把手杖塞入长者掌心。在耐心向其讲清不用手杖极易跌倒导致髋关节粉碎性骨折的严重后果后，若长者仍坚决拒绝，<strong>你必须依法尊重其选择，但行动上必须寸步不离地保持在“一臂之内”（Arm's Reach）进行贴身影子防跌倒监护</strong>！并在事后即刻详实记录其拒绝事实，向责任护士做出正式书面报告。 <br><br></div>
-                    </div>
-                  </div>
-                </aside>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                <div class="box-clause-item">
+                  <div class="clause-en"><strong>BOX 4.2: Ethical Dilemmas in Support Work</strong> <br><br><strong>Scenario 1: Autonomy vs. Beneficence (The Cold Winter Coat)</strong> Mrs. Gable, 84, lives in supportive housing. She insists on going for a walk outdoors in freezing minus 15°C weather wearing only a thin cardigan sweater, refusing to wear her heavy winter coat. As a support worker, you are torn between respecting her autonomy (she is mentally competent and has the right to choose her clothing) and practicing beneficence/nonmaleficence (protecting her from hypothermia and frostbite). <em>Resolution:</em> You cannot physically force Mrs. Gable into the coat, as that would constitute assault. Instead, use creative problem-solving: gently educate her on the extreme cold, offer stylish warm alternatives (scarf, blanket), suggest a shorter walk, or accompany her with the coat in hand. If safety remains compromised, report to the supervisor immediately. <br><br><strong>Scenario 2: Autonomy vs. Safety (Refusal of the Walking Cane)</strong> Mr. Henderson, 79, has severe balance issues and is at extreme risk of falling. His care plan mandates using a four-pronged cane when ambulating. Mr. Henderson refuses to use the cane today, saying, "It makes me look like an invalid." <em>Resolution:</em> You cannot physically restrain or force Mr. Henderson. After explaining the rationale and potential fall consequences, you must respect his choice while staying within arm's reach to offer safety standby assistance. Document the refusal and report to the supervising nurse promptly. <br><br></div>
+                  <div class="clause-cn"><strong>BOX 4.2 临床实战推演：支持工作遭遇的典型伦理两难困境（情境一与情境二）</strong> <br><br><strong>实战情境一：案主自主权（Autonomy）与照护者行善避害（Beneficence）的剧烈冲突 —— 刺骨严冬里的单薄开衫</strong> 现年 84 岁的盖布尔太太（Mrs. Gable）居住在支持型公寓内。在室外气温骤降至零下 15°C 的暴风雪严冬，长者执意只套一件极其单薄的羊毛开衫就要推门外出散步，坚决拒绝穿上厚重的羽绒冬大衣。此时，支持工作者陷入了剧烈的良心拉锯：一方面必须尊重长者的自主自决权（长者心智完全健全清晰，法律赋予其自主挑选着装的权利）；另一方面，行善与避害原则又如重锤敲击你的良心（若任由其受冻，长者将在数分钟内遭遇急性体温过低症与严重冻伤）。 <em>【权威破解指引】</em>：<strong>绝对严禁采用肢体暴力将长者强行按倒套上大衣，因为在法律上强行按压身体构成刑事袭击（Assault）！</strong>此时必须运用前沿去升级沟通智慧：绝不与长者言语争吵，而是温情告知室外呼啸的寒风，拿出一件既保暖又符合其审美的大围巾或披肩；建议先在温暖的室内连廊散步，或由你怀抱厚大衣贴身陪同外出几分钟让其亲身体验严寒。若其生命安全面临不可控险情，第一时间电话通报主管护士。 <br><br><strong>实战情境二：自决权与防跌倒安全的博弈 —— 拒绝使用四脚手杖</strong> 79 岁的亨德森先生（Mr. Henderson）伴有严重前庭平衡功能失调，属于极高跌倒骨折风险案主。其官方护理计划明文规定：长者在行走时必须使用四脚防滑拐杖。但今天长者坚决拒绝拄拐，气冲冲地抱怨：“拄着这破玩意儿让我看起来像个彻底废掉的废人！” <em>【权威破解指引】</em>：支持工作者绝不能使用武力强行把手杖塞入长者掌心。在耐心向其讲清不用手杖极易跌倒导致髋关节粉碎性骨折的严重后果后，若长者仍坚决拒绝，<strong>你必须依法尊重其选择，但行动上必须寸步不离地保持在“一臂之内”（Arm's Reach）进行贴身影子防跌倒监护</strong>！并在事后即刻详实记录其拒绝事实，向责任护士做出正式书面报告。 <br><br></div>
+                </div>
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-54">
                           <span class="marker-pill">Pages 54 - 58</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-05">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第三节：职业人际界限、利益冲突与吹哨人制度</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Professional Boundaries</h3><div class="subtopic-title-cn">职业界限生命线：专业关系与世俗友谊的区别</div>
+                <div class="editorial-heading-major" id="sec-05">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第三节：职业人际界限、利益冲突与吹哨人制度</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="393.12" data-end="466.2" data-title="Professional Boundaries" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en"><strong>PROFESSIONAL BOUNDARIES IN HEALTH CARE</strong> <br><br>Professional boundaries are the invisible lines that define the limits of a professional, therapeutic relationship. A therapeutic relationship is based on trust, respect, and professional competence, established solely for the benefit of the client. It is very different from a casual personal friendship. <br><br><strong>Boundary Violations and Crossing:</strong> • <strong>Sharing personal problems:</strong> Never discuss your financial difficulties, marital troubles, health issues, or personal life with clients. • <strong>Accepting gifts or tips:</strong> Accepting money, expensive gifts, or inheritances is an unethical boundary violation that exploits the power imbalance. • <strong>Dual relationships:</strong> Never engage in secondary relationships with clients (e.g., dating, entering business deals, or hiring clients). • <strong>Overinvolvement:</strong> Showing favouritism toward one client, visiting clients outside scheduled work hours, or giving out your personal cell phone number violates boundaries. <br><br><strong>Conflict of Interest:</strong> A conflict of interest occurs when your personal interests clash with your professional duty. For example, selling products (such as cosmetics or chocolate bars) to vulnerable clients is a severe conflict of interest and is strictly forbidden. <br><br></p>
-                      <p class="para-cn"><strong>医疗卫生职业人际界限：专业医患关系与私人世俗友谊的天壤之别</strong> <br><br><strong>职业界限（Professional Boundaries）</strong>是一道在医护执业中神圣不可侵犯的无形红线，它极其严格地规范了“专业治疗性关系”（Therapeutic Relationship）的法理边界。专业治疗性关系立足于互信、尊重与高超胜任力，其<strong>存在的唯一目的全心全意服务于案主的健康与福祉</strong>；它与市井世俗中讲究“礼尚往来、互诉烦恼”的私人友谊有着本质的天壤之别！ <br><br><strong>严重逾越职业界限的典型失德行为：</strong> • <strong>向患病案主倾倒个人生活烦恼</strong>：在任何情形下，<strong>绝对严禁</strong>与案主讨论你个人的夫妻矛盾、婚姻危机、家庭琐事、经济负债危机或个人病痛！向脆弱长者诉苦是极度自私且严重失德的心理越界。 • <strong>违规收受金钱红包与贵重礼品</strong>：收受案主赠送的现金、贵重首饰、银行卡、或怂恿案主在遗嘱中将财产赠予自己，属于严重利用权力不对等地位残酷剥削脆弱案主的失德重罪！ • <strong>陷入“双重关系”深渊（Dual Relationships）</strong>：严禁在医护工作之外与案主发展任何次级世俗关系（如谈情说爱、发展男女朋友恋爱关系、开展商业合伙投资、借贷担保等）。 • <strong>过度情感卷入与偏袒（Overinvolvement）</strong>：在工作中对某一位案主表现出明显偏袒偏爱；在无排班的业余时间私自前往案主家中探访闲聊；向案主私下提供个人私人手机号等，皆属于严重破坏职业界限的违规行径。 <br><br><strong>坚决杜绝利益冲突（Conflict of Interest）：</strong> 当从业者的个人私利与工作神圣职责发生对立冲突时，即构成利益冲突。例如，在工作时间利用案主的信任向长者兜售护肤保健品、强推自己孩子的义卖巧克力棒或推销保险，属于极度恶劣的借医谋私行为，行业绝对严厉禁止！ <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.2 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Ethical Framework & Whistleblowing</h3><div class="subtopic-title-cn">伦理决策四步法则与吹哨人举报机制</div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Professional Boundaries</h3>
+                  <div class="heading-cn">职业界限生命线：专业关系与世俗友谊的区别</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="466.2" data-end="561.38" data-title="Ethical Framework & Whistleblowing" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en"><strong>FRAMEWORK FOR ETHICAL DECISION MAKING</strong> <br><br>When faced with an ethical dilemma, use the following four-step framework: 1. <strong>Recognize the ethical dilemma:</strong> Identify the conflicting values, principles, or loyalties. 2. <strong>Examine your options:</strong> Brainstorm potential solutions, weighing the benefits, risks, and ethical principles (Autonomy, Beneficence, Nonmaleficence, Justice) involved in each choice. 3. <strong>Choose the best solution and act:</strong> Select the course of action that best upholds client dignity, safety, and rights within your scope of practice. 4. <strong>Evaluate the outcome:</strong> Reflect on the results of your decision. What went well? What could have been handled better? <br><br><strong>WHISTLEBLOWING</strong> Whistleblowing is the reporting of illegal, unsafe, or unethical practices within an organization to higher authorities or outside bodies when internal channels fail. Support workers have a legal and moral duty to advocate for client safety. If you observe abuse, severe neglect, or fraud: • Document the exact facts objectively (date, time, individuals involved, specific observed acts). • Follow your employer's internal reporting hierarchy first (supervisor, department head, administration). • If the organization ignores the abuse or retaliates, escalate to external regulatory authorities (e.g., provincial Ministry of Health, Long-Term Care Inspections Branch, or local police). • Canadian laws protect legitimate whistleblowers from employer retribution when reporting in good faith. <br><br></p>
-                      <p class="para-cn"><strong>临床伦理决策四步分析法则与正义吹哨人（Whistleblowing）制度</strong> <br><br>在临床遭遇进退维谷的伦理两难局面时，支持工作者必须启动严谨理性的<strong>“伦理决策四步分析框架”</strong>： 1. <strong>第一步：敏锐识别伦理困境的核心症结</strong>：剖析现场究竟是哪两项神圣原则发生了正面冲突（例如究竟是“案主自主权”与“生命防跌倒安全”对立，还是“对同事的情感忠诚”与“保护案主免遭虐待”对立）。 2. <strong>第二步：全面头脑风暴并推演各项备选方案</strong>：列举所有潜在破解路径，逐一置于四大伦理基石（自主、行善、不伤害、公正）的天平上进行严谨利弊权衡。 3. <strong>第三步：果断选定最佳合规方案并坚决执行</strong>：在自身法定执业范围内，选定最能捍卫案主尊严、人身安全与合法权利的最佳方案并迅速付诸行动。 4. <strong>第四步：回溯审视与持续性反思评估</strong>：在事件平息后，进行深度反思性执业回顾：该抉择是否达成了最佳临床结局？下一次遭遇类似危机时有哪些细节可以处理得更为妥帖？ <br><br><strong>神圣的正义“吹哨人”举报制度（Whistleblowing）：</strong> “吹哨人”是指当工作场所内部出现严重违法乱纪、残暴虐待案主、重大医疗失职且内部层级监管彻底失效时，从业人员挺身而出向上级最高机关或外部执法部门公开揭发黑幕的正义之举。支持工作者拥有保护弱者的法定义务。一旦在机构中亲眼目睹同事虐待长者、克扣生活物资或伪造护理记录： • <strong>详实客观记录第一手法医级证据</strong>：不掺杂主观臆测，精确记录事发年月日、具体时间、涉案人员全名、案主当场身体淤青伤势及具体目击对话； • <strong>首先依规履行内部逐级汇报流程</strong>：第一时间向主管护士、科室总监直至院舍院长进行书面正式汇报； • <strong>若遭遇管理层包庇压制，坚决向外部执法机关吹哨</strong>：若机构内部包庇施暴者或对举报人进行威胁迫害，支持工作者必须毫不动摇地直接向外部省卫生厅长期照护质检监督处、职业公会或地方警察局（Police）紧急报案！ • 加拿大劳动法律明文规定：对出于良知善意、真实检举虐待罪行的正义吹哨人，依法给予最坚固的免受雇主打击报复的法律豁免保护！ <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="393.12" data-end="466.2" data-title="Professional Boundaries" onclick="playParagraphAudio(this)">
+                          <p class="para-en"><strong>PROFESSIONAL BOUNDARIES IN HEALTH CARE</strong> <br><br>Professional boundaries are the invisible lines that define the limits of a professional, therapeutic relationship. A therapeutic relationship is based on trust, respect, and professional competence, established solely for the benefit of the client. It is very different from a casual personal friendship. <br><br><strong>Boundary Violations and Crossing:</strong> • <strong>Sharing personal problems:</strong> Never discuss your financial difficulties, marital troubles, health issues, or personal life with clients. • <strong>Accepting gifts or tips:</strong> Accepting money, expensive gifts, or inheritances is an unethical boundary violation that exploits the power imbalance. • <strong>Dual relationships:</strong> Never engage in secondary relationships with clients (e.g., dating, entering business deals, or hiring clients). • <strong>Overinvolvement:</strong> Showing favouritism toward one client, visiting clients outside scheduled work hours, or giving out your personal cell phone number violates boundaries. <br><br><strong>Conflict of Interest:</strong> A conflict of interest occurs when your personal interests clash with your professional duty. For example, selling products (such as cosmetics or chocolate bars) to vulnerable clients is a severe conflict of interest and is strictly forbidden. <br><br></p>
+                          <p class="para-cn"><strong>医疗卫生职业人际界限：专业医患关系与私人世俗友谊的天壤之别</strong> <br><br><strong>职业界限（Professional Boundaries）</strong>是一道在医护执业中神圣不可侵犯的无形红线，它极其严格地规范了“专业治疗性关系”（Therapeutic Relationship）的法理边界。专业治疗性关系立足于互信、尊重与高超胜任力，其<strong>存在的唯一目的全心全意服务于案主的健康与福祉</strong>；它与市井世俗中讲究“礼尚往来、互诉烦恼”的私人友谊有着本质的天壤之别！ <br><br><strong>严重逾越职业界限的典型失德行为：</strong> • <strong>向患病案主倾倒个人生活烦恼</strong>：在任何情形下，<strong>绝对严禁</strong>与案主讨论你个人的夫妻矛盾、婚姻危机、家庭琐事、经济负债危机或个人病痛！向脆弱长者诉苦是极度自私且严重失德的心理越界。 • <strong>违规收受金钱红包与贵重礼品</strong>：收受案主赠送的现金、贵重首饰、银行卡、或怂恿案主在遗嘱中将财产赠予自己，属于严重利用权力不对等地位残酷剥削脆弱案主的失德重罪！ • <strong>陷入“双重关系”深渊（Dual Relationships）</strong>：严禁在医护工作之外与案主发展任何次级世俗关系（如谈情说爱、发展男女朋友恋爱关系、开展商业合伙投资、借贷担保等）。 • <strong>过度情感卷入与偏袒（Overinvolvement）</strong>：在工作中对某一位案主表现出明显偏袒偏爱；在无排班的业余时间私自前往案主家中探访闲聊；向案主私下提供个人私人手机号等，皆属于严重破坏职业界限的违规行径。 <br><br><strong>坚决杜绝利益冲突（Conflict of Interest）：</strong> 当从业者的个人私利与工作神圣职责发生对立冲突时，即构成利益冲突。例如，在工作时间利用案主的信任向长者兜售护肤保健品、强推自己孩子的义卖巧克力棒或推销保险，属于极度恶劣的借医谋私行为，行业绝对严厉禁止！ <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-            <div class="editorial-microtopic-row">
-              <span class="micro-bullet">▪</span>
-              <h4 class="micro-title-en">Chapter 4 Review</h4><span class="micro-title-cn">· 本章复习与核心要点回顾</span>
-            </div>
-            
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.3 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">KEY POINTS</h3><div class="subtopic-title-cn">核心要点清单</div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Ethical Framework & Whistleblowing</h3>
+                  <div class="heading-cn">伦理决策四步法则与吹哨人举报机制</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="561.38" data-end="649.56" data-title="KEY POINTS" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">1. The term ethics refers to the principles or values that guide us when differentiating right from wrong and good from bad. 2. Laws are enforceable rules of conduct; ethics deal with what we <em>should</em> do, representing higher moral standards. 3. The four basic principles of health care ethics are autonomy (self-determination), beneficence (doing good), nonmaleficence (doing no harm), and justice (fairness and equality). 4. Mentally competent clients have the right to make decisions regarding their own care, even if caregivers disagree with their choices. 5. A code of ethics outlines the principles and rules of conduct that govern a professional group. 6. Support workers must maintain professional boundaries at all times, keeping therapeutic relationships focused exclusively on the client's needs. 7. Blurring boundaries includes sharing personal problems, accepting gifts or money, forming dual relationships, and engaging in conflicts of interest. 8. An ethical dilemma occurs when two or more ethical principles conflict, and choosing one option violates another. 9. An ethical decision-making framework involves: recognizing the dilemma, examining options, acting on the best solution, and evaluating the outcome. 10. Whistleblowing is reporting illegal or unethical practices to protect clients from harm when internal channels fail. 11. Support workers have a legal and moral responsibility to report suspected abuse immediately. <br><br></p>
-                      <p class="para-cn">1. 伦理准则（Ethics）是指在人类社会中指引我们甄别是非曲直、善恶美丑的根本哲学原则与价值体系。 2. 法律是具有国家强制力的行为底线规约；伦理探讨的是良心层面的“应当做什么”，彰显出更高的职业操守与精神境界。 3. 医疗卫生伦理学的四大基石原则是：自主自决（Autonomy）、行善利他（Beneficence）、不伤害戒律（Nonmaleficence）以及公平正义（Justice）。 4. 凡心智健全具备认知能力的案主，均拥有对其自身照料做出最终决定的神圣主权——即便照护人员在主观上并不赞同其抉择。 5. 职业伦理守则是统领并规制整个专业群体执业行为的总纲与崇高行动指南。 6. 支持工作者必须时刻坚守职业人际界限，确保专业治疗性关系始终百分之百纯粹聚焦于受助案主的健康福祉。 7. 破坏职业界限的失德行径包括向案主倒苦水倾诉私事、违规收受金钱红包、陷入双重关系深渊以及利用职务谋取个人私利。 8. 当两项或多项崇高道德原则发生不可调和的正面冲突时，即陷入进退维谷的伦理两难困境。 9. 科学的伦理决策框架包含四步：敏锐识别困境、周密推演利弊方案、果断执行最佳抉择、以及持续开展反思性评估。 10. 吹哨人制度是指在内部监管失效时挺身而出揭发违法虐待黑幕、坚决捍卫案主安危的正义护卫机制。 11. 一旦察觉案主遭受虐待伤害的蛛丝马迹，第一时间依法合规紧急上报，是支持工作者神圣不可推卸的法定与伦理双重天职！ <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="466.2" data-end="561.38" data-title="Ethical Framework & Whistleblowing" onclick="playParagraphAudio(this)">
+                          <p class="para-en"><strong>FRAMEWORK FOR ETHICAL DECISION MAKING</strong> <br><br>When faced with an ethical dilemma, use the following four-step framework: 1. <strong>Recognize the ethical dilemma:</strong> Identify the conflicting values, principles, or loyalties. 2. <strong>Examine your options:</strong> Brainstorm potential solutions, weighing the benefits, risks, and ethical principles (Autonomy, Beneficence, Nonmaleficence, Justice) involved in each choice.</p>
+                          <p class="para-cn"><strong>临床伦理决策四步分析法则与正义吹哨人（Whistleblowing）制度</strong> <br><br>在临床遭遇进退维谷的伦理两难局面时，支持工作者必须启动严谨理性的<strong>“伦理决策四步分析框架”</strong>： 1. <strong>第一步：敏锐识别伦理困境的核心症结</strong>：剖析现场究竟是哪两项神圣原则发生了正面冲突（例如究竟是“案主自主权”与“生命防跌倒安全”对立，还是“对同事的情感忠诚”与“保护案主免遭虐待”对立）。2. <strong>第二步：全面头脑风暴并推演各项备选方案</strong>：列举所有潜在破解路径，逐一置于四大伦理基石（自主、行善、不伤害、公正）的天平上进行严谨利弊权衡。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="466.2" data-end="561.38" data-title="Ethical Framework & Whistleblowing" onclick="playParagraphAudio(this)">
+                          <p class="para-en">3. <strong>Choose the best solution and act:</strong> Select the course of action that best upholds client dignity, safety, and rights within your scope of practice. 4. <strong>Evaluate the outcome:</strong> Reflect on the results of your decision. What went well?</p>
+                          <p class="para-cn">3. <strong>第三步：果断选定最佳合规方案并坚决执行</strong>：在自身法定执业范围内，选定最能捍卫案主尊严、人身安全与合法权利的最佳方案并迅速付诸行动。4. <strong>第四步：回溯审视与持续性反思评估</strong>：在事件平息后，进行深度反思性执业回顾：该抉择是否达成了最佳临床结局？下一次遭遇类似危机时有哪些细节可以处理得更为妥帖？<br><br><strong>神圣的正义“吹哨人”举报制度（Whistleblowing）：</strong> “吹哨人”是指当工作场所内部出现严重违法乱纪、残暴虐待案主、重大医疗失职且内部层级监管彻底失效时，从业人员挺身而出向上级最高机关或外部执法部门公开揭发黑幕的正义之举。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="466.2" data-end="561.38" data-title="Ethical Framework & Whistleblowing" onclick="playParagraphAudio(this)">
+                          <p class="para-en">What could have been handled better? <br><br><strong>WHISTLEBLOWING</strong> Whistleblowing is the reporting of illegal, unsafe, or unethical practices within an organization to higher authorities or outside bodies when internal channels fail. Support workers have a legal and moral duty to advocate for client safety. If you observe abuse, severe neglect, or fraud: • Document the exact facts objectively (date, time, individuals involved, specific observed acts). • Follow your employer's internal reporting hierarchy first (supervisor, department head, administration). • If the organization ignores the abuse or retaliates, escalate to external regulatory authorities (e.g., provincial Ministry of Health, Long-Term Care Inspections Branch, or local police). • Canadian laws protect legitimate whistleblowers from employer retribution when reporting in good faith. <br><br></p>
+                          <p class="para-cn">支持工作者拥有保护弱者的法定义务。一旦在机构中亲眼目睹同事虐待长者、克扣生活物资或伪造护理记录： • <strong>详实客观记录第一手法医级证据</strong>：不掺杂主观臆测，精确记录事发年月日、具体时间、涉案人员全名、案主当场身体淤青伤势及具体目击对话； • <strong>首先依规履行内部逐级汇报流程</strong>：第一时间向主管护士、科室总监直至院舍院长进行书面正式汇报； • <strong>若遭遇管理层包庇压制，坚决向外部执法机关吹哨</strong>：若机构内部包庇施暴者或对举报人进行威胁迫害，支持工作者必须毫不动摇地直接向外部省卫生厅长期照护质检监督处、职业公会或地方警察局（Police）紧急报案！• 加拿大劳动法律明文规定：对出于良知善意、真实检举虐待罪行的正义吹哨人，依法给予最坚固的免受雇主打击报复的法律豁免保护！<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.4 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">CRITICAL THINKING IN PRACTICE</h3><div class="subtopic-title-cn">临床批判性思维修炼</div>
+            <div class="editorial-heading-micro">
+              <h4 class="heading-en">Chapter 4 Review</h4>
+              <div class="heading-cn">本章复习与核心要点回顾</div>
+            </div>
+            
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">KEY POINTS</h3>
+                  <div class="heading-cn">核心要点清单</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="649.56" data-end="678.14" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en"><strong>CRITICAL THINKING IN PRACTICE (Page 57)</strong> You are assisting a client in a live-in facility with feeding. The client refuses to eat. The client's wife, who is concerned about his weight loss, has told you to "Force the food into him." • What should you do? • Does the client have the right to refuse to eat? • Does the client's wife have a right to demand that her husband be force-fed? • What is the agency's responsibility? <br><br></p>
-                      <p class="para-cn">在一家全天候长期照护养老院内，你正在床旁耐心协助一位患病长者进食午餐。长者紧闭双唇、坚决抗拒进食。长者的妻子因极度焦虑其体重出现严重进行性消瘦，在床旁声色俱厉地强令你：“必须把饭给我硬灌进去！” • <strong>此时此刻，作为现场专职支持工作者，你必须如何依法依规合乎伦理地从容处置？</strong> • <strong>受助长者本人在法律与伦理上是否享有完全合法拒绝进食的神圣权利？</strong>（只要长者具备吞咽功能且神志清晰，自主权至高无上，任何人都无权强迫！） • <strong>家属是否有权强令医护人员违背病患意愿执行“强制灌饭”？</strong>（家属绝无此特权！在法律上，未获本人知情同意强行硬塞食物构成刑事人身侵害；家属的焦虑必须通过心理同理疏导，而非迁怒施暴。） • <strong>受雇机构在此类伦理危机中肩负何种专业责任？</strong>（机构必须立即安排注册护士、营养师与主治医生联合查房，评估长者是否存在隐匿性口腔溃疡、吞咽障碍或消化道梗阻；必要时制定医学补液与小剂量多餐方案，并在护理记录中严谨留存家属沟通与长者意愿的详实记录。） <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="561.38" data-end="649.56" data-title="KEY POINTS" onclick="playParagraphAudio(this)">
+                          <p class="para-en">1. The term ethics refers to the principles or values that guide us when differentiating right from wrong and good from bad. 2. Laws are enforceable rules of conduct; ethics deal with what we <em>should</em> do, representing higher moral standards. 3. The four basic principles of health care ethics are autonomy (self-determination), beneficence (doing good), nonmaleficence (doing no harm), and justice (fairness and equality). 4.</p>
+                          <p class="para-cn">1. 伦理准则（Ethics）是指在人类社会中指引我们甄别是非曲直、善恶美丑的根本哲学原则与价值体系。2. 法律是具有国家强制力的行为底线规约；伦理探讨的是良心层面的“应当做什么”，彰显出更高的职业操守与精神境界。3. 医疗卫生伦理学的四大基石原则是：自主自决（Autonomy）、行善利他（Beneficence）、不伤害戒律（Nonmaleficence）以及公平正义（Justice）。4. 凡心智健全具备认知能力的案主，均拥有对其自身照料做出最终决定的神圣主权——即便照护人员在主观上并不赞同其抉择。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="561.38" data-end="649.56" data-title="KEY POINTS" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Mentally competent clients have the right to make decisions regarding their own care, even if caregivers disagree with their choices. 5. A code of ethics outlines the principles and rules of conduct that govern a professional group. 6. Support workers must maintain professional boundaries at all times, keeping therapeutic relationships focused exclusively on the client's needs. 7. Blurring boundaries includes sharing personal problems, accepting gifts or money, forming dual relationships, and engaging in conflicts of interest. 8.</p>
+                          <p class="para-cn">5. 职业伦理守则是统领并规制整个专业群体执业行为的总纲与崇高行动指南。6. 支持工作者必须时刻坚守职业人际界限，确保专业治疗性关系始终百分之百纯粹聚焦于受助案主的健康福祉。7. 破坏职业界限的失德行径包括向案主倒苦水倾诉私事、违规收受金钱红包、陷入双重关系深渊以及利用职务谋取个人私利。8. 当两项或多项崇高道德原则发生不可调和的正面冲突时，即陷入进退维谷的伦理两难困境。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="561.38" data-end="649.56" data-title="KEY POINTS" onclick="playParagraphAudio(this)">
+                          <p class="para-en">An ethical dilemma occurs when two or more ethical principles conflict, and choosing one option violates another. 9. An ethical decision-making framework involves: recognizing the dilemma, examining options, acting on the best solution, and evaluating the outcome. 10. Whistleblowing is reporting illegal or unethical practices to protect clients from harm when internal channels fail. 11. Support workers have a legal and moral responsibility to report suspected abuse immediately. <br><br></p>
+                          <p class="para-cn">9. 科学的伦理决策框架包含四步：敏锐识别困境、周密推演利弊方案、果断执行最佳抉择、以及持续开展反思性评估。10. 吹哨人制度是指在内部监管失效时挺身而出揭发违法虐待黑幕、坚决捍卫案主安危的正义护卫机制。11. 一旦察觉案主遭受虐待伤害的蛛丝马迹，第一时间依法合规紧急上报，是支持工作者神圣不可推卸的法定与伦理双重天职！<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-    <div class="editorial-quiz-section" style="margin-top:56px; padding-top:32px; border-top:2px solid #e2e8f0;">
-      <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
-        <span class="quiz-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
-        <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 4 章全真自测复习题与详尽临床精解</h3>
-        <p style="font-size:13.5px; color:#166534; margin:0;">原版 11 道标准执业自测题（<strong>Pages 48–58 · 11 道全真自测题</strong>）。点击选项可即时测试并验证对错，查看权威临床实操解析。</p>
-      </div>
-    
-        <div class="editorial-quiz-card" id="q-card-ch4-1">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 01</span>
-            <span class="eq-status" id="q-status-ch4-1">待作答</span>
-          </div>
-          <div class="eq-stem-en">1. T / F: Ethics apply only to life-and-death situations.</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误（T / F）：职业道德与伦理准则，仅仅适用于涉及生死攸关的极端抢救生命紧急情境中。</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 1, 'T', 'F', 'q-rat-ch4-1', this)">
-              <span class="opt-badge">T</span>
-              <span class="opt-text">True · 正确</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 1, 'F', 'F', 'q-rat-ch4-1', this)">
-              <span class="opt-badge">F</span>
-              <span class="opt-text">False · 错误</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-1', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-1" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 F (False · 错误)</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              伦理准则绝非仅仅在 ICU 拔管或临终绝症抢救时才派上用场。在支持工作者的日常执业中，从每一次进门前敲门礼貌问候（维护尊严）、协助洗澡保护被单隐私（维护隐私）、遵照长者意愿选择衣服搭配（尊重自主）、到严格换水防烫伤（不伤害），**职业伦理如影随形渗透在一言一行每一个看似平凡的日常照料微小细节之中**！<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-2">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 02</span>
-            <span class="eq-status" id="q-status-ch4-2">待作答</span>
-          </div>
-          <div class="eq-stem-en">2. T / F: Codes of ethics provide rules and answers to ethical dilemmas.</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误（T / F）：行业职业伦理守则（Code of Ethics）为医护人员在工作中遭遇的所有伦理道德两难困境，直接提供了现成且绝对标准唯一的标准答案。</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 2, 'T', 'F', 'q-rat-ch4-2', this)">
-              <span class="opt-badge">T</span>
-              <span class="opt-text">True · 正确</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 2, 'F', 'F', 'q-rat-ch4-2', this)">
-              <span class="opt-badge">F</span>
-              <span class="opt-text">False · 错误</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-2', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-2" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 F (False · 错误)</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              职业伦理守则提供的是宏观的“根本指导原则、职业准绳与道德方向标”（Guiding principles and values），但现实世界中的伦理困境极其复杂多变，**守则绝不可能变成一本包治百病、自动吐出标准答案的操作手册**！从业者必须运用临床批判性思维与伦理决策四步框架，结合特定情境进行深入的个案推演与团队权衡。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-3">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 03</span>
-            <span class="eq-status" id="q-status-ch4-3">待作答</span>
-          </div>
-          <div class="eq-stem-en">3. T / F: Ethics are a guide when deciding between right and wrong, and good and bad.</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误（T / F）：伦理准则的核心职能，在于指引我们在纷繁的人类社会行为中甄别是非曲直（Right from Wrong）与善恶美丑（Good from Bad）。</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 3, 'T', 'T', 'q-rat-ch4-3', this)">
-              <span class="opt-badge">T</span>
-              <span class="opt-text">True · 正确</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 3, 'F', 'T', 'q-rat-ch4-3', this)">
-              <span class="opt-badge">F</span>
-              <span class="opt-text">False · 错误</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-3', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-3" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 T (True · 正确)</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              原书第 49 页及第 57 页核心要点第一条开宗明义界定：伦理学（Ethics）的根本科学定义，正是引导我们在面对两难选择时鉴别是非与良善的崇高道德指南针。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-4">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 04</span>
-            <span class="eq-status" id="q-status-ch4-4">待作答</span>
-          </div>
-          <div class="eq-stem-en">4. T / F: Keeping a resident's information confidential is ethical behaviour.</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误（T / F）：时刻将住院院舍长者的身体隐私、既往病史与个人资讯严格保密，属于标准的崇高伦理行为。</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 4, 'T', 'T', 'q-rat-ch4-4', this)">
-              <span class="opt-badge">T</span>
-              <span class="opt-text">True · 正确</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 4, 'F', 'T', 'q-rat-ch4-4', this)">
-              <span class="opt-badge">F</span>
-              <span class="opt-text">False · 错误</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-4', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-4" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 T (True · 正确)</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              严守信息保密性（Confidentiality）不仅是《个人健康信息保护法》（PHIPA）的法定要求，更是支持工作者职业道德守则（Box 4.1）中誓死履行的崇高伦理义务。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-5">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 05</span>
-            <span class="eq-status" id="q-status-ch4-5">待作答</span>
-          </div>
-          <div class="eq-stem-en">5. T / F: Any decision regarding a client's care is ethical if it does not harm the person.</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>判断正误（T / F）：针对服务对象照护所做出的任何决定，只要其在客观上没有对当事人造成身体上的直接肉体伤害，就必然属于合乎伦理道德的正当决定。</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 5, 'T', 'F', 'q-rat-ch4-5', this)">
-              <span class="opt-badge">T</span>
-              <span class="opt-text">True · 正确</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 5, 'F', 'F', 'q-rat-ch4-5', this)">
-              <span class="opt-badge">F</span>
-              <span class="opt-text">False · 错误</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-5', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-5" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 F (False · 错误)</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              这一认知极其危险！合乎伦理绝不仅仅局限于“没有直接打伤或摔伤病患”（不伤害原则只是四大基石之一）。倘若照护者为了省事而剥夺长者自主选择衣服的权利（严重侵犯自主权）、或像训斥婴儿般侮辱长者（严重侵犯人格尊严）、或在病患背后四处散播其私密八卦（严重侵犯隐私保密），虽然没有造成任何物理肉体创伤，但属于极其严重的不道德失德重罪！<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-6">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 06</span>
-            <span class="eq-status" id="q-status-ch4-6">待作答</span>
-          </div>
-          <div class="eq-stem-en">6. Providing a safe environment is an example of:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>在日常照护中时刻保持地面干燥防滑、清除过道杂物电线、按规使用床挡防护以提供绝对安全无险的居住环境，是践行下列哪一项伦理原则的典范？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 6, 'A', 'D', 'q-rat-ch4-6', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Autonomy</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 6, 'B', 'D', 'q-rat-ch4-6', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Justice</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 6, 'C', 'D', 'q-rat-ch4-6', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Beneficence</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 6, 'D', 'D', 'q-rat-ch4-6', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Nonmaleficence</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-6', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-6" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              不伤害原则（Nonmaleficence）的核心戒律是确保案主免遭一切可预见的人身安全创伤与外界危害；主动排查环境隐患、创造安全环境（Providing a safe environment），是防范跌倒、烫伤等身体伤害的根本防线，完美诠释了不伤害原则的实践内涵。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-7">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 07</span>
-            <span class="eq-status" id="q-status-ch4-7">待作答</span>
-          </div>
-          <div class="eq-stem-en">7. Showing respect and protecting a client's dignity is an example of:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>在所有临床照护与人际沟通中，始终展现发自肺腑的敬重、誓死捍卫服务对象的人格尊严（Dignity），是践行下列哪一项核心伦理原则的生动体现？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 7, 'A', 'C', 'q-rat-ch4-7', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Autonomy</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 7, 'B', 'C', 'q-rat-ch4-7', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Justice</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 7, 'C', 'C', 'q-rat-ch4-7', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Beneficence</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 7, 'D', 'C', 'q-rat-ch4-7', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Nonmaleficence</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-7', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-7" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              行善原则（Beneficence）要求医护人员绝不满足于被动不犯错，而是主动付出仁爱慈悲，采取积极行动提升案主的尊严感、价值感与幸福感，让案主在晚年沐浴在温情与体面之中。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-8">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 08</span>
-            <span class="eq-status" id="q-status-ch4-8">待作答</span>
-          </div>
-          <div class="eq-stem-en">8. Treating all clients with equal care and attention, regardless of their condition or temperament, is an example of:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>无论案主患有何种棘手病症，无论其脾气性格是温文尔雅还是狂躁挑剔，支持工作者均以毫无偏袒的均等照料、充分工时与耐心予以一视同仁的对待，这一崇高行为属于：</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 8, 'A', 'B', 'q-rat-ch4-8', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Autonomy</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 8, 'B', 'B', 'q-rat-ch4-8', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Justice</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 8, 'C', 'B', 'q-rat-ch4-8', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Beneficence</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 8, 'D', 'B', 'q-rat-ch4-8', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Nonmaleficence</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-8', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-8" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              公平正义原则（Justice）的本质正是“一视同仁、绝无歧视与偏袒”（Fairness and Equality）。无论受助者社会地位贫富高低、无论其性情如何乖戾难缠，每一位生命在正义的天平上皆享有均等、无偏见的同等专业照护与尊重。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-9">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 09</span>
-            <span class="eq-status" id="q-status-ch4-9">待作答</span>
-          </div>
-          <div class="eq-stem-en">9. Respecting personal preferences is an example of:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>在日常生活中充分尊重长者几点起床、喜欢穿哪件衣服、早餐喜欢喝茶还是咖啡等个人偏好（Preferences），是践行下列哪一项原则的典范？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 9, 'A', 'A', 'q-rat-ch4-9', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Autonomy</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 9, 'B', 'A', 'q-rat-ch4-9', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Justice</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 9, 'C', 'A', 'q-rat-ch4-9', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Beneficence</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 9, 'D', 'A', 'q-rat-ch4-9', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Nonmaleficence</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-9', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-9" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 A</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              自主自决权（Autonomy）的核心内涵在于承认案主是独立的主权个体，拥有决定自己起居细节与个人生活方式的自由。尊重案主的个性化偏好，正是向长者让渡自决主权、摒弃包办替代的关键体现。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-10">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 10</span>
-            <span class="eq-status" id="q-status-ch4-10">待作答</span>
-          </div>
-          <div class="eq-stem-en">10. Which question is least helpful when deciding on an ethical solution to a problem?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>在面临复杂的临床伦理困境权衡决策时，下列哪一个考量问题是**最无帮助、最不具参考价值、甚至从根本上违背职业道德的**？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 10, 'A', 'D', 'q-rat-ch4-10', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Does the solution respect the client's wishes and stated preferences?</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 10, 'B', 'D', 'q-rat-ch4-10', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Does the solution treat the client justly and fairly?</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 10, 'C', 'D', 'q-rat-ch4-10', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Does the solution provide a short-term benefit or a long-term benefit to the client?</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 10, 'D', 'D', 'q-rat-ch4-10', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Does the solution benefit you?</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-10', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-10" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              选项 D 属于赤裸裸的个人私利诱惑与利己主义！医疗伦理决策的至高灵魂是“以案主为中心”（Client-centred），所有的审视均必须围绕案主的尊严、权利与安危展开；**把“自己能否捞到好处”作为决策考量，是严重的利益冲突失德行径，最不应当出现在专业决策考量之中！**<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch4-11">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 11</span>
-            <span class="eq-status" id="q-status-ch4-11">待作答</span>
-          </div>
-          <div class="eq-stem-en">11. Mr. Will, a client in a long-term care facility, refuses to be lifted into his chair for meals because he says being moved makes him too uncomfortable. As a result, he is developing pressure sores on his buttocks. You know that it is important to change positions frequently (see Chapter 15). Your supervisor has advised that he be "forced" out of bed, but you wish to respect his wishes. Which of the following should be done first to deal with this ethical dilemma?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>长期照护院舍内的威尔先生（Mr. Will）坚决抗拒在用餐时被机械移位机吊入轮椅，抱怨搬运过程令其全身骨骼剧痛难忍。由于长年拒绝离床坐轮椅，其臀部骶尾部皮肤已出现发红并濒临破溃形成压疮（褥疮）。你知道定期更换体位与减压对长者极其关键。你的当班主管护士生硬地下令“必须强行将其弄下床”，但你内心极度渴望尊重长者拒绝折磨的意愿。面对这一尖锐的伦理两难，你**首先应当采取的最佳处置措施是**：</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch4', 11, 'A', 'C', 'q-rat-ch4-11', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Leave Mr. Will in his bed for meals.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 11, 'B', 'C', 'q-rat-ch4-11', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Tell Mr. Will that he has to be moved but do it quickly so his pain is minimized.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 11, 'C', 'C', 'q-rat-ch4-11', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Discuss your concerns with the other team members, Mr. Will, and his family to see if a compromise can be reached.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch4', 11, 'D', 'C', 'q-rat-ch4-11', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Ask for a different client to take care of.</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch4-11', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch4-11" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              选项 C 展现了顶阶专业从业者的问题解决成熟智慧与伦理担当。强行使用暴力硬拽（选项 B）是违法的身体侵害虐待；彻底撒手不管任由压疮恶化致死（选项 A）违背不伤害与行善原则；逃避推诿（选项 D）更是缺乏专业责任感。最佳路径正是**搭建沟通桥梁（Discuss concerns with team, client, and family）**：探查是否可以通过在搬运前 30 分钟遵医嘱提前口服镇痛药、更换更为舒适柔软的定制移位吊兜、或在床上采取高半卧位就餐等综合折中措施，既完全消除长者的搬运剧痛，又切实保障了骶尾部减压防压疮的临床目标！
-            </div>
-          </div>
-        </div>
-        </div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">CRITICAL THINKING IN PRACTICE</h3>
+                  <div class="heading-cn">临床批判性思维修炼</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="4" data-start="649.56" data-end="678.14" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)">
+                          <p class="para-en"><strong>CRITICAL THINKING IN PRACTICE (Page 57)</strong> You are assisting a client in a live-in facility with feeding. The client refuses to eat. The client's wife, who is concerned about his weight loss, has told you to "Force the food into him." • What should you do? • Does the client have the right to refuse to eat? • Does the client's wife have a right to demand that her husband be force-fed? • What is the agency's responsibility? <br><br></p>
+                          <p class="para-cn">在一家全天候长期照护养老院内，你正在床旁耐心协助一位患病长者进食午餐。长者紧闭双唇、坚决抗拒进食。长者的妻子因极度焦虑其体重出现严重进行性消瘦，在床旁声色俱厉地强令你：“必须把饭给我硬灌进去！” • <strong>此时此刻，作为现场专职支持工作者，你必须如何依法依规合乎伦理地从容处置？</strong> • <strong>受助长者本人在法律与伦理上是否享有完全合法拒绝进食的神圣权利？</strong>（只要长者具备吞咽功能且神志清晰，自主权至高无上，任何人都无权强迫！） • <strong>家属是否有权强令医护人员违背病患意愿执行“强制灌饭”？</strong>（家属绝无此特权！在法律上，未获本人知情同意强行硬塞食物构成刑事人身侵害；家属的焦虑必须通过心理同理疏导，而非迁怒施暴。） • <strong>受雇机构在此类伦理危机中肩负何种专业责任？</strong>（机构必须立即安排注册护士、营养师与主治医生联合查房，评估长者是否存在隐匿性口腔溃疡、吞咽障碍或消化道梗阻；必要时制定医学补液与小剂量多餐方案，并在护理记录中严谨留存家属沟通与长者意愿的详实记录。） <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-    </main>
-
-    <footer class="editorial-colophon">
-      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
-      <p>Chapter 4: Ethics in Support Work · 双语沉浸学术研读版</p>
-      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
-    </footer>
+    </div>
   </div>
 
   <script>
@@ -1765,146 +1371,147 @@
           b.classList.remove('active');
         }
       });
+      
       try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
     }
 
-    var themes = ['theme-paper', 'theme-white', 'theme-night'];
-    var themeNames = ['纸色', '纯白', '深色'];
-    var currentThemeIdx = 0;
-    
-    function cycleTheme() {
-      currentThemeIdx = (currentThemeIdx + 1) % themes.length;
-      var html = document.documentElement;
-      themes.forEach(function(t) { html.classList.remove(t); });
-      html.classList.add(themes[currentThemeIdx]);
-      var btn = document.getElementById('themeBtn');
-      if (btn) btn.innerText = themeNames[currentThemeIdx];
-      try { localStorage.setItem('psw_theme_idx', currentThemeIdx); } catch (e) {}
-    }
-
-    function initSettings() {
-      var savedMode = 'bilingual';
-      try { savedMode = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
-      switchLanguageMode(savedMode);
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
       
       try {
-        var savedTheme = parseInt(localStorage.getItem('psw_theme_idx') || '0', 10);
-        if (!isNaN(savedTheme) && savedTheme >= 0 && savedTheme < themes.length) {
-          currentThemeIdx = savedTheme;
-          var html = document.documentElement;
-          themes.forEach(function(t) { html.classList.remove(t); });
-          html.classList.add(themes[currentThemeIdx]);
-          var btn = document.getElementById('themeBtn');
-          if (btn) btn.innerText = themeNames[currentThemeIdx];
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
         }
       } catch (e) {}
     }
 
-    var currentFontIdx = 1;
-    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
-    function adjustFontSize(delta) {
-      currentFontIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontIdx + delta));
-      document.documentElement.style.setProperty('--font-base', fontSizes[currentFontIdx]);
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
     }
 
-    initSettings();
-
     function toggleReaderAudioPlay() {
-      if (readerAudio.paused) {
-        readerAudio.play().then(function() {
-          isPlaying = true;
-          document.getElementById('rabPlayBtn').innerText = '⏸';
-        }).catch(function(e) { console.log(e); });
-      } else {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
         readerAudio.pause();
         isPlaying = false;
-        document.getElementById('rabPlayBtn').innerText = '▶';
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
       }
     }
 
     function playParagraphAudio(el) {
-      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var start = parseFloat(el.getAttribute('data-start') || 0);
       var title = el.getAttribute('data-title') || '';
-      readerAudio.currentTime = start;
-      readerAudio.play().then(function() {
-        isPlaying = true;
-        document.getElementById('rabPlayBtn').innerText = '⏸';
-      }).catch(function(e) { console.log(e); });
-
-      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
-      for (var i = 0; i < actives.length; i++) {
-        actives[i].classList.remove('audio-active');
-      }
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
       el.classList.add('audio-active');
       lastActiveEntry = el;
-      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 4 朗读中';
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
     }
 
-    readerAudio.addEventListener('timeupdate', function() {
-      var cur = readerAudio.currentTime;
-      var dur = readerAudio.duration || 1500;
-      function formatTime(t) {
-        var m = Math.floor(t / 60);
-        var s = Math.floor(t % 60);
-        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
-      }
-      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
-
-      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
-      var found = null;
-      for (var i = 0; i < entries.length; i++) {
-        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
-        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
-        if (cur >= start && cur < end) {
-          found = entries[i];
-          break;
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
         }
-      }
-      if (found && found !== lastActiveEntry) {
-        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
-        found.classList.add('audio-active');
-        lastActiveEntry = found;
-        var title = found.getAttribute('data-title');
-        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 4 朗读中';
-      }
-    });
-
-    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
-      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
-      if (!card) return;
-      var opts = card.querySelectorAll('.eq-opt');
-      for (var i = 0; i < opts.length; i++) {
-        opts[i].classList.remove('selected-correct', 'selected-wrong');
-      }
-      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
-      if (selectedKey === correctKey) {
-        rowEl.classList.add('selected-correct');
-        if (statusEl) {
-          statusEl.innerText = '回答正确';
-          statusEl.style.color = '#166534';
-        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
       } else {
-        rowEl.classList.add('selected-wrong');
-        if (statusEl) {
-          statusEl.innerText = '回答有误，请查阅临床精解';
-          statusEl.style.color = '#991b1b';
-        }
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
       }
-      var rat = document.getElementById(ratId);
-      if (rat) rat.style.display = 'block';
     }
 
-    function toggleRationale(ratId, btnEl) {
-      var box = document.getElementById(ratId);
-      if (!box) return;
-      if (box.style.display === 'none' || !box.style.display) {
-        box.style.display = 'block';
-        btnEl.innerText = '收起临床精解';
-      } else {
-        box.style.display = 'none';
-        btnEl.innerText = '查看临床精解';
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
       }
     }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
   </script>
 </body>
 </html>

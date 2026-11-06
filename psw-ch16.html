@@ -23,17 +23,35 @@
       --border-subtle: #eae2d5;
       --border-strong: #d8cebf;
       
-      --box-sage-bg: #f0f6f2;
-      --box-sage-border: #cee0d4;
-      --box-blue-bg: #f0f5fc;
-      --box-blue-border: #cbdcf7;
-      --box-amber-bg: #fcf7ee;
-      --box-amber-border: #fae4c0;
-      --box-purple-bg: #f7f4fc;
-      --box-purple-border: #e3d9f5;
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
     }
     
-    /* Theme: Pure White */
     html.theme-white {
       --bg-canvas: #ffffff;
       --bg-card: #f8fafc;
@@ -43,13 +61,8 @@
       --text-muted: #94a3b8;
       --border-subtle: #e2e8f0;
       --border-strong: #cbd5e1;
-      --box-sage-bg: #f2f8f4;
-      --box-blue-bg: #f1f6fd;
-      --box-amber-bg: #fdf8ef;
-      --box-purple-bg: #f9f5fd;
     }
     
-    /* Theme: Night OLED */
     html.theme-night {
       --bg-canvas: #121214;
       --bg-card: #1c1c1f;
@@ -60,19 +73,25 @@
       --accent-navy: #60a5fa;
       --border-subtle: #27272a;
       --border-strong: #3f3f46;
-      --box-sage-bg: #14211a;
-      --box-sage-border: #1e3a2b;
-      --box-blue-bg: #131c2e;
-      --box-blue-border: #1f3154;
-      --box-amber-bg: #231b11;
-      --box-amber-border: #3d2d18;
-      --box-purple-bg: #1f1629;
-      --box-purple-border: #38244f;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
     html { scroll-behavior: smooth; }
-    a, .editorial-footer-url { word-break: break-all; }
     body {
       background: var(--bg-canvas);
       color: var(--text-main);
@@ -88,12 +107,12 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      height: 50px;
+      height: 48px;
       background: var(--bg-overlay);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 0 20px;
+      padding: 0 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,20 +124,17 @@
       text-decoration: none;
       color: var(--accent-navy);
       font-weight: 600;
-      font-size: 12.5px;
+      font-size: 12px;
       padding: 5px 12px;
       background: var(--bg-card);
       border-radius: 9999px;
       border: 1px solid var(--border-subtle);
       transition: all 0.15s ease;
       white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
     .nav-home-btn:hover { background: var(--border-subtle); }
     .nav-chapter-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--text-main);
       display: flex;
@@ -137,7 +153,6 @@
       font-weight: 700;
     }
     
-    /* Segmented Language Switcher */
     .mode-switch-segmented {
       display: flex;
       background: var(--border-subtle);
@@ -147,7 +162,7 @@
       flex-shrink: 0;
     }
     .mode-seg-btn {
-      padding: 5px 13px;
+      padding: 5px 12px;
       border: none;
       background: transparent;
       border-radius: 9999px;
@@ -169,10 +184,10 @@
       font-weight: 700;
     }
     
-    .nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .reading-util-group { display: flex; align-items: center; gap: 4px; }
     .util-btn {
-      padding: 5px 10px;
+      padding: 5px 9px;
       border: 1px solid var(--border-subtle);
       background: var(--bg-card);
       border-radius: 6px;
@@ -180,7 +195,6 @@
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
-      transition: all 0.15s ease;
       white-space: nowrap;
     }
     .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
@@ -195,8 +209,8 @@
       padding: 3px 12px 3px 4px;
     }
     .play-circle-btn {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: var(--accent-navy);
       color: #ffffff;
@@ -205,10 +219,8 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 11px;
-      transition: transform 0.15s, background 0.15s;
+      font-size: 10px;
     }
-    .play-circle-btn:hover { transform: scale(1.06); }
     .player-meta { display: flex; flex-direction: column; }
     .player-track-title {
       font-size: 11px;
@@ -219,27 +231,26 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .player-track-time { font-size: 10px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
     
-    /* Golden Reading Canvas - Zero Nested Borders */
+    /* Golden Reading Canvas */
     .reading-canvas,
     .ch-editorial-flow,
     .ch5-editorial-flow {
       width: 100%;
       max-width: 740px;
       margin: 0 auto;
-      padding: 36px 24px 100px;
+      padding: 32px 20px 100px;
       background: transparent;
-      border: none;
-      box-shadow: none;
       box-sizing: border-box;
     }
     
+    /* Chapter Hero */
     .chapter-hero-editorial {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 14px;
-      padding: 32px 28px 24px;
+      padding: 30px 26px 22px;
       margin-bottom: 32px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
@@ -252,7 +263,7 @@
       margin-bottom: 10px;
     }
     .hero-title-en {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 750;
       line-height: 1.25;
       color: var(--text-main);
@@ -275,221 +286,144 @@
       color: var(--text-muted);
     }
     
-    .page-jump-ribbon {
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border-subtle);
-      max-width: 100%;
-      overflow: hidden;
+      gap: 6px;
     }
-    .ribbon-label { font-size: 11.5px; font-weight: 600; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
-    .ribbon-scroll { display: flex; gap: 4px; overflow-x: auto; min-width: 0; flex: 1; -webkit-overflow-scrolling: touch; }
-    .ribbon-chip {
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 2px 7px;
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
       background: var(--border-subtle);
       color: var(--text-secondary);
-      border-radius: 4px;
-      white-space: nowrap;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
     }
-    .ribbon-chip:hover { background: var(--accent-navy); color: #fff; }
-    
-    .editorial-stream {
-      width: 100%;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    /* 4-Tier Thematic & Heading Hierarchy */
-    /* Tier 1: Major Section Banner */
-    .editorial-major-section {
-      margin: 56px 0 24px;
-      padding: 24px 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-left: 5px solid var(--accent-navy);
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    }
-    .section-banner-head .section-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 750;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: var(--accent-navy);
-      padding: 3px 9px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .section-banner-head .section-title-en {
-      font-size: 22px;
-      font-weight: 750;
-      color: var(--text-main);
-      line-height: 1.35;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .section-banner-head .section-title-cn {
-      font-size: 16px;
+    .ps-label {
+      font-size: 12px;
       font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
+      color: var(--text-muted);
     }
-    .section-banner-head .section-title-universal {
-      font-size: 20px;
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
       font-weight: 750;
       color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .section-banner-head .section-summary-tag {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      padding-top: 10px;
-      border-top: 1px dashed var(--border-subtle);
-      line-height: 1.5;
-    }
-
-    /* Tier 2: Clinical Sub-topic Card */
-    .editorial-subtopic-card {
-      margin: 36px 0 16px;
-      padding: 14px 18px;
-      background: rgba(30, 58, 138, 0.035);
-      border-left: 3.5px solid var(--accent-navy);
-      border-radius: 0 8px 8px 0;
-    }
-    html.theme-night .editorial-subtopic-card {
-      background: rgba(96, 165, 250, 0.06);
-      border-left-color: #60a5fa;
-    }
-    .subtopic-tag {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent-navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
       margin-bottom: 4px;
     }
-    html.theme-night .subtopic-tag {
-      color: #60a5fa;
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
     }
-    .subtopic-title-en {
-      font-size: 17.5px;
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
       margin-bottom: 3px;
     }
-    .subtopic-title-cn {
+    .editorial-heading-sub .heading-cn {
       font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
-    .subtopic-title-universal {
-      font-size: 16.5px;
-      font-weight: 700;
-      color: var(--text-main);
-    }
 
-    /* Tier 3: Micro-topic Row */
-    .editorial-microtopic-row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
+    .editorial-heading-micro {
       margin: 24px 0 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
     }
-    .micro-bullet {
-      color: var(--accent-navy);
-      font-size: 12px;
-    }
-    html.theme-night .micro-bullet {
-      color: #60a5fa;
-    }
-    .micro-title-en {
+    .editorial-heading-micro .heading-en {
       font-size: 15.5px;
       font-weight: 700;
       color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .micro-title-cn {
+    .editorial-heading-micro .heading-cn {
       font-size: 13.5px;
       font-weight: 500;
       color: var(--text-secondary);
-    }
-    .micro-title-universal {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-main);
+      display: inline-block;
     }
 
-    /* Tier 4: Chapter Thematic Navigation Jumpbar */
-    .chapter-thematic-nav {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-    }
-    .thematic-nav-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .thematic-nav-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .topic-chip {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-subtle);
-      padding: 4px 10px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s ease;
-    }
-    .topic-chip:hover {
-      background: var(--accent-navy);
-      color: #ffffff;
-      border-color: var(--accent-navy);
-    }
-    .topic-chip .chip-num {
-      font-size: 10px;
-      font-weight: 700;
-      opacity: 0.75;
-    }
-
-    /* Legacy section divider fallback */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
-    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
-    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
-    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
-    
-    /* Bilingual Paragraphs */
+    /* Bilingual Paragraphs - No play buttons */
     .bilingual-paragraph {
       position: relative;
-      margin-bottom: 24px;
-      padding: 8px 12px 10px 14px;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
       border-left: 3px solid transparent;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
@@ -501,26 +435,23 @@
       background: rgba(30, 58, 138, 0.05);
       border-left-color: var(--accent-navy);
     }
-    .para-play-indicator { display: none; }
-    
+        
     .para-en {
       font-size: var(--font-base);
-      line-height: 1.8;
+      line-height: 1.78;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-weight: 420;
-      letter-spacing: -0.005em;
     }
     .para-cn {
       font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.85;
+      line-height: 1.82;
       color: var(--text-secondary);
       font-weight: 400;
-      letter-spacing: 0.005em;
       margin-bottom: 0;
     }
     
-    /* Distinct Callout Boxes */
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
     .editorial-box-container {
       margin: 36px 0;
       border-radius: 12px;
@@ -528,33 +459,24 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); }
-    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); }
-    .box-theme-amber, .box-theme-terracotta { background: var(--box-amber-bg); border-color: var(--box-amber-border); }
-    .box-theme-case, .box-theme-purple { background: var(--box-purple-bg); border-color: var(--box-purple-border); }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
     
     .box-banner-header {
       padding: 14px 18px 12px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    .box-badge-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-    .box-badge-pill {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.025);
     }
     .box-title-en {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 16.5px;
+      font-weight: 750;
       color: var(--text-main);
-      line-height: 1.4;
+      line-height: 1.35;
       margin-bottom: 3px;
     }
     .box-title-cn {
@@ -563,309 +485,291 @@
       color: var(--text-secondary);
     }
     .box-body-content {
-      padding: 14px 18px 18px;
+      padding: 18px 20px;
     }
     .box-clause-item {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
     }
     .box-clause-item:last-child {
-      border-bottom: none;
+      margin-bottom: 0;
       padding-bottom: 0;
+      border-bottom: none;
     }
     .clause-en {
-      font-size: 15px;
+      font-size: calc(var(--font-base) * 0.94);
       line-height: 1.7;
       color: var(--text-main);
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
     .clause-cn {
-      font-size: 14px;
+      font-size: calc(var(--font-base) * 0.9);
       line-height: 1.75;
       color: var(--text-secondary);
     }
     .box-source-citation {
-      padding: 10px 0 0;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
       font-size: 12px;
-      color: var(--text-muted);
-      border-top: 1px dashed var(--border-subtle);
-      margin-top: 12px;
-    }
-    
-    /* Page Anchor Marker */
-    .page-anchor-marker {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 36px 0 24px;
-      color: var(--text-muted);
-      font-size: 12px;
-    }
-    .page-anchor-marker::before,
-    .page-anchor-marker::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border-subtle);
-    }
-    .marker-pill {
-      padding: 2px 10px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 9999px;
-      font-size: 11.5px;
-      font-weight: 600;
+      font-style: italic;
       color: var(--text-muted);
     }
-    .marker-sec {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    
-    /* Lists */
-    .editorial-list {
-      list-style: none;
-      padding: 0;
-      margin: 16px 0 24px;
-    }
-    .editorial-list-item {
-      margin-bottom: 12px;
-      padding-left: 18px;
-      position: relative;
-    }
-    .editorial-list-item::before {
-      content: "•";
-      color: var(--accent-navy);
-      font-weight: bold;
-      position: absolute;
-      left: 4px;
-      top: 0;
-    }
-    .item-en {
-      font-size: var(--font-base);
-      line-height: 1.75;
-      color: var(--text-main);
-      margin-bottom: 3px;
-    }
-    .item-cn {
-      font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-    
-    /* Terms Grid */
-    .key-terms-section { margin: 40px 0; }
-    .kt-section-header { margin-bottom: 20px; }
-    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
-    .kt-subtitle { font-size: 13px; color: var(--text-muted); }
-    .terms-editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-    }
-    .editorial-term-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 14px 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
-    }
-    .etc-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 8px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .etc-word { font-size: 15px; color: var(--text-main); font-weight: 700; }
-    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 6px; font-style: italic; }
-    .etc-cn-tag {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--accent-navy);
-      background: rgba(30, 58, 138, 0.08);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .etc-def-en { font-size: 13px; line-height: 1.6; color: var(--text-main); margin-bottom: 6px; }
-    .etc-def-cn { font-size: 12.5px; line-height: 1.65; color: var(--text-secondary); }
-    
-    /* Quizzes */
-    .editorial-quiz-section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border-subtle); }
-    .editorial-quiz-card {
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 20px 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .eq-num { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); }
-    .eq-status { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); line-height: 1.5; margin-bottom: 6px; }
-    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
-    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
-    .eq-opt {
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
       cursor: pointer;
-      background: var(--bg-canvas);
       transition: all 0.15s ease;
     }
-    .eq-opt:hover { background: var(--border-subtle); }
-    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
-    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
-    .opt-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--border-subtle);
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-main);
-      flex-shrink: 0;
-    }
-    .opt-text { font-size: 13.5px; line-height: 1.5; color: var(--text-main); }
-    .btn-toggle-rat {
-      padding: 6px 12px;
+    .kt-toggle-btn.active {
       background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
       border: 1px solid var(--border-subtle);
       border-radius: 6px;
       font-size: 12px;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
+      transition: all 0.15s ease;
     }
-    .eq-rationale-box {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
       border-radius: 8px;
-      font-size: 13px;
-      line-height: 1.6;
+      padding: 14px;
     }
-    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 4px; }
-    .rat-content { color: #1e293b; }
-    
-    /* Tables */
-    .table-wrap { overflow-x: auto; margin: 24px 0; }
-    .clinical-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-    .clinical-table th { background: var(--border-subtle); padding: 10px 12px; border: 1px solid var(--border-subtle); font-weight: 700; color: var(--text-main); text-align: left; }
-    .clinical-table td { padding: 10px 12px; border: 1px solid var(--border-subtle); color: var(--text-secondary); }
-    
-    /* Tri-State Language Immersion Directives */
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
     html.mode-en .para-cn,
     html.mode-en .item-cn,
     html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
-    html.mode-en .sh-title-cn,
-    html.mode-en .section-title-cn,
-    html.mode-en .subtopic-title-cn,
-    html.mode-en .micro-title-cn,
-    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
-    html.mode-en .marker-text-cn,
-    html.mode-en .eq-stem-cn { display: none !important; }
-    html.mode-en .para-en { font-size: calc(var(--font-base) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
-    
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
     html.mode-cn .para-en,
     html.mode-cn .item-en,
     html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
-    html.mode-cn .sh-title-en,
-    html.mode-cn .section-title-en,
-    html.mode-cn .subtopic-title-en,
-    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
-    html.mode-cn .marker-text-en,
-    html.mode-cn .eq-stem-en { display: none !important; }
-    html.mode-cn .para-cn { font-size: calc(var(--font-base) * var(--font-cn-scale) + 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
-    
-    /* Colophon */
-    .editorial-colophon { text-align: center; padding: 48px 20px; color: var(--text-muted); font-size: 12.5px; line-height: 1.7; }
-    
-    /* Strict Mobile Responsive Layout */
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
     @media (max-width: 768px) {
-      .top-sticky-bar {
-        height: 44px;
-        padding: 0 10px;
-        gap: 6px;
-        flex-wrap: nowrap;
-        overflow: hidden;
-      }
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
       .nav-chapter-title { display: none; }
-      .nav-home-btn { padding: 4px 8px; font-size: 11.5px; }
-      .mode-switch-segmented { padding: 2px; gap: 1px; }
-      .mode-seg-btn { padding: 4px 8px; font-size: 11px; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
       .reading-util-group { display: none; }
-      .ambient-player { padding: 0; background: transparent; border: none; }
-      .player-meta { display: none; }
-      .play-circle-btn { width: 30px; height: 30px; font-size: 12px; }
-      
-      .reading-canvas,
-      .ch-editorial-flow,
-      .ch5-editorial-flow {
-        padding: 14px 16px 80px;
-        max-width: 100%;
-      }
-      .chapter-hero-editorial {
-        padding: 18px 16px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
       .hero-title-en { font-size: 22px; }
-      .hero-title-cn { font-size: 15.5px; }
-      
-      .editorial-major-section {
-        padding: 16px 14px;
-        margin: 36px 0 16px;
-        border-radius: 10px;
-      }
-      .section-banner-head .section-title-en { font-size: 18.5px; }
-      .section-banner-head .section-title-cn { font-size: 15px; }
-      .section-banner-head .section-title-universal { font-size: 17px; }
-      
-      .editorial-subtopic-card {
-        padding: 10px 12px;
-        margin: 24px 0 12px;
-      }
-      .subtopic-title-en { font-size: 16px; }
-      .subtopic-title-cn { font-size: 13.5px; }
-      .subtopic-title-universal { font-size: 15px; }
-      
-      .editorial-microtopic-row {
-        margin: 18px 0 8px;
-        flex-wrap: wrap;
-      }
-      .micro-title-en { font-size: 14.5px; }
-      .micro-title-cn { font-size: 13px; }
-      
-      .thematic-nav-chips { gap: 4px; }
-      .topic-chip { padding: 3px 8px; font-size: 11px; }
-      
-      .box-banner-header { padding: 12px 14px 10px; }
-      .box-body-content { padding: 12px 14px 14px; }
-      .bilingual-paragraph { padding: 6px 10px 8px 12px; margin-bottom: 20px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <div class="top-sticky-bar">
     <div class="nav-left">
-      <a href="psw-reader.html#toc" class="nav-home-btn">← 目录</a>
+      <a href="psw-reader.html#sec-ch16" class="nav-home-btn">← 返回全书总目录</a>
       <div class="nav-chapter-title">
         <span class="ch-badge">CH 16</span>
         <span>Rehabilitation and Restorative Care</span>
@@ -873,22 +777,20 @@
     </div>
     
     <div class="mode-switch-segmented" id="langModeSwitch">
-      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英</button>
-      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">EN</button>
-      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">中</button>
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
     </div>
 
     <div class="nav-right">
       <div class="reading-util-group">
-        <button class="util-btn" onclick="cycleTheme()" id="themeBtn" title="切换暖纸/纯白/夜读">纸色</button>
-        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
-        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
       </div>
 
       <div class="ambient-player">
-        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()" title="播放/暂停音频">▶</button>
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
         <div class="player-meta">
-          <span class="player-track-title" id="rabCurrentTitle">CH 16 · 点选段落即读</span>
+          <span class="player-track-title" id="rabCurrentTitle">第 16 章 · 点选段落收听</span>
           <span class="player-track-time" id="rabCurTime">00:00 / 19:30</span>
         </div>
       </div>
@@ -902,27 +804,32 @@
       <h2 class="hero-title-cn">康复护理与恢复性照护：案主潜能最大化、辅具赋能与自主重构</h2>
       <div class="hero-meta-bar">
         <span class="meta-item">Pages 282–295 · 8 道全真自测题</span>
-        <span class="meta-item">轻触段落即可播放真人原声导读</span>
+        <span class="meta-item">专业音频：19:30</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch16-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
+
       
-        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
-          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
-          <div class="thematic-nav-chips">
-            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 恢复性照护理念与赋能</a>
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-282">第 282 页</option><option value="page-283">第 283 页</option><option value="page-284">第 284 页</option>
+              </select>
+            </div>
           </div>
-        </nav>
-        
-      
-        <div class="page-jump-ribbon">
-          <span class="ribbon-label">原书页码检索:</span>
-          <div class="ribbon-scroll">
-            <a href="#page-282" class="ribbon-chip">p.282</a><a href="#page-283" class="ribbon-chip">p.283</a><a href="#page-284" class="ribbon-chip">p.284</a>
+          <div class="ps-chips-ribbon">
+            <a href="#page-282" class="page-chip-item"><span class="pc-num">p.282</span></a><a href="#page-283" class="page-chip-item"><span class="pc-num">p.283</span></a><a href="#page-284" class="page-chip-item"><span class="pc-num">p.284</span></a>
           </div>
         </div>
         
     </header>
 
-    <main class="editorial-stream">
+    <div class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
@@ -930,43 +837,126 @@
                           <span class="marker-pill">Page 282</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-01">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 16 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
+                <div class="editorial-heading-major" id="sec-01">
+                  <h2 class="heading-en">Chapter 16 Opener & Learning Objectives</h2>
+                  <div class="heading-cn">开篇导读与学习目标</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="16" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Define rehabilitation and restorative care and explain the difference between them. • Describe the multidisciplinary rehabilitation team and the support worker's vital role within it. • Explain the psychological and emotional impacts of chronic disability on clients and families. • Describe adaptive devices and assistive technology that promote independence in activities of daily living (ADLs). • Explain how to promote independence and self-care without causing frustration. <br><br></p>
-                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确界定“专科医学康复”（Rehabilitation）与“日常恢复性生活照护”（Restorative Care）的本质联系与区别。 • 详尽阐释跨学科康复治疗团队的构成架构，深刻认识支持工作者在其中所承担的床旁落实关键纽带作用。 • 深刻洞察长期慢性残疾对受助案主及其家属所造成的深远心理创伤与情绪重压。 • 熟练掌握助力案主独立完成日常生活活动（ADLs）的各类前沿自适应辅具（Adaptive Devices）与辅助技术。 • 熟练掌握赋能案主生活自理（Self-Care）的专业引导策略，既激励其独立自强又杜绝因难度过高而挫伤其尊严。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Objectives</h3>
+                  <div class="heading-cn">学习目标</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="16" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">After reading this chapter, the learner should be able to do the following: • Define rehabilitation and restorative care and explain the difference between them. • Describe the multidisciplinary rehabilitation team and the support worker's vital role within it. • Explain the psychological and emotional impacts of chronic disability on clients and families. • Describe adaptive devices and assistive technology that promote independence in activities of daily living (ADLs). • Explain how to promote independence and self-care without causing frustration. <br><br></p>
+                          <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确界定“专科医学康复”（Rehabilitation）与“日常恢复性生活照护”（Restorative Care）的本质联系与区别。 • 详尽阐释跨学科康复治疗团队的构成架构，深刻认识支持工作者在其中所承担的床旁落实关键纽带作用。 • 深刻洞察长期慢性残疾对受助案主及其家属所造成的深远心理创伤与情绪重压。 • 熟练掌握助力案主独立完成日常生活活动（ADLs）的各类前沿自适应辅具（Adaptive Devices）与辅助技术。 • 熟练掌握赋能案主生活自理（Self-Care）的专业引导策略，既激励其独立自强又杜绝因难度过高而挫伤其尊严。 <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-283">
                           <span class="marker-pill">Page 283</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-02">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 16 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
-                  </div>
-                </section>
+                <div class="editorial-heading-major" id="sec-02">
+                  <h2 class="heading-en">Chapter 16 Key Terms</h2>
+                  <div class="heading-cn">核心专业术语表</div>
+                </div>
                 
-            <div class="key-terms-section">
-              <div class="kt-section-header">
-                <h3 class="kt-title">KEY TERMS · 第 16 章核心专业术语速查表</h3>
-                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+            <div class="key-terms-master-container" id="kt-container-ch16">
+              <div class="kt-toolbar">
+                <div class="kt-toolbar-left">
+                  <h3 class="kt-title">Key Terms · 第 16 章核心专业术语表（全 4 词速查）</h3>
+                </div>
+                <div class="kt-toolbar-right">
+                  <div class="kt-mode-toggle">
+                    <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch16', 'table')">速查词表</button>
+                    <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch16', 'cards')">精研卡片</button>
+                  </div>
+                  <div class="kt-search-box">
+                    <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch16', this.value)">
+                  </div>
+                </div>
               </div>
-              <div class="terms-editorial-grid">
-            
+
+              <!-- Mode 1: Compact Table -->
+              <div class="kt-view-table active" id="kt-table-view-ch16">
+                <div class="table-wrap">
+                  <table class="kt-compact-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 28%;">英文术语 / 国际音标</th>
+                        <th style="width: 22%;">中文对照</th>
+                        <th style="width: 50%;">教材标准学术释义与临床界定</th>
+                      </tr>
+                    </thead>
+                    <tbody id="kt-table-body-ch16">
+                      
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>adaptive (assistive) device</strong></strong>
+                    <span class="kt-ipa">/əˈdæptɪv dɪˈvaɪs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">自适应辅助器具</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">专为身体残疾或活动受限人士设计的工程辅助器械或日常改造工具（如加粗握柄餐具、穿袜器、长柄取物器），旨在赋能其独立完成穿衣、进餐或洗浴等生活自理。 (p. 286)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>prosthesis (plural: prostheses)</strong></strong>
+                    <span class="kt-ipa">/prɒsˈθiːsɪs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">假体 / 人造假肢</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">用于替代缺失身体解剖部位（如假眼、假牙、假臂、人造假腿）的人造替代装置。 (p. 289)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>rehabilitation</strong></strong>
+                    <span class="kt-ipa">/ˌriːhəˌbɪlɪˈteɪʃən/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">专科医学康复</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">协助身患严重外伤、中风或慢性疾病的案主，恢复或重建其在身体、精神、社交与职业等各维度所能达到的最高机能状态的医疗全过程。 (p. 283)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>restorative care</strong></strong>
+                    <span class="kt-ipa">/rɪˈstɔːrətɪv keə/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">恢复性照护</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">贯穿于日常基础生活支持中的照护模式，旨在协助案主巩固并维系现有的最高机能水平、预防机能衰退二次恶化，并最大限度保持生活自立。 (p. 283)</div>
+                  </td>
+                </tr>
+                
+                    </tbody>
+                  </table>
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-table-ch16">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch16', 'table')">
+                    展开全部 4 个专业术语 ▼
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mode 2: Cards Deck -->
+              <div class="kt-view-cards" id="kt-cards-view-ch16" style="display:none;">
+                <div class="terms-editorial-grid" id="kt-cards-grid-ch16">
+                  
                 <div class="editorial-term-card">
                   <div class="etc-header">
                     <div class="etc-en-block">
@@ -1018,49 +1008,37 @@
                     <div class="etc-def-cn">贯穿于日常基础生活支持中的照护模式，旨在协助案主巩固并维系现有的最高机能水平、预防机能衰退二次恶化，并最大限度保持生活自立。 (p. 283)</div>
                   </div>
                 </div>
-                </div></div>
-<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-cards-ch16">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch16', 'cards')">
+                    展开全部 4 张精研术语卡片 ▼
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-284">
                           <span class="marker-pill">Pages 284 - 287</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-03">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第一节：恢复性照护理念与赋能自理法则</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Restorative Care Philosophy</h3><div class="subtopic-title-cn">恢复性照护的灵魂：做辅助者，而非包办者</div>
+                <div class="editorial-heading-major" id="sec-03">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第一节：恢复性照护理念与赋能自理法则</div>
                 </div>
                 
-                <aside class="editorial-box-container box-theme-sage">
-                  <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                    </div>
-                    <h4 class="box-title-en">Focus on Abilities, Not Disabilities:</h4>
-                    
-                  </div>
-                  <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en">The most common mistake well-meaning support workers make is "doing everything for the client" because it is faster. This creates <strong>learned helplessness</strong> and destroys rehabilitation gains! • <strong>Focus on Abilities, Not Disabilities:</strong> Emphasize what the client can do, rather than mourning what they have lost. • <strong>Patience and Encouragement:</strong> Allow the client ample time to complete tasks independently, even if their movements are slow or clumsy. • <strong>Celebrate Small Milestones:</strong> A client who buttons one single button independently has achieved a major restorative victory! • <strong>Adaptive Equipment Integration:</strong> Incorporate specialized tools: - Plate guards (prevent food from spilling off the edge) - Curved, weighted, or built-up handle utensils (for clients with tremors or weak grip) - Long-handled shoehorns and sock aids (prevent bending and hip dislocation) - Button hooks and zipper pulls <br><br></div>
-                      <div class="clause-cn">在长期照护中，许多心善但缺乏专业认知的照料者常犯的一个致命错误就是“嫌长者动作慢，索性全替长者包办做好”。这种好心办坏事的包办做法，会彻底诱发案主的“习得性无助”（Learned Helplessness），导致长者剩余的宝贵生理机能迅速退化废用！ • <strong>聚焦于长者的剩余潜能，而非盯着残疾不放：</strong> 热情肯定长者尚存的每一项机能，而非一味沉浸在丧失能力的哀怨中。 • <strong>给予极大的耐心与温情鼓励：</strong> 允许长者以自己的节奏缓慢摸索完成，即便动作笨拙吃力，也绝不横加夺过代劳！ • <strong>为微小的每一步进步欢呼：</strong> 偏瘫长者若能凭借自己的双手独立扣上一颗衬衫纽扣，就是恢复性康复史上的一场辉煌胜利！ • <strong>熟练整合各类自适应生活辅具：</strong> - 防洒挡边餐盘（Plate Guards，防止饭菜从盘沿被推落） - 加粗增重弯柄防抖餐勺（专为帕金森震颤与握力虚弱长者设计） - 长柄穿鞋器与自适应穿袜器（Sock Aids，免除深弯腰，预防髋关节假体脱位） - 穿扣器与长拉链辅助扣</div>
-                    </div>
-                  </div>
-                </aside>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Restorative Care Philosophy</h3>
+                  <div class="heading-cn">恢复性照护的灵魂：做辅助者，而非包办者</div>
+                </div>
                 
-    </main>
-
-    <footer class="editorial-colophon">
-      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
-      <p>Chapter 16: Rehabilitation and Restorative Care · 双语沉浸学术研读版</p>
-      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
-    </footer>
+                        <article class="bilingual-paragraph audio-trackable" data-ch="16" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">The most common mistake well-meaning support workers make is "doing everything for the client" because it is faster. This creates <strong>learned helplessness</strong> and destroys rehabilitation gains! • <strong>Focus on Abilities, Not Disabilities:</strong> Emphasize what the client can do, rather than mourning what they have lost. • <strong>Patience and Encouragement:</strong> Allow the client ample time to complete tasks independently, even if their movements are slow or clumsy. • <strong>Celebrate Small Milestones:</strong> A client who buttons one single button independently has achieved a major restorative victory! • <strong>Adaptive Equipment Integration:</strong> Incorporate specialized tools: - Plate guards (prevent food from spilling off the edge) - Curved, weighted, or built-up handle utensils (for clients with tremors or weak grip) - Long-handled shoehorns and sock aids (prevent bending and hip dislocation) - Button hooks and zipper pulls <br><br></p>
+                          <p class="para-cn">在长期照护中，许多心善但缺乏专业认知的照料者常犯的一个致命错误就是“嫌长者动作慢，索性全替长者包办做好”。这种好心办坏事的包办做法，会彻底诱发案主的“习得性无助”（Learned Helplessness），导致长者剩余的宝贵生理机能迅速退化废用！ • <strong>聚焦于长者的剩余潜能，而非盯着残疾不放：</strong> 热情肯定长者尚存的每一项机能，而非一味沉浸在丧失能力的哀怨中。 • <strong>给予极大的耐心与温情鼓励：</strong> 允许长者以自己的节奏缓慢摸索完成，即便动作笨拙吃力，也绝不横加夺过代劳！ • <strong>为微小的每一步进步欢呼：</strong> 偏瘫长者若能凭借自己的双手独立扣上一颗衬衫纽扣，就是恢复性康复史上的一场辉煌胜利！ • <strong>熟练整合各类自适应生活辅具：</strong> - 防洒挡边餐盘（Plate Guards，防止饭菜从盘沿被推落） - 加粗增重弯柄防抖餐勺（专为帕金森震颤与握力虚弱长者设计） - 长柄穿鞋器与自适应穿袜器（Sock Aids，免除深弯腰，预防髋关节假体脱位） - 穿扣器与长拉链辅助扣 <br><br></p>
+                        </article>
+                        
+    </div>
   </div>
 
   <script>
@@ -1081,146 +1059,147 @@
           b.classList.remove('active');
         }
       });
+      
       try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
     }
 
-    var themes = ['theme-paper', 'theme-white', 'theme-night'];
-    var themeNames = ['纸色', '纯白', '深色'];
-    var currentThemeIdx = 0;
-    
-    function cycleTheme() {
-      currentThemeIdx = (currentThemeIdx + 1) % themes.length;
-      var html = document.documentElement;
-      themes.forEach(function(t) { html.classList.remove(t); });
-      html.classList.add(themes[currentThemeIdx]);
-      var btn = document.getElementById('themeBtn');
-      if (btn) btn.innerText = themeNames[currentThemeIdx];
-      try { localStorage.setItem('psw_theme_idx', currentThemeIdx); } catch (e) {}
-    }
-
-    function initSettings() {
-      var savedMode = 'bilingual';
-      try { savedMode = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
-      switchLanguageMode(savedMode);
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
       
       try {
-        var savedTheme = parseInt(localStorage.getItem('psw_theme_idx') || '0', 10);
-        if (!isNaN(savedTheme) && savedTheme >= 0 && savedTheme < themes.length) {
-          currentThemeIdx = savedTheme;
-          var html = document.documentElement;
-          themes.forEach(function(t) { html.classList.remove(t); });
-          html.classList.add(themes[currentThemeIdx]);
-          var btn = document.getElementById('themeBtn');
-          if (btn) btn.innerText = themeNames[currentThemeIdx];
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
         }
       } catch (e) {}
     }
 
-    var currentFontIdx = 1;
-    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
-    function adjustFontSize(delta) {
-      currentFontIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontIdx + delta));
-      document.documentElement.style.setProperty('--font-base', fontSizes[currentFontIdx]);
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
     }
 
-    initSettings();
-
     function toggleReaderAudioPlay() {
-      if (readerAudio.paused) {
-        readerAudio.play().then(function() {
-          isPlaying = true;
-          document.getElementById('rabPlayBtn').innerText = '⏸';
-        }).catch(function(e) { console.log(e); });
-      } else {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
         readerAudio.pause();
         isPlaying = false;
-        document.getElementById('rabPlayBtn').innerText = '▶';
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
       }
     }
 
     function playParagraphAudio(el) {
-      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var start = parseFloat(el.getAttribute('data-start') || 0);
       var title = el.getAttribute('data-title') || '';
-      readerAudio.currentTime = start;
-      readerAudio.play().then(function() {
-        isPlaying = true;
-        document.getElementById('rabPlayBtn').innerText = '⏸';
-      }).catch(function(e) { console.log(e); });
-
-      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
-      for (var i = 0; i < actives.length; i++) {
-        actives[i].classList.remove('audio-active');
-      }
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
       el.classList.add('audio-active');
       lastActiveEntry = el;
-      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 16 朗读中';
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
     }
 
-    readerAudio.addEventListener('timeupdate', function() {
-      var cur = readerAudio.currentTime;
-      var dur = readerAudio.duration || 1500;
-      function formatTime(t) {
-        var m = Math.floor(t / 60);
-        var s = Math.floor(t % 60);
-        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
-      }
-      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
-
-      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
-      var found = null;
-      for (var i = 0; i < entries.length; i++) {
-        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
-        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
-        if (cur >= start && cur < end) {
-          found = entries[i];
-          break;
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
         }
-      }
-      if (found && found !== lastActiveEntry) {
-        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
-        found.classList.add('audio-active');
-        lastActiveEntry = found;
-        var title = found.getAttribute('data-title');
-        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 16 朗读中';
-      }
-    });
-
-    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
-      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
-      if (!card) return;
-      var opts = card.querySelectorAll('.eq-opt');
-      for (var i = 0; i < opts.length; i++) {
-        opts[i].classList.remove('selected-correct', 'selected-wrong');
-      }
-      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
-      if (selectedKey === correctKey) {
-        rowEl.classList.add('selected-correct');
-        if (statusEl) {
-          statusEl.innerText = '回答正确';
-          statusEl.style.color = '#166534';
-        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
       } else {
-        rowEl.classList.add('selected-wrong');
-        if (statusEl) {
-          statusEl.innerText = '回答有误，请查阅临床精解';
-          statusEl.style.color = '#991b1b';
-        }
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
       }
-      var rat = document.getElementById(ratId);
-      if (rat) rat.style.display = 'block';
     }
 
-    function toggleRationale(ratId, btnEl) {
-      var box = document.getElementById(ratId);
-      if (!box) return;
-      if (box.style.display === 'none' || !box.style.display) {
-        box.style.display = 'block';
-        btnEl.innerText = '收起临床精解';
-      } else {
-        box.style.display = 'none';
-        btnEl.innerText = '查看临床精解';
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
       }
     }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
   </script>
 </body>
 </html>

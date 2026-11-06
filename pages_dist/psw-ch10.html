@@ -23,17 +23,35 @@
       --border-subtle: #eae2d5;
       --border-strong: #d8cebf;
       
-      --box-sage-bg: #f0f6f2;
-      --box-sage-border: #cee0d4;
-      --box-blue-bg: #f0f5fc;
-      --box-blue-border: #cbdcf7;
-      --box-amber-bg: #fcf7ee;
-      --box-amber-border: #fae4c0;
-      --box-purple-bg: #f7f4fc;
-      --box-purple-border: #e3d9f5;
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
     }
     
-    /* Theme: Pure White */
     html.theme-white {
       --bg-canvas: #ffffff;
       --bg-card: #f8fafc;
@@ -43,13 +61,8 @@
       --text-muted: #94a3b8;
       --border-subtle: #e2e8f0;
       --border-strong: #cbd5e1;
-      --box-sage-bg: #f2f8f4;
-      --box-blue-bg: #f1f6fd;
-      --box-amber-bg: #fdf8ef;
-      --box-purple-bg: #f9f5fd;
     }
     
-    /* Theme: Night OLED */
     html.theme-night {
       --bg-canvas: #121214;
       --bg-card: #1c1c1f;
@@ -60,19 +73,25 @@
       --accent-navy: #60a5fa;
       --border-subtle: #27272a;
       --border-strong: #3f3f46;
-      --box-sage-bg: #14211a;
-      --box-sage-border: #1e3a2b;
-      --box-blue-bg: #131c2e;
-      --box-blue-border: #1f3154;
-      --box-amber-bg: #231b11;
-      --box-amber-border: #3d2d18;
-      --box-purple-bg: #1f1629;
-      --box-purple-border: #38244f;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
     html { scroll-behavior: smooth; }
-    a, .editorial-footer-url { word-break: break-all; }
     body {
       background: var(--bg-canvas);
       color: var(--text-main);
@@ -88,12 +107,12 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      height: 50px;
+      height: 48px;
       background: var(--bg-overlay);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 0 20px;
+      padding: 0 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,20 +124,17 @@
       text-decoration: none;
       color: var(--accent-navy);
       font-weight: 600;
-      font-size: 12.5px;
+      font-size: 12px;
       padding: 5px 12px;
       background: var(--bg-card);
       border-radius: 9999px;
       border: 1px solid var(--border-subtle);
       transition: all 0.15s ease;
       white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
     .nav-home-btn:hover { background: var(--border-subtle); }
     .nav-chapter-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--text-main);
       display: flex;
@@ -137,7 +153,6 @@
       font-weight: 700;
     }
     
-    /* Segmented Language Switcher */
     .mode-switch-segmented {
       display: flex;
       background: var(--border-subtle);
@@ -147,7 +162,7 @@
       flex-shrink: 0;
     }
     .mode-seg-btn {
-      padding: 5px 13px;
+      padding: 5px 12px;
       border: none;
       background: transparent;
       border-radius: 9999px;
@@ -169,10 +184,10 @@
       font-weight: 700;
     }
     
-    .nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .reading-util-group { display: flex; align-items: center; gap: 4px; }
     .util-btn {
-      padding: 5px 10px;
+      padding: 5px 9px;
       border: 1px solid var(--border-subtle);
       background: var(--bg-card);
       border-radius: 6px;
@@ -180,7 +195,6 @@
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
-      transition: all 0.15s ease;
       white-space: nowrap;
     }
     .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
@@ -195,8 +209,8 @@
       padding: 3px 12px 3px 4px;
     }
     .play-circle-btn {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: var(--accent-navy);
       color: #ffffff;
@@ -205,10 +219,8 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 11px;
-      transition: transform 0.15s, background 0.15s;
+      font-size: 10px;
     }
-    .play-circle-btn:hover { transform: scale(1.06); }
     .player-meta { display: flex; flex-direction: column; }
     .player-track-title {
       font-size: 11px;
@@ -219,27 +231,26 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .player-track-time { font-size: 10px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
     
-    /* Golden Reading Canvas - Zero Nested Borders */
+    /* Golden Reading Canvas */
     .reading-canvas,
     .ch-editorial-flow,
     .ch5-editorial-flow {
       width: 100%;
       max-width: 740px;
       margin: 0 auto;
-      padding: 36px 24px 100px;
+      padding: 32px 20px 100px;
       background: transparent;
-      border: none;
-      box-shadow: none;
       box-sizing: border-box;
     }
     
+    /* Chapter Hero */
     .chapter-hero-editorial {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 14px;
-      padding: 32px 28px 24px;
+      padding: 30px 26px 22px;
       margin-bottom: 32px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
@@ -252,7 +263,7 @@
       margin-bottom: 10px;
     }
     .hero-title-en {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 750;
       line-height: 1.25;
       color: var(--text-main);
@@ -275,221 +286,144 @@
       color: var(--text-muted);
     }
     
-    .page-jump-ribbon {
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border-subtle);
-      max-width: 100%;
-      overflow: hidden;
+      gap: 6px;
     }
-    .ribbon-label { font-size: 11.5px; font-weight: 600; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
-    .ribbon-scroll { display: flex; gap: 4px; overflow-x: auto; min-width: 0; flex: 1; -webkit-overflow-scrolling: touch; }
-    .ribbon-chip {
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 2px 7px;
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
       background: var(--border-subtle);
       color: var(--text-secondary);
-      border-radius: 4px;
-      white-space: nowrap;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
     }
-    .ribbon-chip:hover { background: var(--accent-navy); color: #fff; }
-    
-    .editorial-stream {
-      width: 100%;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    /* 4-Tier Thematic & Heading Hierarchy */
-    /* Tier 1: Major Section Banner */
-    .editorial-major-section {
-      margin: 56px 0 24px;
-      padding: 24px 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-left: 5px solid var(--accent-navy);
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    }
-    .section-banner-head .section-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 750;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: var(--accent-navy);
-      padding: 3px 9px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .section-banner-head .section-title-en {
-      font-size: 22px;
-      font-weight: 750;
-      color: var(--text-main);
-      line-height: 1.35;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .section-banner-head .section-title-cn {
-      font-size: 16px;
+    .ps-label {
+      font-size: 12px;
       font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
+      color: var(--text-muted);
     }
-    .section-banner-head .section-title-universal {
-      font-size: 20px;
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
       font-weight: 750;
       color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .section-banner-head .section-summary-tag {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      padding-top: 10px;
-      border-top: 1px dashed var(--border-subtle);
-      line-height: 1.5;
-    }
-
-    /* Tier 2: Clinical Sub-topic Card */
-    .editorial-subtopic-card {
-      margin: 36px 0 16px;
-      padding: 14px 18px;
-      background: rgba(30, 58, 138, 0.035);
-      border-left: 3.5px solid var(--accent-navy);
-      border-radius: 0 8px 8px 0;
-    }
-    html.theme-night .editorial-subtopic-card {
-      background: rgba(96, 165, 250, 0.06);
-      border-left-color: #60a5fa;
-    }
-    .subtopic-tag {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent-navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
       margin-bottom: 4px;
     }
-    html.theme-night .subtopic-tag {
-      color: #60a5fa;
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
     }
-    .subtopic-title-en {
-      font-size: 17.5px;
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
       margin-bottom: 3px;
     }
-    .subtopic-title-cn {
+    .editorial-heading-sub .heading-cn {
       font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
-    .subtopic-title-universal {
-      font-size: 16.5px;
-      font-weight: 700;
-      color: var(--text-main);
-    }
 
-    /* Tier 3: Micro-topic Row */
-    .editorial-microtopic-row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
+    .editorial-heading-micro {
       margin: 24px 0 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
     }
-    .micro-bullet {
-      color: var(--accent-navy);
-      font-size: 12px;
-    }
-    html.theme-night .micro-bullet {
-      color: #60a5fa;
-    }
-    .micro-title-en {
+    .editorial-heading-micro .heading-en {
       font-size: 15.5px;
       font-weight: 700;
       color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .micro-title-cn {
+    .editorial-heading-micro .heading-cn {
       font-size: 13.5px;
       font-weight: 500;
       color: var(--text-secondary);
-    }
-    .micro-title-universal {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-main);
+      display: inline-block;
     }
 
-    /* Tier 4: Chapter Thematic Navigation Jumpbar */
-    .chapter-thematic-nav {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-    }
-    .thematic-nav-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .thematic-nav-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .topic-chip {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-subtle);
-      padding: 4px 10px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s ease;
-    }
-    .topic-chip:hover {
-      background: var(--accent-navy);
-      color: #ffffff;
-      border-color: var(--accent-navy);
-    }
-    .topic-chip .chip-num {
-      font-size: 10px;
-      font-weight: 700;
-      opacity: 0.75;
-    }
-
-    /* Legacy section divider fallback */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
-    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
-    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
-    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
-    
-    /* Bilingual Paragraphs */
+    /* Bilingual Paragraphs - No play buttons */
     .bilingual-paragraph {
       position: relative;
-      margin-bottom: 24px;
-      padding: 8px 12px 10px 14px;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
       border-left: 3px solid transparent;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
@@ -501,26 +435,23 @@
       background: rgba(30, 58, 138, 0.05);
       border-left-color: var(--accent-navy);
     }
-    .para-play-indicator { display: none; }
-    
+        
     .para-en {
       font-size: var(--font-base);
-      line-height: 1.8;
+      line-height: 1.78;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-weight: 420;
-      letter-spacing: -0.005em;
     }
     .para-cn {
       font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.85;
+      line-height: 1.82;
       color: var(--text-secondary);
       font-weight: 400;
-      letter-spacing: 0.005em;
       margin-bottom: 0;
     }
     
-    /* Distinct Callout Boxes */
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
     .editorial-box-container {
       margin: 36px 0;
       border-radius: 12px;
@@ -528,33 +459,24 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); }
-    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); }
-    .box-theme-amber, .box-theme-terracotta { background: var(--box-amber-bg); border-color: var(--box-amber-border); }
-    .box-theme-case, .box-theme-purple { background: var(--box-purple-bg); border-color: var(--box-purple-border); }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
     
     .box-banner-header {
       padding: 14px 18px 12px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    .box-badge-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-    .box-badge-pill {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.025);
     }
     .box-title-en {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 16.5px;
+      font-weight: 750;
       color: var(--text-main);
-      line-height: 1.4;
+      line-height: 1.35;
       margin-bottom: 3px;
     }
     .box-title-cn {
@@ -563,309 +485,291 @@
       color: var(--text-secondary);
     }
     .box-body-content {
-      padding: 14px 18px 18px;
+      padding: 18px 20px;
     }
     .box-clause-item {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
     }
     .box-clause-item:last-child {
-      border-bottom: none;
+      margin-bottom: 0;
       padding-bottom: 0;
+      border-bottom: none;
     }
     .clause-en {
-      font-size: 15px;
+      font-size: calc(var(--font-base) * 0.94);
       line-height: 1.7;
       color: var(--text-main);
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
     .clause-cn {
-      font-size: 14px;
+      font-size: calc(var(--font-base) * 0.9);
       line-height: 1.75;
       color: var(--text-secondary);
     }
     .box-source-citation {
-      padding: 10px 0 0;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
       font-size: 12px;
-      color: var(--text-muted);
-      border-top: 1px dashed var(--border-subtle);
-      margin-top: 12px;
-    }
-    
-    /* Page Anchor Marker */
-    .page-anchor-marker {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 36px 0 24px;
-      color: var(--text-muted);
-      font-size: 12px;
-    }
-    .page-anchor-marker::before,
-    .page-anchor-marker::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border-subtle);
-    }
-    .marker-pill {
-      padding: 2px 10px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 9999px;
-      font-size: 11.5px;
-      font-weight: 600;
+      font-style: italic;
       color: var(--text-muted);
     }
-    .marker-sec {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    
-    /* Lists */
-    .editorial-list {
-      list-style: none;
-      padding: 0;
-      margin: 16px 0 24px;
-    }
-    .editorial-list-item {
-      margin-bottom: 12px;
-      padding-left: 18px;
-      position: relative;
-    }
-    .editorial-list-item::before {
-      content: "•";
-      color: var(--accent-navy);
-      font-weight: bold;
-      position: absolute;
-      left: 4px;
-      top: 0;
-    }
-    .item-en {
-      font-size: var(--font-base);
-      line-height: 1.75;
-      color: var(--text-main);
-      margin-bottom: 3px;
-    }
-    .item-cn {
-      font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-    
-    /* Terms Grid */
-    .key-terms-section { margin: 40px 0; }
-    .kt-section-header { margin-bottom: 20px; }
-    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
-    .kt-subtitle { font-size: 13px; color: var(--text-muted); }
-    .terms-editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-    }
-    .editorial-term-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 14px 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
-    }
-    .etc-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 8px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .etc-word { font-size: 15px; color: var(--text-main); font-weight: 700; }
-    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 6px; font-style: italic; }
-    .etc-cn-tag {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--accent-navy);
-      background: rgba(30, 58, 138, 0.08);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .etc-def-en { font-size: 13px; line-height: 1.6; color: var(--text-main); margin-bottom: 6px; }
-    .etc-def-cn { font-size: 12.5px; line-height: 1.65; color: var(--text-secondary); }
-    
-    /* Quizzes */
-    .editorial-quiz-section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border-subtle); }
-    .editorial-quiz-card {
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 20px 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .eq-num { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); }
-    .eq-status { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); line-height: 1.5; margin-bottom: 6px; }
-    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
-    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
-    .eq-opt {
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
       cursor: pointer;
-      background: var(--bg-canvas);
       transition: all 0.15s ease;
     }
-    .eq-opt:hover { background: var(--border-subtle); }
-    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
-    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
-    .opt-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--border-subtle);
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-main);
-      flex-shrink: 0;
-    }
-    .opt-text { font-size: 13.5px; line-height: 1.5; color: var(--text-main); }
-    .btn-toggle-rat {
-      padding: 6px 12px;
+    .kt-toggle-btn.active {
       background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
       border: 1px solid var(--border-subtle);
       border-radius: 6px;
       font-size: 12px;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
+      transition: all 0.15s ease;
     }
-    .eq-rationale-box {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
       border-radius: 8px;
-      font-size: 13px;
-      line-height: 1.6;
+      padding: 14px;
     }
-    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 4px; }
-    .rat-content { color: #1e293b; }
-    
-    /* Tables */
-    .table-wrap { overflow-x: auto; margin: 24px 0; }
-    .clinical-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-    .clinical-table th { background: var(--border-subtle); padding: 10px 12px; border: 1px solid var(--border-subtle); font-weight: 700; color: var(--text-main); text-align: left; }
-    .clinical-table td { padding: 10px 12px; border: 1px solid var(--border-subtle); color: var(--text-secondary); }
-    
-    /* Tri-State Language Immersion Directives */
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
     html.mode-en .para-cn,
     html.mode-en .item-cn,
     html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
-    html.mode-en .sh-title-cn,
-    html.mode-en .section-title-cn,
-    html.mode-en .subtopic-title-cn,
-    html.mode-en .micro-title-cn,
-    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
-    html.mode-en .marker-text-cn,
-    html.mode-en .eq-stem-cn { display: none !important; }
-    html.mode-en .para-en { font-size: calc(var(--font-base) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
-    
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
     html.mode-cn .para-en,
     html.mode-cn .item-en,
     html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
-    html.mode-cn .sh-title-en,
-    html.mode-cn .section-title-en,
-    html.mode-cn .subtopic-title-en,
-    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
-    html.mode-cn .marker-text-en,
-    html.mode-cn .eq-stem-en { display: none !important; }
-    html.mode-cn .para-cn { font-size: calc(var(--font-base) * var(--font-cn-scale) + 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
-    
-    /* Colophon */
-    .editorial-colophon { text-align: center; padding: 48px 20px; color: var(--text-muted); font-size: 12.5px; line-height: 1.7; }
-    
-    /* Strict Mobile Responsive Layout */
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
     @media (max-width: 768px) {
-      .top-sticky-bar {
-        height: 44px;
-        padding: 0 10px;
-        gap: 6px;
-        flex-wrap: nowrap;
-        overflow: hidden;
-      }
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
       .nav-chapter-title { display: none; }
-      .nav-home-btn { padding: 4px 8px; font-size: 11.5px; }
-      .mode-switch-segmented { padding: 2px; gap: 1px; }
-      .mode-seg-btn { padding: 4px 8px; font-size: 11px; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
       .reading-util-group { display: none; }
-      .ambient-player { padding: 0; background: transparent; border: none; }
-      .player-meta { display: none; }
-      .play-circle-btn { width: 30px; height: 30px; font-size: 12px; }
-      
-      .reading-canvas,
-      .ch-editorial-flow,
-      .ch5-editorial-flow {
-        padding: 14px 16px 80px;
-        max-width: 100%;
-      }
-      .chapter-hero-editorial {
-        padding: 18px 16px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
       .hero-title-en { font-size: 22px; }
-      .hero-title-cn { font-size: 15.5px; }
-      
-      .editorial-major-section {
-        padding: 16px 14px;
-        margin: 36px 0 16px;
-        border-radius: 10px;
-      }
-      .section-banner-head .section-title-en { font-size: 18.5px; }
-      .section-banner-head .section-title-cn { font-size: 15px; }
-      .section-banner-head .section-title-universal { font-size: 17px; }
-      
-      .editorial-subtopic-card {
-        padding: 10px 12px;
-        margin: 24px 0 12px;
-      }
-      .subtopic-title-en { font-size: 16px; }
-      .subtopic-title-cn { font-size: 13.5px; }
-      .subtopic-title-universal { font-size: 15px; }
-      
-      .editorial-microtopic-row {
-        margin: 18px 0 8px;
-        flex-wrap: wrap;
-      }
-      .micro-title-en { font-size: 14.5px; }
-      .micro-title-cn { font-size: 13px; }
-      
-      .thematic-nav-chips { gap: 4px; }
-      .topic-chip { padding: 3px 8px; font-size: 11px; }
-      
-      .box-banner-header { padding: 12px 14px 10px; }
-      .box-body-content { padding: 12px 14px 14px; }
-      .bilingual-paragraph { padding: 6px 10px 8px 12px; margin-bottom: 20px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <div class="top-sticky-bar">
     <div class="nav-left">
-      <a href="psw-reader.html#toc" class="nav-home-btn">← 目录</a>
+      <a href="psw-reader.html#sec-ch10" class="nav-home-btn">← 返回全书总目录</a>
       <div class="nav-chapter-title">
         <span class="ch-badge">CH 10</span>
         <span>Working With Others: Teamwork and Delegation</span>
@@ -873,22 +777,20 @@
     </div>
     
     <div class="mode-switch-segmented" id="langModeSwitch">
-      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英</button>
-      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">EN</button>
-      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">中</button>
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
     </div>
 
     <div class="nav-right">
       <div class="reading-util-group">
-        <button class="util-btn" onclick="cycleTheme()" id="themeBtn" title="切换暖纸/纯白/夜读">纸色</button>
-        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
-        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
       </div>
 
       <div class="ambient-player">
-        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()" title="播放/暂停音频">▶</button>
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
         <div class="player-meta">
-          <span class="player-track-title" id="rabCurrentTitle">CH 10 · 点选段落即读</span>
+          <span class="player-track-title" id="rabCurrentTitle">第 10 章 · 点选段落收听</span>
           <span class="player-track-time" id="rabCurTime">00:00 / 20:45</span>
         </div>
       </div>
@@ -902,27 +804,32 @@
       <h2 class="hero-title-cn">与他人协作：跨学科团队合作与工作委派法定程序</h2>
       <div class="hero-meta-bar">
         <span class="meta-item">Pages 149–163 · 5 道全真自测题</span>
-        <span class="meta-item">轻触段落即可播放真人原声导读</span>
+        <span class="meta-item">专业音频：20:45</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch10-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
+
       
-        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
-          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
-          <div class="thematic-nav-chips">
-            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 跨学科医疗团队与全人</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 工作指派</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 拒绝委派任务的专业准</a>
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-149">第 149 页</option><option value="page-150">第 150 页</option><option value="page-151">第 151 页</option><option value="page-154">第 154 页</option><option value="page-157">第 157 页</option>
+              </select>
+            </div>
           </div>
-        </nav>
-        
-      
-        <div class="page-jump-ribbon">
-          <span class="ribbon-label">原书页码检索:</span>
-          <div class="ribbon-scroll">
-            <a href="#page-149" class="ribbon-chip">p.149</a><a href="#page-150" class="ribbon-chip">p.150</a><a href="#page-151" class="ribbon-chip">p.151</a><a href="#page-154" class="ribbon-chip">p.154</a><a href="#page-157" class="ribbon-chip">p.157</a>
+          <div class="ps-chips-ribbon">
+            <a href="#page-149" class="page-chip-item"><span class="pc-num">p.149</span></a><a href="#page-150" class="page-chip-item"><span class="pc-num">p.150</span></a><a href="#page-151" class="page-chip-item"><span class="pc-num">p.151</span></a><a href="#page-154" class="page-chip-item"><span class="pc-num">p.154</span></a><a href="#page-157" class="page-chip-item"><span class="pc-num">p.157</span></a>
           </div>
         </div>
         
     </header>
 
-    <main class="editorial-stream">
+    <div class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
@@ -930,43 +837,178 @@
                           <span class="marker-pill">Page 149</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-01">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 10 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
+                <div class="editorial-heading-major" id="sec-01">
+                  <h2 class="heading-en">Chapter 10 Opener & Learning Objectives</h2>
+                  <div class="heading-cn">开篇导读与学习目标</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Describe the benefits of working as part of a multidisciplinary health care team. • Explain the differences between regulated health care professionals and unregulated care providers. • Differentiate between assigning and delegating tasks. • Explain the role of the nurse and the support worker in the delegation process. • Describe the five rights of delegation and when it is legally and clinically appropriate to refuse a delegated task. <br><br></p>
-                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 深刻阐明作为跨学科多专业卫生保健团队（Multidisciplinary Team）一员协作执业的巨大临床优势。 • 严谨辨析法定受监管卫生专业人员（Regulated Health Care Professionals）与非受监管照护提供者（Unregulated Care Providers, UCPs）的法律界限与执业范畴。 • 准确鉴别日常“工作指派”（Assigning）与法定“任务委派”（Delegating）在法律效力与责任归属上的本质差异。 • 详尽阐释在工作委派全流程中，主管注册护士与支持工作者各自所承担的神圣法定职责。 • 熟练掌握“工作委派五大正确原则”（Five Rights of Delegation），并熟稔在何种法律与临床情形下有权并必须坚决拒绝接受委派。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Objectives</h3>
+                  <div class="heading-cn">学习目标</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">After reading this chapter, the learner should be able to do the following: • Describe the benefits of working as part of a multidisciplinary health care team. • Explain the differences between regulated health care professionals and unregulated care providers. • Differentiate between assigning and delegating tasks. • Explain the role of the nurse and the support worker in the delegation process. • Describe the five rights of delegation and when it is legally and clinically appropriate to refuse a delegated task. <br><br></p>
+                          <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 深刻阐明作为跨学科多专业卫生保健团队（Multidisciplinary Team）一员协作执业的巨大临床优势。 • 严谨辨析法定受监管卫生专业人员（Regulated Health Care Professionals）与非受监管照护提供者（Unregulated Care Providers, UCPs）的法律界限与执业范畴。 • 准确鉴别日常“工作指派”（Assigning）与法定“任务委派”（Delegating）在法律效力与责任归属上的本质差异。 • 详尽阐释在工作委派全流程中，主管注册护士与支持工作者各自所承担的神圣法定职责。 • 熟练掌握“工作委派五大正确原则”（Five Rights of Delegation），并熟稔在何种法律与临床情形下有权并必须坚决拒绝接受委派。 <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-150">
                           <span class="marker-pill">Page 150</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-02">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 10 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
-                  </div>
-                </section>
+                <div class="editorial-heading-major" id="sec-02">
+                  <h2 class="heading-en">Chapter 10 Key Terms</h2>
+                  <div class="heading-cn">核心专业术语表</div>
+                </div>
                 
-            <div class="key-terms-section">
-              <div class="kt-section-header">
-                <h3 class="kt-title">KEY TERMS · 第 10 章核心专业术语速查表</h3>
-                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+            <div class="key-terms-master-container" id="kt-container-ch10">
+              <div class="kt-toolbar">
+                <div class="kt-toolbar-left">
+                  <h3 class="kt-title">Key Terms · 第 10 章核心专业术语表（全 8 词速查）</h3>
+                </div>
+                <div class="kt-toolbar-right">
+                  <div class="kt-mode-toggle">
+                    <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch10', 'table')">速查词表</button>
+                    <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch10', 'cards')">精研卡片</button>
+                  </div>
+                  <div class="kt-search-box">
+                    <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch10', this.value)">
+                  </div>
+                </div>
               </div>
-              <div class="terms-editorial-grid">
-            
+
+              <!-- Mode 1: Compact Table -->
+              <div class="kt-view-table active" id="kt-table-view-ch10">
+                <div class="table-wrap">
+                  <table class="kt-compact-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 28%;">英文术语 / 国际音标</th>
+                        <th style="width: 22%;">中文对照</th>
+                        <th style="width: 50%;">教材标准学术释义与临床界定</th>
+                      </tr>
+                    </thead>
+                    <tbody id="kt-table-body-ch10">
+                      
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>accountability</strong></strong>
+                    <span class="kt-ipa">/əˌkaʊntəˈbɪləti/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">终极问责性</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">愿意为自己的行为、不作为或遗漏、意图及临床决策承担全部法律与道义责任，并作出合理解释。 (p. 155)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>assigning</strong></strong>
+                    <span class="kt-ipa">/əˈsaɪnɪŋ/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">工作指派</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">任命或安排某人在其法定执业范畴或工作描述限度内承担特定常规照护职责。 (p. 155)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>delegation</strong></strong>
+                    <span class="kt-ipa">/ˌdɛlɪˈɡeɪʃən/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">任务委派</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">受监管卫生专业人员（通常为主管护士）将某项通常超出支持工作者法定工作范畴的特定医疗护理操作，依法授权转交由该支持工作者执行的法定程序。委派护士始终承担终极问责责任。 (p. 156)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>multidisciplinary team</strong></strong>
+                    <span class="kt-ipa">/ˌmʌltɪˈdɪsəplɪnəri tiːm/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">跨学科医疗团队</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">由来自不同专业背景的卫生保健工作者（如医生、护士、物理治疗师、作业治疗师、支持工作者、社工等）组成的团队，协同制定并实施全人照护计划。 (p. 151)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>regulated care provider</strong></strong>
+                    <span class="kt-ipa">/ˈrɛɡjʊleɪtɪd keə prəˈvaɪdər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">受监管医疗专业人员</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">其执业行为由省/地区专门立法（如《卫生专业法案》）严格管辖，并由专业监管学院（College）颁发执照、设立执业标准的卫生从业者（如 RN、RPN/LPN、OT、PT）。 (p. 153)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>responsibility</strong></strong>
+                    <span class="kt-ipa">/rɪˌspɒnsəˈbɪləti/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">执业职责 / 义务</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">尽职尽责、安全且胜任地执行某项被分配或委派的具体照护操作的法定义务。支持工作者对其实际操作表现承担直接责任。 (p. 155)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>supervising nurse</strong></strong>
+                    <span class="kt-ipa">/ˈsuːpəvaɪzɪŋ nɜːs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">主管护士</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">负责评估案主健康状况、制定照护计划、指导、监督并评估支持工作者日常工作的注册护士（RN）或执业护士（RPN/LPN）。 (p. 154)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>unregulated care provider (UCP)</strong></strong>
+                    <span class="kt-ipa">/ʌnˈrɛɡjʊleɪtɪd keə prəˈvaɪdər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">非受监管照护提供者</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">执业活动没有独立的专门立法监管学院发证，而是由雇主机构依据劳动合同、内部政策及工作描述进行管理的照护工作者（包括支持工作者 PSW/HCA）。 (p. 153)</div>
+                  </td>
+                </tr>
+                
+                    </tbody>
+                  </table>
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-table-ch10">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch10', 'table')">
+                    展开全部 8 个专业术语 ▼
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mode 2: Cards Deck -->
+              <div class="kt-view-cards" id="kt-cards-view-ch10" style="display:none;">
+                <div class="terms-editorial-grid" id="kt-cards-grid-ch10">
+                  
                 <div class="editorial-term-card">
                   <div class="etc-header">
                     <div class="etc-en-block">
@@ -1045,7 +1087,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>supervising nurse</strong></strong>
@@ -1058,7 +1100,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>unregulated care provider (UCP)</strong></strong>
@@ -1070,400 +1112,149 @@
                     <div class="etc-def-cn">执业活动没有独立的专门立法监管学院发证，而是由雇主机构依据劳动合同、内部政策及工作描述进行管理的照护工作者（包括支持工作者 PSW/HCA）。 (p. 153)</div>
                   </div>
                 </div>
-                </div></div>
-<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-cards-ch10">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch10', 'cards')">
+                    展开全部 8 张精研术语卡片 ▼
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-151">
                           <span class="marker-pill">Pages 151 - 153</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-03">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第一节：跨学科医疗团队与全人照护协作</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Benefits of Working on a Team</h3><div class="subtopic-title-cn">团队协作的临床优势与全人视角</div>
+                <div class="editorial-heading-major" id="sec-03">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第一节：跨学科医疗团队与全人照护协作</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">The goal of the health care team is to provide the client with the best possible care and support. When providing care, team members must consider the whole client and promote physical, emotional, social, cognitive, and spiritual well-being. Benefits of the multidisciplinary team approach include: • <strong>Comprehensive care:</strong> Different specialists provide expertise tailored to all dimensions of the client's life. • <strong>Improved safety and reduced errors:</strong> Open communication and collaborative double-checking catch potential risks early. • <strong>Continuity of care:</strong> When shifts change or a worker is ill, consistent care plans ensure smooth transitions. • <strong>Enhanced job satisfaction:</strong> Team members support one another, reducing stress and preventing burnout. <br><br></p>
-                      <p class="para-cn">医疗卫生团队的崇高使命，在于为受助案主提供最高品质的全人关怀与支持。在团队照护中，全体成员必须贯彻整体论哲学，协同促进案主在身体生理、情绪心理、社会交往、智力认知以及精神信仰各大维度的全面安康。 跨学科团队协作模式的显著临床优势： • <strong>全方位综合照护：</strong> 团队涵盖各领域专才，针对案主复杂的健康需求量身定制协同解决方案。 • <strong>保障临床安全并降低失误率：</strong> 坦诚的交接班沟通与多专业交叉核对，能防患于未然，在萌芽状态截断用药失误或跌倒隐患。 • <strong>照护流程的无缝连贯性：</strong> 当出现交接班轮替或员工突发休假时，标准化的照护计划与档案记录可确保服务不脱节。 • <strong>提升执业认同感并分担压力：</strong> 团队成员在危急时刻守望相助，有效缓解心理孤立感，预防职业倦怠。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Benefits of Working on a Team</h3>
+                  <div class="heading-cn">团队协作的临床优势与全人视角</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">The goal of the health care team is to provide the client with the best possible care and support. When providing care, team members must consider the whole client and promote physical, emotional, social, cognitive, and spiritual well-being. Benefits of the multidisciplinary team approach include: • <strong>Comprehensive care:</strong> Different specialists provide expertise tailored to all dimensions of the client's life. • <strong>Improved safety and reduced errors:</strong> Open communication and collaborative double-checking catch potential risks early. • <strong>Continuity of care:</strong> When shifts change or a worker is ill, consistent care plans ensure smooth transitions. • <strong>Enhanced job satisfaction:</strong> Team members support one another, reducing stress and preventing burnout. <br><br></p>
+                          <p class="para-cn">医疗卫生团队的崇高使命，在于为受助案主提供最高品质的全人关怀与支持。在团队照护中，全体成员必须贯彻整体论哲学，协同促进案主在身体生理、情绪心理、社会交往、智力认知以及精神信仰各大维度的全面安康。 跨学科团队协作模式的显著临床优势： • <strong>全方位综合照护：</strong> 团队涵盖各领域专才，针对案主复杂的健康需求量身定制协同解决方案。 • <strong>保障临床安全并降低失误率：</strong> 坦诚的交接班沟通与多专业交叉核对，能防患于未然，在萌芽状态截断用药失误或跌倒隐患。 • <strong>照护流程的无缝连贯性：</strong> 当出现交接班轮替或员工突发休假时，标准化的照护计划与档案记录可确保服务不脱节。 • <strong>提升执业认同感并分担压力：</strong> 团队成员在危急时刻守望相助，有效缓解心理孤立感，预防职业倦怠。 <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 10.1: Working on a Team: Core Principles for High-Performing Collaboration</h4>
-                    </div>
-                  </aside>
-                </div>
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 10.1: Working on a Team: Core Principles for High-Performing Collaboration</h4>
+                    
+                  </div>
+                  <div class="box-body-content">
+                </div></aside>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">专栏 10.1：医疗团队协作基石：卓越跨学科团队成员的黄金行为准则</h4>
+                    <div class="box-title-cn">专栏 10.1：医疗团队协作基石：卓越跨学科团队成员的黄金行为准则</div>
+                  </div>
+                  <div class="box-body-content">
                 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                      </div>
-                      <h4 class="box-title-en">专栏 10.1：医疗团队协作基石：卓越跨学科团队成员的黄金行为准则</h4>
-                    </div>
-                  </aside>
+                <div class="box-clause-item">
+                  <div class="clause-en">To be an effective team member: • Understand your role, scope of practice, and job description thoroughly. • Understand and respect the roles and responsibilities of other team members. • Communicate clearly, honestly, and promptly. Report any changes in the client's condition immediately. • Be positive, dependable, and cooperative. Complete your assigned tasks on time. • Respect confidentiality. Discuss client matters only with team members directly involved in the client's care. • Support your colleagues. Offer assistance when you have completed your own assignments. <br><br></div>
+                  <div class="clause-cn">成为一名受人尊重的卓越团队成员，必须恪守以下守则： • 彻底吃透自身法定的执业范畴（Scope of Practice）与岗位描述，清醒知晓“哪些能做，哪些绝对不能越界”。 • 深刻理解并真诚尊重其他团队专业成员（医生、护士、物理治疗师、营养师）的法定职责与专业权威。 • 沟通力求精准、透明与及时。一旦察觉案主生命体征或精神状态有丝毫异样，第一时间向主管护士交班。 • 严守信誉、协作度高。保质保量在规定时间内闭环完成派工单上的各项支持任务。 • 坚守保密防线。仅在负责该案主的直接医疗团队内部讨论病情，绝不在走廊、电梯或食堂高谈阔论。 • 发扬同侪互助精神。当高效完成自身工作后，主动向忙碌的同事伸出援手。 <br><br></div>
                 </div>
-                
-                    <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">To be an effective team member: • Understand your role, scope of practice, and job description thoroughly. • Understand and respect the roles and responsibilities of other team members. • Communicate clearly, honestly, and promptly. Report any changes in the client's condition immediately. • Be positive, dependable, and cooperative. Complete your assigned tasks on time. • Respect confidentiality. Discuss client matters only with team members directly involved in the client's care. • Support your colleagues. Offer assistance when you have completed your own assignments. <br><br></p>
-                      <p class="para-cn">成为一名受人尊重的卓越团队成员，必须恪守以下守则： • 彻底吃透自身法定的执业范畴（Scope of Practice）与岗位描述，清醒知晓“哪些能做，哪些绝对不能越界”。 • 深刻理解并真诚尊重其他团队专业成员（医生、护士、物理治疗师、营养师）的法定职责与专业权威。 • 沟通力求精准、透明与及时。一旦察觉案主生命体征或精神状态有丝毫异样，第一时间向主管护士交班。 • 严守信誉、协作度高。保质保量在规定时间内闭环完成派工单上的各项支持任务。 • 坚守保密防线。仅在负责该案主的直接医疗团队内部讨论病情，绝不在走廊、电梯或食堂高谈阔论。 • 发扬同侪互助精神。当高效完成自身工作后，主动向忙碌的同事伸出援手。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-154">
                           <span class="marker-pill">Pages 154 - 156</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-04">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第二节：工作指派（Assigning）与任务委派（Delegating）的法律界限</h2>
+                <div class="editorial-heading-major" id="sec-04">
+                  <h2 class="heading-en">第二节：工作指派（Assigning）与任务委派（Delegating）的法律界限</h2>
+                  
+                </div>
+                
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Assigning vs Delegating</h3>
+                  <div class="heading-cn">指派与委派的本质法律分野</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">The difference between assigning and delegating is a critical legal and professional distinction for support workers: • <strong>Assigning:</strong> Handing over the responsibility for providing care that is <strong>already within the worker's recognized scope of practice and job description</strong>. - Example: A supervisor assigns you to assist Mr. Smith with a complete bed bath, morning dressing, and feeding. These are core personal support tasks.</p>
+                          <p class="para-cn">精准厘清“工作指派”（Assigning）与“任务委派”（Delegating）的法律界限，是捍卫支持工作者自身执业执照与人身安全的第一道防火墙： • <strong>工作指派（Assigning）：</strong> 指主管护士安排支持工作者执行<strong>本就属于其法定岗位描述与执业范畴之内</strong>的常规照护操作。- 典型范例：主管护士指派您协助史密斯先生完成晨间床上擦浴、协助穿衣以及辅助进食。这些纯属支持工作者的本职核心业务。护士拥有指派权，您独立对操作过程与结果承担责任。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">The supervisor assigns the task; you are responsible for carrying it out. • <strong>Delegating:</strong> Transferring the authority to perform a specific procedure that is <strong>normally beyond the support worker's recognized scope of practice</strong> (often a regulated, invasive, or controlled health act). - Example: Teaching and authorizing a support worker to administer eye drops, apply a medicated cream, or perform a clean urinary catheterization. - The supervising nurse retains ultimate <strong>accountability</strong> for ensuring the client's safety and determining whether delegation is appropriate. The support worker accepts <strong>responsibility</strong> for performing the task competently and strictly according to the nurse's training. <br><br></p>
+                          <p class="para-cn">• <strong>任务委派（Delegating）：</strong> 指受监管护士将某项<strong>原本超出支持工作者法定执业范畴</strong>、属于受法律严格管制的专业医疗护理操作（Controlled Acts），依法单向授权委派由该支持工作者执行的法定程序。- 典型范例：护士经过系统评估、针对特定案主手把手培训并考核通过后，授权委派支持工作者为该长者滴眼药水、涂抹处方药膏或实施清洁导尿。- <strong>核心法律责任分配：</strong> 主管护士始终承担<strong>终极问责性（Accountability）</strong>——必须为该委派决定是否恰当、案主是否安全承担全责；而支持工作者则承担<strong>执行职责（Responsibility）</strong>——必须严格按照护士培训的步骤精准、安全执行，绝不可自行发挥修改！<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 10.2: The Five Rights of Delegation</h4>
+                    
                   </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Assigning vs Delegating</h3><div class="subtopic-title-cn">指派与委派的本质法律分野</div>
-                </div>
-                
-                    <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">The difference between assigning and delegating is a critical legal and professional distinction for support workers: • <strong>Assigning:</strong> Handing over the responsibility for providing care that is <strong>already within the worker's recognized scope of practice and job description</strong>. - Example: A supervisor assigns you to assist Mr. Smith with a complete bed bath, morning dressing, and feeding. These are core personal support tasks. The supervisor assigns the task; you are responsible for carrying it out. • <strong>Delegating:</strong> Transferring the authority to perform a specific procedure that is <strong>normally beyond the support worker's recognized scope of practice</strong> (often a regulated, invasive, or controlled health act). - Example: Teaching and authorizing a support worker to administer eye drops, apply a medicated cream, or perform a clean urinary catheterization. - The supervising nurse retains ultimate <strong>accountability</strong> for ensuring the client's safety and determining whether delegation is appropriate. The support worker accepts <strong>responsibility</strong> for performing the task competently and strictly according to the nurse's training. <br><br></p>
-                      <p class="para-cn">精准厘清“工作指派”（Assigning）与“任务委派”（Delegating）的法律界限，是捍卫支持工作者自身执业执照与人身安全的第一道防火墙： • <strong>工作指派（Assigning）：</strong> 指主管护士安排支持工作者执行<strong>本就属于其法定岗位描述与执业范畴之内</strong>的常规照护操作。 - 典型范例：主管护士指派您协助史密斯先生完成晨间床上擦浴、协助穿衣以及辅助进食。这些纯属支持工作者的本职核心业务。护士拥有指派权，您独立对操作过程与结果承担责任。 • <strong>任务委派（Delegating）：</strong> 指受监管护士将某项<strong>原本超出支持工作者法定执业范畴</strong>、属于受法律严格管制的专业医疗护理操作（Controlled Acts），依法单向授权委派由该支持工作者执行的法定程序。 - 典型范例：护士经过系统评估、针对特定案主手把手培训并考核通过后，授权委派支持工作者为该长者滴眼药水、涂抹处方药膏或实施清洁导尿。 - <strong>核心法律责任分配：</strong> 主管护士始终承担<strong>终极问责性（Accountability）</strong>——必须为该委派决定是否恰当、案主是否安全承担全责；而支持工作者则承担<strong>执行职责（Responsibility）</strong>——必须严格按照护士培训的步骤精准、安全执行，绝不可自行发挥修改！ <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                  <div class="box-body-content">
+                </div></aside>
 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 10.2: The Five Rights of Delegation</h4>
-                    </div>
-                  </aside>
-                </div>
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">专栏 10.2：工作委派五大正确原则（加拿大护士学会与执业法规黄金门禁）</h4>
+                    <div class="box-title-cn">专栏 10.2：工作委派五大正确原则（加拿大护士学会与执业法规黄金门禁）</div>
+                  </div>
+                  <div class="box-body-content">
                 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                      </div>
-                      <h4 class="box-title-en">专栏 10.2：工作委派五大正确原则（加拿大护士学会与执业法规黄金门禁）</h4>
-                    </div>
-                  </aside>
+                <div class="box-clause-item">
+                  <div class="clause-en">Before delegating any task to an unregulated care provider, the supervising nurse must verify the <strong>Five Rights of Delegation</strong>. The support worker must also use these five rights to determine whether it is safe to accept the task: 1. <strong>The Right Task:</strong> Is the task one that can be safely delegated for this specific client? (Must be a stable, predictable procedure). 2. <strong>The Right Circumstances:</strong> Is the client's condition stable and predictable? Has a thorough nursing assessment been completed? 3. <strong>The Right Person:</strong> Does the support worker have the specific training, demonstrated competence, and confidence to perform the task for this particular client? 4. <strong>The Right Direction and Communication:</strong> Has the nurse provided clear, concise, step-by-step instructions, including what to observe and what parameters to report immediately? 5. <strong>The Right Supervision and Evaluation:</strong> Is the nurse available to assist if needed? Will the nurse evaluate the client's response and the worker's performance? <br><br></div>
+                  <div class="clause-cn">在向非受监管人员委派任何护理操作之前，主管护士必须严格核实以下“五大正确原则”；支持工作者同样必须以这五大门禁自我审视是否能够安全接受委派： 1. <strong>正确的任务（The Right Task）：</strong> 该项操作是否依法属于可委派范畴？（必须是操作步骤明确、风险可控且结果可预期的标准化操作）。 2. <strong>正确的情境（The Right Circumstances）：</strong> 案主的生命体征与病情是否绝对稳定？护士是否已完成详尽的临床评估？若案主病情急转直下，绝不可委派！ 3. <strong>正确的人员（The Right Person）：</strong> 该支持工作者是否接受过针对该案主的专门实操培训？是否已被护士面对面考核通关并记录在案？支持工作者内心是否具备充分信心？ 4. <strong>正确的指导与沟通（The Right Direction & Communication）：</strong> 护士是否提供了清晰明确的分步操作指导？是否明确告知了重点观察指标以及何种异常参数必须立即上报？ 5. <strong>正确的监督与评估（The Right Supervision & Evaluation）：</strong> 当出现突发意外时护士是否随时能够就近支援或电话联络？护士是否按时对案主的反应及支持工作者的操作质量进行实地核查评估？ <br><br></div>
                 </div>
-                
-                    <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">Before delegating any task to an unregulated care provider, the supervising nurse must verify the <strong>Five Rights of Delegation</strong>. The support worker must also use these five rights to determine whether it is safe to accept the task: 1. <strong>The Right Task:</strong> Is the task one that can be safely delegated for this specific client? (Must be a stable, predictable procedure). 2. <strong>The Right Circumstances:</strong> Is the client's condition stable and predictable? Has a thorough nursing assessment been completed? 3. <strong>The Right Person:</strong> Does the support worker have the specific training, demonstrated competence, and confidence to perform the task for this particular client? 4. <strong>The Right Direction and Communication:</strong> Has the nurse provided clear, concise, step-by-step instructions, including what to observe and what parameters to report immediately? 5. <strong>The Right Supervision and Evaluation:</strong> Is the nurse available to assist if needed? Will the nurse evaluate the client's response and the worker's performance? <br><br></p>
-                      <p class="para-cn">在向非受监管人员委派任何护理操作之前，主管护士必须严格核实以下“五大正确原则”；支持工作者同样必须以这五大门禁自我审视是否能够安全接受委派： 1. <strong>正确的任务（The Right Task）：</strong> 该项操作是否依法属于可委派范畴？（必须是操作步骤明确、风险可控且结果可预期的标准化操作）。 2. <strong>正确的情境（The Right Circumstances）：</strong> 案主的生命体征与病情是否绝对稳定？护士是否已完成详尽的临床评估？若案主病情急转直下，绝不可委派！ 3. <strong>正确的人员（The Right Person）：</strong> 该支持工作者是否接受过针对该案主的专门实操培训？是否已被护士面对面考核通关并记录在案？支持工作者内心是否具备充分信心？ 4. <strong>正确的指导与沟通（The Right Direction & Communication）：</strong> 护士是否提供了清晰明确的分步操作指导？是否明确告知了重点观察指标以及何种异常参数必须立即上报？ 5. <strong>正确的监督与评估（The Right Supervision & Evaluation）：</strong> 当出现突发意外时护士是否随时能够就近支援或电话联络？护士是否按时对案主的反应及支持工作者的操作质量进行实地核查评估？ <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 10.3: Delegation Legislation in Canada (BC, Alberta, Nova Scotia, Ontario)</h4>
-                    </div>
-                  </aside>
-                </div>
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 10.3: Delegation Legislation in Canada (BC, Alberta, Nova Scotia, Ontario)</h4>
+                    
+                  </div>
+                  <div class="box-body-content">
+                </div></aside>
+
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">专栏 10.3：加拿大各省工作委派法定规约（卑诗省、阿尔伯塔、新斯科舍与安大略省法规对比）</h4>
+                    <div class="box-title-cn">专栏 10.3：加拿大各省工作委派法定规约（卑诗省、阿尔伯塔、新斯科舍与安大略省法规对比）</div>
+                  </div>
+                  <div class="box-body-content">
                 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                      </div>
-                      <h4 class="box-title-en">专栏 10.3：加拿大各省工作委派法定规约（卑诗省、阿尔伯塔、新斯科舍与安大略省法规对比）</h4>
-                    </div>
-                  </aside>
+                <div class="box-clause-item">
+                  <div class="clause-en">Health care legislation across Canadian provinces sets strict boundaries on delegation: • <strong>British Columbia:</strong> The <em>Health Professions Act</em> governs delegation. Unregulated care providers may perform tasks that are normally considered nursing acts only when delegated by a registered nurse under strict agency policies and client-specific training. • <strong>Alberta:</strong> The College of Licensed Practical Nurses of Alberta (CLPNA) and the College of Registered Nurses of Alberta (CRNA) establish that delegation is client-specific and task-specific. A delegation to perform a task for Client A does <em>not</em> authorize the worker to perform it for Client B. • <strong>Ontario:</strong> The <em>Regulated Health Professions Act (RHPA)</em> specifies controlled acts. Nurses may delegate controlled acts (such as administering certain medications or wound care) to support workers only when the client's condition is stable and predictable and the procedure has an established, routine outcome. • <strong>Nova Scotia:</strong> Emphasizes that delegation is a transfer of authority, not a transfer of responsibility. The nurse remains legally accountable for monitoring the client. <br><br></div>
+                  <div class="clause-cn">加拿大各省医疗法规对护士委派工作设立了极其严密的法定防火墙： • <strong>卑诗省（British Columbia）：</strong> 依据《卫生专业法案》（Health Professions Act），非受监管照护者仅在主管注册护士依照严密机构制度完成针对特定案主的技能培训后，方可代为执行特定的管制护理操作。 • <strong>阿尔伯塔省（Alberta）：</strong> 省护士监管学院确立了“针对特定案主（Client-specific）且针对特定任务（Task-specific）”的委派铁律。<strong>护士委派您为 A 案主执行某项操作，绝对不等于授权您擅自为 B 案主执行相同操作！</strong> • <strong>安大略省（Ontario）：</strong> 依据《受监管卫生专业法案》（RHPA），护士仅在案主病情处于绝对稳定、预后清晰且操作步骤高度例行常规化时，方可将特定受管制行为（如给药、特定无菌换药）委派给支持工作者。 • <strong>新斯科舍省（Nova Scotia）：</strong> 法规严正强调：委派仅仅是执行权的单项让渡，绝非终极责任的转嫁！委派护士始终在法律上对案主的生命安全承担连带监控问责。 <br><br></div>
                 </div>
-                
-                    <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">Health care legislation across Canadian provinces sets strict boundaries on delegation: • <strong>British Columbia:</strong> The <em>Health Professions Act</em> governs delegation. Unregulated care providers may perform tasks that are normally considered nursing acts only when delegated by a registered nurse under strict agency policies and client-specific training. • <strong>Alberta:</strong> The College of Licensed Practical Nurses of Alberta (CLPNA) and the College of Registered Nurses of Alberta (CRNA) establish that delegation is client-specific and task-specific. A delegation to perform a task for Client A does <em>not</em> authorize the worker to perform it for Client B. • <strong>Ontario:</strong> The <em>Regulated Health Professions Act (RHPA)</em> specifies controlled acts. Nurses may delegate controlled acts (such as administering certain medications or wound care) to support workers only when the client's condition is stable and predictable and the procedure has an established, routine outcome. • <strong>Nova Scotia:</strong> Emphasizes that delegation is a transfer of authority, not a transfer of responsibility. The nurse remains legally accountable for monitoring the client. <br><br></p>
-                      <p class="para-cn">加拿大各省医疗法规对护士委派工作设立了极其严密的法定防火墙： • <strong>卑诗省（British Columbia）：</strong> 依据《卫生专业法案》（Health Professions Act），非受监管照护者仅在主管注册护士依照严密机构制度完成针对特定案主的技能培训后，方可代为执行特定的管制护理操作。 • <strong>阿尔伯塔省（Alberta）：</strong> 省护士监管学院确立了“针对特定案主（Client-specific）且针对特定任务（Task-specific）”的委派铁律。<strong>护士委派您为 A 案主执行某项操作，绝对不等于授权您擅自为 B 案主执行相同操作！</strong> • <strong>安大略省（Ontario）：</strong> 依据《受监管卫生专业法案》（RHPA），护士仅在案主病情处于绝对稳定、预后清晰且操作步骤高度例行常规化时，方可将特定受管制行为（如给药、特定无菌换药）委派给支持工作者。 • <strong>新斯科舍省（Nova Scotia）：</strong> 法规严正强调：委派仅仅是执行权的单项让渡，绝非终极责任的转嫁！委派护士始终在法律上对案主的生命安全承担连带监控问责。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-157">
                           <span class="marker-pill">Pages 157 - 160</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-05">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第三节：拒绝委派任务的专业准则与沟通范式</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">When to Refuse a Delegated Task</h3><div class="subtopic-title-cn">何时有权并必须坚决拒绝委派？</div>
+                <div class="editorial-heading-major" id="sec-05">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第三节：拒绝委派任务的专业准则与沟通范式</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">Support workers have a legal and ethical duty to refuse a delegated task under certain circumstances. You <strong>must refuse</strong> a task if: • The task is beyond your legal scope of practice or beyond what your agency's policies allow. • The task is not in your written job description and has not been officially delegated through proper training. • You have not been trained to perform the task for this specific client. • You were trained, but you do not feel comfortable or competent performing the task safely. • The client's condition is unstable, rapidly deteriorating, or unpredictable. • The nurse is not available for supervision or emergency assistance. • The directions from the nurse are unclear, incomplete, or contradictory. <br><br><strong>How to Refuse Professionally:</strong> Refusing a task is not insubordination; it is a vital act of client safety. When refusing: • Never say "That's not my job" and walk away. • State clearly, calmly, and professionally why you cannot perform the task. • Example: "I cannot administer Mrs. Chen's insulin injection because I have not received the required certified training and agency authorization for subcutaneous injections." • Offer alternative support: "I am happy to assist Mrs. Chen with her breakfast while you prepare the medication." <br><br></p>
-                      <p class="para-cn">在特定情形下，坚决拒绝接受委派是支持工作者不可推卸的法定职业操守与人权底线！出现以下任何一种情形，您<strong>必须坚决拒绝（Must Refuse）</strong>： • 该项操作公然违反省卫生立法，或直接违背雇主机构的书面执业政策。 • 该项任务未包含在岗位职责中，且此前未经过正规授权委派流程。 • 您此前从未接受过针对该特定案主执行该操作的手把手培训。 • 虽然曾经接受过培训，但由于长时间未操作，您感到手生心慌，无法确保 100% 胜任与安全。 • 案主病情出现剧烈波动、生命体征极不稳定或处于恶化边缘。 • 委派护士即将外出或下班，现场没有任何具有资质的护士能够提供实时指导或急救支援。 • 护士的口头或书面操作指令含糊其辞、残缺不全甚至前后矛盾。 <br><br><strong>专业拒绝的沟通典范：</strong> 专业拒绝绝不等于违抗上级命令或消极怠工，而是为了捍卫长者生命的专业负责之举！拒绝时必须恪守以下范式： • 严禁冷冰冰地扔下一句“这不关我的事”扭头就走！ • 态度沉着、冷静，用客观事实清晰阐明无法执行的法理与专业依据。 • 典范陈述：“护士长，我无法为陈太太注射胰岛素。因为根据省护理法规与我们机构的执业政策，我尚未接受并通过皮下注射的专业委派资质考核。” • 积极提供建设性替代方案：“在您为陈太太抽吸并注射胰岛素期间，我很乐意先协助隔壁房间的王先生洗漱进餐，以便为您节省宝贵时间。” <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">When to Refuse a Delegated Task</h3>
+                  <div class="heading-cn">何时有权并必须坚决拒绝委派？</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="10" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Support workers have a legal and ethical duty to refuse a delegated task under certain circumstances. You <strong>must refuse</strong> a task if: • The task is beyond your legal scope of practice or beyond what your agency's policies allow. • The task is not in your written job description and has not been officially delegated through proper training. • You have not been trained to perform the task for this specific client. • You were trained, but you do not feel comfortable or competent performing the task safely. • The client's condition is unstable, rapidly deteriorating, or unpredictable. • The nurse is not available for supervision or emergency assistance. • The directions from the nurse are unclear, incomplete, or contradictory. <br><br><strong>How to Refuse Professionally:</strong> Refusing a task is not insubordination; it is a vital act of client safety. When refusing: • Never say "That's not my job" and walk away. • State clearly, calmly, and professionally why you cannot perform the task. • Example: "I cannot administer Mrs. Chen's insulin injection because I have not received the required certified training and agency authorization for subcutaneous injections." • Offer alternative support: "I am happy to assist Mrs. Chen with her breakfast while you prepare the medication." <br><br></p>
+                          <p class="para-cn">在特定情形下，坚决拒绝接受委派是支持工作者不可推卸的法定职业操守与人权底线！出现以下任何一种情形，您<strong>必须坚决拒绝（Must Refuse）</strong>： • 该项操作公然违反省卫生立法，或直接违背雇主机构的书面执业政策。 • 该项任务未包含在岗位职责中，且此前未经过正规授权委派流程。 • 您此前从未接受过针对该特定案主执行该操作的手把手培训。 • 虽然曾经接受过培训，但由于长时间未操作，您感到手生心慌，无法确保 100% 胜任与安全。 • 案主病情出现剧烈波动、生命体征极不稳定或处于恶化边缘。 • 委派护士即将外出或下班，现场没有任何具有资质的护士能够提供实时指导或急救支援。 • 护士的口头或书面操作指令含糊其辞、残缺不全甚至前后矛盾。 <br><br><strong>专业拒绝的沟通典范：</strong> 专业拒绝绝不等于违抗上级命令或消极怠工，而是为了捍卫长者生命的专业负责之举！拒绝时必须恪守以下范式： • 严禁冷冰冰地扔下一句“这不关我的事”扭头就走！ • 态度沉着、冷静，用客观事实清晰阐明无法执行的法理与专业依据。 • 典范陈述：“护士长，我无法为陈太太注射胰岛素。因为根据省护理法规与我们机构的执业政策，我尚未接受并通过皮下注射的专业委派资质考核。” • 积极提供建设性替代方案：“在您为陈太太抽吸并注射胰岛素期间，我很乐意先协助隔壁房间的王先生洗漱进餐，以便为您节省宝贵时间。” <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-    <div class="editorial-quiz-section" style="margin-top:56px; padding-top:32px; border-top:2px solid #e2e8f0;">
-      <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
-        <span class="quiz-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
-        <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 10 章全真自测复习题与详尽临床精解</h3>
-        <p style="font-size:13.5px; color:#166534; margin:0;">原版 5 道标准执业自测题（<strong>Pages 149–163 · 5 道全真自测题</strong>）。点击选项可即时测试并验证对错，查看权威临床实操解析。</p>
-      </div>
-    
-        <div class="editorial-quiz-card" id="q-card-ch10-1">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 01</span>
-            <span class="eq-status" id="q-status-ch10-1">待作答</span>
-          </div>
-          <div class="eq-stem-en">1. The primary goal of the multidisciplinary health care team is to:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>跨学科医疗卫生团队协作执业的最高核心宗旨在于：</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch10', 1, 'A', 'B', 'q-rat-ch10-1', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Minimize agency staffing costs</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 1, 'B', 'B', 'q-rat-ch10-1', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Provide the client with quality, holistic care and support</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 1, 'C', 'B', 'q-rat-ch10-1', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Ensure regulated workers perform all physical tasks</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 1, 'D', 'B', 'q-rat-ch10-1', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Eliminate the need for written care plans</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch10-1', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch10-1" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              跨学科团队由医生、护士、治疗师与支持工作者共同构成，其唯一崇高目标就是围绕案主的身心需求提供卓越的全人照护（选项 B 正确）。其余选项均违背了人本医疗宗旨。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch10-2">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 02</span>
-            <span class="eq-status" id="q-status-ch10-2">待作答</span>
-          </div>
-          <div class="eq-stem-en">2. When a nurse delegates a nursing task to a support worker, who retains ultimate accountability for the client's safety?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>当主管护士将一项专业护理操作委派给支持工作者执行时，谁在法律上对案主的生命安全承担终极问责性（Accountability）？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch10', 2, 'A', 'C', 'q-rat-ch10-2', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">The support worker</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 2, 'B', 'C', 'q-rat-ch10-2', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">The client's family</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 2, 'C', 'C', 'q-rat-ch10-2', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">The delegating nurse</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 2, 'D', 'C', 'q-rat-ch10-2', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">The physician only</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch10-2', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch10-2" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              这是加拿大卫生法学中最核心的考核点！委派仅仅是执行职责（Responsibility）的转交，委派护士始终承担无可推卸的终极问责性（Accountability）。护士必须对案主评估、委派决定的恰当性以及后续随访监督负全责。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch10-3">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 03</span>
-            <span class="eq-status" id="q-status-ch10-3">待作答</span>
-          </div>
-          <div class="eq-stem-en">3. A nurse has trained and authorized you to apply a prescription medicated ointment to Mrs. Smith's leg. Mr. Brown, across the hall, has the identical prescription. Can you apply it to Mr. Brown?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>主管护士对您进行了专业培训并授权您为史密斯太太的腿部涂抹处方药膏。对门病房的布朗先生恰巧开具了完全相同的处方药膏。您能否直接顺手为布朗先生涂抹？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch10', 3, 'A', 'B', 'q-rat-ch10-3', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Yes, because you are now trained in applying that ointment.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 3, 'B', 'B', 'q-rat-ch10-3', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">No, delegation is client-specific and requires separate authorization.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 3, 'C', 'B', 'q-rat-ch10-3', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Yes, if Mr. Brown asks you to do so.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 3, 'D', 'B', 'q-rat-ch10-3', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Yes, as long as you document it afterwards.</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch10-3', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch10-3" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              在加拿大各省执业法规中，任务委派绝不是针对某项技术的泛化通票，而是“特定案主、特定任务、特定情境”（Client-specific and task-specific）。为 A 案主获得的授权，绝对不能私自迁移到 B 案主身上！<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch10-4">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 04</span>
-            <span class="eq-status" id="q-status-ch10-4">待作答</span>
-          </div>
-          <div class="eq-stem-en">4. Which of the following is NOT one of the Five Rights of Delegation?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>下列哪一项不属于国际公认的“工作委派五大正确原则”？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch10', 4, 'A', 'C', 'q-rat-ch10-4', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">The Right Task</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 4, 'B', 'C', 'q-rat-ch10-4', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">The Right Circumstances</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 4, 'C', 'C', 'q-rat-ch10-4', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">The Right Financial Compensation</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 4, 'D', 'C', 'q-rat-ch10-4', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">The Right Person</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch10-4', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch10-4" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              工作委派五大正确原则包括：正确的任务（Right Task）、正确的情境（Right Circumstances）、正确的人员（Right Person）、正确的指导与沟通（Right Direction/Communication）、正确的监督与评估（Right Supervision/Evaluation）。选项 C 纯属干扰项。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch10-5">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 05</span>
-            <span class="eq-status" id="q-status-ch10-5">待作答</span>
-          </div>
-          <div class="eq-stem-en">5. Under which circumstance MUST a support worker refuse a delegated task?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>在下列哪一种情形下，支持工作者必须坚决拒绝接受委派？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch10', 5, 'A', 'C', 'q-rat-ch10-5', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">You are tired at the end of a shift.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 5, 'B', 'C', 'q-rat-ch10-5', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">The nurse is busy with another client.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 5, 'C', 'C', 'q-rat-ch10-5', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">The task has never been taught to you and is not in your job description.</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch10', 5, 'D', 'C', 'q-rat-ch10-5', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">The client is grumpy and uncooperative.</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch10-5', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch10-5" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              未经培训且超出法定执业范畴的操作（选项 C），若盲目逞能动手，将直接构成严重非法执业与医疗过失犯罪！支持工作者必须坚决拒绝，这是对案主生命安危与自身职业生命的严密护栏。
-            </div>
-          </div>
-        </div>
-        </div>
-
-    </main>
-
-    <footer class="editorial-colophon">
-      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
-      <p>Chapter 10: Working With Others: Teamwork and Delegation · 双语沉浸学术研读版</p>
-      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
-    </footer>
+    </div>
   </div>
 
   <script>
@@ -1484,146 +1275,147 @@
           b.classList.remove('active');
         }
       });
+      
       try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
     }
 
-    var themes = ['theme-paper', 'theme-white', 'theme-night'];
-    var themeNames = ['纸色', '纯白', '深色'];
-    var currentThemeIdx = 0;
-    
-    function cycleTheme() {
-      currentThemeIdx = (currentThemeIdx + 1) % themes.length;
-      var html = document.documentElement;
-      themes.forEach(function(t) { html.classList.remove(t); });
-      html.classList.add(themes[currentThemeIdx]);
-      var btn = document.getElementById('themeBtn');
-      if (btn) btn.innerText = themeNames[currentThemeIdx];
-      try { localStorage.setItem('psw_theme_idx', currentThemeIdx); } catch (e) {}
-    }
-
-    function initSettings() {
-      var savedMode = 'bilingual';
-      try { savedMode = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
-      switchLanguageMode(savedMode);
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
       
       try {
-        var savedTheme = parseInt(localStorage.getItem('psw_theme_idx') || '0', 10);
-        if (!isNaN(savedTheme) && savedTheme >= 0 && savedTheme < themes.length) {
-          currentThemeIdx = savedTheme;
-          var html = document.documentElement;
-          themes.forEach(function(t) { html.classList.remove(t); });
-          html.classList.add(themes[currentThemeIdx]);
-          var btn = document.getElementById('themeBtn');
-          if (btn) btn.innerText = themeNames[currentThemeIdx];
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
         }
       } catch (e) {}
     }
 
-    var currentFontIdx = 1;
-    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
-    function adjustFontSize(delta) {
-      currentFontIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontIdx + delta));
-      document.documentElement.style.setProperty('--font-base', fontSizes[currentFontIdx]);
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
     }
 
-    initSettings();
-
     function toggleReaderAudioPlay() {
-      if (readerAudio.paused) {
-        readerAudio.play().then(function() {
-          isPlaying = true;
-          document.getElementById('rabPlayBtn').innerText = '⏸';
-        }).catch(function(e) { console.log(e); });
-      } else {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
         readerAudio.pause();
         isPlaying = false;
-        document.getElementById('rabPlayBtn').innerText = '▶';
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
       }
     }
 
     function playParagraphAudio(el) {
-      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var start = parseFloat(el.getAttribute('data-start') || 0);
       var title = el.getAttribute('data-title') || '';
-      readerAudio.currentTime = start;
-      readerAudio.play().then(function() {
-        isPlaying = true;
-        document.getElementById('rabPlayBtn').innerText = '⏸';
-      }).catch(function(e) { console.log(e); });
-
-      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
-      for (var i = 0; i < actives.length; i++) {
-        actives[i].classList.remove('audio-active');
-      }
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
       el.classList.add('audio-active');
       lastActiveEntry = el;
-      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 10 朗读中';
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
     }
 
-    readerAudio.addEventListener('timeupdate', function() {
-      var cur = readerAudio.currentTime;
-      var dur = readerAudio.duration || 1500;
-      function formatTime(t) {
-        var m = Math.floor(t / 60);
-        var s = Math.floor(t % 60);
-        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
-      }
-      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
-
-      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
-      var found = null;
-      for (var i = 0; i < entries.length; i++) {
-        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
-        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
-        if (cur >= start && cur < end) {
-          found = entries[i];
-          break;
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
         }
-      }
-      if (found && found !== lastActiveEntry) {
-        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
-        found.classList.add('audio-active');
-        lastActiveEntry = found;
-        var title = found.getAttribute('data-title');
-        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 10 朗读中';
-      }
-    });
-
-    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
-      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
-      if (!card) return;
-      var opts = card.querySelectorAll('.eq-opt');
-      for (var i = 0; i < opts.length; i++) {
-        opts[i].classList.remove('selected-correct', 'selected-wrong');
-      }
-      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
-      if (selectedKey === correctKey) {
-        rowEl.classList.add('selected-correct');
-        if (statusEl) {
-          statusEl.innerText = '回答正确';
-          statusEl.style.color = '#166534';
-        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
       } else {
-        rowEl.classList.add('selected-wrong');
-        if (statusEl) {
-          statusEl.innerText = '回答有误，请查阅临床精解';
-          statusEl.style.color = '#991b1b';
-        }
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
       }
-      var rat = document.getElementById(ratId);
-      if (rat) rat.style.display = 'block';
     }
 
-    function toggleRationale(ratId, btnEl) {
-      var box = document.getElementById(ratId);
-      if (!box) return;
-      if (box.style.display === 'none' || !box.style.display) {
-        box.style.display = 'block';
-        btnEl.innerText = '收起临床精解';
-      } else {
-        box.style.display = 'none';
-        btnEl.innerText = '查看临床精解';
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
       }
     }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
   </script>
 </body>
 </html>

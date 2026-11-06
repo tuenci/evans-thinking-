@@ -23,17 +23,35 @@
       --border-subtle: #eae2d5;
       --border-strong: #d8cebf;
       
-      --box-sage-bg: #f0f6f2;
-      --box-sage-border: #cee0d4;
-      --box-blue-bg: #f0f5fc;
-      --box-blue-border: #cbdcf7;
-      --box-amber-bg: #fcf7ee;
-      --box-amber-border: #fae4c0;
-      --box-purple-bg: #f7f4fc;
-      --box-purple-border: #e3d9f5;
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
     }
     
-    /* Theme: Pure White */
     html.theme-white {
       --bg-canvas: #ffffff;
       --bg-card: #f8fafc;
@@ -43,13 +61,8 @@
       --text-muted: #94a3b8;
       --border-subtle: #e2e8f0;
       --border-strong: #cbd5e1;
-      --box-sage-bg: #f2f8f4;
-      --box-blue-bg: #f1f6fd;
-      --box-amber-bg: #fdf8ef;
-      --box-purple-bg: #f9f5fd;
     }
     
-    /* Theme: Night OLED */
     html.theme-night {
       --bg-canvas: #121214;
       --bg-card: #1c1c1f;
@@ -60,19 +73,25 @@
       --accent-navy: #60a5fa;
       --border-subtle: #27272a;
       --border-strong: #3f3f46;
-      --box-sage-bg: #14211a;
-      --box-sage-border: #1e3a2b;
-      --box-blue-bg: #131c2e;
-      --box-blue-border: #1f3154;
-      --box-amber-bg: #231b11;
-      --box-amber-border: #3d2d18;
-      --box-purple-bg: #1f1629;
-      --box-purple-border: #38244f;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
     html { scroll-behavior: smooth; }
-    a, .editorial-footer-url { word-break: break-all; }
     body {
       background: var(--bg-canvas);
       color: var(--text-main);
@@ -88,12 +107,12 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      height: 50px;
+      height: 48px;
       background: var(--bg-overlay);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 0 20px;
+      padding: 0 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,20 +124,17 @@
       text-decoration: none;
       color: var(--accent-navy);
       font-weight: 600;
-      font-size: 12.5px;
+      font-size: 12px;
       padding: 5px 12px;
       background: var(--bg-card);
       border-radius: 9999px;
       border: 1px solid var(--border-subtle);
       transition: all 0.15s ease;
       white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
     .nav-home-btn:hover { background: var(--border-subtle); }
     .nav-chapter-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--text-main);
       display: flex;
@@ -137,7 +153,6 @@
       font-weight: 700;
     }
     
-    /* Segmented Language Switcher */
     .mode-switch-segmented {
       display: flex;
       background: var(--border-subtle);
@@ -147,7 +162,7 @@
       flex-shrink: 0;
     }
     .mode-seg-btn {
-      padding: 5px 13px;
+      padding: 5px 12px;
       border: none;
       background: transparent;
       border-radius: 9999px;
@@ -169,10 +184,10 @@
       font-weight: 700;
     }
     
-    .nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .reading-util-group { display: flex; align-items: center; gap: 4px; }
     .util-btn {
-      padding: 5px 10px;
+      padding: 5px 9px;
       border: 1px solid var(--border-subtle);
       background: var(--bg-card);
       border-radius: 6px;
@@ -180,7 +195,6 @@
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
-      transition: all 0.15s ease;
       white-space: nowrap;
     }
     .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
@@ -195,8 +209,8 @@
       padding: 3px 12px 3px 4px;
     }
     .play-circle-btn {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: var(--accent-navy);
       color: #ffffff;
@@ -205,10 +219,8 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 11px;
-      transition: transform 0.15s, background 0.15s;
+      font-size: 10px;
     }
-    .play-circle-btn:hover { transform: scale(1.06); }
     .player-meta { display: flex; flex-direction: column; }
     .player-track-title {
       font-size: 11px;
@@ -219,27 +231,26 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .player-track-time { font-size: 10px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
     
-    /* Golden Reading Canvas - Zero Nested Borders */
+    /* Golden Reading Canvas */
     .reading-canvas,
     .ch-editorial-flow,
     .ch5-editorial-flow {
       width: 100%;
       max-width: 740px;
       margin: 0 auto;
-      padding: 36px 24px 100px;
+      padding: 32px 20px 100px;
       background: transparent;
-      border: none;
-      box-shadow: none;
       box-sizing: border-box;
     }
     
+    /* Chapter Hero */
     .chapter-hero-editorial {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 14px;
-      padding: 32px 28px 24px;
+      padding: 30px 26px 22px;
       margin-bottom: 32px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
@@ -252,7 +263,7 @@
       margin-bottom: 10px;
     }
     .hero-title-en {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 750;
       line-height: 1.25;
       color: var(--text-main);
@@ -275,221 +286,144 @@
       color: var(--text-muted);
     }
     
-    .page-jump-ribbon {
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border-subtle);
-      max-width: 100%;
-      overflow: hidden;
+      gap: 6px;
     }
-    .ribbon-label { font-size: 11.5px; font-weight: 600; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
-    .ribbon-scroll { display: flex; gap: 4px; overflow-x: auto; min-width: 0; flex: 1; -webkit-overflow-scrolling: touch; }
-    .ribbon-chip {
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 2px 7px;
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
       background: var(--border-subtle);
       color: var(--text-secondary);
-      border-radius: 4px;
-      white-space: nowrap;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
     }
-    .ribbon-chip:hover { background: var(--accent-navy); color: #fff; }
-    
-    .editorial-stream {
-      width: 100%;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    /* 4-Tier Thematic & Heading Hierarchy */
-    /* Tier 1: Major Section Banner */
-    .editorial-major-section {
-      margin: 56px 0 24px;
-      padding: 24px 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-left: 5px solid var(--accent-navy);
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    }
-    .section-banner-head .section-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 750;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: var(--accent-navy);
-      padding: 3px 9px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .section-banner-head .section-title-en {
-      font-size: 22px;
-      font-weight: 750;
-      color: var(--text-main);
-      line-height: 1.35;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .section-banner-head .section-title-cn {
-      font-size: 16px;
+    .ps-label {
+      font-size: 12px;
       font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
+      color: var(--text-muted);
     }
-    .section-banner-head .section-title-universal {
-      font-size: 20px;
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
       font-weight: 750;
       color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .section-banner-head .section-summary-tag {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      padding-top: 10px;
-      border-top: 1px dashed var(--border-subtle);
-      line-height: 1.5;
-    }
-
-    /* Tier 2: Clinical Sub-topic Card */
-    .editorial-subtopic-card {
-      margin: 36px 0 16px;
-      padding: 14px 18px;
-      background: rgba(30, 58, 138, 0.035);
-      border-left: 3.5px solid var(--accent-navy);
-      border-radius: 0 8px 8px 0;
-    }
-    html.theme-night .editorial-subtopic-card {
-      background: rgba(96, 165, 250, 0.06);
-      border-left-color: #60a5fa;
-    }
-    .subtopic-tag {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent-navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
       margin-bottom: 4px;
     }
-    html.theme-night .subtopic-tag {
-      color: #60a5fa;
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
     }
-    .subtopic-title-en {
-      font-size: 17.5px;
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
       margin-bottom: 3px;
     }
-    .subtopic-title-cn {
+    .editorial-heading-sub .heading-cn {
       font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
-    .subtopic-title-universal {
-      font-size: 16.5px;
-      font-weight: 700;
-      color: var(--text-main);
-    }
 
-    /* Tier 3: Micro-topic Row */
-    .editorial-microtopic-row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
+    .editorial-heading-micro {
       margin: 24px 0 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
     }
-    .micro-bullet {
-      color: var(--accent-navy);
-      font-size: 12px;
-    }
-    html.theme-night .micro-bullet {
-      color: #60a5fa;
-    }
-    .micro-title-en {
+    .editorial-heading-micro .heading-en {
       font-size: 15.5px;
       font-weight: 700;
       color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .micro-title-cn {
+    .editorial-heading-micro .heading-cn {
       font-size: 13.5px;
       font-weight: 500;
       color: var(--text-secondary);
-    }
-    .micro-title-universal {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-main);
+      display: inline-block;
     }
 
-    /* Tier 4: Chapter Thematic Navigation Jumpbar */
-    .chapter-thematic-nav {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-    }
-    .thematic-nav-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .thematic-nav-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .topic-chip {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-subtle);
-      padding: 4px 10px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s ease;
-    }
-    .topic-chip:hover {
-      background: var(--accent-navy);
-      color: #ffffff;
-      border-color: var(--accent-navy);
-    }
-    .topic-chip .chip-num {
-      font-size: 10px;
-      font-weight: 700;
-      opacity: 0.75;
-    }
-
-    /* Legacy section divider fallback */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
-    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
-    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
-    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
-    
-    /* Bilingual Paragraphs */
+    /* Bilingual Paragraphs - No play buttons */
     .bilingual-paragraph {
       position: relative;
-      margin-bottom: 24px;
-      padding: 8px 12px 10px 14px;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
       border-left: 3px solid transparent;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
@@ -501,26 +435,23 @@
       background: rgba(30, 58, 138, 0.05);
       border-left-color: var(--accent-navy);
     }
-    .para-play-indicator { display: none; }
-    
+        
     .para-en {
       font-size: var(--font-base);
-      line-height: 1.8;
+      line-height: 1.78;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-weight: 420;
-      letter-spacing: -0.005em;
     }
     .para-cn {
       font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.85;
+      line-height: 1.82;
       color: var(--text-secondary);
       font-weight: 400;
-      letter-spacing: 0.005em;
       margin-bottom: 0;
     }
     
-    /* Distinct Callout Boxes */
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
     .editorial-box-container {
       margin: 36px 0;
       border-radius: 12px;
@@ -528,33 +459,24 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); }
-    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); }
-    .box-theme-amber, .box-theme-terracotta { background: var(--box-amber-bg); border-color: var(--box-amber-border); }
-    .box-theme-case, .box-theme-purple { background: var(--box-purple-bg); border-color: var(--box-purple-border); }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
     
     .box-banner-header {
       padding: 14px 18px 12px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    .box-badge-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-    .box-badge-pill {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.025);
     }
     .box-title-en {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 16.5px;
+      font-weight: 750;
       color: var(--text-main);
-      line-height: 1.4;
+      line-height: 1.35;
       margin-bottom: 3px;
     }
     .box-title-cn {
@@ -563,309 +485,291 @@
       color: var(--text-secondary);
     }
     .box-body-content {
-      padding: 14px 18px 18px;
+      padding: 18px 20px;
     }
     .box-clause-item {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
     }
     .box-clause-item:last-child {
-      border-bottom: none;
+      margin-bottom: 0;
       padding-bottom: 0;
+      border-bottom: none;
     }
     .clause-en {
-      font-size: 15px;
+      font-size: calc(var(--font-base) * 0.94);
       line-height: 1.7;
       color: var(--text-main);
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
     .clause-cn {
-      font-size: 14px;
+      font-size: calc(var(--font-base) * 0.9);
       line-height: 1.75;
       color: var(--text-secondary);
     }
     .box-source-citation {
-      padding: 10px 0 0;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
       font-size: 12px;
-      color: var(--text-muted);
-      border-top: 1px dashed var(--border-subtle);
-      margin-top: 12px;
-    }
-    
-    /* Page Anchor Marker */
-    .page-anchor-marker {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 36px 0 24px;
-      color: var(--text-muted);
-      font-size: 12px;
-    }
-    .page-anchor-marker::before,
-    .page-anchor-marker::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border-subtle);
-    }
-    .marker-pill {
-      padding: 2px 10px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 9999px;
-      font-size: 11.5px;
-      font-weight: 600;
+      font-style: italic;
       color: var(--text-muted);
     }
-    .marker-sec {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    
-    /* Lists */
-    .editorial-list {
-      list-style: none;
-      padding: 0;
-      margin: 16px 0 24px;
-    }
-    .editorial-list-item {
-      margin-bottom: 12px;
-      padding-left: 18px;
-      position: relative;
-    }
-    .editorial-list-item::before {
-      content: "•";
-      color: var(--accent-navy);
-      font-weight: bold;
-      position: absolute;
-      left: 4px;
-      top: 0;
-    }
-    .item-en {
-      font-size: var(--font-base);
-      line-height: 1.75;
-      color: var(--text-main);
-      margin-bottom: 3px;
-    }
-    .item-cn {
-      font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-    
-    /* Terms Grid */
-    .key-terms-section { margin: 40px 0; }
-    .kt-section-header { margin-bottom: 20px; }
-    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
-    .kt-subtitle { font-size: 13px; color: var(--text-muted); }
-    .terms-editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-    }
-    .editorial-term-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 14px 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
-    }
-    .etc-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 8px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .etc-word { font-size: 15px; color: var(--text-main); font-weight: 700; }
-    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 6px; font-style: italic; }
-    .etc-cn-tag {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--accent-navy);
-      background: rgba(30, 58, 138, 0.08);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .etc-def-en { font-size: 13px; line-height: 1.6; color: var(--text-main); margin-bottom: 6px; }
-    .etc-def-cn { font-size: 12.5px; line-height: 1.65; color: var(--text-secondary); }
-    
-    /* Quizzes */
-    .editorial-quiz-section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border-subtle); }
-    .editorial-quiz-card {
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 20px 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .eq-num { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); }
-    .eq-status { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); line-height: 1.5; margin-bottom: 6px; }
-    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
-    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
-    .eq-opt {
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
       cursor: pointer;
-      background: var(--bg-canvas);
       transition: all 0.15s ease;
     }
-    .eq-opt:hover { background: var(--border-subtle); }
-    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
-    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
-    .opt-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--border-subtle);
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-main);
-      flex-shrink: 0;
-    }
-    .opt-text { font-size: 13.5px; line-height: 1.5; color: var(--text-main); }
-    .btn-toggle-rat {
-      padding: 6px 12px;
+    .kt-toggle-btn.active {
       background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
       border: 1px solid var(--border-subtle);
       border-radius: 6px;
       font-size: 12px;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
+      transition: all 0.15s ease;
     }
-    .eq-rationale-box {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
       border-radius: 8px;
-      font-size: 13px;
-      line-height: 1.6;
+      padding: 14px;
     }
-    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 4px; }
-    .rat-content { color: #1e293b; }
-    
-    /* Tables */
-    .table-wrap { overflow-x: auto; margin: 24px 0; }
-    .clinical-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-    .clinical-table th { background: var(--border-subtle); padding: 10px 12px; border: 1px solid var(--border-subtle); font-weight: 700; color: var(--text-main); text-align: left; }
-    .clinical-table td { padding: 10px 12px; border: 1px solid var(--border-subtle); color: var(--text-secondary); }
-    
-    /* Tri-State Language Immersion Directives */
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
     html.mode-en .para-cn,
     html.mode-en .item-cn,
     html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
-    html.mode-en .sh-title-cn,
-    html.mode-en .section-title-cn,
-    html.mode-en .subtopic-title-cn,
-    html.mode-en .micro-title-cn,
-    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
-    html.mode-en .marker-text-cn,
-    html.mode-en .eq-stem-cn { display: none !important; }
-    html.mode-en .para-en { font-size: calc(var(--font-base) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
-    
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
     html.mode-cn .para-en,
     html.mode-cn .item-en,
     html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
-    html.mode-cn .sh-title-en,
-    html.mode-cn .section-title-en,
-    html.mode-cn .subtopic-title-en,
-    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
-    html.mode-cn .marker-text-en,
-    html.mode-cn .eq-stem-en { display: none !important; }
-    html.mode-cn .para-cn { font-size: calc(var(--font-base) * var(--font-cn-scale) + 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
-    
-    /* Colophon */
-    .editorial-colophon { text-align: center; padding: 48px 20px; color: var(--text-muted); font-size: 12.5px; line-height: 1.7; }
-    
-    /* Strict Mobile Responsive Layout */
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
     @media (max-width: 768px) {
-      .top-sticky-bar {
-        height: 44px;
-        padding: 0 10px;
-        gap: 6px;
-        flex-wrap: nowrap;
-        overflow: hidden;
-      }
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
       .nav-chapter-title { display: none; }
-      .nav-home-btn { padding: 4px 8px; font-size: 11.5px; }
-      .mode-switch-segmented { padding: 2px; gap: 1px; }
-      .mode-seg-btn { padding: 4px 8px; font-size: 11px; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
       .reading-util-group { display: none; }
-      .ambient-player { padding: 0; background: transparent; border: none; }
-      .player-meta { display: none; }
-      .play-circle-btn { width: 30px; height: 30px; font-size: 12px; }
-      
-      .reading-canvas,
-      .ch-editorial-flow,
-      .ch5-editorial-flow {
-        padding: 14px 16px 80px;
-        max-width: 100%;
-      }
-      .chapter-hero-editorial {
-        padding: 18px 16px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
       .hero-title-en { font-size: 22px; }
-      .hero-title-cn { font-size: 15.5px; }
-      
-      .editorial-major-section {
-        padding: 16px 14px;
-        margin: 36px 0 16px;
-        border-radius: 10px;
-      }
-      .section-banner-head .section-title-en { font-size: 18.5px; }
-      .section-banner-head .section-title-cn { font-size: 15px; }
-      .section-banner-head .section-title-universal { font-size: 17px; }
-      
-      .editorial-subtopic-card {
-        padding: 10px 12px;
-        margin: 24px 0 12px;
-      }
-      .subtopic-title-en { font-size: 16px; }
-      .subtopic-title-cn { font-size: 13.5px; }
-      .subtopic-title-universal { font-size: 15px; }
-      
-      .editorial-microtopic-row {
-        margin: 18px 0 8px;
-        flex-wrap: wrap;
-      }
-      .micro-title-en { font-size: 14.5px; }
-      .micro-title-cn { font-size: 13px; }
-      
-      .thematic-nav-chips { gap: 4px; }
-      .topic-chip { padding: 3px 8px; font-size: 11px; }
-      
-      .box-banner-header { padding: 12px 14px 10px; }
-      .box-body-content { padding: 12px 14px 14px; }
-      .bilingual-paragraph { padding: 6px 10px 8px 12px; margin-bottom: 20px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <div class="top-sticky-bar">
     <div class="nav-left">
-      <a href="psw-reader.html#toc" class="nav-home-btn">← 目录</a>
+      <a href="psw-reader.html#sec-ch12" class="nav-home-btn">← 返回全书总目录</a>
       <div class="nav-chapter-title">
         <span class="ch-badge">CH 12</span>
         <span>Abuse, Bullying, and Harassment Awareness</span>
@@ -873,22 +777,20 @@
     </div>
     
     <div class="mode-switch-segmented" id="langModeSwitch">
-      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英</button>
-      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">EN</button>
-      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">中</button>
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
     </div>
 
     <div class="nav-right">
       <div class="reading-util-group">
-        <button class="util-btn" onclick="cycleTheme()" id="themeBtn" title="切换暖纸/纯白/夜读">纸色</button>
-        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
-        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
       </div>
 
       <div class="ambient-player">
-        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()" title="播放/暂停音频">▶</button>
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
         <div class="player-meta">
-          <span class="player-track-title" id="rabCurrentTitle">CH 12 · 点选段落即读</span>
+          <span class="player-track-title" id="rabCurrentTitle">第 12 章 · 点选段落收听</span>
           <span class="player-track-time" id="rabCurTime">00:00 / 27:10</span>
         </div>
       </div>
@@ -902,27 +804,32 @@
       <h2 class="hero-title-cn">识别与防范虐待、霸凌与骚扰：法律强制报告与弱势群体安全防线</h2>
       <div class="hero-meta-bar">
         <span class="meta-item">Pages 174–193 · 18 道全真自测题</span>
-        <span class="meta-item">轻触段落即可播放真人原声导读</span>
+        <span class="meta-item">专业音频：27:10</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch12-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
+
       
-        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
-          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
-          <div class="thematic-nav-chips">
-            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 虐待的分类与临床预警</a>
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-174">第 174 页</option><option value="page-175">第 175 页</option><option value="page-176">第 176 页</option>
+              </select>
+            </div>
           </div>
-        </nav>
-        
-      
-        <div class="page-jump-ribbon">
-          <span class="ribbon-label">原书页码检索:</span>
-          <div class="ribbon-scroll">
-            <a href="#page-174" class="ribbon-chip">p.174</a><a href="#page-175" class="ribbon-chip">p.175</a><a href="#page-176" class="ribbon-chip">p.176</a>
+          <div class="ps-chips-ribbon">
+            <a href="#page-174" class="page-chip-item"><span class="pc-num">p.174</span></a><a href="#page-175" class="page-chip-item"><span class="pc-num">p.175</span></a><a href="#page-176" class="page-chip-item"><span class="pc-num">p.176</span></a>
           </div>
         </div>
         
     </header>
 
-    <main class="editorial-stream">
+    <div class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
@@ -930,43 +837,178 @@
                           <span class="marker-pill">Page 174</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-01">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 12 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
+                <div class="editorial-heading-major" id="sec-01">
+                  <h2 class="heading-en">Chapter 12 Opener & Learning Objectives</h2>
+                  <div class="heading-cn">开篇导读与学习目标</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Define abuse and explain the power imbalance inherent in abusive relationships. • Describe the different forms of abuse: physical, sexual, emotional, financial, and neglect. • Identify the signs and symptoms of abuse in children, older adults, and intimate partners. • Explain the cycle of abuse (tension building, incident, honeymoon phase). • Describe bullying and workplace harassment, including sexual harassment. • Explain the legal requirements for mandatory reporting of suspected abuse in Canada. <br><br></p>
-                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确定义虐待的法律与医学内涵，深刻揭示施虐关系中根深蒂固的权力失衡（Power Imbalance）。 • 详尽剖析各类虐待形式的核心特征：身体躯体虐待、性虐待、心理情感虐待、经济财务侵吞以及照料剥夺疏忽（Neglect）。 • 敏锐识别儿童、高龄长者及亲密伴侣遭受虐待的临床身心预警信号与隐蔽体征。 • 深入阐释虐待暴力的恶性循环三阶段（紧张蓄积期、暴力爆发期、蜜月道歉期）。 • 准确界定职场霸凌（Bullying）与工作场所骚扰（包括性骚扰）的法定防范机制。 • 熟练掌握加拿大法律关于疑似虐待事件的“法定强制报告程序”（Mandatory Reporting）与保护性上报链条。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Objectives</h3>
+                  <div class="heading-cn">学习目标</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">After reading this chapter, the learner should be able to do the following: • Define abuse and explain the power imbalance inherent in abusive relationships. • Describe the different forms of abuse: physical, sexual, emotional, financial, and neglect. • Identify the signs and symptoms of abuse in children, older adults, and intimate partners. • Explain the cycle of abuse (tension building, incident, honeymoon phase). • Describe bullying and workplace harassment, including sexual harassment. • Explain the legal requirements for mandatory reporting of suspected abuse in Canada. <br><br></p>
+                          <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确定义虐待的法律与医学内涵，深刻揭示施虐关系中根深蒂固的权力失衡（Power Imbalance）。 • 详尽剖析各类虐待形式的核心特征：身体躯体虐待、性虐待、心理情感虐待、经济财务侵吞以及照料剥夺疏忽（Neglect）。 • 敏锐识别儿童、高龄长者及亲密伴侣遭受虐待的临床身心预警信号与隐蔽体征。 • 深入阐释虐待暴力的恶性循环三阶段（紧张蓄积期、暴力爆发期、蜜月道歉期）。 • 准确界定职场霸凌（Bullying）与工作场所骚扰（包括性骚扰）的法定防范机制。 • 熟练掌握加拿大法律关于疑似虐待事件的“法定强制报告程序”（Mandatory Reporting）与保护性上报链条。 <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-175">
                           <span class="marker-pill">Page 175</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-02">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 12 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
-                  </div>
-                </section>
+                <div class="editorial-heading-major" id="sec-02">
+                  <h2 class="heading-en">Chapter 12 Key Terms</h2>
+                  <div class="heading-cn">核心专业术语表</div>
+                </div>
                 
-            <div class="key-terms-section">
-              <div class="kt-section-header">
-                <h3 class="kt-title">KEY TERMS · 第 12 章核心专业术语速查表</h3>
-                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+            <div class="key-terms-master-container" id="kt-container-ch12">
+              <div class="kt-toolbar">
+                <div class="kt-toolbar-left">
+                  <h3 class="kt-title">Key Terms · 第 12 章核心专业术语表（全 8 词速查）</h3>
+                </div>
+                <div class="kt-toolbar-right">
+                  <div class="kt-mode-toggle">
+                    <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch12', 'table')">速查词表</button>
+                    <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch12', 'cards')">精研卡片</button>
+                  </div>
+                  <div class="kt-search-box">
+                    <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch12', this.value)">
+                  </div>
+                </div>
               </div>
-              <div class="terms-editorial-grid">
-            
+
+              <!-- Mode 1: Compact Table -->
+              <div class="kt-view-table active" id="kt-table-view-ch12">
+                <div class="table-wrap">
+                  <table class="kt-compact-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 28%;">英文术语 / 国际音标</th>
+                        <th style="width: 22%;">中文对照</th>
+                        <th style="width: 50%;">教材标准学术释义与临床界定</th>
+                      </tr>
+                    </thead>
+                    <tbody id="kt-table-body-ch12">
+                      
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>abuse</strong></strong>
+                    <span class="kt-ipa">/əˈbjuːs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">虐待</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">某人故意对他人造成的身体躯体、心理精神、性或财务财产上的损害与剥夺。其核心特征为行使控制与权力压迫。 (p. 175)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>bullying</strong></strong>
+                    <span class="kt-ipa">/ˈbʊliɪŋ/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">霸凌</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">一种具有反复性、针对性的攻击行为，施暴者企图在肉体、言语或心理上贬损、羞辱、孤立或支配受害者。 (p. 187)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>elder abuse</strong></strong>
+                    <span class="kt-ipa">/ˈɛldər əˈbjuːs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">虐待长者</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">在任何存在信任期待的亲属、照料者或机构关系中，对高龄长者所施加的单一或重复性有害行为，或缺乏适当照料行动，导致长者遭受痛苦或伤害。 (p. 181)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>financial abuse</strong></strong>
+                    <span class="kt-ipa">/faɪˈnænʃəl əˈbjuːs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">财务经济侵吞</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">未经合法授权，非法滥用、窃取、挪用、侵吞或强行掌控受助者的资金、财产、银行卡、养老金支票或遗产主权。 (p. 179)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>harassment</strong></strong>
+                    <span class="kt-ipa">/ˈhærəsmənt/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">骚扰</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">做出已知或理应知晓会令人感到不受欢迎、反感、受辱或受到威吓的言语评论或身体行为。 (p. 187)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>neglect</strong></strong>
+                    <span class="kt-ipa">/nɪˈɡlɛkt/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">照料疏忽 / 遗弃</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">照料者未能提供维持生命与健康所必需的基本生活保障（如食物、清洁饮水、庇护住所、安全环境、衣服、医疗及个人卫生协助）。 (p. 180)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>physical abuse</strong></strong>
+                    <span class="kt-ipa">/ˈfɪzɪkl əˈbjuːs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">身体躯体虐待</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">任何蓄意对他人肉体施加暴力，造成疼痛、伤害、损伤或机能受损的行为（如殴打、推搡、掌掴、烧伤、捆绑或过量限制）。 (p. 177)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>sexual abuse</strong></strong>
+                    <span class="kt-ipa">/ˈsɛkʃʊəl əˈbjuːs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">性虐待</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">任何未经当事人知情同意、强行强加的性接触、性剥削、暴露狂窥视或性侵犯行为。 (p. 178)</div>
+                  </td>
+                </tr>
+                
+                    </tbody>
+                  </table>
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-table-ch12">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch12', 'table')">
+                    展开全部 8 个专业术语 ▼
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mode 2: Cards Deck -->
+              <div class="kt-view-cards" id="kt-cards-view-ch12" style="display:none;">
+                <div class="terms-editorial-grid" id="kt-cards-grid-ch12">
+                  
                 <div class="editorial-term-card">
                   <div class="etc-header">
                     <div class="etc-en-block">
@@ -1045,7 +1087,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>physical abuse</strong></strong>
@@ -1058,7 +1100,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>sexual abuse</strong></strong>
@@ -1070,67 +1112,64 @@
                     <div class="etc-def-cn">任何未经当事人知情同意、强行强加的性接触、性剥削、暴露狂窥视或性侵犯行为。 (p. 178)</div>
                   </div>
                 </div>
-                </div></div>
-<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-cards-ch12">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch12', 'cards')">
+                    展开全部 8 张精研术语卡片 ▼
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-176">
                           <span class="marker-pill">Pages 176 - 180</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-03">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第一节：虐待的分类与临床预警信号</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Types of Abuse</h3><div class="subtopic-title-cn">虐待的核心类型与临床表现</div>
+                <div class="editorial-heading-major" id="sec-03">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第一节：虐待的分类与临床预警信号</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">Abuse occurs across all socioeconomic levels, cultures, and ages. It is fundamentally an abuse of power and control. Support workers must be vigilant for signs of abuse: • <strong>Physical Abuse:</strong> Unexplained bruises, welts, burns (cigarette burns, immersion burns), fractures, bite marks, or injuries in various stages of healing. Injuries shaped like objects (belts, cords, hands). • <strong>Sexual Abuse:</strong> Bruising, bleeding, or pain in the genital area; torn, stained, or bloody underwear; difficulty walking or sitting; sudden intense fear of personal care. • <strong>Emotional/Psychological Abuse:</strong> Fear, extreme withdrawal, hypervigilance, low self-esteem, passive compliance. The abuser may demean, humiliate, isolate, or threaten the victim. • <strong>Financial Abuse:</strong> Sudden unexplained withdrawals from bank accounts; unpaid facility bills despite adequate pension; missing jewellery or cash; forced signing of power of attorney or wills. • <strong>Neglect:</strong> Malnutrition, dehydration, untreated bedsores (pressure injuries), poor personal hygiene, dirty clothing, lack of required glasses, hearing aids, or medications. <br><br></p>
-                      <p class="para-cn">虐待横跨所有社会经济阶层、文化背景与年龄群体，其深层本质永远是对脆弱者的强权控制与剥削。支持工作者在日常擦浴与生活协助中，必须练就火眼金睛： • <strong>身体躯体虐待（Physical Abuse）：</strong> 无法合理解释的皮下瘀青血肿、鞭打条痕、烟头或热油烫伤、骨折脱位、咬痕，以及处于不同愈合阶段的新旧交替伤痕；特别是呈现特定物体形状的特征性伤痕（如皮带扣形、电线勒痕、手掌印）。 • <strong>性虐待（Sexual Abuse）：</strong> 会阴部或肛周出现不明原因的裂伤、出血、红肿剧痛；内衣裤破损撕裂、带有可疑血迹或污渍；长者行走如厕困难；对原本坦然接受的日常个人卫生会阴擦洗突然表现出极度的恐慌与抗拒。 • <strong>心理情感虐待（Emotional Abuse）：</strong> 眼神极度游移恐慌、极度冷漠退缩、战战兢兢的过度警觉神态；施虐者常当面用污言秽语辱骂长者、当众贬损尊严、切断长者与外界一切电话和社交联络。 • <strong>经济财务侵吞（Financial Abuse）：</strong> 长者的银行储蓄卡出现莫名大额提现；原本丰厚的退休金进账但养老院长照费用常年拖欠不缴；长者心爱的金银首饰或现金不翼而飞；被迫在神志不清状态下仓促签署房产转让协议、授权委托书或修改遗嘱。 • <strong>照料疏忽与遗弃（Neglect）：</strong> 重度恶病质营养不良、脱水嘴唇干裂；原本完全可防的压疮严重溃烂坏死且无人换药；头发蓬乱恶臭、贴身衣物沾满排泄物却数日不换；赖以自理的老花镜、助听器或降压降糖药物被恶意扣留剥夺。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Types of Abuse</h3>
+                  <div class="heading-cn">虐待的核心类型与临床表现</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Abuse occurs across all socioeconomic levels, cultures, and ages. It is fundamentally an abuse of power and control.</p>
+                          <p class="para-cn">虐待横跨所有社会经济阶层、文化背景与年龄群体，其深层本质永远是对脆弱者的强权控制与剥削。支持工作者在日常擦浴与生活协助中，必须练就火眼金睛： • <strong>身体躯体虐待（Physical Abuse）：</strong> 无法合理解释的皮下瘀青血肿、鞭打条痕、烟头或热油烫伤、骨折脱位、咬痕，以及处于不同愈合阶段的新旧交替伤痕；特别是呈现特定物体形状的特征性伤痕（如皮带扣形、电线勒痕、手掌印）。• <strong>性虐待（Sexual Abuse）：</strong> 会阴部或肛周出现不明原因的裂伤、出血、红肿剧痛；内衣裤破损撕裂、带有可疑血迹或污渍；长者行走如厕困难；对原本坦然接受的日常个人卫生会阴擦洗突然表现出极度的恐慌与抗拒。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Support workers must be vigilant for signs of abuse: • <strong>Physical Abuse:</strong> Unexplained bruises, welts, burns (cigarette burns, immersion burns), fractures, bite marks, or injuries in various stages of healing. Injuries shaped like objects (belts, cords, hands). • <strong>Sexual Abuse:</strong> Bruising, bleeding, or pain in the genital area; torn, stained, or bloody underwear; difficulty walking or sitting; sudden intense fear of personal care. • <strong>Emotional/Psychological Abuse:</strong> Fear, extreme withdrawal, hypervigilance, low self-esteem, passive compliance. The abuser may demean, humiliate, isolate, or threaten the victim. • <strong>Financial Abuse:</strong> Sudden unexplained withdrawals from bank accounts; unpaid facility bills despite adequate pension; missing jewellery or cash; forced signing of power of attorney or wills. • <strong>Neglect:</strong> Malnutrition, dehydration, untreated bedsores (pressure injuries), poor personal hygiene, dirty clothing, lack of required glasses, hearing aids, or medications. <br><br></p>
+                          <p class="para-cn">• <strong>心理情感虐待（Emotional Abuse）：</strong> 眼神极度游移恐慌、极度冷漠退缩、战战兢兢的过度警觉神态；施虐者常当面用污言秽语辱骂长者、当众贬损尊严、切断长者与外界一切电话和社交联络。• <strong>经济财务侵吞（Financial Abuse）：</strong> 长者的银行储蓄卡出现莫名大额提现；原本丰厚的退休金进账但养老院长照费用常年拖欠不缴；长者心爱的金银首饰或现金不翼而飞；被迫在神志不清状态下仓促签署房产转让协议、授权委托书或修改遗嘱。• <strong>照料疏忽与遗弃（Neglect）：</strong> 重度恶病质营养不良、脱水嘴唇干裂；原本完全可防的压疮严重溃烂坏死且无人换药；头发蓬乱恶臭、贴身衣物沾满排泄物却数日不换；赖以自理的老花镜、助听器或降压降糖药物被恶意扣留剥夺。<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-amber">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">LEGAL & CLINICAL ALERT · 临床过失警示与应对铁律</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 12.5: Mandatory Reporting of Suspected Child and Elder Abuse in Canada</h4>
-                    </div>
-                  </aside>
-                </div>
-                
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                      </div>
-                      <h4 class="box-title-en">专栏 12.5：加拿大法定强制报告程序：疑似虐待上报的法律红线与免责特权</h4>
-                    </div>
-                  </aside>
-                </div>
-                
-                    <article class="bilingual-paragraph audio-trackable" data-ch="12" data-start="0.0" data-end="0.0" data-title="" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">In Canada, specific laws protect vulnerable individuals: • <strong>Child Protection Legislation:</strong> Across all provinces and territories, any person (including health care workers and the general public) who has reasonable grounds to suspect that a child is suffering or at risk of abuse or neglect <strong>has an immediate legal duty to report directly to child protection authorities (Children's Aid Society / Child Welfare)</strong>. You do not need absolute proof; "reasonable suspicion" is the legal threshold. Failure to report is a prosecutable criminal offence. • <strong>Elder Abuse Protection:</strong> Long-term care facility legislation (such as Ontario's <em>Fixing Long-Term Care Act</em>) mandates that <strong>any suspected abuse, neglect, or unlawful conduct against a resident must be reported immediately to the Director of the Ministry of Long-Term Care</strong>. • <strong>Whistleblower Protection:</strong> Legislation explicitly protects health care workers who report in good faith from retaliation, disciplinary action, or employer dismissal. <br><br></p>
-                      <p class="para-cn">在加拿大现行司法管辖下，法律对弱势群体的安全保障设立了不可逾越的钢性铁律： • <strong>儿童保护立法（Child Welfare Acts）：</strong> 在全加所有省份与地区，任何从业者（包括支持工作者、护士乃至普通公民），只要拥有“合理怀疑”（Reasonable Suspicion）确信一名儿童正在遭受或面临虐待疏忽的现实风险，<strong>依法负有必须立即向儿童保护署（CAS / Child and Family Services）直接举报的法定义务！</strong> 您绝不需要搜集确凿铁证，“合理怀疑”便是法定的举报门槛。知情不报、包庇隐瞒属于严重的刑事犯罪！ • <strong>长照长者权益保护法案：</strong> 各省长期照护专门立法（如安省《完善长照设施法案》）严正规约：<strong>凡在机构内发生或疑似发生对长者的任何身体攻击、情感虐待、财务侵占或疏忽遗弃，任何工作人员必须立即跳过中间层级，直接向省卫生厅长照总监设立的专用热线举报！</strong> • <strong>吹哨人法定免责与保护特权（Whistleblower Protection）：</strong> 法律庄严承诺：凡出于善意履行法定举报职责的工作人员，受到国家法律的强力庇护，任何雇主机构若敢实施打击报复、降薪或解雇，将面临巨额法定惩罚与吊销执业资质！</p>
-                    </article>
+                <aside class="editorial-box-container box-theme-amber">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">BOX 12.5: Mandatory Reporting of Suspected Child and Elder Abuse in Canada</h4>
                     
-    </main>
+                  </div>
+                  <div class="box-body-content">
+                </div></aside>
 
-    <footer class="editorial-colophon">
-      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
-      <p>Chapter 12: Abuse, Bullying, and Harassment Awareness · 双语沉浸学术研读版</p>
-      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
-    </footer>
+                <aside class="editorial-box-container box-theme-sage">
+                  <div class="box-banner-header">
+                    <h4 class="box-title-en">专栏 12.5：加拿大法定强制报告程序：疑似虐待上报的法律红线与免责特权</h4>
+                    <div class="box-title-cn">专栏 12.5：加拿大法定强制报告程序：疑似虐待上报的法律红线与免责特权</div>
+                  </div>
+                  <div class="box-body-content">
+                
+                <div class="box-clause-item">
+                  <div class="clause-en">In Canada, specific laws protect vulnerable individuals: • <strong>Child Protection Legislation:</strong> Across all provinces and territories, any person (including health care workers and the general public) who has reasonable grounds to suspect that a child is suffering or at risk of abuse or neglect <strong>has an immediate legal duty to report directly to child protection authorities (Children's Aid Society / Child Welfare)</strong>. You do not need absolute proof; "reasonable suspicion" is the legal threshold. Failure to report is a prosecutable criminal offence. • <strong>Elder Abuse Protection:</strong> Long-term care facility legislation (such as Ontario's <em>Fixing Long-Term Care Act</em>) mandates that <strong>any suspected abuse, neglect, or unlawful conduct against a resident must be reported immediately to the Director of the Ministry of Long-Term Care</strong>. • <strong>Whistleblower Protection:</strong> Legislation explicitly protects health care workers who report in good faith from retaliation, disciplinary action, or employer dismissal. <br><br></div>
+                  <div class="clause-cn">在加拿大现行司法管辖下，法律对弱势群体的安全保障设立了不可逾越的钢性铁律： • <strong>儿童保护立法（Child Welfare Acts）：</strong> 在全加所有省份与地区，任何从业者（包括支持工作者、护士乃至普通公民），只要拥有“合理怀疑”（Reasonable Suspicion）确信一名儿童正在遭受或面临虐待疏忽的现实风险，<strong>依法负有必须立即向儿童保护署（CAS / Child and Family Services）直接举报的法定义务！</strong> 您绝不需要搜集确凿铁证，“合理怀疑”便是法定的举报门槛。知情不报、包庇隐瞒属于严重的刑事犯罪！ • <strong>长照长者权益保护法案：</strong> 各省长期照护专门立法（如安省《完善长照设施法案》）严正规约：<strong>凡在机构内发生或疑似发生对长者的任何身体攻击、情感虐待、财务侵占或疏忽遗弃，任何工作人员必须立即跳过中间层级，直接向省卫生厅长照总监设立的专用热线举报！</strong> • <strong>吹哨人法定免责与保护特权（Whistleblower Protection）：</strong> 法律庄严承诺：凡出于善意履行法定举报职责的工作人员，受到国家法律的强力庇护，任何雇主机构若敢实施打击报复、降薪或解雇，将面临巨额法定惩罚与吊销执业资质！ <br><br></div>
+                </div>
+                </div></aside>
+
+    </div>
   </div>
 
   <script>
@@ -1151,146 +1190,147 @@
           b.classList.remove('active');
         }
       });
+      
       try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
     }
 
-    var themes = ['theme-paper', 'theme-white', 'theme-night'];
-    var themeNames = ['纸色', '纯白', '深色'];
-    var currentThemeIdx = 0;
-    
-    function cycleTheme() {
-      currentThemeIdx = (currentThemeIdx + 1) % themes.length;
-      var html = document.documentElement;
-      themes.forEach(function(t) { html.classList.remove(t); });
-      html.classList.add(themes[currentThemeIdx]);
-      var btn = document.getElementById('themeBtn');
-      if (btn) btn.innerText = themeNames[currentThemeIdx];
-      try { localStorage.setItem('psw_theme_idx', currentThemeIdx); } catch (e) {}
-    }
-
-    function initSettings() {
-      var savedMode = 'bilingual';
-      try { savedMode = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
-      switchLanguageMode(savedMode);
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
       
       try {
-        var savedTheme = parseInt(localStorage.getItem('psw_theme_idx') || '0', 10);
-        if (!isNaN(savedTheme) && savedTheme >= 0 && savedTheme < themes.length) {
-          currentThemeIdx = savedTheme;
-          var html = document.documentElement;
-          themes.forEach(function(t) { html.classList.remove(t); });
-          html.classList.add(themes[currentThemeIdx]);
-          var btn = document.getElementById('themeBtn');
-          if (btn) btn.innerText = themeNames[currentThemeIdx];
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
         }
       } catch (e) {}
     }
 
-    var currentFontIdx = 1;
-    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
-    function adjustFontSize(delta) {
-      currentFontIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontIdx + delta));
-      document.documentElement.style.setProperty('--font-base', fontSizes[currentFontIdx]);
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
     }
 
-    initSettings();
-
     function toggleReaderAudioPlay() {
-      if (readerAudio.paused) {
-        readerAudio.play().then(function() {
-          isPlaying = true;
-          document.getElementById('rabPlayBtn').innerText = '⏸';
-        }).catch(function(e) { console.log(e); });
-      } else {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
         readerAudio.pause();
         isPlaying = false;
-        document.getElementById('rabPlayBtn').innerText = '▶';
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
       }
     }
 
     function playParagraphAudio(el) {
-      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var start = parseFloat(el.getAttribute('data-start') || 0);
       var title = el.getAttribute('data-title') || '';
-      readerAudio.currentTime = start;
-      readerAudio.play().then(function() {
-        isPlaying = true;
-        document.getElementById('rabPlayBtn').innerText = '⏸';
-      }).catch(function(e) { console.log(e); });
-
-      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
-      for (var i = 0; i < actives.length; i++) {
-        actives[i].classList.remove('audio-active');
-      }
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
       el.classList.add('audio-active');
       lastActiveEntry = el;
-      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 12 朗读中';
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
     }
 
-    readerAudio.addEventListener('timeupdate', function() {
-      var cur = readerAudio.currentTime;
-      var dur = readerAudio.duration || 1500;
-      function formatTime(t) {
-        var m = Math.floor(t / 60);
-        var s = Math.floor(t % 60);
-        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
-      }
-      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
-
-      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
-      var found = null;
-      for (var i = 0; i < entries.length; i++) {
-        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
-        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
-        if (cur >= start && cur < end) {
-          found = entries[i];
-          break;
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
         }
-      }
-      if (found && found !== lastActiveEntry) {
-        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
-        found.classList.add('audio-active');
-        lastActiveEntry = found;
-        var title = found.getAttribute('data-title');
-        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 12 朗读中';
-      }
-    });
-
-    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
-      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
-      if (!card) return;
-      var opts = card.querySelectorAll('.eq-opt');
-      for (var i = 0; i < opts.length; i++) {
-        opts[i].classList.remove('selected-correct', 'selected-wrong');
-      }
-      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
-      if (selectedKey === correctKey) {
-        rowEl.classList.add('selected-correct');
-        if (statusEl) {
-          statusEl.innerText = '回答正确';
-          statusEl.style.color = '#166534';
-        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
       } else {
-        rowEl.classList.add('selected-wrong');
-        if (statusEl) {
-          statusEl.innerText = '回答有误，请查阅临床精解';
-          statusEl.style.color = '#991b1b';
-        }
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
       }
-      var rat = document.getElementById(ratId);
-      if (rat) rat.style.display = 'block';
     }
 
-    function toggleRationale(ratId, btnEl) {
-      var box = document.getElementById(ratId);
-      if (!box) return;
-      if (box.style.display === 'none' || !box.style.display) {
-        box.style.display = 'block';
-        btnEl.innerText = '收起临床精解';
-      } else {
-        box.style.display = 'none';
-        btnEl.innerText = '查看临床精解';
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
       }
     }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
   </script>
 </body>
 </html>

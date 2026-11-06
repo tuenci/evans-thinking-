@@ -23,17 +23,35 @@
       --border-subtle: #eae2d5;
       --border-strong: #d8cebf;
       
-      --box-sage-bg: #f0f6f2;
-      --box-sage-border: #cee0d4;
-      --box-blue-bg: #f0f5fc;
-      --box-blue-border: #cbdcf7;
-      --box-amber-bg: #fcf7ee;
-      --box-amber-border: #fae4c0;
-      --box-purple-bg: #f7f4fc;
-      --box-purple-border: #e3d9f5;
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
     }
     
-    /* Theme: Pure White */
     html.theme-white {
       --bg-canvas: #ffffff;
       --bg-card: #f8fafc;
@@ -43,13 +61,8 @@
       --text-muted: #94a3b8;
       --border-subtle: #e2e8f0;
       --border-strong: #cbd5e1;
-      --box-sage-bg: #f2f8f4;
-      --box-blue-bg: #f1f6fd;
-      --box-amber-bg: #fdf8ef;
-      --box-purple-bg: #f9f5fd;
     }
     
-    /* Theme: Night OLED */
     html.theme-night {
       --bg-canvas: #121214;
       --bg-card: #1c1c1f;
@@ -60,19 +73,25 @@
       --accent-navy: #60a5fa;
       --border-subtle: #27272a;
       --border-strong: #3f3f46;
-      --box-sage-bg: #14211a;
-      --box-sage-border: #1e3a2b;
-      --box-blue-bg: #131c2e;
-      --box-blue-border: #1f3154;
-      --box-amber-bg: #231b11;
-      --box-amber-border: #3d2d18;
-      --box-purple-bg: #1f1629;
-      --box-purple-border: #38244f;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
     html { scroll-behavior: smooth; }
-    a, .editorial-footer-url { word-break: break-all; }
     body {
       background: var(--bg-canvas);
       color: var(--text-main);
@@ -88,12 +107,12 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      height: 50px;
+      height: 48px;
       background: var(--bg-overlay);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 0 20px;
+      padding: 0 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,20 +124,17 @@
       text-decoration: none;
       color: var(--accent-navy);
       font-weight: 600;
-      font-size: 12.5px;
+      font-size: 12px;
       padding: 5px 12px;
       background: var(--bg-card);
       border-radius: 9999px;
       border: 1px solid var(--border-subtle);
       transition: all 0.15s ease;
       white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
     .nav-home-btn:hover { background: var(--border-subtle); }
     .nav-chapter-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--text-main);
       display: flex;
@@ -137,7 +153,6 @@
       font-weight: 700;
     }
     
-    /* Segmented Language Switcher */
     .mode-switch-segmented {
       display: flex;
       background: var(--border-subtle);
@@ -147,7 +162,7 @@
       flex-shrink: 0;
     }
     .mode-seg-btn {
-      padding: 5px 13px;
+      padding: 5px 12px;
       border: none;
       background: transparent;
       border-radius: 9999px;
@@ -169,10 +184,10 @@
       font-weight: 700;
     }
     
-    .nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .reading-util-group { display: flex; align-items: center; gap: 4px; }
     .util-btn {
-      padding: 5px 10px;
+      padding: 5px 9px;
       border: 1px solid var(--border-subtle);
       background: var(--bg-card);
       border-radius: 6px;
@@ -180,7 +195,6 @@
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
-      transition: all 0.15s ease;
       white-space: nowrap;
     }
     .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
@@ -195,8 +209,8 @@
       padding: 3px 12px 3px 4px;
     }
     .play-circle-btn {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: var(--accent-navy);
       color: #ffffff;
@@ -205,10 +219,8 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 11px;
-      transition: transform 0.15s, background 0.15s;
+      font-size: 10px;
     }
-    .play-circle-btn:hover { transform: scale(1.06); }
     .player-meta { display: flex; flex-direction: column; }
     .player-track-title {
       font-size: 11px;
@@ -219,27 +231,26 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .player-track-time { font-size: 10px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
     
-    /* Golden Reading Canvas - Zero Nested Borders */
+    /* Golden Reading Canvas */
     .reading-canvas,
     .ch-editorial-flow,
     .ch5-editorial-flow {
       width: 100%;
       max-width: 740px;
       margin: 0 auto;
-      padding: 36px 24px 100px;
+      padding: 32px 20px 100px;
       background: transparent;
-      border: none;
-      box-shadow: none;
       box-sizing: border-box;
     }
     
+    /* Chapter Hero */
     .chapter-hero-editorial {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 14px;
-      padding: 32px 28px 24px;
+      padding: 30px 26px 22px;
       margin-bottom: 32px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
@@ -252,7 +263,7 @@
       margin-bottom: 10px;
     }
     .hero-title-en {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 750;
       line-height: 1.25;
       color: var(--text-main);
@@ -275,221 +286,144 @@
       color: var(--text-muted);
     }
     
-    .page-jump-ribbon {
+    /* Page Selector Box (Dropdown + Chips) */
+    .chapter-page-selector-box {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .page-selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-title-group {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border-subtle);
-      max-width: 100%;
-      overflow: hidden;
+      gap: 6px;
     }
-    .ribbon-label { font-size: 11.5px; font-weight: 600; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
-    .ribbon-scroll { display: flex; gap: 4px; overflow-x: auto; min-width: 0; flex: 1; -webkit-overflow-scrolling: touch; }
-    .ribbon-chip {
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 2px 7px;
+    .ps-badge {
+      font-size: 10px;
+      font-weight: 750;
       background: var(--border-subtle);
       color: var(--text-secondary);
-      border-radius: 4px;
-      white-space: nowrap;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
     }
-    .ribbon-chip:hover { background: var(--accent-navy); color: #fff; }
-    
-    .editorial-stream {
-      width: 100%;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    /* 4-Tier Thematic & Heading Hierarchy */
-    /* Tier 1: Major Section Banner */
-    .editorial-major-section {
-      margin: 56px 0 24px;
-      padding: 24px 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-left: 5px solid var(--accent-navy);
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    }
-    .section-banner-head .section-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 750;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: var(--accent-navy);
-      padding: 3px 9px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .section-banner-head .section-title-en {
-      font-size: 22px;
-      font-weight: 750;
-      color: var(--text-main);
-      line-height: 1.35;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .section-banner-head .section-title-cn {
-      font-size: 16px;
+    .ps-label {
+      font-size: 12px;
       font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
+      color: var(--text-muted);
     }
-    .section-banner-head .section-title-universal {
-      font-size: 20px;
+    .ps-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .page-jump-dropdown {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-jump-dropdown:focus {
+      border-color: var(--accent-navy);
+    }
+    .ps-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .page-chip-item {
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-canvas);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .page-chip-item:hover {
+      background: var(--accent-navy);
+      color: #ffffff;
+      border-color: var(--accent-navy);
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
       font-weight: 750;
       color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .section-banner-head .section-summary-tag {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      padding-top: 10px;
-      border-top: 1px dashed var(--border-subtle);
-      line-height: 1.5;
-    }
-
-    /* Tier 2: Clinical Sub-topic Card */
-    .editorial-subtopic-card {
-      margin: 36px 0 16px;
-      padding: 14px 18px;
-      background: rgba(30, 58, 138, 0.035);
-      border-left: 3.5px solid var(--accent-navy);
-      border-radius: 0 8px 8px 0;
-    }
-    html.theme-night .editorial-subtopic-card {
-      background: rgba(96, 165, 250, 0.06);
-      border-left-color: #60a5fa;
-    }
-    .subtopic-tag {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent-navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
       margin-bottom: 4px;
     }
-    html.theme-night .subtopic-tag {
-      color: #60a5fa;
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
     }
-    .subtopic-title-en {
-      font-size: 17.5px;
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.35;
       margin-bottom: 3px;
     }
-    .subtopic-title-cn {
+    .editorial-heading-sub .heading-cn {
       font-size: 14.5px;
       font-weight: 500;
       color: var(--text-secondary);
     }
-    .subtopic-title-universal {
-      font-size: 16.5px;
-      font-weight: 700;
-      color: var(--text-main);
-    }
 
-    /* Tier 3: Micro-topic Row */
-    .editorial-microtopic-row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
+    .editorial-heading-micro {
       margin: 24px 0 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
     }
-    .micro-bullet {
-      color: var(--accent-navy);
-      font-size: 12px;
-    }
-    html.theme-night .micro-bullet {
-      color: #60a5fa;
-    }
-    .micro-title-en {
+    .editorial-heading-micro .heading-en {
       font-size: 15.5px;
       font-weight: 700;
       color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .micro-title-cn {
+    .editorial-heading-micro .heading-cn {
       font-size: 13.5px;
       font-weight: 500;
       color: var(--text-secondary);
-    }
-    .micro-title-universal {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-main);
+      display: inline-block;
     }
 
-    /* Tier 4: Chapter Thematic Navigation Jumpbar */
-    .chapter-thematic-nav {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-    }
-    .thematic-nav-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .thematic-nav-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .topic-chip {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-subtle);
-      padding: 4px 10px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s ease;
-    }
-    .topic-chip:hover {
-      background: var(--accent-navy);
-      color: #ffffff;
-      border-color: var(--accent-navy);
-    }
-    .topic-chip .chip-num {
-      font-size: 10px;
-      font-weight: 700;
-      opacity: 0.75;
-    }
-
-    /* Legacy section divider fallback */
-    .editorial-section-divider { margin: 48px 0 24px; }
-    .section-divider-bar { height: 1px; background: var(--border-subtle); margin-bottom: 18px; }
-    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 6px; }
-    .sh-title-en { font-size: 21px; font-weight: 700; color: var(--text-main); line-height: 1.35; margin-bottom: 4px; }
-    .sh-title-cn { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
-    
-    /* Bilingual Paragraphs */
+    /* Bilingual Paragraphs - No play buttons */
     .bilingual-paragraph {
       position: relative;
-      margin-bottom: 24px;
-      padding: 8px 12px 10px 14px;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
       border-left: 3px solid transparent;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
@@ -501,26 +435,23 @@
       background: rgba(30, 58, 138, 0.05);
       border-left-color: var(--accent-navy);
     }
-    .para-play-indicator { display: none; }
-    
+        
     .para-en {
       font-size: var(--font-base);
-      line-height: 1.8;
+      line-height: 1.78;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-weight: 420;
-      letter-spacing: -0.005em;
     }
     .para-cn {
       font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.85;
+      line-height: 1.82;
       color: var(--text-secondary);
       font-weight: 400;
-      letter-spacing: 0.005em;
       margin-bottom: 0;
     }
     
-    /* Distinct Callout Boxes */
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
     .editorial-box-container {
       margin: 36px 0;
       border-radius: 12px;
@@ -528,33 +459,24 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); }
-    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); }
-    .box-theme-amber, .box-theme-terracotta { background: var(--box-amber-bg); border-color: var(--box-amber-border); }
-    .box-theme-case, .box-theme-purple { background: var(--box-purple-bg); border-color: var(--box-purple-border); }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
     
     .box-banner-header {
       padding: 14px 18px 12px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    .box-badge-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-    .box-badge-pill {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.025);
     }
     .box-title-en {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 16.5px;
+      font-weight: 750;
       color: var(--text-main);
-      line-height: 1.4;
+      line-height: 1.35;
       margin-bottom: 3px;
     }
     .box-title-cn {
@@ -563,309 +485,291 @@
       color: var(--text-secondary);
     }
     .box-body-content {
-      padding: 14px 18px 18px;
+      padding: 18px 20px;
     }
     .box-clause-item {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
     }
     .box-clause-item:last-child {
-      border-bottom: none;
+      margin-bottom: 0;
       padding-bottom: 0;
+      border-bottom: none;
     }
     .clause-en {
-      font-size: 15px;
+      font-size: calc(var(--font-base) * 0.94);
       line-height: 1.7;
       color: var(--text-main);
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
     .clause-cn {
-      font-size: 14px;
+      font-size: calc(var(--font-base) * 0.9);
       line-height: 1.75;
       color: var(--text-secondary);
     }
     .box-source-citation {
-      padding: 10px 0 0;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
       font-size: 12px;
-      color: var(--text-muted);
-      border-top: 1px dashed var(--border-subtle);
-      margin-top: 12px;
-    }
-    
-    /* Page Anchor Marker */
-    .page-anchor-marker {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 36px 0 24px;
-      color: var(--text-muted);
-      font-size: 12px;
-    }
-    .page-anchor-marker::before,
-    .page-anchor-marker::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border-subtle);
-    }
-    .marker-pill {
-      padding: 2px 10px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 9999px;
-      font-size: 11.5px;
-      font-weight: 600;
+      font-style: italic;
       color: var(--text-muted);
     }
-    .marker-sec {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    
-    /* Lists */
-    .editorial-list {
-      list-style: none;
-      padding: 0;
-      margin: 16px 0 24px;
-    }
-    .editorial-list-item {
-      margin-bottom: 12px;
-      padding-left: 18px;
-      position: relative;
-    }
-    .editorial-list-item::before {
-      content: "•";
-      color: var(--accent-navy);
-      font-weight: bold;
-      position: absolute;
-      left: 4px;
-      top: 0;
-    }
-    .item-en {
-      font-size: var(--font-base);
-      line-height: 1.75;
-      color: var(--text-main);
-      margin-bottom: 3px;
-    }
-    .item-cn {
-      font-size: calc(var(--font-base) * var(--font-cn-scale));
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-    
-    /* Terms Grid */
-    .key-terms-section { margin: 40px 0; }
-    .kt-section-header { margin-bottom: 20px; }
-    .kt-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
-    .kt-subtitle { font-size: 13px; color: var(--text-muted); }
-    .terms-editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-    }
-    .editorial-term-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 14px 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
-    }
-    .etc-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 8px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .etc-word { font-size: 15px; color: var(--text-main); font-weight: 700; }
-    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 6px; font-style: italic; }
-    .etc-cn-tag {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--accent-navy);
-      background: rgba(30, 58, 138, 0.08);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .etc-def-en { font-size: 13px; line-height: 1.6; color: var(--text-main); margin-bottom: 6px; }
-    .etc-def-cn { font-size: 12.5px; line-height: 1.65; color: var(--text-secondary); }
-    
-    /* Quizzes */
-    .editorial-quiz-section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border-subtle); }
-    .editorial-quiz-card {
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 20px 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
-    .eq-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .eq-num { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-navy); }
-    .eq-status { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .eq-stem-en { font-size: 16px; font-weight: 600; color: var(--text-main); line-height: 1.5; margin-bottom: 6px; }
-    .eq-stem-cn { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
-    .eq-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
-    .eq-opt {
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
       cursor: pointer;
-      background: var(--bg-canvas);
       transition: all 0.15s ease;
     }
-    .eq-opt:hover { background: var(--border-subtle); }
-    .eq-opt.selected-correct { background: #f0fdf4; border-color: #86efac; }
-    .eq-opt.selected-wrong { background: #fef2f2; border-color: #fca5a5; }
-    .opt-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--border-subtle);
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-main);
-      flex-shrink: 0;
-    }
-    .opt-text { font-size: 13.5px; line-height: 1.5; color: var(--text-main); }
-    .btn-toggle-rat {
-      padding: 6px 12px;
+    .kt-toggle-btn.active {
       background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
       border: 1px solid var(--border-subtle);
       border-radius: 6px;
       font-size: 12px;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
+      transition: all 0.15s ease;
     }
-    .eq-rationale-box {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
       border-radius: 8px;
-      font-size: 13px;
-      line-height: 1.6;
+      padding: 14px;
     }
-    .rat-correct-banner { font-weight: 700; color: #166534; margin-bottom: 4px; }
-    .rat-content { color: #1e293b; }
-    
-    /* Tables */
-    .table-wrap { overflow-x: auto; margin: 24px 0; }
-    .clinical-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-    .clinical-table th { background: var(--border-subtle); padding: 10px 12px; border: 1px solid var(--border-subtle); font-weight: 700; color: var(--text-main); text-align: left; }
-    .clinical-table td { padding: 10px 12px; border: 1px solid var(--border-subtle); color: var(--text-secondary); }
-    
-    /* Tri-State Language Immersion Directives */
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
     html.mode-en .para-cn,
     html.mode-en .item-cn,
     html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
     html.mode-en .box-title-cn,
     html.mode-en .hero-title-cn,
-    html.mode-en .sh-title-cn,
-    html.mode-en .section-title-cn,
-    html.mode-en .subtopic-title-cn,
-    html.mode-en .micro-title-cn,
-    html.mode-en .section-summary-tag,
     html.mode-en .etc-cn-tag,
     html.mode-en .etc-def-cn,
-    html.mode-en .marker-text-cn,
-    html.mode-en .eq-stem-cn { display: none !important; }
-    html.mode-en .para-en { font-size: calc(var(--font-base) + 0.5px); line-height: 1.85; margin-bottom: 22px; }
-    
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
     html.mode-cn .para-en,
     html.mode-cn .item-en,
     html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
     html.mode-cn .box-title-en,
     html.mode-cn .hero-title-en,
-    html.mode-cn .sh-title-en,
-    html.mode-cn .section-title-en,
-    html.mode-cn .subtopic-title-en,
-    html.mode-cn .micro-title-en,
     html.mode-cn .etc-def-en,
-    html.mode-cn .marker-text-en,
-    html.mode-cn .eq-stem-en { display: none !important; }
-    html.mode-cn .para-cn { font-size: calc(var(--font-base) * var(--font-cn-scale) + 0.5px); line-height: 1.9; color: var(--text-main); margin-bottom: 22px; }
-    
-    /* Colophon */
-    .editorial-colophon { text-align: center; padding: 48px 20px; color: var(--text-muted); font-size: 12.5px; line-height: 1.7; }
-    
-    /* Strict Mobile Responsive Layout */
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
     @media (max-width: 768px) {
-      .top-sticky-bar {
-        height: 44px;
-        padding: 0 10px;
-        gap: 6px;
-        flex-wrap: nowrap;
-        overflow: hidden;
-      }
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
       .nav-chapter-title { display: none; }
-      .nav-home-btn { padding: 4px 8px; font-size: 11.5px; }
-      .mode-switch-segmented { padding: 2px; gap: 1px; }
-      .mode-seg-btn { padding: 4px 8px; font-size: 11px; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
       .reading-util-group { display: none; }
-      .ambient-player { padding: 0; background: transparent; border: none; }
-      .player-meta { display: none; }
-      .play-circle-btn { width: 30px; height: 30px; font-size: 12px; }
-      
-      .reading-canvas,
-      .ch-editorial-flow,
-      .ch5-editorial-flow {
-        padding: 14px 16px 80px;
-        max-width: 100%;
-      }
-      .chapter-hero-editorial {
-        padding: 18px 16px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
       .hero-title-en { font-size: 22px; }
-      .hero-title-cn { font-size: 15.5px; }
-      
-      .editorial-major-section {
-        padding: 16px 14px;
-        margin: 36px 0 16px;
-        border-radius: 10px;
-      }
-      .section-banner-head .section-title-en { font-size: 18.5px; }
-      .section-banner-head .section-title-cn { font-size: 15px; }
-      .section-banner-head .section-title-universal { font-size: 17px; }
-      
-      .editorial-subtopic-card {
-        padding: 10px 12px;
-        margin: 24px 0 12px;
-      }
-      .subtopic-title-en { font-size: 16px; }
-      .subtopic-title-cn { font-size: 13.5px; }
-      .subtopic-title-universal { font-size: 15px; }
-      
-      .editorial-microtopic-row {
-        margin: 18px 0 8px;
-        flex-wrap: wrap;
-      }
-      .micro-title-en { font-size: 14.5px; }
-      .micro-title-cn { font-size: 13px; }
-      
-      .thematic-nav-chips { gap: 4px; }
-      .topic-chip { padding: 3px 8px; font-size: 11px; }
-      
-      .box-banner-header { padding: 12px 14px 10px; }
-      .box-body-content { padding: 12px 14px 14px; }
-      .bilingual-paragraph { padding: 6px 10px 8px 12px; margin-bottom: 20px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <div class="top-sticky-bar">
     <div class="nav-left">
-      <a href="psw-reader.html#toc" class="nav-home-btn">← 目录</a>
+      <a href="psw-reader.html#sec-ch3" class="nav-home-btn">← 返回全书总目录</a>
       <div class="nav-chapter-title">
         <span class="ch-badge">CH 03</span>
         <span>Workplace Settings</span>
@@ -873,22 +777,20 @@
     </div>
     
     <div class="mode-switch-segmented" id="langModeSwitch">
-      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英</button>
-      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">EN</button>
-      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">中</button>
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
     </div>
 
     <div class="nav-right">
       <div class="reading-util-group">
-        <button class="util-btn" onclick="cycleTheme()" id="themeBtn" title="切换暖纸/纯白/夜读">纸色</button>
-        <button class="util-btn" onclick="adjustFontSize(-1)">A-</button>
-        <button class="util-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
       </div>
 
       <div class="ambient-player">
-        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()" title="播放/暂停音频">▶</button>
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
         <div class="player-meta">
-          <span class="player-track-title" id="rabCurrentTitle">CH 3 · 点选段落即读</span>
+          <span class="player-track-title" id="rabCurrentTitle">第 3 章 · 点选段落收听</span>
           <span class="player-track-time" id="rabCurTime">00:00 / 22:15</span>
         </div>
       </div>
@@ -902,27 +804,32 @@
       <h2 class="hero-title-cn">执业环境与工作场所（社区、居家与长期照护）</h2>
       <div class="hero-meta-bar">
         <span class="meta-item">Pages 34–47 · 9 道全真自测题</span>
-        <span class="meta-item">轻触段落即可播放真人原声导读</span>
+        <span class="meta-item">专业音频：22:15</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch3-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
       </div>
+
       
-        <nav class="chapter-thematic-nav" aria-label="章节核心主题导航">
-          <div class="thematic-nav-title">TOPIC NAVIGATION · 核心专题导航</div>
-          <div class="thematic-nav-chips">
-            <a href="#sec-01" class="topic-chip"><span class="chip-num">§ 01</span> 学习目标</a><a href="#sec-02" class="topic-chip"><span class="chip-num">§ 02</span> 专业术语</a><a href="#sec-03" class="topic-chip"><span class="chip-num">§ 03</span> 两大执业阵地全景与原</a><a href="#sec-04" class="topic-chip"><span class="chip-num">§ 04</span> 社区场景深度拆解：居</a><a href="#sec-05" class="topic-chip"><span class="chip-num">§ 05</span> 四大工作环境利弊大起</a>
+        <div class="chapter-page-selector-box">
+          <div class="page-selector-head">
+            <div class="ps-title-group">
+              <span class="ps-badge">PAGE SELECTOR</span>
+              <span class="ps-label">原书页码直达</span>
+            </div>
+            <div class="ps-dropdown-wrap">
+              <select class="page-jump-dropdown" onchange="if(this.value){window.location.hash = this.value;}">
+                <option value="">-- 选择原书页码快速跳转 --</option>
+                <option value="page-34">第 34 页</option><option value="page-35">第 35 页</option><option value="page-36">第 36 页</option><option value="page-37">第 37 页</option><option value="page-39">第 39 页</option>
+              </select>
+            </div>
           </div>
-        </nav>
-        
-      
-        <div class="page-jump-ribbon">
-          <span class="ribbon-label">原书页码检索:</span>
-          <div class="ribbon-scroll">
-            <a href="#page-34" class="ribbon-chip">p.34</a><a href="#page-35" class="ribbon-chip">p.35</a><a href="#page-36" class="ribbon-chip">p.36</a><a href="#page-37" class="ribbon-chip">p.37</a><a href="#page-39" class="ribbon-chip">p.39</a>
+          <div class="ps-chips-ribbon">
+            <a href="#page-34" class="page-chip-item"><span class="pc-num">p.34</span></a><a href="#page-35" class="page-chip-item"><span class="pc-num">p.35</span></a><a href="#page-36" class="page-chip-item"><span class="pc-num">p.36</span></a><a href="#page-37" class="page-chip-item"><span class="pc-num">p.37</span></a><a href="#page-39" class="page-chip-item"><span class="pc-num">p.39</span></a>
           </div>
         </div>
         
     </header>
 
-    <main class="editorial-stream">
+    <div class="editorial-stream">
       <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
@@ -930,43 +837,360 @@
                           <span class="marker-pill">Page 34</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-01">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 01 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 3 Opener & Learning Objectives</h2><div class="section-title-cn">开篇导读与学习目标</div>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 1.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Objectives</h3><div class="subtopic-title-cn">学习目标</div>
+                <div class="editorial-heading-major" id="sec-01">
+                  <h2 class="heading-en">Chapter 3 Opener & Learning Objectives</h2>
+                  <div class="heading-cn">开篇导读与学习目标</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="0.0" data-end="34.2" data-title="Objectives" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">After reading this chapter, the learner should be able to do the following: • Differentiate between community-based care and facility-based care. • Differentiate among acute care, subacute care, and long-term care. • Describe the different community-based and facility-based settings where support workers are employed. • Identify the challenges and benefits associated with working in each of the following settings: community, long-term care, acute care, and working directly for a client. • Identify what is important to you when deciding on an employment setting. <br><br></p>
-                      <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确鉴别与区分“社区型照护”（Community-Based Care）与“机构型照护”（Facility-Based Care）的本质差异与服务模式。 • 深入理解并辨析“急性照护”（Acute Care）、“亚急性/过渡照护”（Subacute Care）以及“长期照护”（Long-Term Care）的临床定位与照护需求。 • 系统掌握吸纳支持工作者（PSW / HCA）从业执业的各类主要社区场景与各类机构场所的组织架构与服务功能。 • 深刻洞察并明确列举在以下四类核心工作场景中从业所面临的独特执业优势（Benefits）与挑战考验（Challenges）：社区居家照护、长期照护养老机构、急性综合医院、以及直接受雇于案主本人的私人照护。 • 确立符合个人职业发展期望与性格特质的从业价值观，为明智抉择未来长远的执业发展环境奠定坚实认知基础。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Objectives</h3>
+                  <div class="heading-cn">学习目标</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="0.0" data-end="34.2" data-title="Objectives" onclick="playParagraphAudio(this)">
+                          <p class="para-en">After reading this chapter, the learner should be able to do the following: • Differentiate between community-based care and facility-based care. • Differentiate among acute care, subacute care, and long-term care. • Describe the different community-based and facility-based settings where support workers are employed. • Identify the challenges and benefits associated with working in each of the following settings: community, long-term care, acute care, and working directly for a client. • Identify what is important to you when deciding on an employment setting. <br><br></p>
+                          <p class="para-cn">完成本章研读后，学习者应当能够达成以下核心专业能力考核目标： • 准确鉴别与区分“社区型照护”（Community-Based Care）与“机构型照护”（Facility-Based Care）的本质差异与服务模式。 • 深入理解并辨析“急性照护”（Acute Care）、“亚急性/过渡照护”（Subacute Care）以及“长期照护”（Long-Term Care）的临床定位与照护需求。 • 系统掌握吸纳支持工作者（PSW / HCA）从业执业的各类主要社区场景与各类机构场所的组织架构与服务功能。 • 深刻洞察并明确列举在以下四类核心工作场景中从业所面临的独特执业优势（Benefits）与挑战考验（Challenges）：社区居家照护、长期照护养老机构、急性综合医院、以及直接受雇于案主本人的私人照护。 • 确立符合个人职业发展期望与性格特质的从业价值观，为明智抉择未来长远的执业发展环境奠定坚实认知基础。 <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-35">
                           <span class="marker-pill">Page 35</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-02">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 02 · 章节核心大节</span>
-                    <h2 class="section-title-en">Chapter 3 Key Terms</h2><div class="section-title-cn">核心专业术语表</div>
-                  </div>
-                </section>
+                <div class="editorial-heading-major" id="sec-02">
+                  <h2 class="heading-en">Chapter 3 Key Terms</h2>
+                  <div class="heading-cn">核心专业术语表</div>
+                </div>
                 
-            <div class="key-terms-section">
-              <div class="kt-section-header">
-                <h3 class="kt-title">KEY TERMS · 第 3 章核心专业术语速查表</h3>
-                <p class="kt-subtitle">点击词条卡片可随时在学习中作为精准法学与医学辞书对照回顾</p>
+            <div class="key-terms-master-container" id="kt-container-ch3">
+              <div class="kt-toolbar">
+                <div class="kt-toolbar-left">
+                  <h3 class="kt-title">Key Terms · 第 3 章核心专业术语表（全 22 词速查）</h3>
+                </div>
+                <div class="kt-toolbar-right">
+                  <div class="kt-mode-toggle">
+                    <button class="kt-toggle-btn active" data-mode="table" onclick="setGlossaryMode('ch3', 'table')">速查词表</button>
+                    <button class="kt-toggle-btn" data-mode="cards" onclick="setGlossaryMode('ch3', 'cards')">精研卡片</button>
+                  </div>
+                  <div class="kt-search-box">
+                    <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch3', this.value)">
+                  </div>
+                </div>
               </div>
-              <div class="terms-editorial-grid">
-            
+
+              <!-- Mode 1: Compact Table -->
+              <div class="kt-view-table active" id="kt-table-view-ch3">
+                <div class="table-wrap">
+                  <table class="kt-compact-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 28%;">英文术语 / 国际音标</th>
+                        <th style="width: 22%;">中文对照</th>
+                        <th style="width: 50%;">教材标准学术释义与临床界定</th>
+                      </tr>
+                    </thead>
+                    <tbody id="kt-table-body-ch3">
+                      
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>acute care</strong></strong>
+                    <span class="kt-ipa">/əˈkjuːt kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">急性医疗照护</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">为在相对较短的时间跨度内（通常数天至数周）所提供的医疗卫生服务，旨在紧急诊断、抢救并积极治疗突发的急危重症或急性健康创伤。 (p. 36)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>acute illness</strong></strong>
+                    <span class="kt-ipa">/əˈkjuːt ˈɪlnəs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">急性疾病 / 急危重症</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">突发且通常较为凶险的疾病过程，患者往往能迅速康复，或在短期内急剧恶化乃至致命。 (p. 36)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>adult day program</strong></strong>
+                    <span class="kt-ipa">/ˈædʌlt deɪ ˈproʊɡræm/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">成人日托康乐计划</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">在日间为居住在家庭中的长者或残障人士提供专业监护、社交康乐文娱活动、营养午餐及基础身心支持的日间社区照护中心（亦称成人日间活动中心）。 (p. 37)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>assisted-living facility</strong></strong>
+                    <span class="kt-ipa">/əˈsɪstɪd ˈlɪvɪŋ fəˈsɪləti/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">辅助生活照护居所</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">一种专为在穿衣、沐浴、服药等日常生活自理（ADLs）上需要特定生活协助，但尚未虚弱到需要 24 小时密集临床特级护理的群体所设立的居所型机构。 (p. 39)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>chronic illness</strong></strong>
+                    <span class="kt-ipa">/ˈkrɒnɪk ˈɪlnəs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">慢性疾病 (持续性疾病)</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">病程漫长、发展缓慢且往往伴随终生无法彻底治愈的器质性进行性疾病，需长期依靠药物与康复支持维持稳定（亦称 Persistent Illness）。 (p. 36)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>community-based facility</strong></strong>
+                    <span class="kt-ipa">/kəˈmjuːnəti beɪst fəˈsɪləti/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">社区型居住照护机构</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">坐落在普通社区居民区内的小型居住型机构，既提供半独立生活支持，又便利案主随时融入并利用周边社区公共资源。 (p. 36)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>community day program</strong></strong>
+                    <span class="kt-ipa">/kəˈmjuːnəti deɪ ˈproʊɡræm/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">社区日间活动项目</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">参见成人日托康乐计划（Adult day program）。为需要白天看护的长者提供益智游戏、手工社交与喘息看护的社区项目。 (p. 37)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>complex continuing care</strong></strong>
+                    <span class="kt-ipa">/ˈkɒmplɛks kənˈtɪnjuːɪŋ kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">复杂延续性特级照护</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">针对病情复杂多变、高度依赖专业医疗技术设备（如长期呼吸机支持、复杂静脉通路或重度压疮伤口）的慢病重症案主所提供的院内全天候综合医疗照护。 (p. 44)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>convalescent care</strong></strong>
+                    <span class="kt-ipa">/ˌkɒnvəˈlɛsnt kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">恢复期病后康复照护</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">为刚度过急性危重期但体质尚未完全康复的病患所提供的短中期康复医疗与体能恢复性照护，旨在协助其平稳过渡重返居家。 (p. 44)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>facility-based care</strong></strong>
+                    <span class="kt-ipa">/fəˈsɪləti beɪst kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">机构型集中照护</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">在特定的集中式医疗或养老机构设施（如医院、护理院、养老院、康复中心）内部所提供的全方位食宿、生活照料与临床医疗照护。 (p. 36)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>group home</strong></strong>
+                    <span class="kt-ipa">/ɡruːp hoʊm/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">小型集体家庭公寓</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">坐落在普通居民社区内、由 3 至 10 名具有心理智力发育障碍或身体严重残障的特殊人士共同合住的小型生活居所，配备全职支持人员协同起居。 (p. 40)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>hospice</strong></strong>
+                    <span class="kt-ipa">/ˈhɒspɪs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">临终安宁关怀院</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">专门为处于不可逆进行性绝症生命末期（预估生存期有限）的垂危病患及其整个家庭提供免除病痛折磨、捍卫身心尊严的专业舒缓疗护专科机构。 (p. 44)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>inpatient care</strong></strong>
+                    <span class="kt-ipa">/ˈɪnˌpeɪʃnt kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">住院照护服务</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">需要正式办理入院手续、留宿并占用医院病床过夜至少 24 小时及以上所接受的全程诊断治疗与监护服务。 (p. 43)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>long-term care facility</strong></strong>
+                    <span class="kt-ipa">/ˈlɔːŋ tɜːrm kɛər fəˈsɪləti/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">长期照护院舍 / 养老院</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">专为因高龄衰弱、慢性重疾或严重认知障碍而完全丧失独立居家生活能力的案主所设立的 24 小时全天候特级护理养老机构（亦称护理院 Nursing Home）。 (p. 41)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>outpatient care</strong></strong>
+                    <span class="kt-ipa">/ˈaʊtˌpeɪʃnt kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">门诊日间医疗服务</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">病患在医院或专业专科诊所接受检查、诊断、微创处置或日间手术后，当天即可直接回家休养、无需在医院过夜的医疗服务形态。 (p. 43)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>palliative care</strong></strong>
+                    <span class="kt-ipa">/ˈpæliətɪv kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">姑息舒缓治疗 / 缓和医疗</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">一种以最大程度缓解晚期重疾痛苦、控制恶性症状、提升临终生命尊严与生活质量为终极导向的综合医疗关怀哲学（亦称安宁疗护）。 (p. 44)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>persistent illness</strong></strong>
+                    <span class="kt-ipa">/pərˈzɪstənt ˈɪlnəs/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">持续性慢病</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">参见慢性疾病（Chronic illness）。 (p. 36)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>residential care facility</strong></strong>
+                    <span class="kt-ipa">/ˌrɛzɪˈdɛnʃl kɛər fəˈsɪləti/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">居住型照护机构</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">参见长期照护院舍（Long-term care facility）。各省对长期居住照护养老机构的正式法律称谓之一。 (p. 41)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>respite care</strong></strong>
+                    <span class="kt-ipa">/ˈrɛspɪt kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">喘息照护 / 临时替班解脱服务</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">专为长期在家庭中无微不至照料病患但已身心俱疲的“家庭非正式照料者”（如配偶、成年子女）所提供的短暂停顿、身心休整与替班照护服务。 (p. 38)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>retirement home</strong></strong>
+                    <span class="kt-ipa">/rɪˈtaɪərmənt hoʊm/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">退休自理活力公寓</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">专为身体健康、自理能力较强但渴望免除买菜做饭等繁琐家务琐事的退休活力长者所设立的高品质私立居住社区，不提供强制 24 小时密集临床特护。 (p. 39)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>subacute care</strong></strong>
+                    <span class="kt-ipa">/ˌsʌbəˈkjuːt kɛər/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">亚急性过渡期医疗照护</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">针对度过急性期但病情仍复杂脆弱、需要比传统养老院更密集专业医疗康复支持的病患所设立的过渡性照护，旨在助其彻底复原或稳定慢病。 (p. 44)</div>
+                  </td>
+                </tr>
+                
+                <tr class="kt-table-row kt-folded-row" style="display:none;">
+                  <td class="kt-cell-term">
+                    <strong class="kt-word"><strong>supportive housing</strong></strong>
+                    <span class="kt-ipa">/səˈpɔːrtɪv ˈhaʊzɪŋ/</span>
+                  </td>
+                  <td class="kt-cell-cn">
+                    <span class="etc-cn-tag">支持型保障性住房公寓</span>
+                  </td>
+                  <td class="kt-cell-def">
+                    <div class="kt-def-cn">将专属适老化无障碍居住公寓单元与现场常驻的支持照护工时紧密捆绑结合的社区住房模式，赋能脆弱长者或残疾青年安居社区。 (p. 38)</div>
+                  </td>
+                </tr>
+                
+                    </tbody>
+                  </table>
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-table-ch3">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch3', 'table')">
+                    展开全部 22 个专业术语 ▼
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mode 2: Cards Deck -->
+              <div class="kt-view-cards" id="kt-cards-view-ch3" style="display:none;">
+                <div class="terms-editorial-grid" id="kt-cards-grid-ch3">
+                  
                 <div class="editorial-term-card">
                   <div class="etc-header">
                     <div class="etc-en-block">
@@ -1045,7 +1269,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>community day program</strong></strong>
@@ -1058,7 +1282,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>complex continuing care</strong></strong>
@@ -1071,7 +1295,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>convalescent care</strong></strong>
@@ -1084,7 +1308,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>facility-based care</strong></strong>
@@ -1097,7 +1321,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>group home</strong></strong>
@@ -1110,7 +1334,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>hospice</strong></strong>
@@ -1123,7 +1347,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>inpatient care</strong></strong>
@@ -1136,7 +1360,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>long-term care facility</strong></strong>
@@ -1149,7 +1373,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>outpatient care</strong></strong>
@@ -1162,7 +1386,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>palliative care</strong></strong>
@@ -1175,7 +1399,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>persistent illness</strong></strong>
@@ -1188,7 +1412,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>residential care facility</strong></strong>
@@ -1201,7 +1425,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>respite care</strong></strong>
@@ -1214,7 +1438,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>retirement home</strong></strong>
@@ -1227,7 +1451,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>subacute care</strong></strong>
@@ -1240,7 +1464,7 @@
                   </div>
                 </div>
                 
-                <div class="editorial-term-card">
+                <div class="editorial-term-card kt-folded-card" style="display:none;">
                   <div class="etc-header">
                     <div class="etc-en-block">
                       <strong class="etc-word"><strong>supportive housing</strong></strong>
@@ -1252,45 +1476,53 @@
                     <div class="etc-def-cn">将专属适老化无障碍居住公寓单元与现场常驻的支持照护工时紧密捆绑结合的社区住房模式，赋能脆弱长者或残疾青年安居社区。 (p. 38)</div>
                   </div>
                 </div>
-                </div></div>
-<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                </div>
+                <div class="kt-expand-bar" id="kt-expand-bar-cards-ch3">
+                  <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch3', 'cards')">
+                    展开全部 22 张精研术语卡片 ▼
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-36">
                           <span class="marker-pill">Pages 36 - 37</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-03">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 03 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第一节：两大执业阵地全景与原住民社区执业</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 3.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Community-Based vs Facility-Based Settings</h3><div class="subtopic-title-cn">社区型照护与机构型照护的本质分野</div>
+                <div class="editorial-heading-major" id="sec-03">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第一节：两大执业阵地全景与原住民社区执业</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="34.2" data-end="91.32" data-title="Community-Based vs Facility-Based Settings" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en"><strong>WORKPLACE SETTINGS AND SERVICES PROVIDED</strong> <br><br>This chapter describes common community-based and facility-based workplace settings for support workers. It also explores benefits and challenges you will encounter as a support worker in each of these work settings. <br><br>Support workers are employed in a variety of work settings. Some work in community settings, where services are provided to clients within the community, such as private homes, group homes, and adult day programs. Others work in facilities, where clients live and receive health care services, such as hospitals, long-term care facilities, and assisted-living facilities. <br><br>The nature of the support worker's role depends largely on the workplace setting. In some settings, support workers focus primarily on personal care and assisting with activities of daily living (ADLs). In other settings, they assist with household management, child care, or recreational activities. <br><br></p>
-                      <p class="para-cn"><strong>支持工作者两大执业阵地与服务全景</strong> <br><br>本章系统解析支持工作者（PSW / HCA）所面临的两大最核心工作阵地：<strong>“社区型执业环境”（Community-Based Settings）</strong>与<strong>“机构型执业环境”（Facility-Based Settings）</strong>，并深刻剖析在不同执业场景中从业所收获的独特职业成长红利以及必须攻坚化解的执业挑战。 <br><br>支持工作者广泛活跃在纷繁多样的临床一线。一部分从业人员扎根于<strong>社区环境（Community Settings）</strong>之中，直接在案主日常生活的真实空间中提供上门照护，涵盖案主的私人住宅（Private Homes）、小型集体家庭公寓（Group Homes）、以及成人日间康乐中心（Adult Day Programs）。另一部分从业人员则深耕于<strong>集中式机构设施（Facility Settings）</strong>之内，在案主常住并接受密集医疗照护的专业机构中执业，涵盖各级综合医院（Hospitals）、长期照护院舍（Long-Term Care Facilities / 养老院）、以及辅助生活照护居所（Assisted-Living Facilities）。 <br><br>支持工作者的具体职责范畴，在极大程度上直接取决于其所身处的具体工作场所。在某些特定岗位上，支持工作者的全副精力高度聚焦于案主的个人生理照护（Personal Care）与协助基础日常生活活动（ADLs，如沐浴、排泄、换衣、进食与翻身移动）；而在另一些岗位环境中，他们则侧重于协助家居环境管理（轻度家务整理与烹饪）、抚育照料婴幼儿、或策划并带领长者开展有益身心的社交文娱康乐活动。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Community-Based vs Facility-Based Settings</h3>
+                  <div class="heading-cn">社区型照护与机构型照护的本质分野</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="34.2" data-end="91.32" data-title="Community-Based vs Facility-Based Settings" onclick="playParagraphAudio(this)">
+                          <p class="para-en"><strong>WORKPLACE SETTINGS AND SERVICES PROVIDED</strong> <br><br>This chapter describes common community-based and facility-based workplace settings for support workers. It also explores benefits and challenges you will encounter as a support worker in each of these work settings. <br><br>Support workers are employed in a variety of work settings. Some work in community settings, where services are provided to clients within the community, such as private homes, group homes, and adult day programs.</p>
+                          <p class="para-cn"><strong>支持工作者两大执业阵地与服务全景</strong> <br><br>本章系统解析支持工作者（PSW / HCA）所面临的两大最核心工作阵地：<strong>“社区型执业环境”（Community-Based Settings）</strong>与<strong>“机构型执业环境”（Facility-Based Settings）</strong>，并深刻剖析在不同执业场景中从业所收获的独特职业成长红利以及必须攻坚化解的执业挑战。<br><br>支持工作者广泛活跃在纷繁多样的临床一线。一部分从业人员扎根于<strong>社区环境（Community Settings）</strong>之中，直接在案主日常生活的真实空间中提供上门照护，涵盖案主的私人住宅（Private Homes）、小型集体家庭公寓（Group Homes）、以及成人日间康乐中心（Adult Day Programs）。另一部分从业人员则深耕于<strong>集中式机构设施（Facility Settings）</strong>之内，在案主常住并接受密集医疗照护的专业机构中执业，涵盖各级综合医院（Hospitals）、长期照护院舍（Long-Term Care Facilities / 养老院）、以及辅助生活照护居所（Assisted-Living Facilities）。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="34.2" data-end="91.32" data-title="Community-Based vs Facility-Based Settings" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Others work in facilities, where clients live and receive health care services, such as hospitals, long-term care facilities, and assisted-living facilities. <br><br>The nature of the support worker's role depends largely on the workplace setting. In some settings, support workers focus primarily on personal care and assisting with activities of daily living (ADLs). In other settings, they assist with household management, child care, or recreational activities. <br><br></p>
+                          <p class="para-cn"><br><br>支持工作者的具体职责范畴，在极大程度上直接取决于其所身处的具体工作场所。在某些特定岗位上，支持工作者的全副精力高度聚焦于案主的个人生理照护（Personal Care）与协助基础日常生活活动（ADLs，如沐浴、排泄、换衣、进食与翻身移动）；而在另一些岗位环境中，他们则侧重于协助家居环境管理（轻度家务整理与烹饪）、抚育照料婴幼儿、或策划并带领长者开展有益身心的社交文娱康乐活动。<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 3.2 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Working in Indigenous Communities</h3><div class="subtopic-title-cn">原住民社区支持工作者的神圣使命</div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Working in Indigenous Communities</h3>
+                  <div class="heading-cn">原住民社区支持工作者的神圣使命</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="91.32" data-end="123.65" data-title="Working in Indigenous Communities" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">In some provinces and territories, support workers may be employed by a First Nation (self-governing or otherwise) to provide care to their Indigenous clients. The job descriptions for support workers may vary between employers. Some employers expect support workers to perform only personal care, while others expect them to perform a variety of tasks, including housekeeping and running errands. <br><br>No matter where you work, you must always be aware of your scope of practice and the policies and procedures of your employer. <br><br></p>
-                      <p class="para-cn">在加拿大许多省份与北部地区，支持工作者亦受雇于具有高度自治权的第一民族自治政府（First Nations Governments）或部族医疗机构，专门为保留地内的原住民长者与患病同胞提供具有高度文化安全感（Cultural Safety）的居家照护与生活支持。各个雇主所制定的岗位工作说明书（Job Description）可能存在显著差异：部分雇主严格限制支持工作者仅能执行贴身的个人生理照料（Personal Care）；而另一些雇主则要求 PSW 展现复合多面手技能，统筹承担包括居室清洁卫生、采买杂货、跑腿办事在内的全方位家庭生活支持。 <br><br>但无论你受雇于何种性质的机构、身处何方执业，你必须时刻保持崇高的法律与专业警惕：<strong>时刻牢牢坚守本省支持工作者的法定执业范围（Scope of Practice），无条件严谨恪守雇主机构制定的各项书面规章制度与标准操作规程（SOP）！</strong> <br><br></p>
-                    </article>
-                    
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="91.32" data-end="123.65" data-title="Working in Indigenous Communities" onclick="playParagraphAudio(this)">
+                          <p class="para-en">In some provinces and territories, support workers may be employed by a First Nation (self-governing or otherwise) to provide care to their Indigenous clients. The job descriptions for support workers may vary between employers. Some employers expect support workers to perform only personal care, while others expect them to perform a variety of tasks, including housekeeping and running errands. <br><br>No matter where you work, you must always be aware of your scope of practice and the policies and procedures of your employer. <br><br></p>
+                          <p class="para-cn">在加拿大许多省份与北部地区，支持工作者亦受雇于具有高度自治权的第一民族自治政府（First Nations Governments）或部族医疗机构，专门为保留地内的原住民长者与患病同胞提供具有高度文化安全感（Cultural Safety）的居家照护与生活支持。各个雇主所制定的岗位工作说明书（Job Description）可能存在显著差异：部分雇主严格限制支持工作者仅能执行贴身的个人生理照料（Personal Care）；而另一些雇主则要求 PSW 展现复合多面手技能，统筹承担包括居室清洁卫生、采买杂货、跑腿办事在内的全方位家庭生活支持。 <br><br>但无论你受雇于何种性质的机构、身处何方执业，你必须时刻保持崇高的法律与专业警惕：<strong>时刻牢牢坚守本省支持工作者的法定执业范围（Scope of Practice），无条件严谨恪守雇主机构制定的各项书面规章制度与标准操作规程（SOP）！</strong> <br><br></p>
+                        </article>
+                        
                 <figure class="editorial-figure">
-                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
                   <img src="images/chapter_03/fig_3_1_community_living_room.png" alt="Figure 3.1 Client's Living Room in Community" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
                   <figcaption class="ef-caption-en"><strong>图 3.1 教学图示：社区居家照护案主的温馨家庭客厅环境</strong><br>*FIGURE 3.1: A client's living room in a community-based setting. Support workers sometimes provide care in personal home environments. (Sorrentino, S. A., & Remmert, L. [2012]. Mosby's textbook for nursing assistants [8th ed.]. Mosby.)*<br>【教学意图】：呈现社区居家支持工作者在案主充满个人生活痕迹与家庭记忆的私人居室中开展工作的典型环境。</figcaption>
                 </figure>
@@ -1300,628 +1532,177 @@
                           <span class="marker-pill">Pages 37 - 38</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-04">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 04 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第二节：社区场景深度拆解：居家支持、成人日托与支持型住房</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 4.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Home Care & Family Support</h3><div class="subtopic-title-cn">社区居家照护与家庭支持</div>
+                <div class="editorial-heading-major" id="sec-04">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第二节：社区场景深度拆解：居家支持、成人日托与支持型住房</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="123.65" data-end="163.75" data-title="Home Care & Family Support" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en"><strong>WORKING IN COMMUNITY-BASED SETTINGS</strong> <br><br>Working in the community involves providing care in clients' private homes or in community-based facilities. Support workers who work in clients' homes provide a variety of services, including personal care, home support services (FIGURE 3.2), ADLs, child care, transportation, and companionship. <br><br>The client's home is their personal territory. You are a guest in their home, and you must respect their personal belongings, routines, and family culture. Support workers help clients remain as independent as possible in their homes, preventing or postponing the need for facility placement. <br><br></p>
-                      <p class="para-cn"><strong>深耕社区型执业环境</strong> <br><br>在社区中开展照护工作，意味着深入到千家万户的私人住宅之中，或在坐落于居民区的小型社区机构中提供支持。登门服务的一线支持工作者承担着极为丰富多元的支持职责，包括：个人身体照护、家庭生活支持服务（参见图 3.2）、协助基础日常生活活动（ADLs）、看护婴幼儿、护送陪同外出就医以及提供心理倾听与精神陪伴。 <br><br>案主的家是其绝对私密的神圣领地。作为上门照料人员，你必须清醒摆正自己的位置：<strong>你是踏入他人私人居所的一位专业“客人”！</strong>你必须对案主的私人物品、家庭生活起居作息习惯、宗教文化传统予以至高无上的尊重。支持工作者的一言一行，均旨在竭尽全力激发案主的残存自理潜能，协助其长久、安全、体面地留居家中，阻断或大幅推迟其被迫过早入住冰冷养老机构的进程。 <br><br></p>
-                    </article>
-                    
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Home Care & Family Support</h3>
+                  <div class="heading-cn">社区居家照护与家庭支持</div>
+                </div>
+                
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="123.65" data-end="163.75" data-title="Home Care & Family Support" onclick="playParagraphAudio(this)">
+                          <p class="para-en"><strong>WORKING IN COMMUNITY-BASED SETTINGS</strong> <br><br>Working in the community involves providing care in clients' private homes or in community-based facilities. Support workers who work in clients' homes provide a variety of services, including personal care, home support services (FIGURE 3.2), ADLs, child care, transportation, and companionship. <br><br>The client's home is their personal territory.</p>
+                          <p class="para-cn"><strong>深耕社区型执业环境</strong> <br><br>在社区中开展照护工作，意味着深入到千家万户的私人住宅之中，或在坐落于居民区的小型社区机构中提供支持。登门服务的一线支持工作者承担着极为丰富多元的支持职责，包括：个人身体照护、家庭生活支持服务（参见图 3.2）、协助基础日常生活活动（ADLs）、看护婴幼儿、护送陪同外出就医以及提供心理倾听与精神陪伴。<br><br>案主的家是其绝对私密的神圣领地。作为上门照料人员，你必须清醒摆正自己的位置：<strong>你是踏入他人私人居所的一位专业“客人”！</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="123.65" data-end="163.75" data-title="Home Care & Family Support" onclick="playParagraphAudio(this)">
+                          <p class="para-en">You are a guest in their home, and you must respect their personal belongings, routines, and family culture. Support workers help clients remain as independent as possible in their homes, preventing or postponing the need for facility placement. <br><br></p>
+                          <p class="para-cn"></strong>你必须对案主的私人物品、家庭生活起居作息习惯、宗教文化传统予以至高无上的尊重。支持工作者的一言一行，均旨在竭尽全力激发案主的残存自理潜能，协助其长久、安全、体面地留居家中，阻断或大幅推迟其被迫过早入住冰冷养老机构的进程。<br><br></p>
+                        </article>
+                        
                 <figure class="editorial-figure">
-                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
                   <img src="images/chapter_03/fig_3_2_home_support_groceries.png" alt="Figure 3.2 Support Worker Assisting with Groceries" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
                   <figcaption class="ef-caption-en"><strong>图 3.2 教学图示：支持工作者正在协助居家案主整理食品杂货</strong><br>*FIGURE 3.2: With the assistance of support workers, many clients are able to continue living in their own homes. (iStockphoto/monkeybusinessimages.)*<br>【教学意图】：生动展现居家支持工作者不仅提供生理擦洗，更在日常食品采购与家务管理中给予关键支撑，守护长者居家自立。</figcaption>
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 4.2 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Adult Day Programs & Supportive Housing</h3><div class="subtopic-title-cn">成人日间康乐计划与支持型保障公寓</div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Adult Day Programs & Supportive Housing</h3>
+                  <div class="heading-cn">成人日间康乐计划与支持型保障公寓</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="163.75" data-end="244.68" data-title="Adult Day Programs & Supportive Housing" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">• <strong>Adult Day Programs:</strong> Adult day programs (also known as adult day-care centres) provide supervised group activities, personal care, recreation, and meals for older persons and adults with physical or mental disabilities who live in the community. These programs provide an opportunity for social interaction and activities that help clients maintain physical and cognitive functioning. They also provide respite care for primary caregivers, giving them a needed break from their caregiving responsibilities. <br><br>• <strong>Supportive Housing and Assisted-Living Facilities:</strong> Supportive housing facilities (also called assisted-living facilities) provide housing and support services to people who need some assistance with daily activities but do not need 24-hour nursing care. Residents live in their own apartments or suites within a larger building or complex. Services often include meals in a central dining room, housekeeping, laundry, recreation, 24-hour emergency response, and assistance with ADLs. <br><br>• <strong>Respite Services:</strong> Respite services provide temporary relief to primary caregivers who care for family members with chronic illnesses, disabilities, or terminal conditions. Respite can be provided in the client's home, in an adult day program, or through a temporary stay in a facility. Respite care prevents caregiver burnout and helps families keep loved ones at home longer. <br><br></p>
-                      <p class="para-cn">• <strong>成人日间康乐计划（Adult Day Programs）</strong>：成人日托中心专为居住在家庭中的高龄长者、以及身患身体肢体残疾或智力心理障碍的成年人，提供具有专业监护的群体文娱活动、个人照料、营养膳食与康乐活动。该项目为长者搭建了走出封闭家庭、融入群体社交互动的平台，有效延缓其身体活动机能与脑力认知功能的退化；与此同时，<strong>它为常年承担繁重照料压力的家庭照料者（Primary Caregivers）提供了宝贵至极的“喘息照护”（Respite Care）</strong>，让疲惫不堪的儿女或配偶得以暂时卸下重担、获得身心疗愈。 <br><br>• <strong>支持型保障性住房与辅助生活公寓（Supportive Housing / Assisted Living）</strong>：支持型公寓专为那些在日常生活自理上需要适度协助、但<strong>身体状况尚未虚弱到需要 24 小时全天候专业护士临床特级护理</strong>的人群量身定制。案主居住在大型综合住宅园区内拥有独立门牌号的私人套房公寓中。园区统一提供中央餐厅高品质一日三餐、公共保洁打扫、集中洗衣、文体娱乐、24 小时紧急红外呼叫拉绳响应、以及由常驻支持工作者按需登门提供的 ADLs 起居协助。 <br><br>• <strong>喘息解脱照护服务（Respite Services）</strong>：专为长期在家庭中无微不至照料重度慢病、严重残疾或绝症亲属的非正式家庭照料者（如衰竭的配偶、全职照料的子女）提供短期的卸压救济。喘息照护形式灵活：既可派遣 PSW 上门替班数小时，亦可将长者送往日间中心，甚至可安排长者在长期照护养老院短暂办理短期寄宿托管入住（如一至两周），让家属得以安心就医、外出度假或安睡休养。喘息照护是<strong>挽救家庭照料者免于彻底心理崩溃（Caregiver Burnout）</strong>的关键社会防线。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="163.75" data-end="244.68" data-title="Adult Day Programs & Supportive Housing" onclick="playParagraphAudio(this)">
+                          <p class="para-en">• <strong>Adult Day Programs:</strong> Adult day programs (also known as adult day-care centres) provide supervised group activities, personal care, recreation, and meals for older persons and adults with physical or mental disabilities who live in the community. These programs provide an opportunity for social interaction and activities that help clients maintain physical and cognitive functioning.</p>
+                          <p class="para-cn">• <strong>成人日间康乐计划（Adult Day Programs）</strong>：成人日托中心专为居住在家庭中的高龄长者、以及身患身体肢体残疾或智力心理障碍的成年人，提供具有专业监护的群体文娱活动、个人照料、营养膳食与康乐活动。该项目为长者搭建了走出封闭家庭、融入群体社交互动的平台，有效延缓其身体活动机能与脑力认知功能的退化；与此同时，<strong>它为常年承担繁重照料压力的家庭照料者（Primary Caregivers）提供了宝贵至极的“喘息照护”（Respite Care）</strong>，让疲惫不堪的儿女或配偶得以暂时卸下重担、获得身心疗愈。<br><br>• <strong>支持型保障性住房与辅助生活公寓（Supportive Housing / Assisted Living）</strong>：支持型公寓专为那些在日常生活自理上需要适度协助、但<strong>身体状况尚未虚弱到需要 24 小时全天候专业护士临床特级护理</strong>的人群量身定制。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="163.75" data-end="244.68" data-title="Adult Day Programs & Supportive Housing" onclick="playParagraphAudio(this)">
+                          <p class="para-en">They also provide respite care for primary caregivers, giving them a needed break from their caregiving responsibilities. <br><br>• <strong>Supportive Housing and Assisted-Living Facilities:</strong> Supportive housing facilities (also called assisted-living facilities) provide housing and support services to people who need some assistance with daily activities but do not need 24-hour nursing care. Residents live in their own apartments or suites within a larger building or complex.</p>
+                          <p class="para-cn">案主居住在大型综合住宅园区内拥有独立门牌号的私人套房公寓中。园区统一提供中央餐厅高品质一日三餐、公共保洁打扫、集中洗衣、文体娱乐、24 小时紧急红外呼叫拉绳响应、以及由常驻支持工作者按需登门提供的 ADLs 起居协助。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="163.75" data-end="244.68" data-title="Adult Day Programs & Supportive Housing" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Services often include meals in a central dining room, housekeeping, laundry, recreation, 24-hour emergency response, and assistance with ADLs. <br><br>• <strong>Respite Services:</strong> Respite services provide temporary relief to primary caregivers who care for family members with chronic illnesses, disabilities, or terminal conditions. Respite can be provided in the client's home, in an adult day program, or through a temporary stay in a facility. Respite care prevents caregiver burnout and helps families keep loved ones at home longer. <br><br></p>
+                          <p class="para-cn"><br><br>• <strong>喘息解脱照护服务（Respite Services）</strong>：专为长期在家庭中无微不至照料重度慢病、严重残疾或绝症亲属的非正式家庭照料者（如衰竭的配偶、全职照料的子女）提供短期的卸压救济。喘息照护形式灵活：既可派遣 PSW 上门替班数小时，亦可将长者送往日间中心，甚至可安排长者在长期照护养老院短暂办理短期寄宿托管入住（如一至两周），让家属得以安心就医、外出度假或安睡休养。喘息照护是<strong>挽救家庭照料者免于彻底心理崩溃（Caregiver Burnout）</strong>的关键社会防线。<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                         <div class="page-anchor-marker" id="page-39">
                           <span class="marker-pill">Pages 39 - 45</span>
                         </div>
                         
-                <section class="editorial-major-section" id="sec-05">
-                  <div class="section-banner-head">
-                    <span class="section-badge">SECTION 05 · 章节核心大节</span>
-                    <h2 class="section-title-universal">第三节：四大工作环境利弊大起底与从业抉择</h2>
-                  </div>
-                </section>
-                
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-terracotta">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 3.1 居家照护执业的优势与挑战对比 (Benefits and Challenges of Working in Home Care)</h4>
-                    </div>
-                  </aside>
+                <div class="editorial-heading-major" id="sec-05">
+                  <h2 class="heading-en"></h2>
+                  <div class="heading-cn">第三节：四大工作环境利弊大起底与从业抉择</div>
                 </div>
                 
                 <aside class="editorial-box-container box-theme-terracotta">
                   <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
-                    </div>
-                    <h4 class="box-title-en">BOX 3.1: Benefits and Challenges Associated With Working in Home Care</h4>
-                    <div class="box-title-cn">BOX 3.1 实战分析专栏：投身社区居家照护（Home Care）的职业优势与严峻挑战</div>
+                    <h4 class="box-title-en">Benefits and Challenges of Working in Home Care</h4>
+                    <div class="box-title-cn">BOX 3.1 居家照护执业的优势与挑战对比</div>
                   </div>
                   <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en"><strong>BOX 3.1: Benefits and Challenges Associated With Working in Home Care</strong> <br><br><strong>Benefits:</strong> • Working independently: You work on your own and make independent decisions within your scope of practice. • Developing close, one-on-one relationships: You provide care to one client at a time and can develop a meaningful relationship. • Variety of clients and settings: Every client and every home is unique, providing a stimulating work environment. • Flexible schedules: Shifts may accommodate personal preferences and lifestyle needs. <br><br><strong>Challenges:</strong> • Working alone: You do not have immediate on-site colleagues or supervisors to assist with emergencies or difficult transfers. • Uncontrolled environment: The home environment may be cluttered, poorly lit, or lack proper assistive equipment. • Travel: Traveling between appointments in varying weather conditions and traffic can be stressful and unpaid in some agencies. • Maintaining professional boundaries: Working in private personal spaces can blur boundaries with clients and families. <br><br></div>
-                      <div class="clause-cn"><strong>BOX 3.1 实战分析专栏：投身社区居家照护（Home Care）的职业优势与严峻挑战</strong> <br><br><strong>显著职业红利与优势（Benefits）：</strong> • <strong>高度独立自主的执业空间</strong>：在法定执业范围内，你可以自主规划一天的照护节奏，独立作出合规决策，无需时时刻刻忍受上级管理者的直接贴身监视。 • <strong>一对一深度温情联结</strong>：每次上门全心全意服务一名案主，拥有充沛时间付出同理共情，与长者及其家庭建立起极其深厚、互信、触动心灵的人文照护关系。 • <strong>环境与案例生动多元</strong>：每位案主的人生阅历、每个家庭的文化背景与居住格局皆独一无二，彻底摆脱在封闭病房重复机械操作的枯燥乏味。 • <strong>工时排班相对灵活机动</strong>：许多居家机构提供多时段弹性派单，能较好地兼顾员工个人的家庭生活、育儿或进修需求。 <br><br><strong>必须清醒应对的严峻挑战（Challenges）：</strong> • <strong>独当一面的孤军奋战</strong>：遇到突发意外、案主突发晕厥呼吸骤停、或遇到无法独自搬动的超重卧床长者时，<strong>身边没有任何同事或护士可即刻伸手支援</strong>，必须依靠敏锐直觉第一时间拨打 911 并电话汇报上级！ • <strong>居家物理环境不可控</strong>：案主家中可能空间狭窄杂乱、光线昏暗、缺少符合人体工程学的医用电动升降床或天轨移位机，大幅增加了腰背劳损拉伤的风险。 • <strong>跨区域奔波通勤折损</strong>：全天频繁往返于不同街区，在加拿大漫长严寒的暴风雪冰冻恶劣天气与拥堵路况中穿梭驾驶，部分机构甚至不予报销在途通勤工时。 • <strong>职业界限极易模糊失守</strong>：长期在私人家庭的亲密氛围中工作，容易让案主误将你视作私密密友，诱发违规索要借款、馈赠礼品或打听个人隐私的伦理陷阱。 <br><br></div>
-                    </div>
-                  </div>
-                </aside>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                <div class="box-clause-item">
+                  <div class="clause-en"><strong>BOX 3.1: Benefits and Challenges Associated With Working in Home Care</strong> <br><br><strong>Benefits:</strong> • Working independently: You work on your own and make independent decisions within your scope of practice. • Developing close, one-on-one relationships: You provide care to one client at a time and can develop a meaningful relationship. • Variety of clients and settings: Every client and every home is unique, providing a stimulating work environment. • Flexible schedules: Shifts may accommodate personal preferences and lifestyle needs. <br><br><strong>Challenges:</strong> • Working alone: You do not have immediate on-site colleagues or supervisors to assist with emergencies or difficult transfers. • Uncontrolled environment: The home environment may be cluttered, poorly lit, or lack proper assistive equipment. • Travel: Traveling between appointments in varying weather conditions and traffic can be stressful and unpaid in some agencies. • Maintaining professional boundaries: Working in private personal spaces can blur boundaries with clients and families. <br><br></div>
+                  <div class="clause-cn"><strong>BOX 3.1 实战分析专栏：投身社区居家照护（Home Care）的职业优势与严峻挑战</strong> <br><br><strong>显著职业红利与优势（Benefits）：</strong> • <strong>高度独立自主的执业空间</strong>：在法定执业范围内，你可以自主规划一天的照护节奏，独立作出合规决策，无需时时刻刻忍受上级管理者的直接贴身监视。 • <strong>一对一深度温情联结</strong>：每次上门全心全意服务一名案主，拥有充沛时间付出同理共情，与长者及其家庭建立起极其深厚、互信、触动心灵的人文照护关系。 • <strong>环境与案例生动多元</strong>：每位案主的人生阅历、每个家庭的文化背景与居住格局皆独一无二，彻底摆脱在封闭病房重复机械操作的枯燥乏味。 • <strong>工时排班相对灵活机动</strong>：许多居家机构提供多时段弹性派单，能较好地兼顾员工个人的家庭生活、育儿或进修需求。 <br><br><strong>必须清醒应对的严峻挑战（Challenges）：</strong> • <strong>独当一面的孤军奋战</strong>：遇到突发意外、案主突发晕厥呼吸骤停、或遇到无法独自搬动的超重卧床长者时，<strong>身边没有任何同事或护士可即刻伸手支援</strong>，必须依靠敏锐直觉第一时间拨打 911 并电话汇报上级！ • <strong>居家物理环境不可控</strong>：案主家中可能空间狭窄杂乱、光线昏暗、缺少符合人体工程学的医用电动升降床或天轨移位机，大幅增加了腰背劳损拉伤的风险。 • <strong>跨区域奔波通勤折损</strong>：全天频繁往返于不同街区，在加拿大漫长严寒的暴风雪冰冻恶劣天气与拥堵路况中穿梭驾驶，部分机构甚至不予报销在途通勤工时。 • <strong>职业界限极易模糊失守</strong>：长期在私人家庭的亲密氛围中工作，容易让案主误将你视作私密密友，诱发违规索要借款、馈赠礼品或打听个人隐私的伦理陷阱。 <br><br></div>
+                </div>
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.1 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">Retirement Homes & Group Homes</h3><div class="subtopic-title-cn">退休公寓与集体家庭公寓</div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">Retirement Homes & Group Homes</h3>
+                  <div class="heading-cn">退休公寓与集体家庭公寓</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="306.58" data-end="371.52" data-title="Retirement Homes & Group Homes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">• <strong>Retirement Homes:</strong> A retirement home (or retirement residence) is a privately owned and operated facility that provides rental accommodation, meals, activities, and support services to older persons who are mostly independent. Residents pay for their own accommodation and services from their personal income or savings. These facilities are not heavily regulated like nursing homes, although provincial regulations require licensing and standards of care. Support workers in retirement homes provide scheduled personal care, assist with meals, and respond to emergencies. <br><br>• <strong>Group Homes:</strong> A group home is a residential facility that houses a small number of people (usually 3 to 10) who have physical disabilities, developmental disabilities, or mental health disorders. The home is designed to resemble a family setting and is located in a residential neighbourhood (FIGURE 3.5). Staff provide 24-hour supervision and assist with daily living activities, meal preparation, shopping, transportation, and recreation, encouraging residents to develop life skills. <br><br></p>
-                      <p class="para-cn">• <strong>退休活力自理公寓（Retirement Homes / Residences）</strong>：退休公寓属于完全私立商业化运营的高品质养老居所，专为自理能力极佳、向往高雅晚年生活的健康长者提供租赁套房、高档膳食餐饮、社交活动沙龙及适度生活支持。长者完全依靠个人退休金、投资储蓄自负全额房租与服务开销。与政府公立管制的长期照护院舍不同，退休公寓不提供 24 小时密集临床特护；常驻支持工作者主要负责在固定时段登门提供轻度个人洗理协助、护送就餐及响应突发紧急拉绳报警。 <br><br>• <strong>小型集体家庭公寓（Group Homes）</strong>：集体家庭公寓是一种极富人文关怀的特殊居住模式，通常由 3 至 10 名具有中重度肢体残疾、智力智障、自闭症谱系障碍或稳定精神疾患的案主共同组建家庭式合住（参见图 3.5）。居所坐落于普通居民生活小区，外观与周边寻常独栋别墅无异。全职驻守的支持工作者提供 24 小时贴心监护，像家人一样带领案主共同采购柴米油盐、烹饪美味餐食、打扫卫生、护送外出参加社区活动，全方位培养并强化其融入社会的各项独立生活技能。 <br><br></p>
-                    </article>
-                    
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="306.58" data-end="371.52" data-title="Retirement Homes & Group Homes" onclick="playParagraphAudio(this)">
+                          <p class="para-en">• <strong>Retirement Homes:</strong> A retirement home (or retirement residence) is a privately owned and operated facility that provides rental accommodation, meals, activities, and support services to older persons who are mostly independent. Residents pay for their own accommodation and services from their personal income or savings. These facilities are not heavily regulated like nursing homes, although provincial regulations require licensing and standards of care.</p>
+                          <p class="para-cn">• <strong>退休活力自理公寓（Retirement Homes / Residences）</strong>：退休公寓属于完全私立商业化运营的高品质养老居所，专为自理能力极佳、向往高雅晚年生活的健康长者提供租赁套房、高档膳食餐饮、社交活动沙龙及适度生活支持。长者完全依靠个人退休金、投资储蓄自负全额房租与服务开销。与政府公立管制的长期照护院舍不同，退休公寓不提供 24 小时密集临床特护；常驻支持工作者主要负责在固定时段登门提供轻度个人洗理协助、护送就餐及响应突发紧急拉绳报警。<br><br>• <strong>小型集体家庭公寓（Group Homes）</strong>：集体家庭公寓是一种极富人文关怀的特殊居住模式，通常由 3 至 10 名具有中重度肢体残疾、智力智障、自闭症谱系障碍或稳定精神疾患的案主共同组建家庭式合住（参见图 3.5）。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="306.58" data-end="371.52" data-title="Retirement Homes & Group Homes" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Support workers in retirement homes provide scheduled personal care, assist with meals, and respond to emergencies. <br><br>• <strong>Group Homes:</strong> A group home is a residential facility that houses a small number of people (usually 3 to 10) who have physical disabilities, developmental disabilities, or mental health disorders. The home is designed to resemble a family setting and is located in a residential neighbourhood (FIGURE 3.5). Staff provide 24-hour supervision and assist with daily living activities, meal preparation, shopping, transportation, and recreation, encouraging residents to develop life skills. <br><br></p>
+                          <p class="para-cn">居所坐落于普通居民生活小区，外观与周边寻常独栋别墅无异。全职驻守的支持工作者提供 24 小时贴心监护，像家人一样带领案主共同采购柴米油盐、烹饪美味餐食、打扫卫生、护送外出参加社区活动，全方位培养并强化其融入社会的各项独立生活技能。<br><br></p>
+                        </article>
+                        
                 <figure class="editorial-figure">
-                  <div class="ef-tag">CLINICAL ILLUSTRATION · 临床图解与实操示范</div>
                   <img src="images/chapter_03/fig_3_5_group_home_exterior.png" alt="Figure 3.5 Group Home Residence" loading="lazy" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
                   <figcaption class="ef-caption-en"><strong>图 3.5 教学图示：坐落在寻常社区中的小型集体家庭公寓（Group Home）</strong><br>*FIGURE 3.5: Group homes, another type of assisted-living facility, provide residential care for small groups of clients. (iStockphoto/kali9.)*<br>【教学意图】：生动呈现小型集体公寓如何完美融入普通社区街区，摒除任何精神病院式冰冷隔离，赋能特殊人群享有正常化的家庭生活尊严。</figcaption>
                 </figure>
                 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-terracotta">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 3.2 长期照护院舍（养老院）执业利弊对比 (Benefits and Challenges of Working in LTC)</h4>
-                    </div>
-                  </aside>
-                </div>
-                
                 <aside class="editorial-box-container box-theme-terracotta">
                   <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
-                    </div>
-                    <h4 class="box-title-en">BOX 3.2: Benefits and Challenges Associated With Working in a Long-Term Care Facility</h4>
-                    <div class="box-title-cn">BOX 3.2 实战分析专栏：投身长期照护机构（LTC / 养老院）的职业优势与严峻挑战</div>
+                    <h4 class="box-title-en">Benefits and Challenges of Working in LTC</h4>
+                    <div class="box-title-cn">BOX 3.2 长期照护院舍（养老院）执业利弊对比</div>
                   </div>
                   <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en"><strong>BOX 3.2: Benefits and Challenges Associated With Working in a Long-Term Care Facility</strong> <br><br><strong>Benefits:</strong> • Working as part of a team: You work alongside other support workers, registered nurses, licensed practical nurses, therapists, and dietary staff. • Immediate support available: Help is readily available from team members and supervisors when dealing with heavy transfers or clinical concerns. • Structured routines: Work follows established schedules, protocols, and care routines. • Clear boundaries: The facility setting provides a clear professional framework. <br><br><strong>Challenges:</strong> • Heavy physical workload: Care requirements for multiple frail, dependent residents can be physically demanding. • Fast-paced environment: Managing the care of 8 to 12 residents during morning routines requires strict time management. • Exposure to resident death and grief: Developing bonds with residents and coping with their decline and death can be emotionally challenging. • Dealing with responsive behaviours: Residents with dementia may display aggression, agitation, or wandering. <br><br></div>
-                      <div class="clause-cn"><strong>BOX 3.2 实战分析专栏：投身长期照护机构（LTC / 养老院）的职业优势与严峻挑战</strong> <br><br><strong>显著职业红利与优势（Benefits）：</strong> • <strong>强大的跨学科团队作战</strong>：与经验丰富的注册护士（RN）、实习护士（RPN/LPN）、物理治疗师、作业治疗师及膳食团队并肩作战，绝非孤立无援。 • <strong>现场实时求援与安全兜底</strong>：在遭遇极其沉重的案主翻身转移、轮椅移位或案主突发病情变化时，<strong>随时可以当场大声呼唤身边的同事协助完成双人协作（Two-person Transfer）</strong>，安全系数极高。 • <strong>高度规律可预期的临床班次流程</strong>：排班固定明晰，晨间起居、就餐、发药、活动、换洗各环节遵照严格规范的时间表高效运转。 • <strong>清晰坚固的职业界限</strong>：在标准化的公立机构环境中，医护工作关系边界明确，绝不会产生私人家庭中的角色混淆。 <br><br><strong>必须清醒应对的严峻挑战（Challenges）：</strong> • <strong>高强度的沉重体力消耗</strong>：面对多位完全失能卧床、肢体僵硬沉重的脆弱长者，持续弯腰、穿衣、擦浴、更换厚重失禁纸尿裤对从业人员的腰椎与体魄构成持久严酷考验。 • <strong>快节奏与争分夺秒的时间压迫</strong>：在晨间黄金起居的短短两个小时内，一名 PSW 往往需要负责 8 至 12 位长者的完整晨间清洁、如厕、穿衣并安全护送入席就餐，必须具备如时钟般严丝合缝的时间管理能力。 • <strong>直面生命衰亡的沉重情感创伤</strong>：长年累月朝夕相处建立起深厚亲情纽带的长者接二连三地身体恶化、濒死离世，给从业人员的心灵带来巨大的悲伤创伤冲击。 • <strong>应对失智长者的应激反应性挑战行为（Responsive Behaviours）</strong>：严重阿尔茨海默病长者在晨间护理中易出现惊恐妄想、言语辱骂、抓咬反抗或躁动游荡，极度考验支持工作者的情绪定力、耐心技巧与去升级（De-escalation）专业安抚话术。 <br><br></div>
-                    </div>
-                  </div>
-                </aside>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                      </div>
-                      <h4 class="box-title-en">BOX 3.3 直接受雇于案主本人的利弊对比 (Benefits and Challenges of Working Directly for Clients)</h4>
-                    </div>
-                  </aside>
-                </div>
                 
+                <div class="box-clause-item">
+                  <div class="clause-en"><strong>BOX 3.2: Benefits and Challenges Associated With Working in a Long-Term Care Facility</strong> <br><br><strong>Benefits:</strong> • Working as part of a team: You work alongside other support workers, registered nurses, licensed practical nurses, therapists, and dietary staff. • Immediate support available: Help is readily available from team members and supervisors when dealing with heavy transfers or clinical concerns. • Structured routines: Work follows established schedules, protocols, and care routines. • Clear boundaries: The facility setting provides a clear professional framework. <br><br><strong>Challenges:</strong> • Heavy physical workload: Care requirements for multiple frail, dependent residents can be physically demanding. • Fast-paced environment: Managing the care of 8 to 12 residents during morning routines requires strict time management. • Exposure to resident death and grief: Developing bonds with residents and coping with their decline and death can be emotionally challenging. • Dealing with responsive behaviours: Residents with dementia may display aggression, agitation, or wandering. <br><br></div>
+                  <div class="clause-cn"><strong>BOX 3.2 实战分析专栏：投身长期照护机构（LTC / 养老院）的职业优势与严峻挑战</strong> <br><br><strong>显著职业红利与优势（Benefits）：</strong> • <strong>强大的跨学科团队作战</strong>：与经验丰富的注册护士（RN）、实习护士（RPN/LPN）、物理治疗师、作业治疗师及膳食团队并肩作战，绝非孤立无援。 • <strong>现场实时求援与安全兜底</strong>：在遭遇极其沉重的案主翻身转移、轮椅移位或案主突发病情变化时，<strong>随时可以当场大声呼唤身边的同事协助完成双人协作（Two-person Transfer）</strong>，安全系数极高。 • <strong>高度规律可预期的临床班次流程</strong>：排班固定明晰，晨间起居、就餐、发药、活动、换洗各环节遵照严格规范的时间表高效运转。 • <strong>清晰坚固的职业界限</strong>：在标准化的公立机构环境中，医护工作关系边界明确，绝不会产生私人家庭中的角色混淆。 <br><br><strong>必须清醒应对的严峻挑战（Challenges）：</strong> • <strong>高强度的沉重体力消耗</strong>：面对多位完全失能卧床、肢体僵硬沉重的脆弱长者，持续弯腰、穿衣、擦浴、更换厚重失禁纸尿裤对从业人员的腰椎与体魄构成持久严酷考验。 • <strong>快节奏与争分夺秒的时间压迫</strong>：在晨间黄金起居的短短两个小时内，一名 PSW 往往需要负责 8 至 12 位长者的完整晨间清洁、如厕、穿衣并安全护送入席就餐，必须具备如时钟般严丝合缝的时间管理能力。 • <strong>直面生命衰亡的沉重情感创伤</strong>：长年累月朝夕相处建立起深厚亲情纽带的长者接二连三地身体恶化、濒死离世，给从业人员的心灵带来巨大的悲伤创伤冲击。 • <strong>应对失智长者的应激反应性挑战行为（Responsive Behaviours）</strong>：严重阿尔茨海默病长者在晨间护理中易出现惊恐妄想、言语辱骂、抓咬反抗或躁动游荡，极度考验支持工作者的情绪定力、耐心技巧与去升级（De-escalation）专业安抚话术。 <br><br></div>
+                </div>
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                    </div>
-                    <h4 class="box-title-en">BOX 3.3: Benefits and Challenges Associated With Working Directly for Clients</h4>
-                    <div class="box-title-cn">BOX 3.3 实战分析专栏：直接受雇于案主本人（Private Attendant）的职业利弊洞察</div>
+                    <h4 class="box-title-en">Benefits and Challenges of Working Directly for Clients</h4>
+                    <div class="box-title-cn">BOX 3.3 直接受雇于案主本人的利弊对比</div>
                   </div>
                   <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en"><strong>BOX 3.3: Benefits and Challenges Associated With Working Directly for Clients</strong> <br><br>Some support workers are hired directly by clients (or their families) as private attendants. <br><br><strong>Benefits:</strong> • Focused, personalized care: You work for one employer and can dedicate all your efforts to their individualized needs. • Negotiated conditions: Wages, hours, and responsibilities are negotiated directly between you and the client. • Independence from agency bureaucracy: You avoid agency rules, schedule changes, and travel between scattered clients. <br><br><strong>Challenges:</strong> • Role ambiguity: The client may ask you to perform tasks outside the support worker's legal scope of practice (e.g., medical procedures or heavy manual labour). • Lack of institutional protection: You may not have union representation, workers' compensation (WSIB), employment insurance, or health benefits. • Job insecurity: If the client's condition deteriorates, if they are admitted to a hospital, or if they pass away, employment terminates abruptly. • Interpersonal friction: Resolving disputes without an objective supervisory buffer can be uncomfortable. <br><br></div>
-                      <div class="clause-cn"><strong>BOX 3.3 实战分析专栏：直接受雇于案主本人（Private Attendant）的职业利弊洞察</strong> <br><br>部分支持工作者选择不挂靠任何中介机构，而是直接与具备经济实力的案主家庭签订个人劳动雇佣合同，担任私人特护陪护员。 <br><br><strong>显著职业红利与优势（Benefits）：</strong> • <strong>专注纯粹的极致个性化服务</strong>：你的老板唯有眼前的案主一人，所有精力心血倾注于满足其一人之身心所需，服务目标极其清晰纯粹。 • <strong>薪酬待遇与排班完全由双方当面议定</strong>：时薪工资金额、每日工作时长及休假待遇直接由劳资双方当面谈判敲定，往往能争取到显著高于普通中介机构的丰厚报酬。 • <strong>彻底摆脱中介机构官僚体系的繁琐束缚</strong>：无需忍受派遣机构随时可能出现的临时砍单、频繁调班或在城市两端疲于奔命的折磨。 <br><br><strong>必须清醒应对的严峻挑战（Challenges）：</strong> • <strong>法定执业职责边界模糊陷阱（极为凶险！）</strong>：案主或家属常凭借“我给你发工资”的心态，强令支持工作者执行严厉禁止未受监管人员涉足的高危医疗禁区（如强令 PSW 独立进行气切深部吸痰、自行调整呼吸机参数、静脉推药），或将其当做全能保姆使唤（如擦洗屋顶、修剪草坪），极易触犯法律底线！ • <strong>丧失体制性劳动法律保障</strong>：私人雇佣通常没有工会保护、缺乏工伤劳保赔偿金（WSIB）、不缴纳失业保险（EI）或牙医健康福利，一旦在工作中受伤扭伤，常常陷入孤立无援的维权困境。 • <strong>就业稳定性极度脆弱不稳定</strong>：案主一旦病情突发恶化送进急诊、被紧急送入养老院或不幸突然离世，劳动雇佣关系当场戛然而止，从业者瞬间失业断绝收入来源。 • <strong>缺乏客观缓冲层的人际摩擦</strong>：由于缺少中介机构督导护士充当公允的制度缓冲垫，一旦与案主或其挑剔的家属在照护细节上产生分歧矛盾，现场人际对抗极为尴尬棘手。 <br><br></div>
-                    </div>
-                  </div>
-                </aside>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-
-                <div class="editorial-box-opener" style="margin-top:36px;">
-                  <aside class="editorial-box-container box-theme-sage">
-                    <div class="box-banner-header">
-                      <div class="box-badge-row">
-                        <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
-                      </div>
-                      <h4 class="box-title-en">综合医院、亚急性医疗与 BOX 3.4 机构执业利弊 (Hospitals, Subacute Care & BOX 3.4)</h4>
-                    </div>
-                  </aside>
-                </div>
                 
-                <aside class="editorial-box-container box-theme-terracotta">
+                <div class="box-clause-item">
+                  <div class="clause-en"><strong>BOX 3.3: Benefits and Challenges Associated With Working Directly for Clients</strong> <br><br>Some support workers are hired directly by clients (or their families) as private attendants. <br><br><strong>Benefits:</strong> • Focused, personalized care: You work for one employer and can dedicate all your efforts to their individualized needs. • Negotiated conditions: Wages, hours, and responsibilities are negotiated directly between you and the client. • Independence from agency bureaucracy: You avoid agency rules, schedule changes, and travel between scattered clients. <br><br><strong>Challenges:</strong> • Role ambiguity: The client may ask you to perform tasks outside the support worker's legal scope of practice (e.g., medical procedures or heavy manual labour). • Lack of institutional protection: You may not have union representation, workers' compensation (WSIB), employment insurance, or health benefits. • Job insecurity: If the client's condition deteriorates, if they are admitted to a hospital, or if they pass away, employment terminates abruptly. • Interpersonal friction: Resolving disputes without an objective supervisory buffer can be uncomfortable. <br><br></div>
+                  <div class="clause-cn"><strong>BOX 3.3 实战分析专栏：直接受雇于案主本人（Private Attendant）的职业利弊洞察</strong> <br><br>部分支持工作者选择不挂靠任何中介机构，而是直接与具备经济实力的案主家庭签订个人劳动雇佣合同，担任私人特护陪护员。 <br><br><strong>显著职业红利与优势（Benefits）：</strong> • <strong>专注纯粹的极致个性化服务</strong>：你的老板唯有眼前的案主一人，所有精力心血倾注于满足其一人之身心所需，服务目标极其清晰纯粹。 • <strong>薪酬待遇与排班完全由双方当面议定</strong>：时薪工资金额、每日工作时长及休假待遇直接由劳资双方当面谈判敲定，往往能争取到显著高于普通中介机构的丰厚报酬。 • <strong>彻底摆脱中介机构官僚体系的繁琐束缚</strong>：无需忍受派遣机构随时可能出现的临时砍单、频繁调班或在城市两端疲于奔命的折磨。 <br><br><strong>必须清醒应对的严峻挑战（Challenges）：</strong> • <strong>法定执业职责边界模糊陷阱（极为凶险！）</strong>：案主或家属常凭借“我给你发工资”的心态，强令支持工作者执行严厉禁止未受监管人员涉足的高危医疗禁区（如强令 PSW 独立进行气切深部吸痰、自行调整呼吸机参数、静脉推药），或将其当做全能保姆使唤（如擦洗屋顶、修剪草坪），极易触犯法律底线！ • <strong>丧失体制性劳动法律保障</strong>：私人雇佣通常没有工会保护、缺乏工伤劳保赔偿金（WSIB）、不缴纳失业保险（EI）或牙医健康福利，一旦在工作中受伤扭伤，常常陷入孤立无援的维权困境。 • <strong>就业稳定性极度脆弱不稳定</strong>：案主一旦病情突发恶化送进急诊、被紧急送入养老院或不幸突然离世，劳动雇佣关系当场戛然而止，从业者瞬间失业断绝收入来源。 • <strong>缺乏客观缓冲层的人际摩擦</strong>：由于缺少中介机构督导护士充当公允的制度缓冲垫，一旦与案主或其挑剔的家属在照护细节上产生分歧矛盾，现场人际对抗极为尴尬棘手。 <br><br></div>
+                </div>
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+
+                <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
-                    <div class="box-badge-row">
-                      <span class="box-badge-icon"></span>
-                      <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
-                    </div>
-                    <h4 class="box-title-en">BOX 3.4: Benefits and Challenges Associated With Working in a Facility (Hospitals & Special Units)</h4>
-                    <div class="box-title-cn">BOX 3.4 实战分析专栏：投身综合医院与专业机构的职业优势与挑战总结</div>
+                    <h4 class="box-title-en">Hospitals, Subacute Care & BOX 3.4</h4>
+                    <div class="box-title-cn">综合医院、亚急性医疗与 BOX 3.4 机构执业利弊</div>
                   </div>
                   <div class="box-body-content">
-                    <div class="box-clause-item">
-                      <div class="clause-en">• <strong>Acute Care Facilities (Hospitals):</strong> Hospitals provide health care for people with severe, sudden illnesses or injuries (acute care). Hospitals employ support workers (often called patient care assistants or health care aides) on specialized units such as medical, surgical, rehabilitation, pediatric, or maternal-child units. Work is fast paced and demands strict adherence to infection control, safety guidelines, and clinical teamwork. <br><br>• <strong>Subacute Care & Convalescent Care:</strong> Subacute care (also known as complex continuing care or transitional care) is comprehensive, inpatient care provided to clients who have stabilized after an acute illness or injury but still need intensive nursing, wound care, or rehabilitation before returning home or transferring to long-term care. <br><br>• <strong>Palliative Care & Hospices:</strong> Palliative care focuses on relieving suffering and improving the quality of life for clients with life-threatening conditions. Hospices provide physical, emotional, and spiritual care to dying clients and their loved ones in peaceful, homelike environments. <br><br><strong>BOX 3.4: Benefits and Challenges Associated With Working in a Facility (Hospitals & Special Units)</strong> <strong>Benefits:</strong> Exposure to complex clinical conditions; constant learning from multidisciplinary professionals; availability of advanced mechanical lifts and clinical equipment; defined break times and unionized environments. <strong>Challenges:</strong> High-stress, fast-paced environments; strict hierarchy; rotating shift work including nights and weekends; exposure to pathogens and complex medical equipment alarms. <br><br></div>
-                      <div class="clause-cn">• <strong>急性照护综合医院（Hospitals）</strong>：综合医院专为救治突发严重疾病、遭受重大意外创伤或刚接受大手术的急性期病患提供紧急医疗干预。各大综合医院大量招聘支持工作者（在医院常称为病患照护助理 PCA、或医疗助手 HCA），派驻在骨科病房、普外科、神经康复科、儿科或产科母婴病房。医院工作节奏极其迅疾如风，对医院感染控制（感控防护）、生命体征监测上报及团队快速协作有着极其严苛的军事化标准要求。 <br><br>• <strong>亚急性医疗与延续康复照护（Subacute Care / Complex Continuing Care）</strong>：专为急性抢救成功、生命体征趋于平稳，但在伤口换药、气道维护、骨科康复或肢体功能重建上仍需密集临床专业支持的病患所设立的过渡性病区。它构成了连接“急性大医院”与“社区家庭/养老院”之间不可或缺的坚固医疗桥梁。 <br><br>• <strong>临终关怀院与姑息舒缓疗护（Hospice & Palliative Care）</strong>：姑息舒缓医学彻底摒弃盲目创伤性插管抢救，以控制顽固癌痛、排遣濒死恐惧、实现案主生命最后尊严为灵魂。临终关怀院（Hospice）在静谧祥和如家庭般的优雅环境中，为垂危长者及其家属提供身、心、社、灵全方位的安宁送终关怀。 <br><br><strong>BOX 3.4 实战分析专栏：投身综合医院与专业机构的职业优势与挑战总结</strong> <strong>显著职业红利（Benefits）</strong>：接触丰富前沿的疑难临床病例，专业眼界大开；时刻向顶级专科医生、护士偷师学艺，专业技能提升极快；全院标准化配置最先进的医用吊塔、天轨移位机与防褥疮气垫床，工伤风险可防可控；大多享有规范的带薪工休排歇与强大的工会（Union）福利保障。 <strong>严峻挑战考验（Challenges）</strong>：临床节奏快如闪电、心理压力巨大；科室层级森严、纪律严苛；必须长年接受轮班倒班制度（包括三班倒、大夜班、周末与法定节假日值班）；时刻处于高危致病菌病原体暴露与尖锐报警声喧嚣的重压环境中。 <br><br></div>
-                    </div>
-                  </div>
-                </aside>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                
+                <div class="box-clause-item">
+                  <div class="clause-en">• <strong>Acute Care Facilities (Hospitals):</strong> Hospitals provide health care for people with severe, sudden illnesses or injuries (acute care). Hospitals employ support workers (often called patient care assistants or health care aides) on specialized units such as medical, surgical, rehabilitation, pediatric, or maternal-child units. Work is fast paced and demands strict adherence to infection control, safety guidelines, and clinical teamwork. <br><br>• <strong>Subacute Care & Convalescent Care:</strong> Subacute care (also known as complex continuing care or transitional care) is comprehensive, inpatient care provided to clients who have stabilized after an acute illness or injury but still need intensive nursing, wound care, or rehabilitation before returning home or transferring to long-term care. <br><br>• <strong>Palliative Care & Hospices:</strong> Palliative care focuses on relieving suffering and improving the quality of life for clients with life-threatening conditions. Hospices provide physical, emotional, and spiritual care to dying clients and their loved ones in peaceful, homelike environments. <br><br><strong>BOX 3.4: Benefits and Challenges Associated With Working in a Facility (Hospitals & Special Units)</strong> <strong>Benefits:</strong> Exposure to complex clinical conditions; constant learning from multidisciplinary professionals; availability of advanced mechanical lifts and clinical equipment; defined break times and unionized environments. <strong>Challenges:</strong> High-stress, fast-paced environments; strict hierarchy; rotating shift work including nights and weekends; exposure to pathogens and complex medical equipment alarms. <br><br></div>
+                  <div class="clause-cn">• <strong>急性照护综合医院（Hospitals）</strong>：综合医院专为救治突发严重疾病、遭受重大意外创伤或刚接受大手术的急性期病患提供紧急医疗干预。各大综合医院大量招聘支持工作者（在医院常称为病患照护助理 PCA、或医疗助手 HCA），派驻在骨科病房、普外科、神经康复科、儿科或产科母婴病房。医院工作节奏极其迅疾如风，对医院感染控制（感控防护）、生命体征监测上报及团队快速协作有着极其严苛的军事化标准要求。 <br><br>• <strong>亚急性医疗与延续康复照护（Subacute Care / Complex Continuing Care）</strong>：专为急性抢救成功、生命体征趋于平稳，但在伤口换药、气道维护、骨科康复或肢体功能重建上仍需密集临床专业支持的病患所设立的过渡性病区。它构成了连接“急性大医院”与“社区家庭/养老院”之间不可或缺的坚固医疗桥梁。 <br><br>• <strong>临终关怀院与姑息舒缓疗护（Hospice & Palliative Care）</strong>：姑息舒缓医学彻底摒弃盲目创伤性插管抢救，以控制顽固癌痛、排遣濒死恐惧、实现案主生命最后尊严为灵魂。临终关怀院（Hospice）在静谧祥和如家庭般的优雅环境中，为垂危长者及其家属提供身、心、社、灵全方位的安宁送终关怀。 <br><br><strong>BOX 3.4 实战分析专栏：投身综合医院与专业机构的职业优势与挑战总结</strong> <strong>显著职业红利（Benefits）</strong>：接触丰富前沿的疑难临床病例，专业眼界大开；时刻向顶级专科医生、护士偷师学艺，专业技能提升极快；全院标准化配置最先进的医用吊塔、天轨移位机与防褥疮气垫床，工伤风险可防可控；大多享有规范的带薪工休排歇与强大的工会（Union）福利保障。 <strong>严峻挑战考验（Challenges）</strong>：临床节奏快如闪电、心理压力巨大；科室层级森严、纪律严苛；必须长年接受轮班倒班制度（包括三班倒、大夜班、周末与法定节假日值班）；时刻处于高危致病菌病原体暴露与尖锐报警声喧嚣的重压环境中。 <br><br></div>
+                </div>
+                </div></aside>
+<hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-            <div class="editorial-microtopic-row">
-              <span class="micro-bullet">▪</span>
-              <h4 class="micro-title-en">Chapter 3 Review</h4><span class="micro-title-cn">· 本章复习与核心要点回顾</span>
+            <div class="editorial-heading-micro">
+              <h4 class="heading-en">Chapter 3 Review</h4>
+              <div class="heading-cn">本章复习与核心要点回顾</div>
             </div>
             
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.2 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">KEY POINTS</h3><div class="subtopic-title-cn">核心要点清单</div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">KEY POINTS</h3>
+                  <div class="heading-cn">核心要点清单</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="603.5" data-end="705.05" data-title="KEY POINTS" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">1. Support workers provide services in community settings (e.g., clients' homes, group homes, day programs) and facility settings (e.g., hospitals, long-term care facilities, assisted-living facilities). 2. Community-based care focuses on enabling clients to remain in their own homes and maintain their independence. 3. Facility-based care involves clients living in an institutional setting where meals, housing, and 24-hour health care services are provided. 4. Acute care is provided in hospitals for clients with severe, sudden illnesses or injuries. 5. Subacute care (complex continuing care) is comprehensive care for clients who are recovering from acute illness but still require specialized clinical treatments. 6. Long-term care facilities provide 24-hour nursing care and personal support to frail older persons and people with severe, chronic disabilities. 7. Assisted-living facilities provide housing and supportive services (such as meals, laundry, and scheduled personal care) for people who are mostly independent. 8. Retirement homes are privately funded residential facilities offering rental accommodation and services to seniors. 9. Working in community settings offers independence, flexibility, and close client relationships, but involves working alone, travel, and uncontrolled environments. 10. Working in facility settings offers teamwork, on-site supervision, and structured routines, but involves heavy physical work, fast pacing, and exposure to resident decline. 11. Regardless of where you work, you must always be familiar with the scope of practice for support workers and your employer's policies. <br><br></p>
-                      <p class="para-cn">1. 支持工作者活跃在两大阵地：社区环境（私人居所、集体公寓、日托中心）与机构环境（综合医院、长期照护养老院、辅助生活公寓）。 2. 社区型照护的核心宗旨，在于赋能受助者长久安全留居在私人家庭中，维系其生活自立自理功能。 3. 机构型照护是指案主入住于集中式专业照护机构之中，由机构全天候统筹提供食宿、起居生活照料与专业医疗监护。 4. 急性照护专在医院环境中开展，为突发急危重症或严重创伤病患提供紧急诊断、抢救与治疗。 5. 亚急性照护（复杂延续性照护）专为度过急性期但仍需特殊临床换药或强化康复的病患提供院内高阶支持。 6. 长期照护院舍（LTC / 养老院）为失去生活自理能力的高龄衰弱长者及重度慢病残疾案主，提供 24 小时全天候专业护士监护与 PSW 密集贴身照料。 7. 辅助生活照护居所为自理能力较好、无需 24 小时护士特级护理的人群提供独立套房公寓，配套集中供餐、洗衣及定时起居协助。 8. 退休自理公寓属于纯私立商业运营的长者社区，由长者依靠个人储蓄租住并购买配套生活服务。 9. 社区执业环境赋予从业者高度自主权、弹性排班与深厚人文情感，但伴随着孤军奋战无现场支援、恶劣路况奔波通勤与居家物理环境不可控等挑战。 10. 机构执业环境拥有强大的团队依托、现场实时求援与规律规范流程，但伴随着高强度体力消耗、争分夺秒的紧张节奏以及目睹长者衰亡的心理创伤。 11. 无论身处何处执业，时刻清醒恪守支持工作者的法定执业界限与雇主规章制度，是确保护患双方法律与生命安全的生命红线。 <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="603.5" data-end="705.05" data-title="KEY POINTS" onclick="playParagraphAudio(this)">
+                          <p class="para-en">1. Support workers provide services in community settings (e.g., clients' homes, group homes, day programs) and facility settings (e.g., hospitals, long-term care facilities, assisted-living facilities). 2. Community-based care focuses on enabling clients to remain in their own homes and maintain their independence. 3. Facility-based care involves clients living in an institutional setting where meals, housing, and 24-hour health care services are provided. 4.</p>
+                          <p class="para-cn">1. 支持工作者活跃在两大阵地：社区环境（私人居所、集体公寓、日托中心）与机构环境（综合医院、长期照护养老院、辅助生活公寓）。2. 社区型照护的核心宗旨，在于赋能受助者长久安全留居在私人家庭中，维系其生活自立自理功能。3. 机构型照护是指案主入住于集中式专业照护机构之中，由机构全天候统筹提供食宿、起居生活照料与专业医疗监护。4. 急性照护专在医院环境中开展，为突发急危重症或严重创伤病患提供紧急诊断、抢救与治疗。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="603.5" data-end="705.05" data-title="KEY POINTS" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Acute care is provided in hospitals for clients with severe, sudden illnesses or injuries. 5. Subacute care (complex continuing care) is comprehensive care for clients who are recovering from acute illness but still require specialized clinical treatments. 6. Long-term care facilities provide 24-hour nursing care and personal support to frail older persons and people with severe, chronic disabilities. 7. Assisted-living facilities provide housing and supportive services (such as meals, laundry, and scheduled personal care) for people who are mostly independent.</p>
+                          <p class="para-cn">5. 亚急性照护（复杂延续性照护）专为度过急性期但仍需特殊临床换药或强化康复的病患提供院内高阶支持。6. 长期照护院舍（LTC / 养老院）为失去生活自理能力的高龄衰弱长者及重度慢病残疾案主，提供 24 小时全天候专业护士监护与 PSW 密集贴身照料。7. 辅助生活照护居所为自理能力较好、无需 24 小时护士特级护理的人群提供独立套房公寓，配套集中供餐、洗衣及定时起居协助。8. 退休自理公寓属于纯私立商业运营的长者社区，由长者依靠个人储蓄租住并购买配套生活服务。</p>
+                        </article>
+                        
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="603.5" data-end="705.05" data-title="KEY POINTS" onclick="playParagraphAudio(this)">
+                          <p class="para-en">8. Retirement homes are privately funded residential facilities offering rental accommodation and services to seniors. 9. Working in community settings offers independence, flexibility, and close client relationships, but involves working alone, travel, and uncontrolled environments. 10. Working in facility settings offers teamwork, on-site supervision, and structured routines, but involves heavy physical work, fast pacing, and exposure to resident decline. 11. Regardless of where you work, you must always be familiar with the scope of practice for support workers and your employer's policies. <br><br></p>
+                          <p class="para-cn">9. 社区执业环境赋予从业者高度自主权、弹性排班与深厚人文情感，但伴随着孤军奋战无现场支援、恶劣路况奔波通勤与居家物理环境不可控等挑战。10. 机构执业环境拥有强大的团队依托、现场实时求援与规律规范流程，但伴随着高强度体力消耗、争分夺秒的紧张节奏以及目睹长者衰亡的心理创伤。11. 无论身处何处执业，时刻清醒恪守支持工作者的法定执业界限与雇主规章制度，是确保护患双方法律与生命安全的生命红线。<br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-                <div class="editorial-subtopic-card">
-                  <div class="subtopic-tag">TOPIC 5.3 · 临床子专题</div>
-                  <h3 class="subtopic-title-en">CRITICAL THINKING IN PRACTICE</h3><div class="subtopic-title-cn">临床批判性思维修炼</div>
+                <div class="editorial-heading-sub">
+                  <h3 class="heading-en">CRITICAL THINKING IN PRACTICE</h3>
+                  <div class="heading-cn">临床批判性思维修炼</div>
                 </div>
                 
-                    <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="705.05" data-end="738.14" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
-                      <div class="para-play-indicator">▶</div>
-                      <p class="para-en">Brenda is a newly graduated support worker who is considering two job offers: one from a community home care agency and one from a large long-term care facility. When deciding on an employment setting, what factors should Brenda consider? • Is the philosophy of care of the agency similar to your own? • Will you be able to arrive at your workplace punctually? • Does this agency have a set job description for what you would be expected to do? • How will each setting affect your physical safety, professional growth, and lifestyle? <br><br></p>
-                      <p class="para-cn">刚刚从正规院校顺利毕业取得执业资格的新晋支持工作者布伦达（Brenda），此刻正同时面临两份令其心动的聘书录用：一份来自一家声誉良好的社区居家照护机构（Home Care），另一份来自一家规模宏大、配备完善的大型长期照护养老院（LTC）。在面临人生重要的第一份执业环境抉择时，布伦达应当系统权衡以下关键考量要素： • <strong>机构的照护哲学与你个人的价值观是否高度共鸣契合？</strong>（你更倾向于与单一长者建立深厚的一对一长期陪伴，还是更渴望在快节奏的团队协作中历练身手？） • <strong>通勤半径与出勤准点能否确保风雨无阻？</strong>（在加拿大漫长寒冬，你是否有可靠的私家车应对居家上门的暴风雪通勤，还是更适宜前往固定轨交站点直达的养老院打卡上班？） • <strong>机构是否拥有白纸黑字、界限清晰明了的岗位职责说明书（Job Description）？</strong>（能否切实保障你在工作中免遭强行摊派超出法定范围的违规操作？） • <strong>该执业环境对你的身体脊椎劳损负荷、长期职业晋升通道及作息生活方式将产生何种深远塑造？</strong> <br><br></p>
-                    </article>
-                    <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
+                        <article class="bilingual-paragraph audio-trackable" data-ch="3" data-start="705.05" data-end="738.14" data-title="CRITICAL THINKING IN PRACTICE" onclick="playParagraphAudio(this)">
+                          <p class="para-en">Brenda is a newly graduated support worker who is considering two job offers: one from a community home care agency and one from a large long-term care facility. When deciding on an employment setting, what factors should Brenda consider? • Is the philosophy of care of the agency similar to your own? • Will you be able to arrive at your workplace punctually? • Does this agency have a set job description for what you would be expected to do? • How will each setting affect your physical safety, professional growth, and lifestyle? <br><br></p>
+                          <p class="para-cn">刚刚从正规院校顺利毕业取得执业资格的新晋支持工作者布伦达（Brenda），此刻正同时面临两份令其心动的聘书录用：一份来自一家声誉良好的社区居家照护机构（Home Care），另一份来自一家规模宏大、配备完善的大型长期照护养老院（LTC）。在面临人生重要的第一份执业环境抉择时，布伦达应当系统权衡以下关键考量要素： • <strong>机构的照护哲学与你个人的价值观是否高度共鸣契合？</strong>（你更倾向于与单一长者建立深厚的一对一长期陪伴，还是更渴望在快节奏的团队协作中历练身手？） • <strong>通勤半径与出勤准点能否确保风雨无阻？</strong>（在加拿大漫长寒冬，你是否有可靠的私家车应对居家上门的暴风雪通勤，还是更适宜前往固定轨交站点直达的养老院打卡上班？） • <strong>机构是否拥有白纸黑字、界限清晰明了的岗位职责说明书（Job Description）？</strong>（能否切实保障你在工作中免遭强行摊派超出法定范围的违规操作？） • <strong>该执业环境对你的身体脊椎劳损负荷、长期职业晋升通道及作息生活方式将产生何种深远塑造？</strong> <br><br></p>
+                        </article>
+                        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
-    <div class="editorial-quiz-section" style="margin-top:56px; padding-top:32px; border-top:2px solid #e2e8f0;">
-      <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
-        <span class="quiz-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
-        <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 3 章全真自测复习题与详尽临床精解</h3>
-        <p style="font-size:13.5px; color:#166534; margin:0;">原版 9 道标准执业自测题（<strong>Pages 34–47 · 9 道全真自测题</strong>）。点击选项可即时测试并验证对错，查看权威临床实操解析。</p>
-      </div>
-    
-        <div class="editorial-quiz-card" id="q-card-ch3-1">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 01</span>
-            <span class="eq-status" id="q-status-ch3-1">待作答</span>
-          </div>
-          <div class="eq-stem-en">1. A current trend in the Canadian health care system is to:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>当前加拿大医疗卫生保健体系最鲜明的发展趋势是：</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 1, 'A', 'C', 'q-rat-ch3-1', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Increase public spending on hospitals</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 1, 'B', 'C', 'q-rat-ch3-1', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Decrease spending on community-based services</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 1, 'C', 'C', 'q-rat-ch3-1', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Focus on providing more community-based services</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 1, 'D', 'C', 'q-rat-ch3-1', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Promote facility-based services over home care</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-1', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-1" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              教材全篇反复强调：为了有效遏制医院高昂运营开支并契合人口老龄化需求，加拿大各级政府正坚定不移地将公共政策与财政资源倾斜于**社区型医疗服务与居家照护（Community-based services & Home care）**。选项 A、B、D 均与当前国家医疗改革的大方向背道而驰。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-2">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 02</span>
-            <span class="eq-status" id="q-status-ch3-2">待作答</span>
-          </div>
-          <div class="eq-stem-en">2. Home care is an example of:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>居家照护（Home Care）属于下列哪一种医疗服务形态的典型范例？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 2, 'A', 'A', 'q-rat-ch3-2', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">A community-based service</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 2, 'B', 'A', 'q-rat-ch3-2', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">A facility-based service</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 2, 'C', 'A', 'q-rat-ch3-2', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">A community day program</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 2, 'D', 'A', 'q-rat-ch3-2', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">End-of-life care</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-2', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-2" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 A</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              居家照护直接在案主私人家庭住宅中提供支持，是**“社区型照护服务”（Community-based service）**中最核心、最具代表性的中流砥柱。虽然居家照护亦涵盖临终舒缓支持，但其本身所属的大类是社区服务体系。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-3">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 03</span>
-            <span class="eq-status" id="q-status-ch3-3">待作答</span>
-          </div>
-          <div class="eq-stem-en">3. Which work setting provides acute care?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>下列哪一类工作场所专门提供高精尖的“急性医疗照护”（Acute Care）？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 3, 'A', 'D', 'q-rat-ch3-3', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Home care</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 3, 'B', 'D', 'q-rat-ch3-3', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Long-term care facilities</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 3, 'C', 'D', 'q-rat-ch3-3', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Assisted-living facilities</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 3, 'D', 'D', 'q-rat-ch3-3', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Hospitals</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-3', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-3" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              急性照护（Acute Care）是指针对突发急危重症、严重创伤或大手术后的短期紧急高阶救治，其标准执业阵地唯有配备完备急诊、ICU、手术室与检验病理科的**综合医院（Hospitals）**。养老院与辅助生活居所仅提供慢病调理与生活照护。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-4">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 04</span>
-            <span class="eq-status" id="q-status-ch3-4">待作答</span>
-          </div>
-          <div class="eq-stem-en">4. Which work setting may provide subacute care?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>下列哪一类机构场所通常设有专门单元，能够提供“亚急性医疗照护”（Subacute Care）？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 4, 'A', 'B', 'q-rat-ch3-4', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Retirement homes</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 4, 'B', 'B', 'q-rat-ch3-4', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Long-term care facilities</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 4, 'C', 'B', 'q-rat-ch3-4', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Group homes</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 4, 'D', 'B', 'q-rat-ch3-4', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Hospices</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-4', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-4" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 B</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              亚急性照护（Subacute Care / 复杂延续性特护）专为度过急性期但仍需专业复杂伤口造口护理、营养支持或强化物理康复的病患所设立；在加拿大，许多具备较强临床医疗资质的大型**长期照护院舍（Long-term care facilities）**以及大型综合医院的延续照护病区，专门开设有此类亚急性与过渡性病房。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-5">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 05</span>
-            <span class="eq-status" id="q-status-ch3-5">待作答</span>
-          </div>
-          <div class="eq-stem-en">5. What type of service aims to provide a temporary break to family caregivers?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>哪一种服务形态设立的终极宗旨，在于为常年在家庭中精疲力竭照顾重病家属的“家庭照料者”提供临时的身心解脱与喘息休整？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 5, 'A', 'C', 'q-rat-ch3-5', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Acute care services</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 5, 'B', 'C', 'q-rat-ch3-5', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Palliative care</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 5, 'C', 'C', 'q-rat-ch3-5', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Respite services</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 5, 'D', 'C', 'q-rat-ch3-5', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Outpatient services</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-5', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-5" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 C</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              原书第 38 页明确阐释：**喘息服务（Respite Services）**的核心定义正是为长期照护患病亲属但身心俱疲的家庭照料者提供“短暂停顿与喘息机会（A temporary break）”，有效预防家庭照护者发生耗竭性崩溃。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-6">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 06</span>
-            <span class="eq-status" id="q-status-ch3-6">待作答</span>
-          </div>
-          <div class="eq-stem-en">6. Which of the following is an example of a live-in facility?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>下列选项中，哪一项属于为案主提供全天候长期常住食宿与生活照料的“集中式居住型照护设施”（Live-in Facility）？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 6, 'A', 'D', 'q-rat-ch3-6', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Hospital</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 6, 'B', 'D', 'q-rat-ch3-6', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Methadone clinic</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 6, 'C', 'D', 'q-rat-ch3-6', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Private residence</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 6, 'D', 'D', 'q-rat-ch3-6', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Assisted-living facility</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-6', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-6" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              集中式居住照护设施（Live-in Facility）是指案主将该机构作为其长期日常生活居所、在其中吃住起居并接受持续照护的场所。**辅助生活公寓（Assisted-living facility）**与长期照护养老院（LTC）皆是标准的 Live-in 设施。医院病房属于短期急诊救治场所，绝非案主长期生活的常住居所；门诊诊所更属于非居住场所。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-7">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 07</span>
-            <span class="eq-status" id="q-status-ch3-7">待作答</span>
-          </div>
-          <div class="eq-stem-en">7. Residents in retirement facilities generally include:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>选择入住退休自理活力公寓（Retirement Facilities / Homes）的长者，其身体健康状况通常呈现出何种典型特征？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 7, 'A', 'D', 'q-rat-ch3-7', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">People with mental impairment</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 7, 'B', 'D', 'q-rat-ch3-7', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Young adults with physical or other disabilities</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 7, 'C', 'D', 'q-rat-ch3-7', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Frail older persons with multiple health problems</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 7, 'D', 'D', 'q-rat-ch3-7', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Older persons with limited care needs</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-7', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-7" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              退休公寓（Retirement Homes）属于自费活力养老社区，入住的长者大多身心自理能力优良，神志清晰，仅需机构提供营养餐饮配餐、文娱休闲和基本的安全巡查，其**生活照料需求极为有限（Older persons with limited care needs）**。选项 A、B、C 所描述的重度失能或失智病患，必须入住配备 24 小时密集临床特护的长期照护院舍（LTC）。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-8">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 08</span>
-            <span class="eq-status" id="q-status-ch3-8">待作答</span>
-          </div>
-          <div class="eq-stem-en">8. Residents in long-term care facilities generally require:</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>入住在长期照护院舍（Long-Term Care Facilities / 养老院）内的案主，其身体与生活通常必然需要：</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 8, 'A', 'A', 'q-rat-ch3-8', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">24-hour nursing care and support services</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 8, 'B', 'A', 'q-rat-ch3-8', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Supervision and limited support services</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 8, 'C', 'A', 'q-rat-ch3-8', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Acute care</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 8, 'D', 'A', 'q-rat-ch3-8', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Housekeeping services, but not meal services</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-8', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-8" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 A</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              原书第 41 页与第 47 页明确界定：能够达到政府公立长期照护机构严苛入住准入门槛的案主，皆是重度失能或失智衰弱群体，**必须由现场常驻的注册专业护士与支持工作者提供 24 小时全天候无死角的临床医疗护理与贴身起居生活支持（24-hour nursing care and support services）**。<br><br>---
-            </div>
-          </div>
-        </div>
-        
-        <div class="editorial-quiz-card" id="q-card-ch3-9">
-          <div class="eq-header">
-            <span class="eq-num">QUESTION 09</span>
-            <span class="eq-status" id="q-status-ch3-9">待作答</span>
-          </div>
-          <div class="eq-stem-en">9. In which setting is maintaining a homelike atmosphere especially important?</div>
-          <div class="eq-stem-cn"><strong>中文题意：</strong>在下列哪一类医疗护理执业环境中，尽一切可能消除冰冷医疗感、精心营造并维系“如家般温馨温暖的生活氛围”（Homelike Atmosphere）具有最为神圣和极其特殊的意义？</div>
-          <div class="eq-options">
-        
-            <div class="eq-opt" onclick="checkAnswer('ch3', 9, 'A', 'D', 'q-rat-ch3-9', this)">
-              <span class="opt-badge">A</span>
-              <span class="opt-text">Hospital</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 9, 'B', 'D', 'q-rat-ch3-9', this)">
-              <span class="opt-badge">B</span>
-              <span class="opt-text">Doctor's office</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 9, 'C', 'D', 'q-rat-ch3-9', this)">
-              <span class="opt-badge">C</span>
-              <span class="opt-text">Community day program</span>
-            </div>
-            
-            <div class="eq-opt" onclick="checkAnswer('ch3', 9, 'D', 'D', 'q-rat-ch3-9', this)">
-              <span class="opt-badge">D</span>
-              <span class="opt-text">Long-term care facility</span>
-            </div>
-            
-          </div>
-          <div class="eq-actions">
-            <button class="btn-toggle-rat" onclick="toggleRationale('q-rat-ch3-9', this)">
-              <span class="icon">💡</span> 查看权威答案与临床精解
-            </button>
-          </div>
-          <div class="eq-rationale-box" id="q-rat-ch3-9" style="display:none;">
-            <div class="rat-correct-banner"><strong>标准权威答案：</strong> 选项 D</div>
-            <div class="rat-content">
-              <strong>临床实操解析与知识点溯源：</strong><br>
-              长期照护院舍（LTC）绝非病患短暂停留数天的冰冷医院，而是长者生命晚期余生常住的“真正的家”！在原书第 40–41 页中特意强调：护理院在空间装潢、居室布置、餐厅格调上必须全力消除冷酷压抑的医疗感，支持工作者必须以家人般的慈爱温情，**为长者营造温馨、充满烟火气与生活尊严的家园氛围（Homelike atmosphere）**。
-            </div>
-          </div>
-        </div>
-        </div>
-
-    </main>
-
-    <footer class="editorial-colophon">
-      <p>Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
-      <p>Chapter 3: Workplace Settings · 双语沉浸学术研读版</p>
-      <p>© Elsevier Canada · 专供加拿大 PSW 学术精研与考证</p>
-    </footer>
+    </div>
   </div>
 
   <script>
@@ -1942,146 +1723,147 @@
           b.classList.remove('active');
         }
       });
+      
       try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
     }
 
-    var themes = ['theme-paper', 'theme-white', 'theme-night'];
-    var themeNames = ['纸色', '纯白', '深色'];
-    var currentThemeIdx = 0;
-    
-    function cycleTheme() {
-      currentThemeIdx = (currentThemeIdx + 1) % themes.length;
-      var html = document.documentElement;
-      themes.forEach(function(t) { html.classList.remove(t); });
-      html.classList.add(themes[currentThemeIdx]);
-      var btn = document.getElementById('themeBtn');
-      if (btn) btn.innerText = themeNames[currentThemeIdx];
-      try { localStorage.setItem('psw_theme_idx', currentThemeIdx); } catch (e) {}
-    }
-
-    function initSettings() {
-      var savedMode = 'bilingual';
-      try { savedMode = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
-      switchLanguageMode(savedMode);
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
       
       try {
-        var savedTheme = parseInt(localStorage.getItem('psw_theme_idx') || '0', 10);
-        if (!isNaN(savedTheme) && savedTheme >= 0 && savedTheme < themes.length) {
-          currentThemeIdx = savedTheme;
-          var html = document.documentElement;
-          themes.forEach(function(t) { html.classList.remove(t); });
-          html.classList.add(themes[currentThemeIdx]);
-          var btn = document.getElementById('themeBtn');
-          if (btn) btn.innerText = themeNames[currentThemeIdx];
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
         }
       } catch (e) {}
     }
 
-    var currentFontIdx = 1;
-    var fontSizes = ['15.5px', '17px', '18.5px', '20px'];
-    function adjustFontSize(delta) {
-      currentFontIdx = Math.max(0, Math.min(fontSizes.length - 1, currentFontIdx + delta));
-      document.documentElement.style.setProperty('--font-base', fontSizes[currentFontIdx]);
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
     }
 
-    initSettings();
-
     function toggleReaderAudioPlay() {
-      if (readerAudio.paused) {
-        readerAudio.play().then(function() {
-          isPlaying = true;
-          document.getElementById('rabPlayBtn').innerText = '⏸';
-        }).catch(function(e) { console.log(e); });
-      } else {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
         readerAudio.pause();
         isPlaying = false;
-        document.getElementById('rabPlayBtn').innerText = '▶';
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
       }
     }
 
     function playParagraphAudio(el) {
-      var start = parseFloat(el.getAttribute('data-start')) || 0;
+      var start = parseFloat(el.getAttribute('data-start') || 0);
       var title = el.getAttribute('data-title') || '';
-      readerAudio.currentTime = start;
-      readerAudio.play().then(function() {
-        isPlaying = true;
-        document.getElementById('rabPlayBtn').innerText = '⏸';
-      }).catch(function(e) { console.log(e); });
-
-      var actives = document.querySelectorAll('.bilingual-paragraph.audio-active');
-      for (var i = 0; i < actives.length; i++) {
-        actives[i].classList.remove('audio-active');
-      }
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
       el.classList.add('audio-active');
       lastActiveEntry = el;
-      document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 3 朗读中';
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
     }
 
-    readerAudio.addEventListener('timeupdate', function() {
-      var cur = readerAudio.currentTime;
-      var dur = readerAudio.duration || 1500;
-      function formatTime(t) {
-        var m = Math.floor(t / 60);
-        var s = Math.floor(t % 60);
-        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
-      }
-      document.getElementById('rabCurTime').innerText = formatTime(cur) + ' / ' + formatTime(dur);
-
-      var entries = document.querySelectorAll('.bilingual-paragraph.audio-trackable');
-      var found = null;
-      for (var i = 0; i < entries.length; i++) {
-        var start = parseFloat(entries[i].getAttribute('data-start')) || 0;
-        var end = parseFloat(entries[i].getAttribute('data-end')) || 0;
-        if (cur >= start && cur < end) {
-          found = entries[i];
-          break;
+    /* Dual-mode Glossary Controls */
+    function setGlossaryMode(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
         }
-      }
-      if (found && found !== lastActiveEntry) {
-        if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
-        found.classList.add('audio-active');
-        lastActiveEntry = found;
-        var title = found.getAttribute('data-title');
-        document.getElementById('rabCurrentTitle').innerText = title ? ('§ ' + title) : 'CH 3 朗读中';
-      }
-    });
-
-    function checkAnswer(ch, qIdx, selectedKey, correctKey, ratId, rowEl) {
-      var card = document.getElementById('q-card-' + ch + '-' + qIdx);
-      if (!card) return;
-      var opts = card.querySelectorAll('.eq-opt');
-      for (var i = 0; i < opts.length; i++) {
-        opts[i].classList.remove('selected-correct', 'selected-wrong');
-      }
-      var statusEl = document.getElementById('q-status-' + ch + '-' + qIdx);
-      if (selectedKey === correctKey) {
-        rowEl.classList.add('selected-correct');
-        if (statusEl) {
-          statusEl.innerText = '回答正确';
-          statusEl.style.color = '#166534';
-        }
+      });
+      if (mode === 'table') {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
       } else {
-        rowEl.classList.add('selected-wrong');
-        if (statusEl) {
-          statusEl.innerText = '回答有误，请查阅临床精解';
-          statusEl.style.color = '#991b1b';
-        }
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
       }
-      var rat = document.getElementById(ratId);
-      if (rat) rat.style.display = 'block';
     }
 
-    function toggleRationale(ratId, btnEl) {
-      var box = document.getElementById(ratId);
-      if (!box) return;
-      if (box.style.display === 'none' || !box.style.display) {
-        box.style.display = 'block';
-        btnEl.innerText = '收起临床精解';
-      } else {
-        box.style.display = 'none';
-        btnEl.innerText = '查看临床精解';
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('kt-container-' + ch);
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
       }
     }
+
+    function filterGlossary(ch, query) {
+      var q = (query || '').trim().toLowerCase();
+      var container = document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-table-row');
+      var cards = container.querySelectorAll('.editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+      });
+    }
+
+    initLanguageMode();
   </script>
 </body>
 </html>
