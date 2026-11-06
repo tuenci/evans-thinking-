@@ -233,30 +233,24 @@
     .content-scroll {
       flex: 1;
       overflow-y: auto;
-      padding: 40px 24px 80px;
+      padding: 0;
+      background: var(--bg-body);
     }
 
     .reading-sheet {
-      max-width: 860px;
+      width: 100%;
+      max-width: 740px;
       margin: 0 auto;
-      background: var(--bg-surface);
-      padding: 48px 56px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
-      border: 1px solid var(--border);
+      background: transparent;
+      padding: 36px 24px 100px;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      box-sizing: border-box;
     }
 
     .sheet-meta-bar {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-      font-size: 12px;
-      font-family: var(--font-sans);
-      color: var(--ink-sub);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      display: none;
     }
 
     .sheet-meta-badge {
@@ -818,15 +812,31 @@
       .sidebar.open {
         transform: translateX(0);
       }
+      .content-scroll {
+        padding: 0;
+      }
       .reading-sheet {
-        padding: 24px 18px;
+        padding: 14px 16px 80px;
+        max-width: 100%;
       }
       .top-bar {
-        padding: 0 12px;
+        height: 44px;
+        padding: 0 10px;
       }
       .cur-title {
-        max-width: 200px;
-        font-size: 13px;
+        display: none;
+      }
+      .search-box {
+        display: none;
+      }
+      .mode-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+      }
+      .reader-audio-bar {
+        height: 40px;
+        padding: 0 10px;
+        font-size: 12px;
       }
     }
   
@@ -2547,13 +2557,12 @@
           <span class="sheet-meta-badge">Front Matter · Title & Notice</span>
           <span class="sheet-meta-edition">Sorrentino 5th Ed.</span>
         </div>
-        <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）封面、数字化资源与法律声明（中英双语对照）</div>
-
+        
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">Cover, Digital Learning Resources & Notice</h3>
                   </div>
@@ -2564,7 +2573,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">一、 书名与作者团队 (Title & Authorship)</h3>
                   </div>
@@ -2581,7 +2590,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">二、 Evolve 官方数字化学生学习资源 (Evolve Student Resources)</h3>
                   </div>
@@ -2598,7 +2607,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">三、 临床免责与法律声明 (Notice and Clinical Scope Disclaimer)</h3>
                   </div>
@@ -2618,23 +2627,12 @@
           <span class="sheet-meta-badge">Front Matter · Table of Contents · Pages v–xiii</span>
           <span class="sheet-meta-edition">48 Chapters in 9 Parts</span>
         </div>
-        <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书总目录（中英双语对照版）</div>
-
+        
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">Table of Contents</h3>
                   </div>
@@ -2645,7 +2643,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一部分：支持工作及其对社会的影响</h3>
                   </div>
@@ -2655,59 +2653,50 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">PART 1: Support Work and Its Impact on Society</h3>
                   </div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 1 章：支持工作者的角色与职责 (第 1 页)</h4>
-<p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 1: The Role and Responsibilities of the Support Worker (p. 1)</strong></p>
+                <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 1: The Role and Responsibilities of the Support Worker (p. 1)</strong></p>
 <li class="editorial-list-item">全加拿大的支持工作概述 | Support Work Across Canada (p. 3)</li>
 <li class="editorial-list-item">医疗卫生照护团队 | The Health Care Team (p. 10)</li>
 <li class="editorial-list-item">展现专业素养 | Being a Professional (p. 14)</li>
 <li class="editorial-list-item">支持工作的目标：通过以服务对象为中心的照护提升生活质量 | The Goal of Support Work: Improved Quality of Life Through Client-Centred Care (p. 16)</li>
 <li class="editorial-list-item">批判性思维、临床决策与解决问题 | Critical Thinking, Decision Making, and Problem-Solving (p. 17)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 2 章：加拿大医疗卫生保健体系 (第 20 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 2: The Canadian Health Care System (p. 20)</strong></p>
 <li class="editorial-list-item">加拿大现行医疗卫生体系概况 | Canada's Current Health Care System (p. 21)</li>
 <li class="editorial-list-item">省与地区政府在医疗卫生中的职能角色 | The Provincial or Territorial Role in Health Care (p. 28)</li>
 <li class="editorial-list-item">医疗保健面临的挑战、补充性服务与发展趋势 | Health Care Challenges, Supplementary Services, and Trends (p. 29)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 3 章：工作场所与照护环境 (第 34 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 3: Workplace Settings (p. 34)</strong></p>
 <li class="editorial-list-item">工作场所设置与所提供的服务项目 | Workplace Settings and Services Provided (p. 36)</li>
 <li class="editorial-list-item">在社区居家照护环境中工作 | Working in Community-Based Settings (p. 37)</li>
 <li class="editorial-list-item">在医疗机构/院舍环境中工作 | Working in Facility-Based Settings (p. 38)</li>
 <li class="editorial-list-item">机构工作实务与日常准则 | Working in a Facility (p. 42)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 4 章：职业伦理与道德规范 (第 48 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 4: Ethics (p. 48)</strong></p>
 <li class="editorial-list-item">文化对信仰、价值观、道德与伦理的影响 | The Influence of Culture on Beliefs, Values, Morals, and Ethics (p. 49)</li>
 <li class="editorial-list-item">伦理道德准则与职业守则 | Codes of Ethics (p. 49)</li>
 <li class="editorial-list-item">医疗卫生伦理的基本原则 | The Principles of Health Care Ethics (p. 50)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 5 章：法律法规：服务对象与照护者的法定权利 (第 59 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 5: Legislation: The Client's Rights and Your Rights (p. 59)</strong></p>
 <li class="editorial-list-item">理解权利的基本概念 | Understanding Rights (p. 61)</li>
 <li class="editorial-list-item">加拿大公民的基本人权 | Basic Human Rights in Canada (p. 61)</li>
 <li class="editorial-list-item">接受医疗卫生服务者的基本权利 | Basic Rights of People Receiving Health Services (p. 61)</li>
 <li class="editorial-list-item">理解相关法律问题与法律责任 | Understanding Legal Issues (p. 69)</li>
 <li class="editorial-list-item">照护工作者的合法权利 | Your Legal Rights (p. 72)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 6 章：健康、安康、疾病与残疾 (第 77 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 6: Health, Wellness, Illness, and Disability (p. 77)</strong></p>
 <li class="editorial-list-item">健康与全人安康 (Wellness) | Health and Wellness (p. 79)</li>
 <li class="editorial-list-item">疾病与身体/认知残疾 | Illness and Disability (p. 87)</li>
 <li class="editorial-list-item">为患病及残障服务对象提供支持 | Supporting Clients With Illness and Disability (p. 88)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 7 章：关怀多元文化与多样性 (第 96 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 7: Caring About Culture and Diversity (p. 96)</strong></p>
 <li class="editorial-list-item">多样性：族裔归属与文化传统 | Diversity: Ethnicity and Culture (p. 98)</li>
 <li class="editorial-list-item">文化对健康信念与生活习惯的影响 | The Effect of Culture (p. 103)</li>
 <li class="editorial-list-item">提供兼具文化敏感度与尊重的照护与支持 | Providing Culturally Sensitive Care and Support (p. 108)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 8 章：压力管理与应对策略 (第 112 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 8: Managing Stress (p. 112)</strong></p>
 <li class="editorial-list-item">认识压力及其生理心理反应 | Stress (p. 113)</li>
 <li class="editorial-list-item">时间管理技巧 | Time Management (p. 120)</li>
 <li class="editorial-list-item">决策制定 | Decision Making (p. 121)</li>
 <li class="editorial-list-item">解决问题的方法 | Problem Solving (p. 122)</li>
 <li class="editorial-list-item">化解工作场所与人际冲突 | Dealing With Conflict (p. 124)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 9 章：人际沟通与交流技巧 (第 129 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 9: Interpersonal Communication (p. 129)</strong></p>
 <li class="editorial-list-item">影响沟通交流的内外因素 | Factors That Influence Communication (p. 131)</li>
 <li class="editorial-list-item">语言沟通 | Verbal Communication (p. 132)</li>
@@ -2719,16 +2708,13 @@
 <li class="editorial-list-item">坚定果断、不卑不亢的沟通方式 | Communicating Assertively (p. 143)</li>
 <li class="editorial-list-item">向服务对象解释操作规程与任务 | Explaining Procedures and Tasks (p. 143)</li>
 <li class="editorial-list-item">与认知障碍/失智症患者的有效沟通 | Communicating With Clients Living With Dementia (p. 145)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 10 章：与他人协作：团队合作与工作委派 (第 149 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 10: Working With Others: Teamwork and Delegation (p. 149)</strong></p>
 <li class="editorial-list-item">医疗照护多学科协作团队 | The Health Care Team (p. 150)</li>
 <li class="editorial-list-item">在主管护士/医师的督导下执业 | Working Under Supervision (p. 154)</li>
 <li class="editorial-list-item">任务指派与工作委派流程 | Assigning and Delegating (p. 156)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 11 章：与服务对象及其家属共处协作 (第 164 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 11: Working With Clients and Their Families (p. 164)</strong></p>
 <li class="editorial-list-item">在保持专业人际界限的同时提供仁爱关怀 | Providing Compassionate Care While Maintaining a Professional Relationship With the Client (p. 165)</li>
 <li class="editorial-list-item">理解并支持服务对象的家庭 | The Client's Family (p. 170)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 12 章：识别与防范虐待、霸凌与骚扰 (第 174 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 12: Abuse, Bullying, and Harassment Awareness (p. 174)</strong></p>
 <li class="editorial-list-item">《加拿大权利与自由宪章》相关法律保障 | Canadian Charter of Rights and Freedoms (p. 176)</li>
 <li class="editorial-list-item">虐待的主要类型（身体、情感、财务、性及忽视） | Types of Abuse (p. 176)</li>
@@ -2739,7 +2725,6 @@
 <li class="editorial-list-item">依法举报虐待的法定责任与义务 | Your Legal Responsibilities in Reporting Abuse (p. 187)</li>
 <li class="editorial-list-item">举报虐待的具体程序与渠道 | How to Report Abuse (p. 188)</li>
 <li class="editorial-list-item">防范针对医护照护工作者的侵害与暴力 | Abuse of Health Care Workers (p. 188)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 13 章：开启您的职业生涯 (第 194 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 13: Starting Your Career (p. 194)</strong></p>
 <li class="editorial-list-item">建立条理与系统规划 | Getting Organized (p. 195)</li>
 <li class="editorial-list-item">设定职业优先级与目标 | Setting Priorities and Goals (p. 195)</li>
@@ -2755,7 +2740,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二部分：身体力学与活动照护</h3>
                   </div>
@@ -2765,23 +2750,20 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">PART 2: Body Mechanics and Movement</h3>
                   </div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 14 章：身体力学与安全转移 (第 215 页)</h4>
-<p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 14: Body Mechanics (p. 215)</strong></p>
+                <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 14: Body Mechanics (p. 215)</strong></p>
 <li class="editorial-list-item">预防职业性人身与脊椎损伤 | Helping to Prevent Personal Injuries (p. 217)</li>
 <li class="editorial-list-item">核心身体力学原则与正确姿态 | Body Mechanics (p. 218)</li>
 <li class="editorial-list-item">协助服务对象体位摆放与变换（仰卧、侧卧、半坐卧位等） | Positioning the Client (p. 231)</li>
 <li class="editorial-list-item">协助服务对象安全转移（床到轮椅、座椅等） | Transferring the Client (p. 240)</li>
 <li class="editorial-list-item">搬运与升降服务对象的安全操作（机械升降机运用） | Lifting a Client (p. 242)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 15 章：运动与日常活动 (第 259 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 15: Exercise and Activity (p. 259)</strong></p>
 <li class="editorial-list-item">长期卧床休息的生理影响与并发症预防 | Bed Rest (p. 260)</li>
 <li class="editorial-list-item">协助行走与下床活动 (Ambulation) 及助行设备运用 | Ambulation (p. 266)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 16 章：康复护理与恢复性照护 (第 282 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 16: Rehabilitation and Restorative Care (p. 282)</strong></p>
 <li class="editorial-list-item">康复照护与恢复性照护的辨析 | Rehabilitative Care Versus Restorative Care (p. 283)</li>
 <li class="editorial-list-item">康复与恢复性照护的核心目标 | Goals of Rehabilitative and Restorative Care (p. 283)</li>
@@ -2795,7 +2777,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三部分：协助服务对象的基本生理照护需求</h3>
                   </div>
@@ -2805,19 +2787,17 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">PART 3: Assisting Clients With Basic Care Needs</h3>
                   </div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 17 章：个人卫生照护 (第 296 页)</h4>
-<p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 17: Personal Hygiene (p. 296)</strong></p>
+                <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 17: Personal Hygiene (p. 296)</strong></p>
 <li class="editorial-list-item">口腔卫生与假牙护理 | Oral Hygiene (p. 297)</li>
 <li class="editorial-list-item">沐浴协助（床上擦浴、盆浴、淋浴） | Bathing (p. 311)</li>
 <li class="editorial-list-item">背部背部按摩技术 | The Back Massage (p. 326)</li>
 <li class="editorial-list-item">会阴部清洁与护理 (Perineal Care) | Perineal Care (p. 328)</li>
 <li class="editorial-list-item">女性经期卫生照护 | Menstrual Care (p. 334)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 18 章：仪容修饰与更衣 (第 337 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 18: Grooming and Dressing (p. 337)</strong></p>
 <li class="editorial-list-item">头发梳理与清洁护理 | Hair Care (p. 338)</li>
 <li class="editorial-list-item">刮胡与面部修饰 | Shaving (p. 347)</li>
@@ -2825,7 +2805,6 @@
 <li class="editorial-list-item">更换衣物、失禁护理垫与病服 | Changing Clothing, Incontinence Briefs, and Hospital Gowns (p. 356)</li>
 <li class="editorial-list-item">穿戴弹力防血栓袜与绷带 | Applying Elastic Anti-Embolic Stockings and Bandages (p. 368)</li>
 <li class="editorial-list-item">仁爱与尊严照护的核心融入 | Compassionate Care (p. 372)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 19 章：感染预防与控制 (第 376 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 19: Preventing Infection (p. 376)</strong></p>
 <li class="editorial-list-item">微生物基础知识（细菌、病毒、真菌） | Microorganisms (p. 378)</li>
 <li class="editorial-list-item">病原体的传播途径与感染链 | The Spread of Pathogens (p. 382)</li>
@@ -2833,7 +2812,6 @@
 <li class="editorial-list-item">手卫生规范（洗手与手部消毒） | Hand Hygiene (p. 392)</li>
 <li class="editorial-list-item">隔离预防措施（常规预防与接触、飞沫、空气传播预防） | Isolation Precautions (p. 401)</li>
 <li class="editorial-list-item">外科无菌技术简介 (Surgical Asepsis) | Surgical Asepsis (p. 411)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 20 章：安全防护与意外防范 (第 416 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 20: Safety (p. 416)</strong></p>
 <li class="editorial-list-item">跌倒与意外伤害的风险评估因素 | Accident Risk Factors (p. 417)</li>
 <li class="editorial-list-item">准确核对与识别服务对象身份 | Identifying the Client (p. 420)</li>
@@ -2845,12 +2823,10 @@
 <li class="editorial-list-item">窒息风险防范与气道异物梗阻 | Preventing Suffocation (p. 440)</li>
 <li class="editorial-list-item">身体约束具的危害及替代预防策略 | Restraints and How to Avoid Using Them (p. 441)</li>
 <li class="editorial-list-item">维护照护者自身的人身安全 | Promoting Your Personal Safety (p. 448)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 21 章：病床与铺床技术 (第 458 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 21: Beds and Bed Making (p. 458)</strong></p>
 <li class="editorial-list-item">服务对象的病床类型与调节功能 | The Client's Bed (p. 460)</li>
 <li class="editorial-list-item">床单、中单与床上用品的规范管理 | Linen (p. 464)</li>
 <li class="editorial-list-item">铺床操作技术（空床、有人床、麻醉手术床） | Bed Making (p. 467)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 22 章：皮肤护理与创伤/压疮预防 (第 480 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 22: Skin Care and Prevention of Wounds (p. 480)</strong></p>
 <li class="editorial-list-item">伤口创面的主要类型 | Types of Wounds (p. 483)</li>
 <li class="editorial-list-item">皮肤撕裂伤 (Skin Tears) 的防范与保护 | Skin Tears (p. 485)</li>
@@ -2858,12 +2834,10 @@
 <li class="editorial-list-item">下肢与足部血管性溃疡 | Leg and Foot Ulcers (p. 493)</li>
 <li class="editorial-list-item">创面愈合的生理过程与影响因素 | Wound Healing (p. 496)</li>
 <li class="editorial-list-item">基础敷料类型与更换观察要点 | Dressings (p. 499)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 23 章：促进舒适、疼痛管理与睡眠支持 (第 511 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 23: Promoting Client Comfort, Pain Management, and Sleep (p. 511)</strong></p>
 <li class="editorial-list-item">促进服务对象的舒适感与身心安宁 | Promoting Client Comfort and Well-Being (p. 512)</li>
 <li class="editorial-list-item">疼痛对身心健康的影响及疼痛评估汇报 | Pain and Its Impact on a Client's Well-Being (p. 513)</li>
 <li class="editorial-list-item">休息与充足睡眠的促进措施 | Rest and Sleep (p. 520)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 24 章：测量身长、体重与生命体征 (第 528 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 24: Measuring Height, Weight, and Vital Signs (p. 528)</strong></p>
 <li class="editorial-list-item">测量身高与体重 | Measuring Height and Weight (p. 529)</li>
 <li class="editorial-list-item">生命体征的测量与规范汇报原则 | Measuring and Reporting Vital Signs (p. 530)</li>
@@ -2871,14 +2845,12 @@
 <li class="editorial-list-item">脉搏测量（桡动脉、心尖搏动） | Pulse (p. 540)</li>
 <li class="editorial-list-item">呼吸频率与节律观察 | Respirations (p. 544)</li>
 <li class="editorial-list-item">血压测量与听诊技术 | Blood Pressure (p. 544)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 25 章：医学专业术语基础 (第 557 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 25: Medical Terminology (p. 557)</strong></p>
 <li class="editorial-list-item">词根、前缀与后缀的构词规则 | Word Elements (p. 558)</li>
 <li class="editorial-list-item">医学构词组合方法 | Combining Word Elements (p. 562)</li>
 <li class="editorial-list-item">腹部九分法与四象限划分 | Abdominal Regions (p. 562)</li>
 <li class="editorial-list-item">人体解剖方位术语 | Directional Terms (p. 562)</li>
 <li class="editorial-list-item">常用医学缩写与首字母缩略词 | Abbreviations (p. 563)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 26 章：照护计划制定、口头汇报与文书记录 (第 568 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 26: Planning, Reporting, and Recording Client Care (p. 568)</strong></p>
 <li class="editorial-list-item">院舍/机构内的照护计划制定流程 | The Care-Planning Process in Facilities (p. 569)</li>
 <li class="editorial-list-item">社区/居家环境中的照护计划制定流程 | The Care-Planning Process in Community Settings (p. 572)</li>
@@ -2891,7 +2863,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第四部分：协助服务对象的营养摄入与排泄照护</h3>
                   </div>
@@ -2901,13 +2873,12 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">PART 4: Assisting Clients With Nutrition and Elimination</h3>
                   </div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 27 章：营养支持与体液平衡 (第 591 页)</h4>
-<p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 27: Nutrition and Fluids (p. 591)</strong></p>
+                <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 27: Nutrition and Fluids (p. 591)</strong></p>
 <li class="editorial-list-item">基础营养素（碳水化合物、蛋白质、脂肪、维生素与矿物质） | Basic Nutrition (p. 592)</li>
 <li class="editorial-list-item">加拿大饮食指南与科学膳食 | Canada's Dietary Guidelines (p. 594)</li>
 <li class="editorial-list-item">全生命周期各阶段的营养需求 | Nutrition Throughout the Life Cycle (p. 599)</li>
@@ -2918,12 +2889,10 @@
 <li class="editorial-list-item">治疗性与治疗特殊饮食（低盐、糖尿病饮食、碎食、泥状饮食） | Special Diets (p. 606)</li>
 <li class="editorial-list-item">协助服务对象进食进餐实务技能 | Assisting Clients With Eating (p. 610)</li>
 <li class="editorial-list-item">体液平衡（出入水量记录与水肿/脱水观察） | Fluid Balance (p. 614)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 28 章：管饲营养与静脉输液监护 (第 624 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 28: Enteral Nutrition and Intravenous Therapy (p. 624)</strong></p>
 <li class="editorial-list-item">肠内营养管饲支持（鼻胃管、胃造口管 G-tube） | Enteral Nutrition (p. 625)</li>
 <li class="editorial-list-item">静脉输液疗法的观察与照护职责 | Intravenous Therapy (p. 629)</li>
 <li class="editorial-list-item">皮下输液疗法的观察与支持 | Subcutaneous Infusion Therapy (p. 632)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 29 章：排尿生理与泌尿系照护 (第 636 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 29: Urinary Elimination (p. 636)</strong></p>
 <li class="editorial-list-item">正常排尿模式与观察指标 | Normal Urination (p. 638)</li>
 <li class="editorial-list-item">尿失禁的原因、类型与失禁护理 | Urinary Incontinence (p. 648)</li>
@@ -2933,7 +2902,6 @@
 <li class="editorial-list-item">尿液床旁快速检测 | Testing Urine (p. 669)</li>
 <li class="editorial-list-item">输尿管造口术与回肠膀胱术患者的照护 | The Client With a Ureterostomy or an Ileal Conduit (p. 673)</li>
 <li class="editorial-list-item">排泄照护中的尊严与同理心关怀 | Compassionate Care (p. 675)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 30 章：排便生理与肠道照护 (第 679 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 30: Bowel Elimination (p. 679)</strong></p>
 <li class="editorial-list-item">正常肠道排便与排泄特征 | Normal Bowel Movements (p. 680)</li>
 <li class="editorial-list-item">影响排便的因素 | Factors Affecting Bowel Movement (p. 681)</li>
@@ -2949,7 +2917,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第五部分：人体系统构造与常见疾病学</h3>
                   </div>
@@ -2959,17 +2927,15 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">PART 5: Understanding Body Systems and Disorders</h3>
                   </div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 31 章：生命周期生长发育全阶段 (第 698 页)</h4>
-<p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 31: Growth and Development (p. 698)</strong></p>
+                <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 31: Growth and Development (p. 698)</strong></p>
 <li class="editorial-list-item">生长发育的基本生物学原则 | Principles (p. 700)</li>
 <li class="editorial-list-item">人类发展主要经典理论（埃里克森心理社会阶段等） | Selected Theories of Human Development (p. 700)</li>
 <li class="editorial-list-item">从婴儿期到高龄期的生长发育各阶段特征 | Growth and Development (p. 703)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 32 章：人体解剖构造与生理功能 (第 718 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 32: Body Structure and Function (p. 718)</strong></p>
 <li class="editorial-list-item">解剖学术语标准 | Anatomical Terms (p. 720)</li>
 <li class="editorial-list-item">细胞、组织、器官、体腔与器官系统 | Cells, Tissues, Organs, Body Cavities, and Organ Systems (p. 720)</li>
@@ -2984,7 +2950,6 @@
 <li class="editorial-list-item">消化系统与营养吸收 | The Digestive System (p. 743)</li>
 <li class="editorial-list-item">泌尿系统（肾脏、输尿管、膀胱、尿道） | The Urinary System (p. 746)</li>
 <li class="editorial-list-item">生殖系统（男性与女性生殖器官） | The Reproductive System (p. 748)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 33 章：各系统常见疾病与机能障碍 (第 752 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 33: Common Diseases and Disorders (p. 752)</strong></p>
 <li class="editorial-list-item">传染病与接触性疾病 | Communicable Diseases (p. 755)</li>
 <li class="editorial-list-item">癌症及抗癌治疗相关照护 | Cancer (p. 766)</li>
@@ -2998,12 +2963,10 @@
 <li class="editorial-list-item">消化系统疾病（胃食管反流、溃疡、肝胆疾病） | Digestive System Disorders (p. 802)</li>
 <li class="editorial-list-item">泌尿系统疾病（尿路感染 UTI、慢性肾衰竭） | Urinary System Disorders (p. 805)</li>
 <li class="editorial-list-item">生殖系统疾病 | Reproductive System Disorders (p. 807)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 34 章：听觉与视觉障碍照护 (第 812 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 34: Hearing and Vision Disorders (p. 812)</strong></p>
 <li class="editorial-list-item">耳部疾病与听力损伤（助听器使用与沟通策略） | Ear Disorders and Hearing Impairment (p. 813)</li>
 <li class="editorial-list-item">眼部疾病与视力障碍（白内障、青光眼、黄斑变性） | Eye Disorders and Vision Impairment (p. 818)</li>
 <li class="editorial-list-item">视障/听障服务导盲犬与辅助动物规范 | Service Dogs for People with Hearing or Vision Challenges (p. 825)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 35 章：言语与语言障碍照护 (第 829 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 35: Speech and Language Disorders (p. 829)</strong></p>
 <li class="editorial-list-item">失语症 (Aphasia) 的分类与表现 | Aphasia (p. 830)</li>
 <li class="editorial-list-item">言语失用症 (Apraxia of Speech) | Apraxia of Speech (p. 831)</li>
@@ -3011,12 +2974,10 @@
 <li class="editorial-list-item">言语障碍对服务对象的情感与社交冲击 | Emotional Effects of Speech and Language Disorders (p. 831)</li>
 <li class="editorial-list-item">言语语言康复治疗原则 | Treatment for Speech and Language Disorders (p. 833)</li>
 <li class="editorial-list-item">支持有交流障碍的服务对象并开展有效沟通 | Supporting and Communicating With Clients (p. 834)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 36 章：发育障碍与智力残疾 (第 839 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 36: Developmental Disorders and Disabilities (p. 839)</strong></p>
 <li class="editorial-list-item">发育障碍与残疾人士的专业照护原则 | Caring for a Client Who is Living with a Developmental Disability or Disorder (p. 840)</li>
 <li class="editorial-list-item">发育障碍常见类型（自闭症谱系障碍、唐氏综合征、脑瘫） | Types of Developmental Disorders and Disabilities (p. 841)</li>
 <li class="editorial-list-item">发育障碍对家庭系统的长期影响与喘息照护 | The Impact of Developmental Disorders and Disabilities on the Family (p. 851)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 37 章：精神心理健康与精神障碍 (第 856 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 37: Mental Health Disorders (p. 856)</strong></p>
 <li class="editorial-list-item">精神健康与精神疾病的连续谱系 | Mental Health and Mental Health Disorders (p. 859)</li>
 <li class="editorial-list-item">获得性脑损伤 (ABI) 的照护要点 | Acquired Brain Injuries (p. 865)</li>
@@ -3032,7 +2993,6 @@
 <li class="editorial-list-item">睡眠-觉醒障碍 | Sleep-Wake Disorders (p. 883)</li>
 <li class="editorial-list-item">物质相关与成瘾障碍（药物与酒精滥用） | Substance-Related and Addictive Disorders (p. 884)</li>
 <li class="editorial-list-item">自杀行为障碍与危机干预意识 | Suicidal Behaviour Disorder (p. 885)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 38 章：定向障碍、谵妄与认知症/失智症 (第 891 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 38: Disorientation, Delirium, and Dementia (p. 891)</strong></p>
 <li class="editorial-list-item">定向障碍的表现与原因 | Disorientation (p. 893)</li>
 <li class="editorial-list-item">谵妄 (Delirium) 的急性特征与医疗急症鉴别 | Delirium (p. 895)</li>
@@ -3041,7 +3001,6 @@
 <li class="editorial-list-item">继发性失智症（血管性痴呆等） | Secondary Dementias (p. 901)</li>
 <li class="editorial-list-item">抑郁与失智症的鉴别与重叠 | Depression and Dementia (p. 902)</li>
 <li class="editorial-list-item">失智症的病程分期（轻度、中度、重度） | Stages of Dementia (p. 903)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 39 章：失智症患者的日常照护与行为应对 (第 906 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 39: Supporting Clients Who Are Living With Dementia (p. 906)</strong></p>
 <li class="editorial-list-item">失智症患者的全面生活支持与尊严维护 | Supporting Clients Who Are Living With Dementia (p. 906)</li>
 <li class="editorial-list-item">应对行为反应（游荡、日落综合征、激越、幻觉）的非药物管理 | Managing Responsive Behaviours (p. 914)</li>
@@ -3052,7 +3011,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第六部分：为全年龄段服务对象提供安全照护</h3>
                   </div>
@@ -3062,13 +3021,12 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">PART 6: Providing and Promoting Safe Care for Clients of All Ages</h3>
                   </div>
                 </div>
-                <h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 40 章：促进氧合与呼吸道照护 (第 927 页)</h4>
-<p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 40: Promoting Oxygenation (p. 927)</strong></p>
+                <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 40: Promoting Oxygenation (p. 927)</strong></p>
 <li class="editorial-list-item">影响机体氧需求的生理因素 | Factors Affecting Oxygen Needs (p. 929)</li>
 <li class="editorial-list-item">呼吸功能改变（低氧血症、呼吸困难）的表现 | Altered Respiratory Function (p. 931)</li>
 <li class="editorial-list-item">改善与促进氧合的体位与照护措施 | Promoting Oxygenation (p. 933)</li>
@@ -3078,15 +3036,12 @@
 <li class="editorial-list-item">气道吸引操作配合要点 | Suctioning an Airway (p. 952)</li>
 <li class="editorial-list-item">机械通气（呼吸机）患者的日常监护 | Mechanical Ventilation (p. 952)</li>
 <li class="editorial-list-item">胸腔闭式引流管的观察与安全原则 | Chest Tubes (p. 954)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 41 章：冷敷与热敷疗法 (第 959 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 41: Heat and Cold Applications (p. 959)</strong></p>
 <li class="editorial-list-item">热敷的生理效应、适应证与安全防烫伤规范 | Heat Applications (p. 961)</li>
 <li class="editorial-list-item">冷敷的生理效应、适应证与防冻伤组织保护 | Cold Applications (p. 969)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 42 章：产妇与新生儿照护 (第 976 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 42: Caring for Infants and Their Parents (p. 976)</strong></p>
 <li class="editorial-list-item">产褥期产妇的身心照护与母乳喂养支持 | Caring for New Birth Parents (p. 977)</li>
 <li class="editorial-list-item">新生儿与婴儿日常照护（抱持、更换尿布、脐带与割礼护理） | Caring for Infants (p. 982)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 43 章：婴幼儿与青少年照护 (第 1005 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 43: Caring for the Young (p. 1005)</strong></p>
 <li class="editorial-list-item">为患病或残障儿童与青少年提供照护支持 | Supporting the Infant, Child, or Teen (p. 1006)</li>
 <li class="editorial-list-item">满足婴幼儿与儿童的营养需求 | Assisting Infants and Children to Meet Nutritional Needs (p. 1007)</li>
@@ -3094,14 +3049,12 @@
 <li class="editorial-list-item">儿童管教与行为引导原则 | Discipline (p. 1011)</li>
 <li class="editorial-list-item">支持展现挑战性行为的儿童 | Supporting the Child Who Demonstrates Challenging Behaviours (p. 1012)</li>
 <li class="editorial-list-item">儿科环境中的感染预防控制 | Preventing Infections (p. 1012)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 44 章：老年人身心照护 (第 1019 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 44: Caring for Older Persons (p. 1019)</strong></p>
 <li class="editorial-list-item">老年服务对象的整体照护哲学 | Caring for Older Clients (p. 1020)</li>
 <li class="editorial-list-item">老年期情感与社交环境的变化（丧亲、角色转变） | Emotional and Social Changes (p. 1022)</li>
 <li class="editorial-list-item">老年期抑郁症的识别与干预配合 | Depression in Older Persons (p. 1024)</li>
 <li class="editorial-list-item">衰老引起的机体生理变化（感官、消化、泌尿、肌肉萎缩） | Physical Changes (p. 1025)</li>
 <li class="editorial-list-item">老年人的性观念、亲密关系与情感需求 | The Older Person and Sexuality (p. 1029)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 45 章：家庭管理与居家照料 (第 1033 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 45: Home Management (p. 1033)</strong></p>
 <li class="editorial-list-item">支持工作者在居家环境中的角色与权责边界 | The Support Worker's Role in Home Management (p. 1035)</li>
 <li class="editorial-list-item">居家照料任务的组织与高效规划 | Getting Organized (p. 1038)</li>
@@ -3111,7 +3064,6 @@
 <li class="editorial-list-item">洗衣与衣物消毒烘干流程 | Doing Laundry (p. 1045)</li>
 <li class="editorial-list-item">垃圾分类回收与堆肥环保处理 | Recycling Items and Composting (p. 1049)</li>
 <li class="editorial-list-item">应对照护计划之外任务的专业处理原则 | Performing Tasks Not Included on the Client's Care Plan (p. 1051)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 46 章：药物管理与协助给药 (第 1055 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 46: Medication Management (p. 1055)</strong></p>
 <li class="editorial-list-item">执业范围 (Scope of Practice)：支持工作者在药物协助中的法定角色 | Scope of Practice: the Support Worker's Role (p. 1057)</li>
 <li class="editorial-list-item">药物在体内的药理作用与药代动力学基础 | How Medications Work in the Body (p. 1059)</li>
@@ -3121,13 +3073,11 @@
 <li class="editorial-list-item">协助用药安全的“十大核对原则” (The 10 "Rights" of Medication Management) | The 10 "Rights" of Medication Management (p. 1071)</li>
 <li class="editorial-list-item">处方药标签阅读与识别要求 | Medication Labelling Requirements (p. 1072)</li>
 <li class="editorial-list-item">药物差错的紧急应对与报告流程 | Reporting Medication Errors (p. 1072)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 47 章：急重症照护与围手术期支持 (第 1086 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 47: Working in Acute Care (p. 1086)</strong></p>
 <li class="editorial-list-item">协助服务对象在医院各科室间转运与交接班 | Supporting the Client During Transitions (p. 1087)</li>
 <li class="editorial-list-item">协助医生/护士进行体格检查 | Assisting With Physical Examinations (p. 1090)</li>
 <li class="editorial-list-item">指导服务对象为体检做好身心准备 | Preparing the Client for a Physical Exam (p. 1093)</li>
 <li class="editorial-list-item">为接受手术的服务对象提供术前准备与术后基础照护 | Supporting the Client Who Is Having Surgery (p. 1096)</li>
-<h4 class="sub-h4" style="margin:20px 0 10px; color:#1e3a8a; font-size:16px;">第 48 章：临终关怀、安宁疗护与哀伤抚慰 (第 1110 页)</h4>
 <p class="general-prose" style="margin-bottom:16px; color:#334155;"><strong>Chapter 48: End-of-Life Care (p. 1110)</strong></p>
 <li class="editorial-list-item">威胁生命的终末期疾病 | Life-Threatening Conditions (p. 1111)</li>
 <li class="editorial-list-item">面对死亡与临终的态度、文化与信仰差异 | Attitudes Toward Death and Dying (p. 1111)</li>
@@ -3142,7 +3092,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">附录与全书参考索引</h3>
                   </div>
@@ -3152,7 +3102,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">Appendices & References</h3>
                   </div>
@@ -3171,13 +3121,12 @@
           <span class="sheet-meta-badge">Front Matter · Instructor Preface · Pages xvii–xxi</span>
           <span class="sheet-meta-edition">5th Edition Core Highlights</span>
         </div>
-        <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）教师序言与核心革新解析（中英双语对照）</div>
-
+        
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">Instructor Preface & 5th Edition Key Enhancements</h3>
                   </div>
@@ -3188,7 +3137,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">一、 第5版修订背景与全加职业标准</h3>
                   </div>
@@ -3206,7 +3155,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">二、 第5版教材核心内容革新要点</h3>
                   </div>
@@ -3236,13 +3185,12 @@
           <span class="sheet-meta-badge">Front Matter · Student Preface · Pages xxii–xxix</span>
           <span class="sheet-meta-edition">High-Yield Study System</span>
         </div>
-        <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）学生前言与高效学习指南（中英双语对照）</div>
-
+        
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">Student Preface & Study Guidelines</h3>
                   </div>
@@ -3253,7 +3201,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一部分：致未来的支持工作者 —— 您的神圣使命与专业角色</h3>
                   </div>
@@ -3271,7 +3219,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二部分：SQRRR 五步高效医学阅读与学习法</h3>
                   </div>
@@ -3321,7 +3269,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三部分：教材八大核心教学特色图解指南</h3>
                   </div>
@@ -3382,13 +3330,12 @@
           <span class="sheet-meta-badge">Reference · Core PSW Glossary</span>
           <span class="sheet-meta-edition">Phonetics & Clinical Context</span>
         </div>
-        <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）核心专业术语汇编（中英双语对照）</div>
-
+        
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">Canadian Support Worker Essential Glossary & Key Terms</h3>
                   </div>
@@ -3399,7 +3346,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">一、 核心执业身份与医疗体系术语 (Professional Identity & Healthcare System)</h3>
                   </div>
@@ -3509,7 +3456,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">二、 人本照护 DIPPS 五大基石原则 (DIPPS Core Principles)</h3>
                   </div>
@@ -3529,7 +3476,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">三、 日常照护与日常生活活动能力 (Daily Living & Clinical Care)</h3>
                   </div>
@@ -3736,44 +3683,13 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Chapter 1: The Role and Responsibilities of the Support Worker</h3>
-                  </div>
-                </div>
-                
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">第 1 章：支持工作者的角色与职责（原版逐字逐句 19 页全文典藏版）</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 1 Opener & Learning Objectives (Page 1)</h3>
                   </div>
@@ -3996,7 +3912,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：支持工作的本质与崇高宗旨 (Pages 2 - 3)</h3>
                   </div>
@@ -4035,7 +3951,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：支持工作在加拿大全境的职业现状与场所 (Pages 3 - 4)</h3>
                   </div>
@@ -4060,7 +3976,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：支持工作者的六大核心工作职责 (Pages 4 - 5)</h3>
                   </div>
@@ -4125,7 +4041,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第四节：支持工作者真实一日工作实录 (Pages 5 - 9)</h3>
                   </div>
@@ -4169,7 +4085,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第五节：受助人群类别与服务对象全景 (Pages 9 - 10)</h3>
                   </div>
@@ -4211,7 +4127,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第六节：受监管医护人员与未受监管照护者 (Page 10)</h3>
                   </div>
@@ -4247,7 +4163,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第七节：跨学科医疗团队全览表 Table 1.1 (Pages 11 - 12)</h3>
                   </div>
@@ -4281,7 +4197,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第八节：法定执业范围、督导机制与授权委派原则 (Page 13)</h3>
                   </div>
@@ -4322,7 +4238,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第九节：展现专业素养、仪表与人际界限 (Pages 14 - 16)</h3>
                   </div>
@@ -4340,7 +4256,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 1.1 消极言辞与积极职业表达对比表 (BOX 1.1 Negative vs Positive Statements)</h4>
@@ -4365,7 +4280,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 1.2 专业仪表规范 13 条黄金法则 (Practices for a Professional Appearance)</h4>
@@ -4409,7 +4323,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 1.3 严守界限：将私人琐事彻底排除在执业场所之外 (BOX 1.3 Keeping Personal Matters Out of Workplace)</h4>
@@ -4438,7 +4351,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第十节：以服务对象为中心的照护与 DIPPS 核心原则 (Pages 16 - 17)</h3>
                   </div>
@@ -4473,7 +4386,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 1.4 DIPPS 临床实践十项落地行动准则 (BOX 1.4 DIPPS Action Steps)</h4>
@@ -4502,7 +4414,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第十一节：临床批判性思维与解决问题方法 (Page 17)</h3>
                   </div>
@@ -4519,7 +4431,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第十二节：全书章节要点回顾与批判性思维实战 (Page 18)</h3>
                   </div>
@@ -5112,27 +5024,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 2: The Canadian Health Care System</div>
-<div class="chapter-h1-anchor" style="display:none;">第 2 章：加拿大医疗卫生保健体系（原版逐字逐句 14 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 2 Opener & Learning Objectives (Page 20)</h3>
                   </div>
@@ -5142,7 +5041,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -5159,7 +5058,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 2 Key Terms (Page 21)</h3>
                   </div>
@@ -5399,7 +5298,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：加拿大现行医疗体制总览与 Medicare 核心理念 (Pages 21 - 22)</h3>
                   </div>
@@ -5436,7 +5335,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：《加拿大健康法案》五大基石原则 (Page 22)</h3>
                   </div>
@@ -5446,7 +5345,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 2.1 《加拿大健康法案》规定的全民医疗五大准则 (The Five Principles of Medicare)</h4>
@@ -5476,7 +5374,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：加拿大医疗体制百年演进史与“最伟大的加拿大人” (Pages 22 - 23)</h3>
                   </div>
@@ -5519,7 +5417,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第四节：联邦与省/地区政府的法定分工与原住民医疗行动呼吁 (Pages 23 - 25)</h3>
                   </div>
@@ -5537,7 +5435,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 2.3 加拿大卫生部在原住民医疗中的历史角色演变 (Health Canada's Role in Indigenous Health Care)</h4>
@@ -5567,7 +5464,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 2.4 加拿大真相与和解委员会关于健康的七大呼吁 (TRC Seven Health Calls to Action)</h4>
@@ -5603,7 +5499,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第五节：医疗服务交付的三大层级与向居家照护的战略重心转移 (Pages 25 - 28)</h3>
                   </div>
@@ -5641,7 +5537,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第六节：居家照护服务四大范畴与省/地区职责分工 (Pages 27 - 29)</h3>
                   </div>
@@ -5659,7 +5555,6 @@
                   <aside class="editorial-box-container box-theme-terracotta">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">🏡</span>
                         <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
                       </div>
                       <h4 class="box-title-en">BOX 2.5 居家照护的行政管理与交付模式 (How Home Care Is Governed and Delivered)</h4>
@@ -5741,7 +5636,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第七节：加拿大医疗体制面临的五大严峻挑战、补充保险与区域改革 (Pages 29 - 30)</h3>
                   </div>
@@ -5767,7 +5662,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第八节：替代医学、健康促进与支持工作者的前沿预防使命 (Pages 31)</h3>
                   </div>
@@ -5812,7 +5707,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【本章复习与核心要点回顾】Chapter 2 Review (Page 32)</h3>
                   </div>
@@ -5822,7 +5717,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">核心要点清单 (KEY POINTS)</h3>
                   </div>
@@ -5839,7 +5734,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">临床批判性思维修炼 (CRITICAL THINKING IN PRACTICE)</h3>
                   </div>
@@ -6341,27 +6236,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 3: Workplace Settings</div>
-<div class="chapter-h1-anchor" style="display:none;">第 3 章：工作场所与执业环境（原版逐字逐句 14 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 3 Opener & Learning Objectives (Page 34)</h3>
                   </div>
@@ -6371,7 +6253,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -6388,7 +6270,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 3 Key Terms (Page 35)</h3>
                   </div>
@@ -6693,7 +6575,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：两大执业阵地全景与原住民社区执业 (Pages 36 - 37)</h3>
                   </div>
@@ -6725,7 +6607,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：社区场景深度拆解：居家支持、成人日托与支持型住房 (Pages 37 - 38)</h3>
                   </div>
@@ -6757,7 +6639,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：四大工作环境利弊大起底与从业抉择 (Pages 39 - 45)</h3>
                   </div>
@@ -6767,7 +6649,6 @@
                   <aside class="editorial-box-container box-theme-terracotta">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">🏡</span>
                         <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
                       </div>
                       <h4 class="box-title-en">BOX 3.1 居家照护执业的优势与挑战对比 (Benefits and Challenges of Working in Home Care)</h4>
@@ -6811,7 +6692,6 @@
                   <aside class="editorial-box-container box-theme-terracotta">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">🏡</span>
                         <span class="box-badge-pill">PRACTICE SETTING · 执业环境与长者自决实务聚焦</span>
                       </div>
                       <h4 class="box-title-en">BOX 3.2 长期照护院舍（养老院）执业利弊对比 (Benefits and Challenges of Working in LTC)</h4>
@@ -6841,7 +6721,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 3.3 直接受雇于案主本人的利弊对比 (Benefits and Challenges of Working Directly for Clients)</h4>
@@ -6871,7 +6750,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">综合医院、亚急性医疗与 BOX 3.4 机构执业利弊 (Hospitals, Subacute Care & BOX 3.4)</h4>
@@ -6901,7 +6779,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【本章复习与核心要点回顾】Chapter 3 Review (Page 46)</h3>
                   </div>
@@ -6911,7 +6789,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">核心要点清单 (KEY POINTS)</h3>
                   </div>
@@ -6928,7 +6806,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">临床批判性思维修炼 (CRITICAL THINKING IN PRACTICE)</h3>
                   </div>
@@ -7382,27 +7260,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 4: Ethics</div>
-<div class="chapter-h1-anchor" style="display:none;">第 4 章：职业伦理与行为准则（原版逐字逐句 11 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 4 Opener & Learning Objectives (Page 48)</h3>
                   </div>
@@ -7412,7 +7277,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -7429,7 +7294,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 4 Key Terms (Page 49)</h3>
                   </div>
@@ -7578,7 +7443,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：伦理学本质、道德价值观与文化底蕴 (Pages 49 - 50)</h3>
                   </div>
@@ -7615,7 +7480,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：医疗卫生伦理四大基石原则 (Pages 50 - 53)</h3>
                   </div>
@@ -7633,7 +7498,6 @@
                   <aside class="editorial-box-container box-theme-lavender">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">🔒</span>
                         <span class="box-badge-pill">ETHICAL STANDARD · 职业伦理与隐私保密准则</span>
                       </div>
                       <h4 class="box-title-en">BOX 4.1 支持工作者职业伦理守则范本 (A Sample Code of Ethics)</h4>
@@ -7663,7 +7527,6 @@
                   <aside class="editorial-box-container box-theme-case">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📋</span>
                         <span class="box-badge-pill">CLINICAL CASE STUDY · 临床真实案例实操思维修炼</span>
                       </div>
                       <h4 class="box-title-en">BOX 4.2 临床伦理困境案例深度推演 (Ethical Dilemmas Scenarios 1 & 2)</h4>
@@ -7693,7 +7556,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：职业人际界限、利益冲突与吹哨人制度 (Pages 54 - 58)</h3>
                   </div>
@@ -7719,7 +7582,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【本章复习与核心要点回顾】Chapter 4 Review (Page 57)</h3>
                   </div>
@@ -7729,7 +7592,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">核心要点清单 (KEY POINTS)</h3>
                   </div>
@@ -7746,7 +7609,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">临床批判性思维修炼 (CRITICAL THINKING IN PRACTICE)</h3>
                   </div>
@@ -8222,39 +8085,11 @@
           <span class="sheet-meta-badge">Chapter 5 Full Text · Pages 59–76 Unabridged</span>
           <span class="sheet-meta-edition">Legislation & Client Rights</span>
         </div>
-        
-    <div class="ch5-editorial-flow">
-      <!-- Chapter Hero Banner -->
-      <header class="chapter-hero-editorial">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-tag">CHAPTER 05</span>
-          <span class="eyebrow-sep">·</span>
-          <span class="eyebrow-desc">SORRENTINO 5TH EDITION · 逐页全真无损中英双语研读</span>
-        </div>
-        <h1 class="hero-title-en">Legislation: The Client's Rights and Your Rights</h1>
-        <h2 class="hero-title-cn">法律法规：服务对象与照护者的法定权利</h2>
-        <div class="hero-meta-bar">
-          <span class="meta-item">📖 原版第 59 至 76 页（共 18 页扫描全量重构）</span>
-          <span class="meta-item">⚖️ 涵盖宪章人权 · 长期照护法案 · 侵权过失 · 职业安全</span>
-          <span class="meta-item">🔊 支持段落轻触点读 · 专业真人声原音导学</span>
-        </div>
-        
-        <!-- Page Anchors Ribbon -->
-        <div class="page-jump-ribbon">
-          <span class="ribbon-label">快速页码索引：</span>
-          <div class="ribbon-scroll">
-    <a href="#page-59" class="ribbon-chip">p.59</a><a href="#page-60" class="ribbon-chip">p.60</a><a href="#page-61" class="ribbon-chip">p.61</a><a href="#page-62" class="ribbon-chip">p.62</a><a href="#page-63" class="ribbon-chip">p.63</a><a href="#page-64" class="ribbon-chip">p.64</a><a href="#page-65" class="ribbon-chip">p.65</a><a href="#page-66" class="ribbon-chip">p.66</a><a href="#page-67" class="ribbon-chip">p.67</a><a href="#page-68" class="ribbon-chip">p.68</a><a href="#page-69" class="ribbon-chip">p.69</a><a href="#page-70" class="ribbon-chip">p.70</a><a href="#page-71" class="ribbon-chip">p.71</a><a href="#page-72" class="ribbon-chip">p.72</a><a href="#page-73" class="ribbon-chip">p.73</a><a href="#page-74" class="ribbon-chip">p.74</a><a href="#page-75" class="ribbon-chip">p.75</a><a href="#page-76" class="ribbon-chip">p.76</a>
-          </div>
-        </div>
-      </header>
-      
-      <!-- Continuous Narrative Body -->
-      <main class="editorial-stream">
-    <div id="page-59"></div>
+        <div id="page-59"></div>
                 <aside class="editorial-box-container box-theme-blue">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🎯</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">LEARNING OBJECTIVES · 本章学习与执业考核核心目标</span>
                     </div>
                     <h4 class="box-title-en">OBJECTIVES</h4>
@@ -8315,14 +8150,7 @@
                 </div>
                 
             <div class="page-anchor-marker" id="page-60">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 60</span>
-                <span class="marker-text-cn">· 原书第 60 页</span>
-                <span class="marker-badge">IMG_6889.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 60</span>
             </div>
             
                 <div class="editorial-section-divider">
@@ -8877,14 +8705,7 @@
                     </div></div>
 
             <div class="page-anchor-marker" id="page-61">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 61</span>
-                <span class="marker-text-cn">· 原书第 61 页</span>
-                <span class="marker-badge">IMG_6890.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 61</span>
             </div>
             
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="172.5" data-end="268.0" data-title="Provincial Human Rights Codes" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -9057,27 +8878,7 @@
                       <div class="item-en"><strong>• Hiring practices</strong></div>
                       <div class="item-cn">机构招聘与聘用实务中的公平与反偏见规范</div>
                     </li>
-                    </ul>
-</div>
-
-            <div class="page-anchor-marker" id="page-62">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 62</span>
-                <span class="marker-text-cn">· 原书第 62 页</span>
-                <span class="marker-badge">IMG_6891.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
-            </div>
-            
-                    <div class="continuation-callout">
-                      <span class="cc-icon">📌</span>
-                      <span class="cc-text-cn">承接第 61 页底正文：《人权法案》所规制事项（续）/ Continued from Page 61 Human Rights Act List:</span>
-                    </div>
-                    <div class="editorial-list-block">
-<ul class="editorial-list">
-
+                    
                     <li class="editorial-list-item">
                       <div class="item-en"><strong>• Housing</strong></div>
                       <div class="item-cn">住房保障：安全宜居、免遭歧视性驱逐的居住环境与租住权利</div>
@@ -9110,6 +8911,10 @@
                     </ul>
 </div>
 
+            <div class="page-anchor-marker" id="page-62">
+              <span class="marker-pill">p. 62</span>
+            </div>
+            
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="268.0" data-end="355.0" data-title="Complex-Care Facility Legislation & Box 5.1" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
                   <div class="para-play-indicator">▶</div>
                   <p class="para-en">As well, all provinces and territories have legislation that addresses the rights and freedoms of people using health care services. Your clients, however, may be unable to exercise their rights because of illness or injury; physical, cognitive, or mental challenges; or old age, if the client is frail, confused, or isolated.</p>
@@ -9131,7 +8936,7 @@
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与住户权利法案专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 5.1 Some Complex-Care Facility Issues Controlled by Legislation (British Columbia,1 Manitoba,2 Nova Scotia,3 Saskatchewan,4 Ontario5)</h4>
@@ -9240,20 +9045,13 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-63">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 63</span>
-                <span class="marker-text-cn">· 原书第 63 页</span>
-                <span class="marker-badge">IMG_6892.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 63</span>
             </div>
             
                 <aside class="editorial-box-container box-theme-sage">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚖️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与住户权利法案专栏</span>
                     </div>
                     <h4 class="box-title-en">BOX 5.2 British Columbia's Residents' Bill of Rights</h4>
@@ -9293,14 +9091,7 @@
                     </div></aside>
 
             <div class="page-anchor-marker" id="page-64">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 64</span>
-                <span class="marker-text-cn">· 原书第 64 页</span>
-                <span class="marker-badge">IMG_6893.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 64</span>
             </div>
             
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="448.0" data-end="500.0" data-title="Federal vs Provincial Healthcare Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -9387,14 +9178,7 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-65">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 65</span>
-                <span class="marker-text-cn">· 原书第 65 页</span>
-                <span class="marker-badge">IMG_6894.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 65</span>
             </div>
             
                 <figure class="editorial-figure">
@@ -9476,20 +9260,13 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-66">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 66</span>
-                <span class="marker-text-cn">· 原书第 66 页</span>
-                <span class="marker-badge">IMG_6895.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 66</span>
             </div>
             
                 <aside class="editorial-box-container box-theme-teal">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🤝</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">DIGNITY IN PRACTICE · 人格尊严执业黄金守则</span>
                     </div>
                     <h4 class="box-title-en">BOX 5.3 Respecting the Client's Right to Dignity</h4>
@@ -9634,20 +9411,13 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-67">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 67</span>
-                <span class="marker-text-cn">· 原书第 67 页</span>
-                <span class="marker-badge">IMG_6896.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 67</span>
             </div>
             
                 <aside class="editorial-box-container box-theme-lavender">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🔒</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">PRIVACY STANDARD · 案主隐私权法定保障守则</span>
                     </div>
                     <h4 class="box-title-en">BOX 5.4 Respecting the Client's Right to Privacy</h4>
@@ -9788,20 +9558,13 @@
 </div>
 
             <div class="page-anchor-marker" id="page-68">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 68</span>
-                <span class="marker-text-cn">· 原书第 68 页</span>
-                <span class="marker-badge">IMG_6897.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 68</span>
             </div>
             
                 <aside class="editorial-box-container box-theme-case">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📋</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">CLINICAL CASE STUDY · 真实临床案例实务思维修炼</span>
                     </div>
                     <h4 class="box-title-en">Supporting Mrs. Jones: Social Media Versus a Client's Right to Confidentiality</h4>
@@ -9912,20 +9675,13 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-69">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 69</span>
-                <span class="marker-text-cn">· 原书第 69 页</span>
-                <span class="marker-badge">IMG_6898.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 69</span>
             </div>
             
                 <aside class="editorial-box-container box-theme-case">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">📋</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">CLINICAL CASE STUDY · 真实临床案例实务思维修炼</span>
                     </div>
                     <h4 class="box-title-en">Supporting Mme. LeBrun: Is a Living Will Enforceable?</h4>
@@ -10019,14 +9775,7 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-70">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 70</span>
-                <span class="marker-text-cn">· 原书第 70 页</span>
-                <span class="marker-badge">IMG_6899.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 70</span>
             </div>
             
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="921.7" data-end="1014.8" data-title="Criminal Law vs Civil Law & Torts" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -10081,7 +9830,7 @@
                 <aside class="editorial-box-container box-theme-terracotta">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">🏡</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">FOCUS ON PRACTICE · 长期照护实务聚焦：住户自决权</span>
                     </div>
                     <h4 class="box-title-en">FOCUS ON LONG-TERM CARE: Autonomy</h4>
@@ -10118,14 +9867,7 @@
                 </figure>
                 
             <div class="page-anchor-marker" id="page-71">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 71</span>
-                <span class="marker-text-cn">· 原书第 71 页</span>
-                <span class="marker-badge">IMG_6900.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 71</span>
             </div>
             
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1014.8" data-end="1147.1" data-title="Negligence and Intentional Torts in Practice" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -10175,7 +9917,7 @@
                 <aside class="editorial-box-container box-theme-amber">
                   <div class="box-banner-header">
                     <div class="box-badge-row">
-                      <span class="box-badge-icon">⚠️</span>
+                      <span class="box-badge-icon"></span>
                       <span class="box-badge-pill">LEGAL RED FLAG · 临床侵权过失 8 大典型案例与警示</span>
                     </div>
                     <h4 class="box-title-en">BOX 5.5 Examples of Negligent Acts Committed by Support Workers</h4>
@@ -10225,14 +9967,7 @@
                     </div></aside>
 
             <div class="page-anchor-marker" id="page-72">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 72</span>
-                <span class="marker-text-cn">· 原书第 72 页</span>
-                <span class="marker-badge">IMG_6901.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 72</span>
             </div>
             
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1147.1" data-end="1200.0" data-title="Refusal of Treatment & Scope Boundaries" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -10364,14 +10099,7 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-73">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 73</span>
-                <span class="marker-text-cn">· 原书第 73 页</span>
-                <span class="marker-badge">IMG_6902.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 73</span>
             </div>
             
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1200.0" data-end="1251.8" data-title="Worker's Rights & Occupational Safety" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -10492,14 +10220,7 @@
                 </article>
                 
             <div class="page-anchor-marker" id="page-74">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 74</span>
-                <span class="marker-text-cn">· 原书第 74 页</span>
-                <span class="marker-badge">IMG_6903.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 74</span>
             </div>
             
                 <article class="bilingual-paragraph audio-trackable" data-ch="5" data-start="1251.8" data-end="1300.0" data-title="Community Services & Documentation Standards" onclick="playParagraphAudio(this)" title="轻触即可收听此段专业真人声原音">
@@ -10532,14 +10253,7 @@
                 </div>
                 
             <div class="page-anchor-marker" id="page-75">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 75</span>
-                <span class="marker-text-cn">· 原书第 75 页</span>
-                <span class="marker-badge">IMG_6904.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 75</span>
             </div>
             
                 <div class="editorial-section-divider">
@@ -10746,14 +10460,7 @@
                 </div>
                 
             <div class="page-anchor-marker" id="page-76">
-              <div class="marker-line-left"></div>
-              <div class="marker-pill">
-                <span class="marker-icon">📖</span>
-                <span class="marker-text-en">Page 76</span>
-                <span class="marker-text-cn">· 原书第 76 页</span>
-                <span class="marker-badge">IMG_6905.HEIC</span>
-              </div>
-              <div class="marker-line-right"></div>
+              <span class="marker-pill">p. 76</span>
             </div>
             
                 <div class="editorial-section-divider">
@@ -11207,18 +10914,6 @@
                   </div>
                 </div>
                 
-      </main>
-      
-      <!-- Chapter Colophon -->
-      <footer class="editorial-colophon">
-        <div class="colophon-inner">
-          <p class="colophon-title">Mosby's Canadian Textbook for the Support Worker (5th Edition)</p>
-          <p class="colophon-sub">Chapter 5: Legislation: The Client's Rights and Your Rights · 18 页全真文献无损重构</p>
-          <p class="colophon-copy">© Elsevier Canada · 本研读版专供加拿大个人支持工作者（PSW）深度学术双语研习</p>
-        </div>
-      </footer>
-    </div>
-    
       </article>
 
       <!-- 15. Chapter 5 Quiz -->
@@ -11252,27 +10947,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 6: Health, Wellness, Illness, and Disability</div>
-<div class="chapter-h1-anchor" style="display:none;">第 6 章：健康、安康、疾病与残疾（原版逐字逐句 19 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 6 Opener & Learning Objectives (Page 77)</h3>
                   </div>
@@ -11282,7 +10964,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -11299,7 +10981,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 6 Key Terms (Page 78)</h3>
                   </div>
@@ -11669,7 +11351,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：历史演进、全人理念与健康五大维度 (Pages 79 - 82)</h3>
                   </div>
@@ -11695,7 +11377,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：加拿大 12 大关键健康决定因素 (Pages 82 - 86)</h3>
                   </div>
@@ -11706,7 +11388,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 6.1: Social Determinants of Health: A Comparison Between Canada's Version and the WHO's Version</h4>
@@ -11718,7 +11399,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 6.1：健康社会决定因素对照：加拿大国家版本与世界卫生组织（WHO）全球版本深度对比</h3>
                   </div>
@@ -11735,7 +11416,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">CASE STUDY: Jason and His Determinants of Health</h3>
                   </div>
@@ -11745,7 +11426,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">临床案例实操思维修炼：杰森与他的健康决定因素链条反思</h3>
                   </div>
@@ -11779,7 +11460,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：疾病与残疾：临床分类与心理危机应对 (Pages 87 - 90)</h3>
                   </div>
@@ -11798,7 +11479,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 6.2: Common Reactions to Illness and Disability</h4>
@@ -11810,7 +11490,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 6.2：案主面对突发疾病与残疾时的常见身心防御与情绪反应</h3>
                   </div>
@@ -11844,7 +11524,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第四节：慈悲关怀与人本支持实务准则 (Pages 91 - 93)</h3>
                   </div>
@@ -11855,7 +11535,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 6.3: Suggested Guidelines for Language to Promote Positive Images of People Living With Disabilities</h4>
@@ -11867,7 +11546,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 6.3：倡导残障人士积极社会形象的法定专业包容性语言规范指引（加拿大国家标准）</h3>
                   </div>
@@ -11919,7 +11598,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第五节：临床批判性思维修炼 (Page 94)</h3>
                   </div>
@@ -12462,27 +12141,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 7: Caring About Culture and Diversity</div>
-<div class="chapter-h1-anchor" style="display:none;">第 7 章：关怀多元文化与多样性（原版逐字逐句 16 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 7 Opener & Learning Objectives (Page 96)</h3>
                   </div>
@@ -12492,7 +12158,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -12509,7 +12175,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 7 Key Terms (Page 97)</h3>
                   </div>
@@ -12840,7 +12506,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：加拿大马赛克文化、族裔认同与多样性全貌 (Pages 98 - 103)</h3>
                   </div>
@@ -12864,7 +12530,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 7.1: Ageism and Age Discrimination: Ontario Human Rights Commission Fact Sheet</h4>
@@ -12876,7 +12541,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 7.1：年龄歧视与老年维权：安大略省人权委员会（OHRC）官方权威维权事实清单</h3>
                   </div>
@@ -12893,7 +12558,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：文化对健康信念、疾病应对与沟通的影响 (Pages 103 - 108)</h3>
                   </div>
@@ -12919,7 +12584,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：文化胜任力与文化安全照护实务准则 (Pages 108 - 109)</h3>
                   </div>
@@ -12948,7 +12613,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第四节：临床批判性思维修炼 (Page 110)</h3>
                   </div>
@@ -13465,27 +13130,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 8: Managing Stress</div>
-<div class="chapter-h1-anchor" style="display:none;">第 8 章：压力管理与应对策略（原版逐字逐句 17 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 8 Opener & Learning Objectives (Page 112)</h3>
                   </div>
@@ -13495,7 +13147,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -13512,7 +13164,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 8 Key Terms (Page 113)</h3>
                   </div>
@@ -13661,7 +13313,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：压力本质、应激反应与职业倦怠 (Pages 113 - 116)</h3>
                   </div>
@@ -13687,7 +13339,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：心理防御机制全景与自我关怀策略 (Pages 116 - 120)</h3>
                   </div>
@@ -13713,7 +13365,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：高效时间管理与 SMART 目标法则 (Pages 120 - 121)</h3>
                   </div>
@@ -13739,7 +13391,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第四节：临床决策制定与六步问题解决模型 (Pages 121 - 124)</h3>
                   </div>
@@ -13757,7 +13409,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第五节：工作场所冲突化解与人际沟通艺术 (Pages 124 - 126)</h3>
                   </div>
@@ -13786,7 +13438,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第六节：临床批判性思维修炼 (Page 127)</h3>
                   </div>
@@ -14286,27 +13938,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 9: Interpersonal Communication</div>
-<div class="chapter-h1-anchor" style="display:none;">第 9 章：人际沟通与专业交流技巧（原版逐字逐句 20 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 9 Opener & Learning Objectives (Page 129)</h3>
                   </div>
@@ -14316,7 +13955,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -14333,7 +13972,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 9 Key Terms (Page 130)</h3>
                   </div>
@@ -14586,7 +14225,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：沟通环路模型与影响沟通的核心因素 (Pages 131 - 132)</h3>
                   </div>
@@ -14612,7 +14251,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：口头语言与非语言沟通的深度临床辨析 (Pages 132 - 135)</h3>
                   </div>
@@ -14638,7 +14277,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">CASE STUDY: The Power of Nonverbal Cues in Clinical Observation</h3>
                   </div>
@@ -14648,7 +14287,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">临床案例实操思维修炼：非语言线索在床旁观察中的决定性力量</h3>
                   </div>
@@ -14665,7 +14304,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：促进有效沟通的核心技能与方法 (Pages 136 - 138)</h3>
                   </div>
@@ -14683,7 +14322,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第四节：沟通壁垒识别与潜意识心理防御机制 (Pages 138 - 141)</h3>
                   </div>
@@ -14701,7 +14340,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 9.1: Defence Mechanisms: How the Subconscious Mind Shields Against Anxiety</h4>
@@ -14713,7 +14351,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 9.1：心理防御机制：潜意识如何构建抵御焦虑与心理创伤的防护屏障</h3>
                   </div>
@@ -14730,7 +14368,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第五节：应对愤怒案主与坚定果敢沟通风格 (Pages 142 - 144)</h3>
                   </div>
@@ -14748,7 +14386,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 9.2: Communicating With an Angry Client: Professional Action Guidelines</h4>
@@ -14760,7 +14397,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 9.2：化解案主愤怒情绪的专业临床行动指南（护身与降温铁律）</h3>
                   </div>
@@ -14788,7 +14425,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第六节：与认知症及阿尔茨海默病案主沟通的黄金准则 (Pages 145 - 146)</h3>
                   </div>
@@ -14806,7 +14443,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 9.4: Tips for Communicating With Someone With Dementia</h4>
@@ -14818,7 +14454,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 9.4：阿尔茨海默病与认知症长者全流程温和沟通实战秘笈</h3>
                   </div>
@@ -15358,27 +14994,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 10: Working With Others: Teamwork and Delegation</div>
-<div class="chapter-h1-anchor" style="display:none;">第 10 章：与他人协作：跨学科团队合作与工作委派法定程序（原版逐字逐句 15 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 10 Opener & Learning Objectives (Page 149)</h3>
                   </div>
@@ -15388,7 +15011,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -15405,7 +15028,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 10 Key Terms (Page 150)</h3>
                   </div>
@@ -15528,7 +15151,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：跨学科医疗团队与全人照护协作 (Pages 151 - 153)</h3>
                   </div>
@@ -15546,7 +15169,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 10.1: Working on a Team: Core Principles for High-Performing Collaboration</h4>
@@ -15558,7 +15180,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 10.1：医疗团队协作基石：卓越跨学科团队成员的黄金行为准则</h3>
                   </div>
@@ -15575,7 +15197,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：工作指派（Assigning）与任务委派（Delegating）的法律界限 (Pages 154 - 156)</h3>
                   </div>
@@ -15593,7 +15215,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 10.2: The Five Rights of Delegation</h4>
@@ -15605,7 +15226,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 10.2：工作委派五大正确原则（加拿大护士学会与执业法规黄金门禁）</h3>
                   </div>
@@ -15622,7 +15243,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚖️</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 法定规章与法案准则专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 10.3: Delegation Legislation in Canada (BC, Alberta, Nova Scotia, Ontario)</h4>
@@ -15634,7 +15254,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 10.3：加拿大各省工作委派法定规约（卑诗省、阿尔伯塔、新斯科舍与安大略省法规对比）</h3>
                   </div>
@@ -15651,7 +15271,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第三节：拒绝委派任务的专业准则与沟通范式 (Pages 157 - 160)</h3>
                   </div>
@@ -15928,27 +15548,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 11: Working With Clients and Their Families</div>
-<div class="chapter-h1-anchor" style="display:none;">第 11 章：与服务对象及其家属共处协作：同理关怀与专业执业边界（原版逐字逐句 11 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 11 Opener & Learning Objectives (Page 164)</h3>
                   </div>
@@ -15958,7 +15565,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -15975,7 +15582,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 11 Key Terms (Page 165)</h3>
                   </div>
@@ -16059,7 +15666,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：家庭作为不可分割的照护单元 (Pages 166 - 168)</h3>
                   </div>
@@ -16077,7 +15684,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 11.1: Professional Supportive Relationships Versus Friendships</h4>
@@ -16089,7 +15695,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 11.1：专业支持性照护关系与私人友谊的本质对照表（执业边界红线）</h3>
                   </div>
@@ -16149,27 +15755,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 12: Abuse, Bullying, and Harassment Awareness</div>
-<div class="chapter-h1-anchor" style="display:none;">第 12 章：识别与防范虐待、霸凌与骚扰：法律强制报告与弱势群体安全防线（原版逐字逐句 20 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 12 Opener & Learning Objectives (Page 174)</h3>
                   </div>
@@ -16179,7 +15772,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -16196,7 +15789,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 12 Key Terms (Page 175)</h3>
                   </div>
@@ -16319,7 +15912,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：虐待的分类与临床预警信号 (Pages 176 - 180)</h3>
                   </div>
@@ -16337,7 +15930,6 @@
                   <aside class="editorial-box-container box-theme-amber">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">⚠️</span>
                         <span class="box-badge-pill">LEGAL & CLINICAL ALERT · 临床过失警示与应对铁律</span>
                       </div>
                       <h4 class="box-title-en">BOX 12.5: Mandatory Reporting of Suspected Child and Elder Abuse in Canada</h4>
@@ -16349,7 +15941,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 12.5：加拿大法定强制报告程序：疑似虐待上报的法律红线与免责特权</h3>
                   </div>
@@ -16396,27 +15988,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 13: Starting Your Career</div>
-<div class="chapter-h1-anchor" style="display:none;">第 13 章：开启您的职业生涯：求职履历、面试通关与专业成长全攻略（原版逐字逐句 21 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 13 Opener & Learning Objectives (Page 194)</h3>
                   </div>
@@ -16426,7 +16005,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -16443,7 +16022,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 13 Key Terms (Page 195)</h3>
                   </div>
@@ -16540,7 +16119,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：求职简历精研与专业求职信范式 (Pages 196 - 203)</h3>
                   </div>
@@ -16558,7 +16137,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 13.2: Preparing for and Excelling in the Job Interview</h4>
@@ -16570,7 +16148,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 13.2：求职面试全景通关秘笈：面试前、面试中与面试后的专业礼仪</h3>
                   </div>
@@ -16617,27 +16195,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 14: Body Mechanics</div>
-<div class="chapter-h1-anchor" style="display:none;">第 14 章：身体力学原理与安全转移技术：肌肉骨骼防护与案主位移铁律（原版逐字逐句 44 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 14 Opener & Learning Objectives (Page 215)</h3>
                   </div>
@@ -16647,7 +16212,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -16664,7 +16229,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 14 Key Terms (Page 216)</h3>
                   </div>
@@ -16774,7 +16339,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：身体力学核心原理与腰背损伤防卫 (Pages 217 - 220)</h3>
                   </div>
@@ -16792,7 +16357,6 @@
                   <aside class="editorial-box-container box-theme-sage">
                     <div class="box-banner-header">
                       <div class="box-badge-row">
-                        <span class="box-badge-icon">📖</span>
                         <span class="box-badge-pill">STATUTORY REGULATION · 教材核心规约专栏</span>
                       </div>
                       <h4 class="box-title-en">BOX 14.1: Preventing Friction and Shearing During Bed Mobility</h4>
@@ -16804,7 +16368,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">专栏 14.1：消除摩擦力与剪切力：利用滑动床单（Slide Sheet）捍卫高龄脆弱皮肤</h3>
                   </div>
@@ -16851,27 +16415,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 15: Exercise and Activity</div>
-<div class="chapter-h1-anchor" style="display:none;">第 15 章：运动与日常机能活动：关节活动度训练、体位性低血压防范与安全助行（原版逐字逐句 23 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 15 Opener & Learning Objectives (Page 259)</h3>
                   </div>
@@ -16881,7 +16432,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -16898,7 +16449,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 15 Key Terms (Page 260)</h3>
                   </div>
@@ -17034,7 +16585,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：卧床制动并发症与体位性低血压防范 (Pages 261 - 264)</h3>
                   </div>
@@ -17082,27 +16633,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 16: Rehabilitation and Restorative Care</div>
-<div class="chapter-h1-anchor" style="display:none;">第 16 章：康复护理与恢复性照护：案主潜能最大化、辅具赋能与自主重构（原版逐字逐句 14 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 16 Opener & Learning Objectives (Page 282)</h3>
                   </div>
@@ -17112,7 +16650,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -17129,7 +16667,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 16 Key Terms (Page 283)</h3>
                   </div>
@@ -17200,7 +16738,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：恢复性照护理念与赋能自理法则 (Pages 284 - 287)</h3>
                   </div>
@@ -17259,27 +16797,14 @@
             </div>
           </header>
           <main class="editorial-stream">
-            <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）全书无删减中英双语对照精研版</div>
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-<div class="chapter-h1-anchor" style="display:none;">Chapter 17: Personal Hygiene</div>
-<div class="chapter-h1-anchor" style="display:none;">第 17 章：个人卫生照护实务：口腔护理、床上擦浴、会阴部清洁与尊严守护（原版逐字逐句 41 页全文典藏版）</div>
+            <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【开篇导读与学习目标】Chapter 17 Opener & Learning Objectives (Page 296)</h3>
                   </div>
@@ -17289,7 +16814,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">学习目标 (Objectives)</h3>
                   </div>
@@ -17306,7 +16831,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">【核心专业术语表】Chapter 17 Key Terms (Page 297)</h3>
                   </div>
@@ -17416,7 +16941,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第一节：昏迷案主口腔护理防误吸铁律 (Pages 306 - 308)</h3>
                   </div>
@@ -17434,7 +16959,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">第二节：会阴部专业清洁护理标准规程 (Pages 328 - 334)</h3>
                   </div>
@@ -17466,24 +16991,13 @@
           <span class="sheet-meta-badge">Project Specs · Appendix</span>
           <span class="sheet-meta-edition">Roadmap & Methodology</span>
         </div>
-        <div class="chapter-h1-anchor" style="display:none;">《加拿大支持工作者教材》（第5版）中英双语对照翻译工程</div>
+        <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
 
                 <div class="editorial-section-divider">
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
-                    </div>
-                    <h3 class="sh-title-en">Sorrentino's Canadian Textbook for the Support Worker (5th Edition)</h3>
-                  </div>
-                </div>
-                <hr class="divider" style="margin:40px 0; border:none; border-top:1px dashed #cbd5e1;">
-
-                <div class="editorial-section-divider">
-                  <div class="section-divider-bar"></div>
-                  <div class="section-heading-card">
-                    <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">一、 本书背景与翻译价值</h3>
                   </div>
@@ -17497,7 +17011,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">二、 本次已完成的基础卷（Textbook1 阶段成果）</h3>
                   </div>
@@ -17524,7 +17038,7 @@
                   <div class="section-divider-bar"></div>
                   <div class="section-heading-card">
                     <div class="section-eyebrow">
-                      <span class="section-badge-pill">§ SECTION · 章节核心专题</span>
+                      <span class="section-badge-pill">SECTION · 章节核心专题</span>
                     </div>
                     <h3 class="sh-title-en">三、 后续“慢慢翻译”推进路线指南</h3>
                   </div>
