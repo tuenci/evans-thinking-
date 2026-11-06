@@ -2919,33 +2919,37 @@
     }
 
     /* Dual-mode Glossary Controls */
-    function setGlossaryMode(ch, mode) {
+    function switchGlossaryView(ch, mode) {
       var tableEl = document.getElementById('kt-table-view-' + ch);
       var cardsEl = document.getElementById('kt-cards-view-' + ch);
-      var btns = document.querySelectorAll('#kt-container-' + ch + ' .kt-toggle-btn');
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
       btns.forEach(function(b) {
-        if (b.getAttribute('data-mode') === mode) {
-          b.classList.add('active');
-        } else {
-          b.classList.remove('active');
-        }
+        b.classList.remove('active');
       });
       if (mode === 'table') {
-        if (tableEl) tableEl.style.display = 'block';
-        if (cardsEl) cardsEl.style.display = 'none';
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
       } else {
-        if (tableEl) tableEl.style.display = 'none';
-        if (cardsEl) cardsEl.style.display = 'block';
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
       }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
     }
 
     function toggleGlossaryFold(ch, viewType) {
-      var container = document.getElementById('kt-container-' + ch);
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
       var isExpanded = container.classList.toggle('is-expanded-' + viewType);
-      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row' : '.kt-folded-card');
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
       var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
       rows.forEach(function(r) {
-        r.style.display = isExpanded ? (viewType === 'table' ? 'table-row' : 'block') : 'none';
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
       });
       if (btn) {
         btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
@@ -2953,22 +2957,23 @@
     }
 
     function filterGlossary(ch, query) {
-      var q = (query || '').trim().toLowerCase();
-      var container = document.getElementById('kt-container-' + ch);
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
       if (!container) return;
-      var rows = container.querySelectorAll('.kt-table-row');
-      var cards = container.querySelectorAll('.editorial-term-card');
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
       var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
       var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
 
       if (!q) {
         var isExpandedTable = container.classList.contains('is-expanded-table');
         rows.forEach(function(r, idx) {
-          r.style.display = (idx < 6 || isExpandedTable) ? 'table-row' : 'none';
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
         });
         var isExpandedCards = container.classList.contains('is-expanded-cards');
         cards.forEach(function(c, idx) {
-          c.style.display = (idx < 6 || isExpandedCards) ? 'block' : 'none';
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
         });
         if (expandTableBar) expandTableBar.style.display = 'block';
         if (expandCardsBar) expandCardsBar.style.display = 'block';
@@ -2980,11 +2985,11 @@
 
       rows.forEach(function(r) {
         var text = (r.innerText || '').toLowerCase();
-        r.style.display = text.indexOf(q) !== -1 ? 'table-row' : 'none';
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
       cards.forEach(function(c) {
         var text = (c.innerText || '').toLowerCase();
-        c.style.display = text.indexOf(q) !== -1 ? 'block' : 'none';
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
       });
     }
 
