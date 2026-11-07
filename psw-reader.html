@@ -2735,6 +2735,20 @@
           <span class="nav-tag">12道权威精解</span>
         </button>
       </div>
+      <div class="nav-item">
+        <button id="nav-sec-ch28" onclick="switchSection('sec-ch28', '第 28 章：肠内营养与静脉输液照护 (Pages 624–635)')">
+          <span class="nav-icon">📖</span>
+          <span>第 28 章：肠内营养与输液</span>
+          <span class="nav-tag">Pages 624–635</span>
+        </button>
+      </div>
+      <div class="nav-item">
+        <button id="nav-sec-ch28-quiz" onclick="switchSection('sec-ch28-quiz', '第 28 章：自测习题库 (Pages 634–635)')">
+          <span class="nav-icon">✍️</span>
+          <span>第 28 章：自测习题库</span>
+          <span class="nav-tag">9道权威精解</span>
+        </button>
+      </div>
 
       <div class="nav-group-title">规划与项目规范 · Appendix</div>
       
@@ -2790,6 +2804,7 @@
               <option value="sec-ch25">第 25 章 · 医学术语与专业缩写 (pp. 557–567)</option>
               <option value="sec-ch26">第 26 章 · 照护计划、交班汇报与病历记录 (pp. 568–590)</option>
               <option value="sec-ch27">第 27 章 · 营养素、膳食指南与体液监测 (pp. 591–623)</option>
+              <option value="sec-ch28">第 28 章 · 肠内营养与静脉输液照护 (pp. 624–635)</option>
             </optgroup>
             <optgroup label="各章全真自测习题库">
               <option value="sec-ch1-quiz">第 01 章 · 自测习题库 (12道精解)</option>
@@ -2819,6 +2834,7 @@
               <option value="sec-ch25-quiz">第 25 章 · 自测习题库 (12道精解)</option>
               <option value="sec-ch26-quiz">第 26 章 · 自测习题库 (12道精解)</option>
               <option value="sec-ch27-quiz">第 27 章 · 自测习题库 (12道精解)</option>
+              <option value="sec-ch28-quiz">第 28 章 · 自测习题库 (9道精解)</option>
             </optgroup>
           </select>
         </div>
@@ -79461,7 +79477,7 @@ Circle the BEST answer:</div>
     <div class="sheet-bottom-nav">
       <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch26')">← 上一章：第 26 章</button>
       <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch27-quiz')">✍️ 12 道全真自测题 ↗</button>
-      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 28 章（肠内营养与静脉输液照护，13页）正在编排流水线中，即将上线！')">下一章：第 28 章 (流水线调度中) ⏳</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch28')">下一章：第 28 章 →</button>
     </div>
     
       </article>
@@ -80105,6 +80121,1741 @@ Circle the BEST answer:</div>
 
       <div class="quiz-controls" style="margin-top:28px; text-align:center;">
         <button class="qc-btn qc-reset" onclick="resetQuiz('ch27')" style="padding:10px 24px; background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; border-radius:6px; font-weight:600; cursor:pointer; margin-right:12px;">🔄 重置本章自测题</button>
+      </div>
+    </div>
+
+      </article>
+
+      <!-- Chapter 28 -->
+      <article class="reading-sheet" id="sec-ch28" style="display:none;">
+        <div class="sheet-meta-bar">
+          <span class="sheet-meta-badge">Chapter 28 Enteral Nutrition and Intravenous Therapy · Pages 624–635</span>
+          <span class="sheet-meta-edition">Enteral Tubes, Aspiration Precautions, IV Therapy & Subcutaneous Infusion</span>
+        </div>
+        
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch28" aria-label="Chapter 28 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.624–635 · 共 12 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-624">第 624 页 · 本章开篇、学习目标与开篇全景 (Chapter Opener & Objectives)</option><option value="page-625">第 625 页 · 肠内营养定义、管饲管道分类与专业术语 (Enteral Nutrition, Tubes & Key Terms)</option><option value="page-626">第 626 页 · 造口管饲、配方营养液与四种置管图解 (G-Tube, J-Tube, Formulas & Figure 28.1-28.4)</option><option value="page-627">第 627 页 · 间歇与持续输注、喂养泵与注射器 (Scheduled vs. Continuous Feedings, Pumps & Figure 28.5-28.7)</option><option value="page-628">第 628 页 · 误吸预防、体位管理与居家管饲照护 (Preventing Aspiration, Positioning & Home Care)</option><option value="page-629">第 629 页 · 管饲并发症即时汇报、鼻腔护理与舒适照护 (Complications, Nasal Care & Figure 28.8)</option><option value="page-630">第 630 页 · 静脉输液疗法目的、常用溶液与中心静脉管 (IV Therapy Purposes, Solutions & Figure 28.9)</option><option value="page-631">第 631 页 · 外周与中心静脉照护、PICC与安全规范 (IV Assisting, PICC, Box 28.1 Safety Measures)</option><option value="page-632">第 632 页 · 静脉输液局部与全身并发症、皮下输注 (IV Complications Box 28.2 & Subcutaneous Infusion)</option><option value="page-633">第 633 页 · 皮下留置针照护、输液仁爱关怀准则 (Subcutaneous Needle Care & DIPPS Compassionate Care)</option><option value="page-634">第 634 页 · 本章核心要点、临床思辨与官方自测题 1-7 (Chapter Key Points, Critical Thinking & Review Q1-7)</option><option value="page-635">第 635 页 · 官方复习自测题 8-9、标准答案与图片版权 (Review Questions 8-9, Official Answers & Credits)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-624" class="cp-chip" id="cp-chip-28-624" data-page="624" onclick="handlePageChipClick(event, 'page-624')" title="第 624 页 · 本章开篇、学习目标与开篇全景 (Chapter Opener & Objectives)"><span class="cp-num">p.624</span></a><a href="#page-625" class="cp-chip" id="cp-chip-28-625" data-page="625" onclick="handlePageChipClick(event, 'page-625')" title="第 625 页 · 肠内营养定义、管饲管道分类与专业术语 (Enteral Nutrition, Tubes & Key Terms)"><span class="cp-num">p.625</span></a><a href="#page-626" class="cp-chip" id="cp-chip-28-626" data-page="626" onclick="handlePageChipClick(event, 'page-626')" title="第 626 页 · 造口管饲、配方营养液与四种置管图解 (G-Tube, J-Tube, Formulas & Figure 28.1-28.4)"><span class="cp-num">p.626</span></a><a href="#page-627" class="cp-chip" id="cp-chip-28-627" data-page="627" onclick="handlePageChipClick(event, 'page-627')" title="第 627 页 · 间歇与持续输注、喂养泵与注射器 (Scheduled vs. Continuous Feedings, Pumps & Figure 28.5-28.7)"><span class="cp-num">p.627</span></a><a href="#page-628" class="cp-chip" id="cp-chip-28-628" data-page="628" onclick="handlePageChipClick(event, 'page-628')" title="第 628 页 · 误吸预防、体位管理与居家管饲照护 (Preventing Aspiration, Positioning & Home Care)"><span class="cp-num">p.628</span></a><a href="#page-629" class="cp-chip" id="cp-chip-28-629" data-page="629" onclick="handlePageChipClick(event, 'page-629')" title="第 629 页 · 管饲并发症即时汇报、鼻腔护理与舒适照护 (Complications, Nasal Care & Figure 28.8)"><span class="cp-num">p.629</span></a><a href="#page-630" class="cp-chip" id="cp-chip-28-630" data-page="630" onclick="handlePageChipClick(event, 'page-630')" title="第 630 页 · 静脉输液疗法目的、常用溶液与中心静脉管 (IV Therapy Purposes, Solutions & Figure 28.9)"><span class="cp-num">p.630</span></a><a href="#page-631" class="cp-chip" id="cp-chip-28-631" data-page="631" onclick="handlePageChipClick(event, 'page-631')" title="第 631 页 · 外周与中心静脉照护、PICC与安全规范 (IV Assisting, PICC, Box 28.1 Safety Measures)"><span class="cp-num">p.631</span></a><a href="#page-632" class="cp-chip" id="cp-chip-28-632" data-page="632" onclick="handlePageChipClick(event, 'page-632')" title="第 632 页 · 静脉输液局部与全身并发症、皮下输注 (IV Complications Box 28.2 & Subcutaneous Infusion)"><span class="cp-num">p.632</span></a><a href="#page-633" class="cp-chip" id="cp-chip-28-633" data-page="633" onclick="handlePageChipClick(event, 'page-633')" title="第 633 页 · 皮下留置针照护、输液仁爱关怀准则 (Subcutaneous Needle Care & DIPPS Compassionate Care)"><span class="cp-num">p.633</span></a><a href="#page-634" class="cp-chip" id="cp-chip-28-634" data-page="634" onclick="handlePageChipClick(event, 'page-634')" title="第 634 页 · 本章核心要点、临床思辨与官方自测题 1-7 (Chapter Key Points, Critical Thinking & Review Q1-7)"><span class="cp-num">p.634</span></a><a href="#page-635" class="cp-chip" id="cp-chip-28-635" data-page="635" onclick="handlePageChipClick(event, 'page-635')" title="第 635 页 · 官方复习自测题 8-9、标准答案与图片版权 (Review Questions 8-9, Official Answers & Credits)"><span class="cp-num">p.635</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+  <!-- PHYSICAL PAGE 624 -->
+  <section class="book-page-block" id="page-624" data-page="624" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 624</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">本章开篇、学习目标与开篇全景 (Chapter Opener & Objectives)</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">CHAPTER 28: Enteral Nutrition and Intravenous Therapy</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">第 28 章：肠内营养与静脉输液照护</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch28/ch28_p624__X1.jpg" alt="" class="responsive-img" style="max-height:480px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Support workers provide essential comfort and safety monitoring for clients receiving enteral nutrition and intravenous therapy.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">支持人员在照护接受肠内营养管饲与静脉输液治疗的案主时，提供至关重要的身心舒适护理与严密安全监护。</p>
+</div>
+
+
+<div class="objectives-card" style="margin-top:24px; padding:20px; background:rgba(59, 130, 246, 0.05); border-left:4px solid #3b82f6; border-radius:6px;">
+  <h3 style="margin-top:0; color:#1d4ed8; font-size:1.15rem; font-weight:700;">OBJECTIVES / 本章核心学习目标</h3>
+  <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:14px;">After reading this chapter, the learner should be able to do the following: / 研读本章后，学员应当能够全面掌握并达成以下专业执业技能：</p>
+  <ul class="objectives-list" style="list-style-type:none; padding-left:0; margin-bottom:0;">
+    
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Explain the purpose of enteral nutrition and necessary comfort measures.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐述肠内营养（Enteral Nutrition）的临床治疗目的及必需的案主身心舒适照护措施。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Explain how to prevent aspiration and regurgitation.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐明在管饲过程中如何通过科学体位和操作规范有效预防误吸（Aspiration）与食物反流（Regurgitation）。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Identify the signs and symptoms of aspiration.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">精准识别发生误吸时的典型临床体征与急性呼吸道报警症状。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Explain the purpose of intravenous (IV) therapy.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐释静脉输液疗法（IV Therapy）的生理指征与治疗目的（维持水盐平衡、供给能量、给药及输血）。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Identify the equipment and complications involved in IV therapy.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">辨识静脉输液的常用医疗器械装置以及潜在的局部浸润与全身性输液并发症。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Explain your role in ensuring the safety of clients receiving IV therapy.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">明确支持人员在照护接受静脉输液案主时的执业职责边界与安全防护规范。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 625 -->
+  <section class="book-page-block" id="page-625" data-page="625" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 625</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">肠内营养定义、管饲管道分类与专业术语 (Enteral Nutrition, Tubes & Key Terms)</span>
+    </div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Clients may have special requirements in regard to nutrition and fluids. Because of illness, injury, or surgery, some clients have difficulty eating, drinking, chewing, or swallowing. For these clients, nutrition and fluids as well as medications are provided through tubes, as ordered by a physician. Only a qualified nurse or other professional administers the procedures. As a support worker, however, you may care for clients who require enteral nutrition or who have an intravenous infusion.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">案主在营养和水分摄入方面可能存在特殊需求。由于疾病、创伤或外科手术，部分案主在进食、饮水、咀嚼或吞咽方面存在功能障碍。根据医生医嘱，可通过管道为这些案主提供必需的营养、体液及药物支持。置管与管道输注操作仅由具备资质的护士或其他专业医护人员执行。然而，作为支持人员，你经常需要照护接受肠内营养支持或正在接受静脉输液的案主。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">ENTERAL NUTRITION</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">肠内营养治疗 (ENTERAL NUTRITION)</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">People who cannot chew or swallow often require enteral nutrition, a nutritional formula delivered into the gastrointestinal tract (enteral) through a feeding tube. Gavage is another term for tube feeding. Feeding tubes are used when food cannot pass normally from the mouth into the esophagus and then into the stomach. This need can arise due to cancers of the head, neck, or esophagus; trauma or surgery to the face, mouth, head, or neck; dysphagia caused by paralysis; and coma. As well, people with dementia who no longer know how to eat may require tube feedings. There are various types of feeding tubes:</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">无法自主咀嚼或吞咽的案主通常需要接受肠内营养（Enteral nutrition）——即通过喂养管将特定营养配方液直接输送到胃肠道（enteral）内。管饲法（Gavage）是鼻饲或管道喂养的专业医学术语。当食物无法通过口腔正常进入食管并流入胃部时，即需要使用喂养管。导致这种状况的常见原因包括：头颈部或食管恶性肿瘤；面部、口腔、头部或颈部严重创伤及外科大手术；神经瘫痪（如脑卒中后）引起的重度吞咽障碍；以及深度昏迷。此外，因重度认知症（痴呆）而丧失进食认知与动作协调能力的案主也可能需要管饲喂养。临床常见的喂养管道类型包括：</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• A nasogastric (NG) tube is inserted through the nose (naso) into the stomach (gastro) (FIGURE 28.1). A physician or a nurse performs the procedure.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 鼻胃管（NG tube）：经由鼻孔（naso）穿过咽喉及食管插入胃（gastro）腔内（图 28.1）。该置管操作由医生或注册护士严格执行。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• A nasointestinal tube is inserted through the nose (naso) into the small intestine (intestinal) (FIGURE 28.2). A physician or a nurse performs the procedure.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 鼻肠管（Nasointestinal tube）：经由鼻腔（naso）插入，前端穿过胃部幽门并延伸进入小肠（十二指肠或空肠）（图 28.2）。该操作由医生或专科护士执行。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• A gastrostomy tube is inserted into the stomach. A surgically created opening (stomy) in the stomach (gastro) is needed for this procedure (FIGURE 28.3). It is also known as a G-tube.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 胃造口管（Gastrostomy tube）：直接置入胃腔内。该操作需要在腹壁和胃（gastro）壁上通过外科手术创建造口（stomy）（图 28.3）。亦称为 G 管（G-tube）。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• A gastro-jejunostomy tube is a combination device that includes access to both the stomach and the jejunum (the middle part of the small intestine). It is also known as a GJ-tube. Typically, tubes are placed into a G-tube stoma (a surgically created opening—see ostomy), with a narrower long tube continuing through the stomach and small intestine. The GJ-tube is used if the client has a high risk for aspiration or when a tube cannot be placed into the client’s stomach. It must be inserted by a physician in a hospital setting.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 胃-空肠造口复合管（Gastro-jejunostomy tube）：一种同时具备胃部与空肠（小肠中段）双重通道的联合导管装置，亦称为 GJ 管（GJ-tube）。通常，导管经由胃造口置入，其中一根较细的导管穿过胃部继续深达小肠内。当案主存在极高的误吸风险或胃部病变无法耐受胃内喂养时采用 GJ 管。该管道必须由专科医生在医院手术室或内镜室内置入。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• A jejunostomy tube is inserted into the intestines. A surgically created opening (stomy) in the middle part of the small intestine (jejunum) is needed for this procedure (FIGURE 28.4). It is also known as a J-tube.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 空肠造口管（Jejunostomy tube）：直接置入小肠内。该操作需要在小肠中段（空肠 jejunum）外科手术创建造口（stomy）（图 28.4）。亦称为 J 管（J-tube）。</div>
+</div>
+
+
+    <div class="glossary-component" id="sec-ch28-glossary" style="margin:20px 0 32px 0;">
+      <div class="gc-header">
+        <div class="gc-title-wrap">
+          <span class="gc-badge">KEY TERMS · 核心专业术语表</span>
+          <h3 class="gc-title">Chapter 28 肠内营养与静脉输液照护学术词汇表</h3>
+          <p class="gc-desc">Sorrentino 原版教材第 28 章共收录 <strong>15 个肠内管饲、静脉通路与输液并发症核心学术词汇</strong>。支持实时模糊检索及「紧凑表格 / 记忆卡片」双模态自由切换。</p>
+        </div>
+        <div class="gc-controls">
+          <div class="gc-search-box">
+            <input type="text" id="kt-search-ch28" placeholder="🔍 搜索英文术语或中文释义..." oninput="filterGlossary('ch28')">
+          </div>
+          <div class="gc-view-toggle">
+            <button class="gc-toggle-btn active" id="btn-view-table-ch28" onclick="setGlossaryView('ch28', 'table')">📋 表格视图</button>
+            <button class="gc-toggle-btn" id="btn-view-cards-ch28" onclick="setGlossaryView('ch28', 'cards')">📇 卡片视图</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table View (Default) -->
+      <div class="kt-view-table" id="kt-table-view-ch28">
+        <div class="kt-table-scroll">
+          <table class="kt-data-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">英文术语 / 临床概念</th>
+                <th style="width: 22%;">中文对照 / 原书页码</th>
+                <th style="width: 52%;">教材标准学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+              <tr class="kt-table-row" data-term="aspiration 误吸">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Aspiration</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌæs.pəˈreɪ.ʃən/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">误吸</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 628</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">The inhalation of fluid or an object into the lungs.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">误吸：液体、异物或食物反流物被意外吸入气管和肺部的病理现象，极易引发窒息及化学性/细菌性吸入性肺炎。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="cannula 套管（静脉留置软管）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Cannula</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈkæn.jə.lə/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">套管（静脉留置软管）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 628</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A type of plastic tubing threaded over a needle; once in place in the vein, the needle is withdrawn, leaving the cannula in place. Also called a catheter.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">套管（静脉留置软管）：套在穿刺钢针外周的高分子塑料软管；一旦刺入血管腔内，拔出金属针芯，仅保留软套管于血管内以供持续输液。亦称为留置导管（Catheter）。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="catheter 导管">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Catheter</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈkæθ.ə.tər/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">导管</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 628</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">See cannula.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">导管：参见套管（Cannula）。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="enteral nutrition 肠内营养">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Enteral nutrition</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈen.tər.əl njuːˈtrɪʃ.ən/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">肠内营养</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">The giving of nutrients by way of the intestines (enteral).</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">肠内营养：经由胃肠道（消化道）途径提供机体所需营养素和液体的临床喂养方式。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="gastro-jejunostomy tube 胃-空肠造口复合管（GJ管）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Gastro-jejunostomy tube</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌɡæs.troʊ dʒəˌdʒuːˈnɒs.tə.mi tjuːb/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">胃-空肠造口复合管（GJ管）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A combination device that includes access to both the stomach and the jejunum (the middle part of the small intestine). It is also known as a GJ-tube.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">胃-空肠造口复合管（GJ管）：一种同时具备胃部减压通道与空肠（小肠中段）营养输注双通道的联合导管装置。用于极高误吸风险或胃动力丧失者。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="gastrostomy tube 胃造口管（G管）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Gastrostomy tube</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ɡæsˈtrɒs.tə.mi tjuːb/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">胃造口管（G管）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A tube inserted through an opening (stomy) into the stomach (gastro). It is also known as a G-tube.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">胃造口管（G管）：经由腹壁手术造口（stomy）直接置入胃（gastro）腔内的喂养管。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="gavage 管饲法（胃管喂食）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Gavage</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ɡəˈvɑːʒ/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">管饲法（胃管喂食）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Tube feeding.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">管饲法（胃管喂食）：通过各种医用喂养管道直接向消化道灌注流质营养物或药物的专业术语。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="infiltration 液体外渗/浸润">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Infiltration</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌɪn.fɪlˈtreɪ.ʃən/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">液体外渗/浸润</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 631</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Intravenous fluids entering surrounding tissues.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">液体外渗/浸润：静脉输液时针头或套管穿破或脱出血管壁，导致输入的药液漏入周围皮下软组织，引起局部水肿、皮肤苍白、局部皮温降低及胀痛。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="intravenous (iv) therapy 静脉输液疗法">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Intravenous (IV) therapy</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌɪn.trəˈviː.nəs ˈθer.ə.pi/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">静脉输液疗法</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 628</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Fluids given through a needle or catheter inserted into a vein; also referred to as IV, IV therapy, and IV infusion.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">静脉输液疗法：通过刺入静脉的穿刺针或留置软管将大量无菌液体、营养物质或药物直接滴注输入血液循环的治疗技术。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="jejunostomy tube 空肠造口管（J管）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Jejunostomy tube</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌdʒeɪ.dʒuːˈnɒs.tə.mi tjuːb/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">空肠造口管（J管）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A tube inserted into the intestines through an opening (stomy) into the middle part of the small intestine (jejunum). It is also known as a J-tube.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">空肠造口管（J管）：经由腹壁手术造口直接置入小肠中段（空肠）的手术喂养导管。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="nasogastric (ng) tube 鼻胃管（NG管）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Nasogastric (NG) tube</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌneɪ.zoʊˈɡæs.trɪk tjuːb/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">鼻胃管（NG管）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A tube inserted through the nose (naso) into the stomach (gastro). It is also known as an NG-tube.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">鼻胃管（NG管）：经由鼻腔（naso）穿过咽喉及食管插入胃（gastro）内的细长导管。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="nasointestinal tube 鼻肠管">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Nasointestinal tube</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌneɪ.zoʊ.ɪnˈtes.tɪ.nəl tjuːb/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">鼻肠管</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A tube inserted through the nose (naso) into the small intestine (intestinal).</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">鼻肠管：经由鼻孔插入，前端穿过胃部幽门并延伸进入十二指肠或空肠内的小口径细导管。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="ostomy 造口术/造口">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Ostomy</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈɒs.tə.mi/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">造口术/造口</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 626</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A surgically created opening that is used to drain wastes or to feed the client.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">造口术/造口：外科手术在体表人为创建的开口，用于排出机体代谢排泄物或向体内灌注营养配方。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="percutaneous endoscopic gastrostomy (peg) tube 经皮内镜下胃造口管（PEG管）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Percutaneous endoscopic gastrostomy (PEG) tube</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌpɜː.kjuːˈteɪ.ni.əs ˌen.dəˈskɒp.ɪk ɡæsˈtrɒs.tə.mi/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">经皮内镜下胃造口管（PEG管）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 625</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A tube inserted into the stomach (gastro) through a puncture wound (stomy) made through (per) the skin (cutaneous); a lighted instrument (scope) allows the physician to see inside the body cavity or organ (endo).</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">经皮内镜下胃造口管（PEG管）：在纤维内窥镜（引导观察胃腔内壁）直视辅助下，经由腹壁皮肤穿刺并直接置入胃腔的喂养管道。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="regurgitation 反流（反刍逆流）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Regurgitation</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/rɪˌɡɜː.dʒɪˈteɪ.ʃən/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">反流（反刍逆流）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 628</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">The backward flow of food from the stomach into the mouth.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">反流（反刍逆流）：未消化的胃内容物逆向逆流回食管并涌入口腔的病理现象，极易引发严重的急性气道误吸。</div>
+                </td>
+              </tr>
+        
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mode 2: Flashcard Grid View -->
+      <div class="kt-view-cards" id="kt-cards-view-ch28" style="display:none;">
+        <div class="kt-cards-grid" id="kt-cards-grid-ch28">
+    
+          <div class="editorial-term-card" data-term="aspiration 误吸">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 628</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Aspiration</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌæs.pəˈreɪ.ʃən/</div>
+              <div class="etc-term-cn">误吸</div>
+              <div class="etc-def-en">The inhalation of fluid or an object into the lungs.</div>
+              <div class="etc-def-cn">误吸：液体、异物或食物反流物被意外吸入气管和肺部的病理现象，极易引发窒息及化学性/细菌性吸入性肺炎。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="cannula 套管（静脉留置软管）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 628</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Cannula</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈkæn.jə.lə/</div>
+              <div class="etc-term-cn">套管（静脉留置软管）</div>
+              <div class="etc-def-en">A type of plastic tubing threaded over a needle; once in place in the vein, the needle is withdrawn, leaving the cannula in place. Also called a catheter.</div>
+              <div class="etc-def-cn">套管（静脉留置软管）：套在穿刺钢针外周的高分子塑料软管；一旦刺入血管腔内，拔出金属针芯，仅保留软套管于血管内以供持续输液。亦称为留置导管（Catheter）。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="catheter 导管">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 628</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Catheter</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈkæθ.ə.tər/</div>
+              <div class="etc-term-cn">导管</div>
+              <div class="etc-def-en">See cannula.</div>
+              <div class="etc-def-cn">导管：参见套管（Cannula）。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="enteral nutrition 肠内营养">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Enteral nutrition</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈen.tər.əl njuːˈtrɪʃ.ən/</div>
+              <div class="etc-term-cn">肠内营养</div>
+              <div class="etc-def-en">The giving of nutrients by way of the intestines (enteral).</div>
+              <div class="etc-def-cn">肠内营养：经由胃肠道（消化道）途径提供机体所需营养素和液体的临床喂养方式。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="gastro-jejunostomy tube 胃-空肠造口复合管（GJ管）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Gastro-jejunostomy tube</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌɡæs.troʊ dʒəˌdʒuːˈnɒs.tə.mi tjuːb/</div>
+              <div class="etc-term-cn">胃-空肠造口复合管（GJ管）</div>
+              <div class="etc-def-en">A combination device that includes access to both the stomach and the jejunum (the middle part of the small intestine). It is also known as a GJ-tube.</div>
+              <div class="etc-def-cn">胃-空肠造口复合管（GJ管）：一种同时具备胃部减压通道与空肠（小肠中段）营养输注双通道的联合导管装置。用于极高误吸风险或胃动力丧失者。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="gastrostomy tube 胃造口管（G管）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Gastrostomy tube</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ɡæsˈtrɒs.tə.mi tjuːb/</div>
+              <div class="etc-term-cn">胃造口管（G管）</div>
+              <div class="etc-def-en">A tube inserted through an opening (stomy) into the stomach (gastro). It is also known as a G-tube.</div>
+              <div class="etc-def-cn">胃造口管（G管）：经由腹壁手术造口（stomy）直接置入胃（gastro）腔内的喂养管。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="gavage 管饲法（胃管喂食）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Gavage</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ɡəˈvɑːʒ/</div>
+              <div class="etc-term-cn">管饲法（胃管喂食）</div>
+              <div class="etc-def-en">Tube feeding.</div>
+              <div class="etc-def-cn">管饲法（胃管喂食）：通过各种医用喂养管道直接向消化道灌注流质营养物或药物的专业术语。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="infiltration 液体外渗/浸润">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 631</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Infiltration</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌɪn.fɪlˈtreɪ.ʃən/</div>
+              <div class="etc-term-cn">液体外渗/浸润</div>
+              <div class="etc-def-en">Intravenous fluids entering surrounding tissues.</div>
+              <div class="etc-def-cn">液体外渗/浸润：静脉输液时针头或套管穿破或脱出血管壁，导致输入的药液漏入周围皮下软组织，引起局部水肿、皮肤苍白、局部皮温降低及胀痛。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="intravenous (iv) therapy 静脉输液疗法">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 628</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Intravenous (IV) therapy</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌɪn.trəˈviː.nəs ˈθer.ə.pi/</div>
+              <div class="etc-term-cn">静脉输液疗法</div>
+              <div class="etc-def-en">Fluids given through a needle or catheter inserted into a vein; also referred to as IV, IV therapy, and IV infusion.</div>
+              <div class="etc-def-cn">静脉输液疗法：通过刺入静脉的穿刺针或留置软管将大量无菌液体、营养物质或药物直接滴注输入血液循环的治疗技术。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="jejunostomy tube 空肠造口管（J管）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Jejunostomy tube</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌdʒeɪ.dʒuːˈnɒs.tə.mi tjuːb/</div>
+              <div class="etc-term-cn">空肠造口管（J管）</div>
+              <div class="etc-def-en">A tube inserted into the intestines through an opening (stomy) into the middle part of the small intestine (jejunum). It is also known as a J-tube.</div>
+              <div class="etc-def-cn">空肠造口管（J管）：经由腹壁手术造口直接置入小肠中段（空肠）的手术喂养导管。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="nasogastric (ng) tube 鼻胃管（NG管）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Nasogastric (NG) tube</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌneɪ.zoʊˈɡæs.trɪk tjuːb/</div>
+              <div class="etc-term-cn">鼻胃管（NG管）</div>
+              <div class="etc-def-en">A tube inserted through the nose (naso) into the stomach (gastro). It is also known as an NG-tube.</div>
+              <div class="etc-def-cn">鼻胃管（NG管）：经由鼻腔（naso）穿过咽喉及食管插入胃（gastro）内的细长导管。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="nasointestinal tube 鼻肠管">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Nasointestinal tube</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌneɪ.zoʊ.ɪnˈtes.tɪ.nəl tjuːb/</div>
+              <div class="etc-term-cn">鼻肠管</div>
+              <div class="etc-def-en">A tube inserted through the nose (naso) into the small intestine (intestinal).</div>
+              <div class="etc-def-cn">鼻肠管：经由鼻孔插入，前端穿过胃部幽门并延伸进入十二指肠或空肠内的小口径细导管。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="ostomy 造口术/造口">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 626</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Ostomy</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈɒs.tə.mi/</div>
+              <div class="etc-term-cn">造口术/造口</div>
+              <div class="etc-def-en">A surgically created opening that is used to drain wastes or to feed the client.</div>
+              <div class="etc-def-cn">造口术/造口：外科手术在体表人为创建的开口，用于排出机体代谢排泄物或向体内灌注营养配方。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="percutaneous endoscopic gastrostomy (peg) tube 经皮内镜下胃造口管（PEG管）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 625</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Percutaneous endoscopic gastrostomy (PEG) tube</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌpɜː.kjuːˈteɪ.ni.əs ˌen.dəˈskɒp.ɪk ɡæsˈtrɒs.tə.mi/</div>
+              <div class="etc-term-cn">经皮内镜下胃造口管（PEG管）</div>
+              <div class="etc-def-en">A tube inserted into the stomach (gastro) through a puncture wound (stomy) made through (per) the skin (cutaneous); a lighted instrument (scope) allows the physician to see inside the body cavity or organ (endo).</div>
+              <div class="etc-def-cn">经皮内镜下胃造口管（PEG管）：在纤维内窥镜（引导观察胃腔内壁）直视辅助下，经由腹壁皮肤穿刺并直接置入胃腔的喂养管道。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="regurgitation 反流（反刍逆流）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 628</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Regurgitation</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/rɪˌɡɜː.dʒɪˈteɪ.ʃən/</div>
+              <div class="etc-term-cn">反流（反刍逆流）</div>
+              <div class="etc-def-en">The backward flow of food from the stomach into the mouth.</div>
+              <div class="etc-def-cn">反流（反刍逆流）：未消化的胃内容物逆向逆流回食管并涌入口腔的病理现象，极易引发严重的急性气道误吸。</div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- PHYSICAL PAGE 626 -->
+  <section class="book-page-block" id="page-626" data-page="626" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 626</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">造口管饲、配方营养液与四种置管图解 (G-Tube, J-Tube, Formulas & Figure 28.1-28.4)</span>
+    </div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• A percutaneous endoscopic gastrostomy (PEG) tube is a G-tube that is inserted with the use of an endoscope, which is a lighted instrument (scope) that allows the physician to see inside a body cavity or organ (endo), such as the stomach. The physician inserts the endoscope through the person’s mouth and esophagus and into the stomach. A stab or puncture wound (stomy) is made through (per) the skin (cutaneous) and into the stomach (gastro). A tube is inserted into the stomach through the puncture wound (FIGURE 28.5).</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 经皮内镜下胃造口管（PEG tube）：这是一种在纤维内窥镜辅助下置入的胃造口管。内窥镜是一种带有光源和镜头的精密光学仪器（scope），能让医生直接观察体内器官或体腔（endo，如胃腔）内部。医生将内窥镜经由案主口腔及食管伸入胃内。随后在腹壁皮肤（cutaneous）上穿刺（per）造孔（stomy）直通胃（gastro）腔，将喂养导管经由该穿刺孔置入胃内（图 28.5）。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Gastrostomy, jejunostomy, and PEG tubes are used for long-term enteral nutrition. An ostomy is a surgically created opening that is used to drain wastes or to feed the client. The ostomy may be temporary or permanent. In many facilities and agencies, it is the nurse who is responsible for running the formula through an enteral site. The physician orders the type of formula and the amount to be given to the client. Most formulas contain protein, carbohydrates, fat, vitamins, and minerals. Commercial formulas are commonly used, or sometimes formulas are prepared by a facility’s dietary department.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">胃造口管、空肠造口管和 PEG 管通常用于长期肠内营养支持。造口（Ostomy）是外科手术在体表创建的人为开口，用于排出体内排泄物或向体内灌注食物。造口可以是临时性的，也可以是终身永久性的。在许多机构和照护组织中，护士负责通过肠内途径输入配方液。医生开具处方医嘱明确配方液的具体种类和输注剂量。大多数配方液均衡含有蛋白质、碳水化合物、脂肪、维生素和矿物质。临床上普遍使用工业化标准化无菌商品配方，有时也由机构营养科专门配制。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Scheduled and Continuous Feedings</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">间歇定时喂养与24小时持续输注</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The physician may order scheduled or continuous feedings. Scheduled feedings usually are given four times a day using a syringe, a rigid plastic container, or a feeding bag (FIGURE 28.6).</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">医生可能会开具间歇定时喂养医嘱或持续输注医嘱。间歇定时喂养通常每日进行4次，使用专用大容量注射器、硬质塑料喂养容器或悬挂式重力喂养袋进行灌注（图 28.6）。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch28/ch28_p626_fig1_to_4_tubes.png" alt="" class="responsive-img" style="max-height:480px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURES 28.1 to 28.4 Enteral Feeding Tubes. 28.1: Nasogastric (NG) tube inserted into stomach. 28.2: Nasointestinal tube inserted into duodenum/jejunum. 28.3: Gastrostomy tube (G-tube). 28.4: Jejunostomy tube (J-tube).</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 28.1 至 28.4 临床常见肠内喂养管道解剖图解：图 28.1 经鼻至胃的鼻胃管（NG管）；图 28.2 经鼻至十二指肠/空肠的鼻肠管；图 28.3 经腹壁入胃的胃造口管（G管）；图 28.4 经腹壁入小肠的空肠造口管（J管）</p>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 627 -->
+  <section class="book-page-block" id="page-627" data-page="627" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 627</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">间歇与持续输注、喂养泵与注射器 (Scheduled vs. Continuous Feedings, Pumps & Figure 28.5-28.7)</span>
+    </div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Usually about 400 mL is given over 20 minutes during a scheduled feeding. The amount and rate are the same as those for regular meals. The physician will also specify how much water is to be given to the client each day, with the usual recommended amount being 2 000 mL/day.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">在定时定量间歇喂养中，单次喂养量通常约为400毫升，在约20分钟内平缓注入。该摄入分量与速度模拟正常人体进餐过程。医生还会明确规定案主每日需要补充的冲管水总量，常规推荐的水量通常为每日2,000毫升左右。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Continuous feedings require electronic feeding pumps (FIGURE 28.7). Nasointestinal and jejunostomy tube feedings are always continuous.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">24小时持续输注必须使用电子肠内喂养泵（图 28.7）进行恒速控制。鼻肠管和空肠造口管由于直接进入小肠，缺乏胃囊的缓冲容纳与酸性屏障，因此必须始终采用持续泵注，严防倾倒综合征（Dumping syndrome）。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Sometimes (depending on regional differences), continuous feedings are kept cold with ice chips around the container to prevent the growth of microbes. The formula warms to room temperature as it drips from the bag and passes through the connecting tubing to the feeding tube. Formula is given at room temperature, as cold fluids can cause stomach cramping. When the feeding is continuous, the nurse adds formula as needed (see the Focus on Home Care: Enteral Nutrition box). When assisting with or providing care to clients receiving enteral feedings, it is important to follow your facility policies and the client’s care plan at all times.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">有时（根据地区与机构规程差异），在高温季节连续输注时可在配方袋外周放置冰屑以抑制细菌滋生。配方液从输注袋滴下并流经较长的连接输液管路时，会自然升温至室温状态。配方液必须在室温下进入体内，因为冰冷的液体直接灌入胃肠道会诱发严重的腹痛、胃肠痉挛与腹泻。持续喂养过程中，护士会按需定期添加配方奶（参见“聚焦居家照护：肠内营养”专栏）。在协助或照护接受管饲的案主时，务必始终恪守机构制度和护理计划要求。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch28/ch28_p627_fig5_to_7_feeding_admin.png" alt="" class="responsive-img" style="max-height:480px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURE 28.5 to 28.7 Tube Feeding Administration. 28.5: Percutaneous endoscopic gastrostomy (PEG) tube. 28.6: Tube feeding given with calibrated volume syringe (A) or gravity bag (B). 28.7: Electronic enteral feeding pump.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 28.5 至 28.7 肠内喂养器具与输注装置：图 28.5 经皮内镜下胃造口（PEG）管道；图 28.6 A-刻度注射器手动推注，B-重力输注袋滴注；图 28.7 临床医用电子肠内营养喂养泵</p>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 628 -->
+  <section class="book-page-block" id="page-628" data-page="628" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 628</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">误吸预防、体位管理与居家管饲照护 (Preventing Aspiration, Positioning & Home Care)</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Preventing Problems Related to Tube Feedings</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">管饲喂养潜在并发症的预防与安全管控</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Nasogastric and nasointestinal tubes pass through the esophagus and then into the stomach or small intestine. During insertion, the tube could accidentally slip into the respiratory tract, causing aspiration, which can cause pneumonia and even death. An X-ray is therefore usually taken after insertion to determine correct tube placement.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">鼻胃管和鼻肠管经由食管下行进入胃或小肠。在插入过程中，导管有可能误入气管及呼吸道，引发急性误吸，进而诱发严重吸入性肺炎甚至危及生命。因此，在盲插置管完成后，通常必须立即拍摄 X 光胸部平片，以金标准影像学确认导管尖端位于胃肠道腔内的准确位置。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Coughing, sneezing, vomiting, suctioning, and poor positioning can move the tube out of place. A confused client can also move the feeding tube by pulling on it. The tube can move from the stomach or intestines into the esophagus and then into the airway. In a facility, a nurse checks tube placement before every scheduled tube feeding. In the case of continuous tube feedings, the nurse checks tube placement every 4 to 8 hours, depending on agency or facility policy. To do so, the nurse attaches a syringe to the tube and aspirates gastrointestinal secretions. Then the nurse measures the pH of the secretions. The pH of stomach contents is acidic. A pH reading of 0 to 4 indicates that the tube is in the stomach.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">剧烈咳嗽、打喷嚏、呕吐、呼吸道吸痰以及不当的翻身体位都有可能导致喂养管发生移位或脱出。认知障碍（意识混乱）的案主还可能因不适而无意识撕扯导管。导管可能从胃或小肠脱出至食管并误入气道。在照护机构中，护士在每次间歇定时管饲前均必须核对管道位置；对于持续输注者，护士每隔 4 至 8 小时检查一次管道位置。护士使用注射器回抽胃肠道消化液，并用精密试纸测定抽取物的 pH 值。胃液呈强酸性，pH 值在 0 至 4 之间表明导管尖端仍稳固处于胃内。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Aspiration is a major risk for clients with feeding tubes. Regurgitation can occur when formula flows backward from the stomach into the esophagus and then into the mouth. If regurgitation occurs, formula can be inhaled into the lungs. To prevent regurgitation and aspiration, position the client in Fowler’s or Semi-Fowler’s position (head of bed elevated at least 30 to 45 degrees) during the feeding and maintain this position for 1 to 2 hours after feeding. This allows gravity to help move the formula down through the digestive tract. Avoid the left-side-lying position, as it prevents normal stomach emptying.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">误吸是管饲案主面临的最严峻临床风险。当胃内配方液反向逆流回食管并涌入口腔时，便发生反流（Regurgitation）。一旦发生食物反流，配方液极易被呛入气管和肺部造成误吸。为了预防反流和误吸，管饲输注期间必须将案主安置于福氏卧位（Fowler's position）或半福氏卧位（Semi-Fowler's position，床头抬高至少 30 至 45 度），并在管饲结束后继续维持该高位体位 1 至 2 小时。利用重力生理学促进营养液向下排空进入肠道。严禁采取左侧卧位，因为左侧卧位会压迫胃幽门并阻碍胃内容物正常排空。</div>
+</div>
+
+
+<div class="callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(14, 165, 233, 0.05); border-left:4px solid #0284c7; border-radius:8px;">
+  <div class="callout-header" style="font-weight:700; color:#0369a1; margin-bottom:12px; font-size:1.02rem;">FOCUS ON HOME CARE: Enteral Nutrition · 聚焦居家照护：肠内营养操作红线与授权边界</div>
+  <div class="callout-body">
+    
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">As a support worker, you may provide home care to clients who are being fed via tubes, or in a facility, you may assist the nurse with a tube feeding.<br>You should take care never to:<br>• Insert feeding tubes<br>• Test the position of the tube<br>• Give the first dose of a tube feeding</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">作为支持人员，你可能在社区家庭中照护经管饲进食的案主，或在机构中协助护士进行管饲。<br>你必须牢记绝对严禁执行以下高危医疗操作：<br>• 严禁亲自插管或更换喂养管<br>• 严禁自行测试或判断管道体内位置（如抽吸测pH或听诊注气音）<br>• 严禁为新置管案主输注首次灌注剂量的配方营养液</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">However, some home care agencies do permit support workers to start the feeding pumps and pour formula into feeding bags or containers for gastrostomy tubes and jejunostomy tubes—but only if the tube has been established. These tasks are always delegated by a nurse. A home care nurse will teach you the task, either individually or in a course given by your agency. In most circumstances, you will need to be retrained to perform the task for each new client you work with, depending on the policy of your province, territory, agency, or facility. This process is needed to ensure competency in the delegated task. The person who teaches you the task has the responsibility of ensuring that the five rights of delegation (see Chapter 10) are being followed for the tube feeding.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">然而，某些家庭照护机构在明确满足条件的前提下，允许经过专门培训认证的支持人员为胃造口管（G管）和空肠造口管（J管）案主开启喂养泵，并将配方液倒入喂养袋或容器中——但前提是该造口管道必须是已经完全建立且窦道成熟的旧有导管。这些操作必须由注册护士严格委托（Delegated task）。居家主管护士会通过一对一临床带教或机构正规课程对你进行专门培训。在大多数情况下，针对每一位新接触的个案，你都需要重新接受针对该案主的特定再培训。带教护士负有法律责任，确保管饲委派严格遵循法定委托五项原则（The Five Rights of Delegation；参见第10章）。</div>
+    </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 629 -->
+  <section class="book-page-block" id="page-629" data-page="629" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 629</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">管饲并发症即时汇报、鼻腔护理与舒适照护 (Complications, Nasal Care & Figure 28.8)</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h3 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Other Potential Problems Related to Tube Feedings</h3>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">管饲喂养其他潜在并发症与即刻汇报指征</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Besides aspiration, which is the major risk, diarrhea, constipation, and delayed stomach emptying can also occur with tube feeding. Report the following immediately to your supervisor:</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">除最严重的致命误吸风险外，腹泻、便秘以及胃排空延迟也是管饲案主常见的胃肠道并发症。一旦观察到以下任何异常体征或症状，必须立即向主管护士报告：</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• Nausea or discomfort during the tube feeding
+• Vomiting
+• Diarrhea or distended (enlarged and swollen) abdomen
+• Coughing, choking, or complaints of indigestion or heartburn
+• Redness, swelling, drainage, odour, or pain at the ostomy site
+• Elevated body temperature (fever)
+• Signs and symptoms of respiratory distress (dyspnea, cyanosis, gasping)
+• Increased pulse rate (tachycardia) or complaints of flatulence</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 恶心或在管饲输注期间主诉胃部不适
+• 呕吐
+• 严重腹泻或腹部明显胀满隆起（腹胀）
+• 呛咳、窒息先兆，或主诉消化不良与烧心感
+• 造口穿刺部位出现红肿、异常分泌物流出、恶臭或压痛
+• 体温升高（发热）
+• 呼吸窘迫体征与症状（呼吸困难、面色口唇发绀、喘息呻吟）
+• 脉搏显著增快（心动过速）或主诉严重肠胀气</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Comfort Measures for the Client with a Tube Feeding</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">管饲案主身心舒适照护规范</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The client with a feeding tube is usually NPO (nil per os, meaning “nothing by mouth”). When dry mouth, dry lips, and sore throat cause discomfort, clients can suck on hard candy or chew gum, if allowed in the care plan. Since one nostril is obstructed by the feeding tube, the client may breathe through the mouth, so frequent oral hygiene, lubricant for the lips, and mouth rinses are necessary. Sometimes, an ice bag applied externally to the throat can give relief for a sore throat. Give care as directed by your supervisor and the care plan.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">留置喂养管的案主通常遵医嘱处于 NPO（严格禁食禁饮）状态。当口腔干燥、嘴唇干裂及咽喉疼痛引起不适时，若护理计划允许，案主可含服硬糖或咀嚼口香糖以刺激唾液分泌。由于一侧鼻孔被喂养管占据阻塞，案主往往代偿性地用口呼吸，因此频繁细致的口腔擦洗、涂抹润唇膏及含漱液漱口必不可少。有时在颈前喉部外敷冰袋可有效缓解咽喉部肿痛。请严格按照主管护士指导与照护计划施护。</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Nasogastric and nasointestinal tubes can irritate and cause pressure on the nose. The nose and nostrils also are cleaned every 4 to 8 hours, depending on the policy of your agency or facility. To ensure that the tube does not exert pressure against the nostril, reposition the tube slightly away from the nostril edge. Sometimes, tubes alter the shape of the nostrils or cause pressure sores. Securing the tube using tape or a tube holder helps prevent these problems (FIGURE 28.8). Tube holders have foam cushions that prevent pressure on the nose and eliminate the need for retaping; frequent retaping can irritate the nose. The tube also is secured to the client’s clothes with tape or by looping a rubber band around the tube and pinning the rubber band to the client’s clothes with a safety pin. There should be some slack in the tubing to allow movement by the client, but a tube being too tight or too loose can cause displacement of the tube.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">鼻胃管和鼻肠管会持续机械性摩擦并压迫鼻翼与鼻孔黏膜。根据机构制度，每隔 4 至 8 小时清洁一次鼻孔周围。为确保导管不会对鼻翼造成局部压迫性缺血坏死，应将导管位置微调，使其避开鼻缘硬性压迫。长期插管可能改变鼻孔形状或引发局部压疮。使用专用医用胶带或鼻部固定支架（图 28.8）可有效预防这些问题。专用鼻管固定器带有泡沫软垫，能消除对鼻梁鼻翼的局部压迫，并避免频繁撕贴胶布刺激娇嫩皮肤。导管还必须妥善固定在案主衣服上：使用胶布粘贴，或用橡皮筋环绕导管打结后用安全别针固定在病员服胸前。管路必须预留适度活动余量（Slack），既保证案主头部自由转动，又防止管道过紧受牵拉拔出或过松导致脱落移位。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch28/ch28_p629_fig8_tube_taped_nose.png" alt="" class="responsive-img" style="max-height:480px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURE 28.8 The feeding tube is securely taped to the nose and nostril to prevent displacement and skin irritation.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 28.8 使用医用胶带与减压垫将喂养管稳固贴敷于鼻梁与鼻翼，防止导管移位及压迫性皮损</p>
+</div>
+
+
+<div class="callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(245, 158, 11, 0.05); border-left:4px solid #d97706; border-radius:8px;">
+  <div class="callout-header" style="font-weight:700; color:#b45309; margin-bottom:12px; font-size:1.02rem;">THINK ABOUT SAFETY: Administering Food Through a Feeding Tube · 安全第一：管饲操作核心安全法则</div>
+  <div class="callout-body">
+    
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Regurgitation is a major risk when a client has a feeding tube, so ensure that your client is in the sitting or semi-Fowler’s position while you are administering the feeding and that they remain in this position for 1 to 2 hours after the feeding. Follow the care plan.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 食物反流是管饲案主的最严峻风险。在灌注输液期间，务必确保案主处于端坐位或半福氏卧位（床头抬高30–45度），并在喂养结束后维持该体位至少1至2小时。严格执行照护计划。</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• The feeding tube should be pinned to your client’s gown with enough slack to allow movement, but if it is too loose or too tight, the feeding tube could become dislocated.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 喂养导管应用别针妥善固定在病员服上并留有适度松弛余量；过紧或过松都会诱发导管意外移位甚至完全脱出。</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Report any unusual signs or symptoms in the client to your supervisor immediately.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 案主一旦出现任何呼吸急促、呛咳或面色改变等异常征象，必须立即向主管护士汇报！</div>
+    </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 630 -->
+  <section class="book-page-block" id="page-630" data-page="630" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 630</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">静脉输液疗法目的、常用溶液与中心静脉管 (IV Therapy Purposes, Solutions & Figure 28.9)</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">INTRAVENOUS THERAPY</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">静脉输液疗法 (INTRAVENOUS THERAPY)</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Intravenous (IV) therapy—also referred to as IV or IV infusion—involves giving fluids through an injection port, needle (such as a butterfly needle used on infants or children), or a cannula or catheter into a vein. A cannula (sometimes called a catheter) is plastic tubing threaded over a needle. Once the cannula or catheter is inserted into the vein, the needle is withdrawn. Physicians order IV therapy for the following purposes:</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">静脉输液疗法（Intravenous therapy，通常简称为 IV 或静脉滴注）是指通过给药接头、穿刺针（如常用于婴幼儿的头皮针/蝴蝶针）或静脉套管/导管将液体直接滴注到静脉血管内的治疗手段。套管（Cannula，亦称留置导管 catheter）是套在金属穿刺针外周的柔软塑料管；一旦刺入静脉内，金属针芯被迅速抽出并废弃，留置软管保留在静脉腔内。医生开具静脉输液医嘱主要用于以下目的：</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• To provide needed fluids when a client cannot take fluids by mouth
+• To reverse dehydration in the body
+• To replace minerals and vitamins lost because of illness or injury
+• To provide sugar for energy
+• To administer medications such as antibiotics
+• To administer blood and blood products
+• To provide hyperalimentation—the giving of a solution highly concentrated in nutrients (total parenteral nutrition, TPN)</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 当案主无法由口摄取足够液体时，供给机体必需的水分
+• 纠正与治疗机体脱水状态
+• 补充因疾病、呕吐、腹泻或创伤丢失的电解质矿物质与水溶性维生素
+• 提供葡萄糖等糖类物质作为基础生理能量来源
+• 经静脉途径注射抗生素、抗心律失常等关键急救及治疗药物
+• 输注全血及红细胞、血浆、血小板等血液制品
+• 实施全胃肠外高营养疗法（Hyperalimentation / TPN）——输入高浓度氨基酸、葡萄糖及脂肪乳剂等全营养高渗混合液</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">IV therapy is given in the hospital, outpatient care, subacute care, long-term care, and home care settings. Nurses are responsible for IV therapy—they start and maintain the infusion, according to the physician’s orders, and also give IV medications and administer blood.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">静脉输液疗法广泛应用于急性期医院、门诊输液中心、亚急性医疗机构、长期照护中心以及居家上门照护中。注册护士承担静脉输液的核心专业职责——依据医生医嘱穿刺置管、建立静脉通路、调节维护滴速、经静脉给药以及执行输血操作。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h3 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Common Intravenous Solutions</h3>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">临床常用静脉输液溶液</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">IV solutions vary in volume and contents, and are ordered by the client’s physician or other qualified health care provider. They may be ordered to run intermittently (periodically), such as only when a medication needs to be infused, or continuously, such as to rehydrate a person. Some may have electrolytes (such as potassium) added to replenish what the client’s body has lost. Specific types of IV solutions are ordered to meet the specific health needs of each client. If the client is to have a blood transfusion, they may require a 0.9% NaCl (normal saline) solution IV as this is isotonic to bodily fluids such as blood. Examples of common IV solutions include 5% dextrose in water (D5W), 0.9% NaCl (normal saline), or 5% dextrose in 0.45% NaCl. Whatever the IV solution ordered, it must be sterile, and sterile technique must be maintained to avoid introducing potentially life-threatening bacteria into the body.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">静脉输液溶液的容量规格与化学成分各异，均由主管医生开具法定医嘱。输液可以按需间歇性（周期性）滴注（例如仅在滴注抗生素时连接），也可以全天持续滴注（如脱水补液）。某些溶液中额外添加了氯化钾等电解质以纠正电解质紊乱。开具的输液种类针对每位案主的具体生理病理状态。若案主需要输血，必须使用 0.9% 氯化钠（生理盐水）溶液进行通路冲洗与伴随输注，因为其与血液等机体体液完全呈等渗状态（Isotonic；参见第32章）。常用液体包括：5% 葡萄糖水溶液（D5W）、0.9% 生理盐水（NS）以及 5% 葡萄糖加 0.45% 半张盐水等。无论输注何种液体，都必须绝对无菌，并在操作中严格维持无菌操作技术，杜绝将可能致命的细菌带入血液循环。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h3 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Central Intravenous Sites</h3>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">中心静脉通路穿刺解剖部位 (Central Venous Sites)</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The subclavian vein and the internal jugular vein—located close to the heart—are central venous sites. A physician inserts a long catheter—called a central venous catheter or central line—into a central vein. The catheter tip is then threaded into the superior vena cava or right atrium (FIGURE 28.9, A and B). At times, the cephalic and basilic veins in the arm also are used for IV therapy. Catheters inserted into these sites are called peripherally inserted central catheters (PICCs). The catheter tip is threaded into the subclavian vein or the superior vena cava (FIGURE 28.9, C).</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">锁骨下静脉和颈内静脉因邻近心脏，被称为中心静脉通路解剖部位。专科医生将一根较长的医用导管——称为中心静脉导管（Central venous catheter）或中心静脉置管（Central line）——插入中心大静脉中，导管尖端最终送达上腔静脉近心端或右心房入口处（图 28.9，A 和 B）。有时，上肢的头静脉或贵要静脉也被用于建立深静脉通道，经由这些外周静脉穿刺送入的中心导管被称为经外周静脉置入中心静脉导管（PICC）。导管尖端同样经外周向上走行并最终定位于锁骨下静脉或上腔静脉（图 28.9，C）。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch28/ch28_p630_fig9_central_venous_sites.png" alt="" class="responsive-img" style="max-height:480px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURE 28.9 Central venous sites. A, Subclavian vein (catheter tip in right atrium). B, Internal jugular vein (catheter tip in superior vena cava). C, Basilic vein (PICC tip in subclavian vein/superior vena cava).</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 28.9 中心静脉穿刺置管解剖部位：A-锁骨下静脉置管（尖端位于右心房）；B-颈内静脉置管（尖端位于上腔静脉）；C-贵要静脉 PICC 经外周置入中心静脉导管</p>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 631 -->
+  <section class="book-page-block" id="page-631" data-page="631" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 631</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">外周与中心静脉照护、PICC与安全规范 (IV Assisting, PICC, Box 28.1 Safety Measures)</span>
+    </div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Only physicians and specially trained nurses can insert PICCs. The client is X-rayed after insertion of a central venous catheter or PICC to ensure proper placement. Central venous sites are used to give large amounts of fluid and to administer long-term IV therapy. They also are used for IV medications that irritate the peripheral veins. Sometimes, surgery is necessary to insert a central venous catheter (see the Focus on Home Care: Intravenous Therapy box).</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">只有专科医生和接受过专门认证培训的 PICC 专科护士才能执行 PICC 穿刺置管。在中心静脉导管或 PICC 置入完成后，必须拍摄胸部 X 光片以确认导管尖端的确切解剖位置。中心静脉通路用于大容量快速补液、长期数月静脉治疗，以及输注对周围浅表静脉具有强烈刺激或腐蚀性的化疗药和高渗静脉营养液。有时需要在手术室由外科医生切开置入中心静脉导管（参见“聚焦居家照护：静脉输液”专栏）。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Assisting With Intravenous Therapy</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">协助静脉输液治疗照护规范</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The most common site for an IV is the client’s lower arm or the back of the hand. Follow the safety measures in BOX 28.1 to ensure you provide safe care. As a support worker, you help meet the hygiene and activity needs of clients who are receiving IV therapy, but you are never responsible for starting or maintaining IV therapy. A client who has an IV will also need the support worker’s assistance to dress (see Chapter 18), and either the support worker or a nurse should teach the client how to ambulate safely with an IV line (see FIGURE 28.11). See the Providing Compassionate Care: Enteral Nutrition and Intravenous Therapy box. Complications can occur from IV therapy. Report at once if you see any of the signs and symptoms listed in BOX 28.2.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">成人外周静脉穿刺最常见的解剖部位是前臂内侧或手背浅表静脉网。严格遵循框 28.1 中的安全防护规范，确保照护安全。作为支持人员，你的职责是协助接受输液案主完成个人卫生清洁、更衣穿衣（参见第18章脱衣先脱健侧、穿衣先穿患侧原则）以及下床活动需求，但你绝对不能亲自负责穿刺起针、调校输液滴速或维护输液通路。支持人员或护士应当指导案主如何推着便携输液架安全下床行走（参见图 28.11）。参见“倾注仁爱关怀：肠内营养与静脉输液”专栏。静脉输液可能引发局部与全身并发症，一旦观察到框 28.2 中列出的任何迹象，必须立即向护士汇报。</div>
+</div>
+
+
+<div class="callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(14, 165, 233, 0.05); border-left:4px solid #0284c7; border-radius:8px;">
+  <div class="callout-header" style="font-weight:700; color:#0369a1; margin-bottom:12px; font-size:1.02rem;">FOCUS ON HOME CARE: Intravenous Therapy · 聚焦居家照护：中心静脉置管案主的居家安全监护</div>
+  <div class="callout-body">
+    
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">Clients receiving IV therapy in their homes often have central venous catheters. The nurse teaches the client and family about administering IV medications and managing the catheter. Because these catheters or cannulas are inserted directly into a vein, you must be very careful when providing care. Ensure that you do not do anything around the insertion point that could dislodge the catheter. Report immediately any redness around the site. If a catheter falls out, apply pressure with sterile gauze until bleeding stops, and immediately inform your supervisor. If you are giving a tub bath to the client, ensure that the IV tubing is kept dry; if your client has a pump, it must be unplugged before the client enters the water. If your client is having a shower, keep the IV site dry by covering it with plastic wrap. Your supervisor will give you directions for care.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">在家庭环境中接受静脉输液的案主通常留置有中心静脉导管或 PICC。专科护士会指导案主及家属掌握输液给药与导管维护要点。由于这些导管直接置入深部大血管中，你在提供日常翻身、擦浴等基础照护时必须极其小心。确保在穿刺点周围的任何动作都不会牵拉或移动导管。一旦发现穿刺点周围有任何红晕或肿胀，必须立即报告。若导管不幸发生意外脱出，应立即使用无菌纱布在穿刺点施加直接按压直至彻底止血，并即刻呼叫主管护士！若协助案主进行盆浴，务必确保穿刺点和输液管路保持绝对干燥；若案主连接有输液泵，在案主接触水之前必须拔除输液泵外接交流电源插头！若进行淋浴，应用保鲜膜和防水胶带将穿刺敷料处紧密包裹密封防水。主管护士会给予你详尽的个体化照护指导。</div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(245, 158, 11, 0.05); border-left:4px solid #d97706; border-radius:8px;">
+  <div class="callout-header" style="font-weight:700; color:#b45309; margin-bottom:12px; font-size:1.02rem;">BOX 28.1: Safety Measures for Intravenous Therapy · 框 28.1：静脉输液核心安全防护准则</div>
+  <div class="callout-body">
+    
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Follow Standard Practices.<br>• The position of the IV needle or catheter must be maintained. Do not move the needle, cannula, or catheter. If the needle or cannula is moved, it may come out of the vein; fluid will flow into the tissues (infiltration), or the flow will stop. If the needle or catheter becomes dislodged, the site will bleed; apply pressure with sterile gauze according to Standard Practices, and contact your supervisor immediately.<br>• Sometimes, the nurse may apply splints or restraints to prevent movement of the extremity (FIGURE 28.10) and, thus, the movement of the needle or cannula.<br>• Protect the IV bag, tubing, and needle or cannula when ambulating the client. Portable IV stands are rolled along next to the client. When assisting the client to change gowns, care must be taken to prevent dislodging the needle or cannula (FIGURE 28.11).<br>• Assist the client with turning and repositioning. Move the bag to the side of the bed where the client is lying. Always allow enough slack in the tubing to ensure the needle or cannula does not dislodge due to pressure on the tube.<br>• Notify your supervisor immediately if bleeding occurs from the insertion site. Follow Standard Practices.<br>• Notify your supervisor immediately if there is any leaking of fluid from the IV site.<br>• Notify your supervisor immediately of any signs and symptoms listed in BOX 28.2.<br>• Always be aware of your scope of practice for your province or territory and the policies of your facility or agency.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 严格执行标准防护规程（Standard Practices，接触血液渗出时佩戴手套）。<br>• 必须保持静脉穿刺针或留置软管的原有体位与深度。切勿晃动、牵拉或移动针头、套管或导管。若针头移动，可能穿破或滑出血管壁，造成输入的液体漏入周围皮下软组织（液体外渗 Infiltration），或导致滴注完全停止。若穿刺针意外脱出，穿刺孔会出血；应立即佩戴手套使用无菌医用纱布在穿刺点直接按压止血，并即刻呼救主管护士！<br>• 有时护士会使用前臂固定夹板（Armboard，图 28.10）或约束装置限制关节弯曲，从而防止留置针受压折弯移位。<br>• 协助案主下床行走时，切实保护好输液袋、输液管及留置针。便携式立式输液架应由案主或协助者推行在其身侧。协助案主更换病员服时，必须极其谨慎，防止牵扯针具（图 28.11）。<br>• 协助案主床上翻身和调整体位时，先将输液袋移到案主翻身侧。输液管路必须始终预留出充裕的松弛度（Slack），严防管道紧绷牵拉导致脱管。<br>• 若穿刺部位发生渗血或持续出血，立即向主管护士报告并执行止血防护。<br>• 若穿刺点周围敷料浸湿或有药液向外渗漏，立即报告护士。<br>• 一旦发现框 28.2 中的任何异常体征或症状，即刻向主管护士汇报。<br>• 始终对所在省份/地区的法定职业执业范围（Scope of Practice）及所属机构的规章制度保持高度敬畏与严格遵从。</div>
+    </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 632 -->
+  <section class="book-page-block" id="page-632" data-page="632" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 632</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">静脉输液局部与全身并发症、皮下输注 (IV Complications Box 28.2 & Subcutaneous Infusion)</span>
+    </div>
+
+
+<div class="callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(239, 68, 68, 0.05); border-left:4px solid #ef4444; border-radius:8px;">
+  <div class="callout-header" style="font-weight:700; color:#b91c1c; margin-bottom:12px; font-size:1.02rem;">BOX 28.2: Signs and Symptoms of Intravenous Therapy Complications · 框 28.2：静脉输液并发症典型临床体征与报警征象（即刻报告护士）</div>
+  <div class="callout-body">
+    
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">Local—at the Intravenous Site:<br>• Bleeding<br>• Puffiness or swelling (infiltration)<br>• Pale or reddened skin<br>• Complaints of pain at or above the IV site<br>• Hot or cold skin near the site<br>• Leaking of fluid from the site</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">局部并发症（发生于静脉穿刺点及血管走向周围）：<br>• 穿刺处持续渗血或出血<br>• 局部浮肿、肿胀隆起（液体外渗 Infiltration）<br>• 局部皮肤苍白无华，或发红呈现条索状红线（静脉炎）<br>• 案主主诉穿刺点或沿血管走向出现刺痛、灼痛或胀痛<br>• 穿刺点周围皮肤异常灼热（感染/静脉炎）或皮温冰凉（液体外渗）<br>• 穿刺孔处或敷料边缘出现药液向外渗漏</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">Systemic—Involving the Whole Body:<br>• Fever and chills<br>• Itching (pruritus) or generalized hives<br>• Drop in blood pressure (hypotension)<br>• Tachycardia (pulse rate more than 100 beats per minute)<br>• Irregular pulse<br>• Cyanosis (bluish colour of lips, nails, or skin)<br>• Changes in mental function or confusion<br>• Loss of consciousness<br>• Difficulty breathing (dyspnea) or shortness of breath<br>• Decreasing or no urine output<br>• Chest pain or tightness<br>• Nausea</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">全身性并发症（累及全身各系统，属严重输液反应与过敏性/循环负荷过重危急重症）：<br>• 发热伴寒战战栗<br>• 全身皮肤瘙痒或突发荨麻疹风团（过敏反应先兆）<br>• 血压急剧下降（低血压休克先兆）<br>• 心动过速（脉搏跳动超过每分钟100次）<br>• 脉搏细弱或节律不齐<br>• 口唇、甲床或面色青紫发绀（Cyanosis）<br>• 意识状态改变或突发精神错乱<br>• 意识丧失或昏迷<br>• 呼吸困难（Dyspnea）、气促喘息或呼吸窘迫<br>• 尿量急剧减少或完全无尿（急性肾循环灌注不足）<br>• 胸闷、胸痛或压榨感<br>• 突发恶心呕吐</div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch28/ch28_p632_fig10_11_12_iv_subcut.png" alt="" class="responsive-img" style="max-height:480px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURES 28.10 to 28.12 IV and Subcutaneous Equipment. 28.10: Armboard preventing extremity movement. 28.11: Portable IV stand for ambulation. 28.12: Subcutaneous butterfly needle and injection port taped to skin.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 28.10 至 28.12 静脉与皮下输液器具：图 28.10 防止关节屈曲的前臂固定夹板；图 28.11 便于案主下床活动的便携式输液架；图 28.12 贴敷于皮下的蝴蝶式皮下输注留置针与无菌注射接头</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">SUBCUTANEOUS INFUSION THERAPY</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">皮下输注疗法 (SUBCUTANEOUS INFUSION THERAPY)</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">For clients who require pain medication or hydration on a continuous basis, or frequent injections, some physicians order subcutaneous infusion therapy for their clients. Unlike an IV, in which a needle is inserted into the client’s vein, the medication is given through an injection port or small needle that has been inserted into the client’s subcutaneous tissue layer using Standard Practices. IV tubing is then connected to this injection port or needle, which is then securely taped into place onto the client’s skin (FIGURE 28.12). Pain medication can therefore be administered into the injection port instead of being injected into the skin.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">对于需要持续补液、长期镇痛治疗，或需要频繁注射止痛药物的案主（常见于姑息舒缓照护及临终关怀案主），医生可能会开具皮下输注疗法（Subcutaneous infusion therapy，亦称皮下输液法 Hypodermoclysis）。与静脉输液必须刺入血管不同，皮下输注是在严格无菌防护下，将带有注射端口的细小微型钢针（如蝴蝶针）刺入案主的皮下疏松结缔组织层中。输液导管与该注射接头相连，并使用透明敷料牢固贴敷固定于案主皮肤上（图 28.12）。镇痛药物便可经由该预置注射端口平缓推注或恒速滴注，从而免除了案主遭受反复多次肌肉皮下扎针穿刺的剧烈痛苦。</div>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 633 -->
+  <section class="book-page-block" id="page-633" data-page="633" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 633</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">皮下留置针照护、输液仁爱关怀准则 (Subcutaneous Needle Care & DIPPS Compassionate Care)</span>
+    </div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">In order for the medication to be effective, the position of the injection port or subcutaneous needle must be maintained. Do not attempt to move it. If it is dislodged (moved), it may come out of the subcutaneous tissue and, when injected, the pain medication will not be effective for pain relief. If the port or needle does become dislodged, apply pressure with sterile gauze, according to Standard Practices, and contact your supervisor immediately.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">为了确保药物能够被皮下毛细血管微循环充分吸收发挥药效，注射接头或皮下留置针的原本位置必须受到严格保护。切勿自行试图挪动或调整针头深度。若针头被移位或脱出皮下组织，注入的镇痛药物将发生漏液外溢，无法达到镇痛效果。若注射接头或针头发生脱出，应立即佩戴手套使用无菌纱布覆盖按压穿刺点，并即刻向主管护士汇报重置。</div>
+</div>
+
+
+<div class="callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(236, 72, 153, 0.05); border-left:4px solid #db2777; border-radius:8px;">
+  <div class="callout-header" style="font-weight:700; color:#be185d; margin-bottom:12px; font-size:1.02rem;">PROVIDING COMPASSIONATE CARE: Enteral Nutrition and Intravenous Therapy · 倾注仁爱关怀：肠内营养与静脉输液中的 DIPPS 核心准则</div>
+  <div class="callout-body">
+    
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Dignity. Clients who have to rely on feeding tubes to supply their nutrition may be embarrassed by their tube. Others may feel like an outcast when they are required to watch others eat when they are unable to. Report if the client is embarrassed about having their feeding while they have visitors; visiting hours can be arranged around the client’s feeding times. Feeding tubes that are inserted into the client’s nose should be taped in the most discreet way possible, perhaps using transparent tape or dressings.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 维护尊严（Dignity）：不得不依赖喂养管摄取营养的案主常对脸上的管子感到自卑与尴尬；在别人用餐而自己无法经口品尝时，有些人会产生被群体孤立抛弃的凄凉感。若案主在亲友探视时因当众管饲而感到难堪，应向护士报告，合理调整探视时间避开喂食时段。对于插入鼻腔的面部导管，应用最隐蔽美观的方式固定，优先使用超薄透明医用敷料贴敷。</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Independence. Encourage clients to be as independent as possible. If they are able to ambulate, provide a portable IV pole to hold the feeding bag so they can walk while receiving their feeding.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 促进自主独立（Independence）：鼓励案主在安全范围内最大程度保持自理。若身体机能允许下床活动，提供带有静音滑轮的便携式输液架悬挂喂养袋，让其在输注期间仍能自主散步活动。</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Individualized care. For care to be truly client-centred, it must be planned or adapted to fit the client’s choices, physical and cognitive strengths and limitations, personality, and care plan. For example, if the client has any discomfort (see Chapter 23), try to determine the type of pain the person has, report it to the appropriate person, and document it in the client record.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 个体化照护（Individualized care）：以案主为中心的照护必须契合其身心能力与性格特点。例如，若案主表现出任何疼痛或胀痛不适（参见第23章），细心观察评估疼痛性质与部位，迅速报告护士并记入护理记录。</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Preferences. Encourage personal choices whenever possible. Allow clients receiving an enteral feeding to choose clothing that would cover their tubing dressing or stoma but also provide access for routine checking.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 尊重个人偏好（Preferences）：鼓励自主选择衣着。允许案主挑选既能遮盖腹部造口与敷料（维护外观体面），又便于医护人员拉开拉链进行常规巡视核对的适宜衣物。</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Privacy. Providing for privacy is important when checking the client’s tubing site, especially if the client has tubing that enters into their abdominal area. Close the curtains or the door when inspecting the tubing or when the nurse is providing care to their dressing or stoma site.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 保障隐私（Privacy）：检查腹部置管造口或输液部位时，务必保护好身体隐私暴露。在查看腹部造口或护士更换敷料时，拉严病床隔帘或关好房门。</div>
+    </div>
+
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">• Safety. To prevent regurgitation after an enteral feeding, ensure that the client is in the sitting or semi-Fowler’s position for the feeding. Keep the client in this position for 1 to 2 hours after the feeding as well to promote movement of the formula through the gastrointestinal system and prevent aspiration. Avoid the left-side-lying position, which prevents emptying of the stomach.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">• 确保安全（Safety）：为了杜绝管饲后食物反流，必须确保在喂养全程及喂养结束后 1 至 2 小时内，案主始终处于高坐位或半福氏卧位（抬高床头30–45度），依靠重力生理学促进配方液向下消化排空，坚决预防误吸窒息。绝对避免左侧卧位，因为左侧卧位会严重阻碍胃排空。</div>
+    </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 634 -->
+  <section class="book-page-block" id="page-634" data-page="634" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 634</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">本章核心要点、临床思辨与官方自测题 1-7 (Chapter Key Points, Critical Thinking & Review Q1-7)</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">CHAPTER REVIEW: KEY POINTS</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">本章核心知识点总结 (CHAPTER REVIEW: KEY POINTS)</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">• Some clients, because of illness, injury, or surgery, are not able to swallow, eat, or drink and need a feeding tube to provide nourishment and medications.
+• Enteral nutrition feeding may be done through a nasogastric tube, a nasointestinal tube, a gastrostomy tube, a gastro-jejunostomy tube, a jejunostomy tube, or a percutaneous endoscopic gastrostomy tube.
+• Feeding-tube formulas may be commercially prepared or prepared by the facility where the client is.
+• The feeding tube can be moved out of place from coughing, sneezing, vomiting, suctioning, poor positioning, or the client pulling on the tube. The nurse checks on the position of the tubing, depending on your employer’s policy.
+• Aspiration is the major risk for clients with a feeding tube. Other symptoms to report immediately are nausea, discomfort, vomiting, diarrhea, distension, coughing, indigestion, respiratory distress, increased pulse rate, and complaints of flatulence.
+• Physicians order IV therapy to provide needed fluids; to replace minerals, vitamins, or sugar; or to administer medication or blood.
+• Sites used depend on the age of the client, the condition of the client, and the purpose of the IV therapy.
+• As a support worker, you must be very careful when providing care to a client with an IV. You need to ensure that you do not move or dislodge the needle, catheter, or cannula. Re-insertion of an IV is painful for your client.
+• As a support worker, you are never responsible for starting or maintaining IV therapy, but you must report immediately any of the signs and symptoms of IV therapy complications.</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">• 由于疾病、创伤或手术，部分案主无法自主吞咽或进食，需要通过喂养管道供给营养和必需药物。
+• 肠内营养途径包括鼻胃管（NG管）、鼻肠管、胃造口管（G管）、胃-空肠造口复合管（GJ管）、空肠造口管（J管）以及经皮内镜下胃造口管（PEG管）。
+• 肠内营养配方可采用工业化商品配方制剂，或由机构营养科专门配制。
+• 咳嗽、喷嚏、呕吐、吸痰、体位不当或案主抓扯均可导致管道移位。护士依据机构制度定期测试抽吸物 pH 值确认管道位置。
+• 误吸（Aspiration）是管饲案主面临的最核心致命风险。其他必须即刻报告的症状包括恶心、不适、呕吐、腹泻、腹部膨隆、呛咳、消化不良、呼吸窘迫、脉搏增快及肠胀气。
+• 医生开具静脉输液疗法用于补充体液、补充电解质/维生素/糖分，或给予药物与血液制品。
+• 穿刺解剖部位取决于案主年龄、全身病情及输液目的。
+• 作为支持人员，在照护输液案主时必须极其轻柔，严防牵扯或移位穿刺针、导管或套管。重新扎针置管对案主而言极其痛苦。
+• 作为支持人员，你绝不承担穿刺起针或维护输液通路的责任，但你必须在发现任何输液并发症迹象时第一时间向主管护士报告。</div>
+</div>
+
+
+<div class="callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(239, 68, 68, 0.05); border-left:4px solid #ef4444; border-radius:8px;">
+  <div class="callout-header" style="font-weight:700; color:#b91c1c; margin-bottom:12px; font-size:1.02rem;">CRITICAL THINKING IN PRACTICE · 临床实战批判性思维案例</div>
+  <div class="callout-body">
+    
+    <div style="margin-bottom:12px; line-height:1.55;">
+      <div style="color:var(--text-primary); font-size:0.95rem; margin-bottom:3px;">Mrs. Stenson is receiving a continuous tube feeding. You hear her feeding pump alarm sound. You go to check on her. The head of her bed is flat and she says: “My mouth is dry.” What do you do first? What do you do next? What can you do within your role limits? What does the nurse need to do?</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem;">案例：斯滕森夫人（Mrs. Stenson）正在接受 24 小时持续管饲泵注。你听到病房内肠内喂养泵的报警蜂鸣声响起。你走进病房查看。发现她的病床床头完全处于水平平卧位（Flat），并且她对你说：“我的嘴巴好干啊。”<br>面对此紧急情境：<br>1. 你应当首先采取什么紧急行动？（立即暂停/关闭喂养泵输注，并迅速将床头摇高至半福氏卧位 30–45 度，防止平卧位引发食物反流和急性误吸窒息！）<br>2. 接下来做什么？（立即按下呼叫铃呼叫主管护士到场评估，告知护士喂养泵报警及案主处于平卧位的情况）。<br>3. 在你的职责权限内你能做什么？（评估案主有无咳嗽或呼吸困难；在护士评估确认安全前，绝对不能擅自给案主喝水，因为其处于 NPO 状态；可以使用温水棉签或湿润棉球为案主轻轻湿润嘴唇和口腔黏膜缓解口干，但绝不能让其咽下液体）。<br>4. 护士需要执行什么医疗处置？（护士负责检查导管体外标记刻度，抽吸胃液测定 pH 值以确认导管尖端是否依然在胃内，排查喂养泵报警原因（如管路打折、气泡或输完），并重新设定泵注速度启动喂养）。</div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">REVIEW QUESTIONS</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">全书官方课后复习题 (REVIEW QUESTIONS)</div>
+</div>
+
+
+<div class="editorial-para-block" style="margin-bottom:16px; line-height:1.65;">
+  <div class="para-en" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Answers to these questions are at the bottom of page 635.
+Circle the BEST answer:</div>
+  <div class="para-cn" style="font-size:0.95rem; color:var(--text-secondary);">本组官方复习题的标准答案见第635页底部。
+请选出每道题的最佳选项：</div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 1 (Official Answer: B)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">1. A gastrostomy tube is inserted into the:<br>A. Small intestine<br>B. Stomach<br>C. Colon<br>D. Nose</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">1. 胃造口管（Gastrostomy tube，简称 G-tube）是通过腹壁造口手术直接置入到人体的哪一器官部位？<br>A. 小肠<br>B. 胃（Stomach）（正确答案）<br>C. 结肠<br>D. 鼻腔</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: B. A gastrostomy tube (G-tube) is surgically placed through an opening in the abdominal wall directly into the stomach (gastro).<br><span style="color:#065f46;">出版社官方标准答案：B。构词学中 gastro- 代表胃，-stomy 代表外科手术造口。胃造口管是通过腹壁造瘘口直接置入胃腔用于长期肠内营养支持的管道。</span>
+  </div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 2 (Official Answer: B)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">2. Which of the following is a common reason for tube feedings?<br>A. Cancer of the lung<br>B. Surgery to the mouth<br>C. Chronic obstructive pulmonary disease (COPD)<br>D. Pneumonia</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">2. 下列哪种临床状况是需要接受肠内管饲喂养的最常见适应症？<br>A. 肺癌<br>B. 口腔颌面部手术或严重创伤（正确答案）<br>C. 慢性阻塞性肺疾病（COPD）<br>D. 肺炎</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: B. Tube feedings are indicated when clients cannot chew or swallow food normally, such as after extensive surgery or trauma to the mouth, head, neck, or esophagus, or due to neurological dysphagia.<br><span style="color:#065f46;">出版社官方标准答案：B。管饲喂养的核心指征是食物无法通过口腔和食道正常向下传输至胃部。口腔重大手术直接阻碍咀嚼吞咽功能。</span>
+  </div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 3 (Official Answer: A)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">3. Continuous feedings require:<br>A. Electronic feeding pumps<br>B. Intravenous (IV) bags<br>C. Catheters<br>D. Syringes</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">3. 肠内营养的24小时持续恒速滴注（Continuous feedings）必须依赖下列哪种专用设备进行输注控制？<br>A. 专用电子肠内喂养泵（Electronic feeding pumps）（正确答案）<br>B. 静脉输液袋<br>C. 导管<br>D. 注射器</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: A. Continuous feedings are administered over 24 hours at a steady, controlled rate and require an electronic enteral feeding pump to ensure accuracy and prevent complications.<br><span style="color:#065f46;">出版社官方标准答案：A。持续喂养需要使用专用电子喂养泵恒速控制，鼻肠管和空肠造口管喂养必须采用持续泵注。</span>
+  </div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 4 (Official Answer: C)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">4. Aspiration is a major complication of:<br>A. Hyperalimentation<br>B. IV therapy<br>C. Nasogastric and nasointestinal tubes<br>D. Central venous catheters</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">4. 误吸（Aspiration）并导致吸入性肺炎，是下列哪种喂养管道最严峻的常见高危并发症？<br>A. 全胃肠外高营养<br>B. 静脉输液疗法<br>C. 鼻胃管与鼻肠管（正确答案）<br>D. 中心静脉导管</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: C. Nasogastric (NG) and nasointestinal tubes pass through the pharynx and esophagus. If the tube is displaced, formula can enter the respiratory tract, causing severe aspiration.<br><span style="color:#065f46;">出版社官方标准答案：C。鼻胃管和鼻肠管经由咽喉食管穿入，极易因咳嗽、呕吐或移位导致配方奶灌入气管诱发吸入性肺炎。</span>
+  </div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 5 (Official Answer: A)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">5. A client with a feeding tube is usually:<br>A. NPO<br>B. On bed rest<br>C. Allowed a regular diet<br>D. In a coma</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">5. 留置肠内喂养管的案主，其常规医嘱状态通常属于下列哪种情况？<br>A. 遵医嘱禁食禁饮（NPO：nil per os）（正确答案）<br>B. 绝对卧床休息<br>C. 允许进食普通普食<br>D. 处于昏迷状态</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: A. Clients with feeding tubes are usually ordered NPO (nothing by mouth) because their swallowing mechanisms are impaired or their upper GI tract requires rest.<br><span style="color:#065f46;">出版社官方标准答案：A。接受管饲的案主通常伴有严重的咀嚼吞咽障碍，因此绝大多数医嘱严格要求 NPO（禁食禁饮），床头应悬挂明显警示标识并撤走水杯水壶。</span>
+  </div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 6 (Official Answer: A)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">6. Care of a person who is NPO includes:<br>A. Frequent oral hygiene<br>B. Frequent repositioning of the client<br>C. Lubrication of nostrils<br>D. Frequent drinks of water</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">6. 针对处于严格禁食禁饮（NPO）状态的案主，照护人员最重要的基础舒适照护措施是：<br>A. 频繁且细致的口腔卫生护理与润唇（正确答案）<br>B. 频繁变换卧位<br>C. 鼻孔润滑<br>D. 频繁喂水喝</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: A. NPO clients breathing through the mouth experience severe dry mouth and lips. Frequent oral hygiene and lip lubricant provide comfort without introducing swallowed fluids.<br><span style="color:#065f46;">出版社官方标准答案：A。NPO 案主无法由口进水，导致口腔黏膜和嘴唇极度干燥疼痛。必须每隔数小时进行细致口腔擦洗并涂抹润唇油（严禁咽水）。</span>
+  </div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 7 (Official Answer: A)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">7. Which is a common IV site for adults?<br>A. Back of the hand<br>B. Upper arm<br>C. Scalp<br>D. Foot</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">7. 在成年人中，临床进行外周静脉穿刺输液（Peripheral IV）最常见、最优先选择的穿刺解剖部位是：<br>A. 手背浅表静脉网（Back of the hand）或前臂（正确答案）<br>B. 上臂<br>C. 头皮静脉<br>D. 足背静脉</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: A. The most common peripheral IV sites in adults are the veins on the back of the hand and the lower arm (forearm).<br><span style="color:#065f46;">出版社官方标准答案：A。成年人外周静脉输液最常选用的部位是手背浅表静脉以及前臂。头皮静脉多用于婴儿。</span>
+  </div>
+</div>
+
+  </section>
+
+  <!-- PHYSICAL PAGE 635 -->
+  <section class="book-page-block" id="page-635" data-page="635" style="margin-bottom:48px; border-bottom:1px solid #e2e8f0; padding-bottom:32px;">
+    <div class="page-meta-strip" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; margin-bottom:20px; border-bottom:2px solid #e2e8f0;">
+      <span class="page-num-pill" style="font-weight:700; color:#1e3a8a; font-size:13px; background:#eff6ff; padding:3px 10px; border-radius:12px; border:1px solid #bfdbfe;">p. 635</span>
+      <span class="page-topic-title" style="font-size:13.5px; font-weight:600; color:var(--text-secondary);">官方复习自测题 8-9、标准答案与图片版权 (Review Questions 8-9, Official Answers & Credits)</span>
+    </div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 8 (Official Answer: A)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">8. A client is bleeding from an IV site. You should do everything except:<br>A. Remove the IV catheter or needle<br>B. Apply direct pressure<br>C. Call your supervisor at once<br>D. Use Standard Practices</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">8. 当发现案主的静脉穿刺部位正在异常出血时，作为支持人员，你应当采取下列措施，但绝对严禁执行哪一项（反向单选）？<br>A. 擅自拔除静脉留置针或穿刺钢针（正确答案，支持人员绝对严禁拔针）<br>B. 使用无菌纱布直接施压止血<br>C. 立即向主管护士报告<br>D. 执行标准防护规程</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: A. Support workers are NEVER permitted to insert, adjust, or remove IV needles or catheters. In case of bleeding, apply direct pressure with sterile gauze, follow standard precautions, and call the supervising nurse immediately.<br><span style="color:#065f46;">出版社官方标准答案：A。支持人员的法定执业范围明确禁止刺入、调节或拔除静脉导管/穿刺针。一旦发生出血，应佩戴手套拿无菌纱布直接按压止血，并即刻呼叫主管护士。</span>
+  </div>
+</div>
+
+
+<div class="quiz-question-preview" style="margin:16px 0; padding:14px 16px; background:#f8fafc; border-left:4px solid #10b981; border-radius:6px;">
+  <div style="font-weight:700; color:#065f46; font-size:14px; margin-bottom:4px;">REVIEW QUESTION 9 (Official Answer: A)</div>
+  <div style="font-size:14px; color:var(--text-primary); line-height:1.5; margin-bottom:4px;">9. Which is a sign of IV therapy complication?<br>A. Swelling at the IV site<br>B. Changes in appetite<br>C. Frequent urination<br>D. Constipation</div>
+  <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:6px;">9. 在日常观察中，下列哪项表现属于静脉输液治疗并发症（如输液外渗 Infiltration 或静脉炎 Phlebitis）的明确报警体征？<br>A. 穿刺部位局部肿胀隆起、苍白变冷或红肿疼痛（正确答案）<br>B. 食欲改变<br>C. 排尿频繁<br>D. 便秘</div>
+  <div style="font-size:13px; color:#047857; line-height:1.45; background:#ffffff; padding:8px 10px; border-radius:4px; border:1px solid #d1fae5;">
+    <strong>Rationale / 精解：</strong>Official Publisher Answer: A. Swelling, puffiness, coolness, pale skin, or redness and heat at or above the IV site indicates infiltration or phlebitis, which must be reported to the nurse immediately.<br><span style="color:#065f46;">出版社官方标准答案：A。穿刺部位局部出现水肿、发白发凉、红斑、疼痛或液体渗漏，是输液外渗（Infiltration）或静脉炎（Phlebitis）的典型征象，必须立即报告护士停机检查。</span>
+  </div>
+</div>
+
+
+<div class="official-answers-box" style="margin:24px 0; padding:16px 20px; background:#ecfdf5; border:1.5px solid #6ee7b7; border-radius:8px; text-align:center;">
+  <h4 style="margin:0 0 6px 0; color:#065f46; font-size:1rem;">OFFICIAL CHAPTER REVIEW ANSWERS · 官方课后复习题标准答案</h4>
+  <p style="font-family:monospace; font-size:15px; font-weight:700; color:#047857; margin:0 0 6px 0;">1.B, 2.B, 3.A, 4.C, 5.A, 6.A, 7.A, 8.A, 9.A</p>
+  <div style="font-size:12px; color:#6b7280;">Chapter opener image: iStockphoto/xavierarnau.</div>
+</div>
+
+  </section>
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch27')">← 上一章：第 27 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch28-quiz')">✍️ 9 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 29 章（排尿照护与留置导尿管，30页）正在编排流水线中，即将上线！')">下一章：第 29 章 (流水线调度中) ⏳</button>
+    </div>
+    
+      </article>
+      <article class="reading-sheet" id="sec-ch28-quiz" style="display:none;">
+        <div class="sheet-meta-bar">
+          <span class="sheet-meta-badge">Chapter 28 Practice Exam · Pages 634–635</span>
+          <span class="sheet-meta-edition">9 Practice Exam Questions & Official Clinical Rationale</span>
+        </div>
+        
+    <div class="editorial-quiz-section" id="sec-ch28-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
+        <span class="quiz-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
+        <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 28 章肠内营养与静脉输液照护全真自测复习题与详尽执业精解</h3>
+        <p style="font-size:13.5px; color:#166534; margin:0;">原版 9 道权威高频综合自测题（涵盖 <strong>Pages 634–635</strong> 全部原著复习题：胃造口置入解剖部位、管饲喂养指征、持续输注电子喂养泵、鼻胃鼻肠管误吸致命风险、管饲案主 NPO 禁食医嘱、NPO 核心口腔擦拭舒适照护、成人外周静脉穿刺首选部位、输液处出血支持人员严禁拔针红线、以及输液局部外渗水肿并发症识别等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
+      </div>
+    
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-1" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 1 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-1" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">A gastrostomy tube is inserted into the:</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">胃造口管（Gastrostomy tube，简称 G-tube）是通过腹壁造口手术直接置入到人体的哪一器官部位？</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="1" data-opt="A" data-correct="false" onclick="selectQuizOption('ch28', 1, 'A', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Small intestine</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">小肠（置入空肠者称为空肠造口管 J-tube）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="1" data-opt="B" data-correct="true" onclick="selectQuizOption('ch28', 1, 'B', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Stomach</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">胃（Stomach，gastro 即指胃部）（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="1" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 1, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Colon</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">结肠（大肠）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="1" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 1, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Nose</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">鼻腔（经鼻置管称为鼻胃管 NG-tube）</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-1" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-1" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: B. A gastrostomy tube (G-tube) is surgically placed through an opening in the abdominal wall directly into the stomach (gastro).</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：B。构词学中 gastro- 代表胃，-stomy 代表外科手术造口。胃造口管（G管）是通过腹壁造瘘口直接置入胃腔用于长期肠内营养支持的管道。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-2" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 2 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-2" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">Which of the following is a common reason for tube feedings?</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">下列哪种临床状况是需要接受肠内管饲喂养的最常见适应症？</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="2" data-opt="A" data-correct="false" onclick="selectQuizOption('ch28', 2, 'A', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Cancer of the lung</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">肺癌（通常不直接阻碍口腔咀嚼吞咽通道）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="2" data-opt="B" data-correct="true" onclick="selectQuizOption('ch28', 2, 'B', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Surgery to the mouth</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">口腔颌面部手术或创伤（严重阻碍经口正常咀嚼吞咽）（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="2" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 2, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Chronic obstructive pulmonary disease (COPD)</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">慢性阻塞性肺疾病</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="2" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 2, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Pneumonia</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">肺炎</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-2" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-2" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: B. Tube feedings are indicated when clients cannot chew or swallow food normally, such as after extensive surgery or trauma to the mouth, head, neck, or esophagus, or due to neurological dysphagia.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：B。管饲喂养的核心指征是食物无法通过口腔和食道正常向下传输至胃部。口腔颌面部重大手术、头颈部肿瘤、食道狭窄或神经瘫痪导致的重度吞咽困难均为典型适应症。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-3" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 3 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-3" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">Continuous feedings require:</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">肠内营养的24小时持续恒速滴注（Continuous feedings）必须依赖下列哪种专用设备进行输注控制？</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="3" data-opt="A" data-correct="true" onclick="selectQuizOption('ch28', 3, 'A', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Electronic feeding pumps</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">专用电子肠内营养泵（Electronic feeding pumps）（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="3" data-opt="B" data-correct="false" onclick="selectQuizOption('ch28', 3, 'B', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Intravenous (IV) bags</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">静脉输液袋（严禁用于肠内管饲，防止给药途径致命混淆）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="3" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 3, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Catheters</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">普通导管</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="3" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 3, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Syringes</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">注射器（用于定时定量单次间歇推注 Scheduled feedings）</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-3" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-3" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: A. Continuous feedings are administered over 24 hours at a steady, controlled rate and require an electronic enteral feeding pump to ensure accuracy and prevent fluid overload or dumping syndrome.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：A。持续恒速喂养需要使用专用电子肠内喂养泵（Feeding pump），以毫升/小时为单位精确控制输注速度。鼻肠管和空肠造口管喂养必须采用持续泵注。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-4" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 4 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-4" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">Aspiration is a major complication of:</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">误吸（Aspiration）并导致致命性吸入性肺炎，是下列哪种喂养管道最严峻的常见高危并发症？</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="4" data-opt="A" data-correct="false" onclick="selectQuizOption('ch28', 4, 'A', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Hyperalimentation</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">全胃肠外营养（高营养深静脉输液，无胃肠反流气道风险）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="4" data-opt="B" data-correct="false" onclick="selectQuizOption('ch28', 4, 'B', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">IV therapy</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">静脉输液疗法</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="4" data-opt="C" data-correct="true" onclick="selectQuizOption('ch28', 4, 'C', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Nasogastric and nasointestinal tubes</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">鼻胃管与鼻肠管（管路极易因剧烈咳嗽、呕吐或移位导致误吸）（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="4" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 4, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Central venous catheters</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">中心静脉导管</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-4" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-4" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: C. Nasogastric (NG) and nasointestinal tubes are placed through the esophagus. If the tube is displaced, or if formula regurgitates, liquid can enter the trachea and lungs, causing severe aspiration.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：C。鼻胃管和鼻肠管经由咽喉食管穿入。若管道因剧烈咳嗽、打喷嚏、呕吐或案主无意识牵拉而发生脱出移位，配方奶极易直接灌入呼吸道，诱发窒息与急性吸入性肺炎。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-5" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 5 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-5" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">A client with a feeding tube is usually:</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">留置肠内喂养管的案主，其常规医嘱状态通常属于下列哪种情况？</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="5" data-opt="A" data-correct="true" onclick="selectQuizOption('ch28', 5, 'A', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">NPO (Nothing by mouth)</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">遵医嘱严格禁食禁饮（NPO：nil per os）（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="5" data-opt="B" data-correct="false" onclick="selectQuizOption('ch28', 5, 'B', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">On bed rest</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">绝对卧床休息（许多案主完全可以下床活动）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="5" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 5, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Allowed a regular diet</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">允许进食普通普食</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="5" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 5, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">In a coma</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">处于昏迷状态（许多清醒有意识的案主同样需要管饲）</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-5" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-5" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: A. Clients with feeding tubes are usually ordered NPO (nil per os / nothing by mouth) because their swallowing mechanisms are impaired or their upper GI tract requires complete rest.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：A。接受管饲的案主通常伴有严重的咀嚼吞咽障碍或上消化道病变，因此绝大多数医嘱严格要求 NPO（禁食禁饮），床头应悬挂明显警示标识并撤走水杯水壶。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-6" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 6 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-6" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">Care of a person who is NPO includes:</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">针对处于严格禁食禁饮（NPO）状态的案主，照护人员最重要的基础舒适照护措施是：</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="6" data-opt="A" data-correct="true" onclick="selectQuizOption('ch28', 6, 'A', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Frequent oral hygiene</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">频繁且细致的口腔卫生护理与润唇（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="6" data-opt="B" data-correct="false" onclick="selectQuizOption('ch28', 6, 'B', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Frequent repositioning of the client</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">频繁变换卧位（此为防压疮常规护理，非针对NPO口干之核心）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="6" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 6, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Lubrication of nostrils</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">鼻孔润滑（针对鼻胃管压迫鼻翼，非NPO专有主责）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="6" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 6, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Frequent drinks of water</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">频繁喂水喝（严重违背 NPO 禁水医嘱，属严重医疗事故！）</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-6" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-6" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: A. When a client is NPO and breathing through the mouth due to nasal tubing, the mouth, lips, and tongue become severely dry and cracked. Frequent oral hygiene and lip lubricant provide essential comfort without introducing swallowed fluids.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：A。NPO 案主无法由口进水，加之鼻胃管迫使案主常用口呼吸，导致口腔黏膜和嘴唇极度干燥疼痛。必须每隔数小时进行细致口腔擦洗并涂抹润唇油（严禁咽水）。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-7" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 7 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-7" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">Which is a common IV site for adults?</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">在成年人中，临床进行外周静脉穿刺输液（Peripheral IV）最常见、最优先选择的穿刺解剖部位是：</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="7" data-opt="A" data-correct="true" onclick="selectQuizOption('ch28', 7, 'A', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Back of the hand</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">手背浅表静脉网（Back of the hand）或前臂内侧（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="7" data-opt="B" data-correct="false" onclick="selectQuizOption('ch28', 7, 'B', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Upper arm</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">上臂（非外周首选部位，通常用于 PICC 贵要静脉盲穿或中长导管）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="7" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 7, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Scalp</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">头皮静脉（主要用于婴幼儿，成人禁用）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="7" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 7, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Foot</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">足背静脉（成人极少采用，因极易诱发下肢深静脉血栓及静脉炎）</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-7" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-7" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: A. The most common peripheral IV sites in adults are the veins on the back of the hand and the lower arm (forearm). Scalp veins are used in infants.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：A。成年人外周静脉输液最常选用的部位是手背浅表静脉以及前臂（桡静脉、头静脉分支）。头皮静脉多用于婴儿，成人足背静脉因下肢血栓风险极少使用。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-8" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 8 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-8" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">A client is bleeding from an IV site. You should do everything except:</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">当发现案主的静脉穿刺部位正在异常出血时，作为支持人员，你应当采取下列措施，但绝对严禁执行哪一项（反向单选）？</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="8" data-opt="A" data-correct="true" onclick="selectQuizOption('ch28', 8, 'A', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Remove the IV catheter or needle</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">擅自拔除静脉留置针或穿刺钢针（绝对违规！支持人员严禁拔针）（正确项）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="8" data-opt="B" data-correct="false" onclick="selectQuizOption('ch28', 8, 'B', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Apply direct pressure with sterile gauze</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">使用无菌医用纱布在穿刺点直接施压止血</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="8" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 8, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Call your supervisor at once</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">立即呼叫主管护士到场处理</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="8" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 8, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Use Standard Practices</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">严格执行标准防护规程（佩戴手套等防止接触血液）</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-8" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-8" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: A. Support workers are NEVER permitted to insert, adjust, or remove IV needles or catheters. In case of bleeding, apply direct pressure with sterile gauze, follow standard precautions, and call the supervising nurse immediately.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：A。支持人员的法定执业范围明确禁止刺入、调节或拔除静脉导管/穿刺针。一旦发生穿刺处渗血出血，应立即佩戴手套拿无菌纱布直接按压止血，并即刻呼叫主管护士。</div>
+        </div>
+      </div>
+
+
+      <div class="editorial-quiz-card quiz-card" id="qcard-ch28-9" style="margin-bottom:24px; padding:20px 22px; background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+        <div class="q-header" style="display:flex; justify-content:space-between; margin-bottom:12px;">
+          <span class="q-badge" style="font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; padding:2px 8px; border-radius:4px;">QUESTION 9 OF 9</span>
+          <span class="q-status" id="qstatus-ch28-9" style="font-size:12px; font-weight:600; color:#64748b;">待作答</span>
+        </div>
+        <div class="q-stem" style="margin-bottom:16px;">
+          <div class="q-stem-en" style="font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">Which is a sign of IV therapy complication?</div>
+          <div class="q-stem-cn" style="font-size:14px; color:var(--text-secondary);">在日常观察中，下列哪项表现属于静脉输液治疗并发症（如输液外渗 Infiltration 或静脉炎 Phlebitis）的明确报警体征？</div>
+        </div>
+        <div class="q-options" style="margin-bottom:14px;">
+          
+        <button class="quiz-opt eq-opt" data-q="9" data-opt="A" data-correct="true" onclick="selectQuizOption('ch28', 9, 'A', true)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">A.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Swelling at the IV site</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">穿刺局部肿胀隆起、苍白变冷或红肿灼热（正确）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="9" data-opt="B" data-correct="false" onclick="selectQuizOption('ch28', 9, 'B', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">B.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Changes in appetite</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">食欲变化（与静脉输液局部急症无直接因果关联）</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="9" data-opt="C" data-correct="false" onclick="selectQuizOption('ch28', 9, 'C', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">C.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Frequent urination</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">排尿频繁</div>
+          </div>
+        </button>
+
+        <button class="quiz-opt eq-opt" data-q="9" data-opt="D" data-correct="false" onclick="selectQuizOption('ch28', 9, 'D', false)" style="display:flex; width:100%; text-align:left; margin-bottom:10px; padding:12px 14px; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; cursor:pointer; transition:all 0.15s ease;">
+          <span class="opt-label" style="min-width:28px; font-weight:700; color:#3b82f6;">D.</span>
+          <div class="opt-content" style="flex:1;">
+            <div class="opt-en" style="font-size:14px; color:var(--text-primary); margin-bottom:2px;">Constipation</div>
+            <div class="opt-cn" style="font-size:13px; color:var(--text-secondary);">便秘</div>
+          </div>
+        </button>
+
+        </div>
+        <div class="q-feedback" id="qfb-ch28-9" style="display:none; padding:14px 16px; border-radius:8px; margin-top:10px; font-size:13.5px; line-height:1.55;">
+          <div class="fb-title" id="qfbtitle-ch28-9" style="font-weight:700; margin-bottom:6px;"></div>
+          <div class="fb-rat-en" style="color:var(--text-primary); margin-bottom:4px;"><strong>Clinical Rationale:</strong> Official Publisher Answer: A. Swelling, puffiness, coolness, pale skin, or redness and heat at or above the IV site indicates infiltration or phlebitis, which must be reported to the nurse immediately.</div>
+          <div class="fb-rat-cn" style="color:var(--text-secondary);"><strong>临床权威精解：</strong>出版社官方标准答案：A。穿刺部位局部出现水肿、发白发凉、红斑、疼痛或液体渗漏，是输液外渗（Infiltration）或静脉炎（Phlebitis）的典型征象，必须立即报告护士停机检查。</div>
+        </div>
+      </div>
+
+
+      <div class="quiz-controls" style="margin-top:28px; text-align:center;">
+        <button class="qc-btn qc-reset" onclick="resetQuiz('ch28')" style="padding:10px 24px; background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; border-radius:6px; font-weight:600; cursor:pointer; margin-right:12px;">🔄 重置本章自测题</button>
       </div>
     </div>
 
