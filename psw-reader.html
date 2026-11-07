@@ -2118,7 +2118,84 @@
     html.mode-cn .ef-caption-en {
       display: none !important;
     }
-</style>
+
+    /* Universal Chapter Quick Switcher & Bottom Navigation */
+    .chapter-select-wrap {
+      display: flex;
+      align-items: center;
+    }
+    .chapter-quick-select {
+      height: 34px;
+      padding: 0 10px;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e293b;
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .chapter-quick-select {
+        max-width: 340px;
+      }
+    }
+    .chapter-quick-select:hover, .chapter-quick-select:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+    .sheet-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--ink);
+    }
+    .sbn-btn:hover {
+      background: var(--border);
+      color: var(--accent);
+    }
+    .sbn-btn.sbn-quiz {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+    }
+    .sbn-btn.sbn-quiz:hover {
+      background: #dbeafe;
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: #f1f5f9;
+    }
+    .sbn-btn.sbn-pipeline {
+      background: #fef3c7;
+      border-color: #fde68a;
+      color: #92400e;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -2497,7 +2574,58 @@
     <header class="top-bar">
       <div class="top-left">
         <button class="menu-btn" onclick="toggleSidebar()" aria-label="Toggle Navigation">☰ 目录</button>
-        <span class="cur-title" id="currentTitle">第 1 章：支持工作者的角色与职责 (Pages 1–18)</span>
+        <div class="chapter-select-wrap">
+          <select id="globalChapterSelect" class="chapter-quick-select" onchange="switchSection(this.value)" aria-label="全书章节快速跳转">
+            <optgroup label="前置导读与全书框架">
+              <option value="sec-cover">封面与出版声明 (Pages i–ii)</option>
+              <option value="sec-toc">全书总目录 (48章全览)</option>
+              <option value="sec-instructor">教师序言与核心革新 (Pages xvii–xxi)</option>
+              <option value="sec-student">学生前言与学习指南 (Pages xxii–xxix)</option>
+              <option value="sec-glossary">核心专业术语表 (国际音标+释义)</option>
+            </optgroup>
+            <optgroup label="教材全真研读正文 (1-18章已就绪)">
+              <option value="sec-ch1" selected>第 01 章 · 支持工作者的角色与职责 (pp. 1–19)</option>
+              <option value="sec-ch2">第 02 章 · 加拿大医疗保健体系 (pp. 20–33)</option>
+              <option value="sec-ch3">第 03 章 · 职场人际工作关系 (pp. 34–47)</option>
+              <option value="sec-ch4">第 04 章 · 职业伦理与法律困境 (pp. 48–58)</option>
+              <option value="sec-ch5">第 05 章 · 法律法规与权利守护 (pp. 59–75)</option>
+              <option value="sec-ch6">第 06 章 · 健康全人福祉与残障 (pp. 77–95)</option>
+              <option value="sec-ch7">第 07 章 · 多元文化与包容性照护 (pp. 96–111)</option>
+              <option value="sec-ch8">第 08 章 · 压力管理与职业安全 (pp. 112–128)</option>
+              <option value="sec-ch9">第 09 章 · 人际沟通技巧实操 (pp. 129–148)</option>
+              <option value="sec-ch10">第 10 章 · 跨学科团队与工作委派 (pp. 149–163)</option>
+              <option value="sec-ch11">第 11 章 · 案主共处与同理关怀 (pp. 164–173)</option>
+              <option value="sec-ch12">第 12 章 · 识别防范虐待与骚扰 (pp. 174–193)</option>
+              <option value="sec-ch13">第 13 章 · 职业生涯与求职攻略 (pp. 194–214)</option>
+              <option value="sec-ch14">第 14 章 · 身体力学与安全转移 (pp. 215–258)</option>
+              <option value="sec-ch15">第 15 章 · 运动康复与助行实务 (pp. 259–281)</option>
+              <option value="sec-ch16">第 16 章 · 假肢辅具与恢复性照护 (pp. 282–295)</option>
+              <option value="sec-ch17">第 17 章 · 全套个人卫生与会阴照护 (pp. 296–336)</option>
+              <option value="sec-ch18">第 18 章 · 个人仪容修饰与更衣 (pp. 337–375)</option>
+            </optgroup>
+            <optgroup label="各章全真自测习题库">
+              <option value="sec-ch1-quiz">第 01 章 · 自测习题库 (12道精解)</option>
+              <option value="sec-ch2-quiz">第 02 章 · 自测习题库 (11道精解)</option>
+              <option value="sec-ch3-quiz">第 03 章 · 自测习题库 (9道精解)</option>
+              <option value="sec-ch4-quiz">第 04 章 · 自测习题库 (11道精解)</option>
+              <option value="sec-ch5-quiz">第 05 章 · 自测习题库 (12道精解)</option>
+              <option value="sec-ch6-quiz">第 06 章 · 自测习题库 (11道精解)</option>
+              <option value="sec-ch7-quiz">第 07 章 · 自测习题库 (12道精解)</option>
+              <option value="sec-ch8-quiz">第 08 章 · 自测习题库 (10道精解)</option>
+              <option value="sec-ch9-quiz">第 09 章 · 自测习题库 (11道精解)</option>
+              <option value="sec-ch10-quiz">第 10 章 · 自测习题库 (10道精解)</option>
+              <option value="sec-ch11-quiz">第 11 章 · 自测习题库 (9道精解)</option>
+              <option value="sec-ch12-quiz">第 12 章 · 自测习题库 (17道精解)</option>
+              <option value="sec-ch13-quiz">第 13 章 · 自测习题库 (20道精解)</option>
+              <option value="sec-ch14-quiz">第 14 章 · 自测习题库 (28道精解)</option>
+              <option value="sec-ch15-quiz">第 15 章 · 自测习题库 (14道精解)</option>
+              <option value="sec-ch16-quiz">第 16 章 · 自测习题库 (9道精解)</option>
+              <option value="sec-ch17-quiz">第 17 章 · 自测习题库 (21道精解)</option>
+              <option value="sec-ch18-quiz">第 18 章 · 自测习题库 (18道精解)</option>
+            </optgroup>
+          </select>
+        </div>
+        <span class="cur-title" id="currentTitle" style="display:none;">第 1 章：支持工作者的角色与职责 (Pages 1–18)</span>
       </div>
       <div class="top-controls">
         <div class="mode-switch">
@@ -5078,6 +5206,12 @@
                   <div>本章开篇原版全彩插图摄影版权归属：iStockphoto/halfpoint。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <span class="sbn-btn sbn-disabled">已是第一章 (开篇)</span>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch1-quiz')">✍️ 12 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch2')">下一章：第 2 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 7. Chapter 1 Quiz -->
@@ -6778,6 +6912,12 @@
                   <div>本章开篇原版全彩插图摄影版权归属：iStockphoto/Warchi。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch1')">← 上一章：第 1 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch2-quiz')">✍️ 11 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch3')">下一章：第 3 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 9. Chapter 2 Quiz -->
@@ -8470,6 +8610,12 @@
                   <div>本章开篇原版全彩插图摄影版权归属：iStockphoto/monkeybusinessimages。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch2')">← 上一章：第 2 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch3-quiz')">✍️ 9 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch4')">下一章：第 4 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 11. Chapter 3 Quiz -->
@@ -9817,6 +9963,12 @@
                   <div>本章开篇原版全彩插图摄影版权归属：iStockphoto/RapidEye。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch3')">← 上一章：第 3 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch4-quiz')">✍️ 11 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch5')">下一章：第 5 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 13. Chapter 4 Quiz -->
@@ -13166,6 +13318,12 @@
                       <p class="para-cn">请选出最符合题意的一项最佳答案。本复习题的标准答案与权威精解载于第 76 页底。</p>
                     </article>
                     
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch4')">← 上一章：第 4 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch5-quiz')">✍️ 12 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch6')">下一章：第 6 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 15. Chapter 5 Quiz -->
@@ -15584,6 +15742,12 @@
                       <p class="para-cn">本章复习全部完成，包含第 10 与第 11 道全真考题与深度临床精解。全章 11 道标准自测题已全面收敛至独立自测习题库中。</p>
                     </article>
                     
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch5')">← 上一章：第 5 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch6-quiz')">✍️ 11 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch7')">下一章：第 7 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 17. Chapter 6 Quiz -->
@@ -18088,6 +18252,12 @@
                   <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch6')">← 上一章：第 6 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch7-quiz')">✍️ 12 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch8')">下一章：第 8 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 19. Chapter 7 Quiz -->
@@ -20062,6 +20232,12 @@
                   <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch7')">← 上一章：第 7 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch8-quiz')">✍️ 10 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch9')">下一章：第 9 章 →</button>
+    </div>
+    
       </article>
 
       <!-- 21. Chapter 8 Quiz -->
@@ -22677,6 +22853,12 @@
                   <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch8')">← 上一章：第 8 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch9-quiz')">✍️ 11 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch10')">下一章：第 10 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch9-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -24562,6 +24744,12 @@
                   <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" class="efu-link">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch9')">← 上一章：第 9 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch10-quiz')">✍️ 10 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch11')">下一章：第 11 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch10-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -26299,6 +26487,12 @@
                   <div>本章开篇摄影图片版权：iStockphoto/kate sep12004。第 173 页。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch10')">← 上一章：第 10 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch11-quiz')">✍️ 9 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch12')">下一章：第 12 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch11-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -28231,6 +28425,12 @@
                   <div>本章开篇摄影图片版权：iStockphoto/Imagesbybarbara。第 193 页。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch11')">← 上一章：第 11 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch12-quiz')">✍️ 17 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch13')">下一章：第 13 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch12-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -31343,6 +31543,12 @@
                   <div>本章开篇摄影配图来源：iStockphoto/fizkes。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch12')">← 上一章：第 12 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch13-quiz')">✍️ 20 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch14')">下一章：第 14 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch13-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -35339,6 +35545,12 @@ Clients in bed are positioned in basic bed positions to promote comfort, breathi
                   <div>本章开篇摄影配图来源：CanStock Photo Inc./Bialasiewicz。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch13')">← 上一章：第 13 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch14-quiz')">✍️ 28 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch15')">下一章：第 15 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch14-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -38755,6 +38967,12 @@ C: Lower the client smoothly to the floor by bending at hips and knees, shieldin
                   <div>章首全真插画图片版权归属：iStockphoto/SilviaJansen。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch14')">← 上一章：第 14 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch15-quiz')">✍️ 14 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch16')">下一章：第 16 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch15-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -40443,6 +40661,12 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
                   <div>章首全真插画图片版权归属：iStockphoto/SDI Productions。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch15')">← 上一章：第 15 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch16-quiz')">✍️ 9 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch17')">下一章：第 17 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch16-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -44296,6 +44520,12 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
                   <div>本章开篇原版全景插图鸣谢：阿贝捷（ArjoHuntleigh）医疗科技股份有限公司倾情提供。</div>
                 </div>
                 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch16')">← 上一章：第 16 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch17-quiz')">✍️ 21 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next" onclick="switchSection('sec-ch18')">下一章：第 18 章 →</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch17-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -48203,6 +48433,12 @@ Clinical Decision: How should you intervene?</p>
                     </ul>
 </div>
 
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch17')">← 上一章：第 17 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch18-quiz')">✍️ 18 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 19 章（预防感染与无菌原则，40页）正在编排流水线中，即将上线！')">下一章：第 19 章 预防感染 (执行中) ⏳</button>
+    </div>
+    
       </article>
       <article class="reading-sheet" id="sec-ch18-quiz" style="display:none;">
         <div class="sheet-meta-bar">
@@ -49240,6 +49476,10 @@ Clinical Decision: How should you intervene?</p>
         title = btn ? btn.innerText.replace(/\\s+/g, ' ').trim() : '教材研读';
       }
       document.getElementById('currentTitle').innerText = title;
+      const globalSel = document.getElementById('globalChapterSelect');
+      if (globalSel) {
+        globalSel.value = secId;
+      }
       
       // Update sidebar nav active status
       updateReaderAudioForSection(secId);
