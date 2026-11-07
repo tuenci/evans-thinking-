@@ -1,0 +1,3808 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 21: Beds and Bed Making · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 21</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 21 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 28:40</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 21 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Beds and Bed Making</h1>
+      <h2 class="hero-title-cn">病床与铺床实务：病床种类与调节控制、床品配置与铺床原则、闭式开式术后占用床制作</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 458–479 · 9 道全真自测题</span>
+        <span class="meta-item">专业音频：28:40</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch21-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch21" aria-label="Chapter 21 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.458–479 · 共 22 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-458">第 458 页 · Chapter 21 Opener & Learning Objectives · 章开篇与学习目标：病床与铺床实务、基本卧位与标准预防原则</option><option value="page-459">第 459 页 · Client Room Furniture & Equipment · 服务对象房间家具与设施：床头桌、床头柜与座椅配置原则</option><option value="page-460">第 460 页 · Privacy Curtains, Bathroom & Client's Bed · 隐私帘与隔屏、适老化卫生间设施与案主病床概论</option><option value="page-461">第 461 页 · Regular Beds & Alternating Pressure Mattresses · 普通病床与防压疮交替充气减压床垫安全警示</option><option value="page-462">第 462 页 · Hospital Beds, Electric Controls & Crank Safety · 电动多功能病床控制面板、机械手摇杆与床轮锁止安全</option><option value="page-463">第 463 页 · Basic Bed Positions: Flat, Fowler's, Trendelenburg · 基本病床体位：平卧位、低/半/高福氏位与头低脚高特氏位</option><option value="page-464">第 464 页 · Reverse Trendelenburg & Home Care Backrests · 头高脚低逆特氏位与居家照护靠背辅助器具</option><option value="page-465">第 465 页 · Linen Change Protocols & Table 21.1 · 床品更换频次表、洁净被服持握防污染原则与收集顺序</option><option value="page-466">第 466 页 · Removing Soiled Linen, Turning Pads & Mitred Corners · 污染被服向内卷叠移除、翻身减压垫功能与折角固定法</option><option value="page-467">第 467 页 · No-Lift Policies, Incontinence Pads & Crib Safety · 机构禁徒手搬运政策、失禁垫规范与婴儿婴儿床安全铁律</option><option value="page-468">第 468 页 · Closed Bed Concept & Procedure Preparation · 闭式床概念、床架消毒与铺闭式床前准备流程</option><option value="page-469">第 469 页 · Procedure: Placing Mattress Pad & Bottom Sheet · 实操流程：放置床褥垫、铺设底层大单与中线定位</option><option value="page-470">第 470 页 · Procedure: Making Mitred Corner & Applying Linens · 实操流程：平整底层大单、铺设防水翻身垫、盖被与床罩</option><option value="page-471">第 471 页 · Procedure: Making Cuffs & Enclosing Pillowcases · 实操流程：反折被口做封袖、平整套入枕套与开口朝向</option><option value="page-472">第 472 页 · Procedure Post-Care & Box 21.1 Bed Making Guidelines · 操作后处置、呼叫铃归位与 Box 21.1 铺床操作全局指引</option><option value="page-473">第 473 页 · Procedure: Making an Open Bed & Occupied Bed Concept · 实操流程：铺开式床扇形折叠与卧床案主占用床概念</option><option value="page-474">第 474 页 · Procedure: Making an Occupied Bed Pre-Procedure · 实操流程：铺占用床前评估、隐私保护与人员协助准备</option><option value="page-475">第 475 页 · Procedure: Turning Client & Fan-Folding Linens · 实操流程：案主侧卧安全防护、逐层向内卷叠旧单与铺设新单</option><option value="page-476">第 476 页 · Procedure: Rolling Over Bump & Completing Foundation · 实操流程：协助越过中线折叠隆起、拉紧底层大单消除皱褶</option><option value="page-477">第 477 页 · Procedure: Finishing Top Linens & Post-Care · 实操流程：铺设盖被与足部防压折褶、枕套更换与床栏复位</option><option value="page-478">第 478 页 · Chapter Review: Key Points & Practice Review · 章末复习：核心要点梳理、批判性思考与全真自测试题 1–7</option><option value="page-479">第 479 页 · Practice Review Questions 8–9 & Official Answer Key · 全真自测试题 8–9 与官方标准答案解析</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-458" class="cp-chip" id="cp-chip-21-458" data-page="458" onclick="handlePageChipClick(event, 'page-458')" title="第 458 页 · Chapter 21 Opener & Learning Objectives · 章开篇与学习目标：病床与铺床实务、基本卧位与标准预防原则"><span class="cp-num">p.458</span></a><a href="#page-459" class="cp-chip" id="cp-chip-21-459" data-page="459" onclick="handlePageChipClick(event, 'page-459')" title="第 459 页 · Client Room Furniture & Equipment · 服务对象房间家具与设施：床头桌、床头柜与座椅配置原则"><span class="cp-num">p.459</span></a><a href="#page-460" class="cp-chip" id="cp-chip-21-460" data-page="460" onclick="handlePageChipClick(event, 'page-460')" title="第 460 页 · Privacy Curtains, Bathroom & Client's Bed · 隐私帘与隔屏、适老化卫生间设施与案主病床概论"><span class="cp-num">p.460</span></a><a href="#page-461" class="cp-chip" id="cp-chip-21-461" data-page="461" onclick="handlePageChipClick(event, 'page-461')" title="第 461 页 · Regular Beds & Alternating Pressure Mattresses · 普通病床与防压疮交替充气减压床垫安全警示"><span class="cp-num">p.461</span></a><a href="#page-462" class="cp-chip" id="cp-chip-21-462" data-page="462" onclick="handlePageChipClick(event, 'page-462')" title="第 462 页 · Hospital Beds, Electric Controls & Crank Safety · 电动多功能病床控制面板、机械手摇杆与床轮锁止安全"><span class="cp-num">p.462</span></a><a href="#page-463" class="cp-chip" id="cp-chip-21-463" data-page="463" onclick="handlePageChipClick(event, 'page-463')" title="第 463 页 · Basic Bed Positions: Flat, Fowler's, Trendelenburg · 基本病床体位：平卧位、低/半/高福氏位与头低脚高特氏位"><span class="cp-num">p.463</span></a><a href="#page-464" class="cp-chip" id="cp-chip-21-464" data-page="464" onclick="handlePageChipClick(event, 'page-464')" title="第 464 页 · Reverse Trendelenburg & Home Care Backrests · 头高脚低逆特氏位与居家照护靠背辅助器具"><span class="cp-num">p.464</span></a><a href="#page-465" class="cp-chip" id="cp-chip-21-465" data-page="465" onclick="handlePageChipClick(event, 'page-465')" title="第 465 页 · Linen Change Protocols & Table 21.1 · 床品更换频次表、洁净被服持握防污染原则与收集顺序"><span class="cp-num">p.465</span></a><a href="#page-466" class="cp-chip" id="cp-chip-21-466" data-page="466" onclick="handlePageChipClick(event, 'page-466')" title="第 466 页 · Removing Soiled Linen, Turning Pads & Mitred Corners · 污染被服向内卷叠移除、翻身减压垫功能与折角固定法"><span class="cp-num">p.466</span></a><a href="#page-467" class="cp-chip" id="cp-chip-21-467" data-page="467" onclick="handlePageChipClick(event, 'page-467')" title="第 467 页 · No-Lift Policies, Incontinence Pads & Crib Safety · 机构禁徒手搬运政策、失禁垫规范与婴儿婴儿床安全铁律"><span class="cp-num">p.467</span></a><a href="#page-468" class="cp-chip" id="cp-chip-21-468" data-page="468" onclick="handlePageChipClick(event, 'page-468')" title="第 468 页 · Closed Bed Concept & Procedure Preparation · 闭式床概念、床架消毒与铺闭式床前准备流程"><span class="cp-num">p.468</span></a><a href="#page-469" class="cp-chip" id="cp-chip-21-469" data-page="469" onclick="handlePageChipClick(event, 'page-469')" title="第 469 页 · Procedure: Placing Mattress Pad & Bottom Sheet · 实操流程：放置床褥垫、铺设底层大单与中线定位"><span class="cp-num">p.469</span></a><a href="#page-470" class="cp-chip" id="cp-chip-21-470" data-page="470" onclick="handlePageChipClick(event, 'page-470')" title="第 470 页 · Procedure: Making Mitred Corner & Applying Linens · 实操流程：平整底层大单、铺设防水翻身垫、盖被与床罩"><span class="cp-num">p.470</span></a><a href="#page-471" class="cp-chip" id="cp-chip-21-471" data-page="471" onclick="handlePageChipClick(event, 'page-471')" title="第 471 页 · Procedure: Making Cuffs & Enclosing Pillowcases · 实操流程：反折被口做封袖、平整套入枕套与开口朝向"><span class="cp-num">p.471</span></a><a href="#page-472" class="cp-chip" id="cp-chip-21-472" data-page="472" onclick="handlePageChipClick(event, 'page-472')" title="第 472 页 · Procedure Post-Care & Box 21.1 Bed Making Guidelines · 操作后处置、呼叫铃归位与 Box 21.1 铺床操作全局指引"><span class="cp-num">p.472</span></a><a href="#page-473" class="cp-chip" id="cp-chip-21-473" data-page="473" onclick="handlePageChipClick(event, 'page-473')" title="第 473 页 · Procedure: Making an Open Bed & Occupied Bed Concept · 实操流程：铺开式床扇形折叠与卧床案主占用床概念"><span class="cp-num">p.473</span></a><a href="#page-474" class="cp-chip" id="cp-chip-21-474" data-page="474" onclick="handlePageChipClick(event, 'page-474')" title="第 474 页 · Procedure: Making an Occupied Bed Pre-Procedure · 实操流程：铺占用床前评估、隐私保护与人员协助准备"><span class="cp-num">p.474</span></a><a href="#page-475" class="cp-chip" id="cp-chip-21-475" data-page="475" onclick="handlePageChipClick(event, 'page-475')" title="第 475 页 · Procedure: Turning Client & Fan-Folding Linens · 实操流程：案主侧卧安全防护、逐层向内卷叠旧单与铺设新单"><span class="cp-num">p.475</span></a><a href="#page-476" class="cp-chip" id="cp-chip-21-476" data-page="476" onclick="handlePageChipClick(event, 'page-476')" title="第 476 页 · Procedure: Rolling Over Bump & Completing Foundation · 实操流程：协助越过中线折叠隆起、拉紧底层大单消除皱褶"><span class="cp-num">p.476</span></a><a href="#page-477" class="cp-chip" id="cp-chip-21-477" data-page="477" onclick="handlePageChipClick(event, 'page-477')" title="第 477 页 · Procedure: Finishing Top Linens & Post-Care · 实操流程：铺设盖被与足部防压折褶、枕套更换与床栏复位"><span class="cp-num">p.477</span></a><a href="#page-478" class="cp-chip" id="cp-chip-21-478" data-page="478" onclick="handlePageChipClick(event, 'page-478')" title="第 478 页 · Chapter Review: Key Points & Practice Review · 章末复习：核心要点梳理、批判性思考与全真自测试题 1–7"><span class="cp-num">p.478</span></a><a href="#page-479" class="cp-chip" id="cp-chip-21-479" data-page="479" onclick="handlePageChipClick(event, 'page-479')" title="第 479 页 · Practice Review Questions 8–9 & Official Answer Key · 全真自测试题 8–9 与官方标准答案解析"><span class="cp-num">p.479</span></a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="editorial-chapter-header" id="sec-ch21-header">
+      <div class="ech-meta">
+        <span class="ech-badge">CHAPTER 21 · 基础照护实务</span>
+        <span class="ech-pages">Pages 458–479 · 22 Physical Pages</span>
+      </div>
+      <h1 class="ech-title-en">Beds and Bed Making</h1>
+      <h2 class="ech-title-cn">病床与铺床实务：病床种类与调节控制、床品配置与铺床原则、闭式开式术后占用床制作</h2>
+      <p class="ech-desc">严格依据加拿大 Mosby/Elsevier 5th 权威原版全真还原，逐页覆盖病床结构、体位安全、标准预防拿取被服、闭式床、开式床、有人床及婴儿床安全 11 条黄金法则。</p>
+    </div>
+    <div id="page-458"></div>
+<section class="editorial-page" id="page-458">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Beds and Bed Making · 章开篇与学习目标</span>
+    <span class="ph-num">p. 458</span>
+  </div>
+
+  <div class="editorial-opener-card">
+    <div class="opener-image-container">
+      <figure class="editorial-figure-card">
+        <img src="images/ch21/ch21_p458_X1.jpg" alt="Support worker caring for client in hospital bed" class="figure-img" loading="lazy">
+        <figcaption class="figure-caption">
+          <span class="fig-label">Chapter Opener Photo</span>
+          <span class="fig-text-en">A clean, comfortable, and well-made bed is essential for client comfort, dignity, and the prevention of skin breakdown and pressure injuries.</span>
+          <span class="fig-text-cn">整洁、舒适且平整无褶皱的病床对于案主的舒适感、尊严维护以及预防皮肤破损与压疮（压力性损伤）至关重要。</span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="opener-meta">
+      <h1 class="chapter-title-en">Beds and Bed Making</h1>
+      <h2 class="chapter-title-cn">第 21 章：病床与铺床实务</h2>
+      <p class="chapter-lead-en">Clients spend varying amounts of time in their beds, whether at home or in an agency. Learning the different types of beds, basic bed positions, and correct bed-making techniques promotes client safety, comfort, and skin integrity.</p>
+      <p class="chapter-lead-cn">无论在居家照护还是机构照护环境中，服务对象在床上度过的时间各不相同。掌握不同类型的病床结构、基本卧位调节以及规范的铺床与换单技术，是保障案主安全舒适、预防皮肤破损的核心照护技能。</p>
+    </div>
+  </div>
+
+  <div class="editorial-box-container box-theme-blue" id="objectives-ch21">
+    <div class="box-header">
+      <span class="box-icon">🎯</span>
+      <span class="box-title-en">OBJECTIVES</span>
+      <span class="box-title-cn">学习目标</span>
+    </div>
+    <div class="box-content">
+      <p class="box-intro-en">After reading this chapter, the learner should be able to do the following:</p>
+      <p class="box-intro-cn">完成本章学习后，学习者应能够做到以下各项：</p>
+      <ul class="box-bullet-list">
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Identify the basic bed positions.</p>
+            <p class="bp-cn">• 准确识别病床的基本体位（平卧位、低/半/高福氏卧位、特氏卧位与反特氏卧位）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Describe how to handle linen according to the rules of Standard Practice.</p>
+            <p class="bp-cn">• 描述如何严格根据标准预防规范妥善拿取、运送及处理床品被服。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• List the types of bed linens used when making a client’s bed.</p>
+            <p class="bp-cn">• 列举为服务对象铺床时所使用的各类被服织物（床褥垫、平单/床笠、吸水翻身中单、盖被、床罩及枕套）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Describe safety measures for bed making.</p>
+            <p class="bp-cn">• 阐述铺床过程中的人身安全防护措施（高度调节、锁定脚轮、身体力学省力原则与防交叉感染）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Describe the differences between open and closed beds.</p>
+            <p class="bp-cn">• 阐明开式床（暂空床）与闭式床（备用床）的区别、临床适用场景与铺法差异。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Demonstrate the procedures described in this chapter.</p>
+            <p class="bp-cn">• 熟练演示并规范操作本章详述的标准铺床规程（闭式床、开式床及卧床患者占用床铺法）。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-459">
+              <span class="marker-pill">p. 459</span>
+            </div>
+            
+<section class="editorial-page" id="page-459">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Client Room Furniture & Equipment · 案主居室家具与设施</span>
+    <span class="ph-num">p. 459</span>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Clients spend varying amounts of time in their beds, whether it is at home or in an agency. Some clients must be on complete bed rest and never get out of bed; some clients are on partial bed rest (getting up only to stretch or go to the bathroom); and some clients spend their waking hours out of bed, using the bed only to rest or sleep.</p>
+    <p class="para-cn">服务对象在床上度过的时间各不相同，无论是在私人居所还是照护机构中。有些案主必须实行绝对卧床休息（complete bed rest），完全不能下床；有些案主处于部分卧床休息状态（仅在舒展肢体或如厕时下床）；还有些案主在清醒时均离开床铺活动，仅在休息或夜间睡眠时使用病床。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">It is important to know the different types of beds, how to position the beds for clients’ comfort, and how to make the beds. A clean, dry, and wrinkle-free bed promotes client comfort and safety and helps prevent skin breakdown and pressure injuries (see Chapter 22).</p>
+    <p class="para-cn">熟知各类病床的结构特点、掌握调节床铺体位以增进案主舒适度的方法，以及熟练掌握规范铺床技能极其重要。一张洁净、干燥、平整无皱褶的床铺能够极大促进案主的舒适与安全，并有效预防皮肤破损与压疮（压力性损伤，详见第 22 章）。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">In facilities, beds are usually made in the morning after clients’ baths or while they are taking a shower or are out of the room. Clients usually like their beds made and rooms cleaned before visitors arrive. In private homes, beds are made according to the care plan and the client’s preferences.</p>
+    <p class="para-cn">在照护机构中，铺床通常在早晨案主沐浴后、或在案主淋浴及离开房间活动时进行。案主通常希望在访客到来前整理好床铺并清洁房间。在私人家庭中，铺床则严格根据照护计划及案主的个人偏好进行。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Linen must be straightened whenever it is loose or wrinkled and at bedtime. Check linen for crumbs after meals and remove crumbs. Linen should be changed whenever it becomes wet, soiled, or damp. Follow Standard Practices when changing linen soiled with blood, body fluids, excretions, or secretions.</p>
+    <p class="para-cn">床单一旦松动或出现皱褶，必须随时拉直整平，并在临睡前再次整理。餐后应仔细检查床单上是否有食物碎屑并及时清理。床品织物一旦潮湿、发潮或被污染，必须立即予以更换。更换沾有血液、体液、排泄物或分泌物的被服时，必须严格执行标准预防规范（Standard Practices）。</p>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">Client Room Furniture and Equipment</h3>
+    <h4 class="esh-title-cn">服务对象居室家具与常用设施</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Clients’ rooms are furnished and equipped for comfort and safety in any facility:</p>
+    <p class="para-cn">在任何医疗照护机构中，案主的房间均配备有旨在保障舒适与安全的家具与设备：</p>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Overbed tables</h4>
+    <h5 class="efc-title-cn">• 床上桌（跨床桌）</h5>
+    <div class="bilingual-block">
+      <p class="para-en">Hospitals and many long-term care facilities have overbed tables. These tables can be positioned over the bed and the height adjusted for a client in bed or in a chair. The overbed table is used for placing meal trays, eating, reading, writing, and other activities. It is also used as a work area for bedside procedures. However, never place bedpans, urinals, or soiled linens on an overbed table. Always clean the table carefully after each use with the appropriate cleaning wipes, according to facility policy.</p>
+      <p class="para-cn">医院及诸多长期照护机构均配备有跨床桌。这种桌子可以横跨在病床上方，并可根据案主在床上或坐椅上的高度进行上下升降调节。床上桌用于摆放餐盘进餐、阅读、书写以及开展日常活动，亦可用作床旁护理操作的工作台面。<strong>然而，绝对严禁将便盆、尿壶或换下的污染被服放置在床上桌上。</strong>每次使用后，必须根据机构规定使用专用消毒湿巾仔细擦拭清洁台面。</p>
+    </div>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Bedside furniture</h4>
+    <h5 class="efc-title-cn">• 床头储物柜与边几</h5>
+    <div class="bilingual-block">
+      <p class="para-en">Most hospitals and long-term care facilities have bedside stands for personal items (FIGURE 21.1). In private homes, bedside furniture varies—it could be a bedside stand or a small table, or there may be nothing at the bedside. Regardless of where the client is, furniture should be safely placed out of the client’s pathway.</p>
+      <p class="para-cn">大多数医院和长期照护机构都在床头配备有床头柜，用于存放个人洗护与日常用品（图 21.1）。在私人居家中，床边家具情况各异——可能是一个床头柜、小茶几，或者床边完全没有任何家具。无论案主身处何处，家具摆放必须安全稳妥，绝对不能阻挡案主的日常行走通道。</p>
+    </div>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p459_X1.jpg" alt="A bedside stand in a long-term care facility" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.1</span>
+      <span class="fig-text-en">A bedside stand in a long-term care facility is used to store personal care items.</span>
+      <span class="fig-text-cn">图 21.1 长期照护机构中的床头柜，用于存放案主的个人护理及卫生用品。</span>
+    </figcaption>
+  </figure>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Chairs</h4>
+    <h5 class="efc-title-cn">• 居室座椅配置</h5>
+    <div class="bilingual-block">
+      <p class="para-en">A hospital room usually has one or two chairs. Long-term care clients may bring their own chairs from home (FIGURE 21.2). Home care clients often have a favourite chair. Make sure that the chair is kept clean and free of food particles. Plump cushions regularly.</p>
+      <p class="para-cn">医院病房通常配备一到两把椅子。长期照护机构的案主可能会从家中带来自己的专属扶手椅（图 21.2）。居家案主通常有自己最钟爱的座椅。务必确保座椅洁净且无食物碎屑遗留，并定期拍打整理靠垫使其蓬松舒适。</p>
+    </div>
+  </div>
+</section>
+
+    <div class="glossary-component" id="sec-ch21-glossary" style="margin:20px 0 32px 0;">
+      <div class="gc-header">
+        <div class="gc-title-wrap">
+          <span class="gc-badge">KEY TERMS · 核心专业术语表</span>
+          <h3 class="gc-title">Chapter 21 病床与铺床实务权威专业术语表</h3>
+          <p class="gc-desc">Sorrentino 原版教材第 21 章共收录 <strong>10 个病床体位、床品配置与铺床实操核心学术词汇</strong>。支持实时模糊检索及「紧凑表格 / 记忆卡片」双模态自由切换。</p>
+        </div>
+        <div class="gc-controls">
+          <div class="gc-search-box">
+            <input type="text" id="kt-search-ch21" placeholder="🔍 搜索英文术语或中文释义..." oninput="filterGlossary('ch21')">
+          </div>
+          <div class="gc-view-toggle">
+            <button class="gc-toggle-btn active" id="btn-view-table-ch21" onclick="setGlossaryView('ch21', 'table')">📋 表格视图</button>
+            <button class="gc-toggle-btn" id="btn-view-cards-ch21" onclick="setGlossaryView('ch21', 'cards')">📇 卡片视图</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table View (Default) -->
+      <div class="kt-view-table" id="kt-table-view-ch21">
+        <div class="kt-table-scroll">
+          <table class="kt-data-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">英文术语 / 临床概念</th>
+                <th style="width: 22%;">中文对照 / 原书页码</th>
+                <th style="width: 52%;">教材标准学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+              <tr class="kt-table-row" data-term="alternating pressure mattress 交替充气减压床垫">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">alternating pressure mattress</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˌɔːltərneɪtɪŋ ˈpreʃər ˈmætrəs/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">交替充气减压床垫</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 461</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A special type of mattress that has alternating areas of pressure of air, gel, or water baffles to reduce the risk for pressure sores. p. 461</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">一种特殊的减压床垫，通过空气气囊、凝胶或水压隔室的交替充气与放气，周期性改变案主身体受压部位，以显著降低压疮发生风险。详见第 461 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="fitted sheet 床笠 / 定型底层大单">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">fitted sheet</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈfɪtɪd ʃiːt/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">床笠 / 定型底层大单</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 469</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A sheet (usually with elastic edges) tailored to fit a particular size of mattress. p. 469</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">一种专门裁剪缝制以贴合特定床垫尺寸的底层床单，四角通常带有弹性松紧带，可牢固包裹床垫四角防止滑脱皱褶。详见第 469 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="incontinence pad 防渗失禁垫 / 吸水护理垫">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">incontinence pad</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ɪnˈkɒntɪnəns pæd/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">防渗失禁垫 / 吸水护理垫</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 466</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A pad placed in the centre of the bed on top of the bottom sheet to protect the bedsheets from body fluids. Also called absorbent pad or soaker pad. p. 466</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">放置在床中部底层大单之上、用于防止案主体液（尿液、粪便、引流液）渗漏弄脏床单的专用防护垫。在临床上亦称吸水垫（absorbent pad）或浸润垫（soaker pad）。详见第 466 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="mitred corner 斜角折叠法 / 规整信封折角">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">mitred corner</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈmaɪtəd ˈkɔːnər/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">斜角折叠法 / 规整信封折角</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 466</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A type of fold done to the top layers of bedding which keeps the layers neat and in place. p. 466</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">一种在铺设床单和盖被上层织物时制作的特殊折角手法（呈45度整齐信封角），能够使床品平整服帖、牢固锁紧在床垫下方而不易脱落。详见第 466 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="closed bed 闭式床 / 备用床">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">closed bed</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/kloʊzd bed/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">闭式床 / 备用床</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 468</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A bed made when it is expected to be unoccupied for several hours or days; the top linen is pulled up to the head of the bed to keep it clean. p. 468</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">当病床预计在数小时或数天内无人占用时所铺设的整洁床铺；上层被服完全拉至床头平整覆盖，以保持床单洁净防尘，随时备新入住案主使用。详见第 468 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="open bed 开式床 / 暂空床">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">open bed</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈoʊpən bed/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">开式床 / 暂空床</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 473</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A bed made shortly before it is to be occupied; top linens are fan-folded to the foot of the bed so the client can get into bed easily. p. 473</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">在案主即将上床休息前铺设的开放式床铺；将盖被等上层被服以扇形折叠至床尾，便于能走动或短时间离床的案主轻松上床躺下。详见第 473 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="occupied bed 有人床 / 卧床患者占用床">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">occupied bed</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈɒkjʊpaɪd bed/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">有人床 / 卧床患者占用床</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 473</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A bed made while the client remains in the bed due to illness or injury; linens are changed one side at a time while the client is turned. p. 473</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">当案主因伤病、虚弱无法离床时，在案主卧床状态下进行的床品更换与铺设；照护人员协助案主侧卧，分侧逐步完成旧单卷除与新单平整铺设。详见第 473 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="turning pad / transfer sheet 翻身中单 / 减压转移垫">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">turning pad / transfer sheet</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈtɜːrnɪŋ pæd/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">翻身中单 / 减压转移垫</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 466</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A pad placed over the middle of the bottom sheet used to turn and move the client in bed, reducing shear and friction. p. 466</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">铺设于底层大单中部的小型织物中单，照护者利用其边缘在床面上移动或翻转案主，以最大限度消除摩擦力与剪切力，保护案主脆弱皮肤。详见第 466 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="fowler's position 福氏卧位 / 坐式卧位">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Fowler's position</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈfaʊlərz pəˈzɪʃən/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">福氏卧位 / 坐式卧位</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 463</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A semi-sitting to upright bed position where the head of the bed is elevated between 15 and 90 degrees (Low: 15–30°, Semi: 30–45°, High: 45–90°). p. 463</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">床头抬高一定角度的半坐位至直坐位体位，分为低福氏位（15–30度）、半福氏位（30–45度）和高福氏位（45–90度），利于案主呼吸、进食并改善视线。详见第 463 页。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="trendelenburg position 特伦德伦伯格卧位 / 头低脚高位">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">Trendelenburg position</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/trɛnˈdɛlənbɜːrɡ pəˈzɪʃən/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">特伦德伦伯格卧位 / 头低脚高位</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 463</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A bed position where the head of the bed is lowered and the foot of the bed is elevated; requires a physician's order and is used for postural drainage. p. 463</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">一种床头倾斜降低、床尾整体抬高的特殊体位；必须遵医嘱执行，常用于促进肺部体位引流或特定休克急救。详见第 463 页。</div>
+                </td>
+              </tr>
+        
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mode 2: Flashcard Grid View -->
+      <div class="kt-view-cards" id="kt-cards-view-ch21" style="display:none;">
+        <div class="kt-cards-grid" id="kt-cards-grid-ch21">
+    
+          <div class="editorial-term-card" data-term="alternating pressure mattress 交替充气减压床垫">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 461</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">alternating pressure mattress</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˌɔːltərneɪtɪŋ ˈpreʃər ˈmætrəs/</div>
+              <div class="etc-term-cn">交替充气减压床垫</div>
+              <div class="etc-def-en">A special type of mattress that has alternating areas of pressure of air, gel, or water baffles to reduce the risk for pressure sores. p. 461</div>
+              <div class="etc-def-cn">一种特殊的减压床垫，通过空气气囊、凝胶或水压隔室的交替充气与放气，周期性改变案主身体受压部位，以显著降低压疮发生风险。详见第 461 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="fitted sheet 床笠 / 定型底层大单">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 469</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">fitted sheet</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈfɪtɪd ʃiːt/</div>
+              <div class="etc-term-cn">床笠 / 定型底层大单</div>
+              <div class="etc-def-en">A sheet (usually with elastic edges) tailored to fit a particular size of mattress. p. 469</div>
+              <div class="etc-def-cn">一种专门裁剪缝制以贴合特定床垫尺寸的底层床单，四角通常带有弹性松紧带，可牢固包裹床垫四角防止滑脱皱褶。详见第 469 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="incontinence pad 防渗失禁垫 / 吸水护理垫">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 466</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">incontinence pad</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ɪnˈkɒntɪnəns pæd/</div>
+              <div class="etc-term-cn">防渗失禁垫 / 吸水护理垫</div>
+              <div class="etc-def-en">A pad placed in the centre of the bed on top of the bottom sheet to protect the bedsheets from body fluids. Also called absorbent pad or soaker pad. p. 466</div>
+              <div class="etc-def-cn">放置在床中部底层大单之上、用于防止案主体液（尿液、粪便、引流液）渗漏弄脏床单的专用防护垫。在临床上亦称吸水垫（absorbent pad）或浸润垫（soaker pad）。详见第 466 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="mitred corner 斜角折叠法 / 规整信封折角">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 466</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">mitred corner</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈmaɪtəd ˈkɔːnər/</div>
+              <div class="etc-term-cn">斜角折叠法 / 规整信封折角</div>
+              <div class="etc-def-en">A type of fold done to the top layers of bedding which keeps the layers neat and in place. p. 466</div>
+              <div class="etc-def-cn">一种在铺设床单和盖被上层织物时制作的特殊折角手法（呈45度整齐信封角），能够使床品平整服帖、牢固锁紧在床垫下方而不易脱落。详见第 466 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="closed bed 闭式床 / 备用床">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 468</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">closed bed</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/kloʊzd bed/</div>
+              <div class="etc-term-cn">闭式床 / 备用床</div>
+              <div class="etc-def-en">A bed made when it is expected to be unoccupied for several hours or days; the top linen is pulled up to the head of the bed to keep it clean. p. 468</div>
+              <div class="etc-def-cn">当病床预计在数小时或数天内无人占用时所铺设的整洁床铺；上层被服完全拉至床头平整覆盖，以保持床单洁净防尘，随时备新入住案主使用。详见第 468 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="open bed 开式床 / 暂空床">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 473</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">open bed</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈoʊpən bed/</div>
+              <div class="etc-term-cn">开式床 / 暂空床</div>
+              <div class="etc-def-en">A bed made shortly before it is to be occupied; top linens are fan-folded to the foot of the bed so the client can get into bed easily. p. 473</div>
+              <div class="etc-def-cn">在案主即将上床休息前铺设的开放式床铺；将盖被等上层被服以扇形折叠至床尾，便于能走动或短时间离床的案主轻松上床躺下。详见第 473 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="occupied bed 有人床 / 卧床患者占用床">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 473</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">occupied bed</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈɒkjʊpaɪd bed/</div>
+              <div class="etc-term-cn">有人床 / 卧床患者占用床</div>
+              <div class="etc-def-en">A bed made while the client remains in the bed due to illness or injury; linens are changed one side at a time while the client is turned. p. 473</div>
+              <div class="etc-def-cn">当案主因伤病、虚弱无法离床时，在案主卧床状态下进行的床品更换与铺设；照护人员协助案主侧卧，分侧逐步完成旧单卷除与新单平整铺设。详见第 473 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="turning pad / transfer sheet 翻身中单 / 减压转移垫">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 466</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">turning pad / transfer sheet</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈtɜːrnɪŋ pæd/</div>
+              <div class="etc-term-cn">翻身中单 / 减压转移垫</div>
+              <div class="etc-def-en">A pad placed over the middle of the bottom sheet used to turn and move the client in bed, reducing shear and friction. p. 466</div>
+              <div class="etc-def-cn">铺设于底层大单中部的小型织物中单，照护者利用其边缘在床面上移动或翻转案主，以最大限度消除摩擦力与剪切力，保护案主脆弱皮肤。详见第 466 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="fowler's position 福氏卧位 / 坐式卧位">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 463</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Fowler's position</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈfaʊlərz pəˈzɪʃən/</div>
+              <div class="etc-term-cn">福氏卧位 / 坐式卧位</div>
+              <div class="etc-def-en">A semi-sitting to upright bed position where the head of the bed is elevated between 15 and 90 degrees (Low: 15–30°, Semi: 30–45°, High: 45–90°). p. 463</div>
+              <div class="etc-def-cn">床头抬高一定角度的半坐位至直坐位体位，分为低福氏位（15–30度）、半福氏位（30–45度）和高福氏位（45–90度），利于案主呼吸、进食并改善视线。详见第 463 页。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="trendelenburg position 特伦德伦伯格卧位 / 头低脚高位">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 463</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">Trendelenburg position</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/trɛnˈdɛlənbɜːrɡ pəˈzɪʃən/</div>
+              <div class="etc-term-cn">特伦德伦伯格卧位 / 头低脚高位</div>
+              <div class="etc-def-en">A bed position where the head of the bed is lowered and the foot of the bed is elevated; requires a physician's order and is used for postural drainage. p. 463</div>
+              <div class="etc-def-cn">一种床头倾斜降低、床尾整体抬高的特殊体位；必须遵医嘱执行，常用于促进肺部体位引流或特定休克急救。详见第 463 页。</div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    
+            <div class="page-anchor-marker" id="page-460">
+              <span class="marker-pill">p. 460</span>
+            </div>
+            
+<section class="editorial-page" id="page-460">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Privacy, Bathrooms & The Client's Bed · 隐私设施、卫生间与病床</span>
+    <span class="ph-num">p. 460</span>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Privacy curtains and screens</h4>
+    <h5 class="efc-title-cn">• 隔帘与移动式隐私屏风</h5>
+    <div class="bilingual-block">
+      <p class="para-en">Standard in hospitals and long-term care facilities, privacy curtains are suspended from the ceiling and pulled around the bed before care (FIGURE 21.3). Privacy curtains prevent others from seeing the client, but they do not block sound or prevent conversations from being overheard. In home care settings, portable screens can be used for privacy (FIGURE 21.4).</p>
+      <p class="para-cn">在医院和长期照护机构中，隐私隔帘属于标准配置，悬挂于天花板轨道上，在实施任何照护操作前必须完全拉合围绕病床（图 21.3）。隐私帘可以阻挡外界视线，但<strong>无法隔绝声音或防止交谈内容被旁人听见</strong>。在居家照护环境中，可使用便携式折叠屏风来保护案主的身体隐私（图 21.4）。</p>
+    </div>
+  </div>
+
+  <div class="figures-duo-grid">
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p460_X1.jpg" alt="A client room with a chair from home" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.2</span>
+        <span class="fig-text-en">A client’s room includes a chair and personal items from home.</span>
+        <span class="fig-text-cn">图 21.2 长期照护案主的房间中摆放着从家中带来的专属舒适座椅和个人纪念品。</span>
+      </figcaption>
+    </figure>
+
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p460_X2.jpg" alt="Curtains around the bed provide privacy" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.3</span>
+        <span class="fig-text-en">Curtains around the bed provide privacy in hospitals and long-term care facilities.</span>
+        <span class="fig-text-cn">图 21.3 围绕病床的天花板悬挂式围帘，在医院和长期照护机构中为案主提供视觉隐私防护。</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="figures-duo-grid">
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p460_X3.jpg" alt="Portable screens provide privacy in the home" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.4</span>
+        <span class="fig-text-en">Portable screens provide privacy in the home.</span>
+        <span class="fig-text-cn">图 21.4 居家照护中使用的便携式折叠屏风，用于灵活遮挡视线并保护案主尊严。</span>
+      </figcaption>
+    </figure>
+
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p460_X4.jpg" alt="A facility bathroom" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.5</span>
+        <span class="fig-text-en">A facility bathroom with elevated toilet and handrails.</span>
+        <span class="fig-text-cn">图 21.5 机构无障碍卫生间：配备抬高式座便器、安全抓杆扶手与应急拉绳。</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Closet and drawer space</h4>
+    <h5 class="efc-title-cn">• 衣橱与抽屉储物空间</h5>
+    <div class="bilingual-block">
+      <p class="para-en">Hospitals and long-term care facilities provide closet and drawer space for the client’s clothing. Government legislation in some provinces states that long-term care clients must have easy access to the closet and its contents.</p>
+      <p class="para-cn">医院和长期照护机构为案主的衣物提供衣橱和抽屉。加拿大某些省份的政府法律法规明确规定：长期照护案主必须能够方便、无阻碍地取用其衣橱及其内部存放的个人物品。</p>
+    </div>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Bathrooms</h4>
+    <h5 class="efc-title-cn">• 卫生间无障碍设施</h5>
+    <div class="bilingual-block">
+      <p class="para-en">Most facility bathrooms have a sink, call bell, mirror, and toilet with handrails (FIGURE 21.5), and some have showers. Toilets in some facilities are higher than regular toilets, which makes moving to and from wheelchairs easier for clients, especially for clients with joint problems. Some bathrooms are private, while others are shared. Most bathrooms in private homes do not have elevated toilets and handrails. In such cases, you must make sure the client’s bathroom is clean and safe.</p>
+      <p class="para-cn">大多数机构卫生间配备有面盆、紧急呼叫铃、梳妆镜以及装有安全扶手的座便器（图 21.5），部分还配备淋浴间。机构中的马桶座通常比普通家庭马桶高，这极大便利了坐轮椅案主的移位转移，尤其是患有严重关节病变的案主。卫生间有些为单人独用，有些为多人公用。私人家庭的大多数卫生间没有加高马桶和扶手，在此类情况下，支持工作者必须格外留心确保卫生间洁净干燥且无滑跌隐患。</p>
+    </div>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">THE CLIENT’S BED</h3>
+    <h4 class="esh-title-cn">服务对象的病床</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">For those who are confined to bed, comfort is especially important. Many home care clients have regular beds. Use pillows to help clients sit comfortably in a regular bed.</p>
+    <p class="para-cn">对于长期卧床不起的案主而言，身体舒适度尤为关键。许多居家案主使用的是普通家用床。在普通床上照料时，可善用各类枕头与靠垫辅助案主舒适地维持半坐卧姿态。</p>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-461">
+              <span class="marker-pill">p. 461</span>
+            </div>
+            
+<section class="editorial-page" id="page-461">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Regular Beds & Alternating Pressure Mattresses · 普通床与减压床垫</span>
+    <span class="ph-num">p. 461</span>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Hospital beds are used in hospitals and long-term care facilities, as well as by home care clients in some homes. Hospital beds usually have electric controls that allow clients to sit up and lie down without effort. Many hospital beds have at least partial bed rails (see Chapter 20 for a discussion of bed rails and their use). Remember, bed rails have many safety hazards and can be a form of restraint. Raise and lower them only as directed by your supervisor and the care plan.</p>
+    <p class="para-cn">医用多功能病床广泛应用于医院与长期照护机构中，部分居家照护案主家中也配备有此类病床。医用病床通常具有电动控制装置，使案主无需费力即可轻松坐起或平躺。许多病床至少配备有分体式部分床栏（关于床栏及其临床使用规程详见第 20 章）。<strong>请牢记：床栏存在诸多重大安全隐患，且在法律上可被归类为身体约束。</strong>升起或放下床栏必须严格遵照主管护士指导及照护计划执行。</p>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">Regular Beds</h3>
+    <h4 class="esh-title-cn">普通家用床铺</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">In clients’ homes, you will see twin-, double-, queen-, and king-sized beds, as well as waterbeds, sofa sleepers, cots, and recliners. Also, a number of private homes have motorized and electrically adjusted beds. Clients receiving palliative care in the community often have hospital-type beds.</p>
+    <p class="para-cn">在案主家中，您会遇到单人床（twin）、双人床（double）、加大双人床（queen）和特大双人床（king），以及水床、折叠沙发床、行军简易折叠床及躺椅。此外，不少私人家庭也配备了电动马达调节床。在社区接受姑息安宁疗护（palliative care）的案主通常会租赁并配备医用型病床。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Regular beds cannot be raised. The lower the bed, the more you will have to bend and reach when giving care or making the bed, so use good body mechanics to protect your back (see Chapter 14).</p>
+    <p class="para-cn">普通家用床无法进行整体高度升降。床铺位置越低，照护者在实施护理操作或铺床时弯腰和前伸手臂的幅度就越大，因此务必严格运用优良的身体力学原则来保护自己的脊柱与腰背（详见第 14 章）。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">A good mattress is neither too hard nor too soft. A poor-quality mattress may not provide the needed support or comfort and could harm the client’s back or skin. If you have concerns about a client’s mattress, tell your supervisor. Many clients who are thin or bedridden, or who require frequent repositioning, are prone to skin breakdown and pressure ulcers. An <strong>alternating pressure mattress</strong> is a special mattress that has alternating areas of pressure of air, gel, or water baffles to reduce the risk for pressure sores (see Think About Safety: Alternating Pressure Mattresses and Side Rails).</p>
+    <p class="para-cn">一张优质的床垫既不能过硬，也不能过软。劣质床垫无法提供所需的身体支撑与舒适度，甚至可能损害案主的背部脊柱或压伤皮肤。若您对案主的床垫有疑虑，应立即向主管报告。许多消瘦、长期卧床或需要频繁变换体位的案主极易发生皮肤破损和压疮。<strong>交替充气减压床垫（alternating pressure mattress）</strong>是一种特殊床垫，通过气囊、凝胶或水压隔室的交替周期性充放气来变换承压区域，从而显著降低压疮发生风险（见“安全警示：交替充气床垫与床栏安全”专栏）。</p>
+  </div>
+
+  <div class="editorial-box-container box-theme-red">
+    <div class="box-header">
+      <span class="box-icon">⚠️</span>
+      <span class="box-title-en">THINK ABOUT SAFETY: Alternating Pressure Mattresses and Side Rails</span>
+      <span class="box-title-cn">安全警示：交替充气减压床垫与床栏夹陷致死风险防范</span>
+    </div>
+    <div class="box-content">
+      <div class="bilingual-block">
+        <p class="para-en">The air, gel, or water baffles in an alternating pressure mattress reduce the risk for pressure sores. It is important when making a bed with an alternating pressure mattress to ensure that layers of bed linens do not reduce the effectiveness of the baffle action. Most manufacturers recommend that incontinence pads of any type not be used, and some recommend that even a bottom sheet not be used. If they can be used, bottom sheets should not be tucked under the mattress as they would be with a regular mattress. Instead, they should be allowed to hang down at the sides. If the client needs to be repositioned, a slider sheet (or slider sheet system) designed for this use should be used (see Chapter 14). Bottom sheets that cannot be tucked in can be a source of wrinkles (and pressure areas) under the client’s fragile skin. It is therefore important to pull and straighten the sheet under the client whenever the client is repositioned.</p>
+        <p class="para-cn">交替充气减压床垫中的空气隔室可有效降低压疮风险。在为此类床垫铺床时，<strong>切忌铺垫过厚的床品织物，否则会削弱气囊隔室的减压效果</strong>。多数生产厂家建议不要使用任何类型的防水失禁垫，甚至建议连底层大单都不要铺。如果允许使用底层单，切不可像普通床垫那样将床单四角塞入床垫下方，而应使其在两侧自然下垂。若案主需要变换体位，必须使用专为此设计的滑行转移床单（slider sheet system，见第 14 章）。无法塞紧固定的底层单容易在案主脆弱皮肤下产生皱褶而形成受压点，因此每次协助案主翻身移位后，必须仔细拉伸理平案主身下的床单。</p>
+      </div>
+      <div class="bilingual-block">
+        <p class="para-en">Any client using an alternating pressure mattress should be checked frequently. There have been reported cases of clients who have died as a result of being wedged between the air mattress and the bed frame. Bed rails also can cause injury to the client who is on an alternating pressure mattress. Always follow the client’s care plan regarding their use of bed rails and regularly monitor any client who has side rails. Refer to Chapter 20 for a discussion on side rail safety.</p>
+        <p class="para-cn"><strong>任何使用交替充气床垫的案主均须接受严密而频繁的巡视。</strong>临床上曾发生过多起案主被挤压嵌顿在充气床垫与病床框架/床栏夹缝之间而窒息死亡的悲剧案例！充气床垫边缘柔软可压缩，极易形成致命夹陷空隙。使用床栏时必须严格遵循照护计划，并时刻监测案主安全（详见第 20 章床栏安全 7 大危险区域）。</p>
+      </div>
+    </div>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p461_X1.jpg" alt="Hospital bed in highest and lowest horizontal positions" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.6</span>
+      <span class="fig-text-en">One bed is in the highest horizontal position (working height), and the other is in the lowest horizontal position (safety / egress height).</span>
+      <span class="fig-text-cn">图 21.6 病床高度对比：一张处于最高水平位置（方便照护人员实施护理的工作高度），另一张处于最低水平位置（防跌倒及方便案主上下床的安全高度）。</span>
+    </figcaption>
+  </figure>
+</section>
+
+            <div class="page-anchor-marker" id="page-462">
+              <span class="marker-pill">p. 462</span>
+            </div>
+            
+<section class="editorial-page" id="page-462">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Hospital Beds & Bed Positions · 医用病床控制与体位概论</span>
+    <span class="ph-num">p. 462</span>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Hospital beds have electrical or manual controls and can be raised horizontally to give care, reducing worker bending and reaching. The lowest horizontal position lets the client get out of bed with ease (FIGURE 21.6) and is also necessary as a safety measure for the client. The head of the bed can be kept flat or raised to varying degrees for the client’s comfort.</p>
+    <p class="para-cn">医用病床配备有电动或手动控制系统，可实现水平整体升降，以便照护者在实施护理时减少弯腰和前伸幅度。病床降至最低水平位置既能让案主轻松下床，也是预防坠床损伤的核心安全举措。床头可以保持水平平放，也可以抬高到不同角度以提升案主的舒适度。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Most hospital beds are electrically controlled. Controls are on a side panel, on the bed rail, or on a panel at the foot of the bed (FIGURE 21.7), and clients are taught how to safely use the controls. Clients are advised of the risks associated with having the bed in the high position. They are also advised of any position limitations or restrictions.</p>
+    <p class="para-cn">现代大多数医用病床均采用电动控制。控制面板通常位于床侧挂板、床栏内侧或床尾控制屏上（图 21.7），案主在入院时会被告知如何安全操作这些按钮。医护人员还会告知案主将床置于高位可能引发的坠床风险，以及其病情所限制的特殊体位禁忌。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Most electrically controlled beds can be “locked” into any position to prevent the client from raising or lowering the head or foot of the bed. Clients restricted to certain positions—for example, clients with dementia—may need to have their beds locked. You must also be alert to potential dangers when children, confused clients, or clients with impaired cognition or altered levels of consciousness have easy access to the controls. Follow the care plan, and check with your supervisor.</p>
+    <p class="para-cn">多数电动病床均具有“位置锁定”（lockout）功能，以防止案主自行升降床头或床尾。对于受医学体位限制或患有认知症（失智症）的案主，可能需要将病床锁定在特定安全体位。当儿童、神志模糊、认知受损或意识水平改变的案主能够触及控制器时，支持工作者必须对潜在危险保持高度警惕。务必遵循照护计划并向主管护士请示核对。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Manually operated beds are also still in use in some facilities and homes. These beds have cranks at the foot of the bed (FIGURE 21.8)—the left crank raises or lowers the head of the bed; the right crank adjusts the knee portion; and the centre crank raises or lowers the entire bed. The cranks are pulled out and up for use, and after use they should be pushed in and turned down. Cranks in the “up” position are safety hazards, as anyone walking past could bump into them.</p>
+    <p class="para-cn">在部分养老机构和家庭中，手动摇杆病床仍在沿用。这类病床在床尾配有手摇摇杆（图 21.8）：<strong>左侧摇杆用于升降床头；右侧摇杆用于调节膝部曲度；中间摇杆用于升降整张病床的高度。</strong>摇杆使用时向外拉出并向上扳起，<strong>摇动完毕后必须立即推入并向下折叠收起</strong>。处于伸出状态的摇杆是重大安全隐患，过往人员极易被其绊倒或碰撞受伤。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Hospital beds should always be left in their lowest position for the safety of the client. Raise the bed only immediately before giving care and when making the bed. As soon as you have finished, return the bed to its lowest position. Never leave the client alone when the bed is raised.</p>
+    <p class="para-cn"><strong>为了案主的人身安全，病床在平时必须始终保持在最低水平位置。</strong>只有在即将实施照护操作及铺床的瞬间才将病床升至适宜工作高度。操作一旦结束，必须立刻将床降回最低位。<strong>当病床处于抬高位置时，绝对不能将案主单独留在房间内！</strong></p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Hospital bed legs have wheels that let the bed move easily. Some beds have wheels that can be locked to prevent the bed from moving (FIGURE 21.9). Other beds have different locking mechanisms. Make sure bed wheels are locked at all times unless you are moving the bed to another location. Ensure that bed rails are up if moving a client in the bed within your facility. You or the client could be injured if the bed moves during any care or transfer.</p>
+    <p class="para-cn">病床床腿安装有万向脚轮以便推动移动。脚轮均配备有刹车锁止装置（图 21.9），部分床采用中控刹车踏板。<strong>除非正在将床推往其他地点，否则病床脚轮必须始终处于锁定（刹车制动）状态！</strong>若在机构内推床转运卧床案主，必须确保两侧床栏全部升起锁好。若在护理或转移案主过程中病床意外滑动，案主或工作人员都可能遭受严重意外伤害。</p>
+  </div>
+
+  <div class="figures-duo-grid">
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p462_X1.jpg" alt="Electric bed controls" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.7</span>
+        <span class="fig-text-en">Bed controls. Electric controls on rail and staff lockout panel at the foot of the bed.</span>
+        <span class="fig-text-cn">图 21.7 电动病床控制系统：床栏内外侧案主/员工控制按钮及床尾总控锁止面板。</span>
+      </figcaption>
+    </figure>
+
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p462_X4.jpg" alt="Manually operated hospital bed cranks" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.8</span>
+        <span class="fig-text-en">Manually operated hospital bed. Left crank raises head, right crank raises knee, centre crank raises bed horizontally.</span>
+        <span class="fig-text-cn">图 21.8 手动病床摇杆：左摇杆升降床头，右摇杆升降曲膝部，中摇杆整床水平升降（用毕立即折叠收起）。</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">Bed Positions</h3>
+    <h4 class="esh-title-cn">基本病床卧位</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">There are several basic bed positions: the flat position, Fowler’s positions (low, semi-, and high Fowler’s), the Trendelenburg position, and the reverse Trendelenburg position.</p>
+    <p class="para-cn">临床上有数种常用的基本病床体位：平卧位（flat）、福氏卧位（分为低福氏位、半福氏位与高福氏位）、特伦德伦伯格卧位（头低脚高位）以及反特伦德伦伯格卧位（头高脚低位）。</p>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-463">
+              <span class="marker-pill">p. 463</span>
+            </div>
+            
+<section class="editorial-page" id="page-463">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Basic Bed Positions: Flat, Fowler's, Trendelenburg · 常用体位调节</span>
+    <span class="ph-num">p. 463</span>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Flat position</h4>
+    <h5 class="efc-title-cn">• 平卧位（水平位）</h5>
+    <div class="bilingual-block">
+      <p class="para-en">The usual sleeping position. The flat position is also used after a spinal cord injury or surgery for cervical traction and to deliver care (FIGURE 21.10).</p>
+      <p class="para-cn">这是日常睡眠的最常用体位。平卧位也用于脊髓损伤后、颈椎牵引治疗期间以及照护人员进行床旁护理操作（如翻身、擦浴、更换床单）时（图 21.10）。</p>
+    </div>
+  </div>
+
+  <div class="figures-duo-grid">
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p462_X5.jpg" alt="Lock on a bed wheel" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.9</span>
+        <span class="fig-text-en">Lock on a bed wheel. Foot pedal is pressed down to lock the wheel securely.</span>
+        <span class="fig-text-cn">图 21.9 病床脚轮制动刹车装置：踩下脚踏板牢固锁紧脚轮防止病床滑动。</span>
+      </figcaption>
+    </figure>
+
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p463_X1.jpg" alt="Flat bed position" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.10</span>
+        <span class="fig-text-en">Flat bed position. Entire mattress is completely horizontal.</span>
+        <span class="fig-text-cn">图 21.10 水平平卧位：整张床垫处于完全水平状态，用于睡眠与临床换单护理。</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Low Fowler’s position</h4>
+    <h5 class="efc-title-cn">• 低福氏卧位（15–30度）</h5>
+    <div class="bilingual-block">
+      <p class="para-en">A semi-sitting position in bed. The head of the bed is elevated by 15 to 30 degrees, or the client is propped up with a backrest or pillow (FIGURE 21.11).</p>
+      <p class="para-cn">床上的一种微仰半坐卧位。床头抬高 15 到 30 度，或在普通床上使用靠背架、枕头将案主上半身垫起（图 21.11）。</p>
+    </div>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p463_fig11_low_fowler.jpg" alt="Low Fowler's position" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.11</span>
+      <span class="fig-text-en">Low Fowler’s position. Head of bed is elevated 15 to 30 degrees.</span>
+      <span class="fig-text-cn">图 21.11 低福氏卧位：床头轻度抬高 15 至 30 度，提供放松与微仰体位。</span>
+    </figcaption>
+  </figure>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Semi-Fowler’s position</h4>
+    <h5 class="efc-title-cn">• 半福氏卧位（30–45度）</h5>
+    <div class="bilingual-block">
+      <p class="para-en">A semi-sitting position in bed. The head of the bed is raised by 30 to 45 degrees (FIGURE 21.12). The client can also be propped up with a backrest or pillows. The foot of the bed may be raised at the knee so that the client does not slide down in bed. However, raising the knee portion can interfere with leg circulation. Check with the care plan and your supervisor before positioning a client in the semi-Fowler’s position (see the Focus on Home Care: Low Fowler’s and Semi-Fowler’s Positions box).</p>
+      <p class="para-cn">床上的标准半坐卧位。床头抬高 30 到 45 度（图 21.12）。案主也可以用靠垫支托身体。床尾膝部可轻度屈曲抬起，以防止案主向床尾下滑。<strong>然而，抬高床膝部会压迫胭窝血管，阻碍下肢静脉血液回流！</strong>在将案主置于半福氏位前，务必核对护理计划并向主管请示（详见“居家照护聚焦：低福氏与半福氏位”专栏）。</p>
+    </div>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p463_fig12_semi_fowler.jpg" alt="Semi-Fowler's position" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.12</span>
+      <span class="fig-text-en">Semi-Fowler’s position. Head of bed is raised 30 to 45 degrees.</span>
+      <span class="fig-text-cn">图 21.12 半福氏卧位：床头抬高 30 至 45 度，显著改善肺部通气并减轻心脏负担。</span>
+    </figcaption>
+  </figure>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• High Fowler’s position</h4>
+    <h5 class="efc-title-cn">• 高福氏卧位（45–90度）</h5>
+    <div class="bilingual-block">
+      <p class="para-en">A semi-sitting position in bed. The head of the bed is elevated by 45 to 90 degrees (FIGURE 21.13). However, clients are not often placed above a 60-degree sitting position, as they are too uncomfortable at that angle. Clients who must eat while in bed are placed in a high Fowler’s position to reduce the risk for choking and aspiration. Once the meal is finished, the client can then be returned to the semi-Fowler’s position.</p>
+      <p class="para-cn">床上的直立坐式卧位。床头抬高 45 到 90 度（图 21.13）。然而，临床上极少让案主保持超过 60 度的角度，因为过于陡峭的坐姿极易导致身体向前倾倒且极不舒服。<strong>必须在床上进食的案主务必置于高福氏位，以最大限度降低呛咳与食物误吸（aspiration）的风险。</strong>进餐完毕并休息片刻后，方可将案主恢复至半福氏位。</p>
+    </div>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Trendelenburg position</h4>
+    <h5 class="efc-title-cn">• 特伦德伦伯格卧位（头低脚高位）</h5>
+    <div class="bilingual-block">
+      <p class="para-en">The head of the bed is lowered, and the foot of the bed is raised (FIGURE 21.14). Blocks are placed under the legs at the foot of the bed, or the entire bed frame is tilted. This position requires a physician’s order and is used for postural drainage.</p>
+      <p class="para-cn">床头倾斜降低，而床尾整体抬高（图 21.14）。在普通床上可通过在床脚下垫木块垫高，或在医用病床上直接倾斜整个床架。<strong>此体位属于严格医疗处方操作，必须遵医生医嘱执行</strong>，临床上常用于支气管体位引流排痰（postural drainage）。</p>
+    </div>
+  </div>
+
+  <div class="editorial-feature-card">
+    <h4 class="efc-title-en">• Reverse Trendelenburg position</h4>
+    <h5 class="efc-title-cn">• 反特伦德伦伯格卧位（头高脚低位）</h5>
+    <div class="bilingual-block">
+      <p class="para-en">The opposite of the Trendelenburg position. The head of the bed is raised, and the foot of the bed is lowered (FIGURE 21.15). Blocks are put under the legs at the head of the bed, or the entire bed frame is tilted. This position requires a physician’s order and is used to promote gastric emptying.</p>
+      <p class="para-cn">与特氏卧位恰好相反的体位。床头整体抬高，而床尾整体降低（图 21.15）。在普通床头腿下垫木块或使电动床架整体倾斜。<strong>此体位同样必须有医生医嘱</strong>，临床上常用于促进胃排空、防止胃食管严重反流或特定脑部减压。</p>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-464">
+              <span class="marker-pill">p. 464</span>
+            </div>
+            
+<section class="editorial-page" id="page-464">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Bed Positions & Linen Handling Rules · 体位与床品拿取规范</span>
+    <span class="ph-num">p. 464</span>
+  </div>
+
+  <div class="figures-duo-grid">
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p464_fig13_high_fowler.jpg" alt="High Fowler's position" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.13</span>
+        <span class="fig-text-en">High Fowler’s position. Head of bed is elevated 45 to 90 degrees (ideal for eating and severe dyspnea).</span>
+        <span class="fig-text-cn">图 21.13 高福氏卧位：床头抬高 45 至 90 度（床上进餐、服药及严重呼吸困难时的首选体位）。</span>
+      </figcaption>
+    </figure>
+
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p464_fig14_trendelenburg.jpg" alt="Trendelenburg position" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.14</span>
+        <span class="fig-text-en">Trendelenburg position. Head of the bed is lowered, and foot of the bed is raised (physician's order required).</span>
+        <span class="fig-text-cn">图 21.14 特伦德伦伯格卧位：头低脚高倾斜（需医生医嘱，用于体位引流与休克急救）。</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="figures-duo-grid">
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p464_fig15_rev_trendelenburg.jpg" alt="Reverse Trendelenburg position" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.15</span>
+        <span class="fig-text-en">Reverse Trendelenburg position. Head of the bed is raised, and foot of the bed is lowered.</span>
+        <span class="fig-text-cn">图 21.15 反特伦德伦伯格卧位：头高脚低倾斜（需医生医嘱，用于促进胃排空并预防反流误吸）。</span>
+      </figcaption>
+    </figure>
+
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p464_fig16_backrests.jpg" alt="Backrests for regular beds" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.16</span>
+        <span class="fig-text-en">Backrests for regular beds. A, Wedge pillow. B, Sturdy pillow with armrests.</span>
+        <span class="fig-text-cn">图 21.16 普通家用床的靠背支托辅具：A，斜坡三角楔形垫；B，带两侧扶手的稳固三角靠垫。</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="editorial-box-container box-theme-green">
+    <div class="box-header">
+      <span class="box-icon">🏡</span>
+      <span class="box-title-en">FOCUS ON HOME CARE: Low Fowler’s and Semi-Fowler’s Positions</span>
+      <span class="box-title-cn">居家照护聚焦：在普通床铺上实现低福氏与半福氏卧位</span>
+    </div>
+    <div class="box-content">
+      <div class="bilingual-block">
+        <p class="para-en">Low Fowler’s and semi-Fowler’s positions can be achieved with regular beds in the community by using a combination of backrests and pillows (FIGURE 21.16). Check the headboard to make sure it is sturdy, as it needs to provide support when the client leans against it. Large, sturdy sofa pillows are useful if a backrest is not available.</p>
+        <p class="para-cn">在社区居家照料中，针对不能调节角度的普通床铺，可通过组合使用专业靠背架与枕头来实现低福氏位与半福氏位（图 21.16）。务必检查床头板是否足够坚固牢靠，因为当案主后仰倚靠时它需要承受相当大的身体重力。若家中没有专用靠背支架，大型且结实挺括的沙发靠枕也是非常实用的替代辅具。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">LINEN</h3>
+    <h4 class="esh-title-cn">床品被服规范管理</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">How often linen is changed varies among work settings (TABLE 21.1, page 465). Follow the care plan and your employer’s policy. For example, in most long-term care facilities, linen changes are routinely done on days the client is showered or bathed. In all settings, linen is changed when it is wet, damp, or soiled.</p>
+    <p class="para-cn">不同照护环境对于床单被服的更换频次有着不同规定（详见第 465 页表 21.1）。严格遵循护理计划及雇主政策执行。例如在多数长期照护机构中，床品更换通常安排在案主淋浴或盆浴的日子按部就班进行。<strong>在任何照护环境中，床单一旦潮湿、发潮或被污染，必须立刻更换！</strong></p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">When handling linen and making beds, follow the rules of Standard Practices. Perform hand hygiene before collecting clean linen. Your uniform is considered dirty, so you must always hold linen away from your body and uniform (FIGURE 21.17). Never shake linen in the air, as doing so could spread microbes. Clean linen should be placed on a clean surface. Never put clean or soiled linen on the floor. If clean linen accidentally touches the floor, put it in the laundry. If you are changing the linens in a semi-private room or a room with four beds, remember that linens for one client should be placed only on that client’s furniture, not on another client’s furniture.</p>
+    <p class="para-cn">拿取被服与铺床时，必须无条件遵循标准预防操作规程。取用洁净床单前必须严格执行手卫生。<strong>照护人员的工作服在院感控制中被视为“污染源”，因此抱拿床单时必须始终远离自己的身体与工作服（图 21.17）！绝不可在空气中抖动床单</strong>，抖动会形成气流将附着的皮屑、微粒与病原微生物散播至整个房间。洁净床单必须放置在洁净表面上。<strong>严禁将任何洁净或换下的被服扔在地板上！</strong>洁净被服一旦不慎接触地面，必须直接丢入污衣袋送洗。在双人间或四人间更换床单时，专属于某位案主的被服只能放置在其个人的家具上，绝不可暂放在邻床案主的桌椅上。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">In order to reduce unnecessary time and steps, as well as to prevent cross-contamination of germs from one client’s room to another (see Chapter 19), you need to plan your steps. Take only the linens you will need into the room. If you find you have taken extra linens into the room, do not place them back in the linen room or on the linen cart—leave them in the client’s room. The linens can then be used the next time linens are changed.</p>
+    <p class="para-cn">为了减少无效往返折返并切断房间之间的病菌交叉污染（见第 19 章），铺床前必须做好流程规划。<strong>只将当前房间所需数量的床单带入室内。</strong>如果发现自己多带了洁净床单进房，<strong>绝不可将其重新放回被服库房或公共被服推车上</strong>（因其已暴露于该房间空气中被视作潜在污染）——应将其留在该案主房内的专用洁净柜中，留待下次更换时使用。</p>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-465">
+              <span class="marker-pill">p. 465</span>
+            </div>
+            
+<section class="editorial-page" id="page-465">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Linen Protocols & Collecting Supplies · 被服更换表与反序收集</span>
+    <span class="ph-num">p. 465</span>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p465_X1.jpg" alt="Hold linen away from body and uniform" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.17</span>
+      <span class="fig-text-en">Hold linen away from your body and uniform to prevent the transfer of microorganisms.</span>
+      <span class="fig-text-cn">图 21.17 拿取床单时务必使其远离身体和制服，防止微生物交叉转移。</span>
+    </figcaption>
+  </figure>
+
+  <div class="editorial-table-wrapper">
+    <div class="table-caption">
+      <span class="tbl-num">TABLE 21.1</span>
+      <span class="tbl-title-en">Linen Changes in Different Settings</span>
+      <span class="tbl-title-cn">不同医疗照护机构中的床品更换频次规范</span>
+    </div>
+    <table class="editorial-table">
+      <thead>
+        <tr>
+          <th>照护环境 (Setting)</th>
+          <th>常规更换频次 (How Often)</th>
+          <th>特殊照护考量与原则 (Special Considerations)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>居家照护<br>(Home Care)</strong></td>
+          <td>
+            • 通常每周一次。<br>
+            • <strong>任何时候一旦潮湿、发潮或被污染立即更换。</strong>
+          </td>
+          <td>遵循案主对床单材质与款式的个人偏好。例如部分案主习惯盖多条毛毯，部分案主不喜盖毛毯。严格遵循并持续更新案主的照护计划。</td>
+        </tr>
+        <tr>
+          <td><strong>长期照护机构<br>(Long-Term Care)</strong></td>
+          <td>
+            • 通常每周全面更换一次。<br>
+            • 枕套、上单与底层单可每周更换两次。<br>
+            • <strong>一旦潮湿、弄脏立即更换。</strong>
+          </td>
+          <td>部分案主会从家中携带自己喜爱的床罩、枕头、毛毯或棉被，铺床时应予使用并爱惜保管，确保标注案主姓名。机构若使用彩色床单，允许案主自选颜色、厚薄及铺床时间。</td>
+        </tr>
+        <tr>
+          <td><strong>急性期医院<br>(Hospitals)</strong></td>
+          <td>
+            • 根据医院规章政策而定。<br>
+            • 案主出院（discharged）时彻底终末更换与床单位消毒。<br>
+            • <strong>任何时候变湿、弄脏立即更换。</strong>
+          </td>
+          <td>同一案主住院期间，若床褥垫、毛毯和床罩未受潮且无严重皱褶，通常予以重复整理使用，仅定期更换贴身床单与枕套。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">Collecting Required Linen in Reverse Order</h3>
+    <h4 class="esh-title-cn">床品“反向顺序”收集法则（省时省力核心技巧）</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Collect required linen in the reverse order you will use it:</p>
+    <p class="para-cn">按照与实际铺床使用顺序<strong>完全相反的倒序</strong>依次提取并叠放床品：</p>
+  </div>
+
+  <ol class="box-numbered-list">
+    <li><strong>Pillowcase(s)（枕套）</strong>——最后使用，最先拿取置于最底层</li>
+    <li><strong>Bedspread (if used)（床罩/外罩）</strong></li>
+    <li><strong>Blanket or comforter (if used)（毛毯或保暖棉被）</strong></li>
+    <li><strong>Top sheet (flat or fitted)（上层盖被大单）</strong></li>
+    <li><strong>Incontinence pad or turning pad (if used)（防水防渗中单 / 翻身垫）</strong></li>
+    <li><strong>Bottom sheet (flat or fitted)（底层床单 / 床笠）</strong></li>
+    <li><strong>Mattress pad (if used)（保护床褥垫）</strong>——铺床最先使用，最后叠放在顶端</li>
+  </ol>
+
+  <div class="bilingual-block">
+    <p class="para-en">Use one arm to hold the linens and the other hand to pick them up. Make sure the item you will use first is at the top of your stack. For example, if you picked up the mattress pad first, it is at the bottom. The pillowcase is then at the top. Since you need the mattress pad first, place your arm over the pillowcase; then turn the stack over onto the arm with the pillowcase (FIGURE 21.18). The arm that held the linens is now free.</p>
+    <p class="para-cn">用一只手臂托住已取出的被服，另一只手拿取下一件。确保<strong>最先要用的物品处于整叠床单的最顶端</strong>。例如，如果您按常规先拿了床褥垫，它就在最底下，而最后拿的枕套在最上面；此时，只需将空闲的手臂平放在枕套上，然后将整叠被服顺势翻转倒扣过来（图 21.18），最先要用的床褥垫瞬间变为顶层，操作一气呵成！</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Follow Standard Practices when removing used linen. Used linen is considered dirty (contaminated with microbes). Wear gloves when handling linen soiled with blood, body fluids, secretions, or excretions. Some facilities require that gloves be worn for all bed-making activities to reduce the risk of cross-contamination. Also, check the linen for misplaced personal belongings—dentures, hearing aids, eyeglasses, watches, or jewellery—that clients may leave in their beds. Watch for stray needles in the linen, especially when clients self-medicate.</p>
+    <p class="para-cn">拆卸换下旧床单时必须严格遵循标准预防。用过的旧床单被视作被微生物污染的脏污织物。<strong>接触沾染血液、体液、排泄物或分泌物的被服时必须戴手套。</strong>部分机构出于院感防范要求在所有铺床过程中均须佩戴手套。此外，<strong>拆床单前必须仔细摸索检查床铺，防止包裹遗失案主的贵重个人物品——如活动假牙、助听器、眼镜、手表或首饰！同时要格外警惕床单中是否夹杂有散落的注射针头</strong>，尤其是在案主有自行注射胰岛素等用药习惯时，防止发生职业针刺伤！</p>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-466">
+              <span class="marker-pill">p. 466</span>
+            </div>
+            
+<section class="editorial-page" id="page-466">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Soiled Linens, Turning Pads & Mitred Corners · 污单卷叠、翻身垫与折角</span>
+    <span class="ph-num">p. 466</span>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Remove each piece of linen separately. Roll the linen away from you. The side that touched the client is then inside the roll. The side that has not touched the client is outside (FIGURE 21.19).</p>
+    <p class="para-cn">拆卸床单时应逐层分别取下。<strong>朝远离自己身体的方向向内卷叠被服</strong>。这样，直接接触案主身体的污染面就被包裹卷在内侧，而未直接接触人体的相对洁净面朝外（图 21.19），从而最大程度避免皮屑和病菌外逸。</p>
+  </div>
+
+  <div class="figures-duo-grid">
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p466_X1.jpg" alt="Collecting linens technique" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.18</span>
+        <span class="fig-text-en">Collecting linens. Linens held away from body. Flip stack so first item used is on top.</span>
+        <span class="fig-text-cn">图 21.18 收集床品技巧：被服远离身体制服，借助手臂翻转使得最先使用的织物自然置于顶层。</span>
+      </figcaption>
+    </figure>
+
+    <figure class="editorial-figure-card">
+      <img src="images/ch21/ch21_p466_X10.jpg" alt="Roll soiled linen away from you" class="figure-img" loading="lazy">
+      <figcaption class="figure-caption">
+        <span class="fig-label">FIGURE 21.19</span>
+        <span class="fig-text-en">Roll soiled (used) linen away from you. Contaminated side stays inside the roll.</span>
+        <span class="fig-text-cn">图 21.19 拆除旧床单时朝远离身体方向卷叠：污染面完全卷入内部，防止病菌与粉尘散落。</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Immediately place used linen in a laundry container or a special linen bag. Remove the bag from the client’s room. Never place soiled linen on the floor, as it contributes to the spread of pathogens. Follow employer policy regarding soiled linen (see Chapters 17 and 19). If the client is on cytotoxic medications (chemotherapy), see Chapter 44 for safety information regarding special handling of soiled linens.</p>
+    <p class="para-cn">换下的旧床单必须立即放入专用污衣收集桶或防渗被服袋中，并及时将袋子移出案主房间。<strong>绝不可将换下的脏床单随手扔在地板上</strong>，这种不良习惯是导致地面病原体交叉播散的主要源头。严格遵循机构污衣处置政策（见第 17、19 章）。若案主正在接受细胞毒性化疗药物治疗（chemotherapy），其排泄物污染的被服处置具有特殊双层防化规程，详见第 44 章。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">A <strong>turning pad</strong> (or turning sheet) is a small pad placed over the middle of the bottom sheet. It is used to turn and move the client in bed (see FIGURE 21.25 on page 471). If the client’s care plan calls for an incontinence pad to protect the bed, some agencies and facilities use washable incontinence pads as turning pads (see Focus on Home Care: Incontinence Pads); however, you must follow your agency’s policy for this. Turning pads prevent pain, skin damage, and bone and joint damage by protecting the client’s skin from friction and shearing when the client is moved in bed. A turning pad is also known as a sliding pad or transfer sheet in some facilities. In some settings where turning pads are unavailable—and only if necessary for brief use—flat sheets are folded into the size of a turning pad and used as a turning pad. However, the folded flat sheet should never be left under the client, as the increased bulk of the folded sheet can cause pressure areas under the client. The flat top sheet should be mitred in the corners. A <strong>mitred corner</strong> is a type of fold done to the top layers of bedding which keeps the layers neat and in place (see FIGURE 21.23 on page 469).</p>
+    <p class="para-cn"><strong>翻身中单（turning pad / turning sheet）</strong>是铺设在底层大单中央的一块小面积坚韧织物垫，专用于在床上协助案主翻身与移位（见第 471 页图 21.25）。若护理计划要求使用失禁垫，部分机构允许使用结实可机洗的吸水护理垫兼作翻身垫；但必须严格遵循雇主制度。翻身垫能够有效消除移动案主时产生的<strong>摩擦力与剪切力</strong>，从而预防皮肤撕脱破损与骨骼关节疼痛。部分机构亦称其为滑行垫（sliding pad）或转移中单（transfer sheet）。在缺乏专用翻身垫的简陋环境中，有时可将普通平单折叠后临时充当翻身垫，但<strong>折叠大单绝对不可长期留置在案主身下</strong>，因为多层织物堆叠形成的隆起硬块极易在受压处形成局部高压并引发褥疮。此外，上层床单角部需制作规整折角。<strong>斜角折叠法（mitred corner）</strong>是一种将床单边缘以45度信封角塞入床垫下的技巧，可使床品极其服帖整齐、不易脱落（见第 469 页图 21.23）。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">In most facilities throughout the country, no-lift policies exist for the safety of the client and the health care worker. For this reason, turning pads are never referred to as lift pads in these facilities. If your employer has a no-lift policy, you should never attempt moving or lifting the client without checking first with your supervisor.</p>
+    <p class="para-cn">在全加拿大绝大多数医疗与长期照护机构中，均全面推行<strong>“零徒手搬运政策”（No-Lift Policies）</strong>以保护案主与医护人员的人身安全。正因如此，在这些机构中，<strong>翻身垫绝不可被称为“起吊垫/抬人垫”（lift pads）</strong>，其功能仅限于在床面上借助滑行动作翻身或调整位置。若您的单位实施零徒手搬运政策，未经主管评估并使用机械升降设备前，严禁徒手悬空抬举案主！</p>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-467">
+              <span class="marker-pill">p. 467</span>
+            </div>
+            
+<section class="editorial-page" id="page-467">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Incontinence Pads, Crib Safety & Bed Making Guidelines · 失禁垫、婴儿床安全与铺床</span>
+    <span class="ph-num">p. 467</span>
+  </div>
+
+  <div class="editorial-box-container box-theme-purple">
+    <div class="box-header">
+      <span class="box-icon">💡</span>
+      <span class="box-title-en">FOCUS ON HOME CARE: Incontinence Pads</span>
+      <span class="box-title-cn">居家照护聚焦：防水失禁护理垫的选择与致命禁忌</span>
+    </div>
+    <div class="box-content">
+      <div class="bilingual-block">
+        <p class="para-en">Medical supply stores sell disposable or washable waterproof pads which are used as incontinence pads. Disposable waterproof pads should never be used as a turning pad as they will tear if used for this purpose. If permitted at your agency, washable incontinence pads can be used for turning most clients because they are usually strong and large enough.</p>
+        <p class="para-cn">医疗辅具商店销售一次性或可反复清洗的防水护理垫。<strong>一次性防水垫（disposable pads）绝对不可充当翻身中单使用</strong>，因为其材质受力极易撕裂，会导致案主坠落受伤！若机构规程允许，大型且厚实耐拉的可清洗失禁垫因抗拉强度高，可安全用于多数案主的床面翻身。</p>
+      </div>
+      <div class="bilingual-block">
+        <p class="para-en">The case manager will discuss the need for these items with the client and family. Some clients place plastic mattress protectors on their beds, but these protectors do not protect the bottom linens (bottom sheet and mattress pad). Never use plastic garbage bags or dry-cleaning bags, as these are not strong enough to protect the linens and mattress. As well, they slide easily and can move out of place, and the danger of suffocation is great if the client’s movements result in the bag covering the client’s nose and mouth. Again, your supervisor and the care plan will tell you what is safe to use for the client.</p>
+        <p class="para-cn">个案经理会与案主及其家属协商这些防护用品的配置。部分案主会在床垫上罩塑料保护套，但这并不能保护上层的底层单与床褥垫。<strong>严禁使用塑料垃圾袋或干洗塑料包装袋来充当床垫防水垫！</strong>这些塑料薄膜极其薄弱易滑脱，不仅无法保护床品，<strong>更存在极高的窒息死亡危险——若案主在翻身活动时不慎被塑料薄膜捂住口鼻，极易导致窒息殒命！</strong>主管护士与照护计划会明确告知何种用品安全合规。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="editorial-box-container box-theme-orange">
+    <div class="box-header">
+      <span class="box-icon">👶</span>
+      <span class="box-title-en">FOCUS ON CHILDREN: Crib Safety</span>
+      <span class="box-title-cn">儿童照料聚焦：婴儿床 11 大生命安全法定铁律</span>
+    </div>
+    <div class="box-content">
+      <p class="box-intro-en">Cribs, crib linen, mattresses, other linen, and bumper pads all pose many dangers to infants, as they can lead to strangulation and suffocation. Report any safety hazard to your supervisor. Always follow these safety rules:</p>
+      <p class="box-intro-cn">婴儿床、床品、床垫以及床围防撞软垫对婴儿存在诸多致命隐患，可能直接导致勒颈与窒息。发现任何安全隐患必须立即报告主管。必须严格恪守以下 11 条安全黄金法则：</p>
+      <ul class="box-bullet-list">
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• The crib mattress must be firm. A soft mattress can cover the baby’s nose and mouth, causing suffocation.</p>
+            <p class="bp-cn">• <strong>床垫必须坚实挺括。</strong>过软的床垫会在婴儿面部下陷并封堵口鼻，直接引发窒息。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• The mattress must fit snugly in the crib frame. The baby’s head could get caught between the frame and the loose mattress and cause strangulation.</p>
+            <p class="bp-cn">• <strong>床垫必须严丝合缝嵌合于婴儿床框架中。</strong>松动的床垫间隙会导致婴儿头部卡在床架与床垫之间造成颈部扼压窒息。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• The space between the mattress and crib sides should be no more than 3 cm. Only two adult fingers should fit in the space. If more than two fingers fit, the mattress is too small.</p>
+            <p class="bp-cn">• <strong>床垫与床栏边缘的间隙不得超过 3 厘米（≤ 3 cm）。</strong>间隙仅能容纳成年人两根手指宽度；若能插入超过两指，表明床垫尺寸过小，严禁使用！</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• The mattress must be at least 65 cm (34 in.) lower than the top of the crib rails to protect the baby from falling out of the crib. The mattress should be lowered even more when the baby can stand in the crib.</p>
+            <p class="bp-cn">• <strong>床垫表面距离婴儿床护栏顶端的垂直距离至少应达 65 厘米（26 英寸）。</strong>当婴儿学会扶栏站立时，必须将床垫进一步调至最低档位以防翻爬坠床。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Plastic garbage bags and dry-cleaning bags must not be used to protect the mattress.</p>
+            <p class="bp-cn">• <strong>绝对严禁使用塑料垃圾袋或干洗塑料袋保护床垫。</strong></p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Bumper pads are no longer recommended for use in cribs, as they pose a risk for strangulation of the baby.</p>
+            <p class="bp-cn">• <strong>加拿大儿科学会与卫生部已全面禁止使用床围防撞软垫（bumper pads）！</strong>防撞垫存在极高的勒颈和堵塞口鼻窒息风险。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Do not tuck blankets and top sheets under the mattress, as the baby can get caught in them.</p>
+            <p class="bp-cn">• 不要将婴儿毛毯和上单紧塞在床垫下方，婴儿蹬动时易被紧绷的被角缠绕卷入。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Do not place pillows, fluffy comforters, stuffed toys, or heavy blankets in the crib when the baby is in it, as these items can cause suffocation.</p>
+            <p class="bp-cn">• <strong>婴儿在床内时，床内严禁堆放枕头、蓬松厚被、毛绒玩具或沉重毛毯！</strong>这些物品是引发婴儿猝死综合征（SIDS）与窒息的主要杀手。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Check linens for loose threads or stitching, and trim any found, as loose stitching can cause strangulation.</p>
+            <p class="bp-cn">• 经常检查床单有无脱线或开线线头并及时剪除，脱落的细线易缠绕婴儿手指、脚趾造成缺血坏死或缠绕颈部。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• The space between the side bars should be no more than 6 cm.</p>
+            <p class="bp-cn">• <strong>婴儿床栅栏立柱之间的空隙不得超过 6 厘米（≤ 6 cm）</strong>，防止婴儿身体滑出而头部被卡在栅栏间。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Cribs manufactured before 1986 do not meet safety regulations and must not be used.</p>
+            <p class="bp-cn">• <strong>1986 年以前生产的老旧婴儿床不符合国家强制安全规约，必须严禁使用！</strong></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">BED MAKING</h3>
+    <h4 class="esh-title-cn">规范铺床实务</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Your job as a support worker will include making beds. No matter what type of bed you make, safety, proper body mechanics, and medical asepsis are important. Follow Standard Practices. BOX 21.1 lists the guidelines for bed making (also see the Focus on Children: Crib Safety box).</p>
+    <p class="para-cn">作为支持工作者，铺床是日常护理工作的基石。无论铺设何种类型的病床，<strong>安全防范、正确身体力学与医学无菌原则</strong>始终至关重要。必须严守标准预防。详见第 472 页 BOX 21.1“铺床操作全局指引”。</p>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-468">
+              <span class="marker-pill">p. 468</span>
+            </div>
+            
+<section class="editorial-page" id="page-468">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">The Closed Bed: Concept & Preparation · 闭式床（备用床）概念与准备</span>
+    <span class="ph-num">p. 468</span>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">The Closed Bed</h3>
+    <h4 class="esh-title-cn">闭式床（备用床）</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">A closed bed is made when the bed is expected to be unoccupied for several hours or days. The top linen is pulled up, and the bedspread is neatly pulled over the pillow. In some facilities, the pillow is placed on top of the bedspread (FIGURE 21.20). A closed bed is usually made when the client is up for most or all of the day. Clean linen is used as needed.</p>
+    <p class="para-cn">闭式床（备用床）是在病床预计有数小时乃至数天无人占用时铺设的。上层被服完全向上拉起平整铺盖，床罩整齐地覆盖在枕头上方；在某些机构中，枕头亦可平放在床罩顶端（图 21.20）。当案主全天绝大部分时间离床活动时，通常铺设闭式床以保持被褥洁净防尘。根据需要换用洁净被服。</p>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">In facilities, after a client is discharged, the bed frame and mattress are cleaned and disinfected. A closed bed is then made and kept ready for a new client.</p>
+    <p class="para-cn">在医疗照护机构中，案主出院（discharged）后，整个床架与床垫均须接受彻底的擦拭清洁与终末消毒。随后铺好整洁的闭式床，随时迎接新入住案主。</p>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p468_X1.jpg" alt="A closed bed" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.20</span>
+      <span class="fig-text-en">A closed bed. Top linens are neatly pulled up to keep the bedding clean and ready for a client.</span>
+      <span class="fig-text-cn">图 21.20 闭式床（备用床）：上层被服整齐拉起覆盖全床，保持床铺洁净防尘，随时供案主使用。</span>
+    </figcaption>
+  </figure>
+
+  <div class="dignity-banner">
+    <span class="db-badge">DIGNITY & SAFETY</span>
+    <span class="db-text">Advocate on behalf of the client’s quality of life by promoting: Dignity · Independence · Individualized Care · Preferences · Privacy · Safety (DIPPS)</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE</span>
+      <h3 class="proc-title-en">Making a Closed Bed</h3>
+      <h4 class="proc-title-cn">铺设闭式床（备用床）操作全流程</h4>
+    </div>
+    <div class="procedure-body">
+      <h4 class="proc-phase-title">PRE-PROCEDURE · 操作前准备阶段</h4>
+      <ol class="proc-steps-list">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">1. Perform hand hygiene.</p>
+            <p class="step-cn">1. 严格执行手卫生（流动水洗手或速干手消毒剂）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">2. Collect the following supplies: Clean linen, mattress pad (if used), bottom sheet (flat or fitted sheet), incontinence or turning pad (if used), top sheet, blanket or comforter (if used), bedspread (if used), two pillowcases (or one, per facility policy), gloves, laundry bag (follow employer policy for disposal of dirty linens).</p>
+            <p class="step-cn">2. 按照倒序集齐以下用物：洁净被服一套、床褥保护垫、底层床单（平单或床笠）、吸水失禁垫/翻身中单、上层盖被大单、毛毯或被芯、床罩、枕套（1～2个）、医用手套、污衣收集袋。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">3. Place linen on a clean surface (bedside chair or overbed table).</p>
+            <p class="step-cn">3. 将收集好的整叠床品平稳放置在洁净表面上（床旁椅面或经过擦拭消毒的跨床桌上，<strong>严禁放地面</strong>）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">4. Provide for privacy.</p>
+            <p class="step-cn">4. 妥善拉好围帘或关闭房门以确保环境私密。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">5. Remove the call bell from the bed.</p>
+            <p class="step-cn">5. 从床头或床栏上取下呼叫铃按钮并安全放置，防撞击损坏。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">6. Raise the bed to a comfortable working height. Ensure the bed is in a flat position.</p>
+            <p class="step-cn">6. 将病床水平整体升至舒适的工作高度（约与照护人员髋关节水平），确保床面调节至完全平卧位。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">7. Lower the bed rail on the side where you will work.</p>
+            <p class="step-cn">7. 放下您当前准备操作一侧的床栏。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">8. Remove soiled linen from the bed: Remove pillowcases and place pillows on clean chair. Loosen all bedding. Remove each piece of linen separately, rolling it away from you with the soiled side inside. Place directly into the laundry bag. Never put dirty linen on the floor.</p>
+            <p class="step-cn">8. 拆除旧被服：取下枕套，将枕芯放置在洁净椅上；将四周塞紧的被服逐一松脱；逐层分别取下床品，朝远离身体方向向内卷叠使污染面包在内部，直接投入污衣袋中。<strong>严禁触碰制服，严禁扔在地面！</strong></p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">9. Clean and disinfect the bed frame and mattress if required by facility policy. Remove gloves if worn, and perform hand hygiene.</p>
+            <p class="step-cn">9. 根据机构要求对床架与床垫进行彻底擦拭消毒；若戴有手套，此时脱除手套并严格执行手卫生。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-469">
+              <span class="marker-pill">p. 469</span>
+            </div>
+            
+<section class="editorial-page" id="page-469">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Closed Bed Procedure: Bottom Sheet & Mitred Corner · 铺底层单与信封折角</span>
+    <span class="ph-num">p. 469</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE (CONT'D)</span>
+      <h3 class="proc-title-en">Making a Closed Bed—cont’d</h3>
+      <h4 class="proc-title-cn">铺设闭式床（续）：底层大单平铺与信封折角制作</h4>
+    </div>
+    <div class="procedure-body">
+      <ol class="proc-steps-list" start="10">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">10. Move the mattress to the head of the bed. This ensures comfort and safety for your client.</p>
+            <p class="step-cn">10. 将床垫向上推移紧贴床头板。这能够确保床垫稳固不滑移，保障案主的舒适与安全。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">11. Put the mattress pad (if used) on the mattress. Make sure the pad is even with the top of the mattress. The pad provides comfort to your client.</p>
+            <p class="step-cn">11. 将保护床褥垫铺在床垫上（若使用）。确保床褥垫顶端与床垫上边缘完全齐平。床褥垫为案主提供柔软承托与舒适感。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">12. Place the bottom sheet on the mattress pad:<br>
+            a. Unfold it lengthwise.<br>
+            b. Place the centre crease in the middle of the bed (FIGURE 21.21) with the large hem at the top and the small hem at the bottom and the hem stitching facing downward. If using a fitted sheet (one tailored to fit the mattress—usually with elasticized corners), place the top of the sheet over the mattress on your side of the bed. Ensuring the hem stitching faces downward helps reduce irritation of your client’s skin.<br>
+            c. Position the lower edge of the sheet so that it is even with the bottom of the mattress. If using a fitted sheet, pull the sheet over the bottom corner.</p>
+            <p class="step-cn">12. 将底层床单铺在床褥垫上：<br>
+            a. 沿纵向顺势展开床单。<br>
+            b. 将床单的中线折痕精准对齐病床的中线轴（图 21.21），较宽的褶边置于床头，较窄的褶边置于床尾，<strong>确保卷边缝线朝下贴紧床垫</strong>。若使用定型床笠（四角带松紧带的床单），将床笠上方套入您这一侧的床垫角。<strong>缝线朝下可防止粗糙线迹摩擦刺激案主娇嫩皮肤。</strong><br>
+            c. 使床单下边缘与床垫底边平齐。若使用床笠，将下方床单角套牢在床垫底角。</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="figures-duo-grid">
+        <figure class="editorial-figure-card">
+          <img src="images/ch21/ch21_p469_fig21_bottom_sheet.jpg" alt="Bottom sheet with centre crease in middle" class="figure-img" loading="lazy">
+          <figcaption class="figure-caption">
+            <span class="fig-label">FIGURE 21.21</span>
+            <span class="fig-text-en">The bottom sheet is on the bed with the centre crease in the middle. The lower edge of the sheet is even with the bottom of the mattress.</span>
+            <span class="fig-text-cn">图 21.21 底层大单铺设定位：中线折痕精准对齐床中线，下缘与床垫底边齐平。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="editorial-figure-card">
+          <img src="images/ch21/ch21_p469_fig22_fan_fold.jpg" alt="Fan-fold sheet toward other side" class="figure-img" loading="lazy">
+          <figcaption class="figure-caption">
+            <span class="fig-label">FIGURE 21.22</span>
+            <span class="fig-text-en">Fan-fold the sheet toward the other side of the bed.</span>
+            <span class="fig-text-cn">图 21.22 将多余的一半床单以扇形折叠方式顺势推向病床对侧。</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <ol class="proc-steps-list" start="13">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">13. Open the sheet. Fan-fold it toward the other side of the bed (FIGURE 21.22).</p>
+            <p class="step-cn">13. 展开您这一侧的床单，将另一半呈扇形叠向病床对侧（图 21.22），便于稍后在对侧拉展。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">14. Tuck the top of the sheet under the top end of the mattress. Ensure that it is smooth.</p>
+            <p class="step-cn">14. 将床头多余的床单平整塞入床垫顶端下方，确保无任何褶皱。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">15. Make a mitred corner at the top (head) of the bed (FIGURE 21.23):<br>
+            a. Tuck the sheet under the top end of the mattress.<br>
+            b. Grasp the edge of the sheet about 45 to 50 cm (18 to 20 in.) from the corner of the mattress. Raise the edge of the sheet and lay it on top of the mattress to form a triangular fold.<br>
+            c. Tuck the lower portion of the sheet under the side of the mattress.<br>
+            d. Bring the triangular fold down over the side of the mattress and tuck it smoothly under the mattress.</p>
+            <p class="step-cn">15. 在床头制作标准的信封折角（斜角折叠，图 21.23）：<br>
+            a. 先将床头一端的床单牢牢塞入床垫下方。<br>
+            b. 在距离床垫拐角约 45 至 50 厘米（18 至 20 英寸）处用手提起侧边床单，向上拉起平铺在床垫上，形成一个规整的 45 度三角形折褶。<br>
+            c. 将床垫侧下方悬垂的下部床单平整塞入床垫侧面。<br>
+            d. 将上方三角形折褶顺势翻下覆盖床垫边缘，并紧紧平塞入床垫下方。</p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="editorial-figure-card">
+        <img src="images/ch21/ch21_p469_fig23_mitred_corner.jpg" alt="Making a mitred corner four steps" class="figure-img" loading="lazy">
+        <figcaption class="figure-caption">
+          <span class="fig-label">FIGURE 21.23</span>
+          <span class="fig-text-en">Making a mitred corner. A, Tuck the sheet under the top end of the mattress. Raise the edge. B, Lay edge on top of mattress. C, Tuck lower portion under mattress. D, Bring fold down and tuck under.</span>
+          <span class="fig-text-cn">图 21.23 制作斜角折叠（信封角）四步法：A，塞入床头床单并提起床边；B，向上翻折在床垫上呈三角形；C，将下垂部分塞入床垫下；D，翻下三角边平整塞入床垫下。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-470">
+              <span class="marker-pill">p. 470</span>
+            </div>
+            
+<section class="editorial-page" id="page-470">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Closed Bed Procedure: Linens & Blankets · 铺设防水垫、盖被与床罩</span>
+    <span class="ph-num">p. 470</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE (CONT'D)</span>
+      <h3 class="proc-title-en">Making a Closed Bed—cont’d</h3>
+      <h4 class="proc-title-cn">铺设闭式床（续）：平整底层、加设翻身垫与铺盖上层被服</h4>
+    </div>
+    <div class="procedure-body">
+      <ol class="proc-steps-list" start="16">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">16. Pull the bottom sheet tight so that there are no wrinkles (FIGURE 21.24). This helps reduce irritation of your client’s skin.</p>
+            <p class="step-cn">16. 用双手沿床边用力将底层大单向下、向外拉平拉紧，确保床面宛如鼓面般平整无一丝皱褶（图 21.24）。<strong>极其平整的底层是预防案主皮肤摩擦与压疮破损的关键防线！</strong></p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">17. Place an incontinence pad or turning pad (if used) in the centre of the bottom sheet (FIGURE 21.25) (see Chapter 14). These can be used to keep the bottom sheet clean or to make turning the client easier. Fan-fold the other half to the other side of the bed.</p>
+            <p class="step-cn">17. 将吸水防渗护理垫或翻身中单铺在底层大单正中央（图 21.25，见第 14 章）。该垫子用于保护底层床单免受体液浸渍，并便于日常翻身移位。将多余的另一半扇形折叠推向病床对侧。</p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="editorial-figure-card">
+        <img src="images/ch21/ch21_p470_fig24_pull_sheet.jpg" alt="Pull bottom sheet tight" class="figure-img" loading="lazy">
+        <figcaption class="figure-caption">
+          <span class="fig-label">FIGURE 21.24</span>
+          <span class="fig-text-en">Pull the bottom sheet tight so that there are no wrinkles.</span>
+          <span class="fig-text-cn">图 21.24 用力拉紧底层大单：彻底消除所有皱褶与隆起，确保平整顺滑。</span>
+        </figcaption>
+      </figure>
+
+      <ol class="proc-steps-list" start="18">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">18. Put the top sheet on the bed:<br>
+            a. Unfold it lengthwise.<br>
+            b. Place the centre crease in the middle.<br>
+            c. Place the wide hem even with the top of the mattress, with the hem stitching outward (facing away from the bed).<br>
+            d. Open the sheet, and fan-fold it to the other side.</p>
+            <p class="step-cn">18. 铺设上层盖被大单：<br>
+            a. 沿纵向展开大单。<br>
+            b. 将中线折痕对准病床中轴线。<br>
+            c. 使大单顶端的宽边与床垫顶边齐平，<strong>卷边粗糙缝线朝外（朝上）</strong>，稍后翻折被口时光滑面紧贴案主皮肤。<br>
+            d. 展开大单，并将另一半扇形推向床对侧。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">19. Place the blanket (if used) on the bed:<br>
+            a. Unfold it so that the centre crease is in the middle.<br>
+            b. Put the upper hem about 15 to 20 cm (6 to 8 in.) from the top of the mattress, with the hem stitching facing downward.<br>
+            c. Open the blanket. Fan-fold it to the other side.</p>
+            <p class="step-cn">19. 铺设保暖毛毯（若使用）：<br>
+            a. 展开毛毯，使中线对准床中线。<br>
+            b. 将毛毯上边缘放置在<strong>距离床垫顶端约 15 至 20 厘米（6 至 8 英寸）处</strong>（留出被口翻折空间），缝线朝下。<br>
+            c. 展开您这一侧毛毯，将另一半扇形折向对侧。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">20. Place the bedspread (if used) on the bed:<br>
+            a. Unfold it so that the centre crease is in the middle.<br>
+            b. Place the upper hem even with the top of the mattress.<br>
+            c. Open the bedspread. Fan-fold it to the other side.</p>
+            <p class="step-cn">20. 铺设最外层床罩（若使用）：<br>
+            a. 展开床罩，中线居中对齐。<br>
+            b. 将床罩顶边缘与床垫顶边齐平。<br>
+            c. 展开这一侧，将另一半扇形推向对侧。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">21. Tuck the top sheet, blanket, and bedspread together under the foot of the mattress.</p>
+            <p class="step-cn">21. 将床尾处多余的上单、毛毯与床罩三层被服一起平整塞入床垫底端下方。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">22. Make a mitred corner at the foot of the bed with all top bedding together. Allow the sides of the bedding to hang loosely over the bed.</p>
+            <p class="step-cn">22. 将上单、毛毯与床罩在床尾拐角处制作一个整齐的联合斜角折叠（信封角），随后让床侧被服自然下垂。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">23. Move to the other side of the bed. Raise the bed rail on the made side if required.</p>
+            <p class="step-cn">23. 绕行至病床对侧继续操作。若有安全需要，先升起已铺好一侧的床栏。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">24. Pull the bottom sheet, pad, and linens tightly toward you. Straighten and smooth the mattress pad. Pull the bottom sheet tight to eliminate all wrinkles. Make a mitred corner at the head of the bed.</p>
+            <p class="step-cn">24. 将扇形折叠的底层大单与中单用力向下拉平拉展。理平床褥垫，拉紧底层单使其毫无皱痕，并在对侧床头制作规整信封角并紧塞床边。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">25. Straighten and smooth top sheet, blanket, and bedspread. Tuck them under the foot of the mattress and make a mitred corner.</p>
+            <p class="step-cn">25. 逐层拉直整平对侧的上单、毛毯与床罩，将床尾多余织物塞入床垫下方并制作整齐信封角。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-471">
+              <span class="marker-pill">p. 471</span>
+            </div>
+            
+<section class="editorial-page" id="page-471">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Closed Bed: Cuffs & Pillowcases · 反折被口、套入枕套与垫类</span>
+    <span class="ph-num">p. 471</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE (CONT'D)</span>
+      <h3 class="proc-title-en">Making a Closed Bed—cont’d</h3>
+      <h4 class="proc-title-cn">铺设闭式床（续）：反折被套做封袖与规范套入枕套</h4>
+    </div>
+    <div class="procedure-body">
+      <ol class="proc-steps-list" start="26">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">26. Turn the top hem of the bedspread under the top hem of the blanket to make a cuff (FIGURE 21.26). Turn the top sheet down over the spread. The hem stitching should be facing down. If the bedspread is to cover the pillow, tuck the spread under the pillow at the pillow’s bottom.</p>
+            <p class="step-cn">26. 将床罩顶边向下反折塞入毛毯顶边下方形成规整封边（图 21.26）。接着将上单顶端向下拉下反折覆盖在床罩上方（反折后光滑面朝外，缝线朝下贴紧床品）。若机构要求用床罩完全覆盖枕头，将床罩向上拉平并在枕头下方塞入折边。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">27. Place the pillow on the bed.</p>
+            <p class="step-cn">27. 将枕头平稳放置在病床上准备套枕套。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">28. Open the pillowcase so that it is flat on the bed.</p>
+            <p class="step-cn">28. 将枕套口完全打开，使其平铺在床面上（<strong>切忌像穿裤子一样用下巴夹住枕头或在空气中狂甩枕头，此为院感违规！</strong>）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">29. Put the pillow in the pillowcase (FIGURE 21.27). Grasp the corners of the pillow to form a “V”. Guide the pillow into the pillowcase. Fold the pillowcase edges under together, and tuck them in next to the pillow. This prevents the pillow from slipping out.</p>
+            <p class="step-cn">29. 规范套入枕套（图 21.27）：用手捏住枕芯顶端两角使其聚拢呈“V”字形，用另一手扶住枕套口顺势将枕芯滑入枕套底角，松手使两角完全舒展落入枕套死角内。将枕套开口处多余的布料向内翻折整齐塞在枕芯旁，防止枕芯外露滑脱。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">30. Place the pillow on the bed. The open, tucked end should be away from the door and the seam of the pillowcase toward the head of the bed.</p>
+            <p class="step-cn">30. 摆放枕头：将枕头平整安放在床头中央。<strong>枕套开口折口处必须背向房门方向（背门朝向），枕套顶端缝线朝向床头板！</strong>背向房门可使整个居室在门外望去视觉极其整洁利落，且防飞沫落入开口内。</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="figures-duo-grid">
+        <figure class="editorial-figure-card">
+          <img src="images/ch21/ch21_p471_X1.jpg" alt="Incontinence and turning pad types" class="figure-img" loading="lazy">
+          <figcaption class="figure-caption">
+            <span class="fig-label">FIGURE 21.25</span>
+            <span class="fig-text-en">Incontinence pad and turning pad variations: Padded waterproof drawsheet, waterproof under-pad, disposable bed protector, and cotton drawsheet with tuck tail.</span>
+            <span class="fig-text-cn">图 21.25 常见护理垫与翻身中单类型：夹层防水防渗垫、橡胶涂层吸水垫、一次性床垫护垫以及带两侧塞入翼边的纯棉翻身拉单。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="editorial-figure-card">
+          <img src="images/ch21/ch21_p471_X6.jpg" alt="Putting a pillowcase on a pillow" class="figure-img" loading="lazy">
+          <figcaption class="figure-caption">
+            <span class="fig-label">FIGURE 21.27</span>
+            <span class="fig-text-en">Putting a pillowcase on a pillow. A, Grasp corners to form a “V”. B, Pillowcase flat on bed. C, Guide “V” end in. D, Corners fall in snugly.</span>
+            <span class="fig-text-cn">图 21.27 规范套枕套四步法：A，双手捏紧枕角呈V形；B，枕套平铺床面；C，将V形端顺势推入套内；D，枕角完全展开贴合底角。</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-472">
+              <span class="marker-pill">p. 472</span>
+            </div>
+            
+<section class="editorial-page" id="page-472">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Closed Bed Post-Care & Bed Making Guidelines · 操作后处置与全局规范</span>
+    <span class="ph-num">p. 472</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE (POST-PROCEDURE)</span>
+      <h3 class="proc-title-en">Making a Closed Bed—cont’d</h3>
+      <h4 class="proc-title-cn">铺设闭式床（续）：操作后环境复位与安全处置</h4>
+    </div>
+    <div class="procedure-body">
+      <h4 class="proc-phase-title">POST-PROCEDURE · 操作后收尾阶段</h4>
+      <ol class="proc-steps-list" start="31">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">31. Attach the call bell to the bed.* This provides an easy, safe way for the client to contact staff, if necessary.</p>
+            <p class="step-cn">31. 将呼叫铃夹固定在病床床头或伸手可及的安全护栏上。*这为案主提供了随时便捷呼叫工作人员求助的生命生命线。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">32. Lower the bed to its lowest position. Lock the bed wheels.*</p>
+            <p class="step-cn">32. <strong>将病床整体降至最低水平位置！踏下踩板彻底锁定病床脚轮刹车。*</strong>（核心防跌倒安全要求！）</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">33. Follow your employer’s policies as to where you put clean leftover linens in the client’s room.</p>
+            <p class="step-cn">33. 严格遵循雇主规程，将房内多余的洁净被服妥善存放在案主房内的专属洁净收纳柜中，<strong>切忌退回公共推车</strong>。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">34. Remove the laundry bag from the room (if your facility has laundry bags in clients’ rooms). Follow employer policy for care of dirty linen.</p>
+            <p class="step-cn">34. 扎紧封好污衣收集袋并立即移出案主居室，送至指定污衣暂存间。严格遵守污染被服无害化洗涤处置规约。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">35. Perform hand hygiene.</p>
+            <p class="step-cn">35. 彻底执行洗手与手消毒（流动水揉搓至少 20 秒）。</p>
+          </div>
+        </li>
+      </ol>
+      <p class="proc-footnote">*带星号步骤可能不完全适用于所有社区居家照护环境，但呼叫畅通与防滑制动原则始终适用。</p>
+    </div>
+  </div>
+
+  <div class="editorial-box-container box-theme-blue">
+    <div class="box-header">
+      <span class="box-icon">📋</span>
+      <span class="box-title-en">BOX 21.1: Guidelines for Bed Making</span>
+      <span class="box-title-cn">BOX 21.1 铺床操作全局指引与临床安全准则</span>
+    </div>
+    <div class="box-content">
+      <ul class="box-bullet-list">
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Use good body mechanics at all times.</p>
+            <p class="bp-cn">• 全程时刻运用优良的身体力学：调高床位以防过度弯腰、屈膝屈髋、收紧腹肌、保持双脚宽基底支撑。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Follow the rules of medical asepsis.</p>
+            <p class="bp-cn">• 严格遵循医学无菌原则：区分清洁区与污染区，洁物远离污物，防止病原体传播。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Follow Standard Practices.</p>
+            <p class="bp-cn">• 严格执行标准预防规范：预估接触体液排泄物风险，规范穿戴手套与防护用具。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Make the bed according to the client’s wishes and the care plan. If the client’s wishes are unsafe, tell your supervisor.</p>
+            <p class="bp-cn">• 充分尊重案主的个人喜好并依据照护计划铺床；若案主的要求存在安全风险，耐心解释并向主管汇报。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Have a bag bin ready for disposal of soiled linen. Follow your employer’s policies.</p>
+            <p class="bp-cn">• 提前备好污衣收集袋或污衣桶，严格按照机构规程处置脏污织物。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Perform hand hygiene before handling clean linen and after handling dirty linen.</p>
+            <p class="bp-cn">• 接触洁净被服前必须洗手，接触与处置污染被服后必须立刻洗手消毒。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Bring enough linen to the client’s room. Try not to bring more linen than what is needed.</p>
+            <p class="bp-cn">• 准确预估用量，带入房间的被服务求精准，切忌过多携带导致院感报废或额外损耗。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Do not use torn linen.</p>
+            <p class="bp-cn">• <strong>严禁使用有破损、撕裂或磨损严重的被服！</strong>破损边缘会摩擦娇嫩皮肤，且易勾挂案主手足。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Never shake linen in the air. Shaking linen spreads microbes, lint, and dust.</p>
+            <p class="bp-cn">• <strong>绝不可在空气中抖动床单被褥！</strong>剧烈抖动会将织物上的微生物、棉絮、皮屑与尘埃扬起并扩散至整个空气中。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Hold linen away from your uniform. Dirty linen as well as clean linen must not touch your uniform.</p>
+            <p class="bp-cn">• <strong>床品抱拿时始终远离制服与身体！</strong>洁净床单避免被工作服污染，污染床单避免污染工作服并传播给下一位案主。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Never put used, soiled linen or clean linen on the floor.</p>
+            <p class="bp-cn">• <strong>绝对严禁将任何洁净被服或用过的脏床单直接放在地板上！</strong></p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• If the client is on cytotoxic medications (chemotherapy), see Chapter 44 for safety information regarding special handling of soiled linens.</p>
+            <p class="bp-cn">• 若案主正在使用抗肿瘤化疗药物，换下的被服存在化学毒性残留，必须遵照第 44 章专用双层隔离与手套处置规约。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Linen must be straightened whenever loose or wrinkled and at bedtime.</p>
+            <p class="bp-cn">• 床单一旦松动或起皱必须随时理顺拉平，每晚临睡前必须常规彻底理顺一次。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Make one side of the bed, as much as possible, before going to the other side. This practice saves time and energy.</p>
+            <p class="bp-cn">• <strong>坚持“分侧铺设完成”原则：</strong>在移向对侧前，尽可能先将一侧的所有步骤全部完成，能够极大节省操作时间与体力消耗。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Change wet, damp, or soiled linen right away to help prevent breakdown of your client’s skin.</p>
+            <p class="bp-cn">• <strong>受潮、发湿或污染的被服必须立刻无条件更换！</strong>这是杜绝皮肤浸渍与压疮形成的第一防线。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Manually operated beds have handles used to position the beds. Ensure that after use, the handles are pushed in and turned down.</p>
+            <p class="bp-cn">• 手动摇杆病床使用完毕后，摇杆把手必须推入并向下折回，防止他人走过时磕碰绊伤。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Hospital beds have wheels that let the bed move easily. Make sure the bed wheels are locked when giving bed care or transferring your client.</p>
+            <p class="bp-cn">• 实施床旁护理、铺床或转运案主上下床时，<strong>病床脚轮必须时刻锁定</strong>，严防因床体晃动导致坠跌！</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Clients need to be advised of the risks associated with having the bed in high positions. They are also advised of any position limitations or restrictions.</p>
+            <p class="bp-cn">• 务必告知案主处于高床位时的坠落风险，并明确宣教其病情所限制的特殊体位禁忌。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-473">
+              <span class="marker-pill">p. 473</span>
+            </div>
+            
+<section class="editorial-page" id="page-473">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">The Open Bed & The Occupied Bed · 开式床（暂空床）与有人床</span>
+    <span class="ph-num">p. 473</span>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">The Open Bed</h3>
+    <h4 class="esh-title-cn">开式床（暂空床）</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">An open bed is made shortly before the bed is to be occupied. Top linens are folded back so that the client can get into bed easily (FIGURE 21.28). An open bed is made when the client is out of bed only for a short time, or it is made just before the client goes to bed.</p>
+    <p class="para-cn">开式床（暂空床）是在病床即将被案主占用前不久铺设的。上层被服向后折叠呈扇形堆叠在床尾，使案主能够毫无阻碍地轻松钻入被窝（图 21.28）。当案主仅短时间离开病床（如短时散步、如厕、坐椅），或者在晚间案主即将就寝前，通常将闭式床转换为开式床。</p>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p473_X1.jpg" alt="An open bed" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.28</span>
+      <span class="fig-text-en">An open bed. Top linens are fan-folded to the foot of the bed so the client can get into bed easily.</span>
+      <span class="fig-text-cn">图 21.28 开式床（暂空床）：将上层盖被呈扇形折叠整齐推至床尾，方便案主随时上下床。</span>
+    </figcaption>
+  </figure>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE</span>
+      <h3 class="proc-title-en">Making an Open Bed</h3>
+      <h4 class="proc-title-cn">铺设开式床操作步骤</h4>
+    </div>
+    <div class="procedure-body">
+      <ol class="proc-steps-list">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">1. Perform hand hygiene.</p>
+            <p class="step-cn">1. 严格执行手卫生。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">2. Collect linens for a closed bed, depending on your employer’s policy.</p>
+            <p class="step-cn">2. 依据机构规程，按需准备相应洁净床品。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">3. Make a closed bed (see Making a Closed Bed, page 468).</p>
+            <p class="step-cn">3. 先按照第 468 页标准规程铺好一张平整整齐的闭式床。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">4. Fan-fold top linens to the foot of the bed (see FIGURE 21.28).</p>
+            <p class="step-cn">4. 将顶部的盖被、毛毯与床罩从床头一并抓住，向床尾做扇形来回折叠（图 21.28）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">5. Attach the call bell to the bed.* This provides an easy, safe way for the client to contact staff if necessary.</p>
+            <p class="step-cn">5. 将呼叫铃牢固夹固定在床头或床栏触手可及处。*</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">6. Lower the bed to its lowest position.* This reduces the risk for client injury or falls.</p>
+            <p class="step-cn">6. <strong>将病床降至最低水平位置！*</strong> 彻底消除因床位过高导致的坠床跌伤风险。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">7. Follow your employer’s policy regarding where clean linen is stored in the client’s room.</p>
+            <p class="step-cn">7. 妥善收纳房内存留的洁净备用床单。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">8. Follow employer policy for care of dirty linen.</p>
+            <p class="step-cn">8. 妥善移出并处置脏污被服。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">9. Perform hand hygiene.</p>
+            <p class="step-cn">9. 规范洗手消毒。</p>
+          </div>
+        </li>
+      </ol>
+      <p class="proc-footnote">*带星号步骤在私人家庭中视具体条件而定，但降床防摔与呼叫求助保障是全球通用共识。</p>
+    </div>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">The Occupied Bed</h3>
+    <h4 class="esh-title-cn">有人床（卧床患者床品更换）</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">An occupied bed is made while the client is still in the bed (FIGURE 21.29) because the client cannot get out of bed for reasons of illness or injury. Mechanical lifts may be used to lift the client out of the bed while it is being made. Before you start, you must know about restrictions or limitations in the client’s movement or positioning. Explain each step of the procedure to the client before it is done. Always explain what you are doing even if the client cannot respond to you. Remember to use good body mechanics. The most important thing to remember is to keep all linens free of wrinkles to prevent pressure ulcers.</p>
+    <p class="para-cn">有人床（occupied bed）是在案主因伤病、极度虚弱完全无法离床的情况下，在案主仍然躺在床上时所进行的床单被服更换与铺设（图 21.29）。部分机构也可能使用机械升降吊椅将案主暂时吊离床铺进行彻底整理。在动手操作前，<strong>您必须全面掌握案主身体活动或体位摆放的医疗禁忌与限制</strong>。在实施每一步前，务必向案主详细解释正在进行的操作；<strong>即使案主处于昏迷或无法用语言回应，也必须全程温柔地向其解释！</strong>时刻运用优良的身体力学。<strong>最至关重要的核心铁律是：务必确保底层所有床单与垫类绝对平整无褶皱，以彻底消除引发压疮的高危因素！</strong></p>
+  </div>
+
+  <figure class="editorial-figure-card">
+    <img src="images/ch21/ch21_p473_X2.jpg" alt="An occupied bed" class="figure-img" loading="lazy">
+    <figcaption class="figure-caption">
+      <span class="fig-label">FIGURE 21.29</span>
+      <span class="fig-text-en">An occupied bed is made while the client is still in the bed. Keeping linens wrinkle free is essential.</span>
+      <span class="fig-text-cn">图 21.29 铺有人床：在案主卧床状态下分侧更换床品，确保底层平整无皱是预防褥疮的核心。</span>
+    </figcaption>
+  </figure>
+</section>
+
+            <div class="page-anchor-marker" id="page-474">
+              <span class="marker-pill">p. 474</span>
+            </div>
+            
+<section class="editorial-page" id="page-474">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Occupied Bed Procedure: Pre-Procedure & Linens · 铺有人床前评估与旧单折叠</span>
+    <span class="ph-num">p. 474</span>
+  </div>
+
+  <div class="dignity-banner">
+    <span class="db-badge">DIGNITY & SAFETY</span>
+    <span class="db-text">Advocate on behalf of the client’s quality of life by promoting: Dignity · Independence · Individualized Care · Preferences · Privacy · Safety (DIPPS)</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE</span>
+      <h3 class="proc-title-en">Making an Occupied Bed</h3>
+      <h4 class="proc-title-cn">为卧床案主更换床品（铺有人床）操作全流程</h4>
+    </div>
+    <div class="procedure-body">
+      <h4 class="proc-phase-title">PRE-PROCEDURE · 操作前评估与准备阶段</h4>
+      <ol class="proc-steps-list">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">1. Identify the client, according to employer policy. This eliminates the possibility of mistaking one client for another.</p>
+            <p class="step-cn">1. 严格核对案主身份（核对腕带姓名与出生日期）。杜绝任何差错发生。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">2. Assemble the appropriate number of staff to perform this procedure according to the client’s care plan. Explain the procedure to the client. Having the correct number of staff reduces the risk of injury to the client or the staff when making an occupied bed.</p>
+            <p class="step-cn">2. 根据照护计划召集足够的工作人员协助（重度瘫痪或高体重案主通常需要 2 名人员配合）。向案主解释铺床流程。充足的人力配置能够极大降低案主坠床及工作人员腰背肌肉骨骼拉伤风险。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">3. Perform hand hygiene.</p>
+            <p class="step-cn">3. 规范洗手消毒。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">4. Collect the following supplies: Laundry bag (if available), clean linen (see Making a Closed Bed, page 468). By collecting all the necessary equipment beforehand, you will not have to leave your client’s side and can eliminate wasting time and energy in obtaining forgotten equipment.</p>
+            <p class="step-cn">4. 备齐所有用品：污衣袋、全套洁净床单（按倒序码放）。提前备齐用物可避免操作中途因遗漏物品而擅自离开案主床旁，消除由此导致的案主跌落高危风险。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">5. Place linen on a clean surface.</p>
+            <p class="step-cn">5. 将洁净被服平稳置于洁净台面或椅面上。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">6. Provide for privacy.</p>
+            <p class="step-cn">6. 完全拉好隐私隔帘或关闭房门。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">7. Remove the call bell.*</p>
+            <p class="step-cn">7. 从床旁暂时取下呼叫铃妥善放置。*</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">8. Place the laundry bag (if available in your facility) near the bed or follow your employer’s policy.</p>
+            <p class="step-cn">8. 将污衣袋放置在床旁方便取用处（绝不可放地面）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">9. Raise the bed to a comfortable working height. Follow the care plan for positioning restrictions. Ensure that the bed is flat unless the client’s condition does not allow a flat position.</p>
+            <p class="step-cn">9. 将病床升至适宜的工作高度。核对体位禁忌，将床身调节至完全水平平卧位（除非案主心肺病情绝对禁忌平卧）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">10. Lower the bed rail on the side where you are working. The bed rail on the opposite side MUST remain UP to protect the client from falling.</p>
+            <p class="step-cn">10. 放下您当前工作一侧的床栏。<strong>对侧床栏必须保持升起锁定状态，防止案主翻身时滑落坠床！</strong></p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">11. Loosen all top bedding. Cover the client with a bath blanket or clean top sheet before removing the soiled top sheet. If the blanket or bedspread will be reused, fold it into a square (FIGURE 21.30) and place on a clean chair.</p>
+            <p class="step-cn">11. 松脱四周塞紧的上层被服。<strong>在抽走旧上单前，先将一条保暖擦浴大毯或洁净大单覆盖在案主身上</strong>以保暖并维护尊严。若毛毯或床罩需重复使用，将其规整折叠呈方形（图 21.30）放置在洁净椅上。</p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="editorial-figure-card">
+        <img src="images/ch21/ch21_p474_fig30_folding_linens.jpg" alt="Folding linens for reuse" class="figure-img" loading="lazy">
+        <figcaption class="figure-caption">
+          <span class="fig-label">FIGURE 21.30</span>
+          <span class="fig-text-en">Folding linens for reuse. A, Fold the top edge down to bottom edge. B, Fold sides inward. C, Fold into neat square and place on chair.</span>
+          <span class="fig-text-cn">图 21.30 重复使用的盖被折叠法：A，上边缘向下对折至底边；B，两侧向内翻折；C，对折成整齐方块平放于洁净椅面。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-475">
+              <span class="marker-pill">p. 475</span>
+            </div>
+            
+<section class="editorial-page" id="page-475">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Occupied Bed Procedure: Turning & Fan-Folding · 协助侧卧、卷叠旧单与铺新单</span>
+    <span class="ph-num">p. 475</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE (CONT'D)</span>
+      <h3 class="proc-title-en">Making an Occupied Bed—cont’d</h3>
+      <h4 class="proc-title-cn">铺设有人床（续）：协助侧卧、卷叠旧底层单与铺垫新单</h4>
+    </div>
+    <div class="procedure-body">
+      <ol class="proc-steps-list" start="12">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">12. Position the pillow under the client’s head for comfort.</p>
+            <p class="step-cn">12. 调整枕头位置垫于案主头下，保持颈椎自然对齐与舒适。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">13. Help the client turn onto their side facing away from you (toward the raised bed rail). Ensure the client is safe and comfortable near the opposite edge of the bed.</p>
+            <p class="step-cn">13. 协助案主侧卧并面朝对侧升起的安全床栏（背对您）。确保案主身体平稳倚靠，手可扶护栏，绝无坠床隐患。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">14. Loosen the bottom linens on your side of the bed (bottom sheet and incontinence/turning pad).</p>
+            <p class="step-cn">14. 将您这一侧塞在床垫下方的底层大单及翻身垫全部拉出松脱。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">15. Fan-fold or roll the dirty bottom linen toward the client’s back (FIGURE 21.31). Tuck it tightly next to the client's back.</p>
+            <p class="step-cn">15. 将沾有污物的旧底层大单与失禁垫紧贴着向内卷叠或扇形折叠，牢牢塞在案主的后背下方（图 21.31）。<strong>污染面卷在内侧，为新单留出洁净床面。</strong></p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="editorial-figure-card">
+        <img src="images/ch21/ch21_p475_fig31_fan_folded_linens.jpg" alt="Linens fan-folded toward client" class="figure-img" loading="lazy">
+        <figcaption class="figure-caption">
+          <span class="fig-label">FIGURE 21.31</span>
+          <span class="fig-text-en">The linens are fan-folded toward the client. For safety’s sake, never leave the bedside when the bed rail is down and the client is turned.</span>
+          <span class="fig-text-cn">图 21.31 旧床单向案主背部扇形折叠卷塞。安全防跌警示：当一侧床栏放下且案主处于侧卧位时，照护者绝不可擅自离开床旁！</span>
+        </figcaption>
+      </figure>
+
+      <ol class="proc-steps-list" start="16">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">16. Assess the client’s skin on the back, buttocks, sacrum, and heels for any redness, breakdown, or pressure injury. Report any findings promptly.</p>
+            <p class="step-cn">16. 借侧卧之机，<strong>仔细全面评估案主后背、骶尾骨、臀部及足跟处皮肤</strong>，查看有无红斑变色、破溃或受压早期征兆。发现异常及时向主管汇报。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">17. Wash and dry the client’s back and buttocks if necessary (see complete bed bath procedure in Chapter 17).</p>
+            <p class="step-cn">17. 若有需要，趁此时机使用温水和温和清洁液轻柔清洗案主臀部与背部皮肤，并用毛巾轻轻蘸干（不可用力擦伤角质层）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">18. Remove and discard gloves if worn for cleansing. Wash hands, apply clean gloves.</p>
+            <p class="step-cn">18. 皮肤清洁完毕后，脱除受污染手套，洗手消毒，更换洁净手套。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">19. Smooth the mattress pad on your side of the bed.</p>
+            <p class="step-cn">19. 顺势拉平您这一侧暴露出来的床褥保护垫。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">20. Place a clean incontinence pad / turning pad over the old linen roll, fan-folding the clean pad tightly next to the client's back.</p>
+            <p class="step-cn">20. 将洁净的翻身中单对折，多余的一半紧紧扇形叠在案主背部下方，完全遮盖旧单卷。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">21. Place the clean bottom sheet on the bed lengthwise, with the centre crease in the middle of the bed.</p>
+            <p class="step-cn">21. 铺设洁净底层大单：沿纵向展开，中线折痕居中对齐。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">22. Fan-fold the remaining clean sheet toward the client, tucking it under the soiled linen roll.</p>
+            <p class="step-cn">22. 将多余的一半洁净大单做扇形折叠，紧紧塞入旧单卷的下方。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">23. Tuck the top of the clean bottom sheet under the mattress at the head of the bed.</p>
+            <p class="step-cn">23. 将床头多余的洁净床单平整塞入床垫下方。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">24. Make a mitred corner at the head of the bed.</p>
+            <p class="step-cn">24. 在床头制作标准的信封折角。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">25. Tuck the bottom sheet under the mattress from head to foot, pulling it tightly so there are NO wrinkles.</p>
+            <p class="step-cn">25. 从床头至床尾顺势将侧面床单用力拉紧塞入床垫下，确保您这一侧毫无一丝褶皱！</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-476">
+              <span class="marker-pill">p. 476</span>
+            </div>
+            
+<section class="editorial-page" id="page-476">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Occupied Bed Procedure: Turning Other Side & Toe Pleat · 越过隆起、完成底层与足褶</span>
+    <span class="ph-num">p. 476</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE (CONT'D)</span>
+      <h3 class="proc-title-en">Making an Occupied Bed—cont’d</h3>
+      <h4 class="proc-title-cn">铺设有人床（续）：协助案主越过床单卷、拉紧对侧底层单与制作足部防压褶</h4>
+    </div>
+    <div class="procedure-body">
+      <ol class="proc-steps-list" start="26">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">26. Explain to the client that they will roll over a bump (the rolled linen). Assure the client that there is no risk for a fall.</p>
+            <p class="step-cn">26. <strong>提前温和告知案主将翻身越过中间隆起的床单卷。</strong>向案主保证其非常安全，绝对不会跌落。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">27. Raise the bed rail on your side. Move to the opposite side of the bed and lower that bed rail. Help the client turn over the linen roll onto their other side (facing you).</p>
+            <p class="step-cn">27. <strong>先升起您这一侧的床栏并锁牢！</strong>随后绕到病床对侧，放下该侧床栏。协助案主翻越中线床单卷，转向侧卧面向您这一侧。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">28. Remove the soiled bottom linens (incontinence pad, bottom sheet, mattress pad if soiled) one piece at a time, rolling each away from you into the laundry bag. Never put soiled linens on the floor.</p>
+            <p class="step-cn">28. 逐层取下暴露出来的旧失禁垫和旧底层大单，向内卷叠使污染面包在内部，直接投入污衣袋。严禁扔在地板上！</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">29. Remove and discard gloves if worn. Wash your hands.</p>
+            <p class="step-cn">29. 接触脏床单后立即脱除手套扔入医废桶，彻底洗手消毒。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">30. Straighten and smooth the mattress pad.</p>
+            <p class="step-cn">30. 拉平床褥垫。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">31. Pull the fan-folded clean bottom sheet and clean incontinence pad toward you, unrolling them smoothly. Make a mitred corner at the head of the bed. Pull the sheet tightly and tuck under the mattress from head to foot. A smooth, tight foundation reduces the chance of skin irritation and pressure injuries.</p>
+            <p class="step-cn">31. 用双手抓住卷在案主身下的洁净大单与中单，顺势用力向您这一侧拉展展开。在床头制作整齐信封角，从床头到床尾用力将床单下边缘塞入床垫下方。<strong>极其紧绷平整的底层是预防皮肤剪切力与褥疮的最坚固屏障！</strong></p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">32. Pull the incontinence pad / turning pad tightly toward you and smooth it completely.</p>
+            <p class="step-cn">32. 将翻身中单用力拉平，确保案主身下毫无半点皱褶。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">33. Help the client roll onto their back into the centre of the bed. Adjust the pillow comfortably.</p>
+            <p class="step-cn">33. 协助案主平稳翻回仰卧位，处于病床正中央。重新调整枕头使其完全舒适。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">34. Place the clean top sheet over the client. Have the client hold the top sheet, or tuck it under their shoulders, as you remove the bath blanket from underneath.</p>
+            <p class="step-cn">34. 将洁净盖被大单覆盖在案主身上。请案主用手拉住大单顶端（或轻轻塞在案主肩膀下），自床尾顺势将下方的保温浴毯轻轻抽走。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">35. Place the blanket and bedspread over the top sheet, keeping centre creases aligned in the middle.</p>
+            <p class="step-cn">35. 依次铺上毛毯与床罩，中线居中对齐。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">36. Make a cuff at the top by turning the bedspread top edge under the blanket and the top sheet down over the spread.</p>
+            <p class="step-cn">36. 制作床头封口袖：床罩顶端折入毛毯下，盖被大单顶端翻折覆盖床罩。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">37. Make a toe pleat (FIGURE 21.32): Stand at the foot of the bed. Grasp the top linens with your hands and lift them up about 5 to 8 cm (2 to 3 in.) to create extra slack over the client’s toes. You can make either a horizontal toe pleat or a vertical toe pleat. This provides freedom of movement for the feet and prevents pressure on the toes, preventing footdrop and skin breakdown.</p>
+            <p class="step-cn">37. <strong>制作足部防压折褶（Toe Pleat，图 21.32）：</strong>站在床尾处，用双手将案主足部的上层被服向上提起约 5 至 8 厘米（2 至 3 英寸）形成一道宽松的活动褶皱。可制作水平足褶或纵向足褶。<strong>此项操作可极大消除厚重被褥压迫足背与足趾，有效预防垂足畸形（footdrop）与足趾压疮！</strong></p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="editorial-figure-card">
+        <img src="images/ch21/ch21_p476_fig32_toe_pleat.jpg" alt="Making a horizontal or vertical toe pleat" class="figure-img" loading="lazy">
+        <figcaption class="figure-caption">
+          <span class="fig-label">FIGURE 21.32</span>
+          <span class="fig-text-en">A, Horizontal toe pleat: fan-fold top linens across the foot of the bed. B, Vertical toe pleat: fold top linens inward down the center. Prevents pressure on toes.</span>
+          <span class="fig-text-cn">图 21.32 足部防压折褶制作：A，横向水平足褶；B，纵向垂直足褶。释放被褥张力，保护足背神经与足趾皮肤。</span>
+        </figcaption>
+      </figure>
+
+      <ol class="proc-steps-list" start="38">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">38. Tuck the top sheet, blanket, and bedspread together under the foot of the mattress, maintaining the toe pleat slack.</p>
+            <p class="step-cn">38. 在保持足褶宽松的前提下，将床尾多余被服一起平整塞入床垫下方。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-477">
+              <span class="marker-pill">p. 477</span>
+            </div>
+            
+<section class="editorial-page" id="page-477">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Occupied Bed Procedure: Completion & Post-Care · 收尾信封角、换枕套与术后处置</span>
+    <span class="ph-num">p. 477</span>
+  </div>
+
+  <div class="procedure-card">
+    <div class="procedure-header">
+      <span class="proc-badge">PROCEDURE (CONT'D)</span>
+      <h3 class="proc-title-en">Making an Occupied Bed—cont’d</h3>
+      <h4 class="proc-title-cn">铺设有人床（续）：信封角收口、更换枕套与操作后全面照护</h4>
+    </div>
+    <div class="procedure-body">
+      <ol class="proc-steps-list" start="42">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">42. Lift the mattress corner with one arm. Tuck all top linens under the mattress together. Make a mitred corner.</p>
+            <p class="step-cn">42. 用一只手臂抬起床垫角，将所有上层被服一起整齐塞入床垫下，制作规整的床尾信封折角。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">43. Raise the bed rail if it was used. Go to the other side, and lower that bed rail.*</p>
+            <p class="step-cn">43. 升起该侧床栏并锁好。绕行至病床对侧，放下该侧床栏。*</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">44. Straighten and smooth top linens on the other side.</p>
+            <p class="step-cn">44. 拉平对侧的上层被服与被口封边。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">45. Tuck the top linens under the mattress at the foot of the bed. Make a mitred corner.</p>
+            <p class="step-cn">45. 将床尾被服塞好并制作对侧信封折角。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">46. Change the pillowcase(s). Gently support the client’s head and neck while replacing the pillow. Ensure the open end faces away from the door.</p>
+            <p class="step-cn">46. 更换枕套。在撤换枕头时轻柔托扶案主头颈部，平稳放回头部下方。确保枕套开口端背向房门。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">47. Raise the head of the bed to a level appropriate for the client, or use pillows to position the client comfortably.</p>
+            <p class="step-cn">47. 根据护理计划与案主舒适度将床头抬高至适宜角度（如半福氏位），或利用软枕将案主摆放至舒适功能位。</p>
+          </div>
+        </li>
+      </ol>
+
+      <h4 class="proc-phase-title">POST-PROCEDURE · 操作后收尾与安全保障阶段</h4>
+      <ol class="proc-steps-list" start="48">
+        <li>
+          <div class="step-pair">
+            <p class="step-en">48. Provide for safety and comfort. Ensure the client feels comfortable, warm, and well aligned.</p>
+            <p class="step-cn">48. 全面核查案主的安全与舒适度：询问感受，确保保暖充分、肢体对称处于生理对齐状态。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">49. Place the call bell within easy reach of the client.* This provides an easy, safe way for the client to contact staff, if necessary.</p>
+            <p class="step-cn">49. <strong>将紧急呼叫铃放置在案主伸手可及的掌心或床栏上！*</strong> 确保案主在任何需要时能瞬间联络医护人员。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">50. Lower the bed to its lowest position. Follow the care plan for bed rail use.* Ensure bed wheels are locked.</p>
+            <p class="step-cn">50. <strong>立刻将病床降至最低水平位置！*</strong> 根据照护计划升起防护床栏，并再次脚踩确认脚轮刹车锁紧。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">51. Follow your employer’s policy for care of soiled linen. Remove the laundry bag from the room promptly.</p>
+            <p class="step-cn">51. 封好污衣收集袋并立即移出居室送往污衣间，严格遵守机构感染控制政策。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">52. Remove privacy measures, as needed (open curtains or doors according to client preference).</p>
+            <p class="step-cn">52. 根据案主意愿拉开隔帘或开启房门。</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-pair">
+            <p class="step-en">53. Perform hand hygiene.</p>
+            <p class="step-cn">53. 规范洗手消毒。</p>
+          </div>
+        </li>
+      </ol>
+      <p class="proc-footnote">*带星号步骤针对机构住院与居家照料有所微调，但保障案主触手可及呼救与防跌倒原则绝对无妥协。</p>
+    </div>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-478">
+              <span class="marker-pill">p. 478</span>
+            </div>
+            
+<section class="editorial-page" id="page-478">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Chapter Review & Practice Exam · 章末核心复习与自测试题 (1–7)</span>
+    <span class="ph-num">p. 478</span>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">CHAPTER REVIEW</h3>
+    <h4 class="esh-title-cn">本章核心知识体系归纳与回顾</h4>
+  </div>
+
+  <div class="editorial-box-container box-theme-blue">
+    <div class="box-header">
+      <span class="box-icon">💡</span>
+      <span class="box-title-en">KEY POINTS</span>
+      <span class="box-title-cn">临床实践核心要点总结</span>
+    </div>
+    <div class="box-content">
+      <ul class="box-bullet-list">
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• The basic bed positions are the flat position, Fowler’s positions, the Trendelenburg position, and the reverse Trendelenburg position. The care plan will tell you which position to place the client in. The client’s position depends on their condition.</p>
+            <p class="bp-cn">• 基本病床体位包括水平平卧位、福氏卧位（低/半/高）、特伦德伦伯格卧位与反特伦德伦伯格卧位。照护计划会明确指定案主的体位要求，其摆放严格取决于案主的临床病情。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• The linens required for bed making and the frequency of linen changes will vary among health care settings. Follow your employer’s policies.</p>
+            <p class="bp-cn">• 铺床所需的床品种类以及更换频次在不同照护环境（居家、长照、医院）中各不相同，支持工作者必须严格遵守所在机构的规章制度。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Clean linen must be held away from your uniform to prevent transfer of microorganisms, and dirty linen must be removed with gloves and placed into the receptacle approved by your employer.</p>
+            <p class="bp-cn">• 洁净床单必须抱离工作服以防沾染病原菌；换下的脏床单必须戴手套操作、朝远离身体方向向内卷叠，并立即投入合规的污衣袋或收集容器中。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• A closed bed is made when the bed is expected to be unoccupied for a while; the top linens are pulled up, with the top sheet folded over the bedspread into a cuff or the bedspread pulled neatly over the pillows, as per facility policy. An open bed is made shortly before the bed is to be occupied; top linens are folded back so that the client can easily get into bed. An occupied bed is made with the client in it.</p>
+            <p class="bp-cn">• 闭式床（备用床）在床位预计较长时间无人使用时铺设，上层被服完全向上拉展防尘；开式床（暂空床）在案主即将上床前铺设，被服呈扇形折叠至床尾方便上床；有人床是在案主卧床状态下分侧进行的床品更换。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• One of the most important concepts in this chapter to remember is that the bottom sheet, next to your client’s skin, needs to be wrinkle free to prevent skin irritation, which can lead to skin breakdown of buttocks, ankles, and elbows and to bedsores.</p>
+            <p class="bp-cn">• <strong>本章最至关重要、终生恪守的核心原则是：紧贴案主皮肤的底层大单必须彻底拉平拉紧、绝对平整无褶皱！</strong>任何微小的褶皱都会形成局部高压与剪切力，直接导致臀部、尾骶部、踝关节及手肘皮肤破溃坏死，酿成严重压疮。</p>
+          </div>
+        </li>
+        <li>
+          <div class="bullet-pair">
+            <p class="bp-en">• Use good body mechanics to reduce your chance of injury when making a bed.</p>
+            <p class="bp-cn">• 铺床全程务必运用科学的身体力学原理（调高床位、屈膝下蹲、避免过度弯腰），切实预防自身职业性脊柱腰背劳损。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="editorial-box-container box-theme-purple">
+    <div class="box-header">
+      <span class="box-icon">🧠</span>
+      <span class="box-title-en">CRITICAL THINKING IN PRACTICE</span>
+      <span class="box-title-cn">临床批判性思考情境分析</span>
+    </div>
+    <div class="box-content">
+      <div class="bilingual-block">
+        <p class="para-en"><strong>Scenario:</strong> You need to give a person a bath in bed (see Chapter 17) and change linens. The person must remain in bed. Which type of bed will you make? Will you change linens or give the bath first? While changing linens, identify when you need to apply and remove gloves and practise hand hygiene.</p>
+        <p class="para-cn"><strong>临床实战情境：</strong>您需要为一位必须绝对卧床的案主进行床上擦浴（见第 17 章）并彻底更换床单。您应该铺设何种类型的床？您会先换床单还是先擦浴？在整个更换床品过程中，请准确指出何时必须佩戴手套、脱除手套并执行手卫生？</p>
+      </div>
+      <div class="bilingual-block">
+        <p class="para-en"><strong>Clinical Solution:</strong><br>
+        1. <strong>Bed Type:</strong> You will make an <strong>occupied bed</strong>.<br>
+        2. <strong>Sequence:</strong> Always <strong>give the bedbath first</strong>, and then change the linens (or change the linens concurrently as you turn the client to wash their back and buttocks). If you change linens before bathing, the clean new linens will become damp and contaminated with wash water, soap, and shed microbes during the bath.<br>
+        3. <strong>Aseptic Timing:</strong> Wear clean gloves during bathing and when stripping soiled linens. Remove and discard gloves after washing perineal areas/handling dirty linen; perform hand hygiene; then apply clean gloves or use clean hands to handle and smooth the clean linen foundation.</p>
+        <p class="para-cn"><strong>临床专家深度解析：</strong><br>
+        1. <strong>床型选择：</strong>必须铺设<strong>有人床（occupied bed）</strong>。<br>
+        2. <strong>操作先后顺序：</strong>必须<strong>先实施床上擦浴，随后更换床品被服</strong>（或在协助案主侧卧擦洗背部与臀部时，同步完成该侧旧单卷除与新单铺展）。若先换床单再擦浴，洗澡水滴、肥皂液及清洗脱落的微生物必然会将新床单浸湿弄脏，造成重复污染与资源浪费！<br>
+        3. <strong>手套与手卫生节点：</strong>在擦洗身体及拆卸触碰被分泌物、体液污染的旧床单时必须戴手套；擦拭完臀部会阴部并卷好旧床单后，必须立即脱除手套扔入医废桶；洗手或手消毒后，再用洁净手或换戴洁净手套拿取并拉平新床单，切断交叉感染链！</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">REVIEW QUESTIONS (Part 1: Questions 1 to 7)</h3>
+    <h4 class="esh-title-cn">章末全真自测复习题库（第 1 至 7 题）</h4>
+  </div>
+
+  <div class="bilingual-block">
+    <p class="para-en">Answers to these questions are at the bottom of page 479. Circle the BEST answer.</p>
+    <p class="para-cn">标准答案见第 479 页底部。请选出每一题的最优答案。</p>
+  </div>
+</section>
+
+            <div class="page-anchor-marker" id="page-479">
+              <span class="marker-pill">p. 479</span>
+            </div>
+            
+<section class="editorial-page" id="page-479">
+  <div class="page-header-bar">
+    <span class="ph-ch">CHAPTER 21</span>
+    <span class="ph-title">Review Questions 8–9 & Answer Key · 自测试题 (8–9) 与官方答案</span>
+    <span class="ph-num">p. 479</span>
+  </div>
+
+  <div class="editorial-section-header">
+    <h3 class="esh-title-en">REVIEW QUESTIONS (Part 2: Questions 8 to 9)</h3>
+    <h4 class="esh-title-cn">章末全真自测复习题库（第 8 至 9 题）</h4>
+  </div>
+
+  <div class="editorial-box-container box-theme-green">
+    <div class="box-header">
+      <span class="box-icon">✅</span>
+      <span class="box-title-en">OFFICIAL PUBLISHER ANSWER KEY & RATIONALE SUMMARY</span>
+      <span class="box-title-cn">加拿大官方原版标准答案与考点精解汇总</span>
+    </div>
+    <div class="box-content">
+      <div class="bilingual-block">
+        <p class="para-en"><strong>Official Publisher Answers:</strong> 1.C, 2.B, 3.A, 4.B, 5.A, 6.A, 7.B, 8.B, 9.A</p>
+        <p class="para-cn"><strong>出版社官方标准答案：</strong>1.C, 2.B, 3.A, 4.B, 5.A, 6.A, 7.B, 8.B, 9.A</p>
+      </div>
+      <div class="bilingual-block">
+        <p class="para-en"><strong>Chapter Opener Image Credit:</strong> CanStock Photo Inc./monkeybusiness.</p>
+        <p class="para-cn"><strong>开篇图源致谢：</strong>CanStock Photo Inc./monkeybusiness。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch20')">← 上一章：第 20 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch21-quiz')">✍️ 9 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 20 章（身体力学与安全转运，38页）正在编排流水线中，即将上线！')">下一章：第 20 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch20.html" class="sbn-btn sbn-prev">← 上一章：第 20 章 (安全与事故预防实务)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch21-quiz" class="sbn-btn sbn-quiz">✍️ 9 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 22 章（皮肤照护与压疮预防，24页）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 22 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch21_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
