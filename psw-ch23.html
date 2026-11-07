@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 23: Promoting Client Comfort, Pain Management, and Sleep · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 23</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html" selected>第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 23 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 35:10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 23 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Promoting Client Comfort, Pain Management, and Sleep</h1>
+      <h2 class="hero-title-cn">案主舒适支持、疼痛评估管理与睡眠休息照护：生理病理机制、疼痛量表与睡眠障碍护理</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 511–527 · 12 道全真自测题</span>
+        <span class="meta-item">专业音频：35:10</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch23-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch23" aria-label="Chapter 23 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.511–527 · 共 17 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-511">第 511 页 · Chapter 23 Opener & Learning Objectives (案主舒适支持、疼痛评估管理与睡眠休息照护：导言与9大学习目标)</option><option value="page-512">第 512 页 · Key Terms Glossary & Environmental Comfort Factors (核心专业术语表与舒适影响因素：温度、通风、气味消除与身心舒适)</option><option value="page-513">第 513 页 · Noise Control, Lighting and Room Atmosphere (噪声控制与采光照明：医疗与居家环境降噪减敏策略)</option><option value="page-514">第 514 页 · Pain Physiology & Types of Pain (疼痛病理生理学与分类：急性疼痛、慢性持续性疼痛、放射性疼痛与幻肢痛)</option><option value="page-515">第 515 页 · Factors Affecting Pain & Cultural Dimensions (影响疼痛感知的多维因素：过去经验、情绪焦虑、注意力与跨文化差异)</option><option value="page-516">第 516 页 · Pain Assessment Scales: Figures 23.2-23.4 (疼痛评估量表体系：数字评分法NRS、视觉模拟VAS与儿童Oucher量表)</option><option value="page-517">第 517 页 · Figure 23.5 Pointing to Pain & PAINAD Scale (疼痛定位巡查与重度认知障碍长者PAINAD量表评估体系)</option><option value="page-518">第 518 页 · PAINAD Scale Guidelines & Table 23.1 (晚期痴呆疼痛评估操作规范与Table 23.1呼吸面部声响情绪五项评分细则)</option><option value="page-519">第 519 页 · Box 23.1 Signs and Symptoms of Pain (框栏 23.1 疼痛临床指征：肢体语言、面部表情、发声呻吟与生理反射改变)</option><option value="page-520">第 520 页 · Table 23.1 Continued & Figure 23.6 Northern Pain Scale (PAINAD量表评分标准与Figure 23.6 北方原住民面部表情疼痛量表)</option><option value="page-521">第 521 页 · Pain Relief Measures & Back Massage (疼痛综合舒缓干预措施：环境调节、分散注意力与背部轻抚推拿操作要则)</option><option value="page-522">第 522 页 · Rest and Sleep Physiology (休息与睡眠生理：身心静息本质、昼夜生理节律与各年龄段睡眠需求变化)</option><option value="page-523">第 523 页 · Factors Affecting Sleep & Insomnia (干扰睡眠的生理病理因素与失眠症临床分型：入睡困难与频繁早醒)</option><option value="page-524">第 524 页 · Sleep Disorders: Sleep Deprivation & Sleepwalking (睡眠障碍专论：慢性睡眠剥夺身心损害、梦游症安全防护与夜惊症)</option><option value="page-525">第 525 页 · Box 23.2 Promoting Rest and Sleep (框栏 23.2 促进休息与睡眠综合实务指引：睡前仪式、床品整理与环境静音)</option><option value="page-526">第 526 页 · Chapter Review: Key Points, Critical Thinking & Quiz Q1-Q10 (本章复习核心要点、临床批判性思维案例情境与自测试题第1-10题)</option><option value="page-527">第 527 页 · Review Questions Q11-Q12 & Official Publisher Answer Key (复习题第11-12题与官方权威答案解析)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-511" class="cp-chip" id="cp-chip-23-511" data-page="511" onclick="handlePageChipClick(event, 'page-511')" title="第 511 页 · Chapter 23 Opener & Learning Objectives (案主舒适支持、疼痛评估管理与睡眠休息照护：导言与9大学习目标)"><span class="cp-num">p.511</span></a><a href="#page-512" class="cp-chip" id="cp-chip-23-512" data-page="512" onclick="handlePageChipClick(event, 'page-512')" title="第 512 页 · Key Terms Glossary & Environmental Comfort Factors (核心专业术语表与舒适影响因素：温度、通风、气味消除与身心舒适)"><span class="cp-num">p.512</span></a><a href="#page-513" class="cp-chip" id="cp-chip-23-513" data-page="513" onclick="handlePageChipClick(event, 'page-513')" title="第 513 页 · Noise Control, Lighting and Room Atmosphere (噪声控制与采光照明：医疗与居家环境降噪减敏策略)"><span class="cp-num">p.513</span></a><a href="#page-514" class="cp-chip" id="cp-chip-23-514" data-page="514" onclick="handlePageChipClick(event, 'page-514')" title="第 514 页 · Pain Physiology & Types of Pain (疼痛病理生理学与分类：急性疼痛、慢性持续性疼痛、放射性疼痛与幻肢痛)"><span class="cp-num">p.514</span></a><a href="#page-515" class="cp-chip" id="cp-chip-23-515" data-page="515" onclick="handlePageChipClick(event, 'page-515')" title="第 515 页 · Factors Affecting Pain & Cultural Dimensions (影响疼痛感知的多维因素：过去经验、情绪焦虑、注意力与跨文化差异)"><span class="cp-num">p.515</span></a><a href="#page-516" class="cp-chip" id="cp-chip-23-516" data-page="516" onclick="handlePageChipClick(event, 'page-516')" title="第 516 页 · Pain Assessment Scales: Figures 23.2-23.4 (疼痛评估量表体系：数字评分法NRS、视觉模拟VAS与儿童Oucher量表)"><span class="cp-num">p.516</span></a><a href="#page-517" class="cp-chip" id="cp-chip-23-517" data-page="517" onclick="handlePageChipClick(event, 'page-517')" title="第 517 页 · Figure 23.5 Pointing to Pain & PAINAD Scale (疼痛定位巡查与重度认知障碍长者PAINAD量表评估体系)"><span class="cp-num">p.517</span></a><a href="#page-518" class="cp-chip" id="cp-chip-23-518" data-page="518" onclick="handlePageChipClick(event, 'page-518')" title="第 518 页 · PAINAD Scale Guidelines & Table 23.1 (晚期痴呆疼痛评估操作规范与Table 23.1呼吸面部声响情绪五项评分细则)"><span class="cp-num">p.518</span></a><a href="#page-519" class="cp-chip" id="cp-chip-23-519" data-page="519" onclick="handlePageChipClick(event, 'page-519')" title="第 519 页 · Box 23.1 Signs and Symptoms of Pain (框栏 23.1 疼痛临床指征：肢体语言、面部表情、发声呻吟与生理反射改变)"><span class="cp-num">p.519</span></a><a href="#page-520" class="cp-chip" id="cp-chip-23-520" data-page="520" onclick="handlePageChipClick(event, 'page-520')" title="第 520 页 · Table 23.1 Continued & Figure 23.6 Northern Pain Scale (PAINAD量表评分标准与Figure 23.6 北方原住民面部表情疼痛量表)"><span class="cp-num">p.520</span></a><a href="#page-521" class="cp-chip" id="cp-chip-23-521" data-page="521" onclick="handlePageChipClick(event, 'page-521')" title="第 521 页 · Pain Relief Measures & Back Massage (疼痛综合舒缓干预措施：环境调节、分散注意力与背部轻抚推拿操作要则)"><span class="cp-num">p.521</span></a><a href="#page-522" class="cp-chip" id="cp-chip-23-522" data-page="522" onclick="handlePageChipClick(event, 'page-522')" title="第 522 页 · Rest and Sleep Physiology (休息与睡眠生理：身心静息本质、昼夜生理节律与各年龄段睡眠需求变化)"><span class="cp-num">p.522</span></a><a href="#page-523" class="cp-chip" id="cp-chip-23-523" data-page="523" onclick="handlePageChipClick(event, 'page-523')" title="第 523 页 · Factors Affecting Sleep & Insomnia (干扰睡眠的生理病理因素与失眠症临床分型：入睡困难与频繁早醒)"><span class="cp-num">p.523</span></a><a href="#page-524" class="cp-chip" id="cp-chip-23-524" data-page="524" onclick="handlePageChipClick(event, 'page-524')" title="第 524 页 · Sleep Disorders: Sleep Deprivation & Sleepwalking (睡眠障碍专论：慢性睡眠剥夺身心损害、梦游症安全防护与夜惊症)"><span class="cp-num">p.524</span></a><a href="#page-525" class="cp-chip" id="cp-chip-23-525" data-page="525" onclick="handlePageChipClick(event, 'page-525')" title="第 525 页 · Box 23.2 Promoting Rest and Sleep (框栏 23.2 促进休息与睡眠综合实务指引：睡前仪式、床品整理与环境静音)"><span class="cp-num">p.525</span></a><a href="#page-526" class="cp-chip" id="cp-chip-23-526" data-page="526" onclick="handlePageChipClick(event, 'page-526')" title="第 526 页 · Chapter Review: Key Points, Critical Thinking & Quiz Q1-Q10 (本章复习核心要点、临床批判性思维案例情境与自测试题第1-10题)"><span class="cp-num">p.526</span></a><a href="#page-527" class="cp-chip" id="cp-chip-23-527" data-page="527" onclick="handlePageChipClick(event, 'page-527')" title="第 527 页 · Review Questions Q11-Q12 & Official Publisher Answer Key (复习题第11-12题与官方权威答案解析)"><span class="cp-num">p.527</span></a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="editorial-chapter-header" id="sec-ch23-header">
+      <div class="ech-meta">
+        <span class="ech-badge">CHAPTER 23 · 舒适与疼痛睡眠管理</span>
+        <span class="ech-pages">Pages 511–527 · 17 Physical Pages</span>
+      </div>
+      <h1 class="ech-title-en">Promoting Client Comfort, Pain Management, and Sleep</h1>
+      <h2 class="ech-title-cn">案主舒适支持、疼痛评估管理与睡眠休息照护：生理病理机制、疼痛量表与睡眠障碍护理</h2>
+      <p class="ech-desc">严格依据加拿大 Mosby/Elsevier 5th 权威原版全真还原，逐页覆盖全人舒适环境营造（温湿度、通风、降噪、气味控制）、疼痛神经生理分类（急性、慢性、放射痛、牵涉痛、幻肢痛）、客观评估量表（NRS、VAS、Oucher、认知障碍 PAINAD 量表及北方原住民量表）、非药物舒缓措施与背部推拿技巧、各年龄段睡眠生理需求及失眠梦游症综合防范规程。</p>
+    </div>
+    <div id="page-511"></div>
+<div class="chapter-opener-banner">
+  <div class="chapter-badge">CHAPTER 23</div>
+  <h1 class="chapter-title-en">Promoting Client Comfort, Pain Management, and Sleep</h1>
+  <p class="chapter-title-zh">案主舒适支持、疼痛评估管理与睡眠休息照护</p>
+</div>
+
+<div class="figure-card">
+  <img src="images/ch23/ch23_p511_X1.jpg" alt="Client resting comfortably in bed with gentle sunlight" class="responsive-img" style="max-height: 480px; object-fit: cover; border-radius: 8px;">
+  <p class="figure-caption">A comfortable, quiet environment promotes physical rest, psychological peace, and restorative sleep. (Photo: iStockphoto/ake1150sb)</p>
+  <p class="figure-caption-zh">舒适、宁静且温度适宜的居住环境有助于促进身心安宁、消除疲惫并保障恢复性深睡眠。（官方原版教材配图）</p>
+</div>
+
+<div class="objectives-card" style="margin-top: 24px; padding: 20px; background: rgba(59, 130, 246, 0.05); border-left: 4px solid #3b82f6; border-radius: 6px;">
+  <h3 style="margin-top: 0; color: #1d4ed8; font-size: 1.15rem; font-weight: 700;">OBJECTIVES / 学习目标</h3>
+  <p style="font-size: 0.95rem; color: #4b5563; margin-bottom: 14px;">After reading this chapter, the learner should be able to do the following: / 学习完本章后，学员应能够做到以下各项：</p>
+  <ul class="objectives-list" style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• Recognize that comfort (or pain) is personal to each person and is based on their past experiences.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">深刻认识到舒适（或疼痛）完全属于极度个性化的主观体验，深受个人既往经历与身心感知影响。</div>
+    </li>
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• Describe why comfort and well-being are important.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">阐述身心舒适感与整体安康（Well-Being）对促进康复与维护生命质量的核心重要性。</div>
+    </li>
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• Describe the various types of pain.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">详述临床各类疼痛的病理特征（急性痛、慢性持续性疼痛、放射性疼痛、牵涉痛与幻肢痛）。</div>
+    </li>
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• List the signs and symptoms of pain.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">熟练掌握并列举疼痛的语言主诉、非语言肢体动作、面部表情及自主神经生理反应体征。</div>
+    </li>
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• List the care plan measures that relieve pain.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">列举护理计划中常用以舒缓缓解疼痛的身心护理干预措施（分散注意力、体位调整、背部按摩）。</div>
+    </li>
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• Describe why rest and sleep are important.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">阐释充分的休息与高质量睡眠对机体细胞组织修复、能量恢复及心理稳定的生理意义。</div>
+    </li>
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• Describe the factors that affect sleep.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">全面分析影响睡眠时长与质量的生理、心理、药物、饮食（咖啡因）及外界环境因素。</div>
+    </li>
+    <li style="margin-bottom: 12px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• Describe common sleep disorders.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">详述临床常见睡眠障碍综合征（失眠症、睡眠剥夺、梦游症与睡眠呼吸暂停）的临床表现与危害。</div>
+    </li>
+    <li style="margin-bottom: 8px; line-height: 1.5;">
+      <div style="font-weight: 600; color: #1f2937;">• List care plan measures that promote sleep.</div>
+      <div style="color: #4b5563; font-size: 0.9rem;">掌握并落实护理计划中旨在促进舒适入睡与保障夜间睡眠质量的综合照护实务规范。</div>
+    </li>
+  </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-512">
+              <span class="marker-pill">p. 512</span>
+            </div>
+            
+<div id="sec-ch23-glossary" class="glossary-anchor"></div>
+<div class="editorial-card glossary-intro-card">
+  <div class="card-header">
+    <span class="badge">KEY TERMS / 核心专业术语</span>
+    <h2>Chapter 23 Terminology Mastery (Pain, Comfort & Sleep Science)</h2>
+    <p class="subtitle">第23章 专业术语解析（涵盖急性痛、慢性痛、失眠症、幻肢痛、放射痛与牵涉痛）</p>
+  </div>
+  <p class="editorial-text-en">Mastery of pain and comfort terminology enables support workers to communicate clinical observations accurately and advocate on behalf of clients suffering in silence. The interactive glossary below provides phonetic guidance, bilingual definitions, and textbook references.</p>
+  <p class="editorial-text-zh">精准掌握疼痛与舒适科学专业术语，使支持工作人员能够专业、准确地向医疗团队反馈临床观察，为默默忍受病痛折磨的照护对象发声代言。以下交互式术语表提供国际音标、中英双语详释及原著页码对照。</p>
+</div>
+
+<div class="glossary-control-bar" style="margin-top: 16px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;">
+  <div style="position: relative; flex: 1; min-width: 240px;">
+    <input type="text" id="ch23-glossary-search" placeholder="Search terms (e.g. acute pain, radiating, insomnia)..." style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 0.9rem;">
+  </div>
+  <div style="display: flex; gap: 8px;">
+    <button type="button" class="btn-toggle-view active" id="btn-ch23-table-view" style="padding: 6px 12px; border: 1px solid #3b82f6; background: #3b82f6; color: #fff; border-radius: 4px; cursor: pointer; font-size: 0.85rem;">Table View (紧凑表格)</button>
+    <button type="button" class="btn-toggle-view" id="btn-ch23-cards-view" style="padding: 6px 12px; border: 1px solid #d1d5db; background: #fff; color: #374151; border-radius: 4px; cursor: pointer; font-size: 0.85rem;">Flashcards (卡片透视)</button>
+  </div>
+</div>
+
+<div id="ch23-glossary-table-container">
+  <table class="editorial-table glossary-table" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background: #f3f4f6; text-align: left;">
+        <th style="padding: 10px; border-bottom: 2px solid #e5e7eb; width: 26%;">Term / 术语</th>
+        <th style="padding: 10px; border-bottom: 2px solid #e5e7eb; width: 20%;">Phonetic / 音标</th>
+        <th style="padding: 10px; border-bottom: 2px solid #e5e7eb; width: 44%;">Definition (EN / ZH) / 释义</th>
+        <th style="padding: 10px; border-bottom: 2px solid #e5e7eb; width: 10%;">Page / 页码</th>
+      </tr>
+    </thead>
+    <tbody id="ch23-glossary-tbody">
+      <!-- Injected via JavaScript from CH23_KEY_TERMS -->
+    </tbody>
+  </table>
+</div>
+
+<div id="ch23-glossary-cards-container" style="display: none; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+  <!-- Injected via JavaScript from CH23_KEY_TERMS -->
+</div>
+
+<div class="section-header" style="margin-top: 28px;">
+  <span class="badge">PROMOTING COMFORT / 营造舒适环境</span>
+  <h2>Promoting Client Comfort and Well-Being</h2>
+  <p class="subtitle">整体全人照护视角、温度适宜性与无气味执业红线</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Every person is an individual who is shaped by a unique blend of genetics, environmental influences, and experiences. In Chapter 6, concepts such as health, wellness, illness, and disability were introduced. It must be emphasized that it is important to understand that a client’s culture and experiences, joys, sorrows, needs, ability to think and make decisions, and ability to interact with others will all have an impact on the client’s feelings of comfort and well-being (see Chapters 7, 8, and 11). Therefore, to provide good care, it is necessary to use a holistic approach to client care. Support workers can play a key role in promoting the comfort and well-being of clients by understanding their psychosocial needs and knowing ways to help them feel safe, comfortable, and relaxed.</p>
+  <p class="para-zh">每个人都是独一无二的生命个体，其身心特质由独特的遗传基因、生活环境与人生经历共同塑造。在第6章中，我们探讨了健康、安康、疾病与残障的核心概念。必须特别强调的是，照护对象的文化背景、人生经历、喜怒哀乐、个性化需求、认知决策能力以及与他人的社交互动方式，都会对其舒适感与整体安康产生深远影响（见第7、8与11章）。因此，要提供卓越的支持性照护，必须秉持全人照护（Holistic Approach）理念。通过敏锐体察照护对象的心理社会需求，熟练掌握协助其获得安全感、身体放松与内心宁静的方法，支持工作人员在提升案主舒适品质中扮演着无可替代的关键角色。</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">A comfortable client is not in any physical or emotional pain and feels content and at peace. Age, illness, pain, and inactivity, as well as factors such as temperature, ventilation, odours, noise, lighting, and feeling safe, all affect a person’s comfort and feelings of well-being.</p>
+  <p class="para-zh">处于舒适状态的照护对象没有任何躯体疼痛或精神痛苦，内心感到从容知足与平和宁静。年龄衰老、疾病困扰、疼痛刺激与活动受限，以及环境温度、通风对流、异味刺激、噪音干扰、采光照明与安全感等物理环境要素，时刻影响着个体的身心舒适感与幸福感。</p>
+</div>
+
+<div class="comfort-factors-list" style="margin: 20px 0;">
+  <div style="margin-bottom: 14px; padding: 14px; background: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #1e40af;">Temperature / 环境室温调控</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.95rem; color: #374151;">Most people are comfortable when the room temperature is between 20°C and 23°C (68°F–74°F). Infants, older persons, and people with illnesses generally need higher room temperatures for comfort. In home care, clients set the temperature they prefer; provide extra blankets or warm clothing if they worry about heating costs.</p>
+    <p style="margin: 0; font-size: 0.9rem; color: #6b7280;">绝大多数健康人群在 20°C 至 23°C（68°F~74°F）的室温下感觉最为舒适。婴儿、高龄长者及虚弱患病人群皮下脂肪菲薄且体温调节中枢迟钝，通常需要略高的室温才能保证舒适。在居家照护中应尊重长者的温度设定；若长者因取暖电费开支顾虑而受冻，支持人员应主动为其增添保暖衣物或松软盖被。</p>
+  </div>
+
+  <div style="margin-bottom: 14px; padding: 14px; background: #f8fafc; border-left: 4px solid #10b981; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #047857;">Ventilation / 空气流通与防穿堂风</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.95rem; color: #374151;">Stale, stuffy air impairs comfort. Facilities utilize centralized ventilation systems. In home care, open windows and doors as the client desires. Protect clients from chilling drafts by ensuring they are warmly dressed and seated away from direct drafts.</p>
+    <p style="margin: 0; font-size: 0.9rem; color: #6b7280;">污浊沉闷的空气会直接损害身心舒适。机构通常配备中央空气循环系统；在居家照护中，可在长者同意下开窗换气。同时必须严防穿堂风（Drafts）直接吹袭长者身体，确保其衣着保暖并远离正对门窗的迎风口。</p>
+  </div>
+
+  <div style="padding: 14px; background: #f8fafc; border-left: 4px solid #ef4444; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #b91c1c;">Odours / 气味消除与无香水执业红线</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.95rem; color: #374151;">Body fluids, wound drainage, breath, and smoking odours cause deep embarrassment and physical nausea. CRITICAL RULE: NEVER wear perfume, cologne, aftershave, or scented lotions at work! Many clients have severe respiratory allergies, chemical sensitivities, or nausea triggered by artificial fragrances.</p>
+    <p style="margin: 0; font-size: 0.9rem; color: #6b7280;">排泄物、伤口渗液及口气、烟味常令长者感到难堪与作呕。<strong>核心执业铁律：在工作岗位上绝对严禁喷洒任何香水、古龙水、须后水或使用带香味的润肤乳！</strong>许多虚弱患病长者对人工合成香精极度敏感，可瞬间诱发剧烈哮喘支气管痉挛或严重恶心眩晕。</p>
+  </div>
+</div>
+
+    <div class="glossary-component" id="sec-ch23-glossary" style="margin:20px 0 32px 0;">
+      <div class="gc-header">
+        <div class="gc-title-wrap">
+          <span class="gc-badge">KEY TERMS · 核心专业术语表</span>
+          <h3 class="gc-title">Chapter 23 案主舒适、疼痛管理与睡眠休息权威专业术语表</h3>
+          <p class="gc-desc">Sorrentino 原版教材第 23 章共收录 <strong>7 个疼痛分类、痛觉神经传导与睡眠障碍核心学术词汇</strong>。支持实时模糊检索及「紧凑表格 / 记忆卡片」双模态自由切换。</p>
+        </div>
+        <div class="gc-controls">
+          <div class="gc-search-box">
+            <input type="text" id="kt-search-ch23" placeholder="🔍 搜索英文术语或中文释义..." oninput="filterGlossary('ch23')">
+          </div>
+          <div class="gc-view-toggle">
+            <button class="gc-toggle-btn active" id="btn-view-table-ch23" onclick="setGlossaryView('ch23', 'table')">📋 表格视图</button>
+            <button class="gc-toggle-btn" id="btn-view-cards-ch23" onclick="setGlossaryView('ch23', 'cards')">📇 卡片视图</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table View (Default) -->
+      <div class="kt-view-table" id="kt-table-view-ch23">
+        <div class="kt-table-scroll">
+          <table class="kt-data-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">英文术语 / 临床概念</th>
+                <th style="width: 22%;">中文对照 / 原书页码</th>
+                <th style="width: 52%;">教材标准学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+              <tr class="kt-table-row" data-term="acute pain 急性疼痛">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">acute pain</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/əˈkjuːt peɪn/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">急性疼痛</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 514</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Sudden pain due to injury, disease, trauma, or surgery; it generally lasts less than 6 months.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">急性疼痛：因创伤、疾病、意外或外科手术突然发生并伴随组织损伤的急性疼痛，通常持续少于6个月并随伤情愈合而缓解。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="chronic pain 慢性疼痛（持续性疼痛）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">chronic pain</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈkrɑː.nɪk peɪn/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">慢性疼痛（持续性疼痛）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 514</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Pain that lasts longer than 6 months; it may be constant or occur off and on. Also known as persistent pain.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">慢性疼痛（持续性疼痛）：持续超过6个月以上的长期疼痛，可呈持续性或断断续续发作，如关节炎与晚期肿瘤癌痛。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="insomnia 失眠症">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">insomnia</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ɪnˈsɑːm.ni.ə/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">失眠症</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 523</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">A persistent condition in which the person cannot go to sleep or stay asleep throughout the night.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">失眠症：一种长期存在的慢性睡眠障碍，表现为难以入睡、夜间频繁醒来无法维持睡眠或清晨过早醒来。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="persistent pain 持续性疼痛">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">persistent pain</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/pɚˈsɪs.tənt peɪn/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">持续性疼痛</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 514</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">See chronic pain.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">持续性疼痛：参见慢性疼痛。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="phantom limb pain 幻肢痛">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">phantom limb pain</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈfæn.təm lɪm peɪn/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">幻肢痛</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 514</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Pain felt in a body part that is no longer there.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">幻肢痛：在已被截肢切除、物理上已不存在的肢体部位上感知到的真实剧烈疼痛，源于大脑中枢神经记忆与神经残端刺激。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="radiating pain 放射性疼痛">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">radiating pain</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/ˈreɪ.di.eɪ.tɪŋ peɪn/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">放射性疼痛</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 514</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Pain that is felt not just at the site of tissue damage but extends to nearby areas.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">放射性疼痛：不仅在组织原发受损部位感到疼痛，且疼痛沿神经通路向邻近周围解剖区域广泛扩散延伸（如心肌梗死痛放射至左肩下颌）。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="referred pain 牵涉痛（转属痛）">
+                <td class="kt-cell-term">
+                  <span class="term-en" style="font-weight:700; color:var(--text-primary);">referred pain</span>
+                  <span class="term-phonetic" style="display:block; font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-top:2px;">/rɪˈfɝːd peɪn/</span>
+                </td>
+                <td class="kt-cell-meta">
+                  <span class="term-cn" style="font-weight:600; color:var(--accent-primary);">牵涉痛（转属痛）</span>
+                  <span class="term-page" style="display:block; font-size:11.5px; color:var(--text-tertiary); margin-top:2px;">p. 514</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en" style="font-size:13.5px; line-height:1.45; color:var(--text-secondary); margin-bottom:4px;">Pain that is felt in a part of the body separate from the source of the pain.</div>
+                  <div class="def-cn" style="font-size:13px; line-height:1.45; color:var(--text-primary);">牵涉痛：感知到疼痛的解剖部位与产生疼痛的深部内脏病灶来源彼此分离、相隔甚远（如肾结石在腹股沟区产生剧烈绞痛）。</div>
+                </td>
+              </tr>
+        
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mode 2: Flashcard Grid View -->
+      <div class="kt-view-cards" id="kt-cards-view-ch23" style="display:none;">
+        <div class="kt-cards-grid" id="kt-cards-grid-ch23">
+    
+          <div class="editorial-term-card" data-term="acute pain 急性疼痛">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 514</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">acute pain</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/əˈkjuːt peɪn/</div>
+              <div class="etc-term-cn">急性疼痛</div>
+              <div class="etc-def-en">Sudden pain due to injury, disease, trauma, or surgery; it generally lasts less than 6 months.</div>
+              <div class="etc-def-cn">急性疼痛：因创伤、疾病、意外或外科手术突然发生并伴随组织损伤的急性疼痛，通常持续少于6个月并随伤情愈合而缓解。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="chronic pain 慢性疼痛（持续性疼痛）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 514</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">chronic pain</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈkrɑː.nɪk peɪn/</div>
+              <div class="etc-term-cn">慢性疼痛（持续性疼痛）</div>
+              <div class="etc-def-en">Pain that lasts longer than 6 months; it may be constant or occur off and on. Also known as persistent pain.</div>
+              <div class="etc-def-cn">慢性疼痛（持续性疼痛）：持续超过6个月以上的长期疼痛，可呈持续性或断断续续发作，如关节炎与晚期肿瘤癌痛。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="insomnia 失眠症">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 523</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">insomnia</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ɪnˈsɑːm.ni.ə/</div>
+              <div class="etc-term-cn">失眠症</div>
+              <div class="etc-def-en">A persistent condition in which the person cannot go to sleep or stay asleep throughout the night.</div>
+              <div class="etc-def-cn">失眠症：一种长期存在的慢性睡眠障碍，表现为难以入睡、夜间频繁醒来无法维持睡眠或清晨过早醒来。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="persistent pain 持续性疼痛">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 514</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">persistent pain</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/pɚˈsɪs.tənt peɪn/</div>
+              <div class="etc-term-cn">持续性疼痛</div>
+              <div class="etc-def-en">See chronic pain.</div>
+              <div class="etc-def-cn">持续性疼痛：参见慢性疼痛。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="phantom limb pain 幻肢痛">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 514</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">phantom limb pain</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈfæn.təm lɪm peɪn/</div>
+              <div class="etc-term-cn">幻肢痛</div>
+              <div class="etc-def-en">Pain felt in a body part that is no longer there.</div>
+              <div class="etc-def-cn">幻肢痛：在已被截肢切除、物理上已不存在的肢体部位上感知到的真实剧烈疼痛，源于大脑中枢神经记忆与神经残端刺激。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="radiating pain 放射性疼痛">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 514</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">radiating pain</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/ˈreɪ.di.eɪ.tɪŋ peɪn/</div>
+              <div class="etc-term-cn">放射性疼痛</div>
+              <div class="etc-def-en">Pain that is felt not just at the site of tissue damage but extends to nearby areas.</div>
+              <div class="etc-def-cn">放射性疼痛：不仅在组织原发受损部位感到疼痛，且疼痛沿神经通路向邻近周围解剖区域广泛扩散延伸（如心肌梗死痛放射至左肩下颌）。</div>
+            </div>
+          </div>
+        
+          <div class="editorial-term-card" data-term="referred pain 牵涉痛（转属痛）">
+            <div class="etc-header">
+              <span class="etc-tag">TERM · 术语</span>
+              <span class="etc-page">p. 514</span>
+            </div>
+            <div class="etc-body">
+              <h4 class="etc-term-en">referred pain</h4>
+              <div class="etc-phonetic" style="font-size:12px; color:var(--text-tertiary); font-family:monospace; margin-bottom:4px;">/rɪˈfɝːd peɪn/</div>
+              <div class="etc-term-cn">牵涉痛（转属痛）</div>
+              <div class="etc-def-en">Pain that is felt in a part of the body separate from the source of the pain.</div>
+              <div class="etc-def-cn">牵涉痛：感知到疼痛的解剖部位与产生疼痛的深部内脏病灶来源彼此分离、相隔甚远（如肾结石在腹股沟区产生剧烈绞痛）。</div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    
+            <div class="page-anchor-marker" id="page-513">
+              <span class="marker-pill">p. 513</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">ENVIRONMENTAL SENSORY CARE / 感官环境调控</span>
+  <h2>Noise Reduction Guidelines and Lighting Optimization</h2>
+  <p class="subtitle">病区与居家降噪减噪实务指引、采光眩光控制与家园化温馨居室营造</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Odour Control Protocols: Never wear clothing (including underwear) that has been exposed to cooking odours or cigarette smoke in the workplace. Wash hands and brush teeth after meals. To eliminate odours in any care setting: (1) Empty and clean bedpans, urinals, commodes, and emesis basins promptly; (2) Change and dispose of soiled linens and clothing immediately; (3) Clean clients who are wet or soiled by urine, feces, vomit, or wound drainage without delay; (4) Dispose of incontinence and ostomy products promptly in sealed bags; (5) Keep laundry hampers tightly covered.</p>
+  <p class="para-zh">消除气味临床操作规范：绝对不要穿着带有厨房油烟味或二手烟味的衣物（包括内衣）进入照护现场。用餐后务必认真洗手刷牙。在任何照护场所控制异味的核心操作：(1) 便盆、尿壶、坐便椅及呕吐肾形盘一旦使用完毕立即倾倒清洗消毒；(2) 沾染污渍的被单衣物立即撤换并规范密闭处置；(3) 一旦照护对象被尿液、粪便、呕吐物或创面渗液污染，立即为其进行温和彻底的皮肤清洁；(4) 失禁垫及造口袋废弃物立即装入防漏袋严密封口丢弃；(5) 脏污被服收集桶盖始终严密盖紧。</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Noise Control: Ill clients are sensitive to noise. Health care facilities can be loud, distressing environments. The clatter of equipment, clanging bedpans, ringing phones, television sets, elevator dings, and loud staff conversations in hallways can cause agitation, sleep disruption, elevated blood pressure, and increased pain perception.</p>
+  <p class="para-zh">环境噪音控制：患病体弱的长者对外界异常声音极度敏感。医疗照护机构往往充满机械杂音：器械碰撞声、金属便盆撞击声、刺耳电话铃声、电视机外放声、电梯提示音以及工作人员在走廊交谈嬉笑声，极易引发长者烦躁惊恐、破坏深睡眠、升高交感神经血压并加剧疼痛感知。</p>
+</div>
+
+<div class="callout-box" style="margin: 20px 0; padding: 18px; background: #f0fdf4; border: 1px solid #dcfce7; border-left: 4px solid #16a34a; border-radius: 6px;">
+  <div style="font-weight: 700; color: #15803d; font-size: 1.05rem; margin-bottom: 8px;">Practical Guidelines for Controlling Noise in Care Facilities / 降噪降干扰实务守则</div>
+  <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: #374151;">
+    <li>Keep your voice low and speak in gentle tones; avoid shouting down hallways or call systems. / 始终保持压低音量轻声细语；绝对严禁隔着走廊大声呼喊或高声喧哗。</li>
+    <li>Handle equipment, trays, bedpans, and meal carts gently to minimize metallic clatter. / 拿放金属器械、便盆托盘及推行送餐车时轻推轻放，减少金属撞击碰撞杂音。</li>
+    <li>Answer phones, call bells, and door intercoms promptly to prevent prolonged ringing. / 及时接听病房电话、应答呼叫铃与对讲机，避免刺耳铃声反复回荡。</li>
+    <li>Close the client's room door gently when providing care or during sleep hours. / 在提供生活护理或长者休息睡眠期间，轻缓合上居室房门以阻隔走廊杂音。</li>
+    <li>Turn down the volume on televisions, radios, and mobile devices in resident areas. / 调低活动室及公共区域电视、广播与移动通讯设备的音量。</li>
+  </ul>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Lighting: Good lighting supports safety, but glare causes eye fatigue, headaches, and agitation. Adjust window blinds and shades to admit soft, natural daylight while blocking harsh sun glare. Ensure hallways and resident rooms have soft, indirect lighting during the evening, and maintain low-wattage night lights to prevent disorientation and nighttime falls.</p>
+  <p class="para-zh">采光与照明控制：充沛的光照是保障长者活动安全的必备条件，但强烈直射的眩光（Glare）会导致眼部疲劳、诱发剧烈头痛并加重谵妄躁动。应合理调节百叶窗与遮光窗帘，引入柔和均匀的自然漫射光，避开正午强光直射。夜间在走廊及居室配置柔和的间接光源，并彻夜点亮微光地脚夜灯（Night Light），有效防范长者夜间起夜定向障碍与意外摔伤。</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-514">
+              <span class="marker-pill">p. 514</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">PAIN CLASSIFICATION / 疼痛分类学</span>
+  <h2>Types of Pain and Pathophysiological Patterns</h2>
+  <p class="subtitle">急性疼痛、慢性持续性疼痛、放射性疼痛（图 23.1）、牵涉痛与幻肢痛病理鉴别</p>
+</div>
+
+<div class="figure-card" style="margin: 20px 0;">
+  <div style="text-align: center;">
+    <img src="images/ch23/ch23_p514_fig1_radiating_pain.jpg" alt="Figure 23.1 Gallbladder radiating pain" class="responsive-img" style="max-height: 420px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+    <p class="figure-caption" style="margin-top: 8px; font-weight: 600; color: #1e3a8a;">FIGURE 23.1 Gallbladder pain radiates to the right upper abdomen, the back, and the right shoulder.</p>
+    <p class="figure-caption-zh" style="color: #1e3a8a;">图 23.1 胆囊病变放射痛解剖示意：胆囊炎症引发右上腹剧痛，并沿神经皮节向后背及右侧肩胛部广泛放射。</p>
+  </div>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Pain is a warning sign from the body indicating that tissue damage has occurred or is threatened. It is subjective—pain is whatever the experiencing person says it is, existing whenever they say it does. There are several major clinical types of pain:</p>
+  <p class="para-zh">疼痛是机体遭受组织损伤或潜在创伤威胁时发出的生物学防御预警信号。疼痛具有完全的主观性——“疼痛就是体验者本人所说的那种感受，只要体验者主诉疼痛存在，疼痛就确凿存在”。临床上将疼痛分为以下核心主要类型：</p>
+</div>
+
+<div class="pain-types-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 20px 0;">
+  <div style="padding: 14px; background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid #ef4444; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #b91c1c;">Acute Pain (急性疼痛)</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.9rem; color: #374151; line-height: 1.5;">Felt suddenly from injury, disease, trauma, or surgery when tissue is damaged; generally lasts less than 6 months and diminishes as the underlying tissues heal.</p>
+    <p style="margin: 0; font-size: 0.85rem; color: #6b7280;">因创伤、急症或外科手术骤然爆发，通常持续短于6个月，伴随交感神经兴奋体征，随伤口修复而逐渐消退。</p>
+  </div>
+
+  <div style="padding: 14px; background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid #f59e0b; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #b45309;">Chronic / Persistent Pain (慢性/持续性疼痛)</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.9rem; color: #374151; line-height: 1.5;">Lasts longer than 6 months; can be constant or intermittent. Common causes include osteoarthritis, diabetic neuropathy, osteoporosis, and cancer.</p>
+    <p style="margin: 0; font-size: 0.85rem; color: #6b7280;">持续超过6个月以上，呈持续性钝痛或反复发作；常由退行性关节炎、糖尿病神经病变或晚期肿瘤引起，严重侵蚀心力。</p>
+  </div>
+
+  <div style="padding: 14px; background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid #8b5cf6; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #6d28d9;">Radiating Pain (放射性疼痛)</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.9rem; color: #374151; line-height: 1.5;">Felt at the site of tissue damage and extends along nerve pathways to nearby areas (FIGURE 23.1). For example, cardiac pain radiates to the left chest, jaw, and arm; gallbladder pain radiates to the right shoulder.</p>
+    <p style="margin: 0; font-size: 0.85rem; color: #6b7280;">不仅在原发病灶感到疼痛，且沿共用神经分布向周边区域放射传导（如心梗向左臂放射，胆囊炎向右肩背放射）。</p>
+  </div>
+
+  <div style="padding: 14px; background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid #06b6d4; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #0e7490;">Referred Pain (牵涉痛)</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.9rem; color: #374151; line-height: 1.5;">Pain felt in a body area separate from the true anatomical source of pathology (e.g., a kidney stone causing intense pain in the groin).</p>
+    <p style="margin: 0; font-size: 0.85rem; color: #6b7280;">痛觉体表投影位置与深部病损器官完全隔开（例如深部肾脏结石却在体表腹股沟区域引发剧烈绞痛）。</p>
+  </div>
+
+  <div style="padding: 14px; background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid #ec4899; border-radius: 6px;">
+    <h4 style="margin: 0 0 6px 0; color: #be185d;">Phantom Limb Pain (幻肢痛)</h4>
+    <p style="margin: 0 0 6px 0; font-size: 0.9rem; color: #374151; line-height: 1.5;">Pain perceived in an amputated limb that is no longer physically present. The pain is real, severe, and distressing, originating from central cortical memory and severed nerve trunk stimulation.</p>
+    <p style="margin: 0; font-size: 0.85rem; color: #6b7280;">在已被截肢切除的残肢肢端感受到的真实灼痛或抽痛；绝非“胡思乱想”，源自大脑皮层神经重塑与残端神经纤维放电。</p>
+  </div>
+</div>
+
+            <div class="page-anchor-marker" id="page-515">
+              <span class="marker-pill">p. 515</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">PSYCHOSOCIAL PAIN FACTORS / 疼痛影响变量</span>
+  <h2>Factors Influencing Pain Perception and Cultural Expressions</h2>
+  <p class="subtitle">既往创伤经历、焦虑情绪、注意力焦点与跨文化疼痛表达多元谱系</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Pain perception is never a simple mechanical reflex; it is filtered through complex psychological, emotional, and cultural factors:</p>
+  <p class="para-zh">疼痛感知绝非单纯的神经机械电信号传导，而是被复杂的心理认知、既往情绪体验与多元文化习俗深度过滤和塑造：</p>
+</div>
+
+<ul class="factors-bullet-list" style="line-height: 1.6; color: #374151; padding-left: 20px;">
+  <li><strong>Past Experience:</strong> A client who had severe, unrelieved pain in the past often feels intense anxiety, anticipating pain and perceiving it more acutely. Conversely, knowing that analgesics successfully relieved pain previously reduces anxiety. / 既往经历：既往曾经历过未缓解剧痛的长者往往在操作前陷入深度恐惧焦虑，从而放大痛觉感知；反之，若知晓止痛措施有效，则心理焦虑大减。</li>
+  <li><strong>Anxiety and Fear:</strong> Anxiety magnifies pain; pain, in turn, fuels deeper anxiety, creating a vicious physiological spiral. Reassurance and gentle presence reduce this amplification. / 焦虑与恐惧：恐惧会降低机体对痛觉的耐受阈值；而剧烈疼痛又反向刺激交感神经加重恐惧，形成恶性循环。温和陪伴与抚慰能有效打破此循环。</li>
+  <li><strong>Rest and Sleep:</strong> Fatigue and sleep deprivation severely lower pain tolerance, causing minor discomforts to feel unbearable. Well-rested clients cope far better with discomfort. / 休息与睡眠匮乏：严重的体力透支与长期睡眠剥夺会使中枢下行抑制通路受损，痛阈显著降低，极轻微的碰触都会引发强烈痛感。</li>
+  <li><strong>Attention and Distraction:</strong> The more a client focuses on their pain, the more agonizing it becomes. Engaging in conversation, listening to music, watching a program, or receiving a gentle back rub redirects attention and reduces perceived pain intensity. / 注意力焦点：大脑越是聚焦于疼痛，神经信号被放大的程度越强。通过交谈、轻音乐、看电视或背部轻抚转移注意力，能显著阻断痛觉中枢聚焦。</li>
+</ul>
+
+<div class="callout-box" style="margin: 20px 0; padding: 18px; background: #fdf4ff; border: 1px solid #fae8ff; border-left: 4px solid #a855f7; border-radius: 6px;">
+  <div style="font-weight: 700; color: #7e22ce; font-size: 1.05rem; margin-bottom: 8px;">Cultural Aspects of Pain / 跨文化疼痛表达差异专栏</div>
+  <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 8px;">
+    Culturally acquired patterns deeply shape how pain is perceived, tolerated, and communicated. In some cultures (e.g., traditional stoic or East Asian backgrounds), enduring pain in silence without showing outward emotion is considered a virtue and a mark of character; clients may completely deny pain even when suffering intensely. In other cultures, vocalizing pain loudly through crying or moaning is the culturally normative and expected way to seek community support.
+  </p>
+  <p style="font-size: 0.9rem; color: #4c1d95; line-height: 1.6; margin: 0;">
+    文化背景深刻规范着个体对疼痛的忍耐期待与表达行为：在推崇坚忍克己的文化中，默默忍耐痛苦被视为尊严与美德，长者即使承受重创也可能面不改色并否认疼痛；而在另一些文化中，放声呻吟哭泣是寻求同情与医疗协助的正当规范表达。<strong>支持人员绝不可因长者“没有呻吟”而主观断定其“不痛”，亦不可因长者“哭喊”而轻率评判其“小题大做”！</strong>
+  </p>
+</div>
+
+<div class="callout-box" style="margin: 20px 0; padding: 18px; background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 6px;">
+  <div style="font-weight: 700; color: #b45309; font-size: 1.05rem; margin-bottom: 8px;">Focus on Older Persons: Pain Reactions in Frail Seniors / 高龄长者疼痛特殊反应</div>
+  <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin: 0;">
+    Older persons may wrongly assume that chronic pain is an inevitable, untreatable consequence of aging, suffering in silence rather than asking for help. In clients with dementia or cognitive impairment, pain often manifests not as verbal complaints, but as sudden behavioral changes: agitation, aggression, withdrawal, refusing food, pacing, or sleep disturbances. Always report any subtle change in a senior's routine behavior to the nurse!
+  </p>
+</div>
+
+            <div class="page-anchor-marker" id="page-516">
+              <span class="marker-pill">p. 516</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">PAIN ASSESSMENT TOOLS / 疼痛客观评估量表</span>
+  <h2>Clinical Pain Rating Scales: NRS, VAS, and the Oucher Scale</h2>
+  <p class="subtitle">数字评分法（图 23.2）、视觉模拟比色量表（图 23.3）与儿童 Oucher 照片量表（图 23.4）</p>
+</div>
+
+<div class="figure-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 20px 0;">
+  <div class="figure-card" style="padding: 12px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;">
+    <img src="images/ch23/ch23_p516_fig2_pain_scales.jpg" alt="Figure 23.2 Sample pain scales: Numeric Rating Scale and Verbal Descriptor Scale" class="responsive-img" style="max-height: 280px; object-fit: contain;">
+    <p class="figure-caption" style="margin-top: 6px; font-weight: 600; color: #1e3a8a;">FIGURE 23.2 Sample pain scales: 0–10 Numeric Rating Scale (NRS) and Verbal Descriptor Scale.</p>
+    <p class="figure-caption-zh" style="color: #4b5563; font-size: 0.85rem;">图 23.2 常用临床疼痛量表：0–10 数字评分量表（0=完全无痛，10=难以想象的最剧烈剧痛）与词语描述量表。</p>
+  </div>
+
+  <div class="figure-card" style="padding: 12px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;">
+    <img src="images/ch23/ch23_p516_fig3_visual_analogue.jpg" alt="Figure 23.3 Colour visual analogue scale" class="responsive-img" style="max-height: 280px; object-fit: contain;">
+    <p class="figure-caption" style="margin-top: 6px; font-weight: 600; color: #1e3a8a;">FIGURE 23.3 Colour visual analogue scale (VAS) from white/green (no pain) to dark red (severe pain).</p>
+    <p class="figure-caption-zh" style="color: #4b5563; font-size: 0.85rem;">图 23.3 彩色视觉模拟量表（VAS）：色阶从绿色（无痛）渐变至深红（无法耐受的重度疼痛）。</p>
+  </div>
+
+  <div class="figure-card" style="padding: 12px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;">
+    <img src="images/ch23/ch23_p516_fig4_oucher_scale.jpg" alt="Figure 23.4 The Oucher pain scale" class="responsive-img" style="max-height: 280px; object-fit: contain;">
+    <p class="figure-caption" style="margin-top: 6px; font-weight: 600; color: #1e3a8a;">FIGURE 23.4 The Oucher pain scale: dual 0–100 numeric and real photograph facial expression scale for children.</p>
+    <p class="figure-caption-zh" style="color: #4b5563; font-size: 0.85rem;">图 23.4 儿童 Oucher 疼痛量表：结合 0–100 数字刻度与真实儿童面部痛苦表情摄影照片，便于患儿精准指认。</p>
+  </div>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Standard Pain Scales: Because pain cannot be measured with a thermometer or blood test, standardized rating scales provide an objective common language for clients, support workers, and nurses: (1) Numeric Rating Scale (NRS, FIGURE 23.2)—the client rates their pain from 0 (no pain at all) to 10 (the worst pain imaginable); (2) Colour Visual Analogue Scale (VAS, FIGURE 23.3)—the client slides a marker along a 10-cm colored line; (3) The Oucher Pain Scale (FIGURE 23.4)—specially validated for pediatric clients, displaying graduated photographic facial expressions of children in varying degrees of distress.</p>
+  <p class="para-zh">标准化疼痛评估工具：由于疼痛无法直接用体温计或抽血化验精准测定，标准化疼痛量表为照护对象、支持工作人员与注册护士构筑了客观统一的临床沟通基准：(1) 数字评分量表（NRS，图 23.2）：长者用 0（完全无痛）到 10（无法忍受的最剧烈剧痛）对痛苦程度打分；(2) 视觉模拟比色量表（VAS，图 23.3）：长者在一根从白色/绿色过渡至深红色的10厘米线段上指认对应点；(3) 儿童 Oucher 疼痛量表（图 23.4）：专为儿童验证开发，右侧配有真实儿童从平静微笑到嚎啕大哭的递进照片，让表达受限的患儿轻松手指定位。</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-517">
+              <span class="marker-pill">p. 517</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">CLINICAL OBSERVATION & PAINAD / 疼痛定位与认知障碍评估</span>
+  <h2>Pain Localization and the PAINAD Assessment Protocol</h2>
+  <p class="subtitle">指导照护对象手指指认疼痛区域（图 23.5）与高级阿尔茨海默病疼痛评估量表（PAINAD）</p>
+</div>
+
+<div class="figure-card" style="margin: 20px 0;">
+  <div style="text-align: center;">
+    <img src="images/ch23/ch23_p517_fig5_pointing_pain.jpg" alt="Figure 23.5 Client points to the area of pain" class="responsive-img" style="max-height: 400px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+    <p class="figure-caption" style="margin-top: 8px; font-weight: 600; color: #1e3a8a;">FIGURE 23.5 A client points to the area of pain on their body.</p>
+    <p class="figure-caption-zh" style="color: #1e3a8a;">图 23.5 临床查体要则：鼓励照护对象直接用手指明确指认身体发生疼痛的精确解剖解剖区域。</p>
+  </div>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Pain Localization: Always ask the client to point to the exact location of their pain (FIGURE 23.5). Remember that pain can radiate. For example, abdominal pain may radiate to the back or shoulder, and hip pain may radiate down the thigh to the knee. Record the client’s exact description of location, onset, duration, and precipitating factors.</p>
+  <p class="para-zh">疼痛解剖定位：在评估时，必须首先请照护对象用手指明确指认感到疼痛的确切部位（图 23.5）。时刻牢记疼痛具有神经放射性：例如腹痛可能向腰背部或肩颈扩散，髋关节疼痛常沿股神经向下肢大腿前方放射至膝关节。记录并汇报时务必使用案主本人的原始词汇记录疼痛部位、发作时间、持续时长与加剧因素。</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Assessing Pain in Advanced Dementia: In clients with advanced dementia who have lost the cognitive and verbal capacity to use numeric scales or answer questions, the Pain Assessment in Advanced Dementia (PAINAD) Scale is utilized by the health care team (TABLE 23.1). The support worker plays a vital role by observing behavioural and physiological indicators across five clinical domains: breathing, negative vocalization, facial expression, body language, and consolability.</p>
+  <p class="para-zh">晚期认知症长者疼痛评估（PAINAD 量表）：对于已丧失认知能力与语言表达功能、无法理解数字量表或回答询问的重度认知症长者，医疗团队采用国际权威的晚期痴呆疼痛评估量表（PAINAD，表 23.1）。支持人员通过近距离生活照护，在五大临床维度上持续敏锐观察其行为与生理体征：呼吸状态、异常负面发声、面部表情、肢体体态语言以及能否被安抚安慰。</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-518">
+              <span class="marker-pill">p. 518</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">TABLE 23.1 / 临床评估量表细则</span>
+  <h2>The PAINAD Scale Scoring Criteria (Part 1)</h2>
+  <p class="subtitle">表 23.1 晚期认知症疼痛评估量表（PAINAD）评分细则：呼吸、发声、表情（总分0–10分）</p>
+</div>
+
+<div class="painad-table-wrapper" style="overflow-x: auto; margin: 20px 0;">
+  <table class="editorial-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+    <thead>
+      <tr style="background: #1e3a8a; color: #ffffff;">
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 22%;">Item / 评估指标</th>
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 26%;">0 Points / 0 分</th>
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 26%;">1 Point / 1 分</th>
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 26%;">2 Points / 2 分</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600; color: #1e3a8a;">Breathing Independent of Vocalization<br><span style="font-weight: 400; font-size: 0.8rem; color: #64748b;">自主呼吸节律</span></td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Normal</strong><br>呼吸均匀、平稳、安静且平顺自然</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Occasional laboured breathing / Short hyperventilation</strong><br>偶有费力呼吸或短暂的呼吸急促深快</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Noisy laboured / Long hyperventilation / Cheyne-Stokes</strong><br>持续嘈杂费力呼吸、长时间过度通气或潮式呼吸（呼吸暂停）</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600; color: #1e3a8a;">Negative Vocalization<br><span style="font-weight: 400; font-size: 0.8rem; color: #64748b;">异常负面发声</span></td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>None</strong><br>言语平静，无任何痛苦呻吟或抗拒发声</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Occasional moan/groan / Low level speech/muttering</strong><br>偶尔轻声呻吟、叹息或喃喃自语抱怨</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Repeated troubled calling out / Loud moaning / Crying</strong><br>持续大声喊叫呼救、痛苦嚎哭或剧烈呻吟</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600; color: #1e3a8a;">Facial Expression<br><span style="font-weight: 400; font-size: 0.8rem; color: #64748b;">面部表情</span></td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Smiling or Inexpressive</strong><br>面带微笑或神情平静放松、无紧张征象</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Sad / Frightened / Frown</strong><br>面色忧伤恐惧、眉头紧锁或偶现愁容</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Facial grimacing</strong><br>面部极度扭曲抽搐、龇牙咧嘴或咬紧牙关</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Pediatric Pain Assessment: Young children and toddlers may lack the cognitive and linguistic skills to describe pain. Crying and irritability in an infant can reflect many unmet needs (hunger, cold, soiled diaper, fear), not just pain. The support worker must observe changes in eating, sleep routines, clinginess, or unusual quietness. In northern indigenous Canadian communities, health teams utilize the culturally responsive Northern Pain Scale (FIGURE 23.6 on page 520), which utilizes cartoon faces depicting Inuit facial features to facilitate child communication.</p>
+  <p class="para-zh">儿童疼痛评估特殊考量：婴幼儿缺乏足够的词汇与认知能力来向大人准确描述疼痛。婴儿的嚎啕哭闹与烦躁可能源自多种生理未满足需求（饥饿、寒冷、尿布湿透或恐惧），未必全是疼痛。支持工作人员必须严密观察其日常进食量骤降、睡眠习惯改变、异常粘人或反常的过度安静。在加拿大北部原住民社区，医护人员推行因地制宜的“北方疼痛量表”（Northern Pain Scale，见第520页图 23.6），采用因纽特儿童面部卡通表情，极大消除了跨文化隔阂。</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-519">
+              <span class="marker-pill">p. 519</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">BOX 23.1 / 临床客观观察指征</span>
+  <h2>Signs and Symptoms of Pain in Clinical Practice</h2>
+  <p class="subtitle">框栏 23.1 疼痛多维客观临床指征：体态动作、面部微表情、发声改变与自主神经生理反射</p>
+</div>
+
+<div class="callout-box" style="margin: 20px 0; padding: 20px; background: #fef2f2; border: 1px solid #fee2e2; border-left: 4px solid #ef4444; border-radius: 6px;">
+  <h3 style="margin-top: 0; color: #b91c1c; font-size: 1.15rem;">BOX 23.1 Signs and Symptoms of Pain / 框栏 23.1 疼痛临床体征与症状</h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+    <div style="padding: 12px; background: #fff; border: 1px solid #fecaca; border-radius: 6px;">
+      <h4 style="margin: 0 0 6px 0; color: #991b1b;">Body Movements & Language / 肢体体态语言</h4>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #374151; line-height: 1.5;">
+        <li>Clenching fists; holding or protecting a body part (guarding) / 双手紧攥拳头；用手捂住或防御性保护患病部位</li>
+        <li>Restlessness, pacing, or rocking back and forth / 极度烦躁不安、在走廊踱步或身体前后摇晃</li>
+        <li>Curling into a tight fetal position; resisting repositioning / 蜷缩成紧绷的胎儿卧位；强烈抗拒翻身变换体位</li>
+        <li>Lying rigid, motionless, or unwilling to turn or deep breathe / 身体僵硬笔直、一动不敢动，拒绝咳嗽或深呼吸</li>
+      </ul>
+    </div>
+
+    <div style="padding: 12px; background: #fff; border: 1px solid #fecaca; border-radius: 6px;">
+      <h4 style="margin: 0 0 6px 0; color: #991b1b;">Facial Expressions / 面部微表情</h4>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #374151; line-height: 1.5;">
+        <li>Grimacing, frowning, or clenching the jaw and grinding teeth / 蹙眉龇牙、面容抽搐扭曲、咬紧牙关或频繁磨牙</li>
+        <li>Eyes tightly shut or wide, fearful stare / 双眼紧闭拒光，或双眼圆睁流露出极度恐惧慌乱神色</li>
+        <li>Flat, blank inexpressive stare mask / 神情木讷呆滞、目光空洞凝视前方（常掩盖剧烈持续钝痛）</li>
+      </ul>
+    </div>
+
+    <div style="padding: 12px; background: #fff; border: 1px solid #fecaca; border-radius: 6px;">
+      <h4 style="margin: 0 0 6px 0; color: #991b1b;">Vocalizations / 发声与言语反应</h4>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #374151; line-height: 1.5;">
+        <li>Moaning, groaning, whining, crying, or whimpering / 持续呻吟、叹息、抽泣嚎哭或发出微弱哀鸣</li>
+        <li>Screaming, grunting, or gasping with movement / 动作稍大即发出尖叫、喘粗气或倒吸凉气</li>
+        <li>Repeatedly calling out for help or repeating words / 反复大声呼唤救命，或不断重复某些短语求助</li>
+      </ul>
+    </div>
+
+    <div style="padding: 12px; background: #fff; border: 1px solid #fecaca; border-radius: 6px;">
+      <h4 style="margin: 0 0 6px 0; color: #991b1b;">Physiological Signs / 自主神经生理体征</h4>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #374151; line-height: 1.5;">
+        <li>Elevated blood pressure, tachycardia (rapid pulse), tachypnea / 血压明显骤升、心动过速脉搏飞快、呼吸急促表浅</li>
+        <li>Diaphoresis (profuse cold sweating) and pale/clammy skin / 额头手心冷汗涔涔、面色苍白湿冷</li>
+        <li>Dilated pupils, nausea, vomiting, or muscle tension / 瞳孔扩大、恶心呕吐伴全身骨骼肌强直紧绷</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Describing Pain Qualities: Always encourage the client to describe how their pain feels. Standard clinical descriptive words include: aching, burning, cramping, crushing, dull, gnawing, sharp, shooting, stabbing, throbbing, or tingling. Always quote the client’s exact words in your verbal report and clinical charting!</p>
+  <p class="para-zh">准确描述疼痛性质：始终耐心鼓励照护对象用他们自己的语言详述疼痛的具体感受。临床通用性质词汇包括：酸痛（Aching）、烧灼痛（Burning）、抽筋绞痛（Cramping）、压榨痛（Crushing）、隐痛钝痛（Dull）、啃咬痛（Gnawing）、锐痛（Sharp）、放射窜痛（Shooting）、刀割刺痛（Stabbing）、跳痛搏动痛（Throbbing）或麻木刺痛（Tingling）。在向护士口头汇报或书写支持照护记录时，必须严格引用案主的原汁原味原话！</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-520">
+              <span class="marker-pill">p. 520</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">PAINAD CONTINUED & FIGURE 23.6 / 认知症量表与北方疼痛量表</span>
+  <h2>The PAINAD Scale (Part 2) and the Northern Pain Scale</h2>
+  <p class="subtitle">表 23.1 续：肢体体态语言、安抚反应度评分细则与图 23.6 北方原住民面部表情量表实物图谱</p>
+</div>
+
+<div class="painad-table-wrapper" style="overflow-x: auto; margin: 20px 0;">
+  <table class="editorial-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+    <thead>
+      <tr style="background: #1e3a8a; color: #ffffff;">
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 22%;">Item / 评估指标</th>
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 26%;">0 Points / 0 分</th>
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 26%;">1 Point / 1 分</th>
+        <th style="padding: 10px; border: 1px solid #1e40af; width: 26%;">2 Points / 2 分</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600; color: #1e3a8a;">Body Language<br><span style="font-weight: 400; font-size: 0.8rem; color: #64748b;">肢体语言动作</span></td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Relaxed</strong><br>全身肌肉松弛自然，体态安详自如</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Tense / Distressed pacing / Fidgeting</strong><br>身体轻微紧绷、来回踱步焦虑、手足局促不安小动作多</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Rigid / Clenched fists / Knees pulled up / Pulling/pushing / Striking out</strong><br>四肢僵直抗拒、紧握双拳、双膝紧贴腹部、推搡抗拒甚至击打攻击他人</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600; color: #1e3a8a;">Consolability<br><span style="font-weight: 400; font-size: 0.8rem; color: #64748b;">可安抚程度</span></td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>No need to console</strong><br>案主神情心满意足，无需外界安抚</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Distracted or reassured by voice or touch</strong><br>支持人员说话温和安慰或轻触抚拍后，异常焦虑行为可暂时中断平息</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;"><strong>Unable to console, distract, or reassure</strong><br>无论如何温和对话、拥抱抚慰均无法平息其痛苦躁动与嚎哭</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size: 0.85rem; color: #64748b; margin-top: 6px;"><strong>PAINAD Scoring Interpretation / 评分临床界定：</strong> Total score ranges from 0 to 10. A score of 1–3 indicates mild pain; 4–6 moderate pain; 7–10 severe pain. Any score of 4 or higher requires immediate nursing intervention and physician notification.</p>
+</div>
+
+<div class="figure-card" style="margin: 24px 0;">
+  <div class="section-header" style="margin-bottom: 12px;">
+    <span class="badge">FIGURE 23.6 / 原住民与儿童文化适应量表</span>
+    <h2>The Northern Pain Scale for Indigenous and Northern Communities</h2>
+    <p class="subtitle">图 23.6 北方原住民面部表情量表：融合因纽特人面孔特征的 6 阶段卡通面部表情递进图谱</p>
+  </div>
+
+  <div style="text-align: center; margin-bottom: 12px;">
+    <img src="images/ch23/ch23_p520_fig6_northern_pain_scale.jpg" alt="Figure 23.6 Northern Pain Scale with 6 Inuit faces" class="responsive-img" style="max-height: 280px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+    <p class="figure-caption" style="margin-top: 8px; font-weight: 600; color: #1e3a8a;">FIGURE 23.6 Northern Pain Scale: 0 (No hurt) to 5 (Hurts worst). (Source: Ellis, J. A., et al., adapted from Wong/Baker FACES® Pain Rating Scale)</p>
+    <p class="figure-caption-zh" style="color: #1e3a8a;">图 23.6 北方疼痛量表：0（完全不痛）到 5（痛到极点），专为加拿大北极圈地区因纽特与原住民儿童量身设计。（来源：Elsevier）</p>
+  </div>
+</div>
+
+            <div class="page-anchor-marker" id="page-521">
+              <span class="marker-pill">p. 521</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">PAIN RELIEF INTERVENTIONS / 舒缓镇痛护理干预</span>
+  <h2>Comprehensive Measures to Relieve Pain and Promote Comfort</h2>
+  <p class="subtitle">护理计划中非药物舒缓手段（BOX 23.4）、背部推拿抚摸操作规程与药物起效安全保障</p>
+</div>
+
+<div class="callout-box" style="margin: 20px 0; padding: 18px; background: #f0fdf4; border: 1px solid #dcfce7; border-left: 4px solid #16a34a; border-radius: 6px;">
+  <div style="font-weight: 700; color: #15803d; font-size: 1.05rem; margin-bottom: 8px;">BOX 23.4 Care Plan Measures to Relieve Pain / 框栏 23.4 舒缓疼痛的综合护理干预措施</div>
+  <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: #374151;">
+    <li><strong>Distraction:</strong> Direct attention away from pain by conversing, reading, playing games, or listening to calm music. / 分散注意力：通过亲切谈心、阅读书报、下棋或播放舒缓优美的轻音乐，将大脑注意力导离疼痛。</li>
+    <li><strong>Relaxation & Guided Imagery:</strong> Assist the client to breathe deeply and slowly, and visualize tranquil, peaceful scenes. / 引导放松与意象冥想：指导长者进行缓慢深长的腹式深呼吸，引导其在脑海中想象平静的海滩或森林。</li>
+    <li><strong>Positioning & Alignment:</strong> Support the client in good anatomical alignment; use pillows under knees, head, or arms. / 舒适体位支撑：协助保持符合人体工学的舒适解剖卧位，遵护理计划在膝下、腰背或手臂垫托软枕减压。</li>
+    <li><strong>Back Massage:</strong> Provide a gentle, slow 3- to 5-minute back massage using warmed lotion; stimulates circulation and relaxation. / 背部温和推拿：使用掌心搓热的润肤乳进行3至5分钟缓慢长抚摩（Effleurage），促进深层循环并消除背肌痉挛。</li>
+    <li><strong>Bed Comfort:</strong> Keep bed linens completely clean, dry, wrinkle-free, and ensure top blankets are not tightly pinning feet. / 床铺整洁无皱：保持床单绝对清洁干燥无渣屑，床尾铺设防压折褶以防被褥重力压制脚背。</li>
+    <li><strong>Temperature & Ventilation:</strong> Maintain comfortable room warmth (20°C–23°C); avoid chills and eliminate drafts. / 恒定室温与通风：保持适宜温度，避免长者受凉发抖，严禁穿堂风直接直吹。</li>
+  </ul>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Administering Pain Medications & Safety Safeguards: Medications ordered by a physician provide chemical analgesia. The nurse administers the medication. CRITICAL PROTOCOL: (1) Wait at least 30 to 60 minutes after oral pain medication is administered before attempting any transfer, bathing, or wound dressing change! This allows the drug to reach therapeutic plasma levels, ensuring the procedure is as painless as possible. (2) Always protect the client from fall injuries after analgesics are given—opioids and analgesics cause sedation, orthostatic hypotension, and dizziness. Keep the bed in its lowest position, deploy bed rails as per the care plan, and ensure the call bell is right by their hand!</p>
+  <p class="para-zh">止痛药物起效等待与人身安全双重防线：医师开具的镇痛药物由注册护士负责按时给药。<strong>两大必须铭记于心的护理安全铁律：(1) 严守药物起效等待时间：口服止痛药给药后必须耐心等待至少30至60分钟方可开始搬运、擦浴或伤口更换敷料等操作！</strong>让药物充分进入血液循环发挥最大镇痛效应，彻底避免长者在操作中承受剧烈折磨。(2) 药物服用后严防意外跌倒坠床：阿片类与强效镇痛药物常引起嗜睡、体位性低血压与头晕共济失调；给药后必须始终将病床降至最低贴地高度、按护理计划立起安全防护床栏，并确保呼叫电铃安放在长者一触即达的手指边！</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-522">
+              <span class="marker-pill">p. 522</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">SLEEP SCIENCE / 睡眠生理学</span>
+  <h2>The Physiology of Rest and Sleep Across the Lifespan</h2>
+  <p class="subtitle">生理休息与恢复性深睡眠机制、表 23.1 人体生命周期睡眠时长需求与睡眠质量影响因素</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Rest and sleep are fundamental human biological needs essential for life, physical healing, and emotional restoration. During rest, physical activity is paused, mental stress is relieved, and the body conserves energy. During sleep, cellular mitosis and tissue repair accelerate, protein synthesis peaks, metabolic rates decrease, and the brain consolidates memories while clearing toxic neurochemical byproducts.</p>
+  <p class="para-zh">休息与睡眠是维持人类生命维系、躯体组织修复与心理精神复原不可或缺的基本生理需求。在休息期间，全身肌肉体力消耗暂停，精神心理压力得到排解，机体保存生理能量。而在深度睡眠中，细胞有丝分裂与创面修复速度显著加快，生长激素分泌与蛋白质合成达到峰值，基础代谢率下降，大脑清除代谢废物神经毒素并进行记忆巩固重构。</p>
+</div>
+
+<div class="sleep-table-wrapper" style="overflow-x: auto; margin: 20px 0;">
+  <table class="editorial-table" style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+    <thead>
+      <tr style="background: #0284c7; color: #ffffff;">
+        <th style="padding: 10px; border: 1px solid #0369a1; width: 30%;">Age Group / 年龄群体</th>
+        <th style="padding: 10px; border: 1px solid #0369a1; width: 30%;">Average Sleep Required / 每日平均所需睡眠时长</th>
+        <th style="padding: 10px; border: 1px solid #0369a1; width: 40%;">Sleep Characteristics / 典型睡眠节律生理特征</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">Infants (0–1 year) / 婴儿</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">14 to 17 hours / 天</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">多相睡眠节律，昼夜多次小睡，REM快速眼动睡眠占比极高</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">Toddlers (1–3 years) / 幼儿</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">11 to 14 hours / 天</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">夜间连续睡眠加白天 1~2 次午睡</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">School-age (6–12 years) / 学龄期</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">9 to 11 hours / 天</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">深睡眠（慢波睡眠阶段）充沛，支持骨骼肌肉快速生长</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">Teenagers (13–18 years) / 青少年</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">8 to 10 hours / 天</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">褪黑素分泌生理性推迟，表现出“夜猫子”晚睡晚起倾向</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">Adults (18–64 years) / 成年人</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">7 to 9 hours / 天</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">稳定的单相夜间睡眠周期，易受职业生活压力与轮班制侵蚀</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600; color: #1e3a8a;">Older Persons (65+ years) / 高龄长者</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600; color: #1e3a8a;">7 to 8 hours / 天</td>
+        <td style="padding: 10px; border: 1px solid #cbd5e1;">深慢波睡眠显著减少，夜间觉醒次数增多；常需白天多次打盹小睡补偿</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Factors Influencing Sleep Quality: (1) Illness: Respiratory dyspnea, arthritis pain, urinary frequency, and chronic coughing disrupt sleep cycles. (2) Nutrition: Caffeine in coffee, tea, chocolate, and colas is a potent CNS stimulant that delays sleep onset; conversely, tryptophan (an amino acid found in warm milk, cheese, and poultry) promotes serotonin and melatonin synthesis, naturally inducing drowsiness. (3) Physical Exercise: Regular daytime physical activity promotes restorative deep sleep, BUT vigorous exercise within 2 hours of bedtime acts as a stimulant that impairs falling asleep. Allow at least 2 hours of winding down between exercise and bed!</p>
+  <p class="para-zh">影响睡眠质量的核心要素：(1) 躯体疾病：呼吸困难、关节炎夜间疼痛、前列腺增生夜尿频繁及慢性咳嗽都会频繁打断睡眠周期。(2) 饮食营养：咖啡、浓茶、巧克力与可乐中所含的咖啡因属于强效中枢神经兴奋剂，显著阻碍入睡；相反，温牛奶、奶酪及禽肉中所富含的色氨酸（Tryptophan）是大脑合成5-羟色胺与褪黑素的前体物质，能天然诱发舒适睡意。(3) 体育锻炼：白天的适度有氧活动能加深夜间深睡眠，但<strong>睡前2小时内绝对禁止进行剧烈运动</strong>，运动诱发的高体温与交感神经亢奋需要至少2小时才能平复降温！</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-523">
+              <span class="marker-pill">p. 523</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">SLEEP PATHOLOGY / 睡眠病理学</span>
+  <h2>Sleep Disorders and Clinical Manifestations of Insomnia</h2>
+  <p class="subtitle">常见睡眠障碍征象（BOX 23.5）、机构夜间照料对昼夜节律的破坏与失眠症三大临床分型</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Sleep Disorders: Persistent disturbances in the amount, timing, and quality of sleep are called sleep disorders. They cause daytime somnolence, exhaustion, impaired judgment, emotional irritability, slowed reaction time, and significantly elevated fall risks. Facility routines—such as early morning wake-up schedules, noisy nighttime checks, and bright hallway lights—often directly cause institutional sleep deprivation. Progressive care philosophies like Supportive Pathways advocate flexible routines allowing residents to awaken naturally.</p>
+  <p class="para-zh">睡眠障碍概述：睡眠时间、生物节律或睡眠质量长期发生持续性紊乱统称为睡眠障碍。这会导致日间嗜睡倦怠、精神萎靡、认知判断力下降、情绪易怒暴躁、行动反应迟缓并使跌倒骨折风险急剧攀升。照护机构的刻板管理规程——如清晨过早开灯测血压、夜间巡房门轴异响与强光手电——往往是人为制造“医源性睡眠剥夺”的罪魁祸首。现代人性化照护理念（如 Supportive Pathways 支持性路径）强烈倡导弹性作息，允许长者清晨自然睡到自然醒。</p>
+</div>
+
+<div class="callout-box" style="margin: 20px 0; padding: 18px; background: #fff7ed; border: 1px solid #ffedd5; border-left: 4px solid #ea580c; border-radius: 6px;">
+  <div style="font-weight: 700; color: #c2410c; font-size: 1.05rem; margin-bottom: 8px;">BOX 23.5 Signs and Symptoms of Sleep Disorders / 框栏 23.5 睡眠障碍临床警示指征</div>
+  <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: #374151;">
+    <li>Taking longer than 30 minutes to fall asleep night after night. / 每晚辗转反侧超过30分钟以上无法入睡。</li>
+    <li>Awakening frequently throughout the night and lying awake for prolonged periods. / 夜间频繁惊醒且每次醒来后长达数小时无法再次入眠。</li>
+    <li>Waking up very early in the morning and being completely unable to fall back asleep. / 清晨三四点异常过早醒来，再也无法睡着。</li>
+    <li>Daytime fatigue, nodding off during activities, and falling asleep during meals or conversation. / 白天极度困倦嗜睡，在进餐、聊天或看电视时频繁打瞌睡。</li>
+    <li>Difficulty concentrating, impaired short-term memory, and poor executive functioning. / 注意力涣散、近期记忆力显著减退、思维迟钝。</li>
+    <li>Irritability, mood swings, heightened emotional reactivity, or paranoia. / 情绪焦躁易怒、喜怒无常、情绪脆弱爱哭或出现猜忌多疑。</li>
+  </ul>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Insomnia: Insomnia is a persistent, distressing condition where the person cannot fall asleep (sleep onset insomnia), cannot stay asleep (sleep maintenance insomnia), or awakens prematurely and cannot resume sleep (terminal insomnia). Chronic illness, persistent pain, fear of dying in sleep, grief, financial stress, or relocation to a nursing facility are pervasive triggers among older clients.</p>
+  <p class="para-zh">失眠症深度剖析：失眠症是一种令人痛苦不堪的持续性睡眠病理状态，主要表现为三大临床亚型：(1) 入睡困难型：躺在床上翻来覆去久久无法合眼；(2) 睡眠维持障碍型：夜间稍有动静便频繁醒来；(3) 终末早醒型：天未破晓便清醒且脑中思绪万千无法续睡。慢性病痛折磨、对在睡眠中死亡的未知恐惧、丧偶哀恸、经济忧虑以及搬离故居入住陌生照护院，是诱发老年人顽固失眠的最普遍高危诱因。</p>
+</div>
+
+            <div class="page-anchor-marker" id="page-524">
+              <span class="marker-pill">p. 524</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">SLEEP EMERGENCIES & SAFETY / 睡眠安全与梦游症</span>
+  <h2>Sleep Deprivation and Safe Management of Sleepwalking</h2>
+  <p class="subtitle">身心双重睡眠剥夺综合征（BOX 23.6）与梦游症（Somnambulism）防跌倒导引规程</p>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Sleep Deprivation: When a person suffers from inadequate quantity or disrupted quality of sleep over consecutive nights, profound physiological and psychological breakdown occurs. Symptoms of sleep deprivation include both autonomic dysregulation and neurocognitive distress (BOX 23.6).</p>
+  <p class="para-zh">睡眠剥夺综合征：当机体连续数个夜晚承受睡眠时间严重不足或深睡眠反复被粗暴打断时，将引发严重的全身生理系统与神经心理崩溃。睡眠剥夺的临床症状表现为植物神经功能紊乱与神经认知双重损害（框栏 23.6）。</p>
+</div>
+
+<div class="callout-box" style="margin: 20px 0; padding: 18px; background: #fdf2f8; border: 1px solid #fce7f3; border-left: 4px solid #ec4899; border-radius: 6px;">
+  <div style="font-weight: 700; color: #be185d; font-size: 1.05rem; margin-bottom: 8px;">BOX 23.6 Symptoms of Sleep Deprivation / 框栏 23.6 睡眠剥夺临床综合征</div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+    <div>
+      <h4 style="margin: 0 0 6px 0; color: #9d174d;">Physiological Signs / 躯体生理表征</h4>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #374151; line-height: 1.5;">
+        <li>Hand tremors, slowed reflexes, and uncoordinated gait / 双手不自主细微震颤、神经反射迟钝、步态踉跄蹒跚</li>
+        <li>Ptosis (drooping eyelids), bloodshot red eyes, puffy dark circles / 上睑下垂无力、眼球充血布满血丝、眼眶浮肿黑眼圈</li>
+        <li>Sensitivity to pain markedly increases (lowered pain threshold) / 痛阈显著降低，极轻微刺激即引发剧烈痛觉过敏</li>
+        <li>Arrhythmias (irregular heartbeat) and blunted immune response / 心律失常早搏发作、免疫力低下极易继发呼吸道感染</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="margin: 0 0 6px 0; color: #9d174d;">Psychological Signs / 精神心理表征</h4>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #374151; line-height: 1.5;">
+        <li>Severe agitation, restlessness, hyperactivity, or disorientation / 烦躁躁狂、坐立不安、谵妄定向力障碍</li>
+        <li>Slurred speech, word-finding difficulty, and slowed cognition / 言语含糊不清、找词困难、反应极为迟钝</li>
+        <li>Visual or auditory hallucinations and paranoid delusions / 出现生动的视幻觉、听幻觉及被害妄想</li>
+        <li>Acute confusion, delirium, or severe unprovoked depression / 急性意识错乱、重度抑郁厌世悲观</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bilingual-para">
+  <p class="para-en">Sleepwalking (Somnambulism): Sleepwalkers rise from bed and walk about while remaining in deep NREM sleep. They are completely unaware of their surroundings and have total amnesia regarding the event on awakening. Children sleepwalk more frequently, but stress, fatigue, and sedatives can trigger sleepwalking in adults. CRITICAL SAFETY PROTOCOL: The risk of catastrophic falls is extreme! Clients with IV lines or urinary catheters can rip them out, causing severe hemorrhage. PROTOCOL: Never startle or shake a sleepwalking client! Approach calmly, speak in a soothing, low whisper, gently guide them away from obstacles, and escort them back to bed. Awaken them only gently if necessary, as abrupt waking causes extreme disorientation and panic.</p>
+  <p class="para-zh">梦游症（Somnambulism）应急安全管理：梦游者在处于深慢波非快速眼动睡眠阶段中突然从床上坐起甚至在室内走动，通常持续数分钟至数十分钟。长者在此状态下对周围环境完全失去意识，清醒后对发生的一切完全遗忘。虽然梦游在儿童中更多见，但极度精神压力、慢性疲劳及某些中枢镇静药物可诱发成人梦游。<strong>致命性安全防范关键：梦游者面临极高的坠楼、摔下楼梯或磕碰骨折风险！留置静脉输液管或导尿管的患者在梦游中常粗暴拔除管路，诱发大出血与尿道撕裂。支持人员核心处置规范：绝对严禁大声惊叫或猛力摇晃惊醒梦游者！务必放轻脚步从容靠近，用极其温柔低沉的声音轻声安慰，轻柔挽扶其手臂引导其绕开障碍物，护送其返回病床重新躺下。非必要不要强行唤醒，因突然受惊醒来会引发长者极度的恐慌惊厥与急性定向力丧失。</strong></p>
+</div>
+
+            <div class="page-anchor-marker" id="page-525">
+              <span class="marker-pill">p. 525</span>
+            </div>
+            
+<div class="section-header">
+  <span class="badge">BOX 23.2 / 睡眠促进实务总则</span>
+  <h2>Guidelines for Promoting Rest and Restorative Sleep</h2>
+  <p class="subtitle">框栏 23.2 促进案主身心休息与深度睡眠全方位临床支持实务指引</p>
+</div>
+
+<div class="callout-box" style="margin: 20px 0; padding: 20px; background: #ecfdf5; border: 1px solid #d1fae5; border-left: 4px solid #10b981; border-radius: 6px;">
+  <h3 style="margin-top: 0; color: #047857; font-size: 1.15rem;">BOX 23.2 Guidelines for Promoting Rest and Sleep / 框栏 23.2 促进休息与睡眠实务守则</h3>
+  <ul style="margin: 0; padding-left: 20px; line-height: 1.7; color: #374151;">
+    <li><strong>Honor Individual Bedtime Rituals:</strong> Assist with personal routines—reading a chapter of a book, watching evening news, saying bedtime prayers, or having a light snack (e.g., warm milk and crackers). / 尊重个体化睡前仪式：协助长者落实既往熟悉的晚间作息习惯——翻阅书报、收看晚间新闻、睡前祈祷、或享用清淡睡前加餐（如温牛奶配低糖苏打饼干）。</li>
+    <li><strong>Meet Physical Comfort Needs:</strong> Assist with elimination right before bed; offer warm water for face/mouth care, and provide fresh incontinence products to prevent nighttime wetness. / 睡前生理需求完全满足：睡前主动提醒协助如厕排空膀胱；提供温水洗脸刷牙；为失禁长者更换全新高吸收干爽纸尿裤，防止夜间尿湿受惊。</li>
+    <li><strong>Optimize Sleeping Alignment:</strong> Assist the client into their preferred, doctor-approved sleeping position; support painful joints and back with soft pillows. / 调整解剖舒适体位：协助取其最舒适且医嘱允许的睡姿（如30度侧卧位）；在双膝间、腰背及上肢垫托软枕，消除关节压痛。</li>
+    <li><strong>Bed Linen Preparation:</strong> Ensure bottom sheets are taut, smooth, clean, and completely dry. Provide the client's choice of extra blankets; ensure top sheets are not tightly tucked over toes. / 整理舒适无皱床褥：彻底抚平床单消除任何微小皱褶；按长者意愿添置轻柔保暖毯；在床尾预留充足足部防压折褶。</li>
+    <li><strong>Environmental Peace:</strong> Close curtains and doors gently to block out hallway lights and conversation; dim all lights and keep a gentle night-light on for fall prevention. / 营造幽静昏暗环境：轻声合上房门与窗帘，阻隔走廊光线与噪音；关掉顶灯，保持低瓦数地脚夜灯点亮以防夜间意外起夜摔倒。</li>
+    <li><strong>Address Night Wandering in Dementia:</strong> For clients with dementia who wander at night, provide a safe, barrier-free, monitored walking path rather than physically restraining them. / 科学应对认知症夜间游荡：对于伴有日落综合征、夜间徘徊游荡的长者，应在专人看护下提供安全无障碍的漫步通道，绝对严禁实施任何身体约束！</li>
+  </ul>
+</div>
+
+            <div class="page-anchor-marker" id="page-526">
+              <span class="marker-pill">p. 526</span>
+            </div>
+            
+<div class="review-container">
+  <div class="section-header" style="margin-bottom: 20px;">
+    <span class="badge">CHAPTER REVIEW / 本章学术要点</span>
+    <h2>Chapter 23 Review: Core Takeaways & Critical Thinking Case</h2>
+    <p class="subtitle">第23章 核心理论知识架构、临床批判性思维案例情境与全真自测试题（第1–10题）</p>
+  </div>
+
+  <div class="key-points-card" style="margin-bottom: 24px; padding: 20px; background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #3b82f6; border-radius: 6px;">
+    <h3 style="margin-top: 0; color: #1d4ed8; font-size: 1.15rem;">KEY POINTS / 核心学术要点梳理</h3>
+    <ul style="margin: 0; padding-left: 20px; line-height: 1.7; color: #374151;">
+      <li>Comfort and pain are completely subjective, personal experiences shaped by biology, genetics, past experiences, and cultural traditions. / 舒适感与疼痛体验具有完全的主观个性化特征，深刻受制于生物机能、既往创伤经历与多元文化传统的塑造。</li>
+      <li>Pain types: Acute (<6 months), Chronic/Persistent (>6 months), Radiating (extends along nerves), Referred (felt distant from source), Phantom limb (real pain in amputated limb). / 疼痛核心分型：急性痛（<6个月）、慢性痛（>6个月）、放射痛（沿神经皮节扩散）、牵涉痛（体表与内脏病灶隔离）与幻肢痛（截肢残端真实痛觉）。</li>
+      <li>Clients with dementia still feel pain but may be unable to report it verbally; health teams assess pain using the 5-domain PAINAD scale. / 认知障碍长者痛觉敏感依然存在但常丧失言语主诉功能，支持团队必须通过 PAINAD 量表五大行为体征严密评估。</li>
+      <li>Pain medications require 30 to 60 minutes to take effect; always wait before initiating painful procedures, and protect clients from sedation fall risks. / 止痛药需等待30至60分钟方能起效；操作前必须严守等待窗口，并强化病床最低位防跌倒保护。</li>
+      <li>Rest means calmness and relaxation; moderate exercise like walking is NOT rest. / 生理休息意味着全身心处于安静、放松且无耗能状态；散步等中等强度运动绝不可算作休息。</li>
+      <li>Sleep requirements decrease with age: Older persons need 7–8 hours, but have less deep sleep and more frequent nighttime awakenings. / 睡眠时长随年龄增长而生理性递减：老年人需7~8小时，但慢波深睡眠比例缩水，夜间觉醒频次增加。</li>
+      <li>Insomnia, sleep deprivation, and sleepwalking are serious disorders. Never shake a sleepwalker; guide them gently back to bed. / 失眠、慢性睡眠剥夺与梦游症危害极大；面对梦游长者严禁惊吓摇晃，必须轻声细语温和引导回床。</li>
+    </ul>
+  </div>
+
+  <div class="critical-thinking-box" style="margin-bottom: 28px; padding: 18px; background: #fdf4ff; border: 1px solid #fae8ff; border-left: 4px solid #a855f7; border-radius: 6px;">
+    <h4 style="margin: 0 0 8px 0; color: #7e22ce;">Critical Thinking in Practice / 临床批判性思维案例挑战</h4>
+    <p style="margin: 0 0 8px 0; font-size: 0.95rem; color: #374151; line-height: 1.6;">
+      <strong>Clinical Dilemma:</strong> Mr. Hawn is a newly admitted resident to your long-term care centre. He was admitted last month after his wife of 58 years passed away. He could no longer care for himself at home. Mr. Hawn is withdrawn, uncommunicative, and frequently displays angry outbursts toward staff. He is impatient and agitated when his requests are not met instantly. He sleeps very poorly, pacing his room, and panics if staff attempt to turn off his room lights at night.
+    </p>
+    <p style="margin: 0; font-size: 0.9rem; color: #4c1d95; line-height: 1.6;">
+      <strong>Action Required:</strong> (1) Explain the psychological and physiological root causes for Mr. Hawn's agitation and insomnia (loss of lifelong companion, relocation trauma, loss of control, fear of the dark/dying). (2) Formulate a client-centred support plan to promote his comfort, reduce his anxiety, and restore his sleep without confrontation.
+    </p>
+  </div>
+</div>
+
+            <div class="page-anchor-marker" id="page-527">
+              <span class="marker-pill">p. 527</span>
+            </div>
+            
+<div class="quiz-wrapper">
+  <div class="section-header" style="margin-bottom: 20px;">
+    <span class="badge">OFFICIAL REVIEW BANK / 官方权威题库</span>
+    <h2>Chapter 23 Practice Examination & Publisher Answer Key</h2>
+    <p class="subtitle">第23章 课后全真自测试题（第1–5题是非判断题，第6–12题单项选择题，共12题）与官方权威精解</p>
+  </div>
+
+  <div class="quiz-container" id="ch23-quiz-interactive-mount">
+    <!-- Interactive Quiz rendered via JavaScript from CH23_QUIZ_DATA -->
+  </div>
+</div>
+
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch22')">← 上一章：第 22 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch23-quiz')">✍️ 12 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 24 章（测量身高体重与生命体征，29页）正在编排流水线中，即将上线！')">下一章：第 24 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch22.html" class="sbn-btn sbn-prev">← 上一章：第 22 章 (皮肤照护与创面压疮预防)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch23-quiz" class="sbn-btn sbn-quiz">✍️ 12 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 24 章（测量身高体重与生命体征，29页）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 24 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch23_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
