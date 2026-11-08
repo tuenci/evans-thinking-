@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 47: End-of-Life Care · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 47</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html">第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+<option value="psw-ch24.html">第 24 章 · 测量身高、体重与生命体征</option>
+<option value="psw-ch25.html">第 25 章 · 医学术语与专业缩写</option>
+<option value="psw-ch26.html">第 26 章 · 制定照护计划、口头交班汇报与书面病历记录</option>
+<option value="psw-ch27.html">第 27 章 · 营养与体液照护</option>
+<option value="psw-ch28.html">第 28 章 · 肠内营养与静脉输液照护</option>
+<option value="psw-ch29.html">第 29 章 · 排尿照护与留置导尿管</option>
+<option value="psw-ch30.html">第 30 章 · 肠道排泄照护与造口管理</option>
+<option value="psw-ch31.html">第 31 章 · 生长与发育全生命周期</option>
+<option value="psw-ch32.html">第 32 章 · 人体结构与功能</option>
+<option value="psw-ch33.html">第 33 章 · 常见疾病与机体功能障碍</option>
+<option value="psw-ch34.html">第 34 章 · 听力与视力障碍</option>
+<option value="psw-ch35.html">第 35 章 · 言语和语言障碍</option>
+<option value="psw-ch36.html">第 36 章 · 发育障碍与发育迟缓残疾</option>
+<option value="psw-ch37.html">第 37 章 · 精神健康障碍</option>
+<option value="psw-ch38.html">第 38 章 · 定向障碍、谵妄与认知症痴呆</option>
+<option value="psw-ch39.html">第 39 章 · 促进氧合</option>
+<option value="psw-ch40.html">第 40 章 · 冷热敷应用与临床物理疗法</option>
+<option value="psw-ch41.html">第 41 章 · 婴儿及其父母的照护</option>
+<option value="psw-ch42.html">第 42 章 · 儿童与青少年照护与家庭支持</option>
+<option value="psw-ch43.html">第 43 章 · 老年人身心照护</option>
+<option value="psw-ch44.html">第 44 章 · 家庭环境管理</option>
+<option value="psw-ch45.html">第 45 章 · 用药协助与药物管理</option>
+<option value="psw-ch46.html">第 46 章 · 在急性期医疗机构中工作</option>
+<option value="psw-ch47.html" selected>第 47 章 · 临终关怀与生命末期照护</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 47 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 40:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 47 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">End-of-Life Care</h1>
+      <h2 class="hero-title-cn">临终关怀与生命末期照护：终末期疾病本质、各年龄段与多元文化对死亡的态度、临终者权利法案（Dying Person's Bill of Rights）、身心灵全方位照护（疼痛控制、听觉是最后消失的感觉、定时轻柔翻身防压疮、半卧位与侧卧位保持呼吸通畅、口腔与皮肤护理）、家属心理慰藉与喘息照护（Respite care）、安宁姑息疗护哲学（Palliative Care & Hospice）、临终法律议题（预先指示Advance Directives/生前预嘱Living Wills/人身照护授权代理人Power of Attorney）、不复苏DNR/允许自然死亡AND医嘱（绝不执行CPR但全力维持舒适护理）、加拿大医疗协助死亡MAID法案与支持人员法定边界、库伯勒-罗斯哀伤五阶段（否认/愤怒/协议/抑郁/接纳）、濒死期临床先兆（陈-施氏呼吸Cheyne-Stokes、濒死喉鸣Death rattle、外周微循环花斑Mottling、意识丧失）、死亡确证体征与宣告死亡法定资质、尸僵形成机制（死后2-4小时发生）、以及协助遗体善后护理实操规程（仰卧平卧、头肩垫小枕防面部紫变淤血、闭合双眼、复位假牙托住下颌、覆盖床单至下巴供家属瞻仰、系识别标签、裹尸袋密封冷藏交接）</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 1110–1129 · 12 道全真自测题</span>
+        <span class="meta-item">专业音频：40:00</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch47-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch47" aria-label="Chapter 47 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.1110–1129 · 共 20 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-1110">第 1110 页 · Chapter Opener & Learning Objectives (本章开篇与学习目标)</option><option value="page-1111">第 1111 页 · Attitudes Toward Death, Life-Threatening Illness & Key Terms (死亡态度、终末期疾病与核心术语)</option><option value="page-1112">第 1112 页 · Cultural, Religious Beliefs & Age Responses to Death (文化信仰与各年龄段对死亡的认知)</option><option value="page-1113">第 1113 页 · Caring for the Dying Client: Emotional & Spiritual Needs, Box 47.1 (临终关怀：身心灵需求与临终者权利法案)</option><option value="page-1114">第 1114 页 · Meeting Physical Needs: Pain, Senses, Skin, Oral Care & Hydration (生理需求照护：疼痛管理、感觉机能、口腔与皮肤护理)</option><option value="page-1115">第 1115 页 · Comforting the Family & Meeting Loved Ones' Needs (安抚临终者家属与家属照护支持)</option><option value="page-1116">第 1116 页 · The Role of Support Workers with Families & Respite Care (家属陪伴支持与喘息照护)</option><option value="page-1117">第 1117 页 · Palliative Care & Hospice Philosophy (姑息照护与安宁疗护理念及跨学科团队)</option><option value="page-1118">第 1118 页 · Legal Issues: Advance Directives, Living Wills & Power of Attorney (临终法律议题：预先指示、生前预嘱与委托代理人)</option><option value="page-1119">第 1119 页 · DNR Orders, Substitute Decision-Makers & Organ Donation (不复苏医嘱DNR、替代决策者与器官捐献)</option><option value="page-1120">第 1120 页 · Medical Assistance in Dying (MAID) Legislation in Canada (加拿大安乐死/医疗协助死亡MAID法案)</option><option value="page-1121">第 1121 页 · The Experience of Grief & Professional Support Communication (哀伤体验、有效沟通与支持性回应原则)</option><option value="page-1122">第 1122 页 · Theories of Grief: Kübler-Ross 5 Stages & Bowlby/Worden Models (哀伤心理学理论：库伯勒-罗斯五阶段模型)</option><option value="page-1123">第 1123 页 · Signs of Approaching Death & Clinical Manifestations (临终濒死先兆与生理征象)</option><option value="page-1124">第 1124 页 · Signs of Death, Rigor Mortis & Cultural Death Rituals (死亡确证体征、尸僵形成与多元文化丧葬习俗)</option><option value="page-1125">第 1125 页 · Postmortem Care Principles & Preparing for Autopsy (遗体护理原则、尸检准备与机构感控规范)</option><option value="page-1126">第 1126 页 · Procedure: Assisting with Postmortem Care Part 1 (实操规程：协助遗体护理第 1 部分，图 47.1)</option><option value="page-1127">第 1127 页 · Procedure: Assisting with Postmortem Care Part 2 (实操规程：协助遗体护理第 2 部分，裹尸与物品交接)</option><option value="page-1128">第 1128 页 · Chapter Review, Key Points, Critical Thinking & Practice Questions 1–8 (本章回顾、核心要点与真题测验 1–8)</option><option value="page-1129">第 1129 页 · Practice Questions 9–12, Answers & Clinical Rationales (真题测验 9–12、官方标准答案与临床精解)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-1110" class="cp-chip" id="cp-chip-47-1110" data-page="1110" onclick="handlePageChipClick(event, 'page-1110')" title="第 1110 页 · Chapter Opener & Learning Objectives (本章开篇与学习目标)"><span class="cp-num">p.1110</span></a><a href="#page-1111" class="cp-chip" id="cp-chip-47-1111" data-page="1111" onclick="handlePageChipClick(event, 'page-1111')" title="第 1111 页 · Attitudes Toward Death, Life-Threatening Illness & Key Terms (死亡态度、终末期疾病与核心术语)"><span class="cp-num">p.1111</span></a><a href="#page-1112" class="cp-chip" id="cp-chip-47-1112" data-page="1112" onclick="handlePageChipClick(event, 'page-1112')" title="第 1112 页 · Cultural, Religious Beliefs & Age Responses to Death (文化信仰与各年龄段对死亡的认知)"><span class="cp-num">p.1112</span></a><a href="#page-1113" class="cp-chip" id="cp-chip-47-1113" data-page="1113" onclick="handlePageChipClick(event, 'page-1113')" title="第 1113 页 · Caring for the Dying Client: Emotional & Spiritual Needs, Box 47.1 (临终关怀：身心灵需求与临终者权利法案)"><span class="cp-num">p.1113</span></a><a href="#page-1114" class="cp-chip" id="cp-chip-47-1114" data-page="1114" onclick="handlePageChipClick(event, 'page-1114')" title="第 1114 页 · Meeting Physical Needs: Pain, Senses, Skin, Oral Care & Hydration (生理需求照护：疼痛管理、感觉机能、口腔与皮肤护理)"><span class="cp-num">p.1114</span></a><a href="#page-1115" class="cp-chip" id="cp-chip-47-1115" data-page="1115" onclick="handlePageChipClick(event, 'page-1115')" title="第 1115 页 · Comforting the Family & Meeting Loved Ones' Needs (安抚临终者家属与家属照护支持)"><span class="cp-num">p.1115</span></a><a href="#page-1116" class="cp-chip" id="cp-chip-47-1116" data-page="1116" onclick="handlePageChipClick(event, 'page-1116')" title="第 1116 页 · The Role of Support Workers with Families & Respite Care (家属陪伴支持与喘息照护)"><span class="cp-num">p.1116</span></a><a href="#page-1117" class="cp-chip" id="cp-chip-47-1117" data-page="1117" onclick="handlePageChipClick(event, 'page-1117')" title="第 1117 页 · Palliative Care & Hospice Philosophy (姑息照护与安宁疗护理念及跨学科团队)"><span class="cp-num">p.1117</span></a><a href="#page-1118" class="cp-chip" id="cp-chip-47-1118" data-page="1118" onclick="handlePageChipClick(event, 'page-1118')" title="第 1118 页 · Legal Issues: Advance Directives, Living Wills & Power of Attorney (临终法律议题：预先指示、生前预嘱与委托代理人)"><span class="cp-num">p.1118</span></a><a href="#page-1119" class="cp-chip" id="cp-chip-47-1119" data-page="1119" onclick="handlePageChipClick(event, 'page-1119')" title="第 1119 页 · DNR Orders, Substitute Decision-Makers & Organ Donation (不复苏医嘱DNR、替代决策者与器官捐献)"><span class="cp-num">p.1119</span></a><a href="#page-1120" class="cp-chip" id="cp-chip-47-1120" data-page="1120" onclick="handlePageChipClick(event, 'page-1120')" title="第 1120 页 · Medical Assistance in Dying (MAID) Legislation in Canada (加拿大安乐死/医疗协助死亡MAID法案)"><span class="cp-num">p.1120</span></a><a href="#page-1121" class="cp-chip" id="cp-chip-47-1121" data-page="1121" onclick="handlePageChipClick(event, 'page-1121')" title="第 1121 页 · The Experience of Grief & Professional Support Communication (哀伤体验、有效沟通与支持性回应原则)"><span class="cp-num">p.1121</span></a><a href="#page-1122" class="cp-chip" id="cp-chip-47-1122" data-page="1122" onclick="handlePageChipClick(event, 'page-1122')" title="第 1122 页 · Theories of Grief: Kübler-Ross 5 Stages & Bowlby/Worden Models (哀伤心理学理论：库伯勒-罗斯五阶段模型)"><span class="cp-num">p.1122</span></a><a href="#page-1123" class="cp-chip" id="cp-chip-47-1123" data-page="1123" onclick="handlePageChipClick(event, 'page-1123')" title="第 1123 页 · Signs of Approaching Death & Clinical Manifestations (临终濒死先兆与生理征象)"><span class="cp-num">p.1123</span></a><a href="#page-1124" class="cp-chip" id="cp-chip-47-1124" data-page="1124" onclick="handlePageChipClick(event, 'page-1124')" title="第 1124 页 · Signs of Death, Rigor Mortis & Cultural Death Rituals (死亡确证体征、尸僵形成与多元文化丧葬习俗)"><span class="cp-num">p.1124</span></a><a href="#page-1125" class="cp-chip" id="cp-chip-47-1125" data-page="1125" onclick="handlePageChipClick(event, 'page-1125')" title="第 1125 页 · Postmortem Care Principles & Preparing for Autopsy (遗体护理原则、尸检准备与机构感控规范)"><span class="cp-num">p.1125</span></a><a href="#page-1126" class="cp-chip" id="cp-chip-47-1126" data-page="1126" onclick="handlePageChipClick(event, 'page-1126')" title="第 1126 页 · Procedure: Assisting with Postmortem Care Part 1 (实操规程：协助遗体护理第 1 部分，图 47.1)"><span class="cp-num">p.1126</span></a><a href="#page-1127" class="cp-chip" id="cp-chip-47-1127" data-page="1127" onclick="handlePageChipClick(event, 'page-1127')" title="第 1127 页 · Procedure: Assisting with Postmortem Care Part 2 (实操规程：协助遗体护理第 2 部分，裹尸与物品交接)"><span class="cp-num">p.1127</span></a><a href="#page-1128" class="cp-chip" id="cp-chip-47-1128" data-page="1128" onclick="handlePageChipClick(event, 'page-1128')" title="第 1128 页 · Chapter Review, Key Points, Critical Thinking & Practice Questions 1–8 (本章回顾、核心要点与真题测验 1–8)"><span class="cp-num">p.1128</span></a><a href="#page-1129" class="cp-chip" id="cp-chip-47-1129" data-page="1129" onclick="handlePageChipClick(event, 'page-1129')" title="第 1129 页 · Practice Questions 9–12, Answers & Clinical Rationales (真题测验 9–12、官方标准答案与临床精解)"><span class="cp-num">p.1129</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+    <section class="facsimile-page" id="page-1110" data-physical-page="1110">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1110</span>
+        <span class="page-topic-title">Chapter Opener & Learning Objectives (本章开篇与学习目标)</span>
+      </div>
+
+      <div class="chapter-header-box" style="margin-bottom:24px; padding:24px; background:linear-gradient(135deg, rgba(37,99,235,0.06), rgba(16,185,129,0.06)); border-left:4px solid #10b981; border-radius:8px;">
+        <div class="ch-badge" style="font-size:13px; font-weight:700; color:#10b981; letter-spacing:1px; text-transform:uppercase;">CHAPTER 47 · FINAL CHAPTER</div>
+        <h1 class="ch-title" style="margin:6px 0 10px 0; font-size:26px; font-weight:800; color:var(--text-primary);">End-of-Life Care</h1>
+        <div class="ch-title-cn" style="font-size:17px; font-weight:600; color:var(--text-secondary); margin-bottom:16px;">临终关怀与生命末期照护（全书收官终章）</div>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:24px; text-align:center;">
+        <img src="images/ch47/ch47_opener.jpg" alt="Chapter 47 Opener" style="max-width:100%; border-radius:8px; border:1px solid var(--border-color); box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div class="fig-caption" style="font-size:13px; color:var(--text-secondary); margin-top:8px;">
+          <strong>Chapter 47 Opener:</strong> A support worker comforting and holding the hand of a palliative care client. Compassionate presence and active listening provide essential emotional and spiritual support. (iStockphoto/KatarzynaBialiasiewicz)
+          <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">第 47 章篇首图：支持人员在床旁轻握安宁疗护患者的手，给予温暖的情感宽慰。人道的陪伴与专注倾听是临终生命关怀的灵魂。</div>
+        </div>
+      </div>
+
+      <div class="objectives-card" style="margin-bottom:28px; padding:20px 24px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:10px;">
+        <h3 style="margin-top:0; margin-bottom:14px; font-size:17px; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+          <span style="display:inline-block; width:6px; height:16px; background:#10b981; border-radius:3px;"></span>
+          OBJECTIVES (学习目标)
+        </h3>
+        <p style="font-size:14px; color:var(--text-secondary); margin-bottom:12px;">After reading this chapter, the learner should be able to do the following (完成本章学习后，学习者应能够做到以下各项)：</p>
+        <ul style="padding-left:20px; font-size:14px; line-height:1.6; margin-bottom:0;">
+          
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain how culture, personal beliefs, religion, age, and experience influence attitudes toward death.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">解释文化背景、个人信念、宗教信仰、年龄阶段以及生活阅历如何塑造人们对死亡的态度。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Discuss the Dying Person’s Bill of Rights.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">阐述并深入探讨《临终者权利法案》（Dying Person's Bill of Rights）的核心人权内涵。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain how to help meet a dying client’s needs.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">解释如何全方位满足临终患者在生理、心理、社交、情感与灵性层面的多重需求。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain the importance of comforting the client’s family and loved ones.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">阐明在临终关怀中给予患者家属及亲友心理慰藉与情感支持的重要意义。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe the needs of the family of a dying client.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述临终患者家属在哀伤、疲惫及照护交接中所面临的实际需求与困境。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe palliative care.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">系统阐释姑息照护（Palliative Care）与安宁疗护（Hospice Care）的核心哲学与服务范畴。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Discuss legal issues surrounding death and dying.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">探讨围绕临终与死亡的各项法律议题与伦理规范。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain the importance of an advance directive.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">解释预先医疗指示（Advance Directive）与生前预嘱对保障患者自主意愿的关键重要性。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Discuss Medical Assistance in Dying (MAID) legislation.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">探讨加拿大联邦《医疗协助死亡》（MAID）法律法规及其对医疗照护团队的执业要求。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe the impact that grief can have on people.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述丧亲与哀伤对人类身心健康、情绪认知及日常生活所产生的深远影响。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe the stages, phases, or tasks that clients, families, and caregivers may encounter when dealing with grief.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述患者、家属及照护人员在应对哀伤时所经历的心理阶段、任务及演变规律（如库伯勒-罗斯五阶段）。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Identify the signs of approaching death and the signs of death.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">精准识别患者即将离世的濒死生理征象以及临床确证死亡的体征。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe how to assist in giving postmortem care.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述如何规范协助实施遗体善后护理（Postmortem Care），维护逝者尊严与文化习俗。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Demonstrate the procedures described in this chapter.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">熟练演示并规范执行本章阐述的临终舒适护理及遗体善后实操规程。</div>
+      </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1111" data-physical-page="1111">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1111</span>
+        <span class="page-topic-title">Attitudes Toward Death, Life-Threatening Illness & Key Terms (死亡态度、终末期疾病与核心术语)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">As a support worker, you will be required to help meet the physical, social, emotional, intellectual, and spiritual needs of clients who are dying, whether in a facility or in clients’ homes. Your role may also involve providing support to a client’s family and loved ones. Some family members may be very involved in care, whereas others may not be available because of distance or personal choice.</p>
+        <p class="para-cn">作为支持人员，无论是在医疗护理机构中还是在客户家中，你都将被要求协助满足临终患者在生理、社交、情感、智识和灵性层面的多元需求。你的工作职责同样涵盖向患者的家属及至亲提供深切的情感与生活支持。有些家属可能会全身心深度参与床旁照护，而有些家属则可能因路途遥远或个人心理原因无法时刻在侧。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">End-of-life care can be emotionally draining not only to the loved ones of the dying client but also to the client’s caregivers. Witnessing and providing end-of-life care may remind caregivers of their own eventual death or of the deaths of their own loved ones. For some, having a dying client may cause feelings of helplessness since they are unable to “make the client better.” Some healthcare team members may be unsure of their feelings about death or may be uncomfortable with dying clients or the subject of death being mentioned in conversation with the client.</p>
+        <p class="para-cn">临终生命关怀不仅对逝者的家属是一场巨大的身心情感消耗，对一线的照护人员同样极具情绪挑战。目睹生命消逝并提供濒死照护，往往会唤起照护者对自己未来终将死亡的潜意识联想，或重温失去自身挚亲的痛苦记忆。对于部分照护者而言，眼看患者步步走向死亡而无法“使其好转痊愈”，会滋生强烈的无力感与挫败感。部分医疗团队成员可能对死亡本身感到迷茫困惑，或在面对濒死患者、以及在与患者探讨死亡话题时感到无所适从与极度不自在。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">Your feelings and beliefs about death and dying may affect the care you give when caring for a dying client, so you need to understand both the dying process and your own attitudes toward death and dying. This understanding will help you provide compassionate care. Before reading on, reflect on the following:</p>
+        <ul style="padding-left:18px; margin-top:6px; margin-bottom:12px; font-size:14px; line-height:1.6;">
+          <li>What has been your experience with death? (你过往经历过怎样的亲历死亡事件？)</li>
+          <li>What are your feelings and beliefs about death and dying? (你对死亡和临终有着怎样的情感体验与内在信念？)</li>
+          <li>How have your experiences and culture shaped your beliefs? (你的生活经历与文化背景是如何塑造这些信念的？)</li>
+        </ul>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:20px; margin-bottom:8px;">LIFE-THREATENING CONDITIONS (危及生命的终末期疾病)</h3>
+        <p class="para-en">Many life-threatening conditions have no cure, and some injuries are so serious that the body cannot function. In these cases, recovery is not expected, and the health condition or injury inevitably ends in death. Healthcare providers cannot predict the exact time of death. A client may have days, months, weeks, or years to live. Some clients who are expected to live for a short time live for many years, whereas others who are expected to live longer die much sooner than predicted. No one can predict the length of time a client may have, as each client is unique.</p>
+        <p class="para-cn">许多危及生命的器质性重疾在现代医学中均无治愈良策，某些重度创伤破坏了机体维持生命的核心机能。在这些情况下，临床已无法指望康复痊愈，病情进展不可避免地将以死亡告终。医护专业人员无法精准预言死亡降临的确切时刻。患者可能存活数天、数周、数月乃至数年。有些被预估寿命极短的患者坚强地活了许多年，而另一些预估生存期较长的患者却突然急转直下提前离世。每个人的生命机能与精神意志皆独一无二，无人能断言确切的倒计时。</p>
+      </div>
+
+      
+    <div id="sec-ch47-glossary" class="glossary-wrapper" style="margin-top:28px; margin-bottom:36px; padding:20px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:12px;">
+      <div class="glossary-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="margin:0; font-size:18px; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+          <span style="display:inline-block; width:8px; height:18px; background:var(--accent-color); border-radius:4px;"></span>
+          KEY TERMS: Chapter 47 核心专业术语表 (4 条)
+        </h3>
+        <div class="glossary-controls" style="display:flex; gap:10px;">
+          <input type="text" id="ch47-glossary-search" placeholder="Search terms (中英搜索)..." oninput="filterCh47Glossary()" style="padding:6px 12px; border:1px solid var(--border-color); border-radius:6px; font-size:13px; background:var(--bg-main); color:var(--text-primary);">
+          <button onclick="toggleCh47GlossaryMode()" class="btn-toggle-view" style="padding:6px 12px; border:1px solid var(--border-color); border-radius:6px; font-size:13px; background:var(--bg-main); color:var(--text-primary); cursor:pointer;">切换卡片/表格</button>
+        </div>
+      </div>
+      <div id="ch47-glossary-table-view" style="overflow-x:auto;">
+        <table class="glossary-table" style="width:100%; border-collapse:collapse; font-size:14px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); text-align:left;">
+              <th style="padding:10px; width:28%;">Term 术语</th>
+              <th style="padding:10px; width:72%;">Definition 定义与临床释义</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">grief</strong><span class="t-cn">哀伤 / 悲恸</span></td>
+            <td class="def-col"><div class="d-en">The process of moving from deep sorrow caused by loss toward healing and recovery. p. 1119</div><div class="d-cn">因失去至亲或重大丧失引发深切悲痛，并逐步迈向心理愈合与生活复原的动态心理适应过程。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">grief counselling</strong><span class="t-cn">哀伤辅导 / 丧亲心理咨询</span></td>
+            <td class="def-col"><div class="d-en">A support for people coping with the difficulties associated with the loss of a loved one. p. 1121</div><div class="d-cn">为应对因失去至亲而产生的严重心理创伤、情绪困扰及生活适应危机所提供的专业心理社会支持。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">postmortem care</strong><span class="t-cn">遗体善后护理 / 尸体护理</span></td>
+            <td class="def-col"><div class="d-en">Care of the body after (post) death (mortem). p. 1123</div><div class="d-cn">患者经医生宣告死亡之后，对遗体所进行的专业清洁、体位整复、遮盖与尊重性善后照护。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">rigor mortis</strong><span class="t-cn">尸僵</span></td>
+            <td class="def-col"><div class="d-en">The stiffness or rigidity (rigor) of skeletal muscles that occurs after death (mortis). p. 1124</div><div class="d-cn">人死后由于三磷酸腺苷（ATP）耗尽，骨骼肌发生化学性凝固收缩而导致的周身肌肉关节强直变硬现象。</div></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="ch47-glossary-cards-view" class="glossary-cards-grid" style="display:none; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:14px; margin-top:12px;">
+        
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">grief</strong><span class="t-cn">哀伤 / 悲恸</span></div>
+            <div class="card-def-en">The process of moving from deep sorrow caused by loss toward healing and recovery. p. 1119</div>
+            <div class="card-def-cn">因失去至亲或重大丧失引发深切悲痛，并逐步迈向心理愈合与生活复原的动态心理适应过程。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">grief counselling</strong><span class="t-cn">哀伤辅导 / 丧亲心理咨询</span></div>
+            <div class="card-def-en">A support for people coping with the difficulties associated with the loss of a loved one. p. 1121</div>
+            <div class="card-def-cn">为应对因失去至亲而产生的严重心理创伤、情绪困扰及生活适应危机所提供的专业心理社会支持。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">postmortem care</strong><span class="t-cn">遗体善后护理 / 尸体护理</span></div>
+            <div class="card-def-en">Care of the body after (post) death (mortem). p. 1123</div>
+            <div class="card-def-cn">患者经医生宣告死亡之后，对遗体所进行的专业清洁、体位整复、遮盖与尊重性善后照护。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">rigor mortis</strong><span class="t-cn">尸僵</span></div>
+            <div class="card-def-en">The stiffness or rigidity (rigor) of skeletal muscles that occurs after death (mortis). p. 1124</div>
+            <div class="card-def-cn">人死后由于三磷酸腺苷（ATP）耗尽，骨骼肌发生化学性凝固收缩而导致的周身肌肉关节强直变硬现象。</div>
+          </div>
+      </div>
+    </div>
+    
+    <script>
+    function filterCh47Glossary() {
+      var q = document.getElementById('ch47-glossary-search').value.toLowerCase();
+      var rows = document.querySelectorAll('#ch47-glossary-table-view .glossary-row');
+      rows.forEach(function(r) {
+        r.style.display = r.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+      var cards = document.querySelectorAll('#ch47-glossary-cards-view .glossary-card');
+      cards.forEach(function(c) {
+        c.style.display = c.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+    }
+    function toggleCh47GlossaryMode() {
+      var tv = document.getElementById('ch47-glossary-table-view');
+      var cv = document.getElementById('ch47-glossary-cards-view');
+      if (tv.style.display === 'none') {
+        tv.style.display = '';
+        cv.style.display = 'none';
+      } else {
+        tv.style.display = 'none';
+        cv.style.display = 'grid';
+      }
+    }
+    </script>
+    
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1112" data-physical-page="1112">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1112</span>
+        <span class="page-topic-title">Cultural, Religious Beliefs & Age Responses to Death (文化信仰与各年龄段对死亡的认知)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Personal Beliefs, Culture, and Religion (个人信念、多元文化与宗教仪式)</h4>
+        <p class="para-en">Practices and attitudes about death and dying differ among individuals, cultures, and religions (see the Respecting Diversity: Death Rituals box on page 1124). Some people believe that there is no suffering and hardship after death, that they will be reunited with loved ones in the afterlife, and that sins and misdeeds will be punished then, too. Other people believe there is no afterlife. Still others believe in rebirth. Many clients experience a strengthening of their religious beliefs when they face death, and such faith often provides comfort to the dying person and the family. Alternatively, clients may instead experience a loss or diminishment of religious faith. A client’s personal, cultural, and religious beliefs also influence choices about end-of-life care and treatment of the body after death.</p>
+        <p class="para-cn">关于死亡与临终的态度和习俗，在不同个体、不同文化以及各大宗教信仰体系中存在着显著差异（参见第 1124 页专栏《尊重多元化：各文化死亡仪式》）。有些人深信死后便彻底告别了人间的痛苦与折磨，将在来世与先逝的亲人幸福重聚，而生前的罪恶亦将在彼岸受到惩处；另一些人则认为死后万事皆空、并无任何来生；还有许多信仰坚信因果转世与灵魂重生。许多患者在濒临生命终点时，宗教信仰会变得格外虔诚坚定，这种深层信仰往往能为临终者和家属带来巨大的心灵慰藉；反之，亦有部分患者在痛苦折磨中对过往的信仰产生动摇甚至幻灭。客户的个人价值观、文化背景及宗教归属，直接决定了其对临终医疗方案以及死后遗体处理方式的最终抉择。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">How Age and Experience Affect Responses to Death and Dying (年龄与生活阅历对死亡反应的影响)</h4>
+        <p class="para-en">People’s attitudes and responses to dying are highly individual. Age and stage of life are major influences on feelings and reactions regarding death:</p>
+        <p class="para-cn">人们面对死亡的心态与行为反应呈现出极高的个体差异性。其中，年龄跨度与生命发展阶段是决定人们面对死亡情感反应的最核心驱动因素：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Infants and toddlers (婴儿与幼儿):</strong> Have no concept of death. They react primarily to separation, changes in routine, and the sadness or stress of caregivers.
+            <div style="font-size:13px; color:var(--text-secondary);">婴儿和刚学步的幼儿对死亡毫无抽象认知。他们主要对与主要照料者的分离、日常作息紊乱以及周围成年人的悲伤焦虑情绪产生感知与应激反应。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Children aged 3 to 5 (3 至 5 岁幼童):</strong> Are curious and have some ideas about death (noticing dead pets, insects, or family loss). However, they think death is only temporary or reversible, like sleeping or cartoon characters coming back to life. Inaccurate explanations (e.g., “Grandma went to sleep”) can cause severe fear of bedtime.
+            <div style="font-size:13px; color:var(--text-secondary);">对死亡充满好奇并有模糊概念（注意到了宠物、昆虫死亡或家庭变故）。然而，他们天真地认为死亡是暂时的、可逆的，就像睡着了或动画片角色死而复生一样。若给予不准确的隐喻解释（如“奶奶睡着了”），常会导致孩子极度抗拒睡觉，害怕自己一睡不醒。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Children aged 5 to 7 (5 至 7 岁儿童):</strong> Know that death is final and universal, though they often do not believe it will ever happen to them or their immediate parents.
+            <div style="font-size:13px; color:var(--text-secondary);">开始明白死亡是终结性的、不可逆转的自然规律，但通常认为死亡距离自己非常遥远，绝不会降临到自己或父母头上。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Adults (成年人):</strong> Often harbor more complex fears about death than children do. Adults fear pain, suffering, dying alone, loss of control, loss of dignity, and leaving dependents behind. Many experience profound grief over unfulfilled dreams or missed life opportunities.
+            <div style="font-size:13px; color:var(--text-secondary);">成年人往往比儿童承受更多维度的深层恐惧。成年人畏惧剧烈疼痛折磨、畏惧孤独死去、畏惧丧失自我控制与尊严，并深切担忧身后未成年子女或年迈父母的抚养。许多人会对生前未竟的事业、破裂的亲情及未实现的梦想产生深刻的遗憾与痛苦。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Older adults (老年人):</strong> Often have fewer existential fears of death because they have anticipated it as a natural life culmination and have grieved many peers. Some welcome death as a peaceful release from chronic pain, debilitating disability, and loneliness. However, like younger people, older persons profoundly fear dying alone.
+            <div style="font-size:13px; color:var(--text-secondary);">老年人通常对死亡本身表现出更少的恐惧，因为他们早已将其视为生命的必然归宿，且一生中经历了许多同辈亲友的离世。有些长者将死亡视为摆脱慢性顽疾折磨、残障痛苦与孤寂的安详解脱。然而，与年轻人一样，老年人同样极其害怕在孤独无援中死去。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1113" data-physical-page="1113">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1113</span>
+        <span class="page-topic-title">Caring for the Dying Client: Emotional & Spiritual Needs, Box 47.1 (临终关怀：身心灵需求与临终者权利法案)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Meeting Emotional, Social, and Spiritual Needs (满足患者情感、社交与灵性需求)</h4>
+        <p class="para-en">The health care team helps meet the dying client’s emotional, social, spiritual, intellectual, and physical needs. The client’s right to die in peace and with dignity is always kept at the forefront. Support workers assist by:</p>
+        <p class="para-cn">跨学科医疗团队协同满足临终患者在情感、社交、灵性、智识及生理层面的全方位需求。确保患者在安详、平和与尊严中度过生命终点是所有照护努力的核心旨归。支持人员在日常照护中应做到：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Listening (专注倾听):</strong> Let the client share worries, life stories, and fears. You do not need to give advice or worry about saying the perfect words; your quiet, accepting presence is therapeutic. If the client requests medical information, prognosis, or spiritual counselling, notify the nurse immediately.
+            <div style="font-size:13px; color:var(--text-secondary);">允许患者充分倾诉内心的担忧、往昔回忆与恐惧。你无需好为人师地给出建议，更不必因担心说错话而焦虑；你安静、专注且全盘接纳的陪伴本身就是最好的良药。若患者询问病情进展、预后或提出灵性咨询，务必立即通报主管护士。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Touch (恰当的肢体抚慰):</strong> Holding a hand, gently wiping a brow, or providing gentle back care conveys warmth and shows that the client is valued and not abandoned. Always observe verbal and nonverbal cues to ensure touch is welcomed.
+            <div style="font-size:13px; color:var(--text-secondary);">轻握双手、轻抚额头或提供轻柔的背部抚触，能向患者传递深切的温暖，证明他们被珍视、绝未被遗弃。始终细心观察患者的言语及非言语反应，确保肢体触摸受到对方欣然接纳。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Spiritual Needs (尊重灵性关怀):</strong> Provide privacy for prayer, meditation, or visits from clergy, elders, or spiritual leaders. Handle sacred objects (rosaries, scriptures, medicine bags) with utmost reverence.
+            <div style="font-size:13px; color:var(--text-secondary);">在神职人员、宗教长老、灵性领袖探视或患者进行祈祷冥想时，提供绝对私密的独立空间。以最高崇敬之心对待宗教圣物与灵性用具（念珠、经卷、原住民药袋等），绝不可随意挪动或亵渎。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="callout-box info" style="margin:20px 0; padding:20px 22px; background:linear-gradient(135deg, rgba(37,99,235,0.06), rgba(16,185,129,0.06)); border-left:4px solid #2563eb; border-radius:8px;">
+        <h4 style="margin:0 0 12px 0; font-size:16px; color:#1e40af;">BOX 47.1: The Dying Person’s Bill of Rights (专栏 47.1：临终者权利法案)</h4>
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <li>I have the right to be treated as a living human being until I die. (我有权在离世之前始终被作为一个有生命的完整人来对待).</li>
+          <li>I have the right to maintain a sense of hopefulness, however changing its focus may be. (我有权保持希望感，无论希望的焦点如何随病情转变).</li>
+          <li>I have the right to be cared for by those who can maintain a sense of hopefulness, however changing this might be. (我有权由那些能够始终怀抱希望感的人来照护).</li>
+          <li>I have the right to express my feelings and emotions about my approaching death in my own way. (我有权以我自己的方式自由表达对濒临死亡的情感与情绪).</li>
+          <li>I have the right to participate in decisions concerning my care. (我有权自主参与有关我自身医疗照护的所有决策).</li>
+          <li>I have the right to expect continuing medical and nursing attention even though “cure” goals must be changed to “comfort” goals. (即便治疗目标已从“治愈”转向“舒适”，我有权享有持续的高水平医疗与护理支持).</li>
+          <li>I have the right not to die alone. (我有权不孤独地死去).</li>
+          <li>I have the right to be free from pain. (我有权免受肉体疼痛的折磨).</li>
+          <li>I have the right to have my questions answered honestly. (我有权获得对我所有疑问的坦诚回答).</li>
+          <li>I have the right to retain my individuality and not be judged for my decisions. (我有权保留我的个性特质，且绝不受道德评判).</li>
+          <li>I have the right to expect that the sanctity of the human body will be respected after death. (我有权期待在死后我的遗体尊严受到神圣的尊重).</li>
+          <li>I have the right to be cared for by caring, sensitive, knowledgeable people who will attempt to understand my needs. (我有权由充满爱心、敏锐且知识渊博的专业人员来照护).</li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1114" data-physical-page="1114">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1114</span>
+        <span class="page-topic-title">Meeting Physical Needs: Pain, Senses, Skin, Oral Care & Hydration (生理需求照护：疼痛管理、感觉机能、口腔与皮肤护理)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Meeting Physical Needs During the Dying Process (临终生命历程中的基础生理需求护理)</h4>
+        <p class="para-en">Dying is a physical process in which body functions slow down and eventually cease. Meeting physical needs promotes comfort, alleviates suffering, and preserves dignity:</p>
+        <p class="para-cn">临终是一个机体各系统机能逐步衰退乃至最终完全停止的客观生理过程。全方位满足生理基础需求旨在最大程度缓解痛苦、增进身心舒适并捍卫生命尊严：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Pain relief (疼痛管理):</strong> Pain prevention and aggressive symptom relief are central to palliative care. Observe for subtle nonverbal signs of pain (grimacing, moaning, restlessness, furrowed brow). Report pain immediately to the nurse so prescribed analgesics can be administered promptly.
+            <div style="font-size:13px; color:var(--text-secondary);">预防疼痛发作与强力控制症状是安宁姑息疗护的基石。细心观察非言语疼痛征象（面部痛苦扭曲、呻吟、辗转反侧、紧锁眉头）。一旦发现疼痛蛛丝马迹，秒级汇报护士以便按医嘱及时给予强效镇痛药物。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Breathing problems (呼吸困难支持):</strong> Shortness of breath (dyspnea) is distressing. Position the client in semi-Fowler's or Fowler's position or turn the client onto their side to facilitate respiratory expansion. Oxygen therapy may be ordered. A cool cloth on the forehead or a gentle room fan circulating air can ease the sensation of breathlessness.
+            <div style="font-size:13px; color:var(--text-secondary);">呼吸急促与呼吸困难极易引发窒息恐慌。协助采取半坐卧位或高半坐卧位，或取侧卧位以利于胸廓扩张及痰液引流。遵医嘱给予鼻导管吸氧。在前额敷以凉毛巾，或开启柔风小电扇在房间内促进空气循环，能显著缓解呼吸窘迫感。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Vision, Hearing, and Speech (感觉与言语机能):</strong> Vision blurs and fails as death nears; keep the room well-lit without glare, avoiding harsh shadows. Speech may become indistinct; listen patiently without asking long questions. <strong>Hearing is the last sense to be lost!</strong> Always speak clearly in a gentle, normal tone, explain care before touching, and never say anything in the room that you would not want the client to hear.
+            <div style="font-size:13px; color:var(--text-secondary);">临终前视力逐渐模糊减退；保持房间光线柔和明亮且无刺眼眩光，避免产生惊悚阴影。言语可能含糊不清；耐心倾听，避免追问复杂问题。<strong>听觉是最后消失的感觉！</strong>始终以温和清晰的正常语调交谈，在任何触碰操作前先轻声解释，绝对严禁在床旁谈论任何不希望患者听到的消极话语或丧葬安排。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Mouth and Nose Care (口腔与鼻腔清洁):</strong> Mouth breathing, dehydration, and medications cause extreme oral dryness and crusted secretions. Perform gentle mouth care every 2 hours using moistened foam swabs. Apply lip balm or petroleum jelly to prevent cracked lips. Clean nasal secretions gently and apply water-soluble lubricant around the nostrils if dry.
+            <div style="font-size:13px; color:var(--text-secondary);">张口呼吸、脱水以及抗胆碱药物会引起极度口干与结痂。每 2 小时使用湿润海绵棒轻柔进行口腔护理。涂抹润唇膏或凡士林防止嘴唇干裂出血。轻柔擦拭鼻腔干痂，若鼻孔干燥可涂抹少量水溶性润滑剂。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Skin Care, Cleanliness, and Elimination (皮肤、个人清洁与排泄):</strong> Incontinence of urine and stool often occurs as anal and urinary sphincters relax. Check bed protectors frequently, cleanse skin immediately after soiling, apply barrier creams, and keep bed linens immaculately dry, smooth, and wrinkle-free to prevent rapid skin breakdown.
+            <div style="font-size:13px; color:var(--text-secondary);">随着膀胱括约肌和肛门括约肌进行性松弛，大小便失禁极其常见。高频次检查床垫看护垫，一旦污染立即使用温水轻柔清洗擦干，涂抹护臀隔离膏，保持床单绝对清洁平整无褶皱，防止极度脆弱的皮肤发生坏死破损。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Nutrition and Fluids (营养摄入与水分支持):</strong> As death approaches, appetite and thirst naturally decline as metabolic processes shut down. Never force the client to eat or drink; forcing food or fluids can cause choking, vomiting, and pulmonary aspiration. Offer small sips of water or ice chips if the client is conscious and swallowing safely.
+            <div style="font-size:13px; color:var(--text-secondary);">随着生命走向终点、全身新陈代谢逐步停滞，食欲和口渴感会自然消退。绝不能强迫患者进食或饮水；强行灌食会导致严重呛咳、反流呕吐及致命性肺误吸。仅在患者神志清楚且吞咽功能完好时，提供少量碎冰吮吸或极少量润喉水。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1115" data-physical-page="1115">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1115</span>
+        <span class="page-topic-title">Comforting the Family & Meeting Loved Ones' Needs (安抚临终者家属与家属照护支持)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Comforting the Family (安抚临终患者家属与至亲)</h4>
+        <p class="para-en">The approaching death of a loved one is a stressful and traumatic experience for family members and friends. Loved ones often suffer from sleep deprivation, profound emotional exhaustion, helplessness, and grief. The healthcare team cares for both the dying client and the client's family. You can assist by:</p>
+        <p class="para-cn">至亲生命的逐渐凋零与即将离世，对家庭成员和亲朋挚友而言是一段充满巨大应激与心理创伤的艰难旅程。家属常常遭受严重的长期睡眠剥夺、极度身心俱疲、强烈的无助感以及排山倒海的哀伤体验。医疗照护团队的法定关怀职责既涵盖临终患者本人，亦同等覆盖患者的整个家庭系统。支持人员在床旁可通过以下实际行动提供关怀：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Showing compassion and availability (展现同理同情与随时待命):</strong> Greet family members warmly by name. Ask how they are holding up and let them know you are readily available to assist them.
+            <div style="font-size:13px; color:var(--text-secondary);">亲切直呼家属姓名问候致意。主动关切询问他们的身体状况与耐受力，明确告知自己时刻在侧，可随时提供所需协助。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Providing physical comfort in the room (优化病房物理环境与舒适度):</strong> Provide comfortable armchairs, extra pillows, and warm blankets for family members staying overnight at the bedside. Ensure the room has tissues and access to water, coffee, or tea.
+            <div style="font-size:13px; color:var(--text-secondary);">为在床旁守夜的家属提供舒适的靠背扶手椅、加厚软枕以及保暖毛毯。确保床旁备有充足的纸巾，并提供饮用水、温咖啡或茶水服务。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Respecting privacy and intimacy (守护家庭私密与最后告别空间):</strong> Allow the family private time alone with the dying person. Before entering the room, always knock gently. When entering to provide essential care, do so quietly and efficiently, and leave promptly when finished so the family can resume their intimate vigil.
+            <div style="font-size:13px; color:var(--text-secondary);">给予家庭成员与濒死亲人独处的私密空间与神圣时间。在推门进入病房前务必轻柔敲门。进入病房执行必要的基础护理时，动作保持极度安静敏捷，完成后迅速退出身旁，将珍贵的最后守候时光归还给亲人。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Involving family in care (支持家属参与力所能及的床旁护理):</strong> Many family members find comfort in helping with simple care tasks, such as applying lip balm, moistening the mouth with a foam swab, or holding hands. Offer this opportunity gently, but never make family members feel pressured or guilty if they prefer not to participate.
+            <div style="font-size:13px; color:var(--text-secondary);">许多家属通过参与力所能及的轻度护理（如为亲人涂抹润唇膏、用湿海绵棒擦拭口腔或轻握双手）能获得深层的心理慰藉与参与感。应温和地向家属提供这种机会，但若家属因过度悲伤不愿动手，绝不可施加任何心理压力或令其产生负罪感。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1116" data-physical-page="1116">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1116</span>
+        <span class="page-topic-title">The Role of Support Workers with Families & Respite Care (家属陪伴支持与喘息照护)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Supporting Family Caregivers & Respite Care (家庭照护者支持与喘息照护服务)</h4>
+        <p class="para-en">When clients die at home, family members carry an immense burden of physical care, medication administration, and emotional strain around the clock. Family caregivers often experience profound exhaustion and caregiver burnout. Support workers provide crucial relief by:</p>
+        <p class="para-cn">当患者选择在居家环境中安度生命末期时，家庭成员必须承担起 24 小时昼夜不息的繁重生活起居照护、辅助服药以及巨大的情感煎熬。家庭照料者极易陷入深度的身心耗竭与照护崩溃（Caregiver burnout）。支持人员在居家环境中通过以下举措发挥核心减压与支柱作用：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Providing respite care (提供喘息照护):</strong> Taking over bedside monitoring and personal care so that family caregivers can sleep, shower, take a walk, eat a proper meal, or attend to personal affairs without worrying that their loved one is unattended.
+            <div style="font-size:13px; color:var(--text-secondary);">主动接管床旁监护与个人基础生活护理，使精疲力竭的家属能够踏实补觉、洗热水澡、外出散步透气、安心享用正餐或处理个人要事，无需时刻悬心担忧亲人床旁无人看顾。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Validating feelings without clichés (接纳情绪宣泄，杜绝陈词滥调):</strong> Grieving families experience anger, sadness, guilt, and despair. Avoid hurtful, dismissive clichés such as: “It’s for the best,” “They lived a long life,” or “You must stay strong.” Instead, use therapeutic statements: “I am so sorry you are going through this,” or simply say nothing and remain a comforting presence.
+            <div style="font-size:13px; color:var(--text-secondary);">处于巨大哀伤中的家属往往会表现出愤怒、痛哭、愧疚与绝望等剧烈情绪。严禁使用那些轻描淡写、看似安慰实则伤人的陈词滥调（例如：“这也是一种解脱”、“反正岁数也大了”、“你必须坚强起来”）。应采用同理心专业回应：“看到你们经历这些，我深感难过”，或者保持沉默，给予温暖坚定的床旁陪伴。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Reporting family crises to the supervisor (及时上报家庭危机):</strong> If a family member expresses thoughts of self-harm, severe clinical depression, explosive conflict with other family members, or total physical collapse, report these acute situations to your supervisor immediately so social work, mental health, or crisis resources can intervene.
+            <div style="font-size:13px; color:var(--text-secondary);">若家属流露出自伤自杀念头、表现出重度临床抑郁、与其他家属发生严重冲突失控，或身体突发虚脱昏厥，必须立即向主管护士汇报，以便临床社工、心理危机干预团队或急诊医疗力量即刻介入。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1117" data-physical-page="1117">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1117</span>
+        <span class="page-topic-title">Palliative Care & Hospice Philosophy (姑息照护与安宁疗护理念及跨学科团队)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">PALLIATIVE CARE AND HOSPICE PHILOSOPHY (姑息照护与安宁疗护核心哲学)</h3>
+        <p class="para-en">Palliative care is specialized care that serves people living with progressive, life-limiting illnesses. The term <em>palliative</em> is derived from the Latin word <em>palliare</em>, meaning “to cloak” or “to shield.” Rather than seeking to cure an incurable condition, palliative care shields the client from the burdens of pain and distressing symptoms. Palliative care affirms life and regards dying as a normal process; it neither hastens nor postpones death.</p>
+        <p class="para-cn">姑息照护（Palliative Care）是专门针对罹患进展性、威胁生命极限疾病患者的跨学科专科照护。英文单词“Palliative”源自拉丁文词根“palliare”，意为“用斗篷遮盖、庇护或掩蔽”。姑息照护的精髓不在于强求逆转不可治愈的绝症，而在于如同斗篷般为患者抵御剧烈疼痛与各类身心折磨症状。姑息疗护彻底肯定生命的尊严，将死亡视为生命自然的终点；它既不人为加速死亡，亦不盲目拖延濒死过程。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Hospice Care (安宁疗护的发展历程)</h4>
+        <p class="para-en">The modern hospice movement was founded in England in 1967 by Dame Cicely Saunders with the establishment of St. Christopher’s Hospice. In Canada, Dr. Balfour Mount introduced the term <em>palliative care</em> in 1974 at the Royal Victoria Hospital in Montreal. In common Canadian usage, palliative care and hospice care are closely interrelated. Palliative care can begin early in the course of an illness alongside treatments, whereas hospice care typically refers to holistic comfort care provided in the final months, weeks, or days of life when curative treatments have stopped entirely.</p>
+        <p class="para-cn">现代安宁疗护（Hospice Care）运动于 1967 年由西塞莉·桑德斯女爵（Dame Cicely Saunders）在英国创立圣克里斯托弗安宁院（St. Christopher’s Hospice）而拉开序幕。在加拿大，巴尔弗·芒特博士（Dr. Balfour Mount）于 1974 年在蒙特利尔皇家维多利亚医院首次开创性地确立了“姑息照护（Palliative Care）”这一临床专科名称。在加拿大当前的医疗实践中，姑息照护与安宁疗护密不可分。广义的姑息照护可在确诊恶性绝症早期与延寿治疗协同展开；而狭义的安宁疗护则特指在彻底停止所有抗癌根治性医疗手段之后，在生命的最后数月、数周或数日内，全方位提供的人性化身心舒缓与灵性临终关怀。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">The Palliative Interprofessional Team (姑息跨学科协同团队构成)</h4>
+        <p class="para-en">Palliative and hospice care relies on a highly integrated interprofessional team that wraps around the client and family: palliative physicians, specialized nurses, support workers, social workers, spiritual care coordinators/chaplains, pharmacists, physiotherapists, bereavement counsellors, and trained hospice volunteers. Care is delivered across multiple settings: in acute hospital palliative units, in specialized residential hospice facilities, in long-term care homes, and in the client’s private home.</p>
+        <p class="para-cn">姑息与安宁疗护依托高度协同的跨学科团队，全方位环绕照护患者与整个家庭：包括姑息专科医生、姑息专科护士、一线支持人员、临床社会工作者、灵性关怀协调员/神职人员、临床药剂师、物理治疗师、丧亲心理咨询师以及经过系统培训的安宁疗护志愿者。照护服务在多元医疗环境中一体化贯通：涵盖综合性医院急性期姑息病房、独立的民居式住院安宁院（Residential Hospice）、长期照护养老机构以及患者自己的温馨居家之中。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1118" data-physical-page="1118">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1118</span>
+        <span class="page-topic-title">Legal Issues: Advance Directives, Living Wills & Power of Attorney (临终法律议题：预先指示、生前预嘱与委托代理人)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">LEGAL ISSUES SURROUNDING DEATH AND DYING (围绕临终与死亡的法律与伦理议题)</h3>
+        <p class="para-en">Clients have the legal and ethical right to make autonomous decisions regarding their own healthcare and to refuse medical treatments, even when refusal will lead to death. When clients lose the cognitive capacity to communicate or make informed choices, advance legal documents ensure their wishes are honored.</p>
+        <p class="para-cn">患者依法享有对其自身医疗照护做出自主知情决定的不可剥夺的法律与伦理权利，并有权拒绝任何医疗干预措施，即便拒绝治疗将直接导致生命的终结。当患者因昏迷、极度衰竭或认知功能障碍丧失沟通与决策能力时，提前依法签署的法律文书是确保其生前真实意愿得以严格落实的核心屏障。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:10px;">
+            <strong>Advance Directive (预先指示 / 预先医疗决定):</strong> A legal document in which a person specifies what actions should be taken for their healthcare if they are no longer able to make decisions for themselves because of illness or incapacity. Laws governing advance directives vary among Canadian provinces and territories.
+            <div style="font-size:13px; color:var(--text-secondary);">当事人预先签署的一份法定严肃文书，详细明确当其未来因疾病恶化或丧失意识而无法亲自做出决策时，医疗团队应当采纳何种治疗限度。加拿大各省和地区关于预先指示的法条名称与具体规范各有规定。</div>
+          </li>
+          <li style="margin-bottom:10px;">
+            <strong>Living Will (生前预嘱):</strong> An instructional directive stating the specific medical treatments the person wants or does not want (e.g., mechanical ventilation, artificial tube feeding, hemodialysis, cardiopulmonary resuscitation) if they become terminally ill or permanently unconscious.
+            <div style="font-size:13px; color:var(--text-secondary);">一种指令性预先文件，详细载明当事人一旦罹患终末期绝症或陷入永久性植物人/不可逆昏迷时，其本人渴望接受或明确拒绝的具体侵入性医疗手段（例如：气管插管呼吸机辅助通气、鼻饲管或胃造口人工管饲营养、血液透析、心肺复苏术等）。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Power of Attorney for Personal Care / Healthcare Proxy (人身照护授权书 / 医疗授权代理人):</strong> A proxy directive appointing a trusted substitute decision-maker (SDM)—often a spouse, child, sibling, or close friend—with legal authority to make healthcare, housing, and personal care decisions on the client's behalf if the client becomes incapable. <em>The proxy must make decisions based on the client's previously expressed wishes; if wishes are unknown, decisions must reflect the client’s best interests.</em>
+            <div style="font-size:13px; color:var(--text-secondary);">一种委托代理型法定文书，依法任命一位值得信赖的法定替代决策者（Substitute Decision-Maker, SDM，通常为配偶、成年子女、兄弟姐妹或挚友），授权其在当事人丧失判断力时代为行使全部医疗、住所安置及人身照护的法律裁量权。<em>代理人做出决定时，必须严格以当事人先前亲口表达或书面签署的已知意愿为唯一准绳；若已知意愿不详，则必须以维护当事人的最大生存与尊严利益为核心基准。</em></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1119" data-physical-page="1119">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1119</span>
+        <span class="page-topic-title">DNR Orders, Substitute Decision-Makers & Organ Donation (不复苏医嘱DNR、替代决策者与器官捐献)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Do Not Resuscitate (DNR) / Allow Natural Death (AND) Orders (不复苏与允许自然离世医嘱)</h4>
+        <p class="para-en">A <strong>“Do Not Resuscitate” (DNR)</strong> order, or <strong>“Allow Natural Death” (AND)</strong> order, is a formal medical order written by a physician after comprehensive consultation with the client or substitute decision-maker. It directs the healthcare team <strong>not to perform cardiopulmonary resuscitation (CPR)</strong> if the client experiences cardiac or respiratory arrest. Cardiopulmonary resuscitation on frail, terminal clients frequently results in fractured ribs, punctured lungs, severe brain damage from anoxia, and prolonged agony without altering the inevitable fatal outcome. A DNR order does not mean withholding comfort; pain relief, hygiene, positioning, and compassionate nursing care are aggressively maintained.</p>
+        <p class="para-cn"><strong>“不复苏（DNR）医嘱”</strong>，亦被前瞻性地称为<strong>“允许自然离世（AND）医嘱”</strong>，是执业医师在与患者本人或其法定替代决策者进行深度坦诚沟通后，正式签署生效的法律级医疗指令。该医嘱郑重指示医疗团队：一旦患者发生心搏骤停或呼吸停止，<strong>严禁启动心肺复苏术（CPR）</strong>。在极度脆弱衰竭的终末期患者身上实施暴力胸外按压与电击，常导致肋骨多发骨折、胸壁塌陷刺破肺脏、因脑缺氧导致重度脑损伤，并在毫无逆转死亡希望的前提下造成难以名状的痛苦折磨。DNR 医嘱绝对不等于放弃照护——全方位的镇痛控痛、口腔清洁、定时翻身与深情的人文关爱不仅绝不减损，反而会被更积极地全面强化。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Organ and Tissue Donation (人体器官与组织捐献法制)</h4>
+        <p class="para-en">Many individuals express a compassionate wish to donate organs (heart, lungs, kidneys, liver, pancreas) or tissues (corneas, skin, bones, heart valves) upon death to save or improve the lives of others. Under provincial Human Tissue Gift legislation, individuals can register their donor status through provincial registries, online driver’s license programs, or advance directives. When death occurs, organ procurement organizations coordinate with the hospital and confirm with the family before organ retrieval is carried out with utmost surgical dignity.</p>
+        <p class="para-cn">许多崇高的人士表达了在大限来临之际，自愿捐献自身健康器官（心脏、肺脏、肾脏、肝脏、胰腺）或组织（眼角膜、体表皮肤、骨骼肌腱、心脏瓣膜）的慈悲大爱，以挽救或彻底重塑其他濒危病患的生命。依据加拿大各省《人体组织捐赠法》等法律法规，居民可通过各省器官捐献官方登记系统、驾照随行意愿登记卡或预先指示正式注册。当法定脑死亡或循环死亡确证之后，专职器官移植协调组织会与医院及至亲家属紧密协同签署正式授权，并在最高外科敬意与无菌尊严下完成器官获取手术。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1120" data-physical-page="1120">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1120</span>
+        <span class="page-topic-title">Medical Assistance in Dying (MAID) Legislation in Canada (加拿大安乐死/医疗协助死亡MAID法案)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">MEDICAL ASSISTANCE IN DYING (MAID) (加拿大医疗协助死亡法规)</h3>
+        <p class="para-en">In June 2016, the Parliament of Canada passed federal legislation (Bill C-14, subsequently amended by Bill C-7 in March 2021) that permits eligible Canadian adults who are experiencing enduring, intolerable physical or psychological suffering to request and receive <strong>Medical Assistance in Dying (MAID)</strong>. MAID occurs when an authorized physician or nurse practitioner either: (1) directly administers a substance that causes death (clinician-administered), or (2) prescribes or provides a substance that the eligible client self-administers to cause death.</p>
+        <p class="para-cn">2016 年 6 月，加拿大联邦议会正式通过历史性法案（C-14 法案，随后于 2021 年 3 月由 C-7 法案进一步修订完善），依法允许承受不可逆转、持续且难以忍受的严重身心痛苦的符合条件的加拿大成年居民，合法申请并接受<strong>医疗协助死亡（Medical Assistance in Dying, MAID）</strong>。MAID 的合法实施途径包括两类：(1) 由具备法定资质的执业医生或执业护士（NP）直接静脉注射导致无痛死亡的药物（临床医生施行型）；(2) 由医生或执业护士开具处方并交付药物，由具备行为能力的当事人亲自服下以结束生命（当事人自主施行型）。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Eligibility Criteria for MAID in Canada (加拿大 MAID 核心法定准入条件)</h4>
+        <p class="para-en">To be eligible for MAID under Canadian law, a person must meet all of the following statutory criteria:</p>
+        <p class="para-cn">依据加拿大联邦现行法典，申请接受 MAID 的当事人必须同时无一例外地满足以下全部法定准入条件：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:6px;">Be eligible for publicly funded healthcare services in Canada. (享有加拿大公共医保资助资格).</li>
+          <li style="margin-bottom:6px;">Be at least 18 years of age and mentally capable of making healthcare decisions. (年满 18 周岁且具备完全知情同意的民事与医疗决策认知能力).</li>
+          <li style="margin-bottom:6px;">Have a grievous and irremediable medical condition (a serious and incurable illness, disease, or disability; an advanced state of irreversible decline in capability; and enduring intolerable physical or psychological suffering that cannot be relieved under conditions acceptable to the person). (患有严重且不可逆转的器质性重疾，且承受着按其个人意愿无法以任何可接受手段缓解的极度身心折磨).</li>
+          <li style="margin-bottom:6px;">Make a voluntary request for MAID that is free from external pressure or coercion. (完全出于本人的真实自由意志发起申请，未受到任何家庭、财务或外界的强迫与诱导).</li>
+          <li style="margin-bottom:0;">Provide informed consent to receive MAID after receiving full information on all available alternative options, including comprehensive palliative and comfort care. (在充分知晓所有替代诊疗途径，尤其是充分知悉可获得的安宁姑息疗护服务后，签署书面知情同意书).</li>
+        </ul>
+      </div>
+
+      <div class="callout-box warning" style="margin:20px 0; padding:18px 20px; background:rgba(239,68,68,0.04); border-left:4px solid #ef4444; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#b91c1c;">THE SUPPORT WORKER’S LEGAL SCOPE REGARDING MAID (支持人员在 MAID 中的法定边界禁区)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.55;">
+          <p class="para-en">Support workers play an essential supporting role, but they <strong>must never counsel, recommend, provide information about, or administer any medication for MAID</strong>. If a client expresses interest in or asks questions regarding MAID, listen with neutrality, never judge, and <strong>immediately report the client’s request to the nurse or physician</strong>. Continue to provide compassionate, respectful personal care right up until the procedure, supporting the dignity of the client and family.</p>
+          <p class="para-cn">支持人员在安宁团队中扮演重要的基础生活照料角色，但<strong>绝对严禁向客户主动推荐、劝诱、提供有关 MAID 的专业医疗咨询，更绝对严禁参与注射或递送任何 MAID 药物</strong>。一旦客户向你询问有关 MAID 的事宜或表达求死愿望，应保持客观中立倾听、绝不加以任何道德评判，并<strong>秒级如实向责任护士或主治医生汇报</strong>。在合法程序实施之前，支持人员应一如既往地为客户提供充满敬意、体贴入微的日常生理与心理舒适照护，全心维护逝者与家属的生命尊严。</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1121" data-physical-page="1121">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1121</span>
+        <span class="page-topic-title">The Experience of Grief & Professional Support Communication (哀伤体验、有效沟通与支持性回应原则)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">THE EXPERIENCE OF GRIEF (哀伤的本质与多维身心体验)</h3>
+        <p class="para-en"><strong>Grief</strong> is the deeply personal, natural, and multifaceted response to loss—the process of moving from profound sorrow toward healing, integration, and recovery. Grief affects every dimension of an individual: physical (tightness in chest, fatigue, changes in appetite and sleep), emotional (profound sadness, shock, guilt, anger, anxiety), cognitive (disbelief, confusion, difficulty concentrating), and spiritual (questioning faith, searching for meaning). <strong>Grief counselling</strong> provides specialized professional support to help individuals navigate the complex turbulence of bereavement.</p>
+        <p class="para-cn"><strong>哀伤（Grief）</strong>是人类面对重大丧失时所产生的极其个性化、自然且多维度的深层心身反应——是一个自痛彻心扉的深渊逐步迈向心理疗愈、情感整合与生活复原的动态过程。哀伤波及人体的每一个维度：生理层面（胸口压迫濒死感、极度虚脱乏力、失眠或厌食暴食）；情绪层面（撕心裂肺的悲伤、震惊麻木、负罪自责、愤怒与焦虑）；认知层面（难以置信、恍惚健忘、注意力严重涣散）；以及灵性层面（对终极信仰的动摇与人生意义的重构）。<strong>哀伤辅导（Grief counselling）</strong>则是由专科心理治疗师或临床社工提供的专业性支持，旨在协助生者度过丧亲带来的狂风巨浪。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Communicating with Grieving Individuals: What to Say and What to Avoid (与哀伤者沟通的语言艺术与表达禁忌)</h4>
+        <p class="para-en">When supporting grieving clients and family members, communication must be grounded in genuine empathy and humility. Well-intentioned people frequently use clichés that unintentionally invalidate the person’s pain.</p>
+        <p class="para-cn">在床旁支持深陷哀伤的客户与家属时，所有言语交流都必须深植于真诚的同理心与谦逊之中。许多出于善意的探视者常常脱口而出一些陈词滥调，殊不知这些话语在潜意识中极大地抹杀并否定了当事人刻骨铭心的伤痛。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <table class="communication-table" style="width:100%; border-collapse:collapse; margin-top:10px; font-size:13.5px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); text-align:left;">
+              <th style="padding:10px; width:48%; color:#dc2626;">❌ Avoid Phrases That Dismiss Pain (严禁使用的错误套话)</th>
+              <th style="padding:10px; width:52%; color:#16a34a;">✅ Helpful, Empathetic Responses (推荐使用的专业同理回应)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:10px; color:var(--text-secondary);">“They are in a better place now.” (他现在去了更好的地方 / 去享福了)<br><span style="font-size:12px; color:#ef4444;">Dismisses the raw anguish of immediate absence. (轻慢了生者痛失至亲的深重绝望)</span></td>
+              <td style="padding:10px; color:var(--text-primary);">“I am so sorry for your loss. I can see how deeply loved they are.” (惊悉至亲离世，我深感悲痛。我能深切感受到你们之间有多么深厚的爱)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:10px; color:var(--text-secondary);">“I know exactly how you feel.” (我完全知道你现在是什么感受)<br><span style="font-size:12px; color:#ef4444;">No two losses or grief experiences are identical. (每个人的丧失体验皆独一无二，不可妄加揣度)</span></td>
+              <td style="padding:10px; color:var(--text-primary);">“I cannot imagine how painful this is for you. I am here to support you in whatever way you need.” (我无法想象此刻你承受着多大的痛楚，无论你需要什么支持，我都随时在这里陪伴你)</td>
+            </tr>
+            <tr>
+              <td style="padding:10px; color:var(--text-secondary);">“You must stay strong for your children.” (你必须坚强起来，为了孩子撑住)<br><span style="font-size:12px; color:#ef4444;">Forces suppression of natural emotional tears. (道德绑架生者强行压抑自然的悲伤泪水)</span></td>
+              <td style="padding:10px; color:var(--text-primary);">“It is completely okay to cry and feel broken. Take all the time you need.” (想哭就痛痛快快哭出来，感到无力是完全正常的。按照你自己的节奏慢慢来)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1122" data-physical-page="1122">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1122</span>
+        <span class="page-topic-title">Theories of Grief: Kübler-Ross 5 Stages & Bowlby/Worden Models (哀伤心理学理论：库伯勒-罗斯五阶段模型)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">The Five Stages of Grief: Dr. Elisabeth Kübler-Ross (库伯勒-罗斯博士哀伤五阶段经典理论)</h4>
+        <p class="para-en">In her landmark 1969 book <em>On Death and Dying</em>, psychiatrist Dr. Elisabeth Kübler-Ross identified five distinct stages that individuals frequently navigate when facing impending death or traumatic loss:</p>
+        <p class="para-cn">精神病学家伊丽莎白·库伯勒-罗斯博士（Dr. Elisabeth Kübler-Ross）在其 1969 年出版的开山名著《论死亡与临终》（<em>On Death and Dying</em>）中，提炼出了人类在直面死亡与重大丧亲时最为经典的五个心理应对阶段：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>1. Denial (否认期 — “No, not me!”):</strong> The person refuses to accept the reality of the terminal diagnosis or imminent death. They believe a laboratory error occurred, seek repeated second opinions, and act as though nothing is wrong. <em>Denial acts as a temporary psychological buffer against overwhelming shock.</em>
+            <div style="font-size:13px; color:var(--text-secondary);"><strong>1. 否认期（“不，绝不可能是我！”）：</strong>当事人在潜意识中拒绝承认绝症确诊或大限将至的残酷现实。坚信是医院化验搞错、反复辗转寻求其他医生复核，行为举止宛如一切如常。<em>否认是人类自我防御机制在遭受毁灭性打击初期所构筑的暂时性心理缓冲盾牌。</em></div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>2. Anger (愤怒期 — “Why me?! It’s not fair!”):</strong> Denial crumbles into deep rage, bitterness, and resentment. The client lashes out at doctors, nurses, family members, God, or the support worker. <em>Support workers must understand that this anger is not personal; it is a manifestation of profound frustration and helplessness.</em>
+            <div style="font-size:13px; color:var(--text-secondary);"><strong>2. 愤怒期（“凭什么是我？！这太不公平了！”）：</strong>否认防线崩溃后，转入狂暴的怒火、怨恨与愤愤不平。患者常将无名怒火迁怒于医生、护士、贴身照顾的家属、上苍神明，乃至送饭翻身的支持人员。<em>支持人员必须清醒认识到这种暴躁绝对不是针对你个人，而是患者面对生命彻底失控时的极度绝望外化。</em></div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>3. Bargaining (协议期 / 讨价还价期 — “Yes, me, but...”):</strong> The client attempts to negotiate with God, fate, or medical science for more time, promising good deeds or religious devotion in exchange for living to see a specific milestone (a child's wedding, birth of a grandchild).
+            <div style="font-size:13px; color:var(--text-secondary);"><strong>3. 协议期（“好吧，是我，但是求求多给我一点时间...”）：</strong>患者试图暗中与神明、命运或现代医学做最后交易以祈求宽限时日，许愿只要能活到见证某一特定人生里程碑（如参加女儿婚礼、亲眼看到孙辈出生），自己甘愿散尽家财或终身信道忏悔。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>4. Depression (抑郁期 — “Yes, me. What is the point?”):</strong> The client mourns losses already suffered (loss of job, health, mobility) and grieves the ultimate loss of life itself. The person may weep silently, refuse food, become quiet, and withdraw from social interaction.
+            <div style="font-size:13px; color:var(--text-secondary);"><strong>4. 抑郁期（“是的，是我，一切都毫无意义了...”）：</strong>患者既为生前已丧失的健康、事业、自理机能感到悲伤，更在深沉哀悼自己即将与世界和至亲彻底永别的终极命运。患者常默默垂泪、拒绝进食、陷入良久的死寂，并主动回避一切社交探视。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>5. Acceptance (接纳期 — “I am ready.”):</strong> The client reaches a state of peaceful tranquility and emotional detachment. They have accepted the inevitability of death. The struggle is over, pain is often reduced, and the person may want only quiet bedside companionship from immediate family.
+            <div style="font-size:13px; color:var(--text-secondary);"><strong>5. 接纳期（“我准备好了，心已安宁。”）：</strong>患者达至内心的平和与释怀，坦然接纳死亡必然来临的规律。内心的剧烈挣扎彻底止息，精神痛苦显著减轻，此时往往只渴望至亲挚友在床旁给予安静沉稳的默默陪伴。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="callout-box info" style="margin:20px 0; padding:18px 20px; background:rgba(37,99,235,0.04); border-left:4px solid #2563eb; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#1e40af;">MODERN UNDERSTANDING OF GRIEF (现代哀伤理论的非线性演进认知)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.55;">
+          <p class="para-en">Modern bereavement science emphasizes that <strong>grief is not a linear, step-by-step checklist</strong>. A person does not neatly pass through stage 1 to stage 5. Individuals move back and forth between stages, skip stages altogether, experience multiple stages simultaneously, or express grief entirely differently according to their culture and coping mechanisms.</p>
+          <p class="para-cn">现代丧亲心理学明确指出：<strong>哀伤绝非死板教条的线性清单流程</strong>。人绝对不会按部就班地从第 1 阶段机械迈向第 5 阶段。每个人都会在不同阶段之间反复跳跃、中途折返、彻底跳过某些阶段、或同时兼具多重复杂情绪；文化背景与个体应对风格更决定了哀伤表达的无穷多样性。</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1123" data-physical-page="1123">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1123</span>
+        <span class="page-topic-title">Signs of Approaching Death & Clinical Manifestations (临终濒死先兆与生理征象)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Signs of Approaching Death (生命即将终结的客观濒死生理征象)</h4>
+        <p class="para-en">As biological systems fail in the final hours or days of life, distinct clinical manifestations occur. Recognizing these signs allows the care team to prepare the family, provide focused comfort, and ensure dignified presence:</p>
+        <p class="para-cn">在生命的最后数小时至数天内，随着机体各大脏器系统的全面衰竭，会出现极其清晰的特征性临床征象。敏锐识别这些濒死先兆，有助于护理团队协助家属做好充分的告别准备、聚焦实施终末舒适护理，并确保床旁充满宁静尊严：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Loss of movement, muscle tone, and sensation (运动、肌张力与感觉丧失):</strong> Facial muscles relax, the jaw sags downward, speech becomes impossible, and swallowing reflexes are abolished.
+            <div style="font-size:13px; color:var(--text-secondary);">面部肌肉完全松弛无力、下颌自然下垂微张、失去发音言语能力，吞咽反射彻底消失。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Slowing of gastrointestinal and urinary systems (胃肠蠕动与泌尿功能停滞):</strong> Abdominal distension, nausea, fecal impaction, and urinary/fecal incontinence occur as sphincters lose tone. Urine output drops drastically to scant, concentrated dark amber urine.
+            <div style="font-size:13px; color:var(--text-secondary);">括约肌肌张力完全丧失导致大小便失禁；肠麻痹引起腹部膨隆；肾脏灌注衰竭导致排尿量断崖式暴跌，仅有极少量浓缩呈深茶色的尿液。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Body temperature alterations (体温调节中枢紊乱):</strong> The client may feel burning hot with profuse diaphoresis, but skin extremities become cold and clammy to the touch.
+            <div style="font-size:13px; color:var(--text-secondary);">丘脑体温调节功能失调，患者可能自感内热高烧并大汗淋漓，但触摸其四肢末端却冰凉湿冷。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Circulatory failure and skin changes (循环衰竭与特征性皮肤花斑):</strong> Peripheral blood vessels constrict to shunt remaining blood to the heart and brain. Feet, hands, knees, and dependent areas develop mottled, purplish-blue marble-like discoloration (<em>cyanosis / mottling</em>). The pulse becomes rapid, thready, irregular, and progressively weaker until impalpable. Blood pressure drops precipitously.
+            <div style="font-size:13px; color:var(--text-secondary);">外周微循环严重淤滞代偿性收缩，足部、手部、膝盖及下垂受压部位出现灰白夹杂青紫色的特征性大理石花斑样改变（<strong>花斑现象 Mottling</strong>）。脉搏变得极其细速微弱、节律紊乱，直至桡动脉脉搏完全扪不清；血压呈现断崖式持续下跌。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Respiratory failure and the "Death Rattle" (呼吸系统衰竭与“濒死喉鸣”):</strong> Breathing patterns become irregular and shallow. <strong>Cheyne–Stokes respirations</strong> (alternating cycles of rapid, deep breathing followed by slow shallow breathing, ending in 10- to 60-second periods of total apnea) frequently occur. As the dying person loses the ability to swallow or cough, secretions pool in the back of the throat, producing a coarse, wet, gurgling sound known as the <strong>“death rattle.”</strong> <em>Explain to family members that the death rattle is distressing to hear but does not cause pain or distress to the unconscious client.</em>
+            <div style="font-size:13px; color:var(--text-secondary);">呼吸节律极度紊乱。频繁出现<strong>陈-施氏呼吸（潮式呼吸）</strong>：呼吸由浅慢逐渐变为深快，继之由深快转为浅慢，随后出现长达 10 至 60 秒的完全呼吸暂停，周而复始。由于患者彻底失去吞咽与自主咳嗽力量，气管与咽喉后壁积聚的大量分泌物在气流冲击下发出粗糙湿啰音与咕噜声，临床俗称<strong>“濒死喉鸣（Death rattle）”</strong>。<em>支持人员应主动向守候床旁的家属耐心解释：这种痰鸣音听起来虽令人揪心，但处于深度昏迷的亲人自身并无任何窒息痛苦或呛咳折磨。</em></div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Loss of consciousness (意识进行性丧失):</strong> The client transitions from restlessness or confusion into somnolence, stupor, and deep coma. Pain sensation diminishes, but remember that hearing remains active until the final breath.
+            <div style="font-size:13px; color:var(--text-secondary);">患者由先前的躁动不安、谵妄恍惚，逐步转入嗜睡、昏睡，最终陷入深度昏迷状态。全身痛觉知觉基本丧失，但务必铭记听觉中枢将忠实坚守至呼吸停止的最后一刻。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1124" data-physical-page="1124">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1124</span>
+        <span class="page-topic-title">Signs of Death, Rigor Mortis & Cultural Death Rituals (死亡确证体征、尸僵形成与多元文化丧葬习俗)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Signs of Death and Rigor Mortis (死亡确证体征与尸僵形成机制)</h4>
+        <p class="para-en">Clinical death occurs when vital organs cease functioning permanently. The signs of death include: absence of apical pulse, cessation of respirations, lack of blood pressure, pupils that are fixed and dilated (unresponsive to light), complete muscular flaccidity, and loss of all reflexes. <strong>Only a physician or an authorized registered nurse has the legal authority to pronounce death.</strong></p>
+        <p class="para-cn">当维持生命的中枢与循环呼吸系统彻底永久停止运转时，标志着临床死亡的降临。确证死亡的体征包括：心尖搏动完全消失、自主呼吸彻底停止、血压测不到、双侧瞳孔散大固定（对光反射完全消失）、全身骨骼肌完全松弛瘫软，以及全部神经反射彻底引不出。<strong>法律严正规定：唯有执业医师或经法定授权的专职注册护士，才具备依法宣布患者死亡的法定公权力。</strong></p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en"><strong>Rigor mortis</strong> is the stiffness or rigidity (rigor) of skeletal muscles that develops after death (mortis) due to the depletion of adenosine triphosphate (ATP) in muscle fibers. Rigor mortis typically begins 2 to 4 hours after death, reaches maximum stiffness at approximately 12 hours, and gradually resolves over 48 to 72 hours. <em>Clinical rule: Postmortem care must be performed promptly after the pronouncement of death before rigor mortis develops, so that the body can be easily and naturally positioned in anatomical alignment.</em></p>
+        <p class="para-cn"><strong>尸僵（Rigor mortis）</strong>是指人死后由于肌肉纤维内三磷酸腺苷（ATP）彻底耗尽，导致全身骨骼肌发生化学性凝固与硬化强直（rigor）的病理生理现象。尸僵通常在死亡后 2 至 4 小时内开始自下颌、颈部逐渐蔓延，在死后约 12 小时达到全身最大僵硬度，并在 48 至 72 小时后随组织自溶逐步缓解软化。<em>核心护理铁律：遗体善后护理必须在医生法定宣告死亡后争分夺秒立即展开，务必赶在全身尸僵形成锁死之前完成，以保证遗体能够轻柔顺畅地被摆放至解剖学自然安详对齐体位。</em></p>
+      </div>
+
+      <div class="callout-box info" style="margin:20px 0; padding:18px 20px; background:linear-gradient(135deg, rgba(37,99,235,0.05), rgba(16,185,129,0.05)); border-left:4px solid #10b981; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#065f46;">RESPECTING DIVERSITY: Death Rituals Across Cultures (尊重多元化：各文化与宗教丧葬神圣习俗)</h4>
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13px; line-height:1.55; color:var(--text-primary);">
+          <li><strong>Indigenous traditions (加拿大原住民传统):</strong> Smudging ceremonies (burning sacred sweetgrass, cedar, or sage) may be performed at the bedside. Songs, drum circles, and prayers guide the spirit on its journey to the spirit world.</li>
+          <li><strong>Judaism (犹太教信仰):</strong> The dying person is never left alone (the practice of <em>Shomerim</em>, or guardians). Autopsy and embalming are generally forbidden. The body is wrapped in a plain white linen shroud and burial must take place as soon as possible, traditionally within 24 hours.</li>
+          <li><strong>Islam (伊斯兰教传统):</strong> The dying person’s bed or face is positioned toward Mecca (the holy city). Following death, the body is ritualistically washed by family members of the same sex, perfumed, and wrapped in unstitched white cloth (Kafan). Burial takes place without cremation.</li>
+          <li><strong>Hinduism (印度教信仰):</strong> Sacred water from the Ganges River may be placed on the lips. The body is typically cremated within 24 hours of death to liberate the soul.</li>
+          <li><strong>Roman Catholicism (罗马天主教):</strong> The Sacrament of the Sick (formerly known as the Last Rites), involving prayers and anointing with holy oils, is administered by a priest prior to death.</li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1125" data-physical-page="1125">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1125</span>
+        <span class="page-topic-title">Postmortem Care Principles & Preparing for Autopsy (遗体护理原则、尸检准备与机构感控规范)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">POSTMORTEM CARE (遗体善后护理核心规程)</h3>
+        <p class="para-en"><strong>Postmortem care</strong> is the care of the body after (post) death (mortem). It begins immediately after the client is officially pronounced dead by a physician or authorized nurse, and before rigor mortis sets in. The goals of postmortem care are to maintain the body in good alignment, prevent discoloration of the face, maintain clean skin, and prepare the body for viewing by loved ones and subsequent transfer to a morgue or funeral home.</p>
+        <p class="para-cn"><strong>遗体善后护理（Postmortem care）</strong>是指在患者离世（mortem）之后（post）对其躯体所实施的尊严性专业照护。它必须在执业医师或经法定授权的护士正式宣布死亡后立即启动，且必须赶在全身尸僵形成之前完成。遗体护理的核心目标在于：保持躯体处于良好的解剖生理对齐状态、防止面部因血液坠积而发生发绀变色、保持体表皮肤清洁干燥无异味，并协助遗体呈现安详端庄的容貌以供至亲最后瞻仰告别，随后安全交接移送至太平间或殡仪馆。</p>
+      </div>
+
+      <div class="callout-box warning" style="margin:20px 0; padding:18px 20px; background:rgba(239,68,68,0.04); border-left:4px solid #ef4444; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#b91c1c;">CLINICAL ALERT: When an Autopsy is Ordered (临床红线警示：涉及尸体解剖时的铁律)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.55;">
+          <p class="para-en">An <strong>autopsy</strong> (postmortem examination) is the surgical examination of the body and internal organs after death to determine the cause of death or evaluate disease extent. Autopsies may be requested by the family or mandated by law (the coroner or medical examiner) in cases of sudden, unexplained, traumatic, or suspicious deaths. <strong>If an autopsy is ordered: NEVER remove IV lines, endotracheal tubes, urinary catheters, wound drains, or surgical dressings!</strong> All medical devices must remain strictly in place in situ for forensic pathology examination.</p>
+          <p class="para-cn"><strong>尸体解剖（Autopsy）</strong>是指在人死后对手术切开躯体及内部器官进行的病理学病因剖析，旨在明确直接死因或评估恶性疾病浸润范畴。尸检可应直系家属书面申请发起，亦可在遭遇突发猝死、死因不明、外伤致死或涉及刑事法律纠纷时由验尸官（Coroner）依法强制下达。<strong>尸检核心操作红线：若已下达尸检指令，绝对严禁拔除或剪断体表的静脉输液管路、气管插管、导尿管、切口引流管或拆除手术敷料！</strong>所有管路器械必须原封不动完好保留在原位，以供法医病理学家进行司法取证检验。</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1126" data-physical-page="1126">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1126</span>
+        <span class="page-topic-title">Procedure: Assisting with Postmortem Care Part 1 (实操规程：协助遗体护理第 1 部分，图 47.1)</span>
+      </div>
+
+      <div class="procedure-box" style="margin-bottom:24px; padding:20px 22px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:10px;">
+        <h4 style="margin:0 0 14px 0; font-size:16px; color:var(--accent-color); display:flex; align-items:center; gap:8px;">
+          <span>PROCEDURE: Assisting With Postmortem Care — Steps 1 to 18</span>
+        </h4>
+        <div style="font-size:13.5px; font-weight:600; color:var(--text-secondary); margin-bottom:12px;">实操规程：协助实施遗体善后护理 — 步骤 1 至 18</div>
+
+        <ol style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <li style="margin-bottom:6px;">Wash hands thoroughly. Put on clean gloves, gown, and mask if indicated by infection control policy. (严格洗手，遵照感控要求戴好医用手套与隔离服).</li>
+          <li style="margin-bottom:6px;">Confirm that the client has been officially pronounced dead and check if an autopsy is ordered. (核实死亡已依法宣告，并再次确认是否需要执行司法尸检).</li>
+          <li style="margin-bottom:6px;">Close the door and pull privacy curtains completely around the bed unit. Maintain a quiet, dignified environment. (关严病房房门，拉严床周隔帘，维持绝对肃穆尊严的环境).</li>
+          <li style="margin-bottom:6px;">Place the bed in a comfortable working height and lower the head of the bed flat. (将病床升高至适宜的操作台高度，将床头摇平至完全水平位).</li>
+          <li style="margin-bottom:6px;">Remove all extra pillows, blankets, and bedside clutter. (移走多余枕头、被褥及床旁杂物).</li>
+          <li style="margin-bottom:6px;">Gently close the eyes by pulling the upper eyelid down over the cornea. If eyes remain open, place moist cotton balls gently over the lids for a few minutes. (轻拉上眼睑遮盖角膜使双眼自然闭合；若眼睑微张，可用湿棉球轻敷数分钟).</li>
+          <li style="margin-bottom:6px;"><strong>Place the body in the supine position (FIGURE 47.1).</strong> Straighten the arms alongside the body with palms down, and straighten the legs. <strong>Place a small pillow under the head and shoulders.</strong> <em>Rationale: Elevating the head and shoulders prevents venous blood from pooling in the face and neck, preventing facial discoloration and purple mottling.</em> (<strong>将遗体安置于仰卧位，双臂双腿自然伸直，在头部和双肩下垫一小枕（图 47.1）</strong>。<em>核心病理依据：垫高头肩部能有效防止静脉血液在重力作用下倒流淤积于头颈面部，避免面部迅速充血发绀紫变</em>).</li>
+        </ol>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:20px; text-align:center;">
+        <img src="images/ch47/fig-47-1.jpg" alt="Figure 47.1 Postmortem Positioning" style="max-width:85%; border-radius:6px; border:1px solid var(--border-color); box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+        <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+          <strong>FIGURE 47.1:</strong> Place the body in the supine position, straighten the arms and legs, and place a small pillow under the head and shoulders to prevent facial discoloration.
+          <div style="font-size:11.5px; color:var(--text-muted);">图 47.1：将遗体置于仰卧平躺位，伸直双臂双腿，在头肩部下方轻垫小枕以防面部血液坠积青紫变色。</div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6;">
+          <li style="margin-bottom:6px;"><strong>Dentures (义齿复位):</strong> Insert dentures if permitted by agency policy. Inserting dentures restores natural facial contours. Close the mouth gently. A rolled small towel placed under the chin supports the jaw in a closed position until rigor mortis sets in. (按机构规程将假牙及时戴回口腔以恢复饱满的面部天然轮廓；在下颌下垫卷轴小毛巾支撑托住下巴，防止下颌骨下垂，直至尸僵形成).</li>
+          <li style="margin-bottom:6px;"><strong>Tubes and catheters (管路处理):</strong> If no autopsy is ordered, the nurse removes or disconnects IV lines and catheters according to policy. (若无需尸检，由护士按规程撤除各类输液插管与引流管).</li>
+          <li style="margin-bottom:6px;"><strong>Skin cleansing (清洁体表皮肤):</strong> Wash soiled areas of the body with warm water and soap. Dry gently. (用温水和中性肥皂轻柔擦洗被排泄物或体液污染的皮肤区域并彻底擦干).</li>
+          <li style="margin-bottom:6px;"><strong>Absorbent pad (臀下防渗垫):</strong> Place a clean disposable absorbent pad under the buttocks to catch involuntary leakage of urine or stool as muscles completely relax. (在臀部下方垫放洁净的防渗看护垫，吸收括约肌完全松弛后渗漏的大小便).</li>
+          <li style="margin-bottom:6px;"><strong>Dressings (更换伤口敷料):</strong> Remove soiled dressings and replace with clean, fresh adhesive dressings. (撕下浸透渗血的旧敷料，换上洁净崭新的无菌敷料).</li>
+          <li style="margin-bottom:0;"><strong>Family viewing preparation (瞻仰准备):</strong> Comb the hair neatly. Place a clean hospital gown or client’s clothing on the body. Cover the body up to the chin with a clean top sheet and light blanket. Tidy the room and adjust lighting softly before welcoming the family in. (将头发梳理整齐；换上洁净病服；用平整白床单与轻薄毛毯盖至下巴处，双手安详放于被外；迅速整理病房并调暗刺眼灯光，迎接家属入内瞻仰告别).</li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1127" data-physical-page="1127">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1127</span>
+        <span class="page-topic-title">Procedure: Assisting with Postmortem Care Part 2 (实操规程：协助遗体护理第 2 部分，裹尸与物品交接)</span>
+      </div>
+
+      <div class="procedure-box" style="margin-bottom:24px; padding:20px 22px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:10px;">
+        <h4 style="margin:0 0 14px 0; font-size:16px; color:var(--accent-color); display:flex; align-items:center; gap:8px;">
+          <span>PROCEDURE: Assisting With Postmortem Care — Steps 19 to 28 (After Family Viewing)</span>
+        </h4>
+        <div style="font-size:13.5px; font-weight:600; color:var(--text-secondary); margin-bottom:12px;">实操规程：遗体善后护理后续 — 步骤 19 至 28（家属瞻仰离室后）</div>
+
+        <ol start="19" style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <li style="margin-bottom:6px;">After the family has viewed the body and departed, wash hands and don fresh gloves. (在家属结束瞻仰告别并离开后，重新洗手并戴上洁净手套).</li>
+          <li style="margin-bottom:6px;">Attach the first official identification tag to the client’s right big toe or ankle, ensuring the client’s full legal name, healthcare record number, date, time of death, and physician’s name are clearly printed. (在逝者右脚大脚趾或脚踝系上第一张官方身份识别标签卡，确认姓名、住院号、死亡确切时间准确无误).</li>
+          <li style="margin-bottom:6px;">Place the body securely inside the postmortem shroud (body bag). Fasten the zipper or fold the plastic sheet neatly over the body. (将遗体平稳移入专科裹尸袋/防泄漏遗体保护袋内，顺畅拉合拉链或整齐折叠塑料裹单).</li>
+          <li style="margin-bottom:6px;">Attach the second identification tag securely to the outside zipper pull or exterior of the shroud. (在裹尸袋外部拉链手柄或外层固定第二张身份识别标签).</li>
+          <li style="margin-bottom:6px;">Gather all of the client's personal belongings, clothing, jewelry, and assistive devices. Place them in a designated belongings bag, label it with the client’s full name, and follow facility handover protocols for delivery to the family or funeral director. (全面收集逝者所有随身衣物、首饰与辅具，装入专用财产袋并张贴清晰姓名标签，按制度转交家属或殡葬专员并签字留存).</li>
+          <li style="margin-bottom:6px;">Assist transfer personnel in moving the shrouded body onto the morgue transport cart with utmost care and dignity. (协助转运人员将遗体平稳轻柔平移至带有专用遮盖罩的冷藏推车上，全程维护肃穆尊严).</li>
+          <li style="margin-bottom:6px;">Strip the bed linens, discard all disposables in biohazard waste, and wipe down the mattress and room surfaces with hospital-grade disinfectant. (拆卸床单被褥，按感控规范处置废弃耗材，用医院级消毒剂彻底擦拭床垫及病房全表面).</li>
+          <li style="margin-bottom:0;">Remove gloves, perform thorough hand hygiene, and record all postmortem care details, time of transfer, and belongings disposition in the clinical record. (脱去手套，严格流动水洗手，在临床交接记录中详实登记遗体护理时间、转运交接人及财物去向).</li>
+        </ol>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1128" data-physical-page="1128">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1128</span>
+        <span class="page-topic-title">Chapter Review, Key Points, Critical Thinking & Practice Questions 1–8 (本章回顾、核心要点与真题测验 1–8)</span>
+      </div>
+
+      <div class="chapter-review-box" style="margin-bottom:24px; padding:22px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:10px;">
+        <h3 style="margin-top:0; margin-bottom:14px; font-size:18px; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+          <span style="display:inline-block; width:6px; height:18px; background:var(--accent-color); border-radius:3px;"></span>
+          CHAPTER REVIEW: KEY POINTS (本章总结与核心考点摘要)
+        </h3>
+        
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <li style="margin-bottom:6px;">As a support worker, you will be required to help meet the physical, social, emotional, intellectual, and spiritual needs of clients who are dying and to support their families through the process. (支持人员必须全方位满足临终者身心灵多重需求并向家属提供全程情感依靠).</li>
+          <li style="margin-bottom:6px;">Personality, culture, religion, age, and experience influence people’s attitudes toward death. (性格特质、文化传统、宗教信仰、生命年龄阶段及过往阅历共同决定了个体对死亡的态度).</li>
+          <li style="margin-bottom:6px;">As a support worker, you need to be aware of the cultural beliefs of your client and respect the death and dying rituals of the client and the family. (敏锐体察多元文化与宗教习俗，对各民族神圣的临终与丧葬仪式给予最高崇敬与恪守).</li>
+          <li style="margin-bottom:6px;">Palliative and hospice care aims to provide comfort and support to a dying client in the client’s home or in a facility. (安宁姑息疗护的崇高使命在于缓解身心折磨，无论在居家还是机构中均全力捍卫尊严).</li>
+          <li style="margin-bottom:6px;">As a support worker, you need to know your employer’s policies and your legal obligations regarding advance directives and “do not resuscitate” orders. (熟稔机构规章及法律底线，严格执行预先医疗指示与不复苏 DNR 医嘱要求).</li>
+          <li style="margin-bottom:6px;">The stages or phases of grief the client, the family, and you experience will vary in each case. (患者、家属及照护人员所体验的哀伤阶段与演变节奏因人而异，呈现高度非线性多样化).</li>
+          <li style="margin-bottom:6px;">Care of the body after death will depend on the cultural beliefs of your client. Follow your employer’s policy. (遗体善后护理深度融合感控规程与逝者特定文化习俗，严格遵照机构操作规范落实).</li>
+          <li style="margin-bottom:0;">Funeral directors are trained to assist families through the necessary processes and paperwork. They can also refer families to other support services. (殡仪专员受过专业训练，协助家属办理法定离世手续并可引荐专业哀伤辅导资源).</li>
+        </ul>
+      </div>
+
+      <div class="critical-thinking-box" style="margin-bottom:28px; padding:18px 20px; background:rgba(245,158,11,0.06); border-left:4px solid #f59e0b; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#b45309;">CRITICAL THINKING IN PRACTICE: Case Study (临床批判性思维情境分析)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <p class="para-en"><strong>Scenario:</strong> Mr. Wills was admitted to a hospital, where he was diagnosed with terminal cancer. Within a week, he has appeared to lose consciousness, and he now is receiving end-of-life comfort care. Mrs. Wills, his wife of 67 years, is always at his side and does not seem to think he is dying. She talks about the next time they visit the grandchildren, and how they like to garden. Is it normal for family members to behave in this manner? As a bedside caregiver for Mr. Wills, what should you say when Mrs. Wills talks about their future plans?</p>
+          <p class="para-cn"><strong>案例情境：</strong>威尔斯先生因晚期恶性肿瘤入院，一周内意识逐渐模糊陷入深度昏迷，目前正在接受终末期舒适照护。与他相濡以沫 67 年的妻子威尔斯太太日夜守候在床旁，但她似乎完全不认为丈夫正在死去。她不断跟床旁的照护人员兴致勃勃地谈论下一次去探望孙辈的计划，以及他们俩春天如何在花园里修剪花木。家属表现出这种行为是否属于正常反应？作为威尔斯先生的床旁支持人员，当威尔斯太太兴致盎然地谈论未来的美好计划时，你应当如何妥善回应？</p>
+          <div style="font-size:12.5px; color:var(--text-secondary); margin-top:8px;">
+            <em>Clinical Reflection (权威临床剖析):</em> Yes, this is completely normal and represents the <strong>denial stage of grief</strong>. Mrs. Wills’s mind is unconsciously protecting her from the unbearable shock of losing her partner of nearly seven decades. Support workers must never argue, harshly correct her, or force reality upon her (never say “He won’t live to see the garden”). Instead, listen with warmth, validate the deep love and beautiful memories shared (“It sounds like you two have shared a wonderful garden together”), provide quiet emotional presence, and inform the nurse so that grief support and social work can walk alongside Mrs. Wills gently.
+          </div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:20px; margin-bottom:12px;">REVIEW QUESTIONS (教材官方复习自测题 1–8)</h4>
+        <p class="para-en" style="font-size:13.5px; color:var(--text-secondary); margin-bottom:14px;">Circle the BEST answer (单项选择题：选出最佳答案)。</p>
+      </div>
+
+      <div class="editorial-quiz-preview" style="padding:16px; background:var(--bg-main); border:1px dashed var(--border-color); border-radius:8px;">
+        <p style="margin:0; font-size:14px; color:var(--text-secondary);"><em>本章共包含 12 道官方执业认证真题（题 1–12 均为全真临床单选题）。完整交互试题、即时核对及权威临床精解请访问独立题库章节 <strong><a href="#sec-ch47-quiz" onclick="switchSection('sec-ch47-quiz', '第 47 章：自测习题库')" style="color:var(--accent-color); font-weight:600; text-decoration:underline;">第 47 章自测习题库 (#sec-ch47-quiz)</a></strong>。</em></p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1129" data-physical-page="1129">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1129</span>
+        <span class="page-topic-title">Practice Questions 9–12, Answers & Clinical Rationales (真题测验 9–12、官方标准答案与临床精解)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:12px;">REVIEW QUESTIONS Continued (教材官方复习自测题 9–12 及全书官方终章答案)</h4>
+        <p class="para-en" style="font-size:13.5px; color:var(--text-secondary); margin-bottom:16px;">Questions 9 to 12 focus on healthcare proxy legal authority, DNR order meaning, Cheyne-Stokes breathing, and postmortem care timing.</p>
+      </div>
+
+      <div class="official-answers-box" style="margin-top:20px; margin-bottom:28px; padding:20px 24px; background:linear-gradient(135deg, rgba(37,99,235,0.05), rgba(16,185,129,0.05)); border:1px solid var(--border-color); border-radius:10px;">
+        <h4 style="margin:0 0 12px 0; font-size:16px; color:var(--accent-color); display:flex; align-items:center; gap:8px;">
+          <span>Official Elsevier Review Answers (Elsevier 官方公布标准答案)</span>
+        </h4>
+        <div style="font-family:monospace; font-size:14px; font-weight:700; color:var(--text-primary); line-height:1.8; margin-bottom:14px;">
+          Answers: 1.C, 2.A, 3.D, 4.D, 5.A, 6.D, 7.D, 8.C, 9.C, 10.A, 11.D, 12.B
+        </div>
+        <div style="font-size:13px; color:var(--text-secondary); line-height:1.6;">
+          <strong>Chapter Opener Image Credit:</strong> iStockphoto/KatarzynaBialiasiewicz.<br>
+          <em>Textbook Milestone Completion:</em> This marks the complete physical page restoration of all 47 Chapters of *Sorrentino's Canadian Textbook for the Support Worker (5th Canadian Edition, 2021)*, spanning continuous physical pages 1 to 1129.
+        </div>
+      </div>
+    </section>
+    
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch46')">← 上一章：第 46 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch47-quiz')">✍️ 12 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-congrats" onclick="alert('🎉 恭喜！您已学完加拿大 PSW 官方原版教材全部 47 章核心内容！')">已是全书最终章 🏆</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch46.html" class="sbn-btn sbn-prev">← 上一章：第 46 章 (在急性期医疗机构中工作)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch47-quiz" class="sbn-btn sbn-quiz">✍️ 12 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('🎉 恭喜！您已学完加拿大 PSW 官方原版教材全部 47 章核心内容！')" class="sbn-btn sbn-next sbn-congrats">已是全书最终章 🏆</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch47_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
