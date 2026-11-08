@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 43: Caring for Older Persons · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 43</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html">第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+<option value="psw-ch24.html">第 24 章 · 测量身高、体重与生命体征</option>
+<option value="psw-ch25.html">第 25 章 · 医学术语与专业缩写</option>
+<option value="psw-ch26.html">第 26 章 · 制定照护计划、口头交班汇报与书面病历记录</option>
+<option value="psw-ch27.html">第 27 章 · 营养与体液照护</option>
+<option value="psw-ch28.html">第 28 章 · 肠内营养与静脉输液照护</option>
+<option value="psw-ch29.html">第 29 章 · 排尿照护与留置导尿管</option>
+<option value="psw-ch30.html">第 30 章 · 肠道排泄照护与造口管理</option>
+<option value="psw-ch31.html">第 31 章 · 生长与发育全生命周期</option>
+<option value="psw-ch32.html">第 32 章 · 人体结构与功能</option>
+<option value="psw-ch33.html">第 33 章 · 常见疾病与机体功能障碍</option>
+<option value="psw-ch34.html">第 34 章 · 听力与视力障碍</option>
+<option value="psw-ch35.html">第 35 章 · 言语和语言障碍</option>
+<option value="psw-ch36.html">第 36 章 · 发育障碍与发育迟缓残疾</option>
+<option value="psw-ch37.html">第 37 章 · 精神健康障碍</option>
+<option value="psw-ch38.html">第 38 章 · 定向障碍、谵妄与认知症痴呆</option>
+<option value="psw-ch39.html">第 39 章 · 促进氧合</option>
+<option value="psw-ch40.html">第 40 章 · 冷热敷应用与临床物理疗法</option>
+<option value="psw-ch41.html">第 41 章 · 婴儿及其父母的照护</option>
+<option value="psw-ch42.html">第 42 章 · 儿童与青少年照护与家庭支持</option>
+<option value="psw-ch43.html" selected>第 43 章 · 老年人身心照护</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 43 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 45:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 43 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Caring for Older Persons</h1>
+      <h2 class="hero-title-cn">老年人身心照护：人口老龄化与婴儿潮一代、积极老龄化、老年学与老年医学、晚年五大发展任务、年龄歧视防范、DIPPS全人关爱准则、老年人感染不典型征象（行为突变）、退休角色适应与经济顾虑、社交重构与丧偶哀伤、老年抑郁症识别、人体八大系统生理退行性衰退与照护要点（皮肤/肌肉骨骼/神经/感官/循环/呼吸/消化/泌尿）、老年人的性健康与亲密需求、长期照护机构促进性表达与隐私权利</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 1019–1032 · 11 道全真自测题</span>
+        <span class="meta-item">专业音频：45:00</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch43-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch43" aria-label="Chapter 43 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.1019–1032 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-1019">第 1019 页 · 开篇导读与学习目标 (Learning Objectives & Opener)</option><option value="page-1020">第 1020 页 · 人口老龄化趋势、老年学概念与发展任务 (Aging Demographics, Gerontology & Developmental Tasks)</option><option value="page-1021">第 1021 页 · 年龄歧视防范与DIPPS关爱原则 (Ageism, DIPPS Care & Atypical Infection Signs, Box)</option><option value="page-1022">第 1022 页 · 心理情绪与社会角色转变：退休与角色适应 (Emotional & Social Changes: Retirement, Fig 43.1 & 43.2)</option><option value="page-1023">第 1023 页 · 经济顾虑、社交网络变化与丧偶哀伤应对 (Financial Concerns, Social Isolation & Coping With Loss)</option><option value="page-1024">第 1024 页 · 搬迁照护机构、财产健康规划与老年抑郁症早期识别 (LTC Relocation, Advance Planning & Depression, Fig 43.3)</option><option value="page-1025">第 1025 页 · 机体生理退行性变化：皮肤软组织老化与防烫伤 (Physical Changes: Integumentary System, Box 43.1)</option><option value="page-1026">第 1026 页 · 骨骼肌肉、神经系统与感觉器官生理衰退 (Musculoskeletal, Nervous & Sensory Changes, Box 43.1)</option><option value="page-1027">第 1027 页 · 循环与呼吸系统老化：动脉硬化与活动后气促 (Circulatory & Respiratory Changes: Dyspnea Care)</option><option value="page-1028">第 1028 页 · 消化与泌尿系统退变：吞咽障碍、便秘与夜尿管理 (Digestive Dysphagia & Urinary System Fluid Control)</option><option value="page-1029">第 1029 页 · 老年人的性健康与亲密需求 (Sexuality in Older Persons, Fig 43.4 & LTC Box 43.2)</option><option value="page-1030">第 1030 页 · 长期照护中尊重案主性表达与隐私维护 (Respecting Sexuality, Privacy & Intimacy in LTC, Box 43.2)</option><option value="page-1031">第 1031 页 · 本章核心知识点总结、临床案例反思与自测题1-7 (Chapter Review, Critical Thinking & Practice Exam Q1-7)</option><option value="page-1032">第 1032 页 · 全真自测复习题8-11与官方权威标准答案解析 (Practice Exam Q8-11 & Official Elsevier Answers)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-1019" class="cp-chip" id="cp-chip-43-1019" data-page="1019" onclick="handlePageChipClick(event, 'page-1019')" title="第 1019 页 · 开篇导读与学习目标 (Learning Objectives & Opener)"><span class="cp-num">p.1019</span></a><a href="#page-1020" class="cp-chip" id="cp-chip-43-1020" data-page="1020" onclick="handlePageChipClick(event, 'page-1020')" title="第 1020 页 · 人口老龄化趋势、老年学概念与发展任务 (Aging Demographics, Gerontology & Developmental Tasks)"><span class="cp-num">p.1020</span></a><a href="#page-1021" class="cp-chip" id="cp-chip-43-1021" data-page="1021" onclick="handlePageChipClick(event, 'page-1021')" title="第 1021 页 · 年龄歧视防范与DIPPS关爱原则 (Ageism, DIPPS Care & Atypical Infection Signs, Box)"><span class="cp-num">p.1021</span></a><a href="#page-1022" class="cp-chip" id="cp-chip-43-1022" data-page="1022" onclick="handlePageChipClick(event, 'page-1022')" title="第 1022 页 · 心理情绪与社会角色转变：退休与角色适应 (Emotional & Social Changes: Retirement, Fig 43.1 & 43.2)"><span class="cp-num">p.1022</span></a><a href="#page-1023" class="cp-chip" id="cp-chip-43-1023" data-page="1023" onclick="handlePageChipClick(event, 'page-1023')" title="第 1023 页 · 经济顾虑、社交网络变化与丧偶哀伤应对 (Financial Concerns, Social Isolation & Coping With Loss)"><span class="cp-num">p.1023</span></a><a href="#page-1024" class="cp-chip" id="cp-chip-43-1024" data-page="1024" onclick="handlePageChipClick(event, 'page-1024')" title="第 1024 页 · 搬迁照护机构、财产健康规划与老年抑郁症早期识别 (LTC Relocation, Advance Planning & Depression, Fig 43.3)"><span class="cp-num">p.1024</span></a><a href="#page-1025" class="cp-chip" id="cp-chip-43-1025" data-page="1025" onclick="handlePageChipClick(event, 'page-1025')" title="第 1025 页 · 机体生理退行性变化：皮肤软组织老化与防烫伤 (Physical Changes: Integumentary System, Box 43.1)"><span class="cp-num">p.1025</span></a><a href="#page-1026" class="cp-chip" id="cp-chip-43-1026" data-page="1026" onclick="handlePageChipClick(event, 'page-1026')" title="第 1026 页 · 骨骼肌肉、神经系统与感觉器官生理衰退 (Musculoskeletal, Nervous & Sensory Changes, Box 43.1)"><span class="cp-num">p.1026</span></a><a href="#page-1027" class="cp-chip" id="cp-chip-43-1027" data-page="1027" onclick="handlePageChipClick(event, 'page-1027')" title="第 1027 页 · 循环与呼吸系统老化：动脉硬化与活动后气促 (Circulatory & Respiratory Changes: Dyspnea Care)"><span class="cp-num">p.1027</span></a><a href="#page-1028" class="cp-chip" id="cp-chip-43-1028" data-page="1028" onclick="handlePageChipClick(event, 'page-1028')" title="第 1028 页 · 消化与泌尿系统退变：吞咽障碍、便秘与夜尿管理 (Digestive Dysphagia & Urinary System Fluid Control)"><span class="cp-num">p.1028</span></a><a href="#page-1029" class="cp-chip" id="cp-chip-43-1029" data-page="1029" onclick="handlePageChipClick(event, 'page-1029')" title="第 1029 页 · 老年人的性健康与亲密需求 (Sexuality in Older Persons, Fig 43.4 & LTC Box 43.2)"><span class="cp-num">p.1029</span></a><a href="#page-1030" class="cp-chip" id="cp-chip-43-1030" data-page="1030" onclick="handlePageChipClick(event, 'page-1030')" title="第 1030 页 · 长期照护中尊重案主性表达与隐私维护 (Respecting Sexuality, Privacy & Intimacy in LTC, Box 43.2)"><span class="cp-num">p.1030</span></a><a href="#page-1031" class="cp-chip" id="cp-chip-43-1031" data-page="1031" onclick="handlePageChipClick(event, 'page-1031')" title="第 1031 页 · 本章核心知识点总结、临床案例反思与自测题1-7 (Chapter Review, Critical Thinking & Practice Exam Q1-7)"><span class="cp-num">p.1031</span></a><a href="#page-1032" class="cp-chip" id="cp-chip-43-1032" data-page="1032" onclick="handlePageChipClick(event, 'page-1032')" title="第 1032 页 · 全真自测复习题8-11与官方权威标准答案解析 (Practice Exam Q8-11 & Official Elsevier Answers)"><span class="cp-num">p.1032</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+    <div class="page-anchor-marker" id="page-1019">
+      <span class="marker-pill">p. 1019</span>
+      <span class="marker-sec">Chapter Opener & Learning Objectives</span>
+    </div>
+
+    <div class="chapter-hero-editorial" style="margin-bottom:32px; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:28px 24px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div class="hero-eyebrow" style="font-size:12px; font-weight:700; color:#2563eb; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">CHAPTER 43 · GERONTOLOGICAL SUPPORT WORK</div>
+      <h1 class="hero-title-en" style="font-size:28px; font-weight:800; color:#0f172a; margin-bottom:6px; line-height:1.25;">Caring for Older Persons</h1>
+      <div class="hero-title-cn" style="font-size:19px; font-weight:600; color:#475569; margin-bottom:18px;">老年人身心照护与健康支持</div>
+      
+      <div class="figure-card" style="margin:20px 0 24px; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#f8fafc;">
+        <img src="images/ch43/ch43_opener.jpg" alt="Chapter 43 Opener: Support Worker with Older Person" style="width:100%; max-height:480px; object-fit:cover; display:block;" onerror="this.src='pages_dist/images/ch43/ch43_opener.jpg'">
+        <div class="figure-caption" style="padding:10px 14px; font-size:12.5px; color:#64748b; background:#f8fafc; border-top:1px solid #e2e8f0; text-align:center;">
+          Chapter Opener: Providing compassionate, respectful care for older adults across Canada. (Photo credit: iStockphoto/SuzanaMarinkovic)
+        </div>
+      </div>
+
+      <div class="objectives-card" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px; margin-top:20px;">
+        <div class="obj-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">LEARNING OBJECTIVES · 学习目标</div>
+        <div class="obj-subtitle" style="font-size:14px; font-weight:600; color:#14532d; margin-bottom:12px;">After reading this chapter, the learner should be able to do the following / 研读本章后，学习者应能够达到以下执业能力指标：</div>
+        
+        <div style="display:grid; grid-template-columns:1fr; gap:16px;">
+          <div>
+            <ol style="margin:0; padding-left:20px; font-size:14.5px; color:#166534; line-height:1.65;">
+              <li class="obj-item-en" style="margin-bottom:6px;">Describe the effects of retirement.</li><li class="obj-item-en" style="margin-bottom:6px;">Identify the social changes common among older people.</li><li class="obj-item-en" style="margin-bottom:6px;">Describe how a partner’s death can affect the survivor.</li><li class="obj-item-en" style="margin-bottom:6px;">Describe the changes that occur in the body’s systems during aging and the care required.</li><li class="obj-item-en" style="margin-bottom:6px;">Explain how aging affects sexuality in older persons.</li><li class="obj-item-en" style="margin-bottom:6px;">Describe how the health care team can promote the client’s sexuality.</li><li class="obj-item-en" style="margin-bottom:6px;">Explain the effect of ageism on older people.</li>
+            </ol>
+          </div>
+          <div style="border-top:1px dashed #86efac; padding-top:12px;">
+            <ol style="margin:0; padding-left:20px; font-size:13.5px; color:#15803d; line-height:1.65;">
+              <li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">阐述退休对老年人生活方式、心理角色、经济状况及家庭关系产生的多维度影响。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">识别老年人常见的社会人际关系网络重构、独居、社交疏离与支持性住房搬迁等转变。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">阐述丧偶对幸存伴侣在躯体健康、心理哀伤、孤独感及抑郁发病风险方面的深远影响。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">详尽描述人体八大系统在正常衰老过程中的解剖生理退变及支持工作者所需提供的专业照护要点。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">解释增龄对男女生殖生理机能的影响，明确老年人对爱、温情、亲密与性表达的终身需求。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">阐述医疗照护团队如何在长期照护与居家环境中尊重、保护并促进案主的性表达与隐私权利。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">剖析年龄歧视（Ageism）刻板印象对老年人尊严、身心健康及社会融入造成的危害与防范措施。</li>
+            </ol>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; font-size:12px; color:#166534; border-top:1px solid #dcfce7; padding-top:10px;">
+          Online resources & supplementary study materials: <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" style="color:#2563eb; text-decoration:underline;">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1020">
+      <span class="marker-pill">p. 1020</span>
+      <span class="marker-sec">Aging Population, Gerontology Concepts & Developmental Tasks</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">The number of older people in Canada is increasing every day. People are living longer and are healthier and more active than ever before, so most people can expect to live into their 70s, or even into their 80s or 90s (FIGURE 43.1). There are more centenarians (people who are 100 years old or older) now than ever before. After a lifetime of working, raising children, and making a difference in their communities, older people have the knowledge, wisdom, and experience that we can all benefit from.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">在加拿大，老年人口的数量与日俱增。人们的寿命更长，且比以往任何时候都更加健康和充满活力，因此绝大多数人都可以期望活到 70 多岁，甚至是 80 多岁或 90 多岁（图 43.1）。当今社会的百岁老人（centenarians，即年龄达到 100 岁或以上者）数量比以往任何历史时期都要多。经过了一辈子的辛勤劳作、抚育子女以及为社区建设做出卓越贡献，老年人拥有丰富的人生知识、深刻的智慧以及宝贵的经验，值得我们全社会所有人从中受益。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">As baby boomers (people born during the post–World War II years, from 1946 to the mid-1960s) age, Canada is increasing its efforts to better understand the implications of the aging population on health and long-term care needs and costs. For example, “active aging” is becoming the norm, meaning that older people are increasingly contributing to society through unpaid activities and paid employment. Older persons contribute to society as workers, volunteers, grandparents, and caregivers to family members and friends who need care. As the workforce ages and labour force growth slows, older workers are increasingly important to the Canadian economy.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">随着“婴儿潮一代”（baby boomers，即二战后 1946 年至 1960 年代中期出生的人群）步入老年，加拿大正在加大力度，以更深入地理解人口老龄化对医疗保健和长期照护需求及成本所带来的深刻影响。例如，“积极老龄化”（active aging）正逐渐成为社会新常态，这意味着老年人正通过无偿公益活动和有偿工作越来越深地为社会做出贡献。老年人以劳动者、志愿者、祖父母以及需要照护的亲友的非正式照料者等多元身份奉献社会。随着整体劳动力人口老龄化以及劳动力增长放缓，年长工作者对加拿大国家经济的支撑作用日益凸显。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">The older people of the future are likely to have higher levels of education, better health, and longer life expectancy. They will be more ethnoculturally diverse. They are likely to remain active during retirement, whether through continuing their employment, perhaps in a new career; returning to school; caring for grandchildren; volunteering; or travelling. They are more likely to have smaller and more diverse families and few or no children. Those who are married may be in a second or subsequent marriage. Moreover, baby boomers, particularly women, will retire with different work histories and pension coverage than people of previous generations did, a situation that will greatly affect their retirement income.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">未来的老年群体往往具备更高的受教育水平、更健全的身体机能以及更长的预期寿命。他们的族裔文化背景也将更加丰富多元。在退休后，他们更倾向于保持活跃充实的生活，无论是选择继续工作（甚至开启第二职业）、重返校园进修、协助带孙辈、参与志愿服务，还是周游旅行。他们的家庭结构很可能更为小型化且多元，子女较少甚至无子女。已婚人士可能处于第二段或后续的婚姻中。此外，婴儿潮一代（特别是女性群体）在退休时的职业经历和养老金覆盖情况与前几代人截然不同，这将在很大程度上影响他们的实际退休收入。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Gerontology</strong> is the study of the aging process. <strong>Geriatrics</strong> is the branch of medicine that provides care for older persons. Aging, or growing old, is a normal process during which normal changes in body structure and function occur, increasing the risk for illness, injury, persistent illness, and disability. These changes, however, are usually gradual. Emotional and social changes also occur, and most older people adjust to these changes well and live healthy and happy lives. Older people may continue to live in their own homes by themselves or with their partners or live with their adult children or other family members. Some move into assisted-living facilities, and those who require 24-hour care move into long-term care facilities.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>老年学（Gerontology）</strong> 是研究人体衰老全过程的综合学科。<strong>老年医学（Geriatrics）</strong> 则是专门为老年人群提供临床医疗照护的医学专业分支。衰老（Aging）或变老是一个正常且不可逆的自然生理过程，在此期间机体结构和生理功能会发生渐进性的退变，从而增加了患病、意外创伤、慢性疾病及身体残疾的风险。然而，这些生理变化通常是平缓渐进发生的。情绪和社交层面的改变也会随之发生，绝大多数老年人都能很好地适应这些变化，安享健康快乐的晚年。老年人可能会独自一人或与伴侣继续居住在自己原有的家中，或者与成年子女及其他家庭成员同住。有些人会选择迁入辅助生活机构（assisted-living facilities），而那些需要 24 小时全天候专业照料的长者则会搬迁至长期照护机构（LTC）。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">As stated in Chapter 31, the <strong>developmental tasks of late adulthood</strong> are as follows:</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:12px;">正如第 31 章所述，<strong>成年晚期（老年期）的核心发展任务</strong>包括以下五个关键方面：</p>
+
+      <ul class="editorial-list" style="list-style:none; padding-left:0; margin-bottom:20px;">
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Adjusting to decreased physical strength and impaired or declining health</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">适应体能的逐步减退以及身体健康的受损或衰退</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Adjusting to retirement and reduced income</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">适应退休生活模式以及个人/家庭可支配收入的减少</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Coping with the death of a partner</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">应对相伴一生伴侣离世的丧亲哀伤与心理重建</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Developing new friends and relationships</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">在新的生活环境中结识新朋友并维系积极有益的人际社交关系</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Preparing for one’s own death</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">从容平静地面对生老病死，为自身生命走向终点做好身心与事务准备</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch43-caring">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:24px; margin-bottom:4px;">CARING FOR OLDER CLIENTS</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">照护老年案主：防范年龄歧视与维护尊严</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Mainstream North American culture tends to overvalue youth, as reflected in media messages that stress the importance of looking and acting young. These are examples of <strong>ageism</strong> (see Chapters 7 and 12). There are ads for hair dyes that cover grey hair and lotions that reduce wrinkles so that people can look younger than they are. Media images often also stereotype older people. Many greeting cards and cartoons portray older persons as grouchy, unproductive, simple (not very intelligent), and slow. Remember, older people are not all alike. Every person—young, middle-aged, or old—is unique, and every person develops and ages in their own way. Treating older people as if they are boring, useless, or childlike is practising ageism.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">主流北美文化往往存在过度推崇年轻化的倾向，这鲜明体现在不断强调外表和言行必须保持年轻的各种媒体宣传中。这些现象都是<strong>年龄歧视（ageism）</strong>的典型表现（参见第 7 和 12 章）。铺天盖地的广告推销遮盖白发的染发剂和减少皱纹的护肤乳，旨在让人们看起来比实际年龄年轻得多。大众媒体的刻板形象也常常固化对老年人的偏见。许多贺卡和讽刺漫画将老年人描绘成脾气暴躁、无生产力、头脑简单（缺乏智慧）且行动迟缓的群体。请务必牢记：老年人绝非千篇一律！每一个人——无论是年轻、中年还是年老——都是独一无二的个体，每个人都有自己独特的成长与衰老轨迹。将老年人视为无趣乏味、毫无用处或如同孩童般对待，就是在实践极其恶劣的年龄歧视。</p>
+    </div>
+
+    
+    <section class="key-terms-container" id="sec-ch43-glossary" style="margin:28px 0; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:22px 20px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+      <div class="kt-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid #e2e8f0;">
+        <div class="kt-toolbar-left">
+          <h3 class="kt-title" style="margin:0; font-size:18px; font-weight:700; color:#0f172a;">Key Terms · 第 43 章核心专业学术术语（共 6 词）</h3>
+          <span style="font-size:12.5px; color:#64748b;">涵盖老年学、老年医学、百岁老人、吞咽困难、呼吸困难与组织萎缩定义</span>
+        </div>
+        <div class="kt-toolbar-right" style="display:flex; align-items:center; gap:10px;">
+          <div class="kt-mode-toggle" style="display:flex; border:1px solid #cbd5e1; border-radius:6px; overflow:hidden;">
+            <button class="kt-toggle-btn active" id="kt-btn-table-ch43" onclick="setGlossaryMode('ch43', 'table')" style="padding:5px 12px; font-size:12px; font-weight:600; border:none; background:#2563eb; color:#ffffff; cursor:pointer;">速查词表</button>
+            <button class="kt-toggle-btn" id="kt-btn-cards-ch43" onclick="setGlossaryMode('ch43', 'cards')" style="padding:5px 12px; font-size:12px; font-weight:600; border:none; background:#f8fafc; color:#475569; cursor:pointer;">精研卡片</button>
+          </div>
+          <div class="kt-search-box">
+            <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch43', this.value)" style="padding:5px 10px; font-size:12.5px; border:1px solid #cbd5e1; border-radius:6px; outline:none;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table -->
+      <div class="kt-view-table active" id="kt-table-view-ch43">
+        <div class="table-wrap" style="overflow-x:auto;">
+          <table class="kt-compact-table" style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+              <tr style="background:#f8fafc; border-bottom:2px solid #e2e8f0;">
+                <th style="width:28%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">英文术语 / 国际音标</th>
+                <th style="width:22%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">中文标准译名</th>
+                <th style="width:50%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">教材权威学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody id="kt-table-body-ch43">
+              
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">atrophy</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˈætrəfi/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">萎缩</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">A decrease in size or wasting away of tissue. p. 1027</div>
+            <div class="kt-def-cn" style="color:#475569;">机体组织或器官体积变小、细胞减少或退化消耗。（第 1027 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">centenarian</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˌsɛntɪˈnɛəriən/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">百岁老人（百岁及以上年长者）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">A person who is 100 years of age or older. p. 1020</div>
+            <div class="kt-def-cn" style="color:#475569;">年龄达到 100 岁或 100 岁以上的人士。（第 1020 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">dysphagia</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/dɪsˈfeɪdʒiə/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">吞咽困难</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">Difficulty (dys) swallowing (phagia). p. 1028</div>
+            <div class="kt-def-cn" style="color:#475569;">吞咽动作发生障碍、费力或疼痛（dys 表示困难，phagia 表示吞咽）。（第 1028 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">dyspnea</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/dɪspˈniːə/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">呼吸困难（气促）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">Difficult, laboured, or painful breathing. p. 1027</div>
+            <div class="kt-def-cn" style="color:#475569;">感到呼吸费力、气短、窘迫或伴有疼痛的异常呼吸状态。（第 1027 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">geriatrics</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˌdʒɛriˈætrɪks/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">老年医学（老年病学）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">The branch of medicine that provides care for older persons. p. 1020</div>
+            <div class="kt-def-cn" style="color:#475569;">专门研究老年期疾病防治与提供老年人群临床医疗照护的医学分支。（第 1020 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">gerontology</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˌdʒɛrənˈtɒlədʒi/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">老年学</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">The study of the aging process. p. 1020</div>
+            <div class="kt-def-cn" style="color:#475569;">跨学科研究人类衰老过程的生理、心理、社会和经济层面的综合性学科。（第 1020 页）</div>
+          </td>
+        </tr>
+        
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mode 2: Cards Deck -->
+      <div class="kt-view-cards" id="kt-cards-view-ch43" style="display:none;">
+        <div class="terms-editorial-grid" id="kt-cards-grid-ch43" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px;">
+          
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">atrophy</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈætrəfi/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">萎缩</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">A decrease in size or wasting away of tissue. p. 1027</div>
+            <div class="etc-def-cn" style="color:#475569;">机体组织或器官体积变小、细胞减少或退化消耗。（第 1027 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">centenarian</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˌsɛntɪˈnɛəriən/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">百岁老人（百岁及以上年长者）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">A person who is 100 years of age or older. p. 1020</div>
+            <div class="etc-def-cn" style="color:#475569;">年龄达到 100 岁或 100 岁以上的人士。（第 1020 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">dysphagia</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/dɪsˈfeɪdʒiə/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">吞咽困难</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Difficulty (dys) swallowing (phagia). p. 1028</div>
+            <div class="etc-def-cn" style="color:#475569;">吞咽动作发生障碍、费力或疼痛（dys 表示困难，phagia 表示吞咽）。（第 1028 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">dyspnea</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/dɪspˈniːə/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">呼吸困难（气促）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Difficult, laboured, or painful breathing. p. 1027</div>
+            <div class="etc-def-cn" style="color:#475569;">感到呼吸费力、气短、窘迫或伴有疼痛的异常呼吸状态。（第 1027 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">geriatrics</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˌdʒɛriˈætrɪks/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">老年医学（老年病学）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">The branch of medicine that provides care for older persons. p. 1020</div>
+            <div class="etc-def-cn" style="color:#475569;">专门研究老年期疾病防治与提供老年人群临床医疗照护的医学分支。（第 1020 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">gerontology</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˌdʒɛrənˈtɒlədʒi/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">老年学</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">The study of the aging process. p. 1020</div>
+            <div class="etc-def-cn" style="color:#475569;">跨学科研究人类衰老过程的生理、心理、社会和经济层面的综合性学科。（第 1020 页）</div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="page-anchor-marker" id="page-1021">
+      <span class="marker-pill">p. 1021</span>
+      <span class="marker-sec">Respecting Dignity, DIPPS & Atypical Infection Warning</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Older people can think and make decisions for themselves. Failure to recognize this fact can result in your making a person feel that they are being treated like a child. How would you feel if a younger person made your decisions for you? Would you feel insulted or angry? Would you feel useless? Treating older people disrespectfully threatens their dignity and sends the message that they are no longer useful, productive members of society.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">老年人完全具备独立思考并为自己做出决策的能力。如果未能清醒认识到这一事实，很可能会让你在不经意间使案主产生“自己正被当成小孩子对待”的屈辱感。试想一下：如果一个比你年轻的人凡事都替你做决定，你会有何感想？你会感到被侮辱还是被激怒？你会觉得自己毫无用处吗？不尊重地对待老年人会严重威胁他们的尊严，并向他们传递出一种极其残酷的消极心理暗示——仿佛他们已不再是社会上有用且富有成效的一员。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Older people are often coping with the loss of loved ones, friends, and health. The loss of dignity and self-esteem in addition can be too much for them to bear, and they face the risks of withdrawal from social contact and depression (see Chapter 37). As a support worker, by treating older clients with respect, you help them maintain emotional and social health.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">老年人往往在不断承受着失去挚爱亲朋、老友离世以及身体机能滑坡的重重打击。在此之上，如果连仅存的尊严与自尊也一并丧失，对他们而言将是生命中不可承受之重，极易诱发社会退缩与重度抑郁症（参见第 37 章）。作为一名专业的支持工作者，通过由衷尊重老年案主，你将直接帮助他们筑牢心理情绪与社会人际健康的坚固防线。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">To care for older clients effectively, you need to understand the emotional, social, and physical changes that occur with aging. Clients often must live with more than one chronic, debilitating, or life-limiting condition. It is therefore important that support workers be aware of each client’s health status and needs, and to observe and provide basic assessment of each older person in a holistic manner. Support workers must also follow the individual care plan for each older client (see the Providing Compassionate Care: Supporting Older Clients box).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">要切实有效地照护老年案主，你必须深刻理解伴随衰老发生的心理情绪、社会角色以及躯体生理层面的全方位改变。老年案主往往同时饱受多种慢性、致残性或限制寿命的疾病共病的折磨。因此，支持工作者必须对每位案主的健康状况与独特需求了如指掌，以整体全人（holistic）视角细心观察并提供基础评估。支持工作者还必须严格遵循为每位长者量身定制的个性化照护计划（参见《提供仁爱同理照护：支持老年案主的临床实践准则》专栏）。</p>
+    </div>
+
+    <!-- DIPPS in Gerontology Box -->
+    <aside class="editorial-box-container box-theme-teal" style="margin:24px 0; background:#f0fdfa; border:1px solid #99f6e4; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:14px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#0f766e; letter-spacing:0.06em; text-transform:uppercase;">PROVIDING COMPASSIONATE CARE · 核心执业指南</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#115e59;">Supporting Older Clients: DIPPS in Gerontological Practice</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#042f2e;">提供仁爱同理照护：老年长者照护中的 DIPPS 原则与临床落地规范</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#134e4a;">
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Dignity (尊严).</strong> Show respect for your older clients. Avoid using terms, gestures, or a tone of voice that could be considered patronizing (see Chapters 7 and 9). For example, never use the term <em>girl</em> when addressing an older female client. Some older clients find it disrespectful to be addressed by their first names, especially by younger people. Ask your clients how they would like to be addressed. Never assume you can use a client’s first name, even if you have heard your co-workers use it. Do not talk about the client with others. Do not exchange glances with co-workers when reacting to something an older client has said or done.<br>
+            <span style="color:#042f2e;"><strong>尊严。</strong> 展现对老年案主的由衷尊重。绝不要使用可能带有居高临下、屈尊俯就（patronizing）意味的称呼、肢体手势或语气（参见第 7 和 9 章）。例如，称呼年长的女性案主时绝对严禁使用“小姑娘/女孩”（girl）一词。有些老年案主认为直呼其名是不敬之举，尤其是被比自己年轻的人直呼其名。务必主动询问案主希望如何被称呼。绝不要擅自假设可以直接称呼其教名（First Name），即使你听见其他同事这么叫过也不行。切勿在背后议论案主。当对老年案主的言行做出反应时，严禁与同事交换戏谑眼神。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Independence (独立).</strong> Help clients only when necessary. Respect their routines. Do things the way clients are used to doing them. Allow time for rest and avoid rushing them.<br>
+            <span style="color:#042f2e;"><strong>独立。</strong> 仅在真正必要时提供协助。尊重他们的习惯与节奏。按照案主习惯的方式处理日常事务。留出充裕的休息时间，严禁催促催赶他们。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Individualized care (个性化照护).</strong> Regardless of the setting of where the care is taking place, for care to be truly client-centred, the client’s care plan must be adapted to fit the client’s personal choices, physical and cognitive strengths and limitations, personality, and care plan. For example, it is important to use terms that are familiar to the client.<br>
+            <span style="color:#042f2e;"><strong>个性化照护。</strong> 无论照护发生在何种场所，要实现真正的以案主为中心，照护方案必须调整以适应案主的个人选择、躯体与认知优劣势、独特个性与照护计划。例如，使用案主熟悉的语言表达习惯。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Preferences (偏好与自主选择).</strong> Older clients have the right to make choices, so you must have their consent for all procedures. They can make decisions regarding their care and also choose when to get up and when to go to bed, what to wear, what activities to participate in, and what to eat. Always ask about and accommodate a client’s preferences.<br>
+            <span style="color:#042f2e;"><strong>个人偏好。</strong> 老年案主享有充分的自主选择权，因此执行任何操作前必须取得知情同意。他们有权决定自身照护事项，自主决定何时起床、何时就寝、穿什么衣服、参与何种文娱活动以及吃什么食物。始终询问并全力迎合案主的合理偏好。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Privacy (隐私保护).</strong> Provide for privacy and keep information about the client confidential. All clients should be given privacy when they are visiting with others or using the telephone. Use draping and screening to avoid exposing the client’s body during procedures. Provide for privacy during elimination.<br>
+            <span style="color:#042f2e;"><strong>隐私权。</strong> 严格保障案主隐私，对所有个人健康信息严守保密义务。当案主接待访客或通电话时必须提供私密空间。在执行任何擦浴或护理操作时使用屏风和遮盖单，严防案主身体暴露。在如厕排泄时提供完全的隐私保障。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Safety (环境与人身安全).</strong> Be alert to safety hazards in the client’s environment. Practise the safety measures discussed in Chapter 20 to prevent falls, burns, poisoning, and suffocation. Apply restraints only if ordered by a physician and only once the task has been properly delegated to you.<br>
+            <span style="color:#042f2e;"><strong>人身安全。</strong> 对案主周围环境中的一切潜在安全隐患保持警觉。严格落实第 20 章防跌倒、防烫伤、防中毒和防窒息的安全措施。仅在有医生明确书面医嘱且经规范委派后，方可协助使用身体约束装置。</span>
+          </li>
+        </ul>
+
+        <div style="margin-top:14px; background:#ccfbf1; border-left:4px solid #0f766e; padding:12px 14px; border-radius:4px; font-weight:600; color:#115e59;">
+          CRITICAL CLINICAL RED FLAG: ATYPICAL INFECTION SIGNS IN OLDER ADULTS<br>
+          <span style="font-weight:400; font-size:13px; color:#134e4a;">Older clients may NOT show the usual signs of infection, such as fever, chills, pain, redness, or swelling. In many frail seniors, the ONLY signs of a life-threatening infection (such as a urinary tract infection or pneumonia) are sudden changes in behaviour: acute onset of confusion, new urinary incontinence, sudden uncharacteristic falls, marked drop in energy or lethargy, or loss of appetite. Immediately report any such sudden behavioural changes to your supervisor!<br>
+          <strong>重大临床警示：老年人感染的不典型表现！</strong> 老年案主往往不会表现出发热、寒战、剧痛、局部红肿等典型感染征象。在许多身体虚弱的长者中，严重乃至致命感染（如尿路感染或肺炎）的<strong>唯一早期迹象往往是行为举止的突变</strong>：突发急性谵妄谵乱（新发神志混乱）、新发急性尿失禁、突发不明原因跌倒、精神萎靡嗜睡或食欲骤降。发现上述任何突然的行为改变，必须立即向主管汇报！</span>
+        </div>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1022">
+      <span class="marker-pill">p. 1022</span>
+      <span class="marker-sec">Emotional & Social Changes: Retirement (Fig 43.1 & 43.2)</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch43-emotional">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">EMOTIONAL AND SOCIAL CHANGES</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">心理情绪与社会角色的转变</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Retirement.</strong> Work provides not only income, but also social contacts, intellectual stimulation, a sense of usefulness, and identity. Retirement affects people in different ways. Some look forward to retirement as a time of leisure, travel, and pursuing personal interests. For others, retirement is unwelcome, especially if it was forced by poor health or mandatory policies. Many people experience grief over the loss of their work role, daily routine, and friendships with colleagues.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>退休生活转变。</strong> 工作所带来的不仅是一份经济收入，更是珍贵的社交圈层、大脑智力刺激、自我效能价值感以及个人社会身份认同。退休对每个人的影响各不相同。有些人热切盼望退休，将其视为享受闲暇、旅行探亲和发展个人爱好的金色时光。然而对另一些人而言，退休是不情愿的被迫之举，特别是因重病或失能而被迫离职者。许多人会因失去工作角色、规律作息和同事友谊而陷入深沉的心理失落与哀伤之中。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Many retired people take on part-time jobs or volunteer work (FIGURE 43.2) because such activities promote a sense of purpose, usefulness, and well-being. Retirement allows many people the opportunity to travel, take up new hobbies, or spend time with their families, enjoying healthy and active lives (FIGURE 43.1).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">许多退休人员选择兼职工作或投身志愿公益服务（图 43.2），因为这些有意义的活动能够极大地激发生活目标感、社会有用性与内在幸福感。退休还使许多人有机会去旅行游历、培养新的兴趣特长，或与家人共享天伦之乐，安享健康充实的活跃晚年（图 43.1）。</p>
+    </div>
+
+    <!-- Dual Figures 43.1 & 43.2 Grid -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0;">
+      <div class="editorial-figure" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:14px; text-align:center;">
+        <img src="images/ch43/fig-43-1.jpg" alt="FIGURE 43.1 Many older people live healthy and active lives." style="max-width:100%; height:auto; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.03);" onerror="this.src='pages_dist/images/ch43/fig-43-1.jpg'">
+        <figcaption class="ef-caption-en" style="margin-top:8px; font-size:12.5px; font-weight:600; color:#334155;">
+          FIGURE 43.1 &nbsp;Many older people live healthy and active lives. (iStockphoto/FatCamera.)<br>
+          <span style="font-weight:400; color:#64748b;">图 43.1 许多老年人安享健康、活跃且充实的晚年生活。</span>
+        </figcaption>
+      </div>
+
+      <div class="editorial-figure" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:14px; text-align:center;">
+        <img src="images/ch43/fig-43-2.jpg" alt="FIGURE 43.2 These retired people are volunteering." style="max-width:100%; height:auto; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.03);" onerror="this.src='pages_dist/images/ch43/fig-43-2.jpg'">
+        <figcaption class="ef-caption-en" style="margin-top:8px; font-size:12.5px; font-weight:600; color:#334155;">
+          FIGURE 43.2 &nbsp;These retired people are volunteering. (Can Stock Photo Inc./lisafx.)<br>
+          <span style="font-weight:400; color:#64748b;">图 43.2 退休长者积极投身社区志愿服务，体现自我价值。</span>
+        </figcaption>
+      </div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Financial Concerns.</strong> Reduced income is a common consequence of retirement. Most older Canadians receive income from government pensions such as the Canada Pension Plan (CPP) or Quebec Pension Plan (QPP), Old Age Security (OAS), and the Guaranteed Income Supplement (GIS). However, these funds may provide only a modest income. Some older people struggle with the expenses of living, housing, food, and medications that are not fully covered by provincial health plans.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>经济与财务顾虑。</strong> 收入锐减是退休后普遍面临的现实问题。绝大多数加拿大老年人依靠政府养老金生活，例如加拿大退休金计划（CPP）或魁北克退休金计划（QPP）、老年保障金（OAS）以及保证收入补贴（GIS）。然而，这些公共津贴通常只能维持基本生计。不少老年人在面对日常居住、营养膳食以及未被省级公共医疗保险全额报销的昂贵自费药物开支时感到捉襟见肘、忧心忡忡。</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1023">
+      <span class="marker-pill">p. 1023</span>
+      <span class="marker-sec">Social Relationships & Coping With Death of a Partner</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Social Relationships and Relocation.</strong> As people age, their social interactions change. Children grow up and may move far away for career opportunities. The parent-child role may reverse, as adult children become caregivers for their aging parents. Over time, older adults experience the loss of long-time friends, siblings, and neighbours through relocation or death, which can lead to profound loneliness and social isolation.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>人际社交网络重构与居住搬迁。</strong> 随着个体的衰老，其社会交往模式会发生根本性转变。子女成年后可能因求学和职业发展移居远方。传统的亲子角色往往会发生反转——成年子女反过来成为衰老体弱父母的主要照料者。随着岁月流逝，老年人不得不眼睁睁看着多年的挚友、兄弟姐妹和老邻居相继搬迁或辞世，极易陷入深切的孤独与社会疏离之中。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Coping With the Death of a Partner.</strong> The death of a spouse or life partner is recognized as one of life’s most devastating losses. In addition to overwhelming emotional grief, the surviving partner must adjust to profound changes: living alone, preparing meals for one, managing financial affairs previously handled by the deceased, and facing holidays and milestones without their companion. Bereavement significantly increases the risk of physical illness, severe depression, cognitive decline, and even death in the surviving partner. Support workers must provide compassionate presence, listen patiently without judgment, and support the grieving client’s daily routines.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>应对伴侣离世的丧亲哀伤。</strong> 配偶或终身伴侣的离世被公认为是人一生中所能经历的最具毁灭性的沉痛打击之一。除了巨大的心理哀痛之外，幸存的伴侣还必须面对生活的全面剧变：开始习惯形单影只的独居生活、为一个人做饭进餐、独立接手已故伴侣生前打理的繁复财务账目，以及孤零零地度过充满回忆的节日纪念日。配偶离世后，幸存老人的躯体患病率、重度抑郁发病率、认知功能恶化乃至死亡风险均显著攀升。支持工作者必须给予充满同理心的陪伴，耐心倾听而不做任何评判，并全力维护哀伤案主的日常生活作息。</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1024">
+      <span class="marker-pill">p. 1024</span>
+      <span class="marker-sec">LTC Relocation, Advance Planning & Depression in Older Persons (Fig 43.3)</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">When older adults move into assisted living or long-term care facilities, they leave behind familiar homes, possessions, and neighbourhoods. However, supportive residential facilities also offer opportunities to make new friends, engage in communal dining, and take part in organized recreation and exercise programs (FIGURE 43.3).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">当老年长者迁入辅助生活或长期照护机构时，他们不得不告别居住了大半辈子的熟悉故居、珍爱物品与社区邻里。然而，优质的照护机构也为他们提供了重新融入群体、结交新朋友、共享集体就餐以及参与有组织的文娱健身活动的新契机（图 43.3）。</p>
+    </div>
+
+    <div class="editorial-figure" style="margin:24px 0; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px; text-align:center;">
+      <img src="images/ch43/fig-43-3.jpg" alt="FIGURE 43.3 Older persons enjoy companionship with people their own age." style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.04);" onerror="this.src='pages_dist/images/ch43/fig-43-3.jpg'">
+      <figcaption class="ef-caption-en" style="margin-top:10px; font-size:13px; font-weight:600; color:#334155;">
+        FIGURE 43.3 &nbsp;Older persons enjoy companionship with people their own age. (Can Stock Photo Inc./4774344sean.)<br>
+        <span style="font-weight:400; color:#64748b;">图 43.3 老年长者在照护机构中与同龄人结伴交流，乐享晚年社交。</span>
+      </figcaption>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch43-depression">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">DEPRESSION IN OLDER PERSONS</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">老年人抑郁症的早期识别与临床干预</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Depression is NOT a normal part of aging.</strong> While feelings of sadness after a loss are expected, clinical depression is a serious, treatable medical disorder. In older adults, depression is often unrecognized and untreated because its symptoms may be mistakenly dismissed as "just getting old" or confused with dementia.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>抑郁症绝对不是衰老的正常组成部分！</strong> 尽管在遭遇重大变故后出现悲伤情绪是人之常情，但临床抑郁症是一种严重的、但完全可医治的医学精神障碍。在老年人群中，抑郁症常常被漏诊或延误治疗，因为其症状经常被错误地归咎于“上了年纪自然就这样”，或者与认知症（失智症）相混淆。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Symptoms of depression in older clients include persistent sadness or flat affect, loss of interest in activities, withdrawal from others, changes in sleep patterns (insomnia or excessive sleeping), poor appetite and unintended weight loss, complaints of vague physical aches, extreme fatigue, and expressions of worthlessness or wishing for death. Psychological therapy (counselling) and medical treatment under a physician’s supervision are highly effective. Immediately report signs of depression to your supervisor.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">老年案主抑郁症的典型临床表现包括：持续的情绪低落或情感淡漠、对以往热衷的事物彻底丧失兴趣、主动回避人际社交退缩、睡眠节律紊乱（早醒、失眠或嗜睡）、食欲严重减退导致无意识体重骤降、频繁主诉原因不明的躯体游走性疼痛、极度疲倦乏力，以及流露出自己毫无价值或企图轻生的念头。在医生指导下进行心理疗法与药物抗抑郁治疗具有显著疗效。发现任何抑郁先兆必须立即汇报主管！</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1025">
+      <span class="marker-pill">p. 1025</span>
+      <span class="marker-sec">Physical Changes & Integumentary System (Box 43.1 Part 1)</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch43-physical">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">PHYSICAL CHANGES</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">机体各系统衰老所致的生理性退变与照护要点</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Aging is a natural, gradual process that alters body structure and physiological functioning across all body systems (BOX 43.1). Although these changes happen to everyone, the rate and degree of change vary greatly from person to person depending on genetics, lifestyle, diet, exercise, and health history.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">衰老是一个自然的、渐进性的生理过程，它会改变人体八大系统的解剖结构与生理机能（专栏 43.1）。尽管每个人都会经历这些衰老性改变，但退变发生的速度与严重程度因人而异，很大程度上取决于遗传基因、生活方式、营养膳食、体育锻炼以及既往病史。</p>
+    </div>
+
+    <!-- BOX 43.1 Part 1: Integumentary System -->
+    <aside class="editorial-box-container box-theme-sage" style="margin:24px 0; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:14px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.06em; text-transform:uppercase;">BOX 43.1 · PHYSIOLOGICAL AGING</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#14532d;">Physical Changes That May Occur During the Aging Process</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#052e16;">专栏 43.1 人体衰老过程中各系统发生的生理退行性变化与临床照护规约（第一部分：皮肤软组织）</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#166534;">
+        <h5 style="margin:0 0 8px; font-size:15.5px; color:#15803d;">Integumentary System (Skin, Hair, and Nails) · 皮肤软组织系统退变与照护</h5>
+        <ul style="list-style:none; padding-left:0; margin:0 0 14px;">
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Physiological Changes:</strong> Skin loses elasticity, strength, and fatty tissue layer. The epidermis and dermis thin, making skin paper-thin and fragile. Subcutaneous fat loss increases sensitivity to cold. Oil and sweat glands secrete less, resulting in dry, itchy skin. Capillaries weaken, causing frequent bruising and purple patches (senile purpura). Blood circulation to skin decreases. Hair grays and thins; nails become thick, tough, and brittle.<br>
+            <span style="color:#052e16;"><strong>生理性改变：</strong> 皮肤失去弹性蛋白、胶原强度和皮下脂肪层。表皮和真皮变薄，使皮肤薄如蝉翼且极其脆弱。皮下脂肪萎缩使得老年人极不耐寒、特别怕冷。皮脂腺和汗腺分泌显著减少，导致皮肤极度干燥、脱屑和剧烈瘙痒。毛细血管壁变脆，轻微磕碰即引起皮下淤血和紫癜（老年性紫癜）。皮肤血液灌注减少。毛发变白变细，指（趾）甲变厚、变硬且易碎。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Care Measures:</strong> Daily full baths are drying and unnecessary; provide partial baths or bathe only 2 to 3 times per week. Use mild cleansers, avoid harsh soaps. Pat skin dry gently rather than rubbing. Apply unscented moisturizing lotion immediately after bathing. Handle the client with extreme gentleness to prevent painful skin tears. Provide warm socks, sweaters, and extra blankets for cold feet.<br>
+            <span style="color:#052e16;"><strong>专业照护要点：</strong> 每天全身水盆沐浴会洗去仅存的保护性皮脂，导致皮肤极度干裂，是不必要的；建议每周全身沐浴 2 至 3 次，其余时间进行局部清洁擦浴。使用温和无皂清洁剂，避免强碱性肥皂。洗浴后用柔软毛巾轻轻拍干水分，切忌用力搓擦。沐浴后立即全身涂抹无香精保湿润肤乳。翻身或移动案主时动作必须极其轻柔，严防发生皮肤撕裂伤。对于双脚发凉者，提供厚棉袜、保暖开衫和透气轻便的毛毯保暖。</span>
+          </li>
+        </ul>
+
+        <div style="background:#fef08a; border-left:4px solid #ca8a04; padding:10px 14px; border-radius:4px; font-weight:600; color:#713f12;">
+          CRITICAL SAFETY WARNING: NEVER USE HOT-WATER BOTTLES OR HEATING PADS!<br>
+          <span style="font-weight:400; color:#422006;">Older adults have diminished temperature sensation and paper-thin skin. Applying hot-water bottles, electrical heating pads, or soaking feet in scalding hot water can cause catastrophic third-degree burns without the client even feeling pain! Warm socks and layered clothing are the ONLY safe methods to warm cold feet.<br>
+          <strong>绝对安全禁令：严禁使用热水袋或电加热垫！</strong> 老年人温度感知神经末梢退化，皮肤薄如纸张。直接使用热水袋、电热毯/加热垫或用过烫热水泡脚，极易在案主毫无痛感察觉的情况下造成毁灭性的深度烫伤！提供保暖棉袜和增添衣被是温暖老年人冰凉双脚的唯一安全合法途径。</span>
+        </div>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1026">
+      <span class="marker-pill">p. 1026</span>
+      <span class="marker-sec">Musculoskeletal, Nervous & Sensory Changes (Box 43.1 Part 2)</span>
+    </div>
+
+    <!-- BOX 43.1 Part 2: Musculoskeletal, Nervous & Sensory -->
+    <aside class="editorial-box-container box-theme-sage" style="margin:20px 0; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.06em; text-transform:uppercase;">BOX 43.1 · CONTINUED</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:16.5px; font-weight:750; color:#14532d;">Musculoskeletal, Nervous, and Sensory System Changes</h4>
+        <div class="box-title-cn" style="font-size:14px; font-weight:600; color:#052e16;">骨骼肌肉系统、神经系统及感觉器官生理退变与临床照护</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#166534;">
+        <h5 style="margin:0 0 6px; font-size:15px; color:#15803d;">1. Musculoskeletal System · 骨骼肌肉系统</h5>
+        <ul style="list-style:none; padding-left:0; margin:0 0 12px;">
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Physiological Changes:</strong> Bones lose minerals (especially calcium) and become brittle, fragile, and prone to breaking easily from minor falls (osteoporosis). Muscle mass decreases (<strong>atrophy</strong>), leading to loss of muscle strength, endurance, and coordination. Joint cartilage erodes and synovial fluid decreases, causing joints to become stiff, painful, and less flexible. Vertebrae compress, causing gradual loss of height and stooped posture (kyphosis).<br>
+            <span style="color:#052e16;"><strong>生理性改变：</strong> 骨骼矿物质（尤其是钙质）大量流失，骨小梁变细变脆（骨质疏松症），极易因轻微磕碰或轻度跌倒发生骨折。肌纤维数量减少且体积缩小（<strong>组织萎缩 atrophy</strong>），导致肌肉力量、耐力和运动协调性减退。关节软骨退化变薄，滑液分泌减少，导致关节僵硬、活动受限和慢性疼痛。椎间盘脱水受压萎缩，导致身材变矮、脊柱后凸弯腰驼背（kyphosis）。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Care Measures:</strong> Help clients remain as physically active as possible. <strong>Range-of-motion (ROM) exercises help slow the rate of musculoskeletal changes</strong>, maintaining joint mobility and muscle strength. Encourage walking and weight-bearing activities. Provide adequate time for movement—never rush the client. Implement strict fall prevention measures (clearing tripping hazards, ensuring proper footwear with non-skid soles, and assisting with mobility aids).<br>
+            <span style="color:#052e16;"><strong>专业照护要点：</strong> 协助案主保持力所能及的身体活动。<strong>坚持进行关节活动度（ROM）功能锻炼有助于显著延缓肌肉骨骼退变的进程</strong>，维持关节灵活性与肌力。鼓励散步和负重活动以刺激骨质重建。行动时给予充裕时间，绝不要催赶案主。严格落实防跌倒硬性措施（清理地面杂物障碍、穿防滑底合脚鞋、规范使用助行器）。</span>
+          </li>
+        </ul>
+
+        <h5 style="margin:12px 0 6px; font-size:15px; color:#15803d;">2. Nervous System · 神经系统</h5>
+        <ul style="list-style:none; padding-left:0; margin:0 0 12px;">
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Physiological Changes:</strong> Nerve cells decrease in number and nerve conduction velocity slows. Reflexes and reaction times are prolonged. Blood flow to the brain decreases, which can cause occasional dizziness upon sudden standing. Sleep patterns change: older adults experience lighter sleep, wake up more frequently during the night, and need less total nighttime sleep, often compensating with daytime naps. Note: Mild forgetfulness of names or dates can be normal, but progressive memory loss, disorientation, or impaired judgment are signs of cognitive disorders (dementia), not normal aging.<br>
+            <span style="color:#052e16;"><strong>生理性改变：</strong> 脑神经细胞数量减少，神经冲动传导速度减慢。神经反射迟钝，对刺激的应答反应时间延长。脑血流量减少，在快速起身站立时易出现过性眩晕。睡眠节律改变：睡眠变浅、夜间频繁觉醒，夜间总睡眠时长减少，常需白日小睡弥补。需要特别明确的是：偶尔遗忘人名或日期属于良性健忘，但渐进性记忆衰退、定向障碍或判断力丧失属于认知障碍（如阿尔茨海默病）的病理表现，绝非正常衰老！</span>
+          </li>
+        </ul>
+
+        <h5 style="margin:12px 0 6px; font-size:15px; color:#15803d;">3. Sensory System (Vision, Hearing, Taste, Smell, Touch) · 感觉器官系统</h5>
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Vision:</strong> Presbyopia (farsightedness caused by aging lens stiffening), reduced tear production (dry eyes), poor adaptation to dark/light transitions, increased sensitivity to glare, reduced peripheral vision, and difficulty distinguishing blues and greens. Provide adequate, glare-free lighting, ensure glasses are clean and worn, and use large-print text.<br>
+            <span style="color:#052e16;"><strong>视觉：</strong> 老视（老花眼，因晶状体硬化调节减退所致）、泪液分泌减少（干眼症）、瞳孔对光线明暗适应迟钝、对眩光极为敏感、视野范围缩小、难以辨析蓝绿冷色调。照护需提供无眩光的明亮柔和照明、确保佩戴度数准确的眼镜并保持镜片明净、提供大字体阅读材料。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Hearing:</strong> Presbycusis (gradual sensorineural hearing loss, especially for high-pitched sounds). Older adults often struggle to understand speech when there is background noise. Face the client directly, speak clearly at a moderate volume and lower pitch, reduce ambient noise, and assist with hearing aids.<br>
+            <span style="color:#052e16;"><strong>听觉：</strong> 老年性耳聋（感音神经性听力减退，尤以高频音频损失为主）。在嘈杂背景噪音下难以分辨话语。沟通时必须面对案主平视、语速平缓中等、音调放低、主动关闭电视等背景噪音，并协助佩戴维护助听器。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Taste and Smell:</strong> Taste buds and olfactory receptors decrease, diminishing the ability to taste and smell foods. Appetite may decline, and clients often crave heavily salted or sweetened foods. Present food attractively and maintain oral hygiene.<br>
+            <span style="color:#052e16;"><strong>味觉与嗅觉：</strong> 味蕾和嗅觉感受细胞数量萎缩，辨味与闻香能力钝化。食欲常下降，偏好重糖或重盐以刺激味觉。照护需注重食物色香味的吸引力并做好餐前口腔清洁。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Touch and Pain:</strong> Sensitivity to touch, pain, and temperature decreases significantly. Older adults may not feel pain from a cut, blister, infection, or thermal burn until severe tissue destruction occurs. Daily skin inspections and strict bath water temperature checks are mandatory.<br>
+            <span style="color:#052e16;"><strong>触觉与痛温觉：</strong> 皮肤触觉、痛觉和冷热温度感知阈值显著升高。老年人发生擦伤、水疱、感染或接触烫热物体时往往感觉不到疼痛，直至造成严重组织坏死才被发觉。必须每日进行周身皮肤检查，沐浴前强制测量水温。</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1027">
+      <span class="marker-pill">p. 1027</span>
+      <span class="marker-sec">Circulatory & Respiratory Changes (Dyspnea & Bed Linens)</span>
+    </div>
+
+    <!-- BOX 43.1 Part 3: Circulatory and Respiratory -->
+    <aside class="editorial-box-container box-theme-sage" style="margin:20px 0; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.06em; text-transform:uppercase;">BOX 43.1 · CONTINUED</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:16.5px; font-weight:750; color:#14532d;">Circulatory and Respiratory System Changes</h4>
+        <div class="box-title-cn" style="font-size:14px; font-weight:600; color:#052e16;">循环系统与呼吸系统生理退变及临床支持要点</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#166534;">
+        <h5 style="margin:0 0 6px; font-size:15px; color:#15803d;">4. Circulatory System · 循环系统</h5>
+        <ul style="list-style:none; padding-left:0; margin:0 0 12px;">
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Physiological Changes:</strong> The heart muscle weakens and pumps blood with less force. Heart valves thicken and become less flexible. Arteries lose their elasticity and become narrow and hardened (arteriosclerosis). These changes result in <strong>poor circulation to many body parts</strong>, especially the hands, feet, and brain. Blood pressure often increases (hypertension). The client may complain of cold hands and feet, dizziness upon standing, and delayed wound healing.<br>
+            <span style="color:#052e16;"><strong>生理性改变：</strong> 心肌收缩力减弱，每搏输出量减少。心脏瓣膜纤维化增厚僵硬。动脉血管壁弹力纤维退化，管壁增厚硬化且内径狭窄（动脉硬化）。这些生理退变直接导致<strong>全身多个组织器官及外周肢体血液循环不良</strong>，尤以双手、双脚及脑部供血不足最为突出。收缩期血压往往代偿性升高（老年高血压）。案主常主诉四肢冰凉发绀、突然起立时头晕眼花，且皮肤微小创口愈合极度缓慢。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Care Measures:</strong> Always follow the client’s care plan (e.g., Mr. Steinberg, 88). Never allow the client to overexert themselves or carry heavy loads. Provide warm socks and clothing to warm cold feet (never apply hot-water bottles!). Avoid tight garters, constrictive socks, or crossing legs at the knees, which further impedes venous return. Encourage the client to change positions slowly. Elevate swollen legs only if specified in the care plan.<br>
+            <span style="color:#052e16;"><strong>专业照护要点：</strong> 始终严格执行既定照护计划（如 88 岁的斯坦伯格先生）。严禁让案主过度劳累或提拿重物。为冰凉的双脚穿上保暖棉袜（绝对严禁使用热水袋！）。避免穿着勒紧下肢的紧口袜或吊袜带，严禁在坐姿时翘二郎腿（交叉双腿），以免阻断静脉回流。指导案主起身时动作放慢。仅在照护计划明确规定时协助抬高水肿下肢。</span>
+          </li>
+        </ul>
+
+        <h5 style="margin:12px 0 6px; font-size:15px; color:#15803d;">5. Respiratory System · 呼吸系统</h5>
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Physiological Changes:</strong> Respiratory muscles weaken, rib cage cartilage calcifies and becomes rigid, and lung tissue loses elasticity. Lung expansion is reduced, and fewer alveoli are functional, resulting in less efficient oxygen exchange. <strong>Dyspnea</strong> (difficult, laboured, or painful breathing) easily occurs with exertion. The cough reflex weakens, making it harder to clear secretions and greatly increasing the risk of respiratory infections and pneumonia.<br>
+            <span style="color:#052e16;"><strong>生理性改变：</strong> 呼吸肌（膈肌和肋间肌）发生萎缩退变，肋软骨钙化导致胸廓骨性刚硬，肺组织弹性回缩力减退。肺活量下降，有效通气肺泡数量减少，气体交换效率显著降低。在轻微身体活动后极易诱发<strong>呼吸困难（dyspnea）</strong>与气促。咳嗽反射钝化，导致呼吸道分泌物不易咳出积聚，从而使肺部感染和坠积性肺炎的发病风险急剧上升。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Care Measures:</strong> Position the client in semi-Fowler’s or Fowler’s (upright sitting) position to allow maximum lung expansion and ease breathing. <strong>Heavy bed linens prevent normal chest expansion and worsen dyspnea</strong>; use lightweight, warm blankets and keep covers loose around the feet and chest. Turn and reposition bedridden clients at least every 2 hours to prevent fluid pooling. Encourage deep-breathing exercises as directed by the care plan.<br>
+            <span style="color:#052e16;"><strong>专业照护要点：</strong> 协助案主采取半坐卧位（semi-Fowler）或坐位（Fowler位），以借助重力使膈肌下移，最大程度扩张胸廓改善通气。<strong>沉重厚实的被褥会直接压迫胸部阻碍胸廓正常扩张并加重呼吸困难</strong>；必须选用轻柔保暖的被褥，并在胸部与足端保持宽松。对卧床案主至少每 2 小时定时翻身变换体位，防止分泌物在肺底部坠积。依据照护计划鼓励并协助案主进行深呼吸有效咳嗽练习。</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1028">
+      <span class="marker-pill">p. 1028</span>
+      <span class="marker-sec">Digestive & Urinary Changes (Dysphagia & Fluid Timing)</span>
+    </div>
+
+    <!-- BOX 43.1 Part 4: Digestive and Urinary -->
+    <aside class="editorial-box-container box-theme-sage" style="margin:20px 0; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.06em; text-transform:uppercase;">BOX 43.1 · CONTINUED</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:16.5px; font-weight:750; color:#14532d;">Digestive and Urinary System Changes</h4>
+        <div class="box-title-cn" style="font-size:14px; font-weight:600; color:#052e16;">消化系统与泌尿系统生理退变及临床照护规范</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#166534;">
+        <h5 style="margin:0 0 6px; font-size:15px; color:#15803d;">6. Digestive System · 消化系统</h5>
+        <ul style="list-style:none; padding-left:0; margin:0 0 12px;">
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Physiological Changes:</strong> Saliva secretion decreases, causing dry mouth and difficulties chewing. Loss of natural teeth or ill-fitting dentures makes mastication painful. <strong>Dysphagia</strong> (difficulty swallowing) is common and presents a grave risk of choking and aspiration pneumonia. The secretion of digestive juices and stomach acid drops significantly, leading to poor digestion of rich, fried, and fatty foods. Intestinal peristalsis slows, predisposing the older person to flatulence, severe constipation, and fecal impaction.<br>
+            <span style="color:#052e16;"><strong>生理性改变：</strong> 唾液腺萎缩导致唾液分泌减少、口腔干燥且食物润滑咀嚼困难。自然牙齿缺失脱落或义齿松动不合体，使咀嚼功能受损。<strong>吞咽困难（dysphagia）</strong>在老年人中极高发，具有窒息和吸入性肺炎的极大生命危险。胃液、胃酸、胆汁及胰酶分泌量急剧下降，导致高脂、油腻和油炸食物极难被消化分解。肠道平滑肌蠕动减慢，水分被过度吸收，极易导致严重顽固性便秘与粪便嵌顿。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Care Measures:</strong> <strong>Older people should avoid fried and fatty foods because of the decreased amount of digestive juices</strong>. Provide soft, easy-to-chew, or puréed foods for clients with dental issues or dysphagia. Ensure the client is seated fully upright (90 degrees) during all meals and remains upright for at least 30 minutes post-meal to prevent aspiration. Provide regular oral hygiene. Encourage high-fibre foods (vegetables, fruits, prunes) and plenty of fluids to prevent constipation.<br>
+            <span style="color:#052e16;"><strong>专业照护要点：</strong> <strong>鉴于消化液分泌减少，老年人饮食中应严格避免油炸和高脂肪油腻食品</strong>。对于牙齿缺失或吞咽困难案主，提供细软易嚼或打碎匀浆膳食。进餐时确保案主保持 90 度完全端坐位，餐后保持直立坐姿至少 30 分钟严防食物反流误吸。加强餐后口腔卫生护理。鼓励高纤维饮食（绿叶菜、新鲜水果、西梅汁）并保证充足饮水以预防便秘。</span>
+          </li>
+        </ul>
+
+        <h5 style="margin:12px 0 6px; font-size:15px; color:#15803d;">7. Urinary System · 泌尿系统</h5>
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Physiological Changes:</strong> Kidney function declines as nephrons decrease in number and renal blood flow decreases. The bladder wall loses elasticity and tone, reducing bladder capacity and causing urinary frequency, urgency, and <strong>nocturia</strong> (frequent urination at night). Incomplete bladder emptying increases the risk of urinary tract infections. In men, prostate gland enlargement (BPH) obstructs the urethra, causing dribbling, hesitation, and urinary retention. In women, weakened pelvic muscles can cause stress incontinence.<br>
+            <span style="color:#052e16;"><strong>生理性改变：</strong> 肾单位数量减少且肾血流量下降，肾脏浓缩稀释与滤过排毒功能减退。膀胱平滑肌张力下降，膀胱有效容量缩小，导致尿频、尿急以及<strong>夜尿增多（nocturia）</strong>。膀胱残余尿量增多极易诱发逆行性尿路感染。在老年男性中，前列腺良性增生肥大（BPH）压迫后尿道，导致排尿踌躇、尿线变细、尿滴沥与尿潴留。在老年女性中，盆底肌松弛易诱发压力性尿失禁。</span>
+          </li>
+          <li style="margin-bottom:6px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Care Measures:</strong> When increased fluid intake is ordered, <strong>give most of the fluid before 1700 hours (5:00 p.m.)</strong>. Limiting fluids during the late evening reduces nocturia, prevents sleep disruption, and significantly lowers the risk of nighttime falls when getting up to use the commode! Respond promptly to call bells for assistance with elimination. Maintain meticulous perineal hygiene and apply barrier creams to prevent skin breakdown.<br>
+            <span style="color:#052e16;"><strong>专业照护要点：</strong> 当医嘱要求增加每日液体摄入量时，<strong>务必将绝大部分饮水安排在下午 17:00（5:00 p.m.）之前提供</strong>。在傍晚和夜间适当控制入水量，能显著减少夜间排尿次数，保障睡眠质量，并极大降低夜间摸黑起夜如厕导致的跌倒骨折风险！对如厕呼叫铃必须迅速响应，做好会阴局部清洁并涂抹皮肤保护屏障霜以防失禁性皮炎。</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1029">
+      <span class="marker-pill">p. 1029</span>
+      <span class="marker-sec">The Older Person and Sexuality (Fig 43.4 & LTC Box 43.2 Part 1)</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch43-sexuality">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">THE OLDER PERSON AND SEXUALITY</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">老年人的性健康、亲密需求与尊严维护</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Sexuality is the physical, emotional, social, cultural, and spiritual factors that affect a person’s feelings and attitudes about their sex. Sexuality is part of the whole person throughout life. Love, affection, warmth, companionship, and intimacy do not disappear with age (FIGURE 43.4); older adults have the right—and it is completely normal—to be sexual, express intimacy, and form romantic relationships.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">性心理与性健康（Sexuality）是由影响一个人对性别的感觉与态度的躯体、情绪、社会、文化与精神等多重因素交织而成的整体概念。它是贯穿人一生的全人重要组成部分。对于爱、温情、陪伴、拥抱以及身体亲密接触的需求，绝不会随着年龄的增长而自然消亡（图 43.4）；老年人完全享有进行性表达、维持亲密关系和建立浪漫情感纽带的合法权利，而且这是极其正常、健康的人性体现。</p>
+    </div>
+
+    <div class="editorial-figure" style="margin:24px 0; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px; text-align:center;">
+      <img src="images/ch43/fig-43-4.jpg" alt="FIGURE 43.4 Love and affection are important to older persons." style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.04);" onerror="this.src='pages_dist/images/ch43/fig-43-4.jpg'">
+      <figcaption class="ef-caption-en" style="margin-top:10px; font-size:13px; font-weight:600; color:#334155;">
+        FIGURE 43.4 &nbsp;Love and affection are important to older persons. (Can Stock Photo Inc./monkeybusiness.)<br>
+        <span style="font-weight:400; color:#64748b;">图 43.4 关爱、温情与亲密无间的陪伴对老年人的身心健康至关重要。</span>
+      </figcaption>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Reproductive System Changes.</strong> Physical changes do occur with aging that alter sexual functioning:</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:12px;"><strong>生殖系统生理性改变。</strong> 伴随衰老发生的躯体变化确实会在一定程度上改变性功能表现：</p>
+
+      <ul class="editorial-list" style="list-style:none; padding-left:0; margin-bottom:18px;">
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;"><strong>In Women:</strong> Menopause occurs (usually between ages 45 and 55), marked by the cessation of menstruation and a dramatic decrease in estrogen and progesterone. The vaginal walls become thin, dry, and less elastic, which can make intercourse uncomfortable or painful (dyspareunia) unless water-soluble lubricants are used. Uterine and breast tissues atrophy.</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;"><strong>在女性中：</strong> 经历更年期绝经（通常在 45 至 55 岁之间），雌激素与孕激素水平显著骤降。阴道黏膜变薄、干燥且弹性下降，这可能导致性交不适甚至疼痛（性交困难），需使用水溶性润滑剂改善。子宫及乳腺组织逐渐萎缩退变。</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;"><strong>In Men:</strong> Testosterone levels gradually decline. An erection takes longer to achieve and is less firm, and the refractory period between erections is prolonged. Semen volume decreases. However, men produce sperm and can father children into very advanced old age.</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;"><strong>在男性中：</strong> 睾酮激素水平平缓回落。达到勃起所需的时间延长且硬度有所减退，两次勃起之间的不应期明显延长。精液射出量和压力减少。然而，健康男性的睾丸持续产生精子，在极为高龄的阶段依然保持生育能力。</div>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1030">
+      <span class="marker-pill">p. 1030</span>
+      <span class="marker-sec">Respecting & Promoting Client's Sexuality (Box 43.2 Part 2)</span>
+    </div>
+
+    <!-- BOX 43.2: Focus on Long-Term Care -->
+    <aside class="editorial-box-container box-theme-teal" style="margin:20px 0; background:#f0fdfa; border:1px solid #99f6e4; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#0f766e; letter-spacing:0.06em; text-transform:uppercase;">BOX 43.2 · FOCUS ON LONG-TERM CARE</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#115e59;">Respecting and Promoting the Client’s Sexuality</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#042f2e;">聚焦长期照护：尊重与促进案主的性表达、亲密需求与合法权益</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#134e4a;">
+        <p class="para-en" style="margin-bottom:6px;"><strong>The health care team in a long-term care facility should allow and promote sexual expression and activity in older persons.</strong> As a support worker, your ethical and professional responsibilities include:</p>
+        <p class="para-cn" style="margin-bottom:12px; color:#042f2e;"><strong>长期照护机构的医疗照护团队应当理解、允许并积极促进老年人的性表达与亲密活动。</strong> 作为支持工作者，你的专业职业规范包括：</p>
+        
+        <ul style="list-style:none; padding-left:0; margin:0 0 12px;">
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Always knock before entering a room!</strong> Wait for an answer before opening the door. Treat the client’s bedroom as their private home.<br>
+            <span style="color:#042f2e;"><strong>进入案主房间前必须先敲门！</strong> 听到应答后方可开门入内。务必将案主的卧室视为其神圣不可侵犯的私人家庭领地。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Provide complete privacy.</strong> Close doors, pull window curtains, draw privacy dividers, and place a “Privacy Please” sign on the door when consenting partners request intimate time together.<br>
+            <span style="color:#042f2e;"><strong>提供彻底的隐私保障。</strong> 当具有完全知情同意能力的伴侣需要共度亲密时光时，主动关闭房门、拉拢窗帘、合上床周隔帘，并在门把手上挂上“请勿打扰/请尊重隐私”提示牌。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Maintain a nonjudgemental professional attitude.</strong> Never tease, gossip, laugh, or judge older clients who express affection, hold hands, or engage in sexual intimacy. Respect relationships between clients, regardless of gender or sexual orientation (including 2SLGBTQ+ seniors).<br>
+            <span style="color:#042f2e;"><strong>始终秉持非评判性的专业执业态度。</strong> 绝不要对表达爱慕、牵手或进行性亲密的老年案主进行嘲弄、八卦、哄笑或妄加道德批判。平等尊重所有案主之间的伴侣关系，无论其性别认同或性取向（包括 2SLGBTQ+ 少数群体长者）。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Respect personal grooming and clothing choices.</strong> Assist clients to look attractive by helping with cosmetics, hair styling, shaving, clothing selection, and cleanliness, which enhances their self-esteem and feelings of sexuality.<br>
+            <span style="color:#042f2e;"><strong>尊重案主的仪容修饰与着装品味。</strong> 协助案主梳妆打扮、涂抹护肤品、整理发型、刮胡剃须、挑选合体服装并保持洁净清爽，这能极大提振他们的自尊心与性魅力认同感。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Understanding masturbation.</strong> Masturbation is a normal form of sexual self-expression. If you encounter a client masturbating in private, quietly leave the room, close the door, and provide privacy. If a client masturbates in a public area (such as a dining hall or lounge), calmly and gently redirect them to their private bedroom without scolding, shaming, or causing embarrassment.<br>
+            <span style="color:#042f2e;"><strong>正确理解自慰行为。</strong> 自慰（Masturbation）是人类正常的性自我表达形式。如果你偶然遇到案主在私密房间内自慰，请平静退出、关上房门并提供充分的隐私保障。若案主在公共区域（如餐厅或活动大厅）出现自慰举动，应温和冷静地引导其返回私人卧室，切忌当众大声斥责、羞辱或使其陷入难堪。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Protection from sexual abuse and lack of consent.</strong> Sexual activity must always be voluntary and consensual. Clients with severe cognitive impairment (dementia) may lack the legal capacity to consent. If you witness non-consensual sexual advances, sexual aggression, or suspect sexual exploitation, intervene immediately to protect the client and report immediately to your supervisor!<br>
+            <span style="color:#042f2e;"><strong>保护案主免受性虐待与无同意侵害。</strong> 任何性活动必须建立在完全自愿与知情同意的前提下。患有严重认知障碍（失智症）的长者可能已丧失知情同意能力。如果你目睹非自愿的性侵犯、性攻击或怀疑存在性剥削行为，必须立即果断介入保护受害案主的人身安全，并立即向主管进行紧急汇报！</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1031">
+      <span class="marker-pill">p. 1031</span>
+      <span class="marker-sec">Chapter Review Key Points, Critical Thinking & Practice Exam Q1–7</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch43-review">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">CHAPTER REVIEW</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">本章核心复习精要</div>
+    </div>
+
+    <div class="review-key-points" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:20px 22px; margin-bottom:24px;">
+      <h3 style="margin:0 0 14px; font-size:17px; font-weight:700; color:#1e3a8a;">KEY POINTS / 核心知识点精炼（全书原版 6 大纲要）</h3>
+      <ul style="list-style:none; padding-left:0; margin:0; font-size:14px; line-height:1.7; color:#334155;">
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Retirement affects older persons in many ways. Some people may be happy to retire and look forward to more leisure time, whereas others may have been forced into retirement because of a persistent illness or a disability. As a support worker, be sensitive to your client’s reactions and their effect on the family.<br>
+          <span style="color:#64748b;">退休以多种方式深刻影响着老年人。有些人乐于退休并热切期盼闲暇时光；而另一些人则因慢性疾病或身体残疾而被迫退休。支持工作者应敏锐体察案主的心理反应及其对整个家庭的影响。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Financial concerns can cause stress to your client and their family. In most cases, income will be reduced after retirement, and in some cases, expenses may go up because of lack of insurance coverage for medications. Older clients still need to deal with the expenses of living.<br>
+          <span style="color:#64748b;">财务顾虑往往会给案主及其家庭带来巨大心理压力。大多数情况下退休后收入锐减，且自费药物等开支可能反而上升。老年案主依然需要直面沉重的生活开销。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Social interactions change as a person ages. Children grow up and may move away. In some cases, they become the caregivers for their parents. A client who has been living in their home and then needs to move to supportive housing may lose contact with friends.<br>
+          <span style="color:#64748b;">社会交往随增龄发生根本转变。子女成年后多移居远方，有时甚至与父母发生照料角色反转。从原住宅迁入支持性照护机构的长者，极易与多年故交失去联系。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Depression is not a normal part of aging. As a support worker, you need to look for the signs and symptoms of depression in clients and report any to your supervisor. Psychological therapy is the main treatment for depression in the older person.<br>
+          <span style="color:#64748b;">抑郁症绝对不是衰老的正常表现。作为支持工作者，你必须密切体察案主的抑郁早期征兆并向主管汇报。心理疗法是老年人抑郁症的核心治疗手段。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Keep in mind that numerous changes occur in an older person’s body systems. Your supervisor will direct your care for your client. Changes occur in the (1) integumentary, (2) musculoskeletal, (3) nervous, (4) circulatory, (5) respiratory, (6) digestive, (7) urinary, and (8) reproductive systems of older persons.<br>
+          <span style="color:#64748b;">请牢记老年人机体各系统均发生广泛的生理退变，主管将全程指导你的照护工作。退化涉及：(1) 皮肤软组织、(2) 肌肉骨骼、(3) 神经系统、(4) 循环系统、(5) 呼吸系统、(6) 消化系统、(7) 泌尿系统、以及 (8) 生殖系统。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Love, affection, and intimacy are needed throughout life, as sexuality is part of the whole person. There are ways you, as a support worker, can respect and promote your client’s sexuality.<br>
+          <span style="color:#64748b;">爱、温情与亲密无间的陪伴是贯穿一生的正常人性需要，性健康是全人的组成部分。支持工作者有多种切实途径去尊重、保护并促进案主的性表达与尊严。</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Critical Thinking Box -->
+    <aside class="editorial-box-container box-theme-case" style="margin:24px 0; background:#f0f7ff; border:1px solid #bfdbfe; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#1e40af; letter-spacing:0.06em; text-transform:uppercase;">CRITICAL THINKING IN PRACTICE · 临床思辨情境</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#1e3a8a;">Scenario: Commode Privacy vs. Fall Prevention</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#172554;">案例思考：步态不稳案主使用床旁坐便椅时的如厕隐私与防跌倒安全权衡</div>
+      </div>
+      <div class="box-body-content" style="font-size:14px; line-height:1.75; color:#1e293b;">
+        <p class="para-en" style="margin-bottom:4px;">You assist a client onto the commode. The person is unsteady, and the care plan states that the person is not to be left alone. The person says, “I’m not a baby! I can’t go with you standing here.” What do you do? How will you provide privacy and safe care?</p>
+        <p class="para-cn" style="color:#475569;">你协助一位案主坐在床旁坐便椅上排便。案主步态摇晃极其不稳，且照护计划明确规定“该案主绝不能单独一人独处留守”。案主非常反感地说：“我又不是个小毛头婴儿！你这么直勾勾站在我旁边盯牢我，我根本尿不出来！”此时你应当如何应对？你如何在坚决杜绝跌倒风险的同时，最大程度顾全案主的如厕隐私与心理尊严？</p>
+      </div>
+    </aside>
+
+    <div class="editorial-heading-major" id="sec-ch43-quiz-opener">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:28px; margin-bottom:4px;">REVIEW QUESTIONS (Questions 1 to 7)</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">本章自测复习题（第 1 至 7 题）</div>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1032">
+      <span class="marker-pill">p. 1032</span>
+      <span class="marker-sec">Review Questions 8 to 11 & Official Elsevier Answer Key</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch43-quiz-q8-11">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">REVIEW QUESTIONS (Questions 8 to 11)</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">本章自测复习题（第 8 至 11 题与官方权威标准答案解析）</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:14.5px; color:#1e293b; line-height:1.7; margin-bottom:4px;">Official Elsevier Canadian 5th Edition Review Questions 1 through 11 test essential gerontological competencies: late adulthood developmental tasks, retirement financial realities, fragile skin care, burn prevention, range-of-motion benefits, arteriosclerosis circulatory impacts, respiratory chest expansion, digestive enzyme decline and fatty food intolerance, fluid intake scheduling before 17:00, and long-term care sexual expression rights.</p>
+      <p class="para-cn" style="font-size:13.5px; color:#475569; line-height:1.75; margin-bottom:16px;">爱思唯尔加拿大第 5 版官方全真自测复习题第 1 至 11 题，全面涵盖老年期发展任务、退休财务影响、脆弱皮肤护理、严禁电热毯防烫伤、关节活动度锻炼价值、动脉硬化循环障碍、沉重被褥对胸廓扩张的阻碍、消化液减少对高脂油炸食品的不耐受、下午 17:00 前完成饮水防夜尿跌倒、以及长期照护机构促进性表达权利等核心执业要点。</p>
+    </div>
+
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch42')">← 上一章：第 42 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch43-quiz')">✍️ 11 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 39 章（常见疾病与失调，62页）正在编排流水线中，即将上线！')">下一章：第 39 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch42.html" class="sbn-btn sbn-prev">← 上一章：第 42 章 (儿童与青少年照护与家庭支持)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch43-quiz" class="sbn-btn sbn-quiz">✍️ 11 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 44 章（家庭管理）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 44 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch43_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
