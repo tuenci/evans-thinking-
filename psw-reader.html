@@ -48,9 +48,80 @@
     }
 
     .sidebar-header {
-      padding: 24px 20px 16px;
+      padding: 18px 16px 14px;
       border-bottom: 1px solid var(--border);
       background: #eeeae0;
+    }
+
+    /* Dual-Book Library Switcher (Apple HIG Segmented Control) */
+    .library-book-switcher {
+      display: flex;
+      background: #e2ddd0;
+      border-radius: 9px;
+      padding: 3px;
+      margin-bottom: 14px;
+      gap: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .lib-switch-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 7px 6px;
+      border-radius: 7px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-sub);
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+
+    .lib-switch-btn:hover {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .lib-switch-btn.active {
+      background: #ffffff;
+      color: var(--primary-dark);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 1px 1px rgba(0, 0, 0, 0.03);
+      font-weight: 700;
+      cursor: default;
+    }
+
+    .lib-switch-icon {
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .topbar-book-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--primary-dark);
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .topbar-book-switcher:hover {
+      background: var(--primary-light);
+      border-color: var(--primary-accent);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
     .book-badge {
@@ -2293,6 +2364,18 @@
   <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
+      <!-- Library Dual-Book Switcher (书籍切换器) -->
+      <div class="library-book-switcher" role="tablist" aria-label="全书库多卷切换">
+        <a href="psw-reader.html" class="lib-switch-btn active" role="tab" aria-selected="true" title="当前书籍：官方核心教材 (47章全真双语研读版)">
+          <span class="lib-switch-icon">📘</span>
+          <span class="lib-switch-title">官方核心教材</span>
+        </a>
+        <a href="workbook-reader.html" class="lib-switch-btn" role="tab" aria-selected="false" title="切换至第二本书籍：《HCA 全真配套测试课本》（47章同步测试题库）">
+          <span class="lib-switch-icon">📝</span>
+          <span class="lib-switch-title">HCA 测试课本</span>
+        </a>
+      </div>
+
       <span class="book-badge">Elsevier Official Edition</span>
       <h2 class="book-title">《加拿大支持工作者教材》</h2>
       <p class="book-subtitle">第 5 版 · 中英双语对照精研系统<br>Sorrentino's Canadian Textbook (5th Ed.)</p>
@@ -3191,6 +3274,9 @@
         <span class="cur-title" id="currentTitle" style="display:none;">第 1 章：支持工作者的角色与职责 (Pages 1–18)</span>
       </div>
       <div class="top-controls">
+        <a href="workbook-reader.html" class="topbar-book-switcher" title="切换到第二本书籍：《HCA 全真配套测试课本》 (47章全真习题强化题库)">
+          <span>📝 切换至《HCA 测试课本》 ↗</span>
+        </a>
         <div class="mode-switch">
           <button class="mode-btn active" onclick="setMode('bilingual', this)">中英双语</button>
           <button class="mode-btn" onclick="setMode('cn', this)">仅中文</button>
@@ -3845,6 +3931,19 @@
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 1 Full Text · Pages 1–18 Unabridged</span>
           <span class="sheet-meta-edition">Sorrentino 5th Ed.</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 1 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch1" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 1 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch1" aria-label="Chapter 1 Page Navigation">
@@ -5845,6 +5944,19 @@
           <span class="sheet-meta-badge">Chapter 1 Self-Test & Review Questions · Pages 18–19</span>
           <span class="sheet-meta-edition">12 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 1 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch1" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 1 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -6556,6 +6668,19 @@
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 2 Full Text · Pages 20–32 Unabridged</span>
           <span class="sheet-meta-edition">The Canadian Health Care System</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 2 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch2" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 2 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch2" aria-label="Chapter 2 Page Navigation">
@@ -8031,6 +8156,19 @@
           <span class="sheet-meta-badge">Chapter 2 Self-Test & Review Questions · Pages 32–33</span>
           <span class="sheet-meta-edition">11 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 2 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch2" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 2 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -8684,6 +8822,19 @@
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 3 Full Text · Pages 34–46 Unabridged</span>
           <span class="sheet-meta-edition">Workplace Settings</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 3 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch3" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 3 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch3" aria-label="Chapter 3 Page Navigation">
@@ -10176,6 +10327,19 @@
           <span class="sheet-meta-badge">Chapter 3 Self-Test & Review Questions · Pages 46–47</span>
           <span class="sheet-meta-edition">9 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 3 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch3" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 3 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -10785,6 +10949,19 @@ D. 长期照护养老机构（Long-term care facility）</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 4 Full Text · Pages 48–57 Unabridged</span>
           <span class="sheet-meta-edition">Ethics in Support Work</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 4 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch4" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 4 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch4" aria-label="Chapter 4 Page Navigation">
@@ -11844,6 +12021,19 @@ The four basic principles of health care ethics are as follows:</p>
           <span class="sheet-meta-badge">Chapter 4 Self-Test & Review Questions · Pages 57–58</span>
           <span class="sheet-meta-edition">11 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 4 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch4" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 4 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -12417,6 +12607,19 @@ The four basic principles of health care ethics are as follows:</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 5 Full Text · Pages 59–76 Unabridged</span>
           <span class="sheet-meta-edition">Legislation & Client Rights</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 5 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch5" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 5 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch5" aria-label="Chapter 5 Page Navigation">
@@ -14674,6 +14877,19 @@ D. 监管健康专业法（Regulated Health Professions Legislation）</p>
           <span class="sheet-meta-badge">Chapter 5 Self-Test & Review Questions · Pages 75–76</span>
           <span class="sheet-meta-edition">12 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 5 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch5" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 5 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -15481,6 +15697,19 @@ D. 受监管医疗卫生专业人员专门立法（Regulated Health Professions 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 6 Full Text · Pages 77–95 Unabridged</span>
           <span class="sheet-meta-edition">Health, Wellness, Illness, Disability</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 6 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch6" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 6 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch6" aria-label="Chapter 6 Page Navigation">
@@ -17385,6 +17614,19 @@ D. 主观拒绝承认客观真理</p>
           <span class="sheet-meta-badge">Chapter 6 Self-Test & Review Questions · Pages 94–95</span>
           <span class="sheet-meta-edition">11 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 6 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch6" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 6 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -18038,6 +18280,19 @@ D. 主观拒绝承认客观真理</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 7 Full Text · Pages 96–111 Unabridged</span>
           <span class="sheet-meta-edition">Caring About Culture & Diversity</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 7 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch7" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 7 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch7" aria-label="Chapter 7 Page Navigation">
@@ -19681,6 +19936,19 @@ D. 种族群体（Racial group）</p>
           <span class="sheet-meta-badge">Chapter 7 Self-Test & Review Questions · Pages 110–111</span>
           <span class="sheet-meta-edition">12 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 7 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch7" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 7 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch7" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -20280,6 +20548,19 @@ D. 种族群体（Racial group）</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 8 Full Text · Pages 112–128 Unabridged</span>
           <span class="sheet-meta-edition">Managing Stress & Self-Care</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 8 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch8" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 8 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch8" aria-label="Chapter 8 Page Navigation">
@@ -21923,6 +22204,19 @@ D. 立刻拉上直属主管直接在病房走廊与对方当面激烈对质</p>
           <span class="sheet-meta-badge">Chapter 8 Self-Test & Review Questions · Pages 127–128</span>
           <span class="sheet-meta-edition">10 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 8 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch8" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 8 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch8" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -22535,6 +22829,19 @@ D. 立刻拉上直属主管直接在病房走廊与对方当面激烈对质</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 9 Interpersonal Communication · Pages 129–148</span>
           <span class="sheet-meta-edition">Sorrentino 5th Edition Unabridged</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 9 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch9" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 9 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch9" aria-label="Chapter 9 Page Navigation">
@@ -24632,6 +24939,19 @@ Chapter opener image: iStockphoto/DragonImages.</p>
           <span class="sheet-meta-badge">Chapter 9 Practice Exam · Pages 147–148</span>
           <span class="sheet-meta-edition">11 Authentic Clinical Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 9 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch9" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 9 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch9" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -25285,6 +25605,19 @@ Chapter opener image: iStockphoto/DragonImages.</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 10 Working With Others · Pages 149–163</span>
           <span class="sheet-meta-edition">Teamwork & Delegation</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 10 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch10" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 10 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch10" aria-label="Chapter 10 Page Navigation">
@@ -26558,6 +26891,19 @@ Chapter opener image: iStockphoto/sturti.</p>
           <span class="sheet-meta-badge">Chapter 10 Practice Exam · Pages 162–163</span>
           <span class="sheet-meta-edition">5 Authentic Questions</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 10 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch10" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 10 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch10" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -27153,6 +27499,19 @@ Chapter opener image: iStockphoto/sturti.</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 11 Working With Clients and Families · Pages 164–173</span>
           <span class="sheet-meta-edition">Professional Boundaries</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 11 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch11" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 11 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch11" aria-label="Chapter 11 Page Navigation">
@@ -28214,6 +28573,19 @@ Chapter opener image: iStockphoto/sturti.</p>
           <span class="sheet-meta-badge">Chapter 11 Practice Exam · Pages 172–173</span>
           <span class="sheet-meta-edition">Clinical Focus</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 11 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch11" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 11 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch11" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -28703,6 +29075,19 @@ Chapter opener image: iStockphoto/sturti.</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 12 Abuse Awareness · Pages 174–193</span>
           <span class="sheet-meta-edition">Mandatory Reporting</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 12 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch12" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 12 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch12" aria-label="Chapter 12 Page Navigation">
@@ -30029,6 +30414,19 @@ Chapter opener image: iStockphoto/sturti.</p>
           <span class="sheet-meta-badge">Chapter 12 Practice Exam · Pages 192–193</span>
           <span class="sheet-meta-edition">Legal Exam</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 12 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch12" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 12 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch12" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -31030,6 +31428,19 @@ Chapter opener image: iStockphoto/sturti.</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 13 Starting Your Career · Pages 194–214</span>
           <span class="sheet-meta-edition">Resumé & Interview</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 13 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch13" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 13 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch13" aria-label="Chapter 13 Page Navigation">
@@ -33010,6 +33421,19 @@ Chapter opener image: iStockphoto/sturti.</p>
           <span class="sheet-meta-badge">Chapter 13 Practice Exam · Pages 213–214</span>
           <span class="sheet-meta-edition">Career Skills</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 13 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch13" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 13 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch13" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -33865,6 +34289,19 @@ Chapter opener image: iStockphoto/sturti.</p>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 14 Body Mechanics · Pages 215–258</span>
           <span class="sheet-meta-edition">Transfers & Positioning</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 14 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch14" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 14 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch14" aria-label="Chapter 14 Page Navigation">
@@ -36806,6 +37243,19 @@ Clients in bed are positioned in basic bed positions to promote comfort, breathi
           <span class="sheet-meta-badge">Chapter 14 Practice Exam · Pages 256–258</span>
           <span class="sheet-meta-edition">Safe Lifting Exam</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 14 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch14" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 14 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch14" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -38125,6 +38575,19 @@ Clients in bed are positioned in basic bed positions to promote comfort, breathi
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 15 Exercise and Activity · Pages 259–281</span>
           <span class="sheet-meta-edition">ROM & Ambulation</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 15 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch15" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 15 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch15" aria-label="Chapter 15 Page Navigation">
@@ -40389,6 +40852,19 @@ C: Lower the client smoothly to the floor by bending at hips and knees, shieldin
           <span class="sheet-meta-badge">Chapter 15 Practice Exam · Pages 280–281</span>
           <span class="sheet-meta-edition">Mobility Exam</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 15 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch15" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 15 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch15" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -41136,6 +41612,19 @@ C: Lower the client smoothly to the floor by bending at hips and knees, shieldin
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 16 Rehabilitation and Restorative Care · Pages 282–295</span>
           <span class="sheet-meta-edition">Adaptive Devices</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 16 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch16" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 16 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch16" aria-label="Chapter 16 Page Navigation">
@@ -42138,6 +42627,19 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
           <span class="sheet-meta-badge">Chapter 16 Practice Exam · Pages 294–295</span>
           <span class="sheet-meta-edition">Restorative Exam</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 16 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch16" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 16 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch16" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -42675,6 +43177,19 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 17 Personal Hygiene · Pages 296–336</span>
           <span class="sheet-meta-edition">Bathing & Perineal Care</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 17 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch17" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 17 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch17" aria-label="Chapter 17 Page Navigation">
@@ -46029,6 +46544,19 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
           <span class="sheet-meta-badge">Chapter 17 Practice Exam · Pages 335–336</span>
           <span class="sheet-meta-edition">Hygiene Protocols</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 17 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch17" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 17 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch17" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -47022,6 +47550,19 @@ Panel A: Transfer from a wheelchair to a bed. The wheelchair is positioned at a 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 18 Grooming and Dressing · Pages 337–375</span>
           <span class="sheet-meta-edition">Grooming, Nails & Anti-Embolic Stockings</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 18 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch18" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 18 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch18" aria-label="Chapter 18 Page Navigation">
@@ -50056,6 +50597,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 18 Practice Exam · Pages 374–375</span>
           <span class="sheet-meta-edition">Grooming & Dressing Protocols</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 18 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch18" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 18 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch18" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -51000,6 +51554,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 19 Preventing Infection · Pages 376–415</span>
           <span class="sheet-meta-edition">Medical & Surgical Asepsis, Hand Hygiene & PPE</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 19 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch19" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 19 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch19" aria-label="Chapter 19 Page Navigation">
@@ -54074,6 +54641,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 19 Practice Exam · Pages 414–415</span>
           <span class="sheet-meta-edition">27 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 19 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch19" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 19 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch19" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -55306,6 +55886,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 20 Safety · Pages 416–457</span>
           <span class="sheet-meta-edition">Fall Prevention, RACE Protocol, Restraints & WHMIS</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 20 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch20" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 20 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch20" aria-label="Chapter 20 Page Navigation">
@@ -57415,6 +58008,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 20 Practice Exam · Pages 455–457</span>
           <span class="sheet-meta-edition">41 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 20 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch20" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 20 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch20" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -59359,6 +59965,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 21 Beds and Bed Making · Pages 458–479</span>
           <span class="sheet-meta-edition">Bed Positions, Standard Practices, Closed, Open & Occupied Beds</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 21 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch21" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 21 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch21" aria-label="Chapter 21 Page Navigation">
@@ -61846,6 +62465,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 21 Practice Exam · Pages 478–479</span>
           <span class="sheet-meta-edition">9 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 21 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch21" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 21 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch21" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -62347,6 +62979,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 22 Skin Care and Prevention of Wounds · Pages 480–510</span>
           <span class="sheet-meta-edition">Skin Tears, Pressure Injury Staging, Braden Scale, Ulcers & Dressings</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 22 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch22" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 22 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch22" aria-label="Chapter 22 Page Navigation">
@@ -65337,6 +65982,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 22 Practice Exam · Pages 509–510</span>
           <span class="sheet-meta-edition">18 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 22 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch22" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 22 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch22" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -66244,6 +66902,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 23 Promoting Client Comfort, Pain Management, and Sleep · Pages 511–527</span>
           <span class="sheet-meta-edition">Pain Assessment Scales, PAINAD, Comfort Measures & Sleep Rest</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 23 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch23" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 23 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch23" aria-label="Chapter 23 Page Navigation">
@@ -67265,6 +67936,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 23 Practice Exam · Pages 526–527</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 23 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch23" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 23 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="quiz-wrap-ch23" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -67848,6 +68532,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 24 Measuring Height, Weight, and Vital Signs · Pages 528–556</span>
           <span class="sheet-meta-edition">Temperature, Pulse Sites, Pulse Oximeter, Respirations & Blood Pressure</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 24 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch24" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 24 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch24" aria-label="Chapter 24 Page Navigation">
@@ -70054,6 +70751,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 24 Practice Exam · Pages 555–556</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 24 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch24" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 24 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch24-quiz-inner" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -70725,6 +71435,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 25 Medical Terminology · Pages 557–567</span>
           <span class="sheet-meta-edition">Word Elements, Directional Terms, Abdominal Regions & Clinical Abbreviations</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 25 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch25" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 25 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch25" aria-label="Chapter 25 Page Navigation">
@@ -73559,6 +74282,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
           <span class="sheet-meta-badge">Chapter 25 Practice Exam · Pages 565–567</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 25 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch25" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 25 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch25-quiz-inner" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -74222,6 +74958,19 @@ Clinical Decision: How should you intervene? 1. Uphold Mr. Henderson's right to 
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 26 Planning, Reporting, and Recording Client Care · Pages 568–590</span>
           <span class="sheet-meta-edition">Care-Planning Process, Observations, 24-Hour Clock & Documentation Rules</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 26 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch26" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 26 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch26" aria-label="Chapter 26 Page Navigation">
@@ -75749,6 +76498,19 @@ D. 依据机构规章制度与知情同意规范，仅限直接参与该案主�
           <span class="sheet-meta-badge">Chapter 26 Practice Exam · Pages 589–590</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 26 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch26" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 26 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch26-quiz-inner" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -76412,6 +77174,19 @@ D. 依据机构规章制度与知情同意规范，仅限直接参与该案主�
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 27 Nutrition and Fluids · Pages 591–623</span>
           <span class="sheet-meta-edition">Nutrients, Dietary Guidelines, Special Diets, Assisting Eating & I&O Monitoring</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 27 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch27" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 27 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch27" aria-label="Chapter 27 Page Navigation">
@@ -79833,6 +80608,19 @@ Circle the BEST answer:</div>
           <span class="sheet-meta-badge">Chapter 27 Practice Exam · Pages 622–623</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 27 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch27" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 27 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch27-quiz-inner" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -80478,6 +81266,19 @@ Circle the BEST answer:</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 28 Enteral Nutrition and Intravenous Therapy · Pages 624–635</span>
           <span class="sheet-meta-edition">Enteral Tubes, Aspiration Precautions, IV Therapy & Subcutaneous Infusion</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 28 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch28" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 28 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch28" aria-label="Chapter 28 Page Navigation">
@@ -81724,6 +82525,19 @@ Circle the BEST answer:</div>
           <span class="sheet-meta-badge">Chapter 28 Practice Exam · Pages 634–635</span>
           <span class="sheet-meta-edition">9 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 28 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch28" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 28 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch28-quiz-inner" style="padding-top:20px;">
       <div class="quiz-intro-banner" style="margin-bottom:28px; padding:20px 24px; background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;">
@@ -82213,6 +83027,19 @@ Circle the BEST answer:</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 29 Urinary Elimination · Pages 636–678</span>
           <span class="sheet-meta-edition">Urinary Physiology, Bedpans, Urinals, Commodes, Incontinence, Catheters, Drainage, Specimens, Urine Testing & Ostomy</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 29 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch29" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 29 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch29" aria-label="Chapter 29 Page Navigation">
@@ -88779,6 +89606,19 @@ It is your responsibility to provide good skin care to the client with a uretero
           <span class="sheet-meta-badge">Chapter 29 Practice Exam · Pages 677–678</span>
           <span class="sheet-meta-edition">13 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 29 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch29" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 29 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch29-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="margin-bottom:28px; padding:20px 24px; background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1.5px solid #86efac; border-radius:12px;">
@@ -89476,6 +90316,19 @@ It is your responsibility to provide good skin care to the client with a uretero
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 30 Bowel Elimination · Pages 679–697</span>
           <span class="sheet-meta-edition">Normal Defecation, Bristol Chart, Constipation, Impaction, Diarrhea, Enemas, Ostomy Pouches, Stoma Care & Stool Specimens</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 30 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch30" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 30 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch30" aria-label="Chapter 30 Page Navigation">
@@ -92582,6 +93435,19 @@ It is your responsibility to provide good skin care to the client with a uretero
           <span class="sheet-meta-badge">Chapter 30 Practice Exam · Pages 696–697</span>
           <span class="sheet-meta-edition">7 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 30 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch30" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 30 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch30-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="margin-bottom:28px; padding:20px 24px; background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1.5px solid #86efac; border-radius:12px;">
@@ -92967,6 +93833,19 @@ It is your responsibility to provide good skin care to the client with a uretero
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 31 Growth and Development · Pages 698–717</span>
           <span class="sheet-meta-edition">Principles of Growth, Erikson & Maslow, Infancy Milestones, Toddlerhood Autonomy, Preschool, Peer Groups, Adolescence, Adulthood & Aging</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 31 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch31" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 31 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch31" aria-label="Chapter 31 Page Navigation">
@@ -95260,6 +96139,19 @@ It is your responsibility to provide good skin care to the client with a uretero
           <span class="sheet-meta-badge">Chapter 31 Practice Exam · Pages 716–717</span>
           <span class="sheet-meta-edition">18 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 31 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch31" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 31 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch31-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="margin-bottom:28px; padding:20px 24px; background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1.5px solid #86efac; border-radius:12px;">
@@ -96217,6 +97109,19 @@ It is your responsibility to provide good skin care to the client with a uretero
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 32 Body Structure and Function · Pages 718–751</span>
           <span class="sheet-meta-edition">Cells, Tissues, Organs, Musculoskeletal, Nervous, Sensory, Endocrine, Circulatory, Lymphatic & Immune, Respiratory, Digestive, Urinary, Reproductive Systems</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 32 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch32" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 32 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch32" aria-label="Chapter 32 Page Navigation">
@@ -99302,6 +100207,19 @@ It is your responsibility to provide good skin care to the client with a uretero
           <span class="sheet-meta-badge">Chapter 32 Practice Exam · Pages 750–751</span>
           <span class="sheet-meta-edition">16 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 32 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch32" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 32 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch32-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="margin-bottom:28px; padding:20px 24px; background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border:1.5px solid #86efac; border-radius:12px;">
@@ -100155,6 +101073,19 @@ It is your responsibility to provide good skin care to the client with a uretero
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 33 Common Diseases and Disorders · Pages 752–811</span>
           <span class="sheet-meta-edition">Communicable Diseases, Oncology, Integumentary, Musculoskeletal, Nervous, Endocrine, Cardiovascular, Respiratory, Immune, Digestive, Urinary, Reproductive Systems</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 33 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch33" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 33 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch33" aria-label="Chapter 33 Page Navigation">
@@ -106581,6 +107512,19 @@ Two Forms of Heart Failure (Left vs Right):
           <span class="sheet-meta-badge">Chapter 33 Practice Exam · Pages 810–811</span>
           <span class="sheet-meta-edition">45 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 33 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch33" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 33 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch33-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -108223,6 +109167,19 @@ Two Forms of Heart Failure (Left vs Right):
           <span class="sheet-meta-badge">Chapter 34 Hearing and Vision Disorders · Pages 812–828</span>
           <span class="sheet-meta-edition">Ear Disorders, Hearing Aids, Cochlear Implants, APD, Eye Disorders, Cataracts, Glaucoma, AMD, Braille, Sighted Guide & Service Dogs</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 34 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch34" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 34 章同步自测">
+            前往配套测试课本 ↗
+          </a>
+        </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch34" aria-label="Chapter 34 Page Navigation">
       <div class="cp-nav-header">
@@ -109812,6 +110769,19 @@ Two Forms of Heart Failure (Left vs Right):
           <span class="sheet-meta-badge">Chapter 34 Practice Exam · Pages 827–828</span>
           <span class="sheet-meta-edition">10 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 34 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch34" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 34 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch34-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -110353,6 +111323,19 @@ Two Forms of Heart Failure (Left vs Right):
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 35 Speech and Language Disorders · Pages 829–838</span>
           <span class="sheet-meta-edition">Aphasia, Apraxia of Speech, Dysarthria, SLP Treatment, Communication Boards, Talking Aids, Computers & Tablets, DIPPS Compassionate Care</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 35 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch35" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 35 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch35" aria-label="Chapter 35 Page Navigation">
@@ -111501,6 +112484,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 35 Practice Exam · Page 838</span>
           <span class="sheet-meta-edition">8 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 35 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch35" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 35 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch35-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -111938,6 +112934,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 36 Developmental Disorders and Disabilities · Pages 839–855</span>
           <span class="sheet-meta-edition">Developmental Disabilities, ADHD, Autism Spectrum Disorder, Cerebral Palsy, Down Syndrome, Epilepsy, FASD, Intellectual Disabilities, Spina Bifida & DIPPS Care</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 36 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch36" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 36 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch36" aria-label="Chapter 36 Page Navigation">
@@ -113709,6 +114718,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 36 Practice Exam · Pages 854–855</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 36 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch36" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 36 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch36-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -114354,6 +115376,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 37 Mental Health Disorders · Pages 856–890</span>
           <span class="sheet-meta-edition">Mental Health vs Illness, Stigma, DSM-5, Anxiety Disorders, PTSD, Bipolar, Major Depression, Disruptive/Conduct Disorders, Eating Disorders, OCD, Personality Disorders, Schizophrenia, Self-Harm, Sleep & Substance Disorders, Suicidal Behaviour & Crisis Protocols</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 37 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch37" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 37 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch37" aria-label="Chapter 37 Page Navigation">
@@ -117534,6 +118569,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 37 Practice Exam · Pages 888–890</span>
           <span class="sheet-meta-edition">21 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 37 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch37" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 37 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch37-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -118647,6 +119695,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 38 Disorientation, Delirium, and Dementia · Pages 891–926</span>
           <span class="sheet-meta-edition">Disorientation, Delirium (Medical Emergency), Dementia, ADRD, Lewy Body, Vascular, GPA Principles, Validation Therapy, Wandering, Sundowning, ABCD Model & DIPPS Care</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 38 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch38" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 38 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch38" aria-label="Chapter 38 Page Navigation">
@@ -120960,6 +122021,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 38 Practice Exam · Pages 924–926</span>
           <span class="sheet-meta-edition">25 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 38 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch38" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 38 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch38-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -122601,6 +123675,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 39 Promoting Oxygenation · Pages 927–958</span>
           <span class="sheet-meta-edition">Oxygen Basics, Hypoxia, Postural Drainage, Pulse Oximetry, Incentive Spirometer, Delivery Devices, Tracheostomy Care, Suctioning Safety, Mechanical Ventilation & Chest Tubes</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 39 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch39" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 39 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch39" aria-label="Chapter 39 Page Navigation">
@@ -124502,6 +125589,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 39 Practice Exam · Pages 957–958</span>
           <span class="sheet-meta-edition">22 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 39 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch39" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 39 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch39-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -125673,6 +126773,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 40 Heat and Cold Applications · Pages 959–975</span>
           <span class="sheet-meta-edition">Physiological Effects, Vasodilation & Vasoconstriction, High-Risk Safety, Moist vs Dry Applications, Warm Compresses & Soaks, Sitz Baths, Aquathermia Pads, Cold Therapy, Frostbite & RICE Protocol</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 40 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch40" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 40 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch40" aria-label="Chapter 40 Page Navigation">
@@ -127321,6 +128434,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 40 Practice Exam · Pages 974–975</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 40 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch40" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 40 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch40-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -127972,6 +129098,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 41 Caring for Infants and Their Parents · Pages 976–1004</span>
           <span class="sheet-meta-edition">Postpartum Care, Lochia, Perineal & Breast Care, Infant Holding & Swaddling, SIDS Prevention, Infant Feeding & Burping, Diapering, Umbilical Cord & Circumcision Care, Bathing & Weighing Procedures</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 41 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch41" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 41 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch41" aria-label="Chapter 41 Page Navigation">
@@ -129801,6 +130940,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 41 Practice Exam · Pages 1003–1004</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 41 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch41" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 41 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch41-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -130452,6 +131604,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 42 Caring for the Young · Pages 1005–1018</span>
           <span class="sheet-meta-edition">Supporting Children & Teens, DIPPS, Nutrition & Obesity, Mealtimes, Reye's Syndrome Warning, Rest & Exercise, Discipline Principles, Punishment Prohibition, Challenging Behaviours, Infection Prevention, Top 5 Absences & Vaccines</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 42 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch42" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 42 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch42" aria-label="Chapter 42 Page Navigation">
@@ -131672,6 +132837,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 42 Practice Exam · Pages 1017–1018</span>
           <span class="sheet-meta-edition">11 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 42 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch42" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 42 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch42-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -132271,6 +133449,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 43 Caring for Older Persons · Pages 1019–1032</span>
           <span class="sheet-meta-edition">Aging Demographics, Gerontology, Ageism, DIPPS Care, Retirement, Financial Concerns, Bereavement, Depression, Physical Changes in 8 Body Systems, Sexuality & LTC Privacy</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 43 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch43" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 43 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch43" aria-label="Chapter 43 Page Navigation">
@@ -133149,6 +134340,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 43 Practice Exam · Pages 1031–1032</span>
           <span class="sheet-meta-edition">11 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 43 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch43" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 43 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch43-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -133748,6 +134952,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 44 Home Management · Pages 1033–1054</span>
           <span class="sheet-meta-edition">Support Worker Role, Cytotoxic Safety, Financial Accountability, DIPPS Principles, Getting Organized, 13 Cleaning Chemical Rules, Bedrooms, Living Rooms, Kitchens, Bathrooms, Mould Abatement, Laundry, Dryer Fire Prevention, Canadian Laundry Symbols, Recycling & Stain Removal</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 44 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch44" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 44 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch44" aria-label="Chapter 44 Page Navigation">
@@ -135094,6 +136311,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 44 Practice Exam · Pages 1053–1054</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 44 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch44" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 44 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch44-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -135745,6 +136975,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 45 Medication Management · Pages 1055–1085</span>
           <span class="sheet-meta-edition">Support Worker Role, Assisting vs Administering, Packaging, MedicAlert, Indigenous Medicine, Pharmacokinetics, Factors Affecting Drug Action, Drug Forms, Generic vs Trade Names, Side Effects vs Anaphylaxis, Cytotoxic Safety, 10 Rights, MAR Documentation, Three Checks, Error Protocols, Storage, Oral, Eye, Ear, Topical & Inhaler Techniques</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 45 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch45" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 45 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch45" aria-label="Chapter 45 Page Navigation">
@@ -137629,6 +138872,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 45 Practice Exam · Pages 1084–1085</span>
           <span class="sheet-meta-edition">16 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 45 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch45" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 45 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch45-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -138312,6 +139568,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 46 Working in Acute Care · Pages 1086–1109</span>
           <span class="sheet-meta-edition">Hospital Bed Unit, Admission, Transfer & Discharge Protocols, Physical Examination Assistance, Positioning & Draping (Supine, Lithotomy, Knee-Chest, Sims'), Preoperative Physical & Psychological Preparation, Types of Anaesthesia, Postoperative Vital Signs Monitoring Schedule, Preventing Respiratory & Thromboembolic Complications (Atelectasis, Pneumonia, Thrombus, Pulmonary Embolism), Postoperative Leg Exercises, Antiembolism Stockings, Pain Control & Early Ambulation</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 46 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch46" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 46 章同步自测">
+            前往配套测试课本 ↗
+          </a>
         </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch46" aria-label="Chapter 46 Page Navigation">
@@ -139630,6 +140899,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 46 Practice Exam · Pages 1108–1109</span>
           <span class="sheet-meta-edition">20 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 46 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch46" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 46 章同步自测">
+            做配套练习册自测 ↗
+          </a>
+        </div>
         
     <div class="editorial-quiz-section" id="sec-ch46-quiz-inner" style="padding-top:20px;">
       <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
@@ -140554,6 +141836,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-badge">Chapter 47 End-of-Life Care · Pages 1110–1129 · Final Chapter</span>
           <span class="sheet-meta-edition">Attitudes Toward Death Across Cultures & Ages, Dying Person's Bill of Rights, Palliative & Hospice Philosophy, Physical & Emotional Comfort, Respite Care, Advance Directives, Living Wills, Healthcare Proxy, DNR Orders, Medical Assistance in Dying (MAID) Legislation in Canada, Kübler-Ross Five Stages of Grief, Signs of Approaching Death (Cheyne-Stokes Breathing, Death Rattle, Mottling), Rigor Mortis, Cultural Death Rituals & Step-by-Step Postmortem Care Protocol</span>
         </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">同步自测题库 · 第 47 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">含全真正误判断题 (T/F)、多项选择题 (Multiple Response)、单选题及临床角色配对题，支持即时判分与权威解析。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch47" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 47 章同步自测">
+            前往配套测试课本 ↗
+          </a>
+        </div>
         
     <nav class="chapter-page-nav-bar" id="cp-nav-ch47" aria-label="Chapter 47 Page Navigation">
       <div class="cp-nav-header">
@@ -141449,6 +142744,19 @@ Mr. Hamilton: (nodding his head) Meat.</div>
         <div class="sheet-meta-bar">
           <span class="sheet-meta-badge">Chapter 47 Practice Exam · Pages 1128–1129 · Final Chapter Exam</span>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
+        </div>
+        <!-- Companion Workbook Banner (同步配套测试册导航) -->
+        <div class="companion-workbook-banner" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 18px 0 22px; padding: 14px 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-size:24px; line-height:1;">📝</div>
+            <div>
+              <div style="font-weight:700; color:#0369a1; font-size:13.5px; letter-spacing:-0.01em;">强化题库扩展 · 第 47 章《HCA 全真配套测试课本》</div>
+              <div style="font-size:12px; color:#0284c7; margin-top:2px;">除了本教材官方复习题外，还可在配套测试课本中演练更多原版自测题、临床角色配对题及术语填空题。</div>
+            </div>
+          </div>
+          <a href="workbook-reader.html#sec-wb-ch47" style="display:inline-flex; align-items:center; gap:4px; padding:8px 15px; background:#0284c7; color:#fff; border-radius:7px; font-size:12.5px; font-weight:600; text-decoration:none; white-space:nowrap; box-shadow:0 1px 2px rgba(2,132,199,0.3); transition:all 0.2s ease;" title="前往《HCA 测试课本》第 47 章同步自测">
+            做配套练习册自测 ↗
+          </a>
         </div>
         
     <div class="editorial-quiz-section" id="sec-ch47-quiz-inner" style="padding-top:20px;">
