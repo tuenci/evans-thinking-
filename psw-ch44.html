@@ -1,0 +1,2691 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 44: Home Management · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 44</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html">第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+<option value="psw-ch24.html">第 24 章 · 测量身高、体重与生命体征</option>
+<option value="psw-ch25.html">第 25 章 · 医学术语与专业缩写</option>
+<option value="psw-ch26.html">第 26 章 · 制定照护计划、口头交班汇报与书面病历记录</option>
+<option value="psw-ch27.html">第 27 章 · 营养与体液照护</option>
+<option value="psw-ch28.html">第 28 章 · 肠内营养与静脉输液照护</option>
+<option value="psw-ch29.html">第 29 章 · 排尿照护与留置导尿管</option>
+<option value="psw-ch30.html">第 30 章 · 肠道排泄照护与造口管理</option>
+<option value="psw-ch31.html">第 31 章 · 生长与发育全生命周期</option>
+<option value="psw-ch32.html">第 32 章 · 人体结构与功能</option>
+<option value="psw-ch33.html">第 33 章 · 常见疾病与机体功能障碍</option>
+<option value="psw-ch34.html">第 34 章 · 听力与视力障碍</option>
+<option value="psw-ch35.html">第 35 章 · 言语和语言障碍</option>
+<option value="psw-ch36.html">第 36 章 · 发育障碍与发育迟缓残疾</option>
+<option value="psw-ch37.html">第 37 章 · 精神健康障碍</option>
+<option value="psw-ch38.html">第 38 章 · 定向障碍、谵妄与认知症痴呆</option>
+<option value="psw-ch39.html">第 39 章 · 促进氧合</option>
+<option value="psw-ch40.html">第 40 章 · 冷热敷应用与临床物理疗法</option>
+<option value="psw-ch41.html">第 41 章 · 婴儿及其父母的照护</option>
+<option value="psw-ch42.html">第 42 章 · 儿童与青少年照护与家庭支持</option>
+<option value="psw-ch43.html">第 43 章 · 老年人身心照护</option>
+<option value="psw-ch44.html" selected>第 44 章 · 家庭环境管理</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 44 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 45:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 44 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Home Management</h1>
+      <h2 class="hero-title-cn">家庭环境管理：支持工作者角色、DIPPS全人关怀准则、细胞毒性药物（化疗）污染防范与双层手套规范、协助金钱管理记账与严守PIN码隐私、处理冲突性诉求与工作边界维护、时间管理与工序统筹原则、清洁用品安全使用13项黄金法则（严禁漂白剂与氨水/尿液混用防致命氯胺毒气）、卧房系统化保洁、起居室保洁与防跌倒通道、厨房食品安全与手洗洗碗顺序、冰箱除味与垃圾清运、卫生间感控消毒与人体工效学防伤、防霉除霉科学规范、衣物洗涤分类与水温选择（热/温/冷）、烘干机清理毛屑防火灾、加拿大国家衣物护理五大标签符号、垃圾分类回收与绿箱堆肥、常见体液污渍（血渍/尿渍/粪渍）冷水冲洗去渍铁律、以及执业范围严格硬边界</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 1033–1054 · 12 道全真自测题</span>
+        <span class="meta-item">专业音频：45:00</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch44-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch44" aria-label="Chapter 44 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.1033–1054 · 共 22 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-1033">第 1033 页 · Chapter Opener: Home Management & Learning Objectives</option><option value="page-1034">第 1034 页 · Role in Home Management, Cytotoxic Contamination Safety Guidelines</option><option value="page-1035">第 1035 页 · Who Pays for What Services? Funding Rules & Care Plan Boundaries</option><option value="page-1036">第 1036 页 · Assisting Clients With Money, Banking Rules & Compassionate Care (DIPPS)</option><option value="page-1037">第 1037 页 · Dealing With Conflicting Demands, Case Studies: Supporting Mrs. Yeung</option><option value="page-1038">第 1038 页 · Getting Organized: Priorities, Routine, Equipment & Supplies Overview</option><option value="page-1039">第 1039 页 · Box 44.1: Comprehensive Cleaning Guidelines & Infection Control Rules</option><option value="page-1040">第 1040 页 · Using Cleaning Products Safely: Labels, Ventilation & Storage Rules</option><option value="page-1041">第 1041 页 · Box 44.2: Cleaning Bedrooms & Bedmaking Hygiene Protocols</option><option value="page-1042">第 1042 页 · Box 44.3: Cleaning Living Rooms & Supporting Mrs. Washington Part 2</option><option value="page-1043">第 1043 页 · Box 44.4: Cleaning Kitchens, Food Safety & Dishwashing Standards</option><option value="page-1044">第 1044 页 · Box 44.4 cont'd: Refrigerator Cleaning, Garbage Disposal & Bathroom Intro</option><option value="page-1045">第 1045 页 · Mould & Mildew Abatement Protocols & Doing Laundry Basics</option><option value="page-1046">第 1046 页 · Box 44.5: Cleaning Bathrooms: Disinfection, Toilets & High-Risk Precautions</option><option value="page-1047">第 1047 页 · Box 44.6: Doing Laundry Procedures, Sorting & Temperature Selection</option><option value="page-1048">第 1048 页 · Box 44.6 cont'd: Automatic Dryers, Clotheslines & Fig 44.2 Bathroom Cleaning</option><option value="page-1049">第 1049 页 · Recycling Items, Composting & Waste Management Standards</option><option value="page-1050">第 1050 页 · Figure 44.3: Official Canadian Laundry Symbols Standard Chart</option><option value="page-1051">第 1051 页 · Performing Tasks Not on Care Plan, Box 44.7: Stain Removal Protocols</option><option value="page-1052">第 1052 页 · Scope of Practice Boundaries & Supporting Mrs. Washington Part 4</option><option value="page-1053">第 1053 页 · Chapter Review: Key Points, Critical Thinking Case & Quiz (Q1-Q4)</option><option value="page-1054">第 1054 页 · Official Review Questions (Q5-Q12), Elsevier Answer Key & Credits</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-1033" class="cp-chip" id="cp-chip-44-1033" data-page="1033" onclick="handlePageChipClick(event, 'page-1033')" title="第 1033 页 · Chapter Opener: Home Management & Learning Objectives"><span class="cp-num">p.1033</span></a><a href="#page-1034" class="cp-chip" id="cp-chip-44-1034" data-page="1034" onclick="handlePageChipClick(event, 'page-1034')" title="第 1034 页 · Role in Home Management, Cytotoxic Contamination Safety Guidelines"><span class="cp-num">p.1034</span></a><a href="#page-1035" class="cp-chip" id="cp-chip-44-1035" data-page="1035" onclick="handlePageChipClick(event, 'page-1035')" title="第 1035 页 · Who Pays for What Services? Funding Rules & Care Plan Boundaries"><span class="cp-num">p.1035</span></a><a href="#page-1036" class="cp-chip" id="cp-chip-44-1036" data-page="1036" onclick="handlePageChipClick(event, 'page-1036')" title="第 1036 页 · Assisting Clients With Money, Banking Rules & Compassionate Care (DIPPS)"><span class="cp-num">p.1036</span></a><a href="#page-1037" class="cp-chip" id="cp-chip-44-1037" data-page="1037" onclick="handlePageChipClick(event, 'page-1037')" title="第 1037 页 · Dealing With Conflicting Demands, Case Studies: Supporting Mrs. Yeung"><span class="cp-num">p.1037</span></a><a href="#page-1038" class="cp-chip" id="cp-chip-44-1038" data-page="1038" onclick="handlePageChipClick(event, 'page-1038')" title="第 1038 页 · Getting Organized: Priorities, Routine, Equipment & Supplies Overview"><span class="cp-num">p.1038</span></a><a href="#page-1039" class="cp-chip" id="cp-chip-44-1039" data-page="1039" onclick="handlePageChipClick(event, 'page-1039')" title="第 1039 页 · Box 44.1: Comprehensive Cleaning Guidelines & Infection Control Rules"><span class="cp-num">p.1039</span></a><a href="#page-1040" class="cp-chip" id="cp-chip-44-1040" data-page="1040" onclick="handlePageChipClick(event, 'page-1040')" title="第 1040 页 · Using Cleaning Products Safely: Labels, Ventilation & Storage Rules"><span class="cp-num">p.1040</span></a><a href="#page-1041" class="cp-chip" id="cp-chip-44-1041" data-page="1041" onclick="handlePageChipClick(event, 'page-1041')" title="第 1041 页 · Box 44.2: Cleaning Bedrooms & Bedmaking Hygiene Protocols"><span class="cp-num">p.1041</span></a><a href="#page-1042" class="cp-chip" id="cp-chip-44-1042" data-page="1042" onclick="handlePageChipClick(event, 'page-1042')" title="第 1042 页 · Box 44.3: Cleaning Living Rooms & Supporting Mrs. Washington Part 2"><span class="cp-num">p.1042</span></a><a href="#page-1043" class="cp-chip" id="cp-chip-44-1043" data-page="1043" onclick="handlePageChipClick(event, 'page-1043')" title="第 1043 页 · Box 44.4: Cleaning Kitchens, Food Safety & Dishwashing Standards"><span class="cp-num">p.1043</span></a><a href="#page-1044" class="cp-chip" id="cp-chip-44-1044" data-page="1044" onclick="handlePageChipClick(event, 'page-1044')" title="第 1044 页 · Box 44.4 cont'd: Refrigerator Cleaning, Garbage Disposal & Bathroom Intro"><span class="cp-num">p.1044</span></a><a href="#page-1045" class="cp-chip" id="cp-chip-44-1045" data-page="1045" onclick="handlePageChipClick(event, 'page-1045')" title="第 1045 页 · Mould & Mildew Abatement Protocols & Doing Laundry Basics"><span class="cp-num">p.1045</span></a><a href="#page-1046" class="cp-chip" id="cp-chip-44-1046" data-page="1046" onclick="handlePageChipClick(event, 'page-1046')" title="第 1046 页 · Box 44.5: Cleaning Bathrooms: Disinfection, Toilets & High-Risk Precautions"><span class="cp-num">p.1046</span></a><a href="#page-1047" class="cp-chip" id="cp-chip-44-1047" data-page="1047" onclick="handlePageChipClick(event, 'page-1047')" title="第 1047 页 · Box 44.6: Doing Laundry Procedures, Sorting & Temperature Selection"><span class="cp-num">p.1047</span></a><a href="#page-1048" class="cp-chip" id="cp-chip-44-1048" data-page="1048" onclick="handlePageChipClick(event, 'page-1048')" title="第 1048 页 · Box 44.6 cont'd: Automatic Dryers, Clotheslines & Fig 44.2 Bathroom Cleaning"><span class="cp-num">p.1048</span></a><a href="#page-1049" class="cp-chip" id="cp-chip-44-1049" data-page="1049" onclick="handlePageChipClick(event, 'page-1049')" title="第 1049 页 · Recycling Items, Composting & Waste Management Standards"><span class="cp-num">p.1049</span></a><a href="#page-1050" class="cp-chip" id="cp-chip-44-1050" data-page="1050" onclick="handlePageChipClick(event, 'page-1050')" title="第 1050 页 · Figure 44.3: Official Canadian Laundry Symbols Standard Chart"><span class="cp-num">p.1050</span></a><a href="#page-1051" class="cp-chip" id="cp-chip-44-1051" data-page="1051" onclick="handlePageChipClick(event, 'page-1051')" title="第 1051 页 · Performing Tasks Not on Care Plan, Box 44.7: Stain Removal Protocols"><span class="cp-num">p.1051</span></a><a href="#page-1052" class="cp-chip" id="cp-chip-44-1052" data-page="1052" onclick="handlePageChipClick(event, 'page-1052')" title="第 1052 页 · Scope of Practice Boundaries & Supporting Mrs. Washington Part 4"><span class="cp-num">p.1052</span></a><a href="#page-1053" class="cp-chip" id="cp-chip-44-1053" data-page="1053" onclick="handlePageChipClick(event, 'page-1053')" title="第 1053 页 · Chapter Review: Key Points, Critical Thinking Case & Quiz (Q1-Q4)"><span class="cp-num">p.1053</span></a><a href="#page-1054" class="cp-chip" id="cp-chip-44-1054" data-page="1054" onclick="handlePageChipClick(event, 'page-1054')" title="第 1054 页 · Official Review Questions (Q5-Q12), Elsevier Answer Key & Credits"><span class="cp-num">p.1054</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+    <div class="page-anchor-marker" id="page-1033">
+      <span class="marker-pill">p. 1033</span>
+      <span class="marker-sec">Chapter Opener & Learning Objectives</span>
+    </div>
+
+    <div class="chapter-hero-editorial" style="margin-bottom:32px; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:28px 24px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div class="hero-eyebrow" style="font-size:12px; font-weight:700; color:#2563eb; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">CHAPTER 44 · COMMUNITY & HOME CARE MANAGEMENT</div>
+      <h1 class="hero-title-en" style="font-size:28px; font-weight:800; color:#0f172a; margin-bottom:6px; line-height:1.25;">Home Management</h1>
+      <div class="hero-title-cn" style="font-size:19px; font-weight:600; color:#475569; margin-bottom:18px;">家庭环境管理与居所维护支持</div>
+      
+      <div class="figure-card" style="margin:20px 0 24px; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#f8fafc;">
+        <img src="images/ch44/ch44_opener.jpg" alt="Chapter 44 Opener: Home Management and Light Housekeeping" style="width:100%; max-height:480px; object-fit:cover; display:block;" onerror="this.src='pages_dist/images/ch44/ch44_opener.jpg'">
+        <div class="figure-caption" style="padding:10px 14px; font-size:12.5px; color:#64748b; background:#f8fafc; border-top:1px solid #e2e8f0; text-align:center;">
+          Chapter Opener: Assisting clients with home management tasks ensures a clean, safe, and comfortable living environment. (Photo credit: iStockPhoto/Natali_Mis)
+        </div>
+      </div>
+
+      <div class="objectives-card" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px; margin-top:20px;">
+        <div class="obj-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">LEARNING OBJECTIVES · 学习目标</div>
+        <div class="obj-subtitle" style="font-size:14px; font-weight:600; color:#14532d; margin-bottom:12px;">After reading this chapter, the learner should be able to do the following / 研读本章后，学习者应能够达到以下执业能力指标：</div>
+        
+        <div style="display:grid; grid-template-columns:1fr; gap:16px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#22c55e; color:#fff; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">1</span>
+            <div>
+              <div style="font-size:13.5px; font-weight:600; color:#0f172a;">Describe why home management is important.</div>
+              <div style="font-size:12.5px; color:#475569; margin-top:2px;">阐明家庭环境管理（家政维护）为何对维护客户健康、身心舒适度与预防跌倒感染至关重要。</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#22c55e; color:#fff; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">2</span>
+            <div>
+              <div style="font-size:13.5px; font-weight:600; color:#0f172a;">Explain the support worker’s role in home management.</div>
+              <div style="font-size:12.5px; color:#475569; margin-top:2px;">解释支持人员在家政管理中的职责范畴（限定于轻度家政，严禁重度体力活）与护理计划边界。</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#22c55e; color:#fff; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">3</span>
+            <div>
+              <div style="font-size:13.5px; font-weight:600; color:#0f172a;">Describe the support worker’s role in handling clients’ money.</div>
+              <div style="font-size:12.5px; color:#475569; margin-top:2px;">阐述协助客户处理金钱时的机构规约、详细记账留痕、保留收据与严守PIN码隐私要求。</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#22c55e; color:#fff; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">4</span>
+            <div>
+              <div style="font-size:13.5px; font-weight:600; color:#0f172a;">Explain how to use cleaning supplies safely.</div>
+              <div style="font-size:12.5px; color:#475569; margin-top:2px;">掌握安全使用清洁剂的13项核心准则、杜绝有毒气体（漂白剂与氨水严禁混用）及个人防护。</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#22c55e; color:#fff; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">5</span>
+            <div>
+              <div style="font-size:13.5px; font-weight:600; color:#0f172a;">Describe how to clean bedrooms, living rooms, bathrooms, and kitchens.</div>
+              <div style="font-size:12.5px; color:#475569; margin-top:2px;">掌握卧室、客厅、卫生间与厨房的系统化标准清洁操作规程与防交叉污染流程。</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#22c55e; color:#fff; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">6</span>
+            <div>
+              <div style="font-size:13.5px; font-weight:600; color:#0f172a;">Describe how to do laundry properly.</div>
+              <div style="font-size:12.5px; color:#475569; margin-top:2px;">掌握衣物分类、水温选择、烘干与晾晒规程以及顽固血渍、尿渍、粪渍科学去除法。</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#22c55e; color:#fff; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">7</span>
+            <div>
+              <div style="font-size:13.5px; font-weight:600; color:#0f172a;">Differentiate between the various laundry care symbols.</div>
+              <div style="font-size:12.5px; color:#475569; margin-top:2px;">熟练识别加拿大服装与织物护理5类基本国际标签图符（水洗、漂白、烘干、熨烫、干洗）。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1034">
+      <span class="marker-pill">p. 1034</span>
+      <span class="marker-sec">Role in Home Management & Cytotoxic Contamination Safety</span>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Some clients need help keeping their living environment clean, orderly, healthy, and safe. While the primary role of any support worker is to keep the client safe in the home, as a support worker you might also be assigned to home management, which is the cleaning and organizing of a home. Duties might include light housekeeping tasks, such as straightening and cleaning parts of rooms, vacuuming, dusting, washing dishes, making beds, and doing laundry. Occasionally, you may also be required to take care of clients’ pets, such as walking the dog if the client is unable to. Whatever your tasks are, they will be specified on each client’s care plan.</p>
+      <p class="para-zh">部分客户需要协助以保持其居住环境的清洁、有序、健康与安全。虽然任何支持人员的首要职责始终是确保客户在居所中的生命与人身安全，但作为支持人员，你也可能会被指派负责家庭环境管理（Home management），即家庭居所的日常清洁与整理。具体职责通常包含轻度家务维护任务（Light housekeeping tasks），例如整理并清洁房间局部、吸尘、擦拭除尘、洗涤餐具、整理床铺以及洗涤衣物。在特定情况下，你还可能受托协助照料客户的宠物，例如在客户无法行动时代为遛狗。无论你的具体任务是什么，都必须在每位客户的护理计划中明确列出。</p>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Some clients are on cytotoxic drugs (primarily used to treat cancer) such as antineoplastic drugs (see Chapter 45), so it is important to be aware of your responsibility for the safe handling of any such items that have come into direct contact with the client. See the Think About Safety: Guidelines for Safely Assisting Clients Who Are on Cytotoxic Drugs box.</p>
+      <p class="para-zh">部分客户可能正在服用细胞毒性药物（主要用于治疗癌症），例如抗肿瘤药物（详见第45章）。因此，了解并严格履行安全处理任何与客户发生直接接触的物品的职责至关重要。请参阅“安全考量：安全协助接受细胞毒性药物治疗客户的指南”专栏。</p>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">You will not be assigned heavy housecleaning tasks, such as washing windows or cleaning carpets. In some areas, clients must pay for any home management services unless they are also receiving personal support. Hospitals and long-term care facilities might also have support workers do basic housekeeping tasks. However, most facilities have a housekeeping staff. This chapter focuses on home management in community care settings.</p>
+      <p class="para-zh">你绝不会被指派执行重体力家务清洁任务（Heavy housecleaning tasks），例如清洗室外窗户或深度清洗地毯。在某些行政区域，客户必须为家政服务自费支付费用，除非他们同时接受个人生活照护支持。医院和长期照护机构有时也会要求支持人员分担基础保洁工作，但大多数机构都配备了专职的保洁人员队伍。本章重点阐述社区及居家照护环境中的家政管理实务。</p>
+    </div>
+
+    
+    <section class="key-terms-container" id="sec-ch44-glossary" style="margin:28px 0; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:22px 20px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+      <div class="kt-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid #e2e8f0;">
+        <div class="kt-toolbar-left">
+          <h3 class="kt-title" style="margin:0; font-size:18px; font-weight:700; color:#0f172a;">Key Terms · 第 44 章核心专业学术术语（共 5 词）</h3>
+          <span style="font-size:12.5px; color:#64748b;">涵盖细胞毒性污染、家庭管理、洗衣护理符号、霉斑与霉菌学术定义</span>
+        </div>
+        <div class="kt-toolbar-right" style="display:flex; align-items:center; gap:10px;">
+          <div class="kt-mode-toggle" style="display:flex; border:1px solid #cbd5e1; border-radius:6px; overflow:hidden;">
+            <button class="kt-toggle-btn active" id="kt-btn-table-ch44" onclick="setGlossaryMode('ch44', 'table')" style="padding:5px 12px; font-size:12px; font-weight:600; border:none; background:#2563eb; color:#ffffff; cursor:pointer;">速查词表</button>
+            <button class="kt-toggle-btn" id="kt-btn-cards-ch44" onclick="setGlossaryMode('ch44', 'cards')" style="padding:5px 12px; font-size:12px; font-weight:600; border:none; background:#f8fafc; color:#475569; cursor:pointer;">精研卡片</button>
+          </div>
+          <div class="kt-search-box">
+            <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch44', this.value)" style="padding:5px 10px; font-size:12.5px; border:1px solid #cbd5e1; border-radius:6px; outline:none;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table -->
+      <div class="kt-view-table active" id="kt-table-view-ch44">
+        <div class="table-wrap" style="overflow-x:auto;">
+          <table class="kt-compact-table" style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+              <tr style="background:#f8fafc; border-bottom:2px solid #e2e8f0;">
+                <th style="width:28%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">英文术语 / 国际音标</th>
+                <th style="width:22%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">中文标准译名</th>
+                <th style="width:50%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">教材权威学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="kt-row" data-term="cytotoxic contamination 细胞毒性污染" style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:10px 12px;">
+                  <strong style="color:#1e3a8a; font-size:14px;">cytotoxic contamination</strong>
+                  <span style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˌsaɪ.təʊˈtɒk.sɪk kənˌtæm.ɪˈneɪ.ʃən/</span>
+                </td>
+                <td style="padding:10px 12px;">
+                  <span style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">细胞毒性污染</span>
+                </td>
+                <td style="padding:10px 12px; font-size:12.5px; line-height:1.5;">
+                  <div style="color:#1e293b; margin-bottom:2px;">Items that have come into direct contact with cytotoxic drugs or a client who is receiving them can still pose potential serious health risks to others for up to 7 days after discontinuation of the medication. Examples of items include incontinence products, toileting surfaces, eating utensils, linen, and clothing. p. 1034</div>
+                  <div style="color:#64748b;">凡直接接触过细胞毒性药物（如化疗药物）或正在接受该类治疗的客户的体液物品，在停药后长达7天内仍可能对他人构成严重健康危害。常见受污染物品包括失禁用品、卫浴坐便表面、餐具、床单织物与衣物。（第 1034 页）</div>
+                </td>
+              </tr>
+              <tr class="kt-row" data-term="home management 家庭环境管理（家政管理）" style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:10px 12px;">
+                  <strong style="color:#1e3a8a; font-size:14px;">home management</strong>
+                  <span style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/həʊm ˈmæn.ɪdʒ.mənt/</span>
+                </td>
+                <td style="padding:10px 12px;">
+                  <span style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">家庭环境管理（家政管理）</span>
+                </td>
+                <td style="padding:10px 12px; font-size:12.5px; line-height:1.5;">
+                  <div style="color:#1e293b; margin-bottom:2px;">The cleaning and organizing of a home. p. 1034</div>
+                  <div style="color:#64748b;">维持家庭居所清洁、整洁、有序、卫生与安全的各项维护活动。（第 1034 页）</div>
+                </td>
+              </tr>
+              <tr class="kt-row" data-term="laundry care symbols 洗衣护理符号" style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:10px 12px;">
+                  <strong style="color:#1e3a8a; font-size:14px;">laundry care symbols</strong>
+                  <span style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈlɔːn.dri keər ˈsɪm.bəlz/</span>
+                </td>
+                <td style="padding:10px 12px;">
+                  <span style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">洗衣护理符号</span>
+                </td>
+                <td style="padding:10px 12px; font-size:12.5px; line-height:1.5;">
+                  <div style="color:#1e293b; margin-bottom:2px;">Symbols on garment tags that indicate how to launder or care for specific garments. p. 1045</div>
+                  <div style="color:#64748b;">标注于衣物内侧标签上的标准化图符，用以指导如何正确洗涤、漂白、烘干、熨烫及专业干洗该织物。（第 1045 页）</div>
+                </td>
+              </tr>
+              <tr class="kt-row" data-term="mildew 霉斑（霉污）" style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:10px 12px;">
+                  <strong style="color:#1e3a8a; font-size:14px;">mildew</strong>
+                  <span style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈmɪl.dʒuː/</span>
+                </td>
+                <td style="padding:10px 12px;">
+                  <span style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">霉斑（霉污）</span>
+                </td>
+                <td style="padding:10px 12px; font-size:12.5px; line-height:1.5;">
+                  <div style="color:#1e293b; margin-bottom:2px;">The black discoloration caused by mould. p. 1045</div>
+                  <div style="color:#64748b;">由霉菌在潮湿物体表面滋生蔓延所引起的黑色或深色污斑，常伴随难闻霉味。（第 1045 页）</div>
+                </td>
+              </tr>
+              <tr class="kt-row" data-term="mould 霉菌" style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:10px 12px;">
+                  <strong style="color:#1e3a8a; font-size:14px;">mould</strong>
+                  <span style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/məʊld/</span>
+                </td>
+                <td style="padding:10px 12px;">
+                  <span style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">霉菌</span>
+                </td>
+                <td style="padding:10px 12px; font-size:12.5px; line-height:1.5;">
+                  <div style="color:#1e293b; margin-bottom:2px;">A microscopic fungal parasite. p. 1045</div>
+                  <div style="color:#64748b;">一种在潮湿、有机基质环境中繁殖的微观真菌寄生物，其孢子可引发呼吸道刺激与过敏反应。（第 1045 页）</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mode 2: Flashcard Grid -->
+      <div class="kt-view-cards" id="kt-cards-view-ch44" style="display:none;">
+        <div class="editorial-terms-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:16px;">
+        <div class="editorial-term-card" data-term="cytotoxic contamination 细胞毒性污染" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">cytotoxic contamination</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˌsaɪ.təʊˈtɒk.sɪk kənˌtæm.ɪˈneɪ.ʃən/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">细胞毒性污染</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Items that have come into direct contact with cytotoxic drugs or a client who is receiving them can still pose potential serious health risks to others for up to 7 days after discontinuation of the medication. Examples of items include incontinence products, toileting surfaces, eating utensils, linen, and clothing. p. 1034</div>
+            <div class="etc-def-cn" style="color:#475569;">凡直接接触过细胞毒性药物（如化疗药物）或正在接受该类治疗的客户的体液物品，在停药后长达7天内仍可能对他人构成严重健康危害。常见受污染物品包括失禁用品、卫浴坐便表面、餐具、床单织物与衣物。（第 1034 页）</div>
+          </div>
+        </div>
+        <div class="editorial-term-card" data-term="home management 家庭环境管理（家政管理）" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">home management</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/həʊm ˈmæn.ɪdʒ.mənt/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">家庭环境管理（家政管理）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">The cleaning and organizing of a home. p. 1034</div>
+            <div class="etc-def-cn" style="color:#475569;">维持家庭居所清洁、整洁、有序、卫生与安全的各项维护活动。（第 1034 页）</div>
+          </div>
+        </div>
+        <div class="editorial-term-card" data-term="laundry care symbols 洗衣护理符号" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">laundry care symbols</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈlɔːn.dri keər ˈsɪm.bəlz/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">洗衣护理符号</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Symbols on garment tags that indicate how to launder or care for specific garments. p. 1045</div>
+            <div class="etc-def-cn" style="color:#475569;">标注于衣物内侧标签上的标准化图符，用以指导如何正确洗涤、漂白、烘干、熨烫及专业干洗该织物。（第 1045 页）</div>
+          </div>
+        </div>
+        <div class="editorial-term-card" data-term="mildew 霉斑（霉污）" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">mildew</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈmɪl.dʒuː/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">霉斑（霉污）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">The black discoloration caused by mould. p. 1045</div>
+            <div class="etc-def-cn" style="color:#475569;">由霉菌在潮湿物体表面滋生蔓延所引起的黑色或深色污斑，常伴随难闻霉味。（第 1045 页）</div>
+          </div>
+        </div>
+        <div class="editorial-term-card" data-term="mould 霉菌" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">mould</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/məʊld/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">霉菌</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">A microscopic fungal parasite. p. 1045</div>
+            <div class="etc-def-cn" style="color:#475569;">一种在潮湿、有机基质环境中繁殖的微观真菌寄生物，其孢子可引发呼吸道刺激与过敏反应。（第 1045 页）</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="guidelines-box" style="margin:22px 0; border:1px solid #cbd5e1; border-left:4px solid #ef4444; border-radius:8px; padding:18px 20px; background:#fffbfb;">
+      <div style="font-size:11px; font-weight:700; color:#b91c1c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">THINK ABOUT SAFETY · 安全警示专栏</div>
+      <h3 style="font-size:16px; font-weight:700; color:#991b1b; margin-bottom:10px;">Guidelines for Safely Assisting Clients Who Are on Cytotoxic Drugs / 协助接受细胞毒性药物治疗客户的安全指引</h3>
+      
+      <div class="bilingual-para" style="margin-bottom:12px;">
+        <p class="para-en">It is possible that you will be responsible for a client who is being treated with a cytotoxic drug such as an antineoplastic (or chemotherapy) drug (see Chapter 45). Items that have come into direct contact with cytotoxic drugs or the body fluids from a client who is receiving them can potentially pose serious health risks to others for up to 7 days after discontinuation of the medication. This is known as <strong>cytotoxic contamination</strong>. Examples of items that can be contaminated include incontinence products, toileting surfaces, eating utensils, linen, and clothing.</p>
+        <p class="para-zh">你可能会负责照护正在接受细胞毒性药物（如抗肿瘤药或化疗药物，见第45章）治疗的客户。直接接触过细胞毒性药物的物品，或接触过用药客户体液的物品，在停药后长达 <strong>7天</strong> 的时间内，仍可能对他人构成潜在的严重健康风险。这被称为<strong>细胞毒性污染（Cytotoxic contamination）</strong>。容易受到此类污染的物品包括：成人失禁用品、卫浴坐便器表面、餐具、床单织物与贴身衣物。</p>
+      </div>
+
+      <div style="font-size:13.5px; font-weight:700; color:#1e293b; margin-bottom:8px;">Recommendations for providing safe care include the following / 提供安全照护的核心建议包括：</div>
+      <ul style="margin:0; padding-left:18px; font-size:13px; color:#334155; line-height:1.6;">
+        <li style="margin-bottom:8px;">
+          <strong>Wear protective gloves while handling waste containers:</strong> Cytotoxic waste must be handled differently than regular garbage, and must be disposed of according to provincial regulations.<br>
+          <span style="color:#64748b;">处理废弃物容器时必须佩戴防护手套：细胞毒性医疗废弃物必须区别于普通生活垃圾，且必须依据所在省份的环境法规进行专门隔离封闭处理。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Use proper personal protective equipment (PPE):</strong> This includes protective gloves made of vinyl or nitrile rubber. Gloves should be changed frequently, or immediately if punctured, cut, or torn. It is also recommended that workers wear two pairs of gloves at a time, for additional protection.<br>
+          <span style="color:#64748b;">佩戴符合标准的个人防护装备（PPE）：包括由乙烯基（Vinyl）或丁腈橡胶（Nitrile）制成的防化手套。手套应频繁更换，若发生穿刺、割破或撕裂必须立即更换。强烈建议支持人员同时佩戴两层手套以提供双重物理屏障保护。</span>
+        </li>
+      </ul>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1035">
+      <span class="marker-pill">p. 1035</span>
+      <span class="marker-sec">Cytotoxic Handling Protocols & The Support Worker's Role</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #ef4444; border-radius:8px; padding:18px 20px; background:#fffbfb;">
+      <div style="font-size:11px; font-weight:700; color:#b91c1c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">THINK ABOUT SAFETY · CONTINUED</div>
+      <ul style="margin:0; padding-left:18px; font-size:13px; color:#334155; line-height:1.6;">
+        <li style="margin-bottom:8px;">
+          <strong>Eye and face protection:</strong> Wear a face shield or safety goggles and a mask if there is any danger of splashing bodily fluids or chemicals during waste disposal or toileting.<br>
+          <span style="color:#64748b;">眼部与面部防护：在处理排泄物、倒马桶或倾倒废液若存在体液飞溅风险时，必须佩戴全面罩或防护护目镜及口罩。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Protective moisture-resistant gown:</strong> Wear a disposable waterproof gown if contamination of clothing is possible.<br>
+          <span style="color:#64748b;">防渗隔离衣：在有可能弄脏自身衣物的工作场景中，必须穿着一次性防渗隔离衣。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Laundry handling:</strong> Launder contaminated linens and clothing separately from other household laundry. Wash them twice in the hot-water cycle using regular detergent.<br>
+          <span style="color:#64748b;">衣物清洗规范：将受细胞毒性污染的床单和衣物与其他家庭衣物严格分开。使用常规洗涤剂在热水洗涤循环中连续清洗两次。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Toileting procedures:</strong> Have the client sit on the toilet to urinate (both men and women) to minimize splashing. Close the toilet lid before flushing, and flush the toilet twice after each use.<br>
+          <span style="color:#64748b;">排泄与如厕规范：指导客户（无论男女）均采取坐姿如厕排尿，以最大限度减少尿液飞溅。冲水前务必盖上马桶盖，且每次使用后必须连续冲水两次。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Spill procedures:</strong> If a spill of cytotoxic body fluids occurs, follow your agency's cytotoxic spill protocol immediately. Block off the area and notify your supervisor.<br>
+          <span style="color:#64748b;">溢出应对程序：一旦发生含有细胞毒性物质的体液泄漏溢出，必须立即启动机构的细胞毒性溢出应急预案，封锁受污染区域并即刻向主管汇报。</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="editorial-heading" style="margin:28px 0 16px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">THE SUPPORT WORKER’S ROLE IN HOME MANAGEMENT</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">支持人员在家庭环境管理中的执业职责</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">A clean and orderly setting is important for health and safety. Dust, dirt, and damp areas promote the growth of microbes, and clutter can cause falls and serious injury. People who have illnesses or disabilities, those recovering from surgery or injuries, new parents, caregivers tending to sick family members, and older persons may not be able to do regular housekeeping.</p>
+      <p class="para-zh">清洁且井然有序的环境对健康与安全至关重要。积尘、污垢与潮湿区域会助长微生物滋生繁殖，而地面散落的杂物则极易诱发跌倒并导致严重创伤。患病或残障人士、手术或创伤康复期患者、新手父母、照顾患病家属的家庭看护者以及高龄老人，往往无法独立完成常规家务保洁。</p>
+    </div>
+
+    <div class="editorial-subheading" style="margin:20px 0 12px;">
+      <h3 style="font-size:16px; font-weight:700; color:#1e293b; margin-bottom:2px;">Who Pays for What Services?</h3>
+      <div style="font-size:13px; font-weight:600; color:#64748b;">服务费用的出资方与权责边界</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">The client, family, and case manager decide what household tasks need to be done and list them in the client’s care plan. Clients are usually charged for home management services according to their income, with government-funded subsidies covering part or all of the costs for those who qualify. In other situations, private insurance or the client directly covers the costs. Regardless of who pays, the support worker must strictly adhere to the tasks outlined in the care plan.</p>
+      <p class="para-zh">客户本人、家属以及个案经理共同商定需要完成哪些家务工作，并将这些任务详尽记录于客户的护理计划（Care plan）中。家政管理服务的收费标准通常依据客户的收入水平核定，符合资格者可由政府财政补贴全额或部分报销。在其他情形下，则由私人商业保险或由客户个人全额自费。无论由何方支付费用，支持人员都必须严格遵守护理计划中列明的任务清单，不得擅自增减。</p>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1036">
+      <span class="marker-pill">p. 1036</span>
+      <span class="marker-sec">Assisting Clients With Money & Compassionate Care (DIPPS)</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 16px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">Assisting the Client With Tasks Involving Their Money</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">协助客户处理涉及金钱的事务</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">As a support worker, you may occasionally be required to accompany your client to do personal banking, buy groceries, or pay bills. When assisting your client with these tasks, you should keep the following points in mind:</p>
+      <p class="para-zh">作为支持人员，你可能偶有需要陪同客户前往银行办理个人业务、采购日用食品杂货或代缴账单。在协助客户处理此类涉及金钱的任务时，必须时刻铭记以下职业行为守则：</p>
+    </div>
+
+    <ul style="margin:0 0 20px; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.65;">
+      <li style="margin-bottom:10px;">
+        <strong>Care Plan Authorization:</strong> This duty must be clearly written in the client’s care plan and must follow the policies of your employing agency. The care plan should specify exactly what your responsibilities are. Some clients with severe arthritis, for example, may just need assistance with handling their money because they cannot hold it without dropping it. Others may need you to pick up some groceries and provide an account of the purchases.<br>
+        <span style="color:#64748b;">护理计划明确授权：该项职责必须明确载入客户的护理计划中，且必须完全符合雇佣机构的相关政策。护理计划应当确切界定你的责任范围。例如，某些重度关节炎患者仅因无法握稳纸币或硬币而需要抓握协助；另一些客户则可能需要你代购食品并出具详细的采购账目对账单。</span>
+      </li>
+      <li style="margin-bottom:10px;">
+        <strong>Agency Policies:</strong> Your supervisor should be able to answer any questions that you might have about your agency’s policies regarding financial responsibilities. You should not agree to anything that is not specified on your client’s care plan.<br>
+        <span style="color:#64748b;">严守机构财务政策：关于机构在财务经手方面的规章政策，若有任何疑虑应随时咨询主管。对于护理计划中未明确规定的任何金钱请求，绝不可私自应允。</span>
+      </li>
+    </ul>
+
+    <div class="guidelines-box" style="margin:22px 0; border:1px solid #bfdbfe; border-left:4px solid #3b82f6; border-radius:8px; padding:18px 20px; background:#f8fafc;">
+      <div style="font-size:11px; font-weight:700; color:#1d4ed8; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">PROVIDING COMPASSIONATE CARE · 仁爱照护践行</div>
+      <h3 style="font-size:16px; font-weight:700; color:#1e40af; margin-bottom:10px;">Home Management Through DIPPS Principles / 践行DIPPS原则的家庭环境管理</h3>
+      
+      <div style="display:grid; grid-template-columns:1fr; gap:12px; font-size:13px; line-height:1.6; color:#334155;">
+        <div>
+          <strong style="color:#0f172a;">Dignity (尊严):</strong> All people deserve a neat, clean, peaceful setting, but illness, disability, surgery, or injury may limit a person’s ability to clean. Helping with home management promotes comfort, emotional well-being, and dignity. Treat your client’s home and belongings with respect and care.<br>
+          <span style="color:#64748b;">每个人都理应生活在整洁、洁净、安详的环境中。但疾病、残障、术后恢复或创伤可能削弱个体的清扫能力。协助家政维护不仅能提升躯体舒适感与心理幸福感，更捍卫了人格尊严。务必以敬重与爱护之心对待客户的居所与私人物品。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">Independence (独立自主):</strong> Respect your client’s wishes for independence and control. As they recover, some clients gradually assume responsibility for home management. Occupational therapists help some clients learn new ways to perform household tasks. For example, Mr. Ho, who had an arm amputated, is trying to make his bed using techniques he learned in occupational therapy. Encourage such independence.<br>
+          <span style="color:#64748b;">高度尊重客户对自主权与生活掌控感的渴望。随着身体逐步恢复，部分客户会逐渐重新承担家政任务。作业治疗师（OT）会指导客户学习新的家务适应技巧。例如单臂截肢的何先生正尝试运用OT技巧独立铺床，支持人员应积极鼓励这一自主性。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">Preferences (个性化偏好):</strong> Clients have different habits, standards of cleanliness, and routines. Ask about preferences before rearranging items, using specific cleaning agents, or changing their usual ways of doing things.<br>
+          <span style="color:#64748b;">每位客户都有其独特的生活习惯、保洁标准与起居惯例。在挪动物品、使用特定清洁剂或改变其既有做事方式前，务必先征求其个人偏好。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">Privacy (隐私保护):</strong> Knock before entering rooms. Keep financial documents, mail, and personal effects confidential and strictly untouched unless requested.<br>
+          <span style="color:#64748b;">进入房间前务必敲门。对客户的财务单据、信件与私人物品恪守保密准则，除非客户主动明确要求，否则严禁翻看或触碰。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">Safety (安全首位):</strong> Maintain clear pathways, wipe spills immediately, never leave mopped floors unattended while wet, store cleaning agents out of reach of children or persons with dementia, and use PPE.<br>
+          <span style="color:#64748b;">始终保持通道畅通无杂物，打翻液体立即擦净，拖湿地面严禁无人看管，将清洁化学品妥善锁置于儿童或失智症患者接触不到之处，全程规范佩戴PPE。</span>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1037">
+      <span class="marker-pill">p. 1037</span>
+      <span class="marker-sec">Financial Records, PIN Privacy & Conflicting Demands</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 14px;">
+      <h3 style="font-size:16px; font-weight:700; color:#1e293b; margin-bottom:2px;">Financial Accounting & Record-Keeping Standards</h3>
+      <div style="font-size:13px; font-weight:600; color:#64748b;">财务对账与记录留痕规范</div>
+    </div>
+
+    <ul style="margin:0 0 20px; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.65;">
+      <li style="margin-bottom:10px;">
+        <strong>Documenting Transactions:</strong> All money that you handle should be recorded in the appropriate manner. Some agencies, for example, record all transactions on a page to which the support worker is required to attach receipts. When you are given money to purchase an item, you will be responsible to record how much cash was given to you and the amount of change that you are returning. Always provide receipts for any transaction that you did on your client’s behalf.<br>
+        <span style="color:#64748b;">完整账目留痕：经手的所有资金必须按规定程序登记。例如某些机构要求将所有交易登记在专用表单上并附上购物收据。当客户交给你现金购物时，你必须如实记录收到的初始现金金额以及退还的零钱差额。无论代办任何交易，务必向客户提供完整正规的商业收据。</span>
+      </li>
+      <li style="margin-bottom:10px;">
+        <strong>PIN Confidentiality (Strict Prohibition):</strong> Remember that the client’s personal identification number (PIN) and bank account numbers are strictly private, and you should NOT have access to them. If the client has difficulty typing in the numbers, for example, a banking associate should be asked to do so. You should step far enough away that you do not see or hear the numbers.<br>
+        <span style="color:#64748b;">严守密码隐私（绝对禁令）：切记客户的银行卡个人识别码（PIN）和银行账号属于高度隐私，支持人员<strong>绝不可</strong>知晓或索要。若客户在ATM机或POS机输入数字存在肢体困难，应请求银行柜员或专业员工协助。支持人员应主动后退到足够远的距离，确保既看不见也听不到密码输入。</span>
+      </li>
+      <li style="margin-bottom:10px;">
+        <strong>Protection Against Allegations:</strong> Many agencies do not allow support workers to assist the client in doing personal banking and, instead, request that family members (or a court-appointed representative) take on this responsibility. This policy protects support workers from being accused in the case of any money being lost.<br>
+        <span style="color:#64748b;">规避失窃指控风险：许多服务机构明令禁止支持人员代办个人银行业务，要求此类工作交由其家属或法定监护人承担。该政策旨在保护支持人员免遭金钱遗失或侵占的不实指控。</span>
+      </li>
+    </ul>
+
+    <div class="editorial-heading" style="margin:24px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">Dealing With Conflicting Demands</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">妥善应对冲突性要求与边界维护</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Many people have set routines and want things done in certain ways. However, because of time constraints or for health and safety reasons, it may not be possible for you to follow the set procedure. Or you may have to deal with conflicting demands if the care plan says one thing but the client (or the family) wants something different. If you are asked to do additional tasks that are not in the client’s care plan, it is important that you inform the client (or the family) in a professional, respectful, and calm manner that this task was not identified on the client’s care plan. However, without making any commitments, identify why the request was made and report this request to your supervisor.</p>
+      <p class="para-zh">许多人拥有固定的生活习惯，并希望事情按照其特定方式完成。然而，由于工时限制或出于健康与安全考量，支持人员可能无法完全照搬其既定流程。如果护理计划与客户（或其家属）的诉求发生分歧，你可能会面临冲突性要求。当被要求执行未包含在护理计划中的额外任务时，必须以专业、敬重且冷静的态度告知客户（或家属），该任务未被列入当前护理计划。同时，在不做任何承诺的前提下，探明客户提出该项请求的具体原因，并及时向主管汇报。</p>
+    </div>
+
+    <div class="case-box" style="margin:20px 0; border:1px solid #e2e8f0; border-left:4px solid #8b5cf6; border-radius:8px; padding:16px 18px; background:#fdf4ff;">
+      <div style="font-size:11px; font-weight:700; color:#7c3aed; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">CASE STUDY · 临床案例研讨</div>
+      <h4 style="font-size:15px; font-weight:700; color:#581c87; margin-bottom:8px;">Supporting Mrs. Yeung: Conflicting Home Management Demands / 协助杨太太：化解家政诉求冲突</h4>
+      <div class="bilingual-para">
+        <p class="para-en">Rosa’s client, Mrs. Yeung, 67, is recovering from heart surgery. Mrs. Yeung asks Rosa to wash the bathroom floor. Rosa explains that the care plan does not specify washing the floor, but Mrs. Yeung is upset because she wants the floor washed. Mrs. Yeung tells Rosa that she feels too ill to clean her house and wants Rosa to do it for her. Rosa explains that she must be on time for her next appointment and suggests that Mrs. Yeung voice this need to the case manager. Rosa shows that she cares by listening and offering a means to a solution to Mrs. Yeung, who regains her composure. Rosa reports the matter to her supervisor.</p>
+        <p class="para-zh">罗莎的照护对象杨太太（67岁）正处于心脏手术术后康复期。杨太太要求罗莎擦洗浴室地板。罗莎耐心地解释护理计划中并未包含清洗地板这一项，但杨太太因迫切希望地板被清洗而情绪激动。杨太太倾诉说自己感觉病重虚弱，根本无力打扫房屋，渴望罗莎能替她承担。罗莎解释自己必须按时赶往下一位客户家履约，并建议杨太太将该项额外照护需求正式反馈给个案经理。罗莎通过耐心倾听与协助探寻解决方案表达了真诚关怀，杨太太随后平复了情绪。罗莎事后迅速将该情况如实报告给主管。</p>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1038">
+      <span class="marker-pill">p. 1038</span>
+      <span class="marker-sec">Getting Organized & Equipment and Supplies</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 16px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">GETTING ORGANIZED</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">高效统筹：时间管理与工序组织原则</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Usually, home management tasks are assigned in addition to personal care and other tasks. The key to completing home management tasks as well as your other duties is to use your time wisely. Review the time management skills described in Chapter 8. Follow the guidelines in BOX 44.1 and these general points:</p>
+      <p class="para-zh">通常情况下，家庭环境管理任务是与个人生活照护及其他专业任务合并指派的。顺利完成家政任务与所有其他职责的核心关键在于科学高效地规划工时。请复习第8章所介绍的时间管理技巧，并严格遵循 BOX 44.1 中的指南及以下核心原则：</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr; gap:10px; margin-bottom:22px; font-size:13.5px; line-height:1.6; color:#334155;">
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">1. Set priorities (厘清轻重缓急):</strong> Follow the care plan. Do the most important tasks first.<br>
+        <span style="color:#64748b;">严格遵循护理计划，优先完成最关键、最关乎安全与生命质量的核心任务。</span>
+      </div>
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">2. Set a routine (拟定行事程序):</strong> Discuss the routine with your client. Agreeing on the routine will help you manage your time.<br>
+        <span style="color:#64748b;">与客户充分沟通并协商日常行事顺序，达成一致的行事节奏能显著优化时间分配。</span>
+      </div>
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">3. Gather all supplies beforehand (预先备齐用具):</strong> By doing so, you will avoid wasting time and energy running back and forth.<br>
+        <span style="color:#64748b;">工作前一次性备齐所有清洁用具与耗材，避免往返奔波徒耗工时与体力。</span>
+      </div>
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">4. Use your time well (善用等待时隙):</strong> Start with tasks that have waiting periods or that run automatically. For example, if laundry and personal care activities are on your list, start the laundry first. Leave soiled linens to soak while you help your client with their bath.<br>
+        <span style="color:#64748b;">优先启动具备等待周期或全自动运行的任务。例如若任务清单包含洗衣服与沐浴照护，应先启动洗衣机，在协助客户洗澡的同时让衣物浸泡或机洗。</span>
+      </div>
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">5. Finish tasks and put items away (有始有终与用后归位):</strong> Finish tasks that you have started. After finishing, put all items away in their proper places.<br>
+        <span style="color:#64748b;">已启动的任务务必彻底完成；工作结束后立即将所有用具彻底清洁并归置原位。</span>
+      </div>
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">6. Set time limits for each task (设定工时上限):</strong> Having a time limit helps you stay organized and finish on time.<br>
+        <span style="color:#64748b;">为每项细分任务预设时间限额，有助于保持专注并保证准时履约。</span>
+      </div>
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">7. Focus on the task (全神贯注杜绝分心):</strong> Do not carelessly wipe a counter while talking to your client. Focus on the person first. Then clean the counter properly.<br>
+        <span style="color:#64748b;">与客户交谈时切勿漫不经心地随手擦拭台面。先全神贯注关照客户本人，待沟通完毕后再严谨清扫台面。</span>
+      </div>
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">8. Put the client’s needs first (客户需求永居首位):</strong> Your first priority is always to promote the client’s comfort, well-being, and safety.<br>
+        <span style="color:#64748b;">永远将维护客户的身心舒适、福祉与生命安全置于所有清洁琐事之上。</span>
+      </div>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">EQUIPMENT AND SUPPLIES</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">居家保洁设备与耗材标准</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Many cleaning agencies will bring their own cleaning equipment and supplies. However, it is the policy of many home care support agencies that, when cleaning is required, the support worker will use the client’s equipment and supplies. Clean and store items after use.</p>
+      <p class="para-zh">部分商业保洁机构会自行携带清洁设备与用品。然而，许多居家照护支持机构的既定政策是：在需要执行清洁时，支持人员必须使用客户家庭自备的设备与耗材。所有用具在使用完毕后均须清洗干净并妥善收纳。</p>
+    </div>
+
+    <div class="case-box" style="margin:20px 0; border:1px solid #fed7aa; border-left:4px solid #f97316; border-radius:8px; padding:16px 18px; background:#fffaf5;">
+      <div style="font-size:11px; font-weight:700; color:#ea580c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">CASE STUDY · 连续案例研讨</div>
+      <h4 style="font-size:15px; font-weight:700; color:#9a3412; margin-bottom:8px;">Supporting Mrs. Washington: Part 1: Using the Client’s Home Equipment Safely / 协助华盛顿太太（第1部分）：安全使用客户自备家庭设备</h4>
+      <div class="bilingual-para">
+        <p class="para-en">Ida Washington is an 82-year-old woman who lives alone in her own home. Last month, Mrs. Washington fell down her front steps and broke her hip. She requires weekly support worker assistance with her bath, grocery shopping, laundry, and light housework. Mrs. Washington is very particular about how her laundry is done. She uses a very old washing machine to wash her clothes, and she hangs her wet laundry outside to dry on a clothesline. On your first day, Mrs. Washington gives you instructions on how to wash her clothing, and you notice that her instructions differ from those on the care labels on some items. As well, you are unfamiliar with her brand of washing machine and are nervous about operating it safely. What should you do?</p>
+        <p class="para-zh">艾达·华盛顿是一位82岁独自居家的长者。上个月她在门前台阶摔倒导致髋部骨折。她需要支持人员每周协助沐浴、食品采购、洗衣以及轻度家务。华盛顿太太对洗衣流程极为讲究，她使用一台极为陈旧的老式洗衣机，并坚持将洗好的湿衣服晾在室外的晾衣绳上。上门第一天，华盛顿太太向你传授了她的专属洗涤步骤，但你注意到她的口头要求与某些衣物标签上的洗涤说明大相径庭；同时，你对该老旧品牌的洗衣机操作全然陌生，担心无法安全操作。此时你该如何应对？</p>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1039">
+      <span class="marker-pill">p. 1039</span>
+      <span class="marker-sec">Box 44.1: Cleaning Guidelines & Basic Supplies</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #0284c7; border-radius:8px; padding:18px 20px; background:#f0f9ff;">
+      <div style="font-size:11px; font-weight:700; color:#0369a1; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.1 · GUIDELINES</div>
+      <h3 style="font-size:17px; font-weight:800; color:#0c4a6e; margin-bottom:12px;">Cleaning Guidelines / 家庭环境清洁核心工作准则</h3>
+      
+      <div style="display:grid; grid-template-columns:1fr; gap:12px; font-size:13px; line-height:1.6; color:#334155;">
+        <div>
+          <strong style="color:#0f172a;">1. Clear away clutter (清除散落杂物):</strong> Clutter can cause trips, falls, and injuries. Keep hallways, stairs, and walking pathways completely unobstructed. Ask before discarding anything.<br>
+          <span style="color:#64748b;">散乱杂物极易引发绊倒、摔伤。必须确保走廊、楼梯与通道绝对畅通。丢弃任何物品前必须征询客户同意。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">2. Work from higher to lower (从高处向低处清洁):</strong> Dust falls downward. Always clean upper shelves, ceiling fans, light fixtures, and wall art first before wiping lower tables, baseboards, and floors.<br>
+          <span style="color:#64748b;">灰尘必然下落。必须先清洁上层搁板、吊扇、灯具及壁画，最后再擦拭矮桌、踢脚线和地面。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">3. Work from far to near (由远及近退向出口):</strong> When cleaning a room, start at the farthest corner from the exit door and work backward toward the door to avoid walking across freshly cleaned surfaces.<br>
+          <span style="color:#64748b;">清洁房间时，应从距房门最远的角落着手，逐步向出口退行，避免踩踏刚刚清洁完毕的区域。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">4. Work from dry to wet (先干后湿):</strong> Vacuum, sweep, and dust dry surfaces before using wet cleaning solutions or mops to prevent turning dry dust into mud or spreading grime.<br>
+          <span style="color:#64748b;">先完成吸尘、扫地和干式除尘，再进行湿擦或拖地，防止灰尘遇水和成泥浆或污渍扩散。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">5. Work from cleanest to dirtiest (由净至污防交叉污染):</strong> Clean least soiled items first and finish with heavily soiled areas (such as toilet bowls) to prevent transferring microbes.<br>
+          <span style="color:#64748b;">先清洁相对干净的物品，最后处理重度污染区域（如马桶内壁），防止病原微生物向洁净区域转移。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">6. Change cleaning cloths and water frequently (勤换抹布与污水):</strong> Using dirty water or soiled cloths spreads bacteria and dirt rather than cleaning surfaces.<br>
+          <span style="color:#64748b;">水质浑浊或抹布变脏时必须立即更换。使用脏水脏布不仅无法去污，反而会大面积播散细菌。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">7. Use a damp cloth for dusting (使用微湿抹布除尘):</strong> A dry cloth scatters dust into the air, irritating clients' airways and resettling onto furniture.<br>
+          <span style="color:#64748b;">使用微湿抹布除尘。干抹布会使灰尘飞扬弥漫在空气中，刺激呼吸道并在片刻后重新降落。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">8. Rinse and dry washed surfaces (冲洗干净并彻底擦干):</strong> Rinsing removes soap film; drying prevents slips, water spots, and the growth of mould and mildew.<br>
+          <span style="color:#64748b;">清水漂洗能去除残留洗涤剂薄膜；彻底擦干可防滑倒、消除水渍并遏制霉菌繁殖。</span>
+        </div>
+        <div>
+          <strong style="color:#0f172a;">9. Avoid soiling a clean floor (避免污染洁净地面):</strong> Plan your cleaning path so that you do not walk across a wet or recently mopped floor.<br>
+          <span style="color:#64748b;">合理规划行走动线，严禁踩踏潮湿或刚拖完的地面。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 14px;">
+      <h3 style="font-size:16px; font-weight:700; color:#1e293b; margin-bottom:2px;">Essential Equipment & Maintenance</h3>
+      <div style="font-size:13px; font-weight:600; color:#64748b;">基础清扫设备与用后维护</div>
+    </div>
+
+    <ul style="margin:0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.65;">
+      <li style="margin-bottom:8px;"><strong>Toilet brush:</strong> Rinse in a bucket of cold water or flush clean in the toilet bowl. Disinfect and dry thoroughly.</li>
+      <li style="margin-bottom:8px;"><strong>Utility gloves:</strong> Wash in hot, soapy water, rinse, and hang to dry. Inspect for tears or leaks.</li>
+      <li style="margin-bottom:8px;"><strong>Vacuum cleaner:</strong> Use appropriate attachments for carpets and upholstery. Empty the dust canister or replace bags before full. Ensure cord and plug are undamaged.</li>
+      <li style="margin-bottom:8px;"><strong>Microfibre tools:</strong> Highly effective for trapping dust without chemical sprays. Wash without fabric softener to preserve electrostatic properties.</li>
+    </ul>
+    
+
+    <div class="page-anchor-marker" id="page-1040">
+      <span class="marker-pill">p. 1040</span>
+      <span class="marker-sec">Using Cleaning Products Safely & Room Cleaning Intro</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 16px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">USING CLEANING PRODUCTS SAFELY</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">安全使用清洁化学品的13项黄金法则</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Cleaning products contain chemicals that can cause skin irritation, eye damage, respiratory problems, or poisoning if not handled properly. Follow these 13 safety rules strictly whenever using cleaning products:</p>
+      <p class="para-zh">家用清洁剂普遍含有化学物质，若使用不当可能导致皮肤灼伤、眼部损伤、呼吸道受损甚至急性中毒。在使用各类清洁产品时，必须严格遵守以下 13 项安全操作守则：</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr; gap:10px; margin-bottom:24px; font-size:13px; line-height:1.6; color:#334155;">
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">1. Read all labels carefully (仔细研读标签):</strong> Review directions, warnings, and first-aid instructions before use.<br>
+        <span style="color:#64748b;">使用前详阅产品说明、警示标识及急救指南。</span>
+      </div>
+      <div style="background:#fff1f2; border:1px solid #fecdd3; border-left:4px solid #e11d48; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#9f1239;">2. NEVER mix cleaning products (绝对严禁混用清洁剂):</strong> Mixing chemicals can trigger violent chemical reactions. In particular, <strong>NEVER mix chlorine bleach with ammonia or acid-based cleaners (or urine)</strong>—this combination instantly creates deadly poisonous <strong>chloramine gas</strong> that causes severe pulmonary damage or death.<br>
+        <span style="color:#be123c;">化学品混用会引发剧烈毒性反应。尤为重要的是：<strong>绝对不能将含氯漂白剂与含有氨成分的清洁剂（包括尿液）或酸性清洁剂混合</strong>——两者混合会瞬间释放致命的<strong>氯胺剧毒气体</strong>，引发严重的急性肺损伤甚至死亡。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">3. Wear utility gloves (佩戴家务橡胶手套):</strong> Protect skin from harsh detergents, corrosives, and pathogens.<br>
+        <span style="color:#64748b;">佩戴耐用型橡胶手套，防止强效去污剂灼伤皮肤及接触病原体。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">4. Never store products in unlabelled containers (严禁存放在无标签容器中):</strong> Accidental ingestion or misuse can occur.<br>
+        <span style="color:#64748b;">绝对禁止将清洁剂倒入无标签容器中，以防误服或误用。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">5. Store in original containers (保留原装容器存储):</strong> Keep lids tightly sealed.<br>
+        <span style="color:#64748b;">始终保存在原厂包装瓶中，瓶盖拧紧密封。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">6. Keep away from food (远离食品存放):</strong> Store cleaning chemicals in separate cupboards away from food items.<br>
+        <span style="color:#64748b;">严禁与食品存放在同一橱柜内，杜绝交叉污染。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">7. Prevent splashing (防止药液飞溅):</strong> Pour gently and keep bottles close to surfaces.<br>
+        <span style="color:#64748b;">倒药液时轻缓平稳，靠近目标表面，严防药液飞溅入眼或皮肤。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">8. Out of reach of children and dementia clients (远离儿童与失智者):</strong> Secure with safety latches.<br>
+        <span style="color:#64748b;">存放于儿童或失智症老人触及不到的安全上锁柜中。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">9. Use products only for intended purpose (严格按指定用途使用):</strong> Do not use toilet cleaners on dishes or countertops.<br>
+        <span style="color:#64748b;">专剂专用，严禁用洁厕剂洗涤餐具或擦拭备餐台面。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">10. Keep aerosol cans away from heat (气雾罐远离热源):</strong> Pressurized cans can explode near stoves or radiators.<br>
+        <span style="color:#64748b;">高压气雾喷罐远离炉灶或暖气片，严防遇热受胀爆炸。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">11. Ask permission before using strong cleansers (使用强效去污剂前征求许可):</strong> Harsh chemicals may etch stone or wood.<br>
+        <span style="color:#64748b;">在贵重石材或高档家具上使用强力去污剂前必须征得客户同意。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">12. Rinse off harsh cleansers (彻底漂洗残留药剂):</strong> Wipe with clean damp cloth after application.<br>
+        <span style="color:#64748b;">使用强效药剂擦洗后必须用干净湿布彻底漂清，防止腐蚀或毒性残留。</span>
+      </div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 16px;">
+        <strong style="color:#0f172a;">13. Do not scrub vigorously (切勿粗暴暴力刮擦):</strong> Scrubbing can ruin delicate surface finishes.<br>
+        <span style="color:#64748b;">切勿过度暴力刮擦，以免损坏家具或器皿表面的精细涂层。</span>
+      </div>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">CLEANING BEDROOMS, LIVING ROOMS, KITCHENS, AND BATHROOMS</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">各区域系统化清洁与卫生防护流程概述</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Each room in a client's home presents distinct cleaning challenges and infection-control priorities. Bedrooms and living rooms require careful dust and clutter management to prevent falls and respiratory issues. Kitchens demand strict food safety protocols to prevent foodborne illnesses. Bathrooms, being damp and heavily contaminated with microbes, require rigorous disinfection and ergonomic caution.</p>
+      <p class="para-zh">客户居所内的各个房间具有独特的清洁难点与感染控制重点。卧房与起居室需要周密的防尘除尘与杂物清理，以预防呼吸道刺激并消除跌倒隐患；厨房操作则必须严格遵守食品安全防污染准则，杜绝食源性疾病发生；卫生间因常年潮湿且富集病原微生物，必须执行极为严格的消毒操作规程与人体工效学防伤措施。</p>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1041">
+      <span class="marker-pill">p. 1041</span>
+      <span class="marker-sec">Box 44.2: Cleaning Bedrooms & Bedmaking Hygiene</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #10b981; border-radius:8px; padding:18px 20px; background:#f0fdf4;">
+      <div style="font-size:11px; font-weight:700; color:#059669; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.2 · PROCEDURES & GUIDELINES</div>
+      <h3 style="font-size:17px; font-weight:800; color:#065f46; margin-bottom:12px;">Cleaning Bedrooms / 卧房系统化保洁操作流程</h3>
+      
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px; line-height:1.6; color:#334155;">
+          <thead>
+            <tr style="background:#e2e8f0; color:#0f172a; text-align:left;">
+              <th style="padding:10px 12px; width:22%; font-weight:700;">Task / 任务</th>
+              <th style="padding:10px 12px; width:28%; font-weight:700;">Supplies & Equipment / 用具耗材</th>
+              <th style="padding:10px 12px; width:50%; font-weight:700;">Process / 标准操作程序</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Make the bed<br><span style="font-size:12px; color:#64748b;">整理铺床</span></td>
+              <td style="padding:10px 12px;">Clean linens (if changing)<br>Laundry hamper<br><span style="font-size:12px; color:#64748b;">干净床品、污衣篓</span></td>
+              <td style="padding:10px 12px;">Straighten pillows, sheets, and blankets if bed is not being changed. When changing linens, roll soiled linens inward away from your uniform. Place soiled linens directly into a hamper (never on the floor or furniture). Make an occupied or unoccupied bed following proper body mechanics (see Chapter 25).<br><span style="font-size:12px; color:#64748b;">若无需更换床品，将枕头、床单和被褥理顺平整。更换床品时，将弄脏的床单向内卷裹并远离工作制服。将脏床单直接放入污衣篓（严禁扔在地板或椅子上）。按人体工效学规范完成有人或无人床铺铺设（见第25章）。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Straighten the room<br><span style="font-size:12px; color:#64748b;">清理杂物归位</span></td>
+              <td style="padding:10px 12px;">Storage bins, hangers<br><span style="font-size:12px; color:#64748b;">衣架、收纳箱</span></td>
+              <td style="padding:10px 12px;">Pick up clutter from floors, bedside tables, and chairs. Hang up clothes or place soiled garments in the laundry hamper. Return books, glasses, and personal effects to their proper places according to the client's preferences.<br><span style="font-size:12px; color:#64748b;">拾起地板、床头柜及椅子上的散乱杂物。将衣物挂入衣柜或将脏衣服放入污衣篓。遵照客户个人习惯将书籍、眼镜及私人物品归置原位。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Dust surfaces<br><span style="font-size:12px; color:#64748b;">家具表面除尘</span></td>
+              <td style="padding:10px 12px;">Microfibre cloth or damp cloth<br><span style="font-size:12px; color:#64748b;">超细纤维布或微湿抹布</span></td>
+              <td style="padding:10px 12px;">Work from higher to lower: dust headboards, picture frames, lamps, dressers, and bedside tables. Use a damp or microfibre cloth to capture dust rather than spreading it into the air.<br><span style="font-size:12px; color:#64748b;">由高至低清洁：擦拭床头板、相框、台灯、梳妆台及床头柜。使用微湿布或微纤维布吸附灰尘，避免灰尘在空气中飞扬。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Empty wastebasket<br><span style="font-size:12px; color:#64748b;">清空垃圾篓</span></td>
+              <td style="padding:10px 12px;">Garbage bags, gloves<br><span style="font-size:12px; color:#64748b;">垃圾袋、一次性手套</span></td>
+              <td style="padding:10px 12px;">Wear gloves. Empty wastebasket into household garbage bag. Wipe inside and outside of basket if soiled. Insert clean liner.<br><span style="font-size:12px; color:#64748b;">佩戴手套。将垃圾篓倾倒入主垃圾袋。若篓身有污渍用湿布擦净，换上干净垃圾袋。</span></td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean the floor<br><span style="font-size:12px; color:#64748b;">地面清扫</span></td>
+              <td style="padding:10px 12px;">Vacuum cleaner or broom, dustpan, mop<br><span style="font-size:12px; color:#64748b;">吸尘器或扫帚、簸箕、拖把</span></td>
+              <td style="padding:10px 12px;">Vacuum rugs and carpets, reaching under the edges of the bed if possible. For hard floors, sweep with a broom or microfibre sweeper, then damp-mop. Always work from the farthest corner toward the door.<br><span style="font-size:12px; color:#64748b;">使用吸尘器吸净地毯，尽量触及床沿下方。硬质地板先用扫帚或超细纤维拖把清扫，然后进行微湿拖地。始终从距门最远端向房门退出。</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1042">
+      <span class="marker-pill">p. 1042</span>
+      <span class="marker-sec">Box 44.3: Cleaning Living Rooms & Case Follow-up</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #6366f1; border-radius:8px; padding:18px 20px; background:#f5f3ff;">
+      <div style="font-size:11px; font-weight:700; color:#4f46e5; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.3 · PROCEDURES & GUIDELINES</div>
+      <h3 style="font-size:17px; font-weight:800; color:#3730a3; margin-bottom:12px;">Cleaning Living Rooms / 起居室（客厅）系统化保洁操作流程</h3>
+      
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px; line-height:1.6; color:#334155;">
+          <thead>
+            <tr style="background:#e2e8f0; color:#0f172a; text-align:left;">
+              <th style="padding:10px 12px; width:22%; font-weight:700;">Task / 任务</th>
+              <th style="padding:10px 12px; width:28%; font-weight:700;">Supplies & Equipment / 用具耗材</th>
+              <th style="padding:10px 12px; width:50%; font-weight:700;">Process / 标准操作程序</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clear clutter<br><span style="font-size:12px; color:#64748b;">清理散落杂物</span></td>
+              <td style="padding:10px 12px;">Client input, recycling bin<br><span style="font-size:12px; color:#64748b;">征求客户意见、回收箱</span></td>
+              <td style="padding:10px 12px;">Pick up newspapers, magazines, cups, and dishes. Return dishes to the kitchen. Stack reading materials neatly or place in the recycling bin with the client’s permission. Keep all walking pathways completely clear of electrical cords and scatter rugs.<br><span style="font-size:12px; color:#64748b;">拾掇报纸、杂志、茶杯与餐具。将碗碟收回厨房。整齐码放读物或在征得客户同意后放入回收箱。确保所有走行动线无电线缠绕或易滑地垫。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Dust furniture & fixtures<br><span style="font-size:12px; color:#64748b;">家具与灯具除尘</span></td>
+              <td style="padding:10px 12px;">Damp cloth or microfibre duster<br><span style="font-size:12px; color:#64748b;">微湿布或静电除尘掸</span></td>
+              <td style="padding:10px 12px;">Work from higher to lower: dust ceiling fans, window blinds, picture frames, television screens (use designated screen cloths only), bookshelves, coffee tables, and chairs. Dust under lamps and decorative items.<br><span style="font-size:12px; color:#64748b;">由高至低除尘：拂拭吊扇、百叶窗、相框、电视屏幕（仅用专用屏保布擦拭）、书架、茶几及座椅。务必挪开台灯与摆件擦拭其底部。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Vacuum upholstered furniture<br><span style="font-size:12px; color:#64748b;">软包布艺家具吸尘</span></td>
+              <td style="padding:10px 12px;">Vacuum cleaner with upholstery attachment<br><span style="font-size:12px; color:#64748b;">带织物吸头的吸尘器</span></td>
+              <td style="padding:10px 12px;">Use the upholstery attachment to vacuum sofa cushions, chair seats, and crevices where crumbs and dust accumulate. Fluff and straighten cushions.<br><span style="font-size:12px; color:#64748b;">使用织物软刷吸头吸除沙发垫、椅面及靠缝中的碎屑与浮尘。拍打蓬松靠垫并摆放端正。</span></td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean floors<br><span style="font-size:12px; color:#64748b;">地面吸尘与拖洗</span></td>
+              <td style="padding:10px 12px;">Vacuum cleaner, broom, mop, bucket<br><span style="font-size:12px; color:#64748b;">吸尘器、扫帚、拖把、水桶</span></td>
+              <td style="padding:10px 12px;">Vacuum carpets thoroughly, including high-traffic paths and under accessible furniture. Sweep and damp-mop hard surface floors. Work from far corner toward the exit.<br><span style="font-size:12px; color:#64748b;">彻底吸净地毯（尤其是高频走动路径及可触及的家具底部）。硬地面扫净后微湿拖拭，由远及近退向房门。</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="case-box" style="margin:20px 0; border:1px solid #fed7aa; border-left:4px solid #f97316; border-radius:8px; padding:16px 18px; background:#fffaf5;">
+      <div style="font-size:11px; font-weight:700; color:#ea580c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">CASE STUDY · CONTINUED</div>
+      <h4 style="font-size:15px; font-weight:700; color:#9a3412; margin-bottom:8px;">Supporting Mrs. Washington: Part 2: Safe Housekeeping Routines / 协助华盛顿太太（第2部分）：建立安全保洁程序</h4>
+      <div class="bilingual-para">
+        <p class="para-en">You discuss your concerns about the washing machine with your supervisor, who agrees that you should not operate an appliance if you feel unsafe doing so. The supervisor contacts Mrs. Washington to discuss alternatives. Meanwhile, you assist Mrs. Washington by safely tidying her living room and bedroom, taking care not to move items without her permission, and keeping her walking pathways completely clear of trip hazards.</p>
+        <p class="para-zh">你向主管汇报了关于老旧洗衣机安全隐患的担忧，主管非常赞同你的判断，强调支持人员在感到存在安全风险时不应强行操作老旧电器。主管随即主动致电华盛顿太太商讨替代方案。在此期间，你先协助华盛顿太太安全整理了客厅与卧房，未经许可绝不擅自挪动物品，并确保老人室内的走行动线绝对没有任何可能导致再次跌倒的绊倒隐患。</p>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1043">
+      <span class="marker-pill">p. 1043</span>
+      <span class="marker-sec">Box 44.4: Cleaning Kitchens, Food Safety & Dishwashing Standards</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:16px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">CLEANING KITCHENS: PREVENTING FOODBORNE ILLNESS</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">厨房保洁：严防食源性致病菌污染</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">The kitchen requires meticulous cleaning standards because contaminated surfaces, cutting boards, or dishcloths easily transmit foodborne pathogens such as Salmonella, Campylobacter, and E. coli. Always practice strict hand hygiene and food safety rules (see Chapter 27).</p>
+      <p class="para-zh">厨房必须执行高度严密的卫生保洁标准，因为受污染的台面、砧板或抹布极易交叉传播沙门氏菌、弯曲杆菌及大肠杆菌等食源性病原体。在厨房操作时，必须全程恪守手卫生与食品安全防护规范（详见第27章）。</p>
+    </div>
+
+    <div class="guidelines-box" style="margin:16px 0 24px; border:1px solid #cbd5e1; border-left:4px solid #f59e0b; border-radius:8px; padding:18px 20px; background:#fffbeb;">
+      <div style="font-size:11px; font-weight:700; color:#d97706; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.4 · PROCEDURES & GUIDELINES (PART 1)</div>
+      <h3 style="font-size:17px; font-weight:800; color:#b45309; margin-bottom:12px;">Cleaning Kitchens / 厨房系统化保洁操作流程（第1部分）</h3>
+      
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px; line-height:1.6; color:#334155;">
+          <thead>
+            <tr style="background:#e2e8f0; color:#0f172a; text-align:left;">
+              <th style="padding:10px 12px; width:22%; font-weight:700;">Task / 任务</th>
+              <th style="padding:10px 12px; width:28%; font-weight:700;">Supplies & Equipment / 用具耗材</th>
+              <th style="padding:10px 12px; width:50%; font-weight:700;">Process / 标准操作程序</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean countertops<br><span style="font-size:12px; color:#64748b;">备餐台面清洁</span></td>
+              <td style="padding:10px 12px;">Hot, soapy water or disinfectant spray, clean cloth or paper towels<br><span style="font-size:12px; color:#64748b;">热肥皂水、消毒喷雾、厨房纸</span></td>
+              <td style="padding:10px 12px;">Remove items from counters. Wipe with hot, soapy water. Disinfect surfaces that contacted raw meat, poultry, fish, or eggs. Dry with clean cloth or paper towels. Return items to original positions.<br><span style="font-size:12px; color:#64748b;">移开台面摆件。用热肥皂水擦拭。凡接触过生肉、禽类、生鱼或生蛋的台面必须使用食品级消毒剂严格杀菌，用干净抹布或纸巾擦干后将物品归位。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean toasters / toaster ovens<br><span style="font-size:12px; color:#64748b;">烤面包机清洁</span></td>
+              <td style="padding:10px 12px;">Warm, soapy water, cloth<br><span style="font-size:12px; color:#64748b;">温肥皂水、抹布</span></td>
+              <td style="padding:10px 12px;">Unplug the toaster. Turn upside down over trash or sink and shake gently to remove crumbs. Pull out crumb tray, wash in warm soapy water, dry thoroughly, and replace.<br><span style="font-size:12px; color:#64748b;">拔掉电源插头。倒扣在垃圾桶或水池上方轻轻摇晃倒出碎屑。抽离面包屑托盘，用温肥皂水洗净，彻底擦干后装回。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean microwave oven<br><span style="font-size:12px; color:#64748b;">微波炉蒸汽去油</span></td>
+              <td style="padding:10px 12px;">Cup of water, diluted vinegar solution, clean cloth<br><span style="font-size:12px; color:#64748b;">水杯、稀释白醋液、洁净布</span></td>
+              <td style="padding:10px 12px;">Soften hardened grease splatters inside the microwave by placing a cup of water inside and microwaving on High for 90 seconds. The steam loosens grime. Wipe interior thoroughly and dry.<br><span style="font-size:12px; color:#64748b;">将一杯清水置于微波炉内，高火加热90秒。高温水蒸气能软化内壁干涸油污。随后用洁净布或纸巾彻底擦拭内壁并擦干。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean cutting boards<br><span style="font-size:12px; color:#64748b;">砧板消毒杀菌</span></td>
+              <td style="padding:10px 12px;">Hot soapy water, disinfectant, boiling water, brush<br><span style="font-size:12px; color:#64748b;">热肥皂水、消毒液、沸水、板刷</span></td>
+              <td style="padding:10px 12px;">Wash with hot soapy water; rinse and pat dry. If cutting boards contacted raw meat, poultry, fish, or eggs, scrub with disinfectant and rinse with boiling water. Dry thoroughly with paper towels.<br><span style="font-size:12px; color:#64748b;">用热肥皂水清洗并擦干。若切过生肉、禽类、生鱼或蛋，用消毒液刷洗后必须用沸水彻底冲烫消毒，最后用纸巾擦干。</span></td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Wash dishes (Hand washing)<br><span style="font-size:12px; color:#64748b;">手洗餐具严格工序</span></td>
+              <td style="padding:10px 12px;">Dish detergent, hot water, dishcloth/brush, dish drainer<br><span style="font-size:12px; color:#64748b;">洗洁精、热水、抹布/洗碗刷、沥水架</span></td>
+              <td style="padding:10px 12px;">Scrape food scraps. Wash in correct sequence: glassware and cups first, then eating utensils, plates, bowls, and pots/pans last. Soak stubborn pots in hot water. Rinse well in hot water. Place in dish drainer to air-dry (air-drying is more sanitary than towel-drying).<br><span style="font-size:12px; color:#64748b;">先刮除残渣。严格按次序洗涤：先洗玻璃杯与茶杯，次洗刀叉餐具，再洗碗盘，最后洗锅具。热水充分漂洗。置于沥水架自然风干（自然风干远比抹布擦拭更卫生）。</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="figure-card" style="margin:20px 0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#f8fafc;">
+      <img src="images/ch44/fig-44-1.jpg" alt="Figure 44.1: Some dishwashers require that dishes be rinsed first" style="width:100%; max-height:420px; object-fit:contain; background:#ffffff; display:block;" onerror="this.src='pages_dist/images/ch44/fig-44-1.jpg'">
+      <div class="figure-caption" style="padding:10px 14px; font-size:12.5px; color:#64748b; background:#f8fafc; border-top:1px solid #e2e8f0; text-align:center;">
+        FIGURE 44.1: Some dishwashers require that dishes be rinsed before they are loaded. For all dishwashers, large food chunks and dried food should always be removed before loading. (Photo credit: Can Stock Photo Inc./Wavebreakmedia)
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1044">
+      <span class="marker-pill">p. 1044</span>
+      <span class="marker-sec">Box 44.4 cont'd: Refrigerator, Waste & Bathroom Intro</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #f59e0b; border-radius:8px; padding:18px 20px; background:#fffbeb;">
+      <div style="font-size:11px; font-weight:700; color:#d97706; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.4 · CONTINUED (PART 2)</div>
+      <h3 style="font-size:17px; font-weight:800; color:#b45309; margin-bottom:12px;">Cleaning Kitchens—cont’d / 厨房保洁操作流程（第2部分）</h3>
+      
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px; line-height:1.6; color:#334155;">
+          <thead>
+            <tr style="background:#e2e8f0; color:#0f172a; text-align:left;">
+              <th style="padding:10px 12px; width:22%; font-weight:700;">Task / 任务</th>
+              <th style="padding:10px 12px; width:28%; font-weight:700;">Supplies & Equipment / 用具耗材</th>
+              <th style="padding:10px 12px; width:50%; font-weight:700;">Process / 标准操作程序</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean kitchen sinks<br><span style="font-size:12px; color:#64748b;">厨房水槽深度清洁</span></td>
+              <td style="padding:10px 12px;">Hot soapy water, scouring powder, boiling water, disinfectant, paper towels<br><span style="font-size:12px; color:#64748b;">热肥皂水、去污粉、沸水、消毒剂、纸巾</span></td>
+              <td style="padding:10px 12px;">Clean with hot soapy water and scouring powder. Clean with disinfectant if raw poultry, meat, or eggs were prepared. Pour boiling water down the drain after cleaning to kill bacteria and clear grease. Wipe taps and dry with paper towels.<br><span style="font-size:12px; color:#64748b;">用热肥皂水和去污粉刷洗。处理过生肉禽蛋后必须加消毒剂杀菌。清洁后将沸水倒入下水道以杀灭深层细菌并融化油脂。擦净水龙头并用纸巾擦干。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean refrigerator<br><span style="font-size:12px; color:#64748b;">冰箱清洁与除味</span></td>
+              <td style="padding:10px 12px;">Hot soapy water, baking soda, cloth or paper towels<br><span style="font-size:12px; color:#64748b;">热肥皂水、小苏打、洁净布</span></td>
+              <td style="padding:10px 12px;">Open containers; discard foods that are expired, spoiled, or leftover more than 2 days old (always confirm with client first). Clean one shelf at a time with hot soapy water; dry with paper towels. Clean crisper drawers and interior door. Place an open box of baking soda inside to absorb odours. Wipe exterior door and handle.<br><span style="font-size:12px; color:#64748b;">检查所有保鲜盒；清理过期、变质或超过2天的剩菜（必须先征得客户同意）。每次清理一层搁板，用热肥皂水擦洗后纸巾擦干。清洗果蔬抽屉与门内侧。放一盒开口小苏打吸附异味。擦拭冰箱外门及把手。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Dispose of waste<br><span style="font-size:12px; color:#64748b;">生活垃圾清运</span></td>
+              <td style="padding:10px 12px;">Utility gloves, fresh garbage bags, hot soapy water<br><span style="font-size:12px; color:#64748b;">手套、新垃圾袋、热肥皂水</span></td>
+              <td style="padding:10px 12px;">Wear gloves. Tie garbage bag and take to garage or chute. Wash garbage can inside and out with hot soapy water and paper towels. Insert fresh liner.<br><span style="font-size:12px; color:#64748b;">戴手套。扎紧垃圾袋送至车库或垃圾通道。用热肥皂水和纸巾清洗垃圾桶内外并擦干。套上全新垃圾袋。</span></td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean kitchen floors<br><span style="font-size:12px; color:#64748b;">厨房地面清洁</span></td>
+              <td style="padding:10px 12px;">Broom, dustpan, damp mop, hot soapy water<br><span style="font-size:12px; color:#64748b;">扫帚、簸箕、微湿拖把、热肥皂水</span></td>
+              <td style="padding:10px 12px;">Sweep thoroughly to remove crumbs. Damp-mop using hot soapy water, working backward toward the exit. Keep floor off-limits until completely dry.<br><span style="font-size:12px; color:#64748b;">彻底扫除碎屑。用热肥皂水微湿拖拭，向门口方向退行。未彻底干透前禁止踩踏。</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="editorial-heading" style="margin:24px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">Cleaning Bathrooms: Infection Control Priorities</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">卫生间保洁：微生物控制与人体工效学</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Bathrooms need special attention because microbes easily grow and spread in damp, warm places. Because bathroom fixtures are low to the ground, practice proper body mechanics at all times to prevent back injury. Toilets must be cleaned thoroughly with a disinfectant or toilet bowl cleaner. Always wear sturdy rubber utility gloves. Toilet brushes and sponges must never be used for cleaning other areas of the house.</p>
+      <p class="para-zh">卫生间需要尤为严密的清洁防护，因为潮湿温暖的环境是细菌真菌生长繁殖的温床。由于卫浴设施位置较低，支持人员在弯腰俯身清洁时必须时刻运用正确的人体工效学姿势，保护腰背部免受拉伤。马桶必须使用专用消毒剂或洁厕灵彻底刷洗。操作时必须佩戴厚实耐用的橡胶手套。刷洗马桶的马桶刷与海绵绝对禁止用于清洁居所内的任何其他区域。</p>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1045">
+      <span class="marker-pill">p. 1045</span>
+      <span class="marker-sec">Mould and Mildew Abatement Protocols & Laundry Basics</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:16px 0 14px;">
+      <h3 style="font-size:16px; font-weight:700; color:#1e293b; margin-bottom:2px;">Bathrooms of High-Risk Clients</h3>
+      <div style="font-size:13px; font-weight:600; color:#64748b;">高风险易感客户卫浴环境特殊标准</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">The bathrooms of clients who are at high risk for infection—for example, clients recovering from surgery and those undergoing chemotherapy—must be kept exceptionally clean. The care plan will list extra measures, including cleaning the tub, shower, and sink with the appropriate disinfectant before and after use, and using disposable paper towels for drying hands.</p>
+      <p class="para-zh">对于处于感染高风险状态的客户（例如大手术术后康复期患者、化疗受治者等），其卫生间必须维持极高的无菌清洁度。护理计划会列明追加防护措施，包括：在每次使用浴缸、淋浴房与洗手盆前后，均须使用医用级消毒剂进行杀菌擦拭，并强制使用一次性纸巾擦手以杜绝毛巾交叉感染。</p>
+    </div>
+
+    <div class="guidelines-box" style="margin:20px 0; border:1px solid #cbd5e1; border-left:4px solid #14b8a6; border-radius:8px; padding:18px 20px; background:#f0fdfa;">
+      <div style="font-size:11px; font-weight:700; color:#0f766e; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">CLINICAL FOCUS · 临床重点</div>
+      <h3 style="font-size:17px; font-weight:800; color:#134e4a; margin-bottom:10px;">Mould and Mildew: Health Hazards and Safe Removal / 霉菌与霉斑：健康危害与科学清除规范</h3>
+      
+      <div class="bilingual-para" style="margin-bottom:12px;">
+        <p class="para-en"><strong>Mould</strong> is a microscopic fungal parasite, and <strong>mildew</strong> is the black discoloration caused by mould that can produce a foul odour. People living in homes with mould and damp conditions are more likely to experience eye, nose, and throat irritation, coughing and phlegm build-up, wheezing, shortness of breath, and worsening of asthma symptoms.</p>
+        <p class="para-zh"><strong>霉菌（Mould）</strong>是一种微观真菌寄生物，而<strong>霉斑（Mildew）</strong>则是霉菌滋生所导致的黑色变色斑痕，常散发难闻霉味。长期居住在潮湿生霉环境中的人，极易出现眼部、鼻腔及咽喉刺激感、咳嗽痰多、喘鸣、气促呼吸困难以及哮喘急性加重等呼吸系统症状。</p>
+      </div>
+
+      <div style="font-size:13.5px; font-weight:700; color:#0f172a; margin-bottom:8px;">Protocol for Safe Removal of Mould / 科学清除霉菌的核心规程：</div>
+      <ul style="margin:0; padding-left:18px; font-size:13px; color:#334155; line-height:1.65;">
+        <li style="margin-bottom:8px;">
+          <strong>Dry surfaces thoroughly:</strong> Always dry surfaces well after bathing and cleaning to prevent mould and mildew growth.<br>
+          <span style="color:#64748b;">彻底擦干表面：沐浴和清洁后务必将墙面地面擦干，从源头杜绝霉菌滋生条件。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Dish detergent and water for small amounts:</strong> Surface mould or small to moderate amounts of mould can be cleaned using warm water and dish detergent.<br>
+          <span style="color:#64748b;">小面积表层霉斑用温水配洗洁精：表层或中小面积的霉斑只需用温水加常规洗洁精擦除。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>DO NOT USE BLEACH:</strong> Do not use bleach to remove mould. Bleach does not penetrate porous materials and can release harmful fumes.<br>
+          <span style="color:#64748b;"><strong>绝对不要使用漂白剂除霉</strong>：漂白剂无法深入多孔材质根部杀灭真菌，且会释放刺激性有害氯气。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Wear PPE:</strong> Wear waterproof utility gloves, eye protection, and a mask when cleaning mould.<br>
+          <span style="color:#64748b;">佩戴个人防护装备：清理霉菌时必须佩戴防水橡胶手套、护目镜及口罩，防止吸入飘浮真菌孢子。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Professional mould abatement:</strong> If extensive mould is present, report to your supervisor. Professional mould abatement specialists are required to remove widespread structural mould.<br>
+          <span style="color:#64748b;">大面积深度霉变须专业机构处置：若存在严重大面积霉菌，必须向主管汇报，需由持有专业执照的霉菌消除专家介入，易感客户应暂时撤离房间。</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="editorial-heading" style="margin:24px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">DOING LAUNDRY</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">衣物洗涤标准操作规程</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">When doing laundry, your goal is to clean clothing items without damaging them. Ask your client or family member which detergent, bleach, and fabric softener to use, and whether garments are air-dried or dried in a dryer. Follow the client's preferences. BOX 44.6 describes how to do laundry properly.</p>
+      <p class="para-zh">清洗衣物的核心目标是在彻底洗净去污的同时，完好保护织物纤维不受损伤。清洗前务必询问客户或家属偏好使用哪种洗衣液、漂白剂与柔顺剂，并确认衣物是自然悬挂晾干还是使用烘干机烘干。严格尊重客户个人偏好。BOX 44.6 详细阐述了正确的洗衣全套流程。</p>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1046">
+      <span class="marker-pill">p. 1046</span>
+      <span class="marker-sec">Box 44.5: Cleaning Bathrooms Standard Procedures</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #06b6d4; border-radius:8px; padding:18px 20px; background:#ecfeff;">
+      <div style="font-size:11px; font-weight:700; color:#0891b2; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.5 · PROCEDURES & GUIDELINES</div>
+      <h3 style="font-size:17px; font-weight:800; color:#155e75; margin-bottom:12px;">Cleaning Bathrooms / 卫生间深度清洁标准操作流程</h3>
+      
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px; line-height:1.6; color:#334155;">
+          <thead>
+            <tr style="background:#e2e8f0; color:#0f172a; text-align:left;">
+              <th style="padding:10px 12px; width:22%; font-weight:700;">Task / 任务</th>
+              <th style="padding:10px 12px; width:28%; font-weight:700;">Supplies & Equipment / 用具耗材</th>
+              <th style="padding:10px 12px; width:50%; font-weight:700;">Process / 标准操作程序</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">General hygiene measures<br><span style="font-size:12px; color:#64748b;">常规卫生与感控准则</span></td>
+              <td style="padding:10px 12px;">Disinfectant, cloths, utility gloves<br><span style="font-size:12px; color:#64748b;">消毒剂、专用布、手套</span></td>
+              <td style="padding:10px 12px;">Rinse and dry bar soaps after use. Flush toilet with seat down to prevent aerosolization of microbes. Rinse sink after shaving or oral care. Remove hair from drains. Hang damp towels or place in hamper. Wash bath mats weekly. Open shower doors/curtains to prevent mildew. <strong>Never pour dirty liquids in the sink—flush down toilet.</strong><br><span style="font-size:12px; color:#64748b;">香皂用后冲净晾干。冲马桶时务必放下盖板以防微生物气溶胶飞散。剃须刷牙后冲净水槽。清除地漏发丝。湿毛巾挂起晾干或入篓。每周清洗浴室地垫。浴帘拉开展平防霉。<strong>严禁将脏水污水倒入洗手盆——必须倒入马桶冲走。</strong></span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean sinks and taps<br><span style="font-size:12px; color:#64748b;">洗手盆与龙头清洁</span></td>
+              <td style="padding:10px 12px;">Cloths, sponge, utility gloves, hot soapy water, disinfectant<br><span style="font-size:12px; color:#64748b;">抹布、海绵、手套、热肥皂水、消毒剂</span></td>
+              <td style="padding:10px 12px;">Wipe sink basin with hot soapy water and disinfectant. Rinse with warm water and buff dry with a soft cloth to eliminate water spots. Clean and dry faucets and handles.<br><span style="font-size:12px; color:#64748b;">用热肥皂水加消毒剂擦拭盆体内壁。清水冲净后用柔软干布擦亮拭干，消除水渍水垢。彻底擦净并拭干水龙头把手。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean bathtubs, showers & curtains<br><span style="font-size:12px; color:#64748b;">浴缸、淋浴房与浴帘</span></td>
+              <td style="padding:10px 12px;">Bathroom cleanser, sponge, long-handled brush, utility gloves<br><span style="font-size:12px; color:#64748b;">浴室清洗剂、海绵、长柄刷、手套</span></td>
+              <td style="padding:10px 12px;">Scrub tub surfaces, tiled walls, and grab bars using bathroom cleaner. Rinse well with warm water. Wipe shower curtains and liners; replace or machine-wash if mildewed. Dry surfaces with a towel to prevent mould.<br><span style="font-size:12px; color:#64748b;">使用浴室专用清洁剂刷洗浴缸、瓷砖墙面及安全扶手。温水冲净。擦拭浴帘内外侧；若发霉应拆卸机洗或更换。毛巾彻底擦干以防生霉。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean the toilet<br><span style="font-size:12px; color:#64748b;">坐便器马桶深度刷洗</span></td>
+              <td style="padding:10px 12px;">Toilet bowl cleaner/disinfectant, toilet brush, paper towels, utility gloves<br><span style="font-size:12px; color:#64748b;">洁厕灵/消毒剂、马桶刷、纸巾、手套</span></td>
+              <td style="padding:10px 12px;">Wear utility gloves. Squirt cleaner under the rim and into the bowl. Scrub thoroughly with the toilet brush, including under the rim and down into the trap. Flush to rinse. Wipe toilet tank, handle, lid, seat, and base using disinfectant and disposable paper towels (never re-use these cloths elsewhere).<br><span style="font-size:12px; color:#64748b;">佩戴耐用橡胶手套。将洁厕灵挤入出水槽内圈凹槽与便坑内。用马桶刷全力刷洗凹槽与回水弯底部。冲水冲净。用消毒纸巾擦净水箱、冲水扳手、马桶盖板、座圈及外底座（纸巾即用即弃，绝不可与别处混用）。</span></td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">Clean bathroom floor<br><span style="font-size:12px; color:#64748b;">卫生间地面拖洗</span></td>
+              <td style="padding:10px 12px;">Mop, bucket, hot soapy water with disinfectant<br><span style="font-size:12px; color:#64748b;">拖把、水桶、热肥皂水加消毒液</span></td>
+              <td style="padding:10px 12px;">Sweep up hair and debris. Mop floor with hot soapy water containing disinfectant, paying close attention around the base of the toilet. Work outward toward the doorway. Allow to dry completely before allowing client to enter.<br><span style="font-size:12px; color:#64748b;">扫清毛发碎屑。用加有消毒液的热肥皂水拖洗地面，重点清洁坐便器底座周围缝隙。由内向门外拖行。地面彻底干透前切勿让客户进入。</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1047">
+      <span class="marker-pill">p. 1047</span>
+      <span class="marker-sec">Box 44.6: Doing Laundry Procedures & Temperature Rules</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #3b82f6; border-radius:8px; padding:18px 20px; background:#eff6ff;">
+      <div style="font-size:11px; font-weight:700; color:#1d4ed8; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.6 · PROCEDURES & GUIDELINES (PART 1)</div>
+      <h3 style="font-size:17px; font-weight:800; color:#1e40af; margin-bottom:12px;">Doing Laundry / 衣物与织物洗涤全流程操作规程（第1部分）</h3>
+      
+      <div style="display:grid; grid-template-columns:1fr; gap:12px; font-size:13px; line-height:1.6; color:#334155;">
+        <div style="background:#ffffff; border:1px solid #dbeafe; border-radius:8px; padding:14px 16px;">
+          <strong style="color:#0f172a; font-size:14px;">1. Sorting the Laundry (科学分类衣物):</strong><br>
+          Inspect all pockets for tissues, pens, dentures, hearing aids, money, or sharp objects. Unroll cuffs and unbutton shirts. Separate items into distinct piles:<br>
+          • <strong>Color sorting:</strong> Whites and pastels in one pile; darks and bright colors in another pile to prevent dye transfer.<br>
+          • <strong>Fabric & weight:</strong> Heavy items (towels, jeans) separate from delicate fabrics (lingerie, silk, synthetics).<br>
+          • <strong>Lint givers vs. Lint receivers:</strong> Wash lint-producing items (flannel, chenille, terrycloth towels) separately from lint-attracting fabrics (corduroy, dark synthetics, permanent press).<br>
+          • <strong>Soiled items:</strong> Heavily soiled or body-fluid-contaminated linens must be separated, pre-soaked, and washed independently following Standard Practices.<br>
+          <span style="color:#64748b;">仔细摸查所有衣袋，掏出纸巾、圆珠笔、假牙、助听器、硬币或锋利硬物。解开扣子并将卷起的袖口裤脚放下。将衣物科学分堆：① 按颜色：白色及浅色单独一堆，深色与鲜艳衣物另一堆，防染色；② 按织物厚度：厚重牛仔与浴巾与轻薄雪纺蕾丝分开；③ 掉毛与吸毛织物：易掉毛毛巾法兰绒与易吸毛灯芯绒合成面料严格分开；④ 重度体液污染织物单独隔离预浸泡，依常规防护标准独立洗涤。</span>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #dbeafe; border-radius:8px; padding:14px 16px;">
+          <strong style="color:#0f172a; font-size:14px;">2. Selecting Water Temperatures (洗涤水温精准选择):</strong><br>
+          • <strong>Hot water cycle (热水程序):</strong> For white linens, durable cotton bed sheets, and diapers. Hot water kills pathogens and deep-cleans durable whites.<br>
+          • <strong>Warm water cycle (温水程序):</strong> For moderately soiled garments, permanent press items, synthetics, and light colors. Cleans well while minimizing shrinkage.<br>
+          • <strong>Cold water cycle (冷水程序):</strong> For dark fabrics, bright colors (prevents fading and running), delicate fabrics (wool, silk), and lightly soiled everyday clothes. Cold water saves energy and prevents protein stains from setting.<br>
+          <span style="color:#64748b;">① 热水循环：用于白色纯棉床单、被套及尿布。高温能有效灭活病原微生物并深层漂白耐热纯棉。② 温水循环：用于中度弄脏衣物、免烫合成纤维及浅色衣物，去污同时减少缩水皱褶。③ 冷水循环：用于深色与艳丽衣物（防褪色串色）、精细丝毛面料及轻度污渍衣物。冷水节能且能防止蛋白质类污渍在纤维中凝固变性。</span>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #dbeafe; border-radius:8px; padding:14px 16px;">
+          <strong style="color:#0f172a; font-size:14px;">3. Adding Detergents & Washing (洗涤剂投放与启动):</strong><br>
+          Measure detergent carefully using the product cap or scoop. Excess detergent leaves residue on clothes that irritates sensitive skin. Add detergent to the water before adding clothes (or into designated dispenser drawer). Do not overload the washing machine drum; clothes need room to agitate freely for effective cleansing.<br>
+          <span style="color:#64748b;">使用量盖或量勺精确称取洗涤剂。洗衣液过量会导致化学残留，诱发客户皮肤过敏发痒。衣物放入前先放洗衣液（或倒入专用投放盒）。切忌将洗衣机滚筒塞得过满，衣物必须有足够空间自由翻滚方能彻底洗净。</span>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1048">
+      <span class="marker-pill">p. 1048</span>
+      <span class="marker-sec">Box 44.6 cont'd: Drying Laundry & Fig 44.2 Bathroom Cleaning</span>
+    </div>
+
+    <div class="guidelines-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-left:4px solid #3b82f6; border-radius:8px; padding:18px 20px; background:#eff6ff;">
+      <div style="font-size:11px; font-weight:700; color:#1d4ed8; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.6 · CONTINUED (PART 2)</div>
+      <h3 style="font-size:17px; font-weight:800; color:#1e40af; margin-bottom:12px;">Doing Laundry—cont’d / 衣物烘干与晾晒操作规程（第2部分）</h3>
+      
+      <div style="display:grid; grid-template-columns:1fr; gap:12px; font-size:13px; line-height:1.6; color:#334155;">
+        <div style="background:#ffffff; border:1px solid #dbeafe; border-radius:8px; padding:14px 16px;">
+          <strong style="color:#0f172a; font-size:14px;">4. Drying the Laundry (科学烘干与晾晒):</strong><br>
+          • <strong>Clean the lint filter before EVERY single load:</strong> Built-up lint restricts airflow, increases drying time, and represents a major residential fire hazard.<br>
+          • <strong>Select correct dryer cycle:</strong> Regular/high heat for towels and durable cottons; Permanent press/medium heat for synthetics; Delicate/low heat for fragile knits; Air fluff/no heat for rubber-backed bath mats or down-filled pillows.<br>
+          • <strong>Remove promptly:</strong> Take clothes out immediately when the cycle finishes and hang or fold them to avoid wrinkles and eliminate the need for ironing.<br>
+          • <strong>Hanging on a clothesline:</strong> Wipe clothesline with a damp cloth before hanging items. Hang dark clothes inside out in shaded areas to prevent sun-fading. Hang shirts by the bottom hem, trousers by the cuffs or waistband, and sheets doubled over.<br>
+          <span style="color:#64748b;">① <strong>每次烘干前必须清理毛屑过滤网</strong>：堆积的毛屑会阻塞气流、大幅延长烘干耗时，更是引发家庭火灾的头号隐患。② 精准设定烘干档位：纯棉厚毛巾选常规高温档；合成免烫衣物选中温档；精细针织品选低温轻柔档；含橡胶背衬地垫或羽绒枕选无加热冷风档。③ 烘完立即取出：程序结束立刻取出衣物悬挂或折叠，能消除大部分褶皱免去熨烫之苦。④ 室外晾衣绳规范：挂衣前用湿布将晾衣绳擦拭干净；深色衣物翻面晾在阴凉避光处防晒褪色；衬衫夹下摆、裤子夹裤脚或裤腰、床单对折悬挂。</span>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #dbeafe; border-radius:8px; padding:14px 16px;">
+          <strong style="color:#0f172a; font-size:14px;">5. Folding and Storing (折叠、收纳与物归原处):</strong><br>
+          Fold clothes neatly on a clean flat surface. Place folded items into the client's drawers or hang them on hangers in the closet according to the client's explicit preferences. Keep pairs of socks together. Handle personal garments with dignity and respect.<br>
+          <span style="color:#64748b;">在平整洁净的台面上将衣服折叠工整。遵照客户明确指定的储物习惯，将折好的衣物放入抽屉或挂入衣橱。袜子两两配对成卷收纳。始终以敬重与维护尊严的态度对待客户的贴身衣物。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="figure-card" style="margin:20px 0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#f8fafc;">
+      <img src="images/ch44/fig-44-2.jpg" alt="Figure 44.2: Cleaning the bathroom. Note the use of sturdy rubber gloves" style="width:100%; max-height:420px; object-fit:contain; background:#ffffff; display:block;" onerror="this.src='pages_dist/images/ch44/fig-44-2.jpg'">
+      <div class="figure-caption" style="padding:10px 14px; font-size:12.5px; color:#64748b; background:#f8fafc; border-top:1px solid #e2e8f0; text-align:center;">
+        FIGURE 44.2: Cleaning the bathroom. Note the use of sturdy rubber gloves to protect skin from cleansers and contaminated surfaces. (Photo credit: Can Stock Photo Inc./monkeybusiness)
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1049">
+      <span class="marker-pill">p. 1049</span>
+      <span class="marker-sec">Recycling Items, Composting & Waste Management</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:20px 0 16px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">RECYCLING ITEMS AND COMPOSTING</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">垃圾分类回收与有机废弃物堆肥规范</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Recycling and composting conserve resources, reduce landfill waste, and protect the environment. Municipalities across Canada have specific regulations governing what materials can be recycled, which containers are used, and collection schedules. Support workers should be familiar with the recycling system in their client’s community.</p>
+      <p class="para-zh">资源回收与有机废弃物堆肥能节约自然资源、减少填埋场垃圾积压并保护生态环境。加拿大各省市对于可回收物的品类界定、容器规格分类以及清运日程均出台了严格细致的地方法规。支持人员必须熟知并遵循客户所在社区的垃圾分类系统。</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:22px; font-size:13px; line-height:1.6; color:#334155;">
+      <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:14px 16px;">
+        <strong style="color:#166534; font-size:14px;">Blue Box / Blue Cart (可回收容器与纸张):</strong><br>
+        Paper, cardboard, newspapers, clean glass bottles and jars, metal cans, and recyclable plastics (coded #1 to #7, depending on municipal guidelines). Rinse food containers clean before placing in the blue box.<br>
+        <span style="color:#15803d;">废纸、瓦楞纸板、旧报纸、干净玻璃瓶罐、金属易拉罐以及带有回收代码的塑料制品。食物容器在投入蓝箱前必须彻底用水冲洗干净。</span>
+      </div>
+      <div style="background:#fefce8; border:1px solid #fef08a; border-radius:8px; padding:14px 16px;">
+        <strong style="color:#854d0e; font-size:14px;">Green Bin / Organics (绿箱有机易腐厨余):</strong><br>
+        Food scraps, fruit and vegetable peels, coffee grounds, tea bags, eggshells, soiled paper towels, and food-soiled pizza boxes. Store in biodegradable liner bags to control odours.<br>
+        <span style="color:#713f12;">剩菜剩饭、果蔬皮核、咖啡渣、茶包、蛋壳、擦手用过的废纸巾及沾满油污的披萨盒。置于可生物降解专用内衬袋中扎紧以防异味扩散。</span>
+      </div>
+      <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:14px 16px;">
+        <strong style="color:#991b1b; font-size:14px;">Hazardous & Electronic Waste (特种有害废弃物与电子垃圾):</strong><br>
+        Batteries, paint cans, fluorescent tubes, medications, and aerosol cans should NEVER go into regular household garbage. Ask your supervisor about designated community drop-off depots.<br>
+        <span style="color:#b91c1c;">废旧电池、油漆桶、荧光灯管、过期药品及高压喷雾罐<strong>绝不可</strong>扔进普通生活垃圾桶。必须咨询主管送往市政指定的特种废品回收处理中心。</span>
+      </div>
+    </div>
+
+    <div class="case-box" style="margin:20px 0; border:1px solid #fed7aa; border-left:4px solid #f97316; border-radius:8px; padding:16px 18px; background:#fffaf5;">
+      <div style="font-size:11px; font-weight:700; color:#ea580c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">CASE STUDY · CONTINUED</div>
+      <h4 style="font-size:15px; font-weight:700; color:#9a3412; margin-bottom:8px;">Supporting Mrs. Washington: Part 3: Respecting the Client’s Wishes When Cleaning / 协助华盛顿太太（第3部分）：清洁时尊重长者意愿</h4>
+      <div class="bilingual-para">
+        <p class="para-en">While tidying Mrs. Washington’s kitchen, you notice several stacked margarine tubs and old newspapers. Rather than discarding them, you ask Mrs. Washington what she would like done with them. She explains that she uses the tubs to freeze leftovers and saves newspapers for Sue, who uses them in her garden. You wash the tubs, stack them neatly in the pantry, and bundle the newspapers for Sue. Mrs. Washington appreciates that you respected her belongings.</p>
+        <p class="para-zh">在打扫华盛顿太太的厨房时，你发现橱柜里堆着许多塑料人造黄油空盒与旧报纸。你没有擅自将它们扔进垃圾桶，而是恭敬地询问华盛顿太太希望如何处置。老人欣慰地解释说，她平时习惯用这些食品盒分装冷冻剩菜，旧报纸则是特意帮隔壁苏攒着垫花园泥土用的。你于是将塑料盒彻底洗净晾干并码齐放入食品柜，并将旧报纸用绳子捆扎齐整备给苏。华盛顿太太由衷感激你对她个人财物意愿的充分敬重。</p>
+      </div>
+    </div>
+
+    <div class="figure-card" style="margin:20px 0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#f8fafc;">
+      <img src="images/ch44/fig-44-4.jpg" alt="Figure 44.4: Recycling bin" style="width:100%; max-height:360px; object-fit:contain; background:#ffffff; display:block;" onerror="this.src='pages_dist/images/ch44/fig-44-4.jpg'">
+      <div class="figure-caption" style="padding:10px 14px; font-size:12.5px; color:#64748b; background:#f8fafc; border-top:1px solid #e2e8f0; text-align:center;">
+        FIGURE 44.4: Recycling bin. Follow community rules for sorting recyclable plastics, glass, paper, and metal. (Photo credit: Can Stock Photo Inc./Colecanstock)
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1050">
+      <span class="marker-pill">p. 1050</span>
+      <span class="marker-sec">Figure 44.3: Official Canadian Laundry Symbols Standard Chart</span>
+    </div>
+
+    <div class="figure-card" style="margin:0 0 24px; border:1px solid #cbd5e1; border-radius:12px; overflow:hidden; background:#ffffff; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+      <div style="background:#0f172a; color:#ffffff; padding:14px 20px;">
+        <div style="font-size:11px; font-weight:700; color:#38bdf8; letter-spacing:0.08em; text-transform:uppercase;">OFFICIAL STANDARD APPAREL & TEXTILE CARE SYMBOLS</div>
+        <h3 style="font-size:18px; font-weight:800; margin:4px 0 0;">FIGURE 44.3: Laundry Symbols Standard Chart / 加拿大国家标准洗衣护理标签图符</h3>
+      </div>
+
+      <div style="padding:16px; background:#f8fafc; border-bottom:1px solid #e2e8f0;">
+        <img src="images/ch44/fig-44-3.png" alt="Figure 44.3: Canadian Laundry Symbols Complete Standard" style="width:100%; max-height:780px; object-fit:contain; background:#ffffff; display:block;" onerror="this.src='pages_dist/images/ch44/fig-44-3.png'">
+      </div>
+
+      <div class="figure-caption" style="padding:16px 20px; font-size:12.5px; color:#475569; background:#ffffff; line-height:1.6;">
+        <strong>FIGURE 44.3: Laundry symbols.</strong> (Source: Innovation, Science and Economic Development Canada’s Office of Consumer Affairs. [n.d.] Guide to apparel and textile care symbols. <em>https://www.ic.gc.ca/eic/site/oca-bc.nsf/eng/ca02009.html</em>).<br>
+        <span style="color:#64748b;">加拿大创新、科学及经济发展部消费者事务办公室标准图例。涵盖五大类基础护理图标：水洗机温与轻柔档次、漂白剂规范、烘干与自然悬挂平铺、熨烫蒸汽温度限制、专业干洗与湿洗符号及水温点数释义。</span>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1051">
+      <span class="marker-pill">p. 1051</span>
+      <span class="marker-sec">Tasks Not on Care Plan & Box 44.7: Stain Removal Protocols</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:16px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">PERFORMING TASKS NOT INCLUDED ON THE CLIENT’S CARE PLAN</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">执行护理计划外任务的执业风险与法律边界</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">You should remember that you will not be paid for performing any tasks that are not on the client’s care plan. Some employers frown on the support worker providing “free” services (i.e., services that the client would normally have to pay your agency for you to perform). Some agencies’ insurance companies will not compensate you if you are injured while performing a task that is not on your client’s care plan. You should also be aware that if you provide “free” services, the client will probably expect the same services from other support workers in the future!</p>
+      <p class="para-zh">你必须铭记：任何未载入客户护理计划的额外任务，你都无法获得相应的工时报酬。许多雇主明令禁止支持人员提供所谓的“免费人情服务”（即客户本应向派遣机构付费购买的服务）。更严重的是，若你在执行护理计划外的非授权任务时发生工伤事故，派遣机构的保险公司将拒绝予以赔偿。此外，若你擅自提供免费服务，客户往往会在未来对其他上门的支持人员提出同样不切实际的要求，造成严重的职业摩擦！</p>
+    </div>
+
+    <div class="editorial-subheading" style="margin:18px 0 10px;">
+      <h3 style="font-size:16px; font-weight:700; color:#1e293b; margin-bottom:2px;">Consult With Your Supervisor</h3>
+      <div style="font-size:13px; font-weight:600; color:#64748b;">遇疑必报：咨询主管以裁定边界</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Before performing a task that is not on the client’s care plan, it is always a good idea to consult your supervisor. Occasionally, your supervisor will say that it is “up to you,” especially if the request is not time-consuming or does not require special skills. For example, feeding the canary while you are near the cage is neither complicated nor time-consuming. Other favours, however, can be time-consuming and may put you behind schedule.</p>
+      <p class="para-zh">在被要求执行护理计划外的工作前，主动向主管咨询永远是明智之举。主管熟悉机构政策，有时对于耗时极短且不涉及专业技能的顺手小事（例如顺道给金丝雀鸟笼喂食）会授权你自行酌情决定。但若属于耗时冗长或有安全隐患的重任，则坚决不可答应，否则会导致延误下一位客户的既定行程。</p>
+    </div>
+
+    <div class="guidelines-box" style="margin:20px 0; border:1px solid #cbd5e1; border-left:4px solid #dc2626; border-radius:8px; padding:18px 20px; background:#fef2f2;">
+      <div style="font-size:11px; font-weight:700; color:#b91c1c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">BOX 44.7 · CLINICAL GUIDELINES</div>
+      <h3 style="font-size:17px; font-weight:800; color:#991b1b; margin-bottom:12px;">Removing Stains / 常见体液与顽固污渍科学去除指南</h3>
+      
+      <div style="font-size:13px; color:#334155; line-height:1.6;">
+        <p style="margin-bottom:10px;">The directions in this box apply to both white and colour-fast clothes and linens. If possible, treat stains immediately, before they become set in the fabric.<br>
+        <span style="color:#64748b;">本指南适用于白色与不褪色织物。一旦发现污渍必须立即处置，避免污渍深层渗入纤维干涸固化。</span></p>
+
+        <div style="display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px;">
+          <div style="background:#ffffff; border:1px solid #fecaca; border-radius:6px; padding:12px 14px;">
+            <strong style="color:#991b1b; font-size:13.5px;">Urine Stains (尿液污渍处理规范):</strong><br>
+            • <strong>Rinse in cold water.</strong><br>
+            • Soak in a solution of 1 L of warm water, 2 mL liquid dishwashing detergent, and 15 mL of ammonia for 30 minutes.<br>
+            • Rinse in cool water.<br>
+            • Soak in a solution of 1 L warm water and 15 mL of vinegar for 1 hour.<br>
+            • Machine-wash with chlorine bleach and detergent; dry as usual.<br>
+            <span style="color:#64748b;">① <strong>首先用冷水彻底冲洗</strong>；② 在1升温水加入2毫升洗洁精和15毫升氨水的溶液中浸泡30分钟；③ 冷水漂清；④ 在1升温水加15毫升白醋的溶液中浸泡1小时除味除碱；⑤ 机洗加入漂白剂与常规洗涤剂洗涤。</span>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #fecaca; border-radius:6px; padding:12px 14px;">
+            <strong style="color:#991b1b; font-size:13.5px;">Blood Stains (血液污渍处理规范):</strong><br>
+            • <strong>Rinse in cold water immediately.</strong> (Hot water causes protein to coagulate into the fabric, making the stain permanent!).<br>
+            • Rub with a paste of powdered detergent and water or 5 mL of liquid commercial stain remover, 2 mL dishwashing detergent, or bar of soap. Let sit for 15 minutes.<br>
+            • Soak for another 15 minutes in 1 L of cold water with detergent.<br>
+            • Wash in machine using chlorine bleach and detergent; dry as usual.<br>
+            <span style="color:#64748b;">① <strong>立即用冷水冲洗</strong>（绝对严禁用热水！热水会导致血红蛋白凝固变性永久锁定在纤维中！）；② 抹上洗衣粉与水调和的糊状物、或5毫升专用去渍液加2毫升洗洁精，静置15分钟；③ 在1升加有去渍剂的冷水中浸泡15分钟；④ 机洗并加漂白剂彻底洗净。</span>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #fecaca; border-radius:6px; padding:12px 14px;">
+            <strong style="color:#991b1b; font-size:13.5px;">Fecal Stains (粪便污渍处理规范):</strong><br>
+            • <strong>Rinse in cold water.</strong><br>
+            • Soak in a solution of 1 L warm water, 2 mL liquid dishwashing detergent, and 15 mL ammonia for 30 minutes.<br>
+            • Wash in machine using chlorine bleach and detergent; dry as usual.<br>
+            <span style="color:#64748b;">① <strong>先用冷水将粪便残渣冲洗干净</strong>；② 在1升温水加入2毫升洗洁精和15毫升氨水的溶液中浸泡30分钟；③ 随后投入洗衣机，加漂白剂与洗衣液进行高温消毒机洗。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1052">
+      <span class="marker-pill">p. 1052</span>
+      <span class="marker-sec">Scope of Practice Boundaries & Case Conclusion</span>
+    </div>
+
+    <div class="editorial-heading" style="margin:16px 0 14px;">
+      <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:4px;">Scope of Practice Boundaries (Tasks Strictly Beyond PSW Scope)</h2>
+      <div style="font-size:14px; font-weight:600; color:#3b82f6;">执业范围严格硬边界：严禁越界医疗侵入性操作</div>
+    </div>
+
+    <div class="bilingual-para">
+      <p class="para-en">Some “favours” asked by clients or family members may be beyond your scope of practice, and you must NEVER be persuaded to perform them. For example, if Mrs. Patel’s arthritis is acting up and she cannot handle her insulin syringe, and she asks you to administer her insulin injection, this is a dangerous medical procedure strictly outside your scope of practice. In this situation, call your supervisor immediately. There is considerable risk of severe harm or death from medication dosage errors. Your supervisor will arrange for a registered nurse to visit the home.</p>
+      <p class="para-zh">客户或家属提出的某些“请托”，可能完全超出了你的执业范畴（Scope of practice），你<strong>绝对不可</strong>被游说破例执行。例如，帕特尔太太由于关节炎发作手指僵硬无法握住胰岛素注射笔，恳请你代为注射胰岛素。这种侵入性药物给药属于严禁支持人员擅自执行的高危医疗操作。面对此种情境，必须立即致电主管汇报。胰岛素剂量差错可能导致严重的低血糖休克甚至死亡。主管会立即调派注册护士上门安全处置。</p>
+    </div>
+
+    <div class="case-box" style="margin:20px 0; border:1px solid #fed7aa; border-left:4px solid #f97316; border-radius:8px; padding:16px 18px; background:#fffaf5;">
+      <div style="font-size:11px; font-weight:700; color:#ea580c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">CASE STUDY · CONCLUSION</div>
+      <h4 style="font-size:15px; font-weight:700; color:#9a3412; margin-bottom:8px;">Supporting Mrs. Washington: Part 4: Adhering to the Task List / 协助华盛顿太太（第4部分）：严守任务清单与执业准则</h4>
+      <div class="bilingual-para">
+        <p class="para-en">Mrs. Washington finally agrees to your supervisor’s suggestion to allow you to do her laundry at her next-door neighbour Sue Black’s home, because you are reluctant to use her unsafe old washing machine. Sue is very pleasant and gave Mrs. Washington a key. Today, Sue is home with a cold. She asks you to do her a favour—to fold her load of laundry in her dryer and wash another load of her personal clothes before you leave Mrs. Washington’s house. Doing so would put you behind schedule for your next client and violates agency policy against performing work for non-clients. What should you do? Politely and professionally decline, explaining that your agency strictly limits your duties to Mrs. Washington’s care plan and that you must keep your scheduled appointments with other clients.</p>
+        <p class="para-zh">华盛顿太太最终同意了主管的提议，允许你在隔壁邻居苏·布莱克家洗衣服，因为你此前对操作老人不安全的老旧洗衣机表示担忧。苏为人热心并交给了老人一把备用钥匙。今天，苏因感冒在家休息，她顺便向你提出一个“人情请托”——请你在离开华盛顿太太家前，顺手把她烘干机里自己的衣服折好，并帮她洗一整缸她自己的衣服。答应这一请求不仅会导致你延误探视下一位客户的行程，更是严重违反了机构“严禁为非照护对象提供工作”的明文规约。你应当如何应对？应当以礼貌、沉着且专业的态度委婉谢绝，向苏耐心解释机构规章严格限定支持人员仅能执行华盛顿太太护理计划上的任务，且自己必须准时赶往下一位客户家履行照护契约。</p>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1053">
+      <span class="marker-pill">p. 1053</span>
+      <span class="marker-sec">Chapter Review: Key Points, Critical Thinking Case & Quiz (Q1-Q4)</span>
+    </div>
+
+    <div class="review-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-radius:10px; padding:20px 22px; background:#f8fafc;">
+      <div style="font-size:11px; font-weight:700; color:#475569; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:6px;">CHAPTER REVIEW · 本章总结回顾</div>
+      <h3 style="font-size:18px; font-weight:800; color:#0f172a; margin-bottom:12px;">KEY POINTS / 核心执业要点</h3>
+      
+      <ul style="margin:0; padding-left:18px; font-size:13px; color:#334155; line-height:1.65;">
+        <li style="margin-bottom:8px;">
+          <strong>Scope of Home Management:</strong> The support worker assists in light home management tasks (straightening, vacuuming, dusting, washing dishes, making beds, laundry). Support workers are <strong>never</strong> assigned heavy chores like washing windows or cleaning carpets.<br>
+          <span style="color:#64748b;">支持人员仅协助轻度家政任务（整理、吸尘、擦拭除尘、洗碗、铺床、洗衣）。<strong>绝对不</strong>承担清洗外窗或深度洗地毯等重体力劳动。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Cytotoxic Safety Precautions:</strong> Cytotoxic drugs pose health hazards for up to 7 days after discontinuation. Handle bodily fluids with double vinyl/nitrile gloves, protective gown, and face shield. Wash contaminated linens separately twice in hot water.<br>
+          <span style="color:#64748b;">细胞毒性药物停药后7天内仍具有潜在健康危害。接触体液必须佩戴双层手套、隔离衣与防护面罩。受污染织物需在热水中连续机洗两次。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>13 Cleaning Product Rules:</strong> Always read labels, <strong>never mix chemicals (especially bleach and ammonia/urine to prevent deadly chloramine gas)</strong>, wear utility gloves, store in original containers away from children, dementia clients, and food.<br>
+          <span style="color:#64748b;">13项清洁剂安全守则：详读标签、<strong>绝对严禁混用化学品（尤其是含氯漂白剂与氨水/尿液混合会产生剧毒氯胺气体）</strong>、戴橡胶手套、原装密封存放、远离食品与儿童/失智老人。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Cleaning Guidelines:</strong> Clear clutter, work higher to lower, far to near (toward exit), dry to wet, cleanest to dirtiest, change cloths/water frequently, use damp cloth for dusting, and rinse/dry surfaces.<br>
+          <span style="color:#64748b;">保洁九项准则：清理散物、由高至低、由远及近退向房门、先干后湿、由净至污、勤换抹布与水、微湿布除尘、彻底漂洗擦干。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Mould Abatement:</strong> Dry all surfaces well. Clean small surface mould with water and dish detergent. <strong>Do not use bleach to clean mould.</strong> Extensive mould requires certified specialists.<br>
+          <span style="color:#64748b;">防霉除霉：表面彻底擦干。小面积霉斑用温水配洗洁精擦除。<strong>严禁用漂白剂除霉</strong>。严重霉变由持证专家处置。</span>
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Stain Removal:</strong> Always rinse blood, urine, and fecal stains in <strong>cold water first</strong> to prevent heat from setting proteins into fabric fibers.<br>
+          <span style="color:#64748b;">去渍铁律：血液、尿液与粪渍<strong>必须首先用冷水彻底冲洗</strong>，防止热力将蛋白质固化在纤维中。</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="case-box" style="margin:20px 0 24px; border:1px solid #fed7aa; border-left:4px solid #f97316; border-radius:8px; padding:18px 20px; background:#fffaf5;">
+      <div style="font-size:11px; font-weight:700; color:#ea580c; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">CRITICAL THINKING IN PRACTICE · 临床思辨实战</div>
+      <h4 style="font-size:15px; font-weight:700; color:#9a3412; margin-bottom:8px;">Clinical Decision-Making / 复杂居家环境中的安全决策</h4>
+      <div class="bilingual-para">
+        <p class="para-en"><strong>Scenario:</strong> Working for a home care agency, you have been assigned to assist with bathing and dressing for Mrs. Soto, a new client. She was recently sent home from a rehabilitation hospital after falling and breaking her hip. You notice that Mrs. Soto’s family did not obtain the shower chair that was recommended. You do not know how to safely get her in and out of the tub without this chair, and she does not seem very steady on her feet. What should you do? What are your responsibilities in this situation?</p>
+        <p class="para-zh"><strong>临床情境：</strong>你作为居家机构的支持人员，被派往新客户索托太太家协助沐浴与更衣。她刚因摔倒导致髋部骨折从康复医院出院回家。你敏锐地注意到，索托太太的家属并未依出院医嘱购置推荐的专用淋浴防滑椅（Shower chair）。在缺乏淋浴椅的情况下，你无法安全协助她进出浴缸，而且老人站立步态极不稳定。面对这一情境，你应当采取何种行动？你的执业安全职责是什么？</p>
+      </div>
+      <div class="bilingual-para" style="margin-top:10px; background:#ffffff; border:1px solid #fed7aa; border-radius:6px; padding:12px 14px;">
+        <p class="para-en" style="font-size:13px; color:#9a3412;"><strong>Clinical Decision:</strong> Do NOT attempt to transfer Mrs. Soto into the bathtub without the necessary assistive equipment, as this presents an extreme fall and re-fracture hazard. Offer her a safe, soothing sponge/towel bed bath instead today to maintain hygiene and comfort. Immediately notify your supervisor regarding the missing shower chair so the case manager or occupational therapist can arrange urgent equipment delivery.</p>
+        <p class="para-zh" style="font-size:12.5px; color:#7c2d12;"><strong>临床决策应对：</strong>在缺乏必备辅助用具的情况下，<strong>绝不可</strong>贸然强行协助索托太太跨入浴缸，否则极易发生二次跌倒与再次骨折惨剧。今日应向老人解释安全风险，改为在床上或平稳座椅上提供温水毛巾擦浴（Sponge bath），确保身体清洁与舒适。随后立即致电主管汇报淋浴椅缺失情况，由主管协同个案经理或作业治疗师（OT）紧急调配器材到位。</p>
+      </div>
+    </div>
+    
+
+    <div class="page-anchor-marker" id="page-1054">
+      <span class="marker-pill">p. 1054</span>
+      <span class="marker-sec">Official Review Questions (Q5-Q12), Elsevier Answer Key & Credits</span>
+    </div>
+
+    <div class="review-box" style="margin:0 0 24px; border:1px solid #cbd5e1; border-radius:10px; padding:20px 22px; background:#ffffff; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div style="font-size:11px; font-weight:700; color:#2563eb; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:6px;">OFFICIAL CHAPTER REVIEW QUESTIONS · 官方执业自测题</div>
+      <h3 style="font-size:17px; font-weight:800; color:#0f172a; margin-bottom:12px;">Review Questions 1 to 12 / 12道全真单项选择题</h3>
+      <p style="font-size:13px; color:#64748b; margin-bottom:16px;">Questions have been integrated into the interactive practice exam bank below (with instant grading, Elsevier official answer verification, and in-depth clinical rationales).<br>
+      本章12道全真单选题已集成至下方交互式自测题库，搭载即时核对、官方答案解析与临床考点详解。</p>
+
+      <div style="background:#f1f5f9; border:1px solid #cbd5e1; border-radius:8px; padding:14px 18px; font-size:13px; color:#334155; line-height:1.7;">
+        <strong>Official Elsevier Answer Key (教材官方标准答案):</strong><br>
+        1. <strong>C</strong> (Light housekeeping tasks) &nbsp;|&nbsp; 
+        2. <strong>A</strong> (Client, family, case manager decide tasks) &nbsp;|&nbsp; 
+        3. <strong>C</strong> (Cleanest to dirtiest) &nbsp;|&nbsp; 
+        4. <strong>A</strong> (Laundry first, then dust, mop last) &nbsp;|&nbsp; 
+        5. <strong>D</strong> (Ask client before discarding) &nbsp;|&nbsp; 
+        6. <strong>B</strong> (Follow label directions) &nbsp;|&nbsp; 
+        7. <strong>C</strong> (Utility gloves when cleaning toilet) &nbsp;|&nbsp; 
+        8. <strong>B</strong> (Use paper towels to dry hands) &nbsp;|&nbsp; 
+        9. <strong>A</strong> (Hot water for diapers/bed linens) &nbsp;|&nbsp; 
+        10. <strong>D</strong> (Follow Standard Practices for soiled linens) &nbsp;|&nbsp; 
+        11. <strong>B</strong> (Mixing bleach and ammonia forms poisonous gas) &nbsp;|&nbsp; 
+        12. <strong>D</strong> (Hot water coagulates fecal/blood proteins)
+      </div>
+
+      <div style="margin-top:16px; font-size:12px; color:#94a3b8; text-align:right;">
+        Chapter opener photo credit: iStockPhoto/Natali_Mis. Copyright © 2021 Elsevier Inc. All rights reserved.
+      </div>
+    </div>
+    
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch43')">← 上一章：第 43 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch44-quiz')">✍️ 12 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 39 章（常见疾病与失调，62页）正在编排流水线中，即将上线！')">下一章：第 39 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch43.html" class="sbn-btn sbn-prev">← 上一章：第 43 章 (老年人身心照护)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch44-quiz" class="sbn-btn sbn-quiz">✍️ 12 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 45 章（用药协助）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 45 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch44_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
