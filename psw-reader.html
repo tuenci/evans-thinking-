@@ -659,11 +659,48 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     }
 
-    .quiz-header {
+    /* Scoped strictly to question card headers */
+    .quiz-card .quiz-header, .editorial-quiz-card .quiz-header, .q-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 14px;
+    }
+
+    .quiz-header-banner, .quiz-intro-banner {
+      display: block !important;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+    .quiz-header-banner .qh-badge, .quiz-intro-banner .quiz-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: #166534;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .quiz-header-banner h3, .quiz-intro-banner h3 {
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      color: #14532d !important;
+      margin: 6px 0 10px 0 !important;
+      line-height: 1.4 !important;
+      display: block !important;
+      width: 100% !important;
+    }
+    .quiz-header-banner p, .quiz-intro-banner p {
+      font-size: 13.5px !important;
+      color: #166534 !important;
+      line-height: 1.6 !important;
+      margin: 0 !important;
+      display: block !important;
+      width: 100% !important;
     }
 
     .quiz-qnum {
@@ -117498,8 +117535,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">21 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch37-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch37-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 37 章精神健康障碍全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 21 道权威官方复习自测题（涵盖 <strong>Pages 888–890</strong> 全部原著多项选择自测题：神经化学失衡病因机制、精神分析潜意识探索、强迫症反复洗手、双相心境大起大落、文化对行为解读的影响、创伤与抑郁家族遗传多维诱因、神经性厌食症体型扭曲、抑郁照护严禁轻慢安慰、重度抑郁突发释然自杀警报、躁狂期提供有限选项、老年失眠生活方式调查、长者死亡愿望引导倾诉、青少年赠物自杀危急干预、二战退伍军人协会同伴支持、精神分裂症听幻觉探询与视幻觉安抚、居家藏酒主管汇报、成瘾可战胜康复观念、严守不透露私人电话专业界限、成瘾病史术后全人照护，以及康复群居家庭肢体冲突物理隔离处置等核心原版考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -120924,8 +120961,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">25 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch38-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch38-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 38 章定向障碍、谵妄与认知症全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 25 道权威官方复习自测题（涵盖 <strong>Pages 924–926</strong> 全部原著多项选择题与术语连线自测题：认知功能思维推理内涵、环境搬迁应激性混乱、谵妄急性突发医疗急症、早发型认知症在40岁人群的发病、继发性认知症病因机制、早期预警判断力衰退、早期轻度居家支持、阿尔茨海默病不可逆无根治疗法本质、激越尖叫深层含义、提供有限选项防感官过载、封闭式安全门禁单元防走失、门窗警报系统开启、清除锋利易碎隐患、每次接触主动自报姓名、家庭喘息解脱支持、多发中风所致血管性认知症，以及日落综合征、妄想、视幻觉、踱步、抑郁退缩、激越躁动、藏匿囤积、漫无目的游走等原版核心考点连线）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -124466,8 +124503,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">22 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch39-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch39-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 39 章促进氧合全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 22 道权威官方复习自测题（涵盖 <strong>Pages 957–958</strong> 全部原著多项选择题：麻醉药物与酒精对呼吸中枢的抑制机理、组织细胞缺氧（Hypoxia）确切定义、缺氧早期烦躁不安特征与晚期发绀、端坐呼吸（Orthopnea）体位机理、喘鸣与鸡鸣样异常呼吸音、脉搏血氧饱和度（SpO₂）98% 生理正常值评估、示指传感器安置部位、清晨留取深部痰标本最佳时机、清水漱口严禁使用杀菌漱口水准则、缩唇呼气法（Pursed-lip breathing）、诱发性肺活量计吸气训练、支持人员防管路扭折职责边界、气管切开外导管绝对固定原则、气切患者剃须安全与严禁游泳防溺水、专人固定外管方可剪换系带救命铁律、单次吸痰严控 10 至 15 秒极限、胸腔引流管引流积气积液重建负压机制、Ambu 简易呼吸囊预充氧、呼吸机有创人工气道连接、呼吸机报警第一反应目测气道连接、气胸（胸膜腔积气）病理定义，以及水封引流瓶必须始终低于胸腔平面等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -127285,8 +127322,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch40-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch40-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 40 章冷热敷应用全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 12 道权威官方复习自测题（涵盖 <strong>Pages 974–975</strong> 全部原著多项选择题：热敷缓解关节僵硬机理、热敷主要威胁烫伤、糖尿病合并高龄患者热敷并发症极高危人群、热敷皮下异常皮疹立即汇报指征、高热应用 36.6°C 至 41.1°C 规范温区、湿热较干热更强且更迅速的组织渗透力、温热湿敷每 5 分钟检查一次硬性门禁、坐浴诱发脑供血不足虚脱眩晕、冷敷收缩血管止痛消肿止血三重机制、极端冷疗导致冻伤并发症、应用冰袋前装入布套包裹铁律，以及冷湿敷严格限时 15 分钟等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -129765,8 +129802,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch41-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch41-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 41 章婴儿及其父母的照护全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 12 道权威官方复习自测题（涵盖 <strong>Pages 1003–1004</strong> 全部原著多项选择题：产褥期持续 6 周生理界定、产后鲜红色恶露（红恶露）特征、产后严禁使用卫生棉条以防中毒性休克综合征（TSS）硬性安全准则、乳房胀痛充盈（乳房充血）识别与照护、产后情绪低落（产后心绪不良）发生时机、抱持婴儿紧贴身体构建安全感、婴儿仰卧睡眠预防婴儿猝死综合征（SIDS）权威指南、头皮黄色结痂乳痂（脂溢性皮炎）鉴别、配方奶冷藏储存规范、更换尿布前向后擦拭防尿道逆行感染原则、脐带夹 24 至 48 小时干燥后移除标准，以及给婴儿盆浴前手腕内侧测水温关键安全步骤等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -131636,8 +131673,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">11 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch42-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch42-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 42 章儿童照护与家庭支持全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 11 道权威官方复习自测题（涵盖 <strong>Pages 1017–1018</strong> 全部原著多项选择题：支持工作者维持家庭日常生活常规核心职责、对家庭所有成员友好尊重且值得信赖的专业关系、积极倾听捕捉儿童非言语不适信号、利用适龄分散注意力引导行为、准时规律提供正餐点心、营造无冲突轻松就餐氛围、绝对禁止对儿童实施惩罚与体罚的硬性职业红线、疫苗激发自身免疫防御系统机理、胃肠炎（胃肠型感冒）学童缺课病因、患病儿童恢复正常进食饮水返校指征，以及免疫系统逐渐成熟提高抗病能力本质机理等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -133113,8 +133150,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">11 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch43-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch43-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 43 章老年人身心照护全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 11 道权威官方复习自测题（涵盖 <strong>Pages 1031–1032</strong> 全部原著多项选择题：成年晚期适应生理衰老发展任务、退休导致个人可支配收入下降现实、老年脆弱皮肤温和清洁与保湿润肤规范、双脚发凉穿棉袜绝对严禁热水袋防烫伤铁律、关节活动度（ROM）训练延缓肌肉骨骼退化价值、动脉硬化引起全身循环不良与四肢厥冷机理、严格遵从循环系统个性化照护计划、沉重被褥压迫阻碍胸廓扩张加重气促机理、消化液与消化酶分泌减少对油炸高脂食品的不耐受、医嘱增加液体入量安排在 17:00 前以防夜尿频繁及起夜跌倒，以及长期照护机构依法尊重与促进老年人合法性表达和亲密需求等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -135058,8 +135095,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch44-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch44-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 44 章家庭环境管理全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 12 道权威官方复习自测题（涵盖 <strong>Pages 1053–1054</strong> 全部原著多项选择题：支持人员家政职责范畴限定轻度家政、客户家属与个案经理共同商定护理计划任务、清洁铁律由最洁净处向最脏处擦拭防交叉污染、工序时间管理先启动洗衣机再除尘最后拖地、清理杂物前必须征询客户明确同意、不熟悉清洁剂严格遵循标签说明、清洁马桶必须佩戴耐用橡胶手套、厨房使用一次性纸巾擦手防细菌窝藏、热水洗涤尿布与耐高温棉质织物杀菌、处理体液污染床品严格执行常规防护规程、漂白剂绝对严禁与氨水或尿液混合防致命氯胺毒气生成、以及粪便和血渍必须首先用冷水冲洗防蛋白质受热凝固固化等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -137593,8 +137630,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">16 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch45-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch45-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 45 章用药协助与药物管理全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 16 道权威官方复习自测题（涵盖 <strong>Pages 1084–1085</strong> 全部原著考题：11道正误判断题与5道临床单选题，重点考查：支持人员协助服药而非给药法定职责、含片固体制剂、非处方药免处方特征、严禁支持人员自行替客户购买OTC药物、持牌医护监测疗效、不良反应必须立即汇报、支持人员绝对严禁分装药盒、MAR单如实签字、严格按规定时间服药以维持血药浓度、三查标签核对正确药物、严禁存放炉灶上方或浴室防潮热变质、协助关节炎长者拧开药盖、正确的颜色并非十大权益、MAR未列药物绝不擅自给予并咨询主管、原装带处方标签保存、以及长者拒服处方药必须签字并火速汇报主管等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -139594,8 +139631,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">20 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch46-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch46-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 46 章急性期照护与围手术期支持全真自测复习题与详尽执业精解</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 20 道权威官方复习自测题（涵盖 <strong>Pages 1108–1109</strong> 全部原著考题：9道正误判断题与11道临床单选题，重点考查：新入院客户礼貌直呼姓名问候、转科通常与病情改变相关、仅执业医生拥有出院医嘱法定处方权、术前严禁使用金属发夹防电灼伤、术前必须彻底卸除指甲油与化妆品以观察甲床微循环与缺氧发绀、术后血压骤降伴脉搏细速必须火速汇报护士防休克大出血、术后首次下床活动、严密监测出入液量、术后 6-8 小时内必须排尿防急性尿潴留、检耳镜专用于检查外耳道与鼓膜、体检前请受检者更衣并穿好检查袍、妇科检查膀胱截石位、检查前后严格执行手卫生、体检全程确保患者人身安全、择期手术预约在未来特定日期、向患者解释围手术期常规照护以缓解恐惧、NPO绝对禁食禁水防肺误吸、给药后必须绝对卧床拉起床档、深呼吸咳嗽锻炼预防肺不张与肺炎、以及术后至少每 2 小时翻身变换体位等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
@@ -141414,8 +141451,8 @@ Mr. Hamilton: (nodding his head) Meat.</div>
           <span class="sheet-meta-edition">12 Practice Exam Questions & Official Clinical Rationale</span>
         </div>
         
-    <div class="quiz-container" id="sec-ch47-quiz-inner" style="max-width:820px; margin:0 auto; padding:20px 16px;">
-      <div class="quiz-header" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
+    <div class="editorial-quiz-section" id="sec-ch47-quiz-inner" style="padding-top:20px;">
+      <div class="quiz-header-banner" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:18px 20px; margin-bottom:28px;">
         <span class="qh-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase;">KNOWLEDGE CHECK · INTERACTIVE PRACTICE</span>
         <h3 style="font-size:20px; font-weight:700; color:#14532d; margin:6px 0;">第 47 章临终关怀与生命末期照护全真自测复习题与详尽执业精解（全书终章）</h3>
         <p style="font-size:13.5px; color:#166534; margin:0;">原版 12 道权威官方复习自测题（涵盖 <strong>Pages 1128–1129</strong> 全部原著考题：12道临床单选题，重点考查：终末期疾病不可治愈性、跨年龄段成年人普遍畏惧孤独死去、库伯勒-罗斯哀伤五阶段之否认期、姑息照护缓解症状提升生命质量核心定义、临终陪伴倾听与适宜触摸、听觉是临终最后消失的感觉、定时轻柔变换体位防压疮、按患者舒适度与呼吸通畅安置卧位、法定人身照护授权代理人最高医疗决策权、不复苏 DNR 医嘱绝不执行心肺复苏术但全力维持舒适护理、濒死期陈-施氏呼吸与喉鸣音、以及遗体护理必须在依法宣告死亡后且在尸僵形成前立即执行等核心考点）。选项设置双向兼容类名 <code>quiz-opt eq-opt</code>，点击选项即时验证正误，并附官方权威标准答案及临床深度精解。</p>
