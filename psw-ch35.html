@@ -1,0 +1,2481 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 35: Speech and Language Disorders · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 35</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html">第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+<option value="psw-ch24.html">第 24 章 · 测量身高、体重与生命体征</option>
+<option value="psw-ch25.html">第 25 章 · 医学术语与专业缩写</option>
+<option value="psw-ch26.html">第 26 章 · 制定照护计划、口头交班汇报与书面病历记录</option>
+<option value="psw-ch27.html">第 27 章 · 营养与体液照护</option>
+<option value="psw-ch28.html">第 28 章 · 肠内营养与静脉输液照护</option>
+<option value="psw-ch29.html">第 29 章 · 排尿照护与留置导尿管</option>
+<option value="psw-ch30.html">第 30 章 · 肠道排泄照护与造口管理</option>
+<option value="psw-ch31.html">第 31 章 · 生长与发育全生命周期</option>
+<option value="psw-ch32.html">第 32 章 · 人体结构与功能</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 35 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 25:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 35 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Speech and Language Disorders</h1>
+      <h2 class="hero-title-cn">言语和语言障碍：失语症分类、言语失用症、构音障碍、言语病理学治疗、交流板与电子发声助语器、电脑平板辅助、DIPPS同理照护与沟通实操指南</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 829–838 · 8 道全真自测题</span>
+        <span class="meta-item">专业音频：25:00</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch35-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch35" aria-label="Chapter 35 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.829–838 · 共 10 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-829">第 829 页 · 第 829 页</option><option value="page-830">第 830 页 · 第 830 页</option><option value="page-831">第 831 页 · 第 831 页</option><option value="page-832">第 832 页 · 第 832 页</option><option value="page-833">第 833 页 · 第 833 页</option><option value="page-834">第 834 页 · 第 834 页</option><option value="page-835">第 835 页 · 第 835 页</option><option value="page-836">第 836 页 · 第 836 页</option><option value="page-837">第 837 页 · 第 837 页</option><option value="page-838">第 838 页 · 第 838 页</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-829" class="cp-chip" id="cp-chip-35-829" data-page="829" onclick="handlePageChipClick(event, 'page-829')" title="第 829 页 · 第 829 页"><span class="cp-num">p.829</span></a><a href="#page-830" class="cp-chip" id="cp-chip-35-830" data-page="830" onclick="handlePageChipClick(event, 'page-830')" title="第 830 页 · 第 830 页"><span class="cp-num">p.830</span></a><a href="#page-831" class="cp-chip" id="cp-chip-35-831" data-page="831" onclick="handlePageChipClick(event, 'page-831')" title="第 831 页 · 第 831 页"><span class="cp-num">p.831</span></a><a href="#page-832" class="cp-chip" id="cp-chip-35-832" data-page="832" onclick="handlePageChipClick(event, 'page-832')" title="第 832 页 · 第 832 页"><span class="cp-num">p.832</span></a><a href="#page-833" class="cp-chip" id="cp-chip-35-833" data-page="833" onclick="handlePageChipClick(event, 'page-833')" title="第 833 页 · 第 833 页"><span class="cp-num">p.833</span></a><a href="#page-834" class="cp-chip" id="cp-chip-35-834" data-page="834" onclick="handlePageChipClick(event, 'page-834')" title="第 834 页 · 第 834 页"><span class="cp-num">p.834</span></a><a href="#page-835" class="cp-chip" id="cp-chip-35-835" data-page="835" onclick="handlePageChipClick(event, 'page-835')" title="第 835 页 · 第 835 页"><span class="cp-num">p.835</span></a><a href="#page-836" class="cp-chip" id="cp-chip-35-836" data-page="836" onclick="handlePageChipClick(event, 'page-836')" title="第 836 页 · 第 836 页"><span class="cp-num">p.836</span></a><a href="#page-837" class="cp-chip" id="cp-chip-35-837" data-page="837" onclick="handlePageChipClick(event, 'page-837')" title="第 837 页 · 第 837 页"><span class="cp-num">p.837</span></a><a href="#page-838" class="cp-chip" id="cp-chip-35-838" data-page="838" onclick="handlePageChipClick(event, 'page-838')" title="第 838 页 · 第 838 页"><span class="cp-num">p.838</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 829                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-829" data-page="829" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 829 · 第 829 页</span>
+      <span style="color:#64748b;">Chapter Opener & Learning Objectives / 言语和语言障碍开篇、执业学习目标</span>
+    </div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch35/ch35_opener.jpg" alt="Chapter 35 Opener: Communicating with client experiencing speech challenges" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Chapter 35: Speech and Language Disorders. Supporting clients living with communication challenges to express their needs and preserve dignity.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">第 35 章：言语和语言障碍。支持面临沟通障碍的服务对象表达内心需求并维护个体尊严。</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h1 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Chapter 35: Speech and Language Disorders</h1>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">第 35 章：言语和语言障碍</div>
+</div>
+
+
+<div class="objectives-card" style="margin-top:24px; padding:20px; background:rgba(59, 130, 246, 0.05); border-left:4px solid #3b82f6; border-radius:6px;">
+  <h3 style="margin-top:0; color:#1d4ed8; font-size:1.15rem; font-weight:700;">OBJECTIVES / 学习目标</h3>
+  <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:14px;">After reading this chapter, the learner should be able to do the following: / 学完本章后，学习者应能够做到以下各项：</p>
+  <ul class="objectives-list" style="list-style-type:none; padding-left:0; margin-bottom:0;">
+    
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe types of aphasia.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">描述失语症的各种分类及其临床特征。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe apraxia of speech.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">描述言语失用症（口头失用症）的病理机制与表现。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe dysarthria.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">描述构音障碍的发病原因与运动神经临床特征。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe how speech and language disorders are treated.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐明言语和语言障碍的专业康复治疗及言语治疗师介入方法。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Identify what communication aids are and how they assist the client.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">识别常见沟通辅助工具的种类及其如何协助服务对象传递需求。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe how computers can assist clients with speech disorders.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐述计算机、平板电脑与语音合成软件如何协助言语障碍服务对象。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe the emotional effects of a language disorder.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐述语言交流障碍对服务对象及其家庭产生的情感、心理与社交冲击。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe how to communicate with clients with language disorders.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐明与患有语言障碍的服务对象进行有效沟通与支持的实操规范。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Apply the procedures described in this chapter to clinical practice properly.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">正确将本章所阐述的沟通原则与照护支持程序应用于临床实际照护。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 830                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-830" data-page="830" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 830 · 第 830 页</span>
+      <span style="color:#64748b;">Senses & Speech-Language Disorders, Aphasia Types / 感觉与言语语言障碍概述、失语症定义与7项核心术语</span>
+    </div>
+
+
+    <div class="glossary-component" id="sec-ch35-glossary" style="margin:20px 0 32px 0;">
+      <div class="gc-header">
+        <div class="gc-title-wrap">
+          <span class="gc-badge">KEY TERMS · 核心专业术语表</span>
+          <h3 class="gc-title">Chapter 35 言语和语言障碍核心病理学与沟通照护词汇表</h3>
+          <p class="gc-desc">Sorrentino 原版教材第 35 章共收录 <strong>7 个涵盖失语症（感受性/表达性/全失语症）、言语失用症、构音障碍等中枢与外周运动发音病理机制的核心学术词汇</strong>。支持实时模糊检索及「紧凑表格 / 记忆卡片」双模态自由切换。</p>
+        </div>
+        <div class="gc-controls">
+          <div class="gc-search-box">
+            <input type="text" id="kt-search-ch35" placeholder="🔍 搜索英文术语或中文释义..." oninput="filterGlossary('ch35')">
+          </div>
+          <div class="gc-view-toggle">
+            <button class="gc-toggle-btn active" id="btn-view-table-ch35" onclick="setGlossaryView('ch35', 'table')">📋 表格视图</button>
+            <button class="gc-toggle-btn" id="btn-view-cards-ch35" onclick="setGlossaryView('ch35', 'cards')">📇 卡片视图</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table View (Default) -->
+      <div class="kt-view-table" id="kt-table-view-ch35">
+        <div class="kt-table-scroll">
+          <table class="kt-data-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">英文术语 / 解剖概念</th>
+                <th style="width: 22%;">中文对照 / 原书页码</th>
+                <th style="width: 52%;">教材标准学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+              <tr class="kt-table-row" data-term="aphasia 失语症">
+                <td class="kt-cell-term">
+                  <span class="term-en">aphasia</span>
+                  <span class="term-phonetic">[əˈfeɪziə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">失语症</span>
+                  <span class="term-page-badge">p. 830</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Partial or complete loss (a) of speech and language skills (phasia), whether it is understanding the words or trying to say them correctly; caused by brain injury.</div>
+                  <div class="def-zh">失语症：因脑部受损（如脑卒中、创伤、肿瘤）导致的言语和语言技能的部分或完全丧失（a=无/缺失，phasia=言语），表现为理解词汇困难或无法正确说出词汇。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="apraxia of speech 言语失用症（口头失用症）">
+                <td class="kt-cell-term">
+                  <span class="term-en">apraxia of speech</span>
+                  <span class="term-phonetic">[eɪˈpræksiə ɒv spiːtʃ]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">言语失用症（口头失用症）</span>
+                  <span class="term-page-badge">p. 831</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Inability (a) to correctly move (praxia) the muscles used to speak, even though the muscles themselves are intact. Apraxia is usually caused by a brain injury.</div>
+                  <div class="def-zh">言语失用症（口头失用症）：大脑运动规划中枢受损，导致无法正确协调和协调用于发音发声的肌肉运动（a=无/不能，praxia=动作/运动规划），尽管言语肌肉本身的肌力和结构完好无损。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="dysarthria 构音障碍">
+                <td class="kt-cell-term">
+                  <span class="term-en">dysarthria</span>
+                  <span class="term-phonetic">[dɪsˈɑːθriə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">构音障碍</span>
+                  <span class="term-page-badge">p. 831</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Difficulty (dys) speaking clearly (arthria), because of weakness or paralysis in the muscles used for speech.</div>
+                  <div class="def-zh">构音障碍：因支配发音器官的神经肌肉软弱无力或瘫痪（dys=困难，arthria=关节/发音结构），导致发音不清、吐字含糊迟缓。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="expressive aphasia 表达性失语症（布罗卡失语症/运动性失语症）">
+                <td class="kt-cell-term">
+                  <span class="term-en">expressive aphasia</span>
+                  <span class="term-phonetic">[ɪkˈsprɛsɪv əˈfeɪziə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">表达性失语症（布罗卡失语症/运动性失语症）</span>
+                  <span class="term-page-badge">p. 830</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Difficulty speaking or writing.</div>
+                  <div class="def-zh">表达性失语症（布罗卡失语症/运动性失语症）：能够理解口语和文字，但口语表达或书写出现严重困难，说话词不达意、断续费力或用词混淆。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="expressive–receptive aphasia 表达-感觉混合性失语症（全失语症）">
+                <td class="kt-cell-term">
+                  <span class="term-en">expressive–receptive aphasia</span>
+                  <span class="term-phonetic">[ɪkˈsprɛsɪv rɪˈsɛptɪv əˈfeɪziə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">表达-感觉混合性失语症（全失语症）</span>
+                  <span class="term-page-badge">p. 831</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Difficulty speaking and understanding language. Also known as global aphasia.</div>
+                  <div class="def-zh">表达-感觉混合性失语症（全失语症）：兼具口语表达障碍与语言理解障碍，无法理解口语/书面语，同时丧失清晰表达能力。亦称为全失语症（global aphasia）。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="global aphasia 全失语症">
+                <td class="kt-cell-term">
+                  <span class="term-en">global aphasia</span>
+                  <span class="term-phonetic">[ˈɡləʊbl əˈfeɪziə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">全失语症</span>
+                  <span class="term-page-badge">p. 831</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">See expressive–receptive aphasia.</div>
+                  <div class="def-zh">全失语症：参见表达-感觉混合性失语症（expressive–receptive aphasia）。严重脑损伤累及语言广泛中枢所致。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="receptive aphasia 感受性/感觉性失语症（韦尼克失语症）">
+                <td class="kt-cell-term">
+                  <span class="term-en">receptive aphasia</span>
+                  <span class="term-phonetic">[rɪˈsɛptɪv əˈfeɪziə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">感受性/感觉性失语症（韦尼克失语症）</span>
+                  <span class="term-page-badge">p. 830</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Difficulty understanding language.</div>
+                  <div class="def-zh">感受性/感觉性失语症（韦尼克失语症）：理解口语或书面语的能力受损，服务对象既听不懂别人说的话，也无法理解自己所说的词汇，言语往往流利但混乱无意义。</div>
+                </td>
+              </tr>
+        
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mode 2: Flashcard Grid View -->
+      <div class="kt-view-cards" id="kt-cards-view-ch35" style="display:none;">
+        <div class="kt-cards-grid">
+    
+          <div class="kt-card" data-term="aphasia 失语症" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#1</span>
+                  <span class="card-page">p. 830</span>
+                </div>
+                <div class="card-term-en">aphasia</div>
+                <div class="card-term-phonetic">[əˈfeɪziə]</div>
+                <div class="card-term-zh">失语症</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Partial or complete loss (a) of speech and language skills (phasia), whether it is understanding the words or trying to say them correctly; caused by brain injury.</div>
+                <div class="card-def-zh">失语症：因脑部受损（如脑卒中、创伤、肿瘤）导致的言语和语言技能的部分或完全丧失（a=无/缺失，phasia=言语），表现为理解词汇困难或无法正确说出词汇。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="apraxia of speech 言语失用症（口头失用症）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#2</span>
+                  <span class="card-page">p. 831</span>
+                </div>
+                <div class="card-term-en">apraxia of speech</div>
+                <div class="card-term-phonetic">[eɪˈpræksiə ɒv spiːtʃ]</div>
+                <div class="card-term-zh">言语失用症（口头失用症）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Inability (a) to correctly move (praxia) the muscles used to speak, even though the muscles themselves are intact. Apraxia is usually caused by a brain injury.</div>
+                <div class="card-def-zh">言语失用症（口头失用症）：大脑运动规划中枢受损，导致无法正确协调和协调用于发音发声的肌肉运动（a=无/不能，praxia=动作/运动规划），尽管言语肌肉本身的肌力和结构完好无损。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="dysarthria 构音障碍" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#3</span>
+                  <span class="card-page">p. 831</span>
+                </div>
+                <div class="card-term-en">dysarthria</div>
+                <div class="card-term-phonetic">[dɪsˈɑːθriə]</div>
+                <div class="card-term-zh">构音障碍</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Difficulty (dys) speaking clearly (arthria), because of weakness or paralysis in the muscles used for speech.</div>
+                <div class="card-def-zh">构音障碍：因支配发音器官的神经肌肉软弱无力或瘫痪（dys=困难，arthria=关节/发音结构），导致发音不清、吐字含糊迟缓。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="expressive aphasia 表达性失语症（布罗卡失语症/运动性失语症）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#4</span>
+                  <span class="card-page">p. 830</span>
+                </div>
+                <div class="card-term-en">expressive aphasia</div>
+                <div class="card-term-phonetic">[ɪkˈsprɛsɪv əˈfeɪziə]</div>
+                <div class="card-term-zh">表达性失语症（布罗卡失语症/运动性失语症）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Difficulty speaking or writing.</div>
+                <div class="card-def-zh">表达性失语症（布罗卡失语症/运动性失语症）：能够理解口语和文字，但口语表达或书写出现严重困难，说话词不达意、断续费力或用词混淆。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="expressive–receptive aphasia 表达-感觉混合性失语症（全失语症）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#5</span>
+                  <span class="card-page">p. 831</span>
+                </div>
+                <div class="card-term-en">expressive–receptive aphasia</div>
+                <div class="card-term-phonetic">[ɪkˈsprɛsɪv rɪˈsɛptɪv əˈfeɪziə]</div>
+                <div class="card-term-zh">表达-感觉混合性失语症（全失语症）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Difficulty speaking and understanding language. Also known as global aphasia.</div>
+                <div class="card-def-zh">表达-感觉混合性失语症（全失语症）：兼具口语表达障碍与语言理解障碍，无法理解口语/书面语，同时丧失清晰表达能力。亦称为全失语症（global aphasia）。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="global aphasia 全失语症" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#6</span>
+                  <span class="card-page">p. 831</span>
+                </div>
+                <div class="card-term-en">global aphasia</div>
+                <div class="card-term-phonetic">[ˈɡləʊbl əˈfeɪziə]</div>
+                <div class="card-term-zh">全失语症</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">See expressive–receptive aphasia.</div>
+                <div class="card-def-zh">全失语症：参见表达-感觉混合性失语症（expressive–receptive aphasia）。严重脑损伤累及语言广泛中枢所致。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="receptive aphasia 感受性/感觉性失语症（韦尼克失语症）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#7</span>
+                  <span class="card-page">p. 830</span>
+                </div>
+                <div class="card-term-en">receptive aphasia</div>
+                <div class="card-term-phonetic">[rɪˈsɛptɪv əˈfeɪziə]</div>
+                <div class="card-term-zh">感受性/感觉性失语症（韦尼克失语症）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Difficulty understanding language.</div>
+                <div class="card-def-zh">感受性/感觉性失语症（韦尼克失语症）：理解口语或书面语的能力受损，服务对象既听不懂别人说的话，也无法理解自己所说的词汇，言语往往流利但混乱无意义。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Imagine what life would be like if you were unable to speak or communicate! That is a daily reality for people who have speech and language disorders. Speech and language disorders involve difficulty speaking, understanding, reading, or writing, and unfortunately, they can occur at any age.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">想象一下，如果您无法说话或交流，生活将会变成什么样！对于患有言语和语言障碍的人来说，这就是残酷的日常现实。言语和语言障碍涉及在说话、理解、阅读或书写方面的困难，不幸的是，它们可能发生于任何年龄段。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Chapter 9 discussed effective communication between clients who have no physical communication disorder. This chapter builds on the information presented in Chapter 9 and applies it to the process of communicating effectively with clients who have speech and language disorders. It should be noted that clients of all ages may have speech and language disorders. Some causes of communication difficulties include hearing impairment (see Chapter 34), neurological disorders and brain injury (see Chapter 33), vocal cord injury, autism, intellectual disability, emotional or psychiatric disorders or drug abuse (see Chapter 37), physical impairments such as cleft lip or palate, and developmental disorders (see Chapter 36). They should not be confused with the difficulty that clients who speak another language may have with understanding English.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">第 9 章讨论了与没有身体沟通障碍的服务对象之间的有效沟通。本章在此基础上，将这些信息应用于与患有言语和语言障碍的服务对象进行有效沟通的过程。需要注意的是，任何年龄段的服务对象都可能患有言语和语言障碍。沟通困难的某些病因包括听力受损（见第 34 章）、神经系统疾患和脑损伤（见第 33 章）、声带损伤、自闭症、智力障碍、情绪或精神障碍或药物滥用（见第 37 章）、唇腭裂等身体结构缺陷以及发育迟缓障碍（见第 36 章）。绝不应将这些病理障碍与母语为非英语的服务对象在理解英语时遇到的语言隔阂相混淆。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h3 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Health History in Speech and Language Assessment</h3>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">言语和语言评估中的详尽健康病史采集</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Clients with speech or language disorders should always have a thorough health history taken, usually by a doctor or a nurse, as soon as possible before treatment begins. The client’s history will provide details that can help the health care team better understand the health challenges the client has faced.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">在治疗开始之前，通常应由医生或护士尽快为患有言语或语言障碍的服务对象采集详尽的健康病史。服务对象的病史将提供详细信息，帮助医疗护理团队更深入地了解服务对象所面临的健康挑战。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">APHASIA</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">失语症</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Aphasia is the partial or complete loss (a) of speech and language skills (phasia), whether it is understanding the words or trying to say them correctly. It is caused by brain injury. Stroke (also called cerebral vascular accident, or CVA), head trauma, and brain tumours are the most common causes of aphasia. Some clients with aphasia regain some or all of their language skills, but in some, aphasia is permanent. For example, clients with dementia who develop aphasia do not typically regain verbal communication skills (see Chapter 38).</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">失语症是指言语和语言技能的部分或完全丧失（a=无/缺失，phasia=言语），无论表现为理解词汇困难还是努力正确说出词汇。它由脑部损伤引起。中风（亦称脑血管意外，CVA）、头部外伤和脑肿瘤是失语症最常见的病因。一些失语症服务对象能够缓慢恢复部分或全部语言技能，但对某些人而言，失语则是永久性的。例如，发展为失语症的失智症服务对象通常无法重新恢复口头言语交流技能（见第 38 章）。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">For communication to occur, a message must be sent, received, and interpreted. Clients with aphasia are unable to send messages, unable to understand the message received, or both.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">要实现沟通，必须完成信息的发送、接收与解释。失语症服务对象可能无法发送信息、无法理解接收到的信息，或者两者兼而有之。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h3 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Types of Aphasia</h3>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">失语症的类型</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">There are three basic types of aphasia:</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">失语症主要分为三种基本类型：</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">1. Receptive aphasia—difficulty understanding language, including both spoken and written words. Clients with receptive aphasia cannot understand their own words or others’ words, so their speech is mixed up or muddled. They also mix up sounds within words. A client trying to say “hospital,” for example, may say “posital.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">1. 感受性/感觉性失语症（Receptive aphasia）——理解语言（包括口语和书面文字）存在困难。患有感受性失语症的服务对象既无法理解自己说出的话，也无法理解他人的话，因此他们的言语往往混淆错乱。他们还会混淆词内的发音。例如，一位想说“医院（hospital）”的服务对象可能会说成“posital”。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">2. Expressive aphasia—difficulty speaking or writing. Clients with expressive aphasia can understand spoken and written words, but their speech or written language is jumbled or slurred and difficult to understand. They think one thing but say or write another. For example, a client may want food but ask for a newspaper. Clients with expressive aphasia cannot think of the right words or put the right sounds together to form words and sentences.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">2. 表达性失语症（Expressive aphasia）——口头说话或书写困难。患有表达性失语症的服务对象能够完全理解口语和文字，但他们的口语或书写语言杂乱、含混不清且难以辨认。他们心里想的是一回事，说出或写出的却是另一回事。例如，服务对象可能想要食物，脱口而出的却是索要报纸。表达性失语症患者无法准确想起对应的词汇，或者无法将正确的发音拼凑成单词和完整句子。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 831                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-831" data-page="831" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 831 · 第 831 页</span>
+      <span style="color:#64748b;">Global Aphasia, Apraxia of Speech, Dysarthria & Emotional Effects / 全失语症、言语失用症、构音障碍与情感心理冲击</span>
+    </div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">For example, a client trying to say, “Please give me a glass of water” may actually say “Come. Come. Come. Come.” Some may leave out connecting words. Others can produce only meaningless sounds or syllables. Because clients with expressive aphasia are very aware of their mistakes since they can understand what they are saying, they may become frustrated or depressed, leading them to cry or swear for no apparent reason.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">例如，服务对象想要表达“请给我一杯水”，实际说出的可能却是“来。来。来。来。”有些人可能会漏掉连词。另一些人只能发出毫无意义的声音或音节。由于表达性失语症服务对象具有完全的认知理解能力，他们对自己说错的话非常清楚，因而容易感到极度沮丧或抑郁，甚至无缘无故地哭泣或咒骂。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">3. Expressive–receptive aphasia (also known as global aphasia)—difficulty speaking and understanding written and spoken language. Some clients with expressive–receptive aphasia can say only “yes” and “no” and make sounds such as “da da.” Some others have lost all speech and language skills.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">3. 表达-感觉混合性失语症（亦称全失语症，Global aphasia）——在口语表达以及口语和书面语理解两方面均存在严重困难。某些患有混合性失语症的服务对象只能说出“是”与“否”，或者发出诸如“哒哒”的声音。另一些服务对象则丧失了全部言语与语言技能。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">APRAXIA OF SPEECH</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">言语失用症</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Apraxia of speech (verbal apraxia) is the inability (a) to correctly move (praxia) the muscles used to speak, even though the muscles themselves are intact. Clients with this disorder are not able to control their lip, jaw, or tongue movements. As a result, they are not able to say the desired sounds and words. Apraxia of speech is caused by brain injury resulting from stroke, accident, brain tumour, or infection. Some babies are born with this disorder. Apraxia of speech can occur alone or with aphasia.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">言语失用症（口头失用症）是指虽然用于发音的肌肉本身完好无损，但无法正确协调和运动（praxia）这些肌肉以进行言语表达（a=不能/缺失）。患有此障碍的服务对象无法自如控制嘴唇、下颌或舌头的动作。结果，他们无法发出想要的声音和词汇。言语失用症是由中风、意外事故、脑肿瘤或感染引起的脑损伤所致。有些婴儿出生时就患有这种障碍。言语失用症可以单独发生，也可与失语症合并出现。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Understanding the speech of clients with apraxia of speech is difficult, as they usually speak very slowly and may use words that sound similar to but not be exactly what they are trying to say. For example, a client may say “me” instead of “see.” As well, the order of sounds within words may be mixed up. For example, a client may say “thootshub” instead of “toothbrush.” Some clients have difficulty putting words in the right order or finding the right words. Inconsistent speech is common—that is, a person may say something correctly one time and incorrectly another time.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">理解言语失用症服务对象的话非常困难，因为他们通常说话极其缓慢，并且可能使用发音相似但并非其本意的词语。例如，服务对象可能将“see”说成“me”。此外，单词内的音节顺序可能被颠倒。例如，服务对象可能把“牙刷（toothbrush）”说成“thootshub”。有些人在组织词序或寻找合适词汇方面存在困难。语音表现不一致极为常见——即一个人可能某一次说得很正确，而另一次却说错了。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">DYSARTHRIA</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">构音障碍</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Dysarthria is difficulty (dys) speaking clearly (arthria) because of weakness or paralysis in the muscles used for speech. Common causes of dysarthria include cerebral palsy, multiple sclerosis, head injury, tumour, and infection.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">构音障碍是指因用于发音的肌肉软弱无力或瘫痪，导致吐字发音不清（dys=困难，arthria=关节/发音结构）。构音障碍的常见病因包括脑瘫、多发性硬化症、头部外伤、肿瘤以及感染。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Clients with dysarthria usually have slurred, slow, and soft speech and speak in flat, harsh, or nasal tones. They often have difficulty forming words, spacing their words, and breathing while speaking. Speech errors are usually consistent and predictable, so as you work with a client with dysarthria you may become familiar with their speech. (See TABLE 35.1: A Comparison Between Aphasia, Apraxia, and Dysarthria).</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">构音障碍服务对象的言语通常含糊不清、缓慢且声音微弱，并带有单调平淡、粗糙或鼻音过重等声调特征。他们往往在词语成型、断句间隔以及说话时的呼吸协调方面存在困难。其语音错误通常是一致且可预测的，因此随着你与构音障碍服务对象共同工作，你会逐渐熟悉其独特的言语模式。（参见表 35.1：失语症、失用症与构音障碍的对比）。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">EMOTIONAL EFFECTS OF SPEECH AND LANGUAGE DISORDERS</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">言语和语言障碍的情绪影响</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">How would you feel if you were not able to express your thoughts and feelings? How would you feel if you were not able to understand what others are saying? Clients with speech and language disorders experience emotions such as frustration, depression, and anger, as well as low self-esteem, shame, and guilt. BOX 35.1 contains comments from clients who have had aphasia.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">如果您无法表达自己的想法与感受，您会有何感受？如果您听不懂别人在说什么，您又会有何感受？患有言语和语言障碍的服务对象会经历沮丧、抑郁和愤怒等强烈情绪，并伴有自尊心低下、羞耻感和内疚感。专栏 35.1 收录了经历过失语症的服务对象的真实心声。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Communication is important for functioning and for maintaining relationships with others. Being unable to communicate may cause a client to avoid social situations, or family and friends may avoid visiting the client instead. Speech and language disorders can be very stressful for families, as the relations between all family members are usually affected.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">沟通对于日常社会功能运作以及维系人际关系至关重要。无法正常沟通可能导致服务对象主动逃避社交场合，或者亲友反而因为不知如何面对而减少探访。言语和语言障碍会给整个家庭带来沉重压力，因为所有家庭成员之间的关系通常都会受到波及。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Many of us often find sharing our thoughts and feelings with others difficult. It is even more difficult for someone who has a speech or language disorder since even everyday conversations require great effort. Clients with speech and language disorders may speak slowly, may struggle with words, or may mispronounce words frequently. These communication difficulties might be frustrating for both the affected person and the listener, who may have to struggle to understand. Family members may find themselves trying to correct the person or becoming irritated with the person if the same word or phrase is repeatedly mispronounced. The person who cannot speak clearly might be tempted to avoid speaking.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">我们中的许多人常常觉得与他人分享思想和情感并非易事。对于患有言语或语言障碍的人而言，这更是难上加难，因为哪怕是日常琐碎的闲聊也需要付出巨大的心力。患有言语和语言障碍的服务对象可能语速极其缓慢、费力搜寻词汇，或者频繁读错字音。这些沟通障碍可能会让当事人与倾听者双方都感到精疲力竭与沮丧——倾听者必须费力揣摩才能听懂。如果同一个词语被反复读错，家庭成员可能会忍不住频繁纠正对方，甚至变得烦躁易怒。而无法清晰表达的患者则往往产生逃避说话的退缩倾向。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Clients with speech or language disorders may have difficulties communicating at school or not be able to work, so they may suffer the added stress of financial concerns. For some adults, even routine tasks like shopping, cooking, paying bills, and doing household repairs may be impossible, so they are forced to depend on others to do what they used to be able to do themselves.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">言语或语言障碍的服务对象在学校沟通可能受阻，或者完全丧失工作能力，因而不得不承受经济拮据带来的额外压力。对于某些成年人而言，甚至像购物、做饭、支付账单和维修家电等日常琐事也变得无法企及，不得不被迫依赖他人来替自己完成曾经轻而易举的事情。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 832                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-832" data-page="832" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 832 · 第 832 页</span>
+      <span style="color:#64748b;">Table 35.1 Comparison & Box 35.1 Client Voices / 表35.1失语失用构音鉴别与专栏35.1失语症患者真实心声</span>
+    </div>
+
+
+<div class="editorial-table-wrap" style="margin:24px 0; overflow-x:auto;">
+  <div style="font-weight:700; color:var(--accent-primary, #1e3a8a); margin-bottom:4px; font-size:14px;">TABLE 35.1: A Comparison Between Aphasia, Apraxia, and Dysarthria</div>
+  <div style="font-size:13px; color:var(--text-secondary); margin-bottom:10px;">表 35.1：失语症、失用症与构音障碍的鉴别比较</div>
+  <table style="width:100%; border-collapse:collapse; text-align:left;">
+    <thead><tr><th style='padding:10px 12px; border:1px solid #cbd5e1; background:#f8fafc; font-size:13px;'>Feature / 特征</th><th style='padding:10px 12px; border:1px solid #cbd5e1; background:#f8fafc; font-size:13px;'>Aphasia / 失语症</th><th style='padding:10px 12px; border:1px solid #cbd5e1; background:#f8fafc; font-size:13px;'>Apraxia of Speech / 言语失用症</th><th style='padding:10px 12px; border:1px solid #cbd5e1; background:#f8fafc; font-size:13px;'>Dysarthria / 构音障碍</th></tr></thead>
+    <tbody><tr><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Definition</div><div style='color:var(--text-secondary); margin-top:2px;'>定义</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>The partial or complete loss of speech and language skills, whether it is understanding the words or trying to say them correctly.</div><div style='color:var(--text-secondary); margin-top:2px;'>言语和语言技能的部分或完全丧失，表现为理解词汇困难或努力正确说出词汇。</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>The inability to correctly move the muscles used to speak, even though the muscles are intact.</div><div style='color:var(--text-secondary); margin-top:2px;'>虽然发音肌肉本身完好无损，但无法正确协调运动发声肌肉。</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Difficulty speaking clearly because of weakness or paralysis in the muscles used for speech.</div><div style='color:var(--text-secondary); margin-top:2px;'>因支配发音的神经肌肉无力或瘫痪，导致吐字发音不清。</div></td></tr><tr><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Cause</div><div style='color:var(--text-secondary); margin-top:2px;'>病因</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Caused by brain injury, such as stroke, head trauma, and brain tumours.</div><div style='color:var(--text-secondary); margin-top:2px;'>脑损伤所致，如中风、头部外伤及脑肿瘤。</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Caused by brain injury resulting from stroke, accident, brain tumour, or infection. Some babies are born with this disorder. Can occur alone or with aphasia.</div><div style='color:var(--text-secondary); margin-top:2px;'>中风、意外事故、脑肿瘤或感染所致脑损伤；部分婴儿先天罹患；可单独发生或伴随失语症。</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Common causes include cerebral palsy, multiple sclerosis, head injury, tumour, and infection.</div><div style='color:var(--text-secondary); margin-top:2px;'>常见病因包括脑瘫、多发性硬化症、颅脑损伤、肿瘤以及感染。</div></td></tr><tr><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Description</div><div style='color:var(--text-secondary); margin-top:2px;'>临床表现</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>1. Receptive aphasia is difficulty understanding language, including both spoken and written words.
+2. Expressive aphasia is difficulty speaking or writing.</div><div style='color:var(--text-secondary); margin-top:2px;'>1. 感受性失语症：理解语言（包括口语和书面文字）困难。
+2. 表达性失语症：口语说话或书写表达困难。</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>• Clients may speak very slowly and may use words that sound similar to but not be exactly what they are trying to say.
+• The order of sounds within words may be mixed up.
+• Clients may have difficulty putting words in the right order or finding the right words.</div><div style='color:var(--text-secondary); margin-top:2px;'>• 说话极其缓慢，可能使用发音近似但非本意的词。
+• 单词内音素顺序颠倒错乱。
+• 词语排序困难或难以搜寻目标词汇。</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>• Clients will usually have slurred, slow, and soft speech and speak in flat, harsh, or nasal tones.
+• Clients will often have problems forming words, spacing their words, and breathing while speaking.</div><div style='color:var(--text-secondary); margin-top:2px;'>• 吐字含糊、语速缓慢、声音微弱，音调单调、粗糙或鼻音过重。
+• 组词发音障碍、词语间隔异常以及说话时呼吸协调困难。</div></td></tr></tbody>
+  </table>
+</div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(139, 92, 246, 0.04); border-left:4px solid #8b5cf6; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#6d28d9; font-size:1.05rem; font-weight:700;">BOX 35.1: Comments From Clients Who Have Had Aphasia / 专栏 35.1：失语症患者的真实心声</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">“I wanted to speak, but no sounds came out of my mouth.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">“我想开口说话，但嘴里却发不出半点声音。”</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">“I felt … imprisoned in a tomb.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">“我觉得……自己仿佛被禁锢在一座孤寂的坟墓里。”</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">“I noticed a change in me. I was another person, someone who was unable to express the little I knew. I was ashamed.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">“我察觉到了自己的改变。我变成了另一个人，一个连自己仅有的一点想法都无法表达的人。我感到无比羞愧。”</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">“If you don’t know words, you keep quiet. … When it’s noisy, you can’t talk. … People talk for us. … Anyway, when we talk, it’s not the way it used to be … you keep quiet.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">“如果你不知道该用什么词，你就只能保持沉默。……环境嘈杂时，你根本没法说话。……别人替我们把话说完。……无论如何，当我们开口时，一切已再不像从前那样……于是你选择沉默。”</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">“Once I had to answer the intercom. I said ‘Hello?’ I heard the person speaking on the other end, but I couldn’t understand him. So, to prove that it wasn’t me who had the problem, I repeated, ‘Hello! Hello! Hello!’ as if to signal the line was bad. That’s how I got out of that situation.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">“有一次我不得不去接对讲机。我说‘喂？’我能听到对方在说话，但我完全听不懂他的意思。为了证明不是我出了问题，我只能一遍遍重复：‘喂！喂！喂！’假装是信号线路不好。我就是这样敷衍摆脱那个尴尬处境的。”</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">“I feel useless … slightly distanced from the family because I can only understand things after some time. My world has shrunk.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">“我觉得自己毫无用处……与家人渐渐有了隔阂与疏离感，因为很多事情我需要缓过很久才能明白。我的世界已经萎缩了。”</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">“I want to say something … just before I start saying it, she helps. Sometimes if she would stay back and let me finish, I would be all right.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">“我想说点什么……就在我刚要开口前，她就急着插嘴‘帮忙’。有时她如果能退后一步、耐心地让我把话说完，我其实是完全可以说好的。”</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Source: Joanette, Y., Lafond, D., & Lecours, A. R. (1993). The person with aphasia. In D. Lafond et al. (Eds.), Living with aphasia: Psychosocial issues (pp. 19–39). Singular Publishing Group.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">文献来源：Joanette, Y., Lafond, D., & Lecours, A. R. (1993). 失语症患者心理社会问题专著。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 833                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-833" data-page="833" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 833 · 第 833 页</span>
+      <span style="color:#64748b;">SLP Treatment, Communication Boards (Fig 35.1) & Talking Aids (Fig 35.2) / 语言病理治疗、交流板（图35.1）与电子发声助语器（图35.2）</span>
+    </div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Emotional reactions vary from client to client and from family to family. Observe and listen to your clients and their families. Put yourself in their place. How would you feel and want to be treated in their position? It is important to accept and understand displays of emotion.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">不同服务对象和家庭的情感反应各不相同。请细心观察并倾听您的服务对象及其家属。设身处地为他们着想：如果置身于他们的处境，您会有何种感受？又希望受到怎样的对待？接纳并理解服务对象所流露出的各种情绪至关重要。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">TREATMENT FOR SPEECH AND LANGUAGE DISORDERS</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">言语和语言障碍的治疗</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">A speech therapist (also called a speech–language pathologist) helps the client with a speech disorder learn to communicate and also helps family members learn new communication techniques. Methods used depend on the age of the client, their disorder, its cause, and its severity. Practice and exercises may help the client learn (or relearn) speech and language skills. In the case of dysarthria, the client practises muscle-strengthening exercises and learns how to breathe while speaking.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">言语治疗师（亦称言语-语言病理学家，SLP）协助患有言语障碍的服务对象重新学习沟通技能，并指导家属掌握新的沟通技巧。所采取的方法取决于服务对象的年龄、所患障碍、病因及其严重程度。持续的训练与练习有助于服务对象掌握（或重新习得）言语和语言技能。对于构音障碍，服务对象需要进行发音肌肉强化练习，并学习说话时的科学呼吸调节法。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Clients with speech and language disorders also learn how to improve existing skills. For example, a client learns to use body language and facial expressions to make communication more effective. Some clients learn new skills, such as sign language.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">言语和语言障碍服务对象还会学习如何提升现有的代偿技能。例如，服务对象学会利用肢体语言和面部表情来增强沟通的有效性。一些服务对象还会掌握手语等全新技能。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Those with severe speech and language challenges may never regain their ability to speak and understand language. These clients may be helped by the following aids:</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">那些言语和语言功能受损严重的服务对象，可能永远无法重新恢复说话和理解语言的能力。以下辅助工具可以为这些服务对象提供关键帮助：</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Communication boards. These are boards with pictures or words that show functions or tasks (FIGURE 35.1). There are pictures or words related to activities of daily living, such as sleep, food, drink, medicine, and eyeglasses. The client points to the things that are needed. The type of communication board depends on the client’s needs. For those who can read, words rather than pictures are often used. For those with quadriplegia who are not able to speak or point, eye-gaze boards may be used. The client indicates their needs by gazing at the picture or word on the board and either blinking or using another signal to accept it.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 交流板（沟通板）：这些是印有显示各项日常功能或任务的图画或文字的板卡（图 35.1）。上面包含与日常生活活动（ADL）相关的图片或词语，如睡眠、食物、饮水、药物和眼镜等。服务对象只需用手指指向所需的物品。沟通板的具体类型取决于服务对象的实际需求。对于具备阅读能力的人，通常使用文字而非图片。对于无法言语且无法用手指向的四肢瘫痪患者，可以使用凝视板（眼动仪板）：服务对象通过凝视板上的图片或文字，并配合眨眼或其他预定信号来表达确认。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Mechanical and electronic devices. These devices range in complexity and cost—from large computers that cannot be moved easily from place to place to handheld devices such as electronic talking aids (FIGURES 35.2 and 35.3). The client touches a picture displayed on the screen, and the message is then voiced by the device. For example, the client touches a picture of a sad face. A recorded message says, “I am sad.” The message may also be printed on a screen, and some devices convert words into pictures.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 机械与电子设备：这些设备的复杂度和造价各有不同——从无法轻易移动的大型台式计算机，到诸如电子发声助语器等便携手持设备（图 35.2 与图 35.3）。服务对象只需触摸屏幕上显示的图片，设备便会自动播报出对应的语音信息。例如，服务对象点击一张悲伤面孔的图片，录音信息就会播报出“我很伤心”。信息也可以打印或显示在屏幕上，某些精密设备还能将文字实时转换为直观图像。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch35/fig-35-1.jpg" alt="Figure 35.1: Communication board of images" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURE 35.1 Communication board of images the client with aphasia can use to communicate with.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 35.1：失语症服务对象可用于进行日常需求沟通的图文交流板。</p>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch35/fig-35-2.jpg" alt="Figure 35.2: Electronic talking aid using symbols" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURE 35.2 Electronic talking aid using symbols. (Source: Poule. CC BY-SA 3.0)</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 35.2：基于图形符号的电子发声助语设备。（来源：Poule，CC BY-SA 3.0 协议授权）</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h3 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">The Use of Computers or Tablets to Assist Clients of All Ages With Speech and Language Challenges</h3>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">利用计算机或平板电脑协助各年龄段言语和语言障碍服务对象</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">A variety of communication tools are available to assist clients who have speech and language challenges to communicate more easily. For example, clients with verbal-expression communication disorders (such as dyslexia or verbal apraxia) often have difficulty reading or writing. Electronic devices that use a combination of screen reading, magnification systems, and alternate input provide computing access to clients with such impairments.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">目前有多种沟通工具可供选择，以协助面临言语和语言挑战的服务对象更轻松地交流。例如，患有言语表达沟通障碍（如阅读障碍或口头失用症）的服务对象在阅读或书写方面往往存在困难。结合了屏幕朗读、画面放大系统以及替代性输入方式的电子设备，为这类功能受损的服务对象提供了使用计算机的无障碍通道。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 834                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-834" data-page="834" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 834 · 第 834 页</span>
+      <span style="color:#64748b;">Assistive Computers (Fig 35.3) & Tablets (Fig 35.4) / 电脑语音合成设备（图35.3）、平板辅助应用（图35.4）与照护疲劳管理</span>
+    </div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">As well, electronic tablets that are small, easy to transport, and easy for clients to use can be customized with downloadable applications to assist the client (FIGURE 35.4).</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">此外，体积小巧、便于携带且易于操作的平板电脑，可通过下载定制化的应用程序来协助服务对象交流（图 35.4）。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">For clients who are unable to speak clearly but are able to type in the correct words or identify symbols that represent the words, there are systems available that can speak for them. Most of the software packages used for these applications can operate with a speech synthesizer. The speech that comes from the machine is electronically generated but can be adapted for a male or female voice. These computer-assisted electronic aids are expensive and may be difficult for some to carry around, but they have proven to be invaluable in improving the quality of life for persons with speech and language challenges.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">对于无法清晰说话、但能够准确键入词语或辨认代表词义符号的服务对象，现有多种系统可以替他们“发声发言”。用于这些应用的大多数软件包都能与语音合成器协同工作。机器发出的声音虽然是电子合成的，但可以根据需要调整为男声或女声。这些计算机辅助电子助具造价较为昂贵，对某些人而言随身携带也有一定难度，但事实证明，它们在提高言语和语言障碍患者的生活质量方面发挥了无可替代的宝贵价值。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch35/fig-35-3.jpg" alt="Figure 35.3: A computer that provides a speaking voice to its user" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURE 35.3 A computer that provides a speaking voice to its user. (Image courtesy SpecialNeedsComputers.ca, St. Catharines, ON.)</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 35.3：为使用者提供人工合成语音发声的专用无障碍计算机系统。（图片承蒙安大略省圣凯瑟琳市 SpecialNeedsComputers.ca 授权提供）</p>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch35/fig-35-4.jpg" alt="Figure 35.4: Tablet communication system" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">FIGURE 35.4 This tablet is simple and large enough to see any printed words or symbols, yet small enough for many clients with communication challenges to use. This client also uses the tablet to communicate electronically with her grandchildren who live in another province. (iStockphoto/Sladic.)</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 35.4：该平板电脑界面简洁且屏幕足够大，便于清晰查看打印文字或符号，同时又轻便小巧，易于许多沟通受限的服务对象使用。该服务对象还利用该平板电脑与居住在外省的孙辈进行电子交流。（来源：iStockphoto/Sladic）</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">SUPPORTING AND COMMUNICATING WITH CLIENTS</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">支持与沟通实操指导</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">As a support worker, to effectively communicate with your clients who have speech and language disorders, you must first know how you communicate in general. Do you speak clearly, or do you mumble? Do you use gestures? With these clients in particular, you may have to change the way you speak. Follow the care plan and your supervisor’s instructions. Use the communication methods that are best for your client. While you are speaking, you need to remember to be mindful of your facial expressions, as they can reflect any impatience or frustration you feel with the client.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">作为支持工作者，为了与患有言语和语言障碍的服务对象有效沟通，您首先必须了解自己平时的沟通习惯。您说话是否吐字清晰，还是习惯含混不清？您是否善于借助手势？特别是在面对这些服务对象时，您可能必须改变自己平时的说话方式。请严格遵循照护计划以及主管的指导，采用最适合该服务对象的沟通方法。在说话时，您需要时刻注意自己的面部表情，因为它们会敏锐地泄露您对服务对象所产生的不耐烦或挫败情绪。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The effort of understanding others and making oneself understood can be exhausting, especially to clients with speech and language disorders, so they often tire easily. Their other health issues may also cause fatigue. Be alert for signs of fatigue, such as drooping shoulders, irritability, lack of interest, and a decline in understanding. Reduce surrounding distractions (e.g., close doors and windows, turn down the volume of a television or radio), which can make concentrating difficult for the client. Some clients with speech and language disorders will appear withdrawn and uninterested. Spend extra time with these clients. Social interaction can promote self-esteem and recovery. Always include them in conversations, even if they cannot understand you.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">费力理解他人以及表达自己会令人精疲力竭，尤其是对于患有言语和语言障碍的服务对象而言，他们往往极易疲倦。他们身体的其他健康问题也可能加重疲劳。请时刻警惕疲劳的迹象，如垂肩、烦躁易怒、丧失兴趣以及理解力下降等。尽量减少周围环境的干扰（例如关紧门窗、调低电视或收音机的音量），这些噪音会让服务对象难以集中注意力。某些言语和语言障碍服务对象可能会显得孤僻退缩、对周围事物漠不关心。请多花时间陪伴他们：持续的社交互动有助于提升自尊并促进康复；即使他们不能完全理解，也务必将他们纳入交谈与互动中。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Clients with speech and language disorders should be treated with respect and empathy. Remember DIPPS—the five principles of support work (see the Providing Compassionate Care: Communicating With Clients Who Have Speech and Language Disorders box; also see the Supporting Mr. Hamilton, Part 1: Communicating With Clients Who Have Expressive Aphasia and Supporting Mr. Hamilton, Part 2: Communicating With Clients Who Have Expressive Aphasia boxes). Follow the guidelines in BOX 35.2 on page 836.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">患有言语和语言障碍的服务对象应当受到充分的尊重与同理对待。请牢记 DIPPS——支持工作的五大核心原则（参见“提供同理照护：与患有言语和语言障碍的服务对象沟通”专栏；另见“支持汉密尔顿先生第一部分：与患有表达性失语症的服务对象沟通”与“支持汉密尔顿先生第二部分：与患有表达性失语症的服务对象沟通”专栏）。请遵循第 836 页专栏 35.2 中的沟通指南。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 835                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-835" data-page="835" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 835 · 第 835 页</span>
+      <span style="color:#64748b;">DIPPS Compassionate Care & Supporting Mr. Hamilton Part 1 / DIPPS同理照护准则与汉密尔顿先生表达性失语照护案例（一）</span>
+    </div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(236, 72, 153, 0.04); border-left:4px solid #ec4899; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#be185d; font-size:1.05rem; font-weight:700;">Providing Compassionate Care: Communicating With Clients Who Have Speech and Language Disorders / 提供同理照护：与患有言语和语言障碍的服务对象沟通（DIPPS核心原则）</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Dignity. Showing respect, warmth, and compassion are important ways to promote dignity. Never talk about a client as if the person were not present. Address questions for and comments about the client to the client, not to others who are present. Some clients with language disorders are embarrassed to speak in front of others, especially strangers, so do not force a client to talk in front of others (see the Supporting Mr. Hamilton, Part 1: Communicating With Clients Who Have Expressive Aphasia box).</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 尊严（Dignity）：展现尊重、温暖与同情是维护尊严的关键途径。绝不要当着服务对象的面议论他们，仿佛他们根本不存在一样。向服务对象提问或发表与其相关的意见时，必须直接面对服务对象本人，而不是转问在场的旁人。某些语言障碍服务对象在他人（尤其是陌生人）面前开口会感到难堪羞愧，因此切勿强迫他们在众人面前说话（参见“支持汉密尔顿先生（第一部分）”专栏）。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Independence. Clients with speech and language disorders must gain, regain, or maintain independence and control. Support, encouragement, and patience are important. Never show impatience, frustration, or worry when a client is having difficulty speaking or understanding. Do not talk down to the client. (The Supporting Mr. Hamilton, Part 2: Communicating With Clients Who Have Expressive Aphasia box describes a support worker patiently using body language and symbols to learn about a client’s needs.) The care plan may list ways to encourage communication.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 独立（Independence）：患有言语和语言障碍的服务对象必须获取、重新获得或维持其生活的独立性与掌控感。支持、鼓励与耐心至关重要。当服务对象说话或理解遇到困难时，绝不可流露出不耐烦、沮丧或担忧。绝不要居高临下轻视对方。（“支持汉密尔顿先生（第二部分）”专栏描述了支持工作者如何耐心利用肢体语言和符号来获知服务对象的需求。）照护计划中可能会列出促进沟通的具体方法。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Individualized care. For care to be truly client-centred, it must be planned or adapted to fit the client’s choices, physical and cognitive strengths and limitations, personality, and care plan. Post ways to communicate effectively with the client so that they can be easily referred to. Avoid situations that force the client to embarrass themselves when attempting to communicate.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 个性化照护（Individualized care）：要实现真正以人为本的照护，照护措施必须根据服务对象的自主选择、身体与认知优劣势、个性特征以及照护计划进行个性化量身定制。将与该服务对象有效沟通的特定方法张贴在醒目位置，以便所有照护人员查阅。避免让服务对象在试图沟通时陷入难堪狼狈的尴尬境地。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Preferences. Limit the number of choices to help the client express preferences without difficulty. Be encouraging and supportive. A useful tip is to write down the available choices beforehand so that the client can pick one easily.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 偏好尊重（Preferences）：适当限制选项的数量，以帮助服务对象轻松表达个人喜好。给予充分的鼓励与支持。一个实用的工作技巧是预先将可供选择的事项写在纸上，以便服务对象能够轻松指认选择。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Privacy. Keep information about your client confidential. Remember your role and relationship with the client at all times. Be professional in your communication. Learn to be comfortable with silence. Do not feel that you need to talk when the client is silent.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 隐私保护（Privacy）：对服务对象的全部个人信息严格保密。时刻牢记自己的专业角色以及与服务对象之间的执业关系界限。在沟通过程中保持专业操守。学会适应沉默并与安静泰然处之：当服务对象保持静默时，无需觉得必须强行填补空白去搭话。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Safety. Take extra time to explain procedures. Do not explain all the steps at once. Explain the step just before you do it. Avoid using medical terms. Speak clearly and slowly. Be alert for signs that the client has not understood you.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 安全第一（Safety）：多花时间解释各项操作程序。切勿一股脑儿将所有步骤全部说完；应当在即将执行某一步骤之前，单独清晰解释该步骤。避免使用生涩的医学术语。说话吐字清晰缓慢。时刻警惕服务对象尚未完全听懂理解的微表情与反应迹象。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(16, 185, 129, 0.04); border-left:4px solid #10b981; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#047857; font-size:1.05rem; font-weight:700;">Supporting Mr. Hamilton, Part 1: Communicating With Clients With Expressive Aphasia / 支持汉密尔顿先生（第一部分）：与患有表达性失语症的服务对象沟通</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Joshua Hamilton, 57, survived a cerebral vascular accident several months ago. In addition to a few other health challenges, he has expressive aphasia. Marta, his support worker, has been assigned to Mr. Hamilton to assist him with his basic care at home.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">57 岁的约书亚·汉密尔顿（Joshua Hamilton）先生几个月前经历了一次脑血管意外（CVA/中风）。除了其他几项健康问题外，他留下了表达性失语症的后遗症。他的支持工作者玛塔（Marta）被指派到汉密尔顿先生家中协助他进行基础日常居家照料。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Mr. Hamilton frequently asks Marta questions that she does not understand. Here is an example of a recent conversation:</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">汉密尔顿先生经常向玛塔提问，但玛塔往往难以听懂。以下是他们最近一次对话的生动范例：</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Mr. Hamilton: Wuld ples git bassen eaten?
+Marta: Could you please repeat that, Mr. Hamilton?
+Mr. Hamilton: (raises his voice) Plasin get eatin puck.
+Marta: Would you like something to eat?
+Mr. Hamilton: (looks puzzled and upset) Dat stan woo.
+Marta: (pretends to eat) Would you like a snack?
+Mr. Hamilton: (shakes his head but says nothing)
+Marta: (pretends to drink) Something to drink?
+Mr. Hamilton: (nods his head and looks relieved)
+Marta: (gets a glass and cup)
+Mr. Hamilton: (gestures toward the cup)
+Marta: (gets a tea bag) Would you like a cup of tea?
+Mr. Hamilton: (nods)</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">汉密尔顿先生：Wuld ples git bassen eaten？（发音混乱）
+玛塔：汉密尔顿先生，您能再重复一遍吗？
+汉密尔顿先生：（提高声音）Plasin get eatin puck。
+玛塔：您想吃点东西吗？
+汉密尔顿先生：（面露困惑与沮丧）Dat stan woo。
+玛塔：（做出吃东西的手势模拟）您想吃点点心吗？
+汉密尔顿先生：（摇了摇头，没有说话）
+玛塔：（做出喝水的手势模拟）想喝点什么吗？
+汉密尔顿先生：（连连点头，神情显得如释重负）
+玛塔：（拿来一个玻璃水杯和一个茶杯）
+汉密尔顿先生：（用手指向茶杯）
+玛塔：（拿出一个茶包）您是想喝一杯茶吗？
+汉密尔顿先生：（用力点头）</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">In this situation, Marta was not sure what exactly Mr. Hamilton wanted. She thought the words eaten and eatin suggested that Mr. Hamilton wanted something to eat. He was, in fact, trying to say “tea.” Marta did not know this, but she knew from reading his care plan and speaking to his family that Mr. Hamilton liked tea. Using body language and symbols, Marta discovered what Mr. Hamilton wanted, and by being patient and persistent, she was able to meet Mr. Hamilton’s needs.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">在这种情况下，玛塔起初并不确定汉密尔顿先生到底想要什么。她以为词语中的 eaten 和 eatin 意味着汉密尔顿先生想吃东西。事实上，他努力想说的其实是“茶（tea）”。玛塔当时并不知晓这一点，但通过仔细研读照护计划以及与家属沟通，她知道汉密尔顿先生非常喜欢喝茶。玛塔巧妙利用肢体语言、实物指认与动作示范，通过无比的耐心与执着，终于成功探明了汉密尔顿先生的真实需求并予以妥善满足。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 836                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-836" data-page="836" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 836 · 第 836 页</span>
+      <span style="color:#64748b;">Supporting Mr. Hamilton Part 2 & Box 35.2 Communication Guidelines (Part 1) / 汉密尔顿先生进餐提示（二）与专栏35.2沟通核心准则（上）</span>
+    </div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(16, 185, 129, 0.04); border-left:4px solid #10b981; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#047857; font-size:1.05rem; font-weight:700;">Supporting Mr. Hamilton, Part 2: Communicating With Clients With Expressive Aphasia / 支持汉密尔顿先生（第二部分）：与患有表达性失语症的服务对象沟通</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Marta has noticed that Mr. Hamilton sometimes repeatedly says unrelated words, such as “bun … bun … bun … bun” instead of using the correct words. According to Mr. Hamilton’s care plan, this impediment (obstacle) is a result of his expressive aphasia and occurs most frequently when he is tired, hungry, overstimulated, or in need of toileting. Occasionally, he will repeat a word over and over again and seems to get into a pattern of repeating himself, even though he has used the words correctly since his stroke.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">玛塔注意到，汉密尔顿先生有时会反复说出一些毫无关联的词语，例如不断念叨“小圆面包……小圆面包……小圆面包……（bun … bun … bun … bun）”，而不是使用正确的词。根据汉密尔顿先生的照护计划，这种语言障碍是他表达性失语症的表现，最常发生在他感到疲惫、饥饿、受到过度环境刺激或需要如厕的时候。有时，他会反反复复重复某一个词，陷入一种刻板语言模式中，尽管自中风以来他在很多时候是能够正确用词的。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Following the suggestions in his care plan, Marta reminded Mr. Hamilton to use another word the next time he repeats the same word or phrase. Here is an example of how she did this during a meal:</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">遵循照护计划中的专业指导建议，当汉密尔顿先生再次重复同一词语或短语时，玛塔会耐心提醒他尝试使用另一个词。以下是她在进餐时如何巧妙引导的范例：</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Mr. Hamilton: (gestures toward his food) Gum … gum … gum … gum …
+Marta: (pointing at one of the foods on his plate with the spoon) Not “gum” (spoken gently). Potatoes?
+Mr. Hamilton: (shaking his head)
+Marta: (pointing at another food on his plate) Meat?
+Mr. Hamilton: (nodding his head) Gum … gum …
+Marta: (putting the meat on his spoon) Not “gum” (spoken gently). Meat.
+Mr. Hamilton: (nodding his head) Meat.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">汉密尔顿先生：（用手指向盘中的食物）口香糖……口香糖……口香糖……口香糖……（Gum … gum … gum …）
+玛塔：（用勺子轻柔指向餐盘中的一种食物，轻声说）不是“口香糖”哦。是土豆吗？
+汉密尔顿先生：（摇了摇头）
+玛塔：（用勺子指向盘中的另一种食物）是肉吗？
+汉密尔顿先生：（连连点头）口香糖……口香糖……
+玛塔：（将肉盛到他的勺子里，轻声说）不是“口香糖”哦。是肉。
+汉密尔顿先生：（用力点头）肉。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Marta made sure to speak clearly and gently, used short sentences, and faced Mr. Hamilton. She also remembered to smile so she would not appear annoyed or disapproving in any way, knowing that Mr. Hamilton may be very sensitive to signs of impatience or frustration in others. Marta then proceeded to assist Mr. Hamilton with his food.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">玛塔始终保持说话吐字清晰而轻柔，使用简短句子，并始终正面对着汉密尔顿先生。她还时刻保持温暖微笑，以免流露出丝毫烦躁或不悦的神情，因为她深知汉密尔顿先生对他人的不耐烦或挫败神色极其敏感脆弱。随后，玛塔继续顺畅地协助汉密尔顿先生享用进餐。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(59, 130, 246, 0.04); border-left:4px solid #3b82f6; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#1d4ed8; font-size:1.05rem; font-weight:700;">BOX 35.2: Guidelines for Communicating With Clients Who Have Speech and Language Disorders (Part 1) / 专栏 35.2：与患有言语和语言障碍服务对象沟通的实操指南（上篇）</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Minimize distractions. Distractions make concentration difficult and can also upset the client. Reduce background noise and activity. Close doors and windows. Turn off the television and radio (if the client agrees), and keep cell phones on silent mode. Make sure there is nothing in your hands or on your lap.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 尽量减少外界干扰：环境干扰会让注意力难以集中，并可能使服务对象心烦意乱。减少背景噪音与人员走动。关好门窗。在征得服务对象同意后关闭电视和收音机，将手机调至静音模式。确保您手中或膝上没有握拿任何杂物。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Adjust the lighting. Make sure the client can see your face clearly and that you can see the client’s face. Turn down lights and adjust window coverings to reduce glare. Do not position yourself between the client and a window. The client may not be able to see you in the glare.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 适度调节照明光线：确保服务对象能够看清您的面部，且您能清晰看清对方的表情。调暗刺眼的灯光并拉好窗帘以减少眩光。切勿让自己背对窗户而站，逆光眩光会导致服务对象无法看清您的口型与表情。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Give the client your full attention. Sit close by and face the client. Look directly into the client’s eyes so that the client can look at your face. Get the client’s attention before you speak. Show that you are listening by using gestures and facial expressions. Do not perform other tasks while you are talking to the client.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 给予服务对象全神贯注的关注：靠近就座并正面对着服务对象。直视对方的眼睛，以便服务对象能注视您的面部。在开口说话前先引起对方的注意。通过手势和面部表情表明您正在专注倾听。与服务对象交谈时切勿分心处理其他琐事。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• In the beginning of your work relationship with the client, you can start by asking questions to which you know the answer. Doing so helps you become familiar with the client’s speech.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 在刚建立照护关系的初期，可以先从您已知晓明确答案的问题入手进行提问。这样做有助于您尽快熟悉并掌握服务对象独特的发音与表达习惯。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Determine the subject being discussed. Knowing the topic helps you understand the main points. Look for nonverbal clues. Do the client’s gestures, eyes, and body language tell you anything? Does the client use words or partial words that might describe an item or concept?</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 明确正在讨论的主题核心：掌握主题有助于您迅速抓住主要意图。敏锐捕捉非语言线索：服务对象的手势、眼神和肢体语言是否传递了某种信号？服务对象是否使用了能描述某物品或概念的残缺词语？</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Follow the client’s lead. Alter your communication method, as needed. For example, Mrs. Schmidt becomes frustrated when you ask her questions. You learn that she responds better when you use gestures to demonstrate your question. If Mrs. Schmidt seems tired or has lost interest, allow her to rest. Bring up the subject at a later time.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 顺应服务对象的引导节奏：根据需要灵活调整沟通手段。例如，当施密特太太在被提问时感到沮丧，您发现当您借助手势示范问题时她回应得更好。如果她显得疲倦或失去兴趣，应允许她充分休息，稍后再重新提及该话题。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Speak slowly, clearly, and in a normal tone of voice. Adjust your speech to suit the client’s needs.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 语速放缓、吐字清晰、保持正常音调：切忌大喊大叫，根据服务对象的实际反应灵活调整说话节奏。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 837                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-837" data-page="837" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 837 · 第 837 页</span>
+      <span style="color:#64748b;">Box 35.2 Communication Guidelines (Part 2) / 专栏35.2沟通核心准则（下：语速/提示/肢体语言/正向指令）</span>
+    </div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(59, 130, 246, 0.04); border-left:4px solid #3b82f6; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#1d4ed8; font-size:1.05rem; font-weight:700;">BOX 35.2: Guidelines for Communicating With Clients Who Have Speech and Language Disorders (Part 2—cont’d) / 专栏 35.2：与患有言语和语言障碍服务对象沟通的实操指南（下篇）</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Talk to adults in a mature, professional manner. Do not use slang or figures of speech. Some clients may not understand them.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 以成熟、尊重的专业方式与成年人交流：切勿使用儿语、俚语或修辞比喻句，因为某些认知或语言障碍服务对象无法理解抽象比喻。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Give the client time to respond. Do not rush the client. Pause between sentences to allow the client time to think and respond. Do not answer questions, including your own questions and those from others, when they are addressed to the client.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 给予服务对象充裕的应答时间：切勿催促进度。在句子之间适度停顿，让服务对象有足够的时间思考与组织回答。当问题是针对服务对象提出时，切勿替对方抢答（包括您自己提出的问题或旁人的提问）。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Use simple words and short sentences. Avoid long, complex sentences. Focus on key words—mostly action words and words for clients, places, or things. For example, say “Let’s go for lunch” instead of “It’s time for me to transfer you to the dining room for lunch.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 使用简明词汇与短句：避免冗长复杂的长句。重点突出核心关键词——多使用动词以及指代人物、地点或具体事物的名词。例如，说“我们去吃午饭吧”，而不是说“现在该由我协助您转移到餐厅去享用午餐了”。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Be patient. Repeat your words, as needed. Rephrase your sentences if the client does not understand you.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 保持极大耐心：根据需要耐心地重复您所说的话。如果服务对象未能理解，尝试用更通俗直白的词汇换句话重述。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Use positive statements. Positive statements are easier to understand than negative statements. For example, say “Bend your arm” instead of “Don’t straighten your arm.”</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 使用正面肯定句式：肯定句比否定句更容易被大脑理解。例如，说“请弯曲您的手臂”，而不是说“请不要把手臂伸直”。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Use appropriate questioning and paraphrasing techniques. Ask questions that require only a short answer or a shake of the head. Paraphrase (summarize in your own words) what the client has said. Ask the client if you have understood correctly (see Chapter 9).</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 运用恰当的提问与释义技巧：多提出只需简短回答或点头/摇头即可确认的闭合式问题。用自己的话复述并总结服务对象表达的内容，向其核实您是否理解正确（参见第 9 章）。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Provide cues, as needed. Help clients express themselves by giving them cues about a word they cannot recall. If it is an object, ask, “What does it look like?” “What is it used for?” and “Where is it found?” Encourage the use of gestures and pointing. If you think you understand what the client says, verify your assumption by asking if this is what they mean. If the client’s gestures or words suggest you have misunderstood, encourage the client again to use gestures, pointing, or symbols. For example, Mrs. Lin points to her sweater. You get it for her, and she puts it on. You have understood her need.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 必要时提供启发线索：当服务对象一时想不起某个词时，提供启发性线索协助其表达。如果该词是一件物品，可以询问：“它长什么样？”“它是用来做什么的？”“平时放在哪里？”鼓励服务对象借助手势和手指指认。如果您认为自己听懂了，通过再次询问核实您的猜想。如果对方的手势或言语表明您理解错了，再次鼓励对方使用手势、指认或图形符号。例如，林太太指了指她的毛衣，您替她拿过来并且她穿上了，这证明您准确理解了她的需求。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Try other communication methods. Some clients may write better than they speak. Follow the care plan. Use writing and communication boards, as needed.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 尝试多种替代沟通手段：有些服务对象的书写表达能力优于口头说话。遵循照护计划，按需灵活使用书写板、画板或交流图卡。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Pay attention to your own facial expressions and nonverbal cues. Your facial expressions can reveal if you are frustrated or impatient, and your client could easily detect this.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 密切留意自己的面部表情与非语言线索：您的微表情会暴露内心的沮丧或不耐烦，而服务对象往往能够极其敏锐地察觉到这些微小变化。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 838                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-838" data-page="838" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 838 · 第 838 页</span>
+      <span style="color:#64748b;">Chapter Review, Critical Thinking & Review Questions 1–8 / 全章核心复习要点、埃弗里先生临床反思与原版8道全真自测精解</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">CHAPTER REVIEW: KEY POINTS</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">本章核心要点复习</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Aphasia is the partial or complete loss of speech and language skills. These skills may be slowly regained or may be lost permanently.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 失语症是言语和语言技能的部分或完全丧失。这些技能可能会缓慢重新恢复，也可能是永久性丧失。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• The three types of aphasia are (1) receptive, (2) expressive, and (3) expressive–receptive (global) aphasia.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 失语症的三种基本类型为：(1) 感受性失语症、(2) 表达性失语症、以及 (3) 表达-感觉混合性（全）失语症。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Apraxia of speech is the inability to move the muscles used in speech.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 言语失用症是无法正确协调支配用于言语发声的肌肉运动。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Dysarthria is difficulty speaking clearly.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 构音障碍是由于神经肌肉软弱无力或瘫痪导致的发音吐字不清。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Clients with speech and language disorders experience many emotions, such as frustration, depression, and anger, which can be stressful to both the client and the family.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 患有言语和语言障碍的服务对象会经历沮丧、抑郁和愤怒等多种强烈情绪，这对服务对象本人和整个家庭都会带来沉重的身心压力。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• As a support worker, you should be aware of communication aids and how to communicate with a person with a speech or language disorder.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 作为支持工作者，您应当熟知各种沟通辅助工具的运用，并严格掌握与言语或语言障碍人士有效交流的专业沟通规范。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(139, 92, 246, 0.04); border-left:4px solid #8b5cf6; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#6d28d9; font-size:1.05rem; font-weight:700;">CRITICAL THINKING IN PRACTICE / 临床反思实践案例：中风后埃弗里先生的综合照护计划</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Mr. Avery had a stroke. He has hemiplegia, receptive aphasia, and dysphagia. Explain how you will plan to perform the care measures listed below from his care plan. Apply learning from this and other chapters.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">埃弗里先生（Mr. Avery）经历了一次严重中风。他遗留有偏瘫（hemiplegia）、感受性失语症（receptive aphasia）以及吞咽困难（dysphagia）。请结合本章及其他章节所学知识，阐述您将如何规划并执行其照护计划中列出的以下各项照护措施：</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Transferring him from the bed to the wheelchair: Use positive, simple instructions with physical demonstrations; support his affected side while mobilizing from his strong side; ensure transfer belt application and proper body mechanics.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 协助他从床转移至轮椅：使用简明肯定的短句配合肢体动作示范；从健侧主导转移并妥善托扶保护患侧；正确使用转移带并保持符合人体工效学的安全搬运姿态。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Communicating with him: Receptive aphasia means he cannot easily understand spoken or written words; face him directly, minimize environmental distractions, speak slowly in normal tones using gestures, communication boards, and pointing; observe his facial expressions carefully.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 与他进行交流沟通：由于患有感受性失语症，他理解口语和文字存在极大困难；应正面对视、清除噪音干扰、放缓语速保持正常音量，综合运用手势示范、图片沟通板及实物指认；细心观察其微表情确认理解程度。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Dressing and undressing him: Allow him time to process steps; dress the affected side first, undress the affected side last (DAF: Dress Affected First); use simple gestures and cues.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 协助穿衣与脱衣：给予他充足的反应缓冲时间；严格遵循“穿衣先穿患侧，脱衣后脱患侧”（DAF原则）；借助直观的手势指引与衣物展示。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Assisting him with food and fluids: Dysphagia precautions require an upright 90-degree sitting posture, thickened fluids if ordered, small bites placed on his unaffected oral side, observation for pocketing or coughing, and maintaining upright posture for at least 30 minutes post-meal.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 协助进食与饮水：严格执行吞咽障碍防误吸规程；保持 90 度端坐体位；按医嘱提供增稠流质；小口进食并将食物送入健侧口腔；警惕颊囊食物残留或呛咳表现；进餐后保持直立坐位至少 30 分钟。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Performing a safety check of the room: Ensure call bell is within reach of his unaffected hand; bed in lowest position with brakes locked; clear clutter; adequate lighting without glare.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">• 执行居室环境安全检查：确保呼叫铃放置于其健侧手随手可及处；病床降至最低位并锁紧脚轮制动；清除地面障碍杂物；光线充足且无眩光。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch34')">← 上一章：第 34 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch35-quiz')">✍️ 8 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 36 章（常见疾病与失调，62页）正在编排流水线中，即将上线！')">下一章：第 36 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch34.html" class="sbn-btn sbn-prev">← 上一章：第 34 章 (听力与视力障碍)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch35-quiz" class="sbn-btn sbn-quiz">✍️ 8 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 36 章（发展性障碍与发育迟缓残疾，15页）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 36 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch35_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
