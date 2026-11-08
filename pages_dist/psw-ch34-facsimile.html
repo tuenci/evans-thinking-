@@ -1,0 +1,2923 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 34: Hearing and Vision Disorders · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 34</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html">第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+<option value="psw-ch24.html">第 24 章 · 测量身高、体重与生命体征</option>
+<option value="psw-ch25.html">第 25 章 · 医学术语与专业缩写</option>
+<option value="psw-ch26.html">第 26 章 · 制定照护计划、口头交班汇报与书面病历记录</option>
+<option value="psw-ch27.html">第 27 章 · 营养与体液照护</option>
+<option value="psw-ch28.html">第 28 章 · 肠内营养与静脉输液照护</option>
+<option value="psw-ch29.html">第 29 章 · 排尿照护与留置导尿管</option>
+<option value="psw-ch30.html">第 30 章 · 肠道排泄照护与造口管理</option>
+<option value="psw-ch31.html">第 31 章 · 生长与发育全生命周期</option>
+<option value="psw-ch32.html">第 32 章 · 人体结构与功能</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 34 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 32:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 34 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Hearing and Vision Disorders</h1>
+      <h2 class="hero-title-cn">听力与视力障碍：耳部疾病、助听器与人工耳蜗、听觉处理障碍、眼部疾病、白内障与青光眼、黄斑变性、盲文触觉阅读、领路导引技巧与服务犬支持</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 812–828 · 10 道全真自测题</span>
+        <span class="meta-item">专业音频：32:00</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch34-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch34" aria-label="Chapter 34 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.812–828 · 共 17 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-812">第 812 页 · 第 812 页</option><option value="page-813">第 813 页 · 第 813 页</option><option value="page-814">第 814 页 · 第 814 页</option><option value="page-815">第 815 页 · 第 815 页</option><option value="page-816">第 816 页 · 第 816 页</option><option value="page-817">第 817 页 · 第 817 页</option><option value="page-818">第 818 页 · 第 818 页</option><option value="page-819">第 819 页 · 第 819 页</option><option value="page-820">第 820 页 · 第 820 页</option><option value="page-821">第 821 页 · 第 821 页</option><option value="page-822">第 822 页 · 第 822 页</option><option value="page-823">第 823 页 · 第 823 页</option><option value="page-824">第 824 页 · 第 824 页</option><option value="page-825">第 825 页 · 第 825 页</option><option value="page-826">第 826 页 · 第 826 页</option><option value="page-827">第 827 页 · 第 827 页</option><option value="page-828">第 828 页 · 第 828 页</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-812" class="cp-chip" id="cp-chip-34-812" data-page="812" onclick="handlePageChipClick(event, 'page-812')" title="第 812 页 · 第 812 页"><span class="cp-num">p.812</span></a><a href="#page-813" class="cp-chip" id="cp-chip-34-813" data-page="813" onclick="handlePageChipClick(event, 'page-813')" title="第 813 页 · 第 813 页"><span class="cp-num">p.813</span></a><a href="#page-814" class="cp-chip" id="cp-chip-34-814" data-page="814" onclick="handlePageChipClick(event, 'page-814')" title="第 814 页 · 第 814 页"><span class="cp-num">p.814</span></a><a href="#page-815" class="cp-chip" id="cp-chip-34-815" data-page="815" onclick="handlePageChipClick(event, 'page-815')" title="第 815 页 · 第 815 页"><span class="cp-num">p.815</span></a><a href="#page-816" class="cp-chip" id="cp-chip-34-816" data-page="816" onclick="handlePageChipClick(event, 'page-816')" title="第 816 页 · 第 816 页"><span class="cp-num">p.816</span></a><a href="#page-817" class="cp-chip" id="cp-chip-34-817" data-page="817" onclick="handlePageChipClick(event, 'page-817')" title="第 817 页 · 第 817 页"><span class="cp-num">p.817</span></a><a href="#page-818" class="cp-chip" id="cp-chip-34-818" data-page="818" onclick="handlePageChipClick(event, 'page-818')" title="第 818 页 · 第 818 页"><span class="cp-num">p.818</span></a><a href="#page-819" class="cp-chip" id="cp-chip-34-819" data-page="819" onclick="handlePageChipClick(event, 'page-819')" title="第 819 页 · 第 819 页"><span class="cp-num">p.819</span></a><a href="#page-820" class="cp-chip" id="cp-chip-34-820" data-page="820" onclick="handlePageChipClick(event, 'page-820')" title="第 820 页 · 第 820 页"><span class="cp-num">p.820</span></a><a href="#page-821" class="cp-chip" id="cp-chip-34-821" data-page="821" onclick="handlePageChipClick(event, 'page-821')" title="第 821 页 · 第 821 页"><span class="cp-num">p.821</span></a><a href="#page-822" class="cp-chip" id="cp-chip-34-822" data-page="822" onclick="handlePageChipClick(event, 'page-822')" title="第 822 页 · 第 822 页"><span class="cp-num">p.822</span></a><a href="#page-823" class="cp-chip" id="cp-chip-34-823" data-page="823" onclick="handlePageChipClick(event, 'page-823')" title="第 823 页 · 第 823 页"><span class="cp-num">p.823</span></a><a href="#page-824" class="cp-chip" id="cp-chip-34-824" data-page="824" onclick="handlePageChipClick(event, 'page-824')" title="第 824 页 · 第 824 页"><span class="cp-num">p.824</span></a><a href="#page-825" class="cp-chip" id="cp-chip-34-825" data-page="825" onclick="handlePageChipClick(event, 'page-825')" title="第 825 页 · 第 825 页"><span class="cp-num">p.825</span></a><a href="#page-826" class="cp-chip" id="cp-chip-34-826" data-page="826" onclick="handlePageChipClick(event, 'page-826')" title="第 826 页 · 第 826 页"><span class="cp-num">p.826</span></a><a href="#page-827" class="cp-chip" id="cp-chip-34-827" data-page="827" onclick="handlePageChipClick(event, 'page-827')" title="第 827 页 · 第 827 页"><span class="cp-num">p.827</span></a><a href="#page-828" class="cp-chip" id="cp-chip-34-828" data-page="828" onclick="handlePageChipClick(event, 'page-828')" title="第 828 页 · 第 828 页"><span class="cp-num">p.828</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 812                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-812" data-page="812" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 812 · 第 812 页</span>
+      <span style="color:#64748b;">Chapter Opener & Learning Objectives / 听力与视力障碍开篇、执业学习目标</span>
+    </div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch34/ch34_p812_X9.jpg" alt="Chapter 34 Opener: Client with sensory challenges supported by care team" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Chapter 34: Hearing and Vision Disorders. Supporting clients living with sensory challenges to maintain autonomy and safety.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">第 34 章：听力与视力障碍。协助感官障碍服务对象维持最大自理能力与生活安全。</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:20px; margin-bottom:12px;">
+  <h1 style="font-size:1.1rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Chapter 34: Hearing and Vision Disorders</h1>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">第 34 章：听力与视力障碍</div>
+</div>
+
+
+<div class="objectives-card" style="margin-top:24px; padding:20px; background:rgba(59, 130, 246, 0.05); border-left:4px solid #3b82f6; border-radius:6px;">
+  <h3 style="margin-top:0; color:#1d4ed8; font-size:1.15rem; font-weight:700;">OBJECTIVES / 学习目标</h3>
+  <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:14px;">After reading this chapter, the learner should be able to do the following: / 学完本章后，学习者应能够做到以下各项：</p>
+  <ul class="objectives-list" style="list-style-type:none; padding-left:0; margin-bottom:0;">
+    
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe the major ear disorders.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐述常见的主要耳部疾病及其病理机制。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe the effects of hearing impairment.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐明听力受损对服务对象身心、社交与情感产生的全人影响。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe aids for clients with hearing impairment.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">说明用于听力障碍服务对象的辅助设备与技术工具。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Explain how to care for clients with hearing impairment.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">解释并执行针对听力受损服务对象的沟通与专业照护原则。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe the major eye disorders.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">阐述常见的主要眼部疾病及其病理生理学特征。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Describe aids for clients with vision impairment.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">说明协助视力受损服务对象的辅具与无障碍支持系统。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Explain how to care for clients with vision impairment.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">解释并执行针对视力受损服务对象的日常生活照料与领路安全规范。</div>
+    </li>
+
+    <li style="margin-bottom:12px; line-height:1.5;">
+      <div style="font-weight:600; color:var(--text-primary);">• Explain how to provide support to a client living with hearing or vision challenges who has a service dog.</div>
+      <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:2px;">说明如何支持照料拥有导盲犬或听力服务犬的感官障碍服务对象。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 813                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-813" data-page="813" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 813 · 第 813 页</span>
+      <span style="color:#64748b;">Senses Overview, Ear Disorders & Key Terms / 感觉系统、耳部疾病机制与15项核心术语</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">The Senses of Sight and Hearing</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">视觉与听觉感官的重要性</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The senses of sight and hearing are important for communicating, learning, moving about, and performing activities of daily living (ADLs). They also help keep us safe by alerting us to danger. People who are dying are believed to be able to hear up until their death.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">视觉与听觉感官对于人际沟通、知识学习、空间移动以及执行日常生活活动（ADL）至关重要。它们还能通过及时警示危险来保障人身安全。在临终关怀中，普遍认为听觉是濒死阶段最后消逝的感觉，服务对象在临终前直至死亡通常仍能保持听力。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Hearing and vision challenges are common among all age groups. Common causes include conditions present at birth, diseases, and accidents. Some hearing and vision impairment (and loss of other senses) is a natural part of aging. As a support worker, you will care for many clients with hearing and vision disorders. Some clients may have minor disorders that can be corrected with hearing aids and eyeglasses, whereas others may have severe impairments.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">听力与视力问题在各个年龄段均十分常见。常见病因包括先天性畸形、器质性疾病以及外伤事故。一定程度的听力和视力减退（以及其他感觉的减退）也是机体衰老的自然生理组成部分。作为支持工作者，您将照料许多患有感官障碍的服务对象；部分对象的轻度减退可通过助听器和眼镜有效矫正，而另一些对象则可能存在重度永久性残障。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Ear Disorders and Hearing Impairment</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">耳部疾患与听力受损概述</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The ear is needed for hearing and balance. Ear disorders range from slight hearing impairments to complete deafness. The most common causes of hearing impairment are aging and prolonged exposure to loud noise. However, hearing impairment can also result from a number of other things, including an accident, illness, exposure to certain drugs or chemicals. In some cases, genetics are responsible for causing impairment at birth.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">耳朵是人体掌管听觉感知与身体平衡调节的关键器官。耳部病变的严重程度跨度很大，从轻微听力下降直到全聋。导致听力受损最常见的原因是生理衰老和长期暴露于高分贝强噪音环境中；此外，意外创伤、感染性疾病、接触特定耳毒性药物或化学工业毒物亦可诱发听障；某些情况下遗传因素则导致先天性听力缺损。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Hearing impairments may occur suddenly, but they are usually gradual in onset. To prevent hearing impairment, there needs to be more public awareness that ear protection should be used when using any loud machinery, even lawn mowers. Of greater concern are the consequences of children, teens, and young adults listening to music that is too loud—for example, blasting the music on car stereos or in their earphones—which can lead to future hearing impairment. Hearing impairment may affect one or both ears.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">听力障碍有时可突发出现，但更多呈隐匿性缓慢渐进发展。为预防听力受损，公众亟需提高防范意识，在操作割草机等高噪音机械设备时应佩戴护耳隔音耳罩。更令人担忧的是儿童、青少年及年轻人群长期以过大音量收听音乐（例如车内音响震耳欲聋或佩戴入耳式耳机音量过高），这会导致不可逆的内耳毛细胞损伤与未来永久性听障。听力损害可波及单耳或双耳。</div>
+</div>
+
+
+    <div class="glossary-component" id="sec-ch34-glossary" style="margin:20px 0 32px 0;">
+      <div class="gc-header">
+        <div class="gc-title-wrap">
+          <span class="gc-badge">KEY TERMS · 核心专业术语表</span>
+          <h3 class="gc-title">Chapter 34 听力与视力障碍核心病理学与感官照护词汇表</h3>
+          <p class="gc-desc">Sorrentino 原版教材第 34 章共收录 <strong>15 个涵盖中耳炎、耳硬化症、美尼尔病、老年性耳聋、人工耳蜗、听觉处理障碍、白内障、青光眼、黄斑变性、视网膜脱离及盲文触觉系统的核心学术词汇</strong>。支持实时模糊检索及「紧凑表格 / 记忆卡片」双模态自由切换。</p>
+        </div>
+        <div class="gc-controls">
+          <div class="gc-search-box">
+            <input type="text" id="kt-search-ch34" placeholder="🔍 搜索英文术语或中文释义..." oninput="filterGlossary('ch34')">
+          </div>
+          <div class="gc-view-toggle">
+            <button class="gc-toggle-btn active" id="btn-view-table-ch34" onclick="setGlossaryView('ch34', 'table')">📋 表格视图</button>
+            <button class="gc-toggle-btn" id="btn-view-cards-ch34" onclick="setGlossaryView('ch34', 'cards')">📇 卡片视图</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table View (Default) -->
+      <div class="kt-view-table" id="kt-table-view-ch34">
+        <div class="kt-table-scroll">
+          <table class="kt-data-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">英文术语 / 解剖概念</th>
+                <th style="width: 22%;">中文对照 / 原书页码</th>
+                <th style="width: 52%;">教材标准学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+              <tr class="kt-table-row" data-term="age-related macular degeneration (amd; armd) 年龄相关性黄斑变性（AMD/ARMD）">
+                <td class="kt-cell-term">
+                  <span class="term-en">age-related macular degeneration (AMD; ARMD)</span>
+                  <span class="term-phonetic">[eɪdʒ rɪˈleɪtɪd ˈmækjʊlə dɪˌdʒɛnəˈreɪʃn]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">年龄相关性黄斑变性（AMD/ARMD）</span>
+                  <span class="term-page-badge">p. 819</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">The breakdown (degeneration) of the macula (the light-sensitive part of the retina). AMD is a disease associated with aging that gradually destroys sharp, central vision.</div>
+                  <div class="def-zh">年龄相关性黄斑变性（AMD/ARMD）：视网膜中央光敏区（黄斑部）的退行性变薄受损。与衰老相关的慢性眼病，进行性破坏敏锐的中心视野视力。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="auditory processing disorder (apd) 听觉处理障碍（APD）">
+                <td class="kt-cell-term">
+                  <span class="term-en">auditory processing disorder (APD)</span>
+                  <span class="term-phonetic">[ˈɔːdɪtəri ˈprəʊsɛsɪŋ dɪsˈɔːdə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">听觉处理障碍（APD）</span>
+                  <span class="term-page-badge">p. 817</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">When children or adults who are labelled 'poor listeners' have normal hearing abilities but experience a disconnect between what is heard and what is understood; the brain interprets what it hears as if there were some delay or distortion in the sound.</div>
+                  <div class="def-zh">听觉处理障碍（APD）：听力阈值正常但在声音感知与大脑语义理解之间发生解离脱节，中枢神经系统在解码声音时出现延迟失真。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="braille 盲文（布莱叶点字）">
+                <td class="kt-cell-term">
+                  <span class="term-en">Braille</span>
+                  <span class="term-phonetic">[breɪl]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">盲文（布莱叶点字）</span>
+                  <span class="term-page-badge">p. 823</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">A writing system for visually impaired persons that uses raised dots for each letter of the alphabet.</div>
+                  <div class="def-zh">盲文（布莱叶点字）：专为视障人士设计的触觉文字书写系统，利用凸起的点阵代码组合代表字母与符号。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="cataract 白内障">
+                <td class="kt-cell-term">
+                  <span class="term-en">cataract</span>
+                  <span class="term-phonetic">[ˈkætərækt]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">白内障</span>
+                  <span class="term-page-badge">p. 821</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Clouding of the eye’s lens.</div>
+                  <div class="def-zh">白内障：眼球晶状体发生混浊，阻碍光线投射至视网膜。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="cerumen 耵聍（耳垢）">
+                <td class="kt-cell-term">
+                  <span class="term-en">cerumen</span>
+                  <span class="term-phonetic">[sɪˈruːmɪn]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">耵聍（耳垢）</span>
+                  <span class="term-page-badge">p. 814</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Ear wax.</div>
+                  <div class="def-zh">耵聍（耳垢）：外耳道耵聍腺分泌的蜡样保护物质。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="cochlear implant 人工耳蜗（电子耳蜗）">
+                <td class="kt-cell-term">
+                  <span class="term-en">cochlear implant</span>
+                  <span class="term-phonetic">[ˈkɒklɪər ˈɪmplɑːnt]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">人工耳蜗（电子耳蜗）</span>
+                  <span class="term-page-badge">p. 817</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">A medical device to improve hearing in people who have a significant hearing impairment and who cannot benefit from regular hearing aids. This device has two parts: (1) an implant, which is placed into the inner ear during surgery, and (2) a sound processor, which is worn behind the ear like a hearing aid.</div>
+                  <div class="def-zh">人工耳蜗（电子耳蜗）：改善重度感音神经性聋的精密电子装置，分为手术植入内耳的接收刺激器与耳外佩戴的声音言语处理器。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="diabetic retinopathy 糖尿病视网膜病变">
+                <td class="kt-cell-term">
+                  <span class="term-en">diabetic retinopathy</span>
+                  <span class="term-phonetic">[ˌdaɪəˈbɛtɪk ˌrɛtɪˈnɒpəθi]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">糖尿病视网膜病变</span>
+                  <span class="term-page-badge">p. 820</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">A disorder (pathy) caused by diabetes, in which the blood vessels in the retina are damaged.</div>
+                  <div class="def-zh">糖尿病视网膜病变：由于长期慢性高血糖损害视网膜微血管引起的进行性眼底血管病变。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="glaucoma 青光眼">
+                <td class="kt-cell-term">
+                  <span class="term-en">glaucoma</span>
+                  <span class="term-phonetic">[ɡlɔːˈkəʊmə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">青光眼</span>
+                  <span class="term-page-badge">p. 821</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">An eye disease that causes pressure within the eye and vision impairment.</div>
+                  <div class="def-zh">青光眼：病理性眼内压升高超出视神经承受限度，导致进行性视神经纤维萎缩与视野缺损的眼病。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="ménière’s disease 美尼尔病（梅尼埃病）">
+                <td class="kt-cell-term">
+                  <span class="term-en">Ménière’s disease</span>
+                  <span class="term-phonetic">[meɪnˈjɛəz dɪˈziːz]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">美尼尔病（梅尼埃病）</span>
+                  <span class="term-page-badge">p. 814</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">An inner ear disorder that can affect both hearing and balance.</div>
+                  <div class="def-zh">美尼尔病（梅尼埃病）：内耳膜迷路积水导致的特发性内耳疾病，典型特征为突发旋转性眩晕、波动性感音神经性听力下降、耳鸣及耳闷胀感。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="otosclerosis 耳硬化症">
+                <td class="kt-cell-term">
+                  <span class="term-en">otosclerosis</span>
+                  <span class="term-phonetic">[ˌəʊtəʊsklɪəˈrəʊsɪs]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">耳硬化症</span>
+                  <span class="term-page-badge">p. 814</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">A condition (osis) in which hardening (sclero) of the ossicles in the middle ear (oto) occurs, interfering with transmission of sound.</div>
+                  <div class="def-zh">耳硬化症：中耳听小骨（尤其是镫骨底板）发生海绵状骨质增生硬化固定，阻碍机械声波传导引发的传导性听力减退。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="presbycusis 老年性耳聋">
+                <td class="kt-cell-term">
+                  <span class="term-en">presbycusis</span>
+                  <span class="term-phonetic">[ˌprɛzbɪˈkjuːsɪs]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">老年性耳聋</span>
+                  <span class="term-page-badge">p. 814</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">The gradual hearing (cusis) impairment associated with aging (presby).</div>
+                  <div class="def-zh">老年性耳聋：由于内耳及中枢神经退行性衰老导致的双侧对称性、渐进性感音神经性听力减退，尤以高频听力受损显著。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="presbyopia 老视（老花眼）">
+                <td class="kt-cell-term">
+                  <span class="term-en">presbyopia</span>
+                  <span class="term-phonetic">[ˌprɛzbɪˈəʊpɪə]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">老视（老花眼）</span>
+                  <span class="term-page-badge">p. 821</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">The gradual inability to focus (opia) on close objects; a condition associated with aging (presby).</div>
+                  <div class="def-zh">老视（老花眼）：由于年龄增长晶状体硬化弹性减退及睫状肌调节力下降，导致看近处物体聚焦困难的生理现象。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="retinal detachment 视网膜脱离">
+                <td class="kt-cell-term">
+                  <span class="term-en">retinal detachment</span>
+                  <span class="term-phonetic">[ˈrɛtɪnl dɪˈtætʃmənt]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">视网膜脱离</span>
+                  <span class="term-page-badge">p. 820</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">The separation of the retina from its supporting tissue.</div>
+                  <div class="def-zh">视网膜脱离：视网膜神经上皮层与视网膜色素上皮层发生病理性分离的眼科急症。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="tinnitus 耳鸣">
+                <td class="kt-cell-term">
+                  <span class="term-en">tinnitus</span>
+                  <span class="term-phonetic">[ˈtɪnɪtəs]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">耳鸣</span>
+                  <span class="term-page-badge">p. 814</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Ringing in the ear.</div>
+                  <div class="def-zh">耳鸣：在外界没有相应声源或电刺激的情况下，主观听到耳内或颅内有鸣响声。</div>
+                </td>
+              </tr>
+        
+              <tr class="kt-table-row" data-term="vertigo 眩晕">
+                <td class="kt-cell-term">
+                  <span class="term-en">vertigo</span>
+                  <span class="term-phonetic">[ˈvɜːtɪɡəʊ]</span>
+                </td>
+                <td class="kt-cell-zh">
+                  <span class="term-zh">眩晕</span>
+                  <span class="term-page-badge">p. 814</span>
+                </td>
+                <td class="kt-cell-def">
+                  <div class="def-en">Dizziness.</div>
+                  <div class="def-zh">眩晕：人体平衡系统功能紊乱产生的主观空间定向障碍，感到自身或周围景物在旋转晃动。</div>
+                </td>
+              </tr>
+        
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mode 2: Flashcard Grid View -->
+      <div class="kt-view-cards" id="kt-cards-view-ch34" style="display:none;">
+        <div class="kt-cards-grid">
+    
+          <div class="kt-card" data-term="age-related macular degeneration (amd; armd) 年龄相关性黄斑变性（AMD/ARMD）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#1</span>
+                  <span class="card-page">p. 819</span>
+                </div>
+                <div class="card-term-en">age-related macular degeneration (AMD; ARMD)</div>
+                <div class="card-term-phonetic">[eɪdʒ rɪˈleɪtɪd ˈmækjʊlə dɪˌdʒɛnəˈreɪʃn]</div>
+                <div class="card-term-zh">年龄相关性黄斑变性（AMD/ARMD）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">The breakdown (degeneration) of the macula (the light-sensitive part of the retina). AMD is a disease associated with aging that gradually destroys sharp, central vision.</div>
+                <div class="card-def-zh">年龄相关性黄斑变性（AMD/ARMD）：视网膜中央光敏区（黄斑部）的退行性变薄受损。与衰老相关的慢性眼病，进行性破坏敏锐的中心视野视力。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="auditory processing disorder (apd) 听觉处理障碍（APD）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#2</span>
+                  <span class="card-page">p. 817</span>
+                </div>
+                <div class="card-term-en">auditory processing disorder (APD)</div>
+                <div class="card-term-phonetic">[ˈɔːdɪtəri ˈprəʊsɛsɪŋ dɪsˈɔːdə]</div>
+                <div class="card-term-zh">听觉处理障碍（APD）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">When children or adults who are labelled 'poor listeners' have normal hearing abilities but experience a disconnect between what is heard and what is understood; the brain interprets what it hears as if there were some delay or distortion in the sound.</div>
+                <div class="card-def-zh">听觉处理障碍（APD）：听力阈值正常但在声音感知与大脑语义理解之间发生解离脱节，中枢神经系统在解码声音时出现延迟失真。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="braille 盲文（布莱叶点字）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#3</span>
+                  <span class="card-page">p. 823</span>
+                </div>
+                <div class="card-term-en">Braille</div>
+                <div class="card-term-phonetic">[breɪl]</div>
+                <div class="card-term-zh">盲文（布莱叶点字）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">A writing system for visually impaired persons that uses raised dots for each letter of the alphabet.</div>
+                <div class="card-def-zh">盲文（布莱叶点字）：专为视障人士设计的触觉文字书写系统，利用凸起的点阵代码组合代表字母与符号。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="cataract 白内障" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#4</span>
+                  <span class="card-page">p. 821</span>
+                </div>
+                <div class="card-term-en">cataract</div>
+                <div class="card-term-phonetic">[ˈkætərækt]</div>
+                <div class="card-term-zh">白内障</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Clouding of the eye’s lens.</div>
+                <div class="card-def-zh">白内障：眼球晶状体发生混浊，阻碍光线投射至视网膜。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="cerumen 耵聍（耳垢）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#5</span>
+                  <span class="card-page">p. 814</span>
+                </div>
+                <div class="card-term-en">cerumen</div>
+                <div class="card-term-phonetic">[sɪˈruːmɪn]</div>
+                <div class="card-term-zh">耵聍（耳垢）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Ear wax.</div>
+                <div class="card-def-zh">耵聍（耳垢）：外耳道耵聍腺分泌的蜡样保护物质。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="cochlear implant 人工耳蜗（电子耳蜗）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#6</span>
+                  <span class="card-page">p. 817</span>
+                </div>
+                <div class="card-term-en">cochlear implant</div>
+                <div class="card-term-phonetic">[ˈkɒklɪər ˈɪmplɑːnt]</div>
+                <div class="card-term-zh">人工耳蜗（电子耳蜗）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">A medical device to improve hearing in people who have a significant hearing impairment and who cannot benefit from regular hearing aids. This device has two parts: (1) an implant, which is placed into the inner ear during surgery, and (2) a sound processor, which is worn behind the ear like a hearing aid.</div>
+                <div class="card-def-zh">人工耳蜗（电子耳蜗）：改善重度感音神经性聋的精密电子装置，分为手术植入内耳的接收刺激器与耳外佩戴的声音言语处理器。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="diabetic retinopathy 糖尿病视网膜病变" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#7</span>
+                  <span class="card-page">p. 820</span>
+                </div>
+                <div class="card-term-en">diabetic retinopathy</div>
+                <div class="card-term-phonetic">[ˌdaɪəˈbɛtɪk ˌrɛtɪˈnɒpəθi]</div>
+                <div class="card-term-zh">糖尿病视网膜病变</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">A disorder (pathy) caused by diabetes, in which the blood vessels in the retina are damaged.</div>
+                <div class="card-def-zh">糖尿病视网膜病变：由于长期慢性高血糖损害视网膜微血管引起的进行性眼底血管病变。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="glaucoma 青光眼" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#8</span>
+                  <span class="card-page">p. 821</span>
+                </div>
+                <div class="card-term-en">glaucoma</div>
+                <div class="card-term-phonetic">[ɡlɔːˈkəʊmə]</div>
+                <div class="card-term-zh">青光眼</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">An eye disease that causes pressure within the eye and vision impairment.</div>
+                <div class="card-def-zh">青光眼：病理性眼内压升高超出视神经承受限度，导致进行性视神经纤维萎缩与视野缺损的眼病。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="ménière’s disease 美尼尔病（梅尼埃病）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#9</span>
+                  <span class="card-page">p. 814</span>
+                </div>
+                <div class="card-term-en">Ménière’s disease</div>
+                <div class="card-term-phonetic">[meɪnˈjɛəz dɪˈziːz]</div>
+                <div class="card-term-zh">美尼尔病（梅尼埃病）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">An inner ear disorder that can affect both hearing and balance.</div>
+                <div class="card-def-zh">美尼尔病（梅尼埃病）：内耳膜迷路积水导致的特发性内耳疾病，典型特征为突发旋转性眩晕、波动性感音神经性听力下降、耳鸣及耳闷胀感。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="otosclerosis 耳硬化症" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#10</span>
+                  <span class="card-page">p. 814</span>
+                </div>
+                <div class="card-term-en">otosclerosis</div>
+                <div class="card-term-phonetic">[ˌəʊtəʊsklɪəˈrəʊsɪs]</div>
+                <div class="card-term-zh">耳硬化症</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">A condition (osis) in which hardening (sclero) of the ossicles in the middle ear (oto) occurs, interfering with transmission of sound.</div>
+                <div class="card-def-zh">耳硬化症：中耳听小骨（尤其是镫骨底板）发生海绵状骨质增生硬化固定，阻碍机械声波传导引发的传导性听力减退。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="presbycusis 老年性耳聋" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#11</span>
+                  <span class="card-page">p. 814</span>
+                </div>
+                <div class="card-term-en">presbycusis</div>
+                <div class="card-term-phonetic">[ˌprɛzbɪˈkjuːsɪs]</div>
+                <div class="card-term-zh">老年性耳聋</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">The gradual hearing (cusis) impairment associated with aging (presby).</div>
+                <div class="card-def-zh">老年性耳聋：由于内耳及中枢神经退行性衰老导致的双侧对称性、渐进性感音神经性听力减退，尤以高频听力受损显著。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="presbyopia 老视（老花眼）" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#12</span>
+                  <span class="card-page">p. 821</span>
+                </div>
+                <div class="card-term-en">presbyopia</div>
+                <div class="card-term-phonetic">[ˌprɛzbɪˈəʊpɪə]</div>
+                <div class="card-term-zh">老视（老花眼）</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">The gradual inability to focus (opia) on close objects; a condition associated with aging (presby).</div>
+                <div class="card-def-zh">老视（老花眼）：由于年龄增长晶状体硬化弹性减退及睫状肌调节力下降，导致看近处物体聚焦困难的生理现象。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="retinal detachment 视网膜脱离" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#13</span>
+                  <span class="card-page">p. 820</span>
+                </div>
+                <div class="card-term-en">retinal detachment</div>
+                <div class="card-term-phonetic">[ˈrɛtɪnl dɪˈtætʃmənt]</div>
+                <div class="card-term-zh">视网膜脱离</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">The separation of the retina from its supporting tissue.</div>
+                <div class="card-def-zh">视网膜脱离：视网膜神经上皮层与视网膜色素上皮层发生病理性分离的眼科急症。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="tinnitus 耳鸣" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#14</span>
+                  <span class="card-page">p. 814</span>
+                </div>
+                <div class="card-term-en">tinnitus</div>
+                <div class="card-term-phonetic">[ˈtɪnɪtəs]</div>
+                <div class="card-term-zh">耳鸣</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Ringing in the ear.</div>
+                <div class="card-def-zh">耳鸣：在外界没有相应声源或电刺激的情况下，主观听到耳内或颅内有鸣响声。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="kt-card" data-term="vertigo 眩晕" onclick="this.classList.toggle('flipped')">
+            <div class="kt-card-inner">
+              <div class="kt-card-front">
+                <div class="card-term-header">
+                  <span class="card-idx">#15</span>
+                  <span class="card-page">p. 814</span>
+                </div>
+                <div class="card-term-en">vertigo</div>
+                <div class="card-term-phonetic">[ˈvɜːtɪɡəʊ]</div>
+                <div class="card-term-zh">眩晕</div>
+                <div class="card-hint">👆 点击翻转查看教材学术释义与临床界定</div>
+              </div>
+              <div class="kt-card-back">
+                <div class="card-def-en">Dizziness.</div>
+                <div class="card-def-zh">眩晕：人体平衡系统功能紊乱产生的主观空间定向障碍，感到自身或周围景物在旋转晃动。</div>
+                <div class="card-hint">🔄 点击翻回正面</div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 814                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-814" data-page="814" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 814 · 第 814 页</span>
+      <span style="color:#64748b;">Otitis Media, Otosclerosis, Ménière's & Presbycusis / 中耳炎、耳硬化症、美尼尔综合征与老年性耳聋</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Otitis Media (Middle Ear Infection)</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">中耳炎（中耳感染）</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Otitis media—infection (itis) of the middle (media) ear (ot)—is common in infants and children and may be acute or chronic. Normally, the ear's Eustachian tube allows fresh air to enter the middle ear and fluids to drain from it. However, a cold or flu, large adenoids or tonsils, or an allergy such as hay fever can block the Eustachian tube, causing otitis media. In very young children, symptoms like irritability, poor appetite, or ear pain may be mistaken for teething or post-immunization fever, allowing otitis media to go undetected. In chronic otitis media, fluid builds up slowly, thickens, and can damage the eardrum and ossicles, resulting in permanent hearing loss.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">中耳炎（Otitis Media）即中耳腔黏膜的感染性炎症，在婴幼儿及儿童中高发，可分为急性与慢性。正常情况下，咽鼓管负责使空气进入中耳并排出渗出液体；然而感冒流感、腺样体肥大或花粉过敏常阻塞咽鼓管诱发感染。在婴幼儿中，烦躁哭闹、拒食或抓耳等症状常被误认为出牙期不适或疫苗接种发热而漏诊。慢性中耳炎积液黏稠积聚，可破坏鼓膜及听小骨链，遗留永久性传导性听力丧失。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Otosclerosis and Stapedectomy</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">耳硬化症与镫骨手术切除术</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Otosclerosis is a hereditary condition in which abnormal bone growth causes hardening (sclero) and fixation of the ossicles in the middle ear (oto), especially the stapes (stirrup bone). The fixed bone can no longer vibrate to transmit sound waves to the inner ear, leading to progressive conductive hearing loss. It is more common in women and typically begins in early adulthood. Treatment often involves a surgical procedure called a stapedectomy, where the diseased stapes is replaced with a tiny wire-and-plastic synthetic prosthesis.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">耳硬化症（Otosclerosis）是一种常染色体显性遗传性疾病，中耳听小骨（尤其是镫骨底板）发生海绵状骨质增生与骨化硬结，使原本活动的听小骨固定不能震动，阻断了声波向内耳淋巴液的传导，产生渐进性传导性耳聋。该病在青年女性中多发。临床根治性治疗通常采用镫骨切除术（Stapedectomy），用微型人造合成假体替换硬化固定的镫骨以重建听骨链传导。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Ménière's Disease</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">美尼尔病（梅尼埃病）：内耳膜迷路水肿</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Ménière's disease is a chronic disorder of the inner ear characterized by fluid accumulation (endolymphatic hydrops) that affects both hearing and balance. Major symptoms include episodic severe vertigo (whirling dizziness that can cause falling), tinnitus (roaring or ringing sounds in the ear), fluctuating sensorineural hearing loss, and a feeling of fullness or pressure in the affected ear. Attacks can last from 20 minutes to 24 hours, often accompanied by severe nausea and vomiting. Care involves bed rest during acute attacks, anti-vertigo medications, and a low-sodium diet to reduce fluid retention.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">美尼尔病（Ménière's Disease）是一种内耳特发性疾病，以膜迷路内淋巴积水为特征，同时损害听觉与前庭平衡功能。核心临床三联征包括突发剧烈旋转性眩晕（天旋地转极易跌倒）、耳鸣（轰鸣或刺耳鸣响）、波动性感音神经性听力下降以及患侧耳部明显的闷胀压迫感。急性发作可持续20分钟至24小时不等，常伴剧烈恶心呕吐。照护原则包括急性期绝对卧床休息、遵医嘱给予抗眩晕止吐药，并执行严格低钠饮食以减轻内耳体液潴留。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Presbycusis, Tinnitus & Cerumen Impaction</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">老年性耳聋、耳鸣与耵聍栓塞</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Presbycusis is the gradual, symmetrical sensorineural hearing loss associated with normal aging. It begins around age 50 and typically impairs high-frequency sounds first, making it difficult for older adults to distinguish consonants (such as s, f, th) and understand speech in noisy backgrounds. Tinnitus is the perception of ringing, hissing, buzzing, or roaring in the ears without an external sound source. Cerumen (earwax) impaction occurs when earwax becomes hard and completely blocks the ear canal, causing sudden conductive hearing loss; clients should never insert cotton swabs or objects into the ear canal, as wax must be safely flushed or removed by a healthcare professional.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">老年性耳聋（Presbycusis）是伴随机体自然衰老发生的双侧对称性、渐进性感音神经性听力衰退。通常自50岁左右开始，最先累及高频听力，使老年人极难分辨高频辅音（如s、f、th等），在嘈杂背景中言语分辨能力显著受损。耳鸣（Tinnitus）是指无外界声源时主观感知到的耳内鸣响、嘶嘶声或嗡嗡声。耵聍栓塞（Cerumen Impaction）指耳垢硬化完全阻塞外耳道引起的传导性听力减退；切记严禁服务对象自行用棉签或发卡挖耳以防刺破鼓膜，必须由医生或专业护士进行安全冲洗软化吸出。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 815                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-815" data-page="815" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 815 · 第 815 页</span>
+      <span style="color:#64748b;">Hearing Aids (Fig 34.1) & Table 34.1 Loss Categories / 助听器类型维护与听力障碍程度等级</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Hearing Aids Overview</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">助听器工作机制与日常照料红线</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">A hearing aid is a precision electronic device that fits inside the ear, behind the ear, or in the ear canal to amplify sounds (FIGURE 34.1). A hearing aid does not cure hearing loss or restore normal hearing—it makes sounds louder, but NOT necessarily clearer. Background noise is amplified along with voices, so support workers must minimize ambient environmental noise (such as shutting off TVs or closing doors) to assist the wearer in communication adjustment.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">助听器是佩戴于耳甲腔、耳背或耳道内的精密电子放大器（图 34.1）。助听器无法根治听力缺损，亦不能完全恢复正常听力——它的核心机制是放大外界声波，但放大声音并不等于让发音更清晰！环境背景杂音会与交谈人声同时被放大，因此支持工作者在与佩戴助听器的服务对象交谈时，必须主动降低周围环境噪音（如关闭电视音响或关闭门窗），帮助其适应听力补偿。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Hearing aids can cost up to ,000 each. Dropping a hearing aid onto a hard surface can crack delicate internal electronics, causing severe financial and emotional distress for the client and family. Follow the care plan meticulously; ensure the client's name is clearly labelled on the hearing aid casing and storage container. Modern digital aids can pair with smartphones via Bluetooth to stream phone calls, television audio, and music directly into the ear.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">每只现代专业助听器的价格高达数千加元（甚至可达 5,000 美元/加元）。不慎将其摔落在大理石或硬地板上极易震碎内部微型电子元件，给服务对象及其家庭造成沉重经济负担。支持工作者在拿取时必须轻拿轻放；确保助听器机身及收纳盒上明确标有服务对象姓名。现代数字助听器支持蓝牙与智能手机连接，可将电话通话音、电视伴音及音乐无线流式传输直接送入耳内。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch34/ch34_p815_X92.jpg" alt="Figure 34.1 A: Types of hearing aids (Behind-the-ear, In-the-canal, Completely-in-the-canal)" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Figure 34.1, A: Hearing aids vary according to client needs. Behind-the-ear (BTE) aids hook over the ear and are most popular; In-the-canal (ITC) and Completely-in-the-canal (CIC) fit deep in the canal for discretion.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 34.1 A：根据服务对象听力需求定制的不同助听器类型。耳背式（BTE）挂于耳廓上方最受普及；耳内式（ITC）与完全耳道式（CIC）深入外耳道内部，隐蔽性极高。</p>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch34/ch34_p815_X93.jpg" alt="Figure 34.1 B: Recharging case with rechargeable hearing aids" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Figure 34.1, B: A modern recharging case holding rechargeable hearing aids, eliminating the need to handle small disposable zinc-air button batteries.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 34.1 B：配有充电仓的新型可充电助听器，无需频繁手工拆卸微型一次性锌空纽扣电池。</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Daily Care and Battery Maintenance of Hearing Aids</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">助听器日常保养与电池维护规程</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Store in a cool, dry place safe from pets and children. Never expose to heat radiators or direct sunlight.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">存放在阴凉干燥的安全容器内，远离宠物与儿童，严禁置于暖气片上或暴晒。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Inspect daily for visual defects: cracks, cracked tubing, wax blockage in the sound bore, or moisture droplets.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">每日例行检查外观：有无外壳裂纹、传声导管破损、出声孔耵聍堵塞或冷凝水滴。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Whistle test: Turn aid on, cup tightly in hand; a loud whistle (feedback) indicates the battery and amplifier are working.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">啸叫测试：打开电源，将机身握紧在手掌心，若发出尖锐啸叫声（声反馈）说明放大器及电池正常供电。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Battery management: Open battery doors when not in use to power down and vent moisture; replace dead batteries promptly with fresh zinc-air cells.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">电池管理：不佩戴时打开电池仓门以切断电源并散逸水汽；电池耗尽时及时更换新锌空电池，长期停用应取出电池防止漏液腐蚀。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 816                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-816" data-page="816" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 816 · 第 816 页</span>
+      <span style="color:#64748b;">Hearing Aid Hygiene & Table 34.1 Troubleshooting / 助听器清洁卫生与表34.1常见故障排除指南</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Cleaning and Cerumen Protection</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">助听器清洁规范与耵聍堵塞防护</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Cleaning protocols depend on the specific model. Never immerse the electronic hearing aid in water or cleaning solutions! Removable custom ear moulds of BTE aids can be detached and washed with mild soapy water, rinsed, and dried completely before reconnecting. For ITC and CIC models, use specialized wax picks and soft brushes to clean the sound outlet and microphone ports. Always protect the device from hair sprays, perfumes, and medicated ear drops.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">助听器的清洁方法严格取决于其型号结构。绝对严禁将带有电子元件的助听器整机浸入水中或任何化学清洁溶剂中！耳背机（BTE）的可拆卸定制软耳模可取下用温肥皂水清洗，彻底甩干风干并排净管道水珠后方可重新装回。对于耳道式（ITC/CIC），必须使用专用的耵聍钩刷轻柔清除出声孔滤网及麦克风滤音孔上的耳垢。在喷洒发胶、定型喷雾、香水或滴入滴耳液前必须取下助听器。</div>
+</div>
+
+
+<div class="editorial-table-wrap" style="margin:24px 0; overflow-x:auto;">
+  <div style="font-weight:700; color:var(--accent-primary, #1e3a8a); margin-bottom:4px; font-size:14px;">TABLE 34.1: Troubleshooting Common Hearing Aid Problems</div>
+  <div style="font-size:13px; color:var(--text-secondary); margin-bottom:10px;">表 34.1：助听器常见故障排查与应急解决规程</div>
+  <table style="width:100%; border-collapse:collapse; text-align:left;">
+    <thead><tr><th style='padding:10px 12px; border:1px solid #cbd5e1; background:#f8fafc; font-size:13px;'>Problem / 故障现象</th><th style='padding:10px 12px; border:1px solid #cbd5e1; background:#f8fafc; font-size:13px;'>Cause / 可能诱发原因</th><th style='padding:10px 12px; border:1px solid #cbd5e1; background:#f8fafc; font-size:13px;'>Possible Remedy / 推荐解决步骤</th></tr></thead>
+    <tbody><tr><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Not working (dead)</div><div style='color:var(--text-secondary); margin-top:2px;'>完全无声不工作</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Not turned on / Battery weak or dead / Reversed polarity / Blocked mould or wax guard / Volume zero</div><div style='color:var(--text-secondary); margin-top:2px;'>开关未开 / 电池耗尽 / 电池极性反接 / 声管或耵聍帽堵塞 / 音量旋钮调至最低</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Switch to M / Insert fresh battery properly / Clear ear mould with pick / Turn up volume control</div><div style='color:var(--text-secondary); margin-top:2px;'>拨至开机位置 / 正确装入新电池 / 疏通清洁出声孔 / 调高音量旋钮</div></td></tr><tr><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Aid whistles (feedback squeal)</div><div style='color:var(--text-secondary); margin-top:2px;'>发出刺耳啸叫声（声反馈）</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Improper seating in ear / Volume too high / Excessive cerumen in ear canal / Loose ear mould / Internal feedback</div><div style='color:var(--text-secondary); margin-top:2px;'>未正确塞紧漏音 / 音量过大 / 外耳道耵聍重度栓塞堵塞反射 / 耳模变松不吻合 / 内部元件破损</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Re-insert snugly / Reduce volume / Physician removal of ear canal wax / Re-fit new mould / Factory repair</div><div style='color:var(--text-secondary); margin-top:2px;'>重新调整贴合入耳 / 适度调低音量 / 医生彻底清理耳道耵聍 / 重新定制耳模 / 返厂专业维修</div></td></tr><tr><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Intermittent volume</div><div style='color:var(--text-secondary); margin-top:2px;'>声音断断续续忽大忽小</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Weak battery / Dirty battery contacts / Intermittent switch / Condensation moisture in tubing</div><div style='color:var(--text-secondary); margin-top:2px;'>电池电压不稳 / 电池接触弹片氧化发脏 / 开关接触不良 / 导管内有冷凝积水</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Replace battery / Clean contacts with dry swab / Blow out tubing moisture with air bulb / Service if damaged</div><div style='color:var(--text-secondary); margin-top:2px;'>换新电池 / 用干燥棉签擦拭触点 / 用吹气球吹净导管水分 / 报修检修</div></td></tr><tr><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Sound distorted or weak</div><div style='color:var(--text-secondary); margin-top:2px;'>声音失真、破音或音量偏轻</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Volume low / Weak battery / Partial wax blockage / Client hearing sensitivity changed</div><div style='color:var(--text-secondary); margin-top:2px;'>音量设置偏低 / 电池电量不足 / 耵聍部分堵塞 / 服务对象听力出现进一步病理性下降</div></td><td style='padding:10px 12px; border:1px solid #cbd5e1; font-size:13px;'><div style='font-weight:600;'>Adjust volume / Replace battery / Clean receiver opening / Schedule audiology hearing re-test</div><div style='color:var(--text-secondary); margin-top:2px;'>调节音量 / 更换新电池 / 更换耵聍防尘罩 / 安排听力专科重新测听验配</div></td></tr></tbody>
+  </table>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 817                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-817" data-page="817" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 817 · 第 817 页</span>
+      <span style="color:#64748b;">Cochlear Implants & Auditory Processing Disorder / 人工耳蜗植入原理与听觉处理障碍</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Cochlear Implants: Sound Transmission Biology</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">人工耳蜗（电子耳蜗）：跨越受损毛细胞的仿生听觉传导</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">A cochlear implant is an advanced electronic medical device for individuals with severe-to-profound sensorineural hearing loss who derive little or no benefit from traditional acoustic hearing aids. It consists of two parts: an external sound processor worn behind the ear, and an internal receiver-stimulator surgically embedded under the scalp with an electrode array threaded into the cochlea of the inner ear.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">人工耳蜗（Cochlear Implant）是针对佩戴传统声学助听器无效或收效甚微的重度至极重度感音神经性聋人群的高科技医疗植入系统。它由两部分组成：耳外佩戴的声音言语处理器，以及经显微外科手术植入头皮下并穿入内耳耳蜗鼓阶的微电极阵列。</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 1. The external sound processor captures acoustic sounds via microphones and filters acoustic frequencies.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">1. 外部声音处理器通过麦克风捕获外界声学声波并执行频谱过滤分析。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 2. The processor translates filtered sounds into coded digital information and radio-transmits it across the skin to the implant.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">2. 处理器将声音转化为经过编码的数字信息，通过射频线圈经皮无创发送给皮下植入体。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 3. The internal implant decodes the digital radio signal into electrical current pulses and directs them to the electrode array inside the cochlea.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">3. 体内植入芯片将数字信号解码为微弱电脉冲，精准分派至耳蜗内的微型电极束。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 4. Electrodes directly stimulate auditory nerve fibres, bypassing damaged inner ear hair cells, transmitting action potentials directly to the brainstem and auditory cortex.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">4. 电极脉冲直接刺激听神经节细胞，彻底跨越了坏死的内耳毛细胞，直接将听觉神经冲动传入大脑皮层产生听觉。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Auditory Processing Disorder (APD)</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">听觉处理障碍（APD）：听力阈值正常与大脑解码脱节</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Children or adults labelled 'poor listeners' may possess perfectly normal peripheral hearing sensitivity on audiograms, yet experience a profound disconnect between what their ears detect and what their brain comprehends—this neurological deficit is known as Auditory Processing Disorder (APD). The central auditory nervous system distorts or delays sound processing, making it immensely exhausting to follow multi-step spoken instructions, understand conversation in background noise, or retain verbal memories. Specialized multidisciplinary therapy, FM listening systems, and quiet learning environments provide critical accommodations.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">经常被误贴上‘心不在焉、不专心听讲’标签的儿童或成人，其纯音测听显示的周围耳部听阈可能完全处于正常范围，但在耳部感知声音与大脑中枢语义解码之间存在严重的病理脱节——这被称为听觉处理障碍（APD）。患者的中枢听觉神经系统在解析声音时出现处理延迟、频谱失真或信息丢失，导致其在嘈杂环境下极难听懂多步骤口头指令、学习记忆言语极其困难。需借助听觉训练、个人调频（FM）无线辅听系统及安静环境予以全面支持。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 818                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-818" data-page="818" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 818 · 第 818 页</span>
+      <span style="color:#64748b;">Hearing Technology, Psychological Impact & Eye Overview / 辅助听力技术、听障心理影响与眼科学导论</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Assistive Technology for Hearing Loss</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">听力无障碍辅助科技产品</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Telecommunications Devices for the Deaf (TTY): Allows text-based phone communication over landlines; modern smartphones replace this with real-time text (RTT) and video relay sign-language calls.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">聋人专用电传打字机（TTY）：通过座机电话线路进行双向文字键入通讯；现代手机已被实时文本（RTT）及手语视频转接服务所升级。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Flashing and Vibrating Alert Systems: Strobes and vibrating bed-shakers linked to doorbells, telephones, baby monitors, and emergency smoke alarms.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">闪光与振动警报系统：与门铃、座机、婴儿啼哭器及火灾烟雾报警器联动的强光频闪灯及震动床垫警报器。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Closed Captioning: Real-time textual subtitles displayed on screens for broadcast television, web streaming, and educational media.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">隐藏式字幕（Closed Captioning）：在电视、网络流媒体及教学视频中同步显示的口述对白文字字幕。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Hearing Service Dogs: Specially trained support canines that physically nudge handlers and lead them toward doorbells, timers, crying babies, or sirens.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">听力服务犬（导聋犬）：经过专业严苛脱敏训练的辅助犬，通过轻推抚触引导主人辨认门铃、微波炉提示音、婴儿哭声或火警警笛。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Psychological and Social Impact of Hearing Impairment</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">听力受损的深层心理创伤与社会隔离</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Because hearing loss is an invisible disability, its emotional toll is frequently underappreciated. Clients struggling to hear experience profound fatigue from constant strain, embarrassment over inappropriate responses, fear of being perceived as cognitively declined, and frustration from asking others to repeat. Over time, many withdraw completely from social interactions, meals, and religious gatherings, entering devastating social isolation and clinical depression. Empathetic, respectful support is essential.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">由于听力受损是一种隐性无形障碍，其给当事人造成的心理精神创伤往往被外界严重低估。听障人士整日处于费力倾听的极度疲惫之中，常因答非所问而深感羞愧，害怕被他人误解为‘智力衰退或老年痴呆’，更因不断恳求他人重复而充满挫败。随着时间推移，许多服务对象会彻底放弃家庭聚餐、朋友聚会和宗教活动，陷入深度的孤独退缩与重度抑郁。支持工作者必须给予全人共情与有尊严的扶持。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Eye Disorders and Vision Impairment Overview</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">眼睛结构功能、视力障碍分级与结膜炎</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Vision loss ranges from mild refractive errors to total blindness (inability to perceive light). Legal blindness in Canada is defined as visual acuity of 20/200 (6/60) or less in the better eye with best possible correction, or a visual field of less than 20 degrees. While a person with normal vision sees an object clearly at 60 metres (200 feet), a legally blind person must be at 6 metres (20 feet) to discern that same object. Conjunctivitis (pink eye) is inflammation of the clear membrane lining eyelids and sclera, presenting with intense redness, itching, and purulent discharge requiring strict Contact Precautions.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">视力损害的跨度从轻微屈光不正直至全盲（毫无光感）。在加拿大医学与法律界，法定盲（Legal Blindness）被严格界定为：在配戴最佳矫正镜片后，视力较好的一侧眼睛最佳视力仍等于或低于 20/200（6/60 米），或周边视野缺损缩小至 20 度以内。正常视力者在 60 米（200 英尺）远能看清的物体，法定盲患者必须走近至 6 米（20 英尺）方能辨认。结膜炎（俗称红眼病，Pink Eye）是覆盖眼白及眼睑内面的结膜发生感染性炎症，表现为眼红、奇痒及脓性分泌物，极具接触传染性，必须严格执行接触隔离防护。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 819                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-819" data-page="819" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 819 · 第 819 页</span>
+      <span style="color:#64748b;">Cataracts: Pathophysiology, Symptoms & Care / 白内障晶状体浑浊、临床表现与术后照护</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Age-Related Macular Degeneration (AMD): Wet vs Dry</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">年龄相关性黄斑变性（AMD）：湿性与干性分型病理</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">The macula is the central, highly sensitive area of the retina responsible for sharp, central, high-resolution colour vision. Age-related macular degeneration (AMD) is the breakdown of the macula and stands as the leading cause of blindness in North America among adults over 55. AMD destroys central vision while preserving peripheral (side) vision: clients can see the frame of a doorway or clock face, but cannot discern facial features or read the clock hands.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">黄斑位于视网膜后极部中央，是感光细胞最密集、负责高精细中心视力及敏锐色彩感知的核心解剖部位。年龄相关性黄斑变性（AMD）是黄斑部细胞的进行性萎缩衰亡，在北美是导致55岁以上老年人群不可逆致盲的首要病因。AMD特征性破坏中心视野，而保留周边周边视野：患者能够看到钟表的外轮廓或门框，却根本看不清表盘指针或熟人的面容五官。</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Dry AMD (Atrophic): Accounts for ~90% of cases. Photoreceptor cells in the macula slowly deteriorate over years. Symptoms include gradual blurring of central vision, needing brighter light to read, and a central blind spot. Both eyes are commonly affected.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">干性黄斑变性（萎缩型）：占所有病例约90%。黄斑区光敏细胞历经数年缓慢萎缩退化。表现为中央视力渐进性模糊、阅读需要极强照明、视野中央出现暗斑；通常双眼先后累及。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Wet AMD (Neovascular): Accounts for ~10% of cases but causes 90% of severe blindness. Fragile abnormal new blood vessels proliferate beneath the retina and leak blood, serum, and lipids, causing rapid permanent scarring and central vision loss within days to weeks. The cardinal early warning sign is metamorphopsia: straight lines appearing distorted, bent, or wavy (tested via Amsler grid). Anti-VEGF intraocular injections help halt leakage.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">湿性黄斑变性（新生血管型）：占病例约10%，却导致90%的严重失明。视网膜深层异常增生脆弱新生血管，渗漏血液与浆液，在数天至数周内引发不可逆黄斑水肿机化结瘢与中心视力暴跌。标志性早期前驱警示体征为视物变形（Metamorphopsia）：直线看起来发生弯曲、扭曲或波浪状起伏（可用阿姆斯勒方格表筛查）。玻璃体腔注射抗VEGF药物可有效控制血管渗漏。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch34/ch34_p819_fig34_2.jpg" alt="Figure 34.2: Sign language examples for daily support care" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Figure 34.2: American Sign Language (ASL) examples for daily care: Wash, Bath, Hot, Cold, Shower, Dress, Eat, Good, Thank you, Tired, Walk, Help, Sit.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 34.2：日常支持照护常用手语图解：洗漱、洗澡、冷热、穿衣、进食、良好、谢谢、疲劳、起立行走、寻求帮助、就座。</p>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 820                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-820" data-page="820" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 820 · 第 820 页</span>
+      <span style="color:#64748b;">AMD, Diabetic Retinopathy & Retinal Detachment / 黄斑变性、糖尿病视网膜病变与视网膜脱离</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Diabetic Retinopathy</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">糖尿病视网膜病变：微血管病变与眼底出血</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Diabetic retinopathy is a microvascular complication of diabetes in which prolonged chronic hyperglycemia damages tiny blood vessels feeding the retina. In non-proliferative retinopathy, capillaries develop microaneurysms, leak fluid, and cause macular edema. In advanced proliferative retinopathy, oxygen-deprived retina grows abnormal, fragile new vessels that bleed into the vitreous humour, creating fibrovascular traction scars that pull the retina off the posterior wall. Retinal detachment and severe blindness can result. Annual dilated funduscopic eye exams are mandatory for all persons with diabetes.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">糖尿病视网膜病变是糖尿病引起的最严重的微血管并发症之一。长期慢性高血糖损害视网膜毛细血管内皮，早期形成微动脉瘤并渗漏浆液导致黄斑水肿；随着视网膜慢性缺血缺氧，眼底生长出异常脆弱的新生血管（增殖期），易自发破裂出血涌入玻璃体腔，形成的纤维机化条索持续牵拉视网膜导致牵拉性视网膜脱离与不可逆盲目。所有糖尿病患者每年必须常规接受散瞳眼底镜筛查。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Retinal Detachment: Medical Emergency</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">视网膜脱离：突发闪光暗影与急诊手术</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Retinal detachment is the acute separation of the neurosensory retina from the underlying retinal pigment epithelium. As individuals age, the gel-like vitreous humour thickens, contracts, and separates from the retina. Sudden traction can tear the fragile retinal sheet, allowing liquefied vitreous to seep underneath and peel the retina away from its choroidal oxygen supply. Classic warning symptoms include sudden appearance of dark floaters (spots or cobwebs), unprovoked flashes of light (photopsia), and a dark shadow or veil resembling a 'curtain being drawn' across the field of vision. Immediate surgical reattachment is required to prevent permanent blindness.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">视网膜脱离是指视网膜神经上皮层与色素上皮层之间发生病理性分离的眼科危重急症。随着年龄增长，凝胶状玻璃体发生液化和后脱离，牵拉视网膜形成裂孔，液化玻璃体经裂孔涌入视网膜神经上皮下，使其如同壁纸脱落般脱离脉络膜血液营养供应。其特征性警示体征包括：视野突然出现大量飞蚊黑影、眼前频发无声无光的闪光感、以及视野某侧出现如‘黑幕落下遮挡’般进行性扩大的视野缺损。一旦出现必须立即送眼科急诊手术复位，否则将造成不可逆失明。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Cataracts: Pathophysiology and Manifestations</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">白内障：晶状体蛋白质变性浑浊与光感衰退</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">A cataract is the gradual clouding of the eye's normally clear crystalline lens, which blocks light rays from focusing onto the retina. The term derives from the Greek word for 'waterfall', evoking the sensation of viewing the world through cascading water or a frosted windshield. Aging is the primary etiology (senile cataract), alongside diabetes, smoking, ocular trauma, and chronic corticosteroid use. Symptoms develop slowly and painlessly: progressive blurred or dim vision, faded colours, poor night vision, and glaring halos around oncoming headlights.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">白内障（Cataract）是指眼球内原本透明的晶状体因蛋白质变性发生浑浊，阻碍光线聚焦于视网膜的眼病。该词源自希腊语意为‘瀑布’，形象地比喻患者看外界宛如隔着流淌的瀑布或磨砂玻璃般昏暗模糊。机体自然衰老是其最主要病因（老年性白内障），此外糖尿病、长期吸烟、眼外伤及长期服用糖皮质激素亦是常见诱因。其临床表现为缓慢无痛性视力进行性下降、色彩辨识暗淡退化、夜间视力极差以及直视车灯时出现刺眼的‘彩虹样光晕’（眩光）。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 821                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-821" data-page="821" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 821 · 第 821 页</span>
+      <span style="color:#64748b;">Glaucoma & Vision Simulation (Fig 34.3) / 青光眼高眼压视神经损伤与四重视野对比图</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Cataract Surgical Management and Post-Op Care</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">白内障超声乳化手术与术后照料体位禁忌</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">When cataracts compromise ADLs and reading, surgery is the only definitive curative treatment. Under local anesthesia, modern phacoemulsification uses ultrasonic energy to fragment the cloudy lens, aspirate the debris, and insert a permanent artificial intraocular lens (IOL). Support workers must enforce critical post-operative precautions: wear the rigid protective eye shield while sleeping, avoid bending down from the waist, avoid coughing or sneezing forcefully, never lift heavy objects (>10 lbs), and avoid straining during defecation, as all these actions dangerously elevate intraocular pressure.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">当白内障影响到阅读与日常生活时，手术置换是唯一确切的治疗手段。在局部麻醉下，现代超声乳化技术利用高频超声将浑浊的晶状体核碎解吸出，并在囊袋内植入永久性人工晶状体（IOL）。支持工作者在术后照护中必须恪守安全红线：夜间睡眠必须佩戴硬质塑料眼罩保护眼球；严格禁止弯腰低头提重物（大于10磅）；严防剧烈咳嗽或打喷嚏；排便时切忌用力屏气，以免引起眼内压急剧骤升造成手术切口裂开或出血。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Glaucoma: The Silent Thief of Sight</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">青光眼：进行性高眼压与视野管状缺损</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Glaucoma is an eye disease characterized by increased intraocular pressure (IOP) resulting from impaired drainage of aqueous humour fluid. Chronic high pressure compresses and destroys optic nerve fibres. Glaucoma is often termed the 'silent thief of sight' because open-angle glaucoma develops painlessly with zero early symptoms: peripheral vision slowly constricts inward without the client realizing it, until only a narrow central area remains ('tunnel vision'). Once optic nerve fibres die, vision loss is permanent and irreversible. Lifelong medicated pressure-lowering eye drops (e.g. prostaglandin analogs, beta-blockers) are required daily.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">青光眼（Glaucoma）是以病理性眼内压（IOP）升高为特征的严重致盲眼病，通常因眼前房角房水引流通道堵塞受阻所致。高眼压持续压迫并摧毁视神经节细胞与视网膜神经纤维层。开角型青光眼被称为‘无声的视力小偷’，因为其起病极其隐匿、全程完全无痛：周边视野由外向内缓慢悄无声息地缩小缺损，直至终末期只剩下正前方狭窄管状区域（‘管状视野’，Tunnel Vision），患者常在严重跌倒撞墙时才察觉。视神经坏死不可逆转，患者必须终生每日定时滴用降眼压眼药水以保全残存视力。</div>
+</div>
+
+
+<div class="figure-grid-card" style="margin:24px 0; padding:16px; border:1px solid #e2e8f0; border-radius:8px; background:#ffffff;">
+  <div style="font-weight:700; color:var(--text-primary); margin-bottom:4px; font-size:14px;">Figure 34.3: Visual Field Comparisons Across Eye Disorders</div>
+  <div style="font-size:13px; color:var(--text-secondary); margin-bottom:14px;">图 34.3：眼部疾患视野模拟对比图（正常视野、黄斑变性、白内障与青光眼）</div>
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px;">
+    
+  <div style="flex:1; min-width:200px; max-width:48%; margin-bottom:12px; text-align:center; background:#f8fafc; border-radius:6px; padding:8px; border:1px solid #e2e8f0;">
+    <img src="images/ch34/ch34_p821_X78.jpg" alt="A: Normal vision. Scene is crisp and clear across central and peripheral fields." style="max-height:220px; width:auto; max-width:100%; border-radius:4px;">
+    <div style="font-size:12.5px; font-weight:600; color:var(--text-primary); margin-top:6px;">A: Normal vision. Scene is crisp and clear across central and peripheral fields.</div>
+    <div style="font-size:12px; color:var(--text-secondary);">A：正常视力。中心视野与周边视野均清晰分明，色彩饱满。</div>
+  </div>
+
+  <div style="flex:1; min-width:200px; max-width:48%; margin-bottom:12px; text-align:center; background:#f8fafc; border-radius:6px; padding:8px; border:1px solid #e2e8f0;">
+    <img src="images/ch34/ch34_p821_X79.jpg" alt="B: Age-related macular degeneration (AMD). Center of visual field is dark and blurred while periphery remains intact." style="max-height:220px; width:auto; max-width:100%; border-radius:4px;">
+    <div style="font-size:12.5px; font-weight:600; color:var(--text-primary); margin-top:6px;">B: Age-related macular degeneration (AMD). Center of visual field is dark and blurred while periphery remains intact.</div>
+    <div style="font-size:12px; color:var(--text-secondary);">B：年龄相关性黄斑变性（AMD）。视野中央暗影缺失模糊，周边视力尚存。</div>
+  </div>
+
+  <div style="flex:1; min-width:200px; max-width:48%; margin-bottom:12px; text-align:center; background:#f8fafc; border-radius:6px; padding:8px; border:1px solid #e2e8f0;">
+    <img src="images/ch34/ch34_p821_X80.jpg" alt="C: Cataracts. Overall field is uniformly cloudy, hazy, faded, and glare-distorted." style="max-height:220px; width:auto; max-width:100%; border-radius:4px;">
+    <div style="font-size:12.5px; font-weight:600; color:var(--text-primary); margin-top:6px;">C: Cataracts. Overall field is uniformly cloudy, hazy, faded, and glare-distorted.</div>
+    <div style="font-size:12px; color:var(--text-secondary);">C：白内障。全视野均匀混浊、白蒙发灰、色调泛黄且伴有眩光。</div>
+  </div>
+
+  <div style="flex:1; min-width:200px; max-width:48%; margin-bottom:12px; text-align:center; background:#f8fafc; border-radius:6px; padding:8px; border:1px solid #e2e8f0;">
+    <img src="images/ch34/ch34_p821_X81.jpg" alt="D: Glaucoma. Peripheral vision is completely blacked out, leaving only narrow tunnel vision." style="max-height:220px; width:auto; max-width:100%; border-radius:4px;">
+    <div style="font-size:12.5px; font-weight:600; color:var(--text-primary); margin-top:6px;">D: Glaucoma. Peripheral vision is completely blacked out, leaving only narrow tunnel vision.</div>
+    <div style="font-size:12px; color:var(--text-secondary);">D：青光眼。周边视野完全萎缩黑化，仅保留狭窄管状中心视野。</div>
+  </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 822                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-822" data-page="822" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 822 · 第 822 页</span>
+      <span style="color:#64748b;">Eyeglasses & Contact Lens Safety Protocols / 眼镜清洁存放规范与隐形眼镜感染防护</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Effects of Vision Loss on Holistic Well-Being</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">视力障碍对身心社会全人维度的系统影响</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Severe vision loss shatters autonomy and self-esteem. As illustrated in the textbook case of Mr. Barak (78, diagnosed with AMD), even simple morning routines like dressing and grooming become agonizingly time-consuming. Because he cannot read newspapers, drive, or safely navigate curbs, he isolates himself at home and ceases attending his mosque. Fear of tripping and falling creates immense anxiety. Support workers must restore dignity, promote remaining strengths, and maintain consistent environmental predictability.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">严重的视力受损会重创服务对象的自理能力与自尊心。如教材中78岁患有黄斑变性的巴拉克先生（Mr. Barak）案例所示：原本简单的更衣梳洗耗时倍增；因无法阅读报纸、无法驾车、惧怕在马路牙子上摔倒迷路，他彻底不再去清真寺参与社交与宗教生活。对跌倒骨折的恐惧导致深度的焦虑孤立。支持工作者必须以最大的耐心维护其尊严，激发其残留代偿机能，并确保生活环境的高度稳定可预期。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Eyeglasses Handling, Cleaning, and Case Storage</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">眼镜取戴、温水清洗与专用硬盒存放</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Eyeglasses correct refractive errors (myopia, hyperopia, astigmatism, presbyopia). Eyeglasses must be kept immaculately clean: wash lenses daily with warm tap water and a drop of mild soap (avoid abrasive chemicals or hot water that destroys anti-reflective coatings), then dry gently with a clean microfibre cloth or lens paper. Paper towels, tissues, and shirt sleeves contain wood fibres that scratch lenses permanently! When eyeglasses are not worn, they must be stored inside a hard protective case—never leave them loose on bedside tables, and NEVER place them on beds or chairs where they can be sat upon or broken.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">眼镜用于矫正近视、远视、散光及老视等屈光不正。镜片必须保持高度清洁：每日用流动的温水冲洗，加微量中性洗洁精轻揉洗去油脂灰尘，再用专用超细纤维眼镜布轻轻吸干；严禁用面巾纸、餐巾纸、湿纸巾或衣服衣角擦拭镜片，因为纸浆粗糙木质纤维会在镜片表面刮出永久性细微划痕！眼镜未佩戴时，必须装入专用硬质眼镜盒内；绝对严禁随手丢在床铺、沙发或椅子上，以防被一屁股坐碎压折。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Contact Lenses Care and Microbial Keratitis Safety</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">隐形眼镜清洁消毒与角膜溃疡感染红线</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Contact lenses sit directly on the cornea. Meticulous hand hygiene with soap and water before handling lenses is essential to prevent Acanthamoeba and bacterial keratitis (corneal ulcers that cause permanent scarring and blindness). Clean lenses only with commercial sterile contact lens solution—NEVER use tap water, saliva, or homemade saline! Unless specifically prescribed for extended overnight wear, lenses must be removed before sleeping. If a client's eye becomes red, painful, photophobic, or swollen, remove lenses immediately and notify the supervisor and optometrist.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">隐形眼镜（角膜接触镜）直接贴附于角膜上皮。接触前必须严格使用肥皂流水洗手，严防棘阿米巴原虫及铜绿假单胞菌感染引发化脓性角膜炎（角膜溃疡可迅速穿孔留瘢失明）。只能使用专用的无菌隐形眼镜多功能护理液冲洗浸泡，绝对严禁用自来水、唾液或自制生理盐水冲洗！除非专为长戴型设计，睡前必须取下镜片；严禁戴镜游泳或泡温泉。一旦发现服务对象眼球充血发红、剧烈刺痛畏光或眼睑肿胀，必须立即协助摘除镜片并汇报主管护士安排眼科检查。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 823                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-823" data-page="823" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 823 · 第 823 页</span>
+      <span style="color:#64748b;">Braille Literacy (Fig 34.4) & Assistive Technology / 盲文触觉阅读系统与视障辅助工具</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Braille Tactile Literacy System</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">布莱叶点字（盲文）触觉编码体系</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Braille is a tactile system of reading and writing designed for blind and severely visually impaired persons, invented by Louis Braille in 1824. Characters are arranged within standardized 'cells' of six raised dots (two columns of three dots each). By feeling the pattern of raised dots with fingertips, readers decode letters of the alphabet, punctuation marks, contractions, musical notations, and mathematical formulas (FIGURE 34.4). Braille enables independent literacy, document review, and workplace autonomy.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">盲文（Braille / 布莱叶点字）是由路易·布莱叶于1824年创立的专供盲人及重度视障人士使用的触觉拼音文字系统。每个盲文字符基于由 6 个凸出圆点组成的标准“盲文方”（由两列各3个点排列）。盲人通过灵敏的指腹触摸凸点点阵的不同排列组合，阅读识别26个英文字母、标点符号、缩写词、乐谱及复杂的数学公式（图 34.4）。盲文为视障人士开启了独立的阅读素养、文件审阅与职业自立大门。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch34/ch34_p823_fig34_4.jpg" alt="Figure 34.4: The Braille alphabet and raised dot representations" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Figure 34.4: The Braille system uses cells of six raised dots to represent letters of the alphabet and numbers. The reader feels the raised dots with sensitive fingertips.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 34.4：盲文字母表图解。盲文利用六点矩阵中凸出圆点的不同点位组合代表26个英文字母及阿拉伯数字，读者通过指尖触觉完成流畅解码。</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Assistive Reading and Mobility Devices</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">低视力助视辅具与有声技术</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Optical and Electronic Magnifiers: Handheld magnifying glasses, illuminated stand magnifiers, and digital video magnifiers that zoom text up to 50x with high-contrast reverse-colour displays (white text on black background).</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">光学放大镜与电子助视器：手持高倍放大镜、带LED照明的立式放大镜，以及可将字体放大高达50倍并支持反差黑底白字显示的便携台式电子助视器。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Large-Print Media and Audiobooks: Specially printed books and periodicals (minimum 18-point bold font), and Daisy/MP3 format talking audiobooks from CNIB libraries.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">大字版读物与有声读物：特制的大字体图书出版物（正文不低于18磅粗体），以及加拿大国家盲人协会（CNIB）提供的Daisy格式数字有声书。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Screen Readers and OCR Text-to-Speech: Computer and smartphone accessibility software (e.g. JAWS, NVDA, Apple VoiceOver) that reads on-screen text aloud or outputs to refreshable Braille displays.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">读屏软件与OCR文字转语音：手机电脑无障碍朗读系统（如苹果VoiceOver、JAWS等），可将屏幕文字直接朗读出来或实时输出到盲文点字显示器。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• White Cane: The white cane with a red tip is universally recognized; it detects curbs, steps, and obstacles through tactile tapping while signalling to drivers and pedestrians.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">白手杖（红头盲杖）：红白相间的导盲手杖是国际公认的视障标志，使用者通过在路面前方轻敲滑动探测前方台阶、路缘与障碍物，并向车辆行人传递安全警示。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 824                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-824" data-page="824" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 824 · 第 824 页</span>
+      <span style="color:#64748b;">Ocular Prosthesis Care (Fig 34.5) & Artificial Eyes / 义眼（眼部假体）取放、清洁与眼窝护理</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Ocular Prosthesis (Artificial Eye) Care</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">义眼（人工假体眼球）护理规范</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Clients who have had an eye surgically removed (enucleation) due to trauma, tumour, or infection wear an ocular prosthesis (artificial eye). The prosthesis does not provide vision; it preserves facial contour and psychological self-image. Most clients insert and remove their own prosthesis; however, support workers may need to assist (FIGURE 34.5). Always follow the care plan for handling and hygiene.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">因眼外伤、眼内恶性肿瘤（如视网膜母细胞瘤）或眼内严重化脓感染而接受眼球摘除术（Enucleation）的服务对象，通常需要佩戴义眼（眼部假体）。义眼不具备任何感光视觉功能，其核心作用在于填补眼窝凹陷、维持面部对称轮廓与心理自尊。大多数服务对象能自行摘戴义眼，但当其衰弱无力时支持工作者需提供规范协助（图 34.5）。</div>
+</div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch34/ch34_p824_fig34_5.jpg" alt="Figure 34.5: Inserting and removing an artificial eye prosthesis" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Figure 34.5: Inserting an ocular prosthesis. The upper lid is raised, the upper edge of the prosthesis is slipped under the upper lid, and the lower lid is pulled down to seat the eye securely in the socket.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 34.5：义眼佩戴操作示意图。轻柔向上翻起上眼睑，将义眼顶端滑入上结膜囊内，随后向下拉开下眼睑，使义眼下缘平稳嵌合在下结膜囊眼窝内。</p>
+</div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(16, 185, 129, 0.04); border-left:4px solid #10b981; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#047857; font-size:1.05rem; font-weight:700;">BOX 34.2: Guidelines for Assisting Clients with Visual Impairment (Part 1) / 专栏 34.2：视力受损服务对象专业照护与沟通指南（第一部分）</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Identify yourself immediately upon entering the room: State your name and role clearly before approaching or touching the client.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">进门发声自报家门：进入房间时必须在接近或触碰服务对象前，清晰主动报出自己的姓名与照护职务。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Always inform the client before leaving the room: Never walk away in silence, which leaves the client speaking into empty space.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">离开前务必明确告别：离开房间或暂时离开其身边前必须清晰告知，避免让其对着空气说话引发尴尬沮丧。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Use normal speaking tone and volume: Do not shout unless the client also has hearing loss; vision impairment does not affect hearing.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">保持正常音调语速：切勿盲目大声吼叫！视力受损绝不意味着耳聋，除非其合并听障，否则大喊是极不尊重的行为。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Do not touch the client unexpectedly: Always explain what you are about to do before physical contact.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">避免突袭式肢体触碰：在进行任何身体接触或照料操作前，务必先口头告知接下来要做什么。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Use specific descriptive directions: Avoid vague words like 'here' or 'there'; use clock positions ('your water glass is at 2 o clock') and precise distances.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">使用精准时钟方位描述：切忌说‘在这儿’或‘在那儿’等模糊词汇；利用餐盘时钟法（如‘水杯在您的2点钟方向’）及精确步数。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 825                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-825" data-page="825" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 825 · 第 825 页</span>
+      <span style="color:#64748b;">Sighted Guide Technique & Environmental Safety / 领路引导技巧、环境防跌倒与无障碍支持</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">The Human Sighted Guide Technique</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">人道领路导引技巧（Sighted Guide Technique）</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">When assisting a client with vision impairment to walk: NEVER grab the client's arm or push/drag them from behind! Instead, offer your elbow or forearm, and let the client take hold of your arm just above the elbow. Walk slightly ahead (about half a step) at a comfortable, normal walking pace. The client senses your body movements through your arm as you turn, ascend, or descend. Always pause briefly and verbally describe steps, curbs, stairs ('one step down'), doorways, and narrow passages.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">在协助视力受损服务对象行走时：绝对严禁从身后推搡、生拉硬拽或强行抓住其手臂！正确规范的领路法是：照料者微屈前臂靠近患者，让服务对象的手指自然握住照料者肘部上方约一两寸处；照料者走在前方半步以正常从容步伐前行。患者通过肘部联动感知照料者身体的起伏与转弯。在遇到台阶、马路牙子、楼梯、门槛或狭窄通道前，提前半步停顿并用语言清晰提示（如‘前方有一级下行台阶’）。</div>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Environmental Safety and Navigation Rules</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">室内环境绝对安全防跌倒守则</div>
+</div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(59, 130, 246, 0.04); border-left:4px solid #3b82f6; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#1d4ed8; font-size:1.05rem; font-weight:700;">SAFETY ALERT: Environmental Predictability for the Visually Impaired / 安全警示：维护视障人士环境心智地图的铁律</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">NEVER rearrange furniture without the client's explicit permission and physical orientation. A moved chair is a severe tripping hazard.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">严禁擅自挪动家具：未征得服务对象同意并带领其亲自重新触摸确认前，绝对禁止变动桌椅床铺位置，防止撞击跌倒骨折。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Keep interior doors completely OPEN or completely CLOSED. Never leave a door half-open or ajar, which creates a dangerous edge impact.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">室内门要么完全敞开、要么完全闭紧：严禁将门半开半掩！半掩的门边锋利如刀，是视障人士头部撞伤最危险的隐患。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Remove all clutter from floors: Pick up electrical cords, throw rugs, shoes, and stray objects from hallways and pathways immediately.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">清除通道地面一切杂物：立即撤除散落在走廊和地面的电线、松散小块地毯、鞋子及玩具。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Ensure consistent, glare-free lighting: Hallways, stairwells, and bathrooms must be brightly lit at all times; use nightlights in bedrooms.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">保持充足无眩光照明：走廊、楼梯间及卫生间必须保持明亮通透，卧室通宵开启防跌倒小夜灯。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Service Animals for Sensory Challenges</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">服务犬（导盲犬与听力犬）全人支持体系</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Service animals are specially bred, highly trained working animals that empower individuals with hearing or vision challenges. Hearing dogs alert handlers to vital acoustic stimuli. Guide dogs (such as those partnered through CNIB) navigate outdoor travel, halt at curbs, bypass low-hanging tree branches, and guide handlers safely around obstacles.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">服务犬是经过严格品种选育与数年高强度脱敏专业训练的工作犬。听力犬负责提醒听障主人感知关键声音信号；导盲犬（如加拿大国家盲人协会CNIB认证导盲犬）则充当视障人士的眼睛，带领其自如出行，在路口路缘自动停步，主动绕开低垂树枝与障碍物，提供无与伦比的安全屏障与心灵慰藉。</div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 826                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-826" data-page="826" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 826 · 第 826 页</span>
+      <span style="color:#64748b;">Guide Dogs & Service Animals Protocols (Fig 34.6) / 导盲犬与服务犬照护互动规范（图34.6）</span>
+    </div>
+
+
+<div class="figure-card" style="margin:22px 0; text-align:center;">
+  <img src="images/ch34/ch34_p826_X71.jpg" alt="Figure 34.6: Client with vision impairment walking with guide using proper sighted guide technique" class="responsive-img" style="max-height:500px; width:auto; max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p class="figure-caption" style="margin-top:8px; font-weight:600; color:var(--text-secondary); font-size:13.5px;">Figure 34.6: This client, who has vision impairment, walks with a healthcare worker using proper human sighted guide technique. Note the client holds the guide just above the elbow, walking slightly behind.</p>
+  <p class="figure-caption-zh" style="margin-top:2px; color:var(--text-tertiary); font-size:13px;">图 34.6：视力受损服务对象在医护人员引导下运用人道领路法行走。注意服务对象握住照料者肘部上方，在后方半步平稳跟随。</p>
+</div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Support Worker Etiquette Around Service Dogs</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">照护人员与服务犬相处的核心职业礼仪</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 1. Address the human handler, NOT the dog: The client and dog are a bonded professional team. Always address the client directly rather than talking to or cooing at the dog.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">1. 始终与主人交谈，而非与犬对话：服务对象与工作犬是高度契合的工作搭档。交流时请一律注视服务对象并与其对话，切忌对着犬大呼小叫。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 2. NEVER touch, pet, or whistle at a working dog: When a guide dog is wearing its harness or a hearing dog wears its vest, it is on duty. Petting or distracting the dog breaks its concentration and endangers the handler.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">2. 佩戴鞍具背心期间严禁抚摸或逗弄：工作犬在穿戴鞍具或工作背心时处于执勤状态。抚摸、呼唤或吹口哨会分散其注意力，直接陷主人于危险之中。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 3. NEVER feed the service dog: Service dogs are on strict nutritional and relief schedules. Giving food scraps causes behavioural degradation.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">3. 严禁投喂任何食物零食：服务犬有严格的饮食与排泄作息表，外界投喂会严重破坏其纪律性。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• 4. Keep walkways wide and clear: Avoid blocking the dog's designated resting area near the client's bed or chair.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">4. 保持犬行通道畅通：切勿在服务对象床边或轮椅旁堆放推车障碍物，保障工作犬顺畅卧伏与起身领路。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 827                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-827" data-page="827" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 827 · 第 827 页</span>
+      <span style="color:#64748b;">Chapter Review Key Points & Critical Thinking / 全章核心复习要点与临床反思实践题</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Chapter 34 Review: Key Points</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">第 34 章复习重点：听力与视力障碍照护核心要义</div>
+</div>
+
+
+<div class="editorial-list-block" style="margin:16px 0;">
+  <ul style="list-style-type:none; padding-left:14px; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Hearing Disorders: Common causes include otitis media, otosclerosis, Ménière's disease, presbycusis, and cerumen impaction.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">耳部疾患：常见病因包括中耳炎、耳硬化症、美尼尔病、老年性耳聋及耵聍栓塞。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Effects of Hearing Loss: Varies widely; includes embarrassment, answering inappropriately, fatigue from strain, and profound social isolation and depression.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">听障影响：因人而异；伴随答非所问、过度费力倾听疲劳、社交退缩回避及深层抑郁。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Hearing Aids Care: Amplifies sound, not clarity. Keep dry and cool, inspect daily, clean cerumen, never wash electronics, and minimize background noise.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">助听器维护：放大音量而非清晰度；保持干燥阴凉、每日检查、清理耳垢、严禁水洗机身，并降低环境噪音。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Cochlear Implants & APD: Implants bypass damaged inner ear hair cells to directly stimulate auditory nerve; APD involves normal hearing with impaired central brain decoding.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">人工耳蜗与APD：耳蜗植入体绕过受损毛细胞直接电刺激听神经；APD为听力正常但大脑中枢解码障碍。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Vision Disorders: Conjunctivitis, cataracts (cloudy lens), glaucoma (high IOP optic nerve loss), AMD (loss of central vision), and retinal detachment (emergency).</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">眼部疾患：结膜炎（红眼病）、白内障（晶状体混浊）、青光眼（高眼压视神经萎缩）、黄斑变性（中心视野破坏）及视网膜脱离（急诊）。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">• Vision Assistance: Never rearrange furniture, keep doors fully open or closed, utilize sighted guide technique (client holds guide's elbow), and respect working service dogs.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">视障照料：绝不擅挪家具、门全开或全闭、运用人道领路法（扶照料者肘部）、严禁打扰执勤导盲犬。</div>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="editorial-callout-box" style="margin:22px 0; padding:18px 20px; background:rgba(139, 92, 246, 0.04); border-left:4px solid #8b5cf6; border-radius:6px;">
+  <h4 style="margin:0 0 10px 0; color:#6d28d9; font-size:1.05rem; font-weight:700;">CRITICAL THINKING IN PRACTICE: Mrs. Ho & Mr. Poulin Clinical Cases / 临床反思实践：何太太视障安全与普林先生美尼尔病沟通分析</h4>
+  <ul style="list-style-type:none; padding-left:0; margin:0;">
+    
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Case 1: Mrs. Ho has severe vision impairment. While entering her room, what are your immediate verbal actions, and what environmental hazards must you assess?</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">案例 1：何太太患有重度视力障碍。进入其房间时，您应立即采取哪些口头沟通行为？必须排查房间内哪些潜在危险隐患？</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Clinical Analysis 1: Immediately state your name and role upon entering, speak in a normal tone, and announce when you leave. Inspect the room to ensure pathways are clear of cords and rugs, the door is completely open or closed, furniture has not been moved, lighting is adequate, and items on her nightstand remain in fixed clock positions.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">临床深度解析 1：进门立即自报姓名身份，用正常语调交谈，离开前明确告别。排查房间：地面无电线杂物地毯、房门完全闭合或完全开启、家具位置严禁变动、照明充足不刺眼、床头柜物品按时钟方位归位。</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Case 2: Mr. Poulin has Ménière's disease and experiences an acute attack. How do you ensure his safety, and how do you communicate?</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">案例 2：普林先生患有美尼尔病，突然发作严重眩晕伴恶心。您应如何确保其生命安全并开展有效沟通？</div>
+    </li>
+
+    <li style="margin-bottom:10px; line-height:1.55;">
+      <div style="font-weight:600; color:var(--text-primary);">Clinical Analysis 2: Assist him into a safe, recumbent bed rest position immediately to prevent falls; keep the room quiet and dimly lit; position emesis basin for nausea; face him directly in good light, speak clearly and distinctly without shouting, and avoid abrupt head movements.</div>
+      <div style="color:var(--text-secondary); font-size:0.92rem; margin-top:2px;">临床深度解析 2：立即协助其就地平卧静卧休息以防摔倒；调暗室内光线保持绝对安静；备好呕吐盆防范误吸；交谈时面向光源、正对患者、清晰慢速吐字，切忌大喊大叫，避免剧烈转动头部。</div>
+    </li>
+
+  </ul>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PHYSICAL PAGE 828                      -->
+  <!-- ========================================== -->
+  <section class="editorial-page-block" id="page-828" data-page="828" style="margin-bottom:36px; padding-bottom:24px; border-bottom:1px dashed #e2e8f0;">
+    <div class="page-anchor-tag" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:6px 12px; background:#f1f5f9; border-radius:6px; font-size:12px; color:#475569;">
+      <span style="font-weight:700;">PAGE 828 · 第 828 页</span>
+      <span style="color:#64748b;">Review Questions 1–10, Answers & Rationales / 原版10道全真选择自测题、官方答案与执业精解</span>
+    </div>
+
+
+<div class="editorial-heading-block" style="margin-top:26px; margin-bottom:12px;">
+  <h2 style="font-size:1.25rem; font-weight:700; color:var(--accent-primary, #1e3a8a); margin:0 0 4px 0;">Official Publisher Review Questions (Complete 10 Questions)</h2>
+  <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary);">原版第 34 章复习自测题（第 1～10 题全真题录与答案）</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Physical page 827 and 828 contain 10 official multiple-choice review questions evaluating comprehension of hearing and vision disorders, assistive devices, and care protocols. Official Elsevier answer key: 1.A, 2.B, 3.A, 4.A, 5.B, 6.C, 7.D, 8.B, 9.C, 10.D. The interactive quiz cards with instant feedback and rationales are coded into the Review Exam Bank.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">原著物理第 827 与 828 页收录了 10 道权威多项选择自测题，全面考核听力与视力疾病病理、辅具维护及全人照护安全规程。Elsevier 官方认证标准答案公布为：1.A, 2.B, 3.A, 4.A, 5.B, 6.C, 7.D, 8.B, 9.C, 10.D。逐题双语选项、即时答题反馈与深度临床解析已全部集成至下方自测题库模块。</div>
+</div>
+
+
+<div class="bilingual-para-block" style="margin-bottom:16px; line-height:1.68;">
+  <div class="en-text" style="font-size:1rem; color:var(--text-primary); margin-bottom:6px;">Chapter Opener Image Credit: iStockphoto/Cylonphoto. Chapter 34 concludes on page 828. Chapter 35: Speech and Language Disorders begins on physical page 829.</div>
+  <div class="cn-text" style="font-size:0.95rem; color:var(--text-secondary);">章节扉页摄影版权致谢：iStockphoto/Cylonphoto。第 34 章在物理第 828 页完满收官。第 35 章《言语与语言障碍》（Speech and Language Disorders）自物理第 829 页开启。</div>
+</div>
+
+  </section>
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch33')">← 上一章：第 33 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch34-quiz')">✍️ 10 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 35 章（常见疾病与失调，62页）正在编排流水线中，即将上线！')">下一章：第 35 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch33.html" class="sbn-btn sbn-prev">← 上一章：第 33 章 (常见疾病与机体功能障碍)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch34-quiz" class="sbn-btn sbn-quiz">✍️ 10 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 35 章（言语与语言障碍，8页）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 35 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch34_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
