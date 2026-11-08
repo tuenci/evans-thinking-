@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 46: Working in Acute Care · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 46</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html">第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+<option value="psw-ch24.html">第 24 章 · 测量身高、体重与生命体征</option>
+<option value="psw-ch25.html">第 25 章 · 医学术语与专业缩写</option>
+<option value="psw-ch26.html">第 26 章 · 制定照护计划、口头交班汇报与书面病历记录</option>
+<option value="psw-ch27.html">第 27 章 · 营养与体液照护</option>
+<option value="psw-ch28.html">第 28 章 · 肠内营养与静脉输液照护</option>
+<option value="psw-ch29.html">第 29 章 · 排尿照护与留置导尿管</option>
+<option value="psw-ch30.html">第 30 章 · 肠道排泄照护与造口管理</option>
+<option value="psw-ch31.html">第 31 章 · 生长与发育全生命周期</option>
+<option value="psw-ch32.html">第 32 章 · 人体结构与功能</option>
+<option value="psw-ch33.html">第 33 章 · 常见疾病与机体功能障碍</option>
+<option value="psw-ch34.html">第 34 章 · 听力与视力障碍</option>
+<option value="psw-ch35.html">第 35 章 · 言语和语言障碍</option>
+<option value="psw-ch36.html">第 36 章 · 发育障碍与发育迟缓残疾</option>
+<option value="psw-ch37.html">第 37 章 · 精神健康障碍</option>
+<option value="psw-ch38.html">第 38 章 · 定向障碍、谵妄与认知症痴呆</option>
+<option value="psw-ch39.html">第 39 章 · 促进氧合</option>
+<option value="psw-ch40.html">第 40 章 · 冷热敷应用与临床物理疗法</option>
+<option value="psw-ch41.html">第 41 章 · 婴儿及其父母的照护</option>
+<option value="psw-ch42.html">第 42 章 · 儿童与青少年照护与家庭支持</option>
+<option value="psw-ch43.html">第 43 章 · 老年人身心照护</option>
+<option value="psw-ch44.html">第 44 章 · 家庭环境管理</option>
+<option value="psw-ch45.html">第 45 章 · 用药协助与药物管理</option>
+<option value="psw-ch46.html" selected>第 46 章 · 在急性期医疗机构中工作</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 46 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 45:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 46 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Working in Acute Care</h1>
+      <h2 class="hero-title-cn">在急性期医疗机构中工作：病床单元与专科监护设备、转归流程（入院迎新/院内转科/出院准备、仅执业医生拥有出院处方权）、体格检查流程与专科器械（检眼镜/检耳镜/叩诊锤/阴道窥器/鼻窥器/音叉/喉镜）、体检体位摆放与专业遮盖（仰卧位/截石位/膝胸卧位/西姆斯氏卧位）、陪检员制度、儿童体检父母全程在场原则、围手术期分类（择期/限期/急症）、术前心理恐惧疏导、术前健康宣教与麻醉恢复室PACU、术前生理机能准备（辅助诊断测试/严格NPO禁食禁饮防肺误吸/肠道清洁/剪毛备皮防感染/卸除饰品发夹义齿与指甲油化妆品/给药后严格卧床防跌倒/术前核对清单）、现代麻醉分型（全麻/区域麻醉/局麻）、术后手术麻醉床终末准备、术后生命体征梯度监测规范、必须立即汇报护士的危急体征（血压骤降伴脉速/烦躁不安/发绀湿冷/经皮氧饱和度<90%/伤口大出血）、防治呼吸道并发症（肺不张/肺炎/深呼吸有效咳嗽/切口按压固定法）、防治血栓与栓子（下肢深静脉血栓形成DVT/肺动脉栓塞PE、绝对禁忌膝下垫枕）、下肢主动运动操、抗栓弹力袜TED与间歇充气加压泵SCD、术后疼痛非药物舒适护理、口腔清洁湿润、术后饮食阶梯推进、出入液量严密监测、术后6-8小时必须排尿防尿潴留、以及早期下床活动床沿静坐垂腿防体位性低血压规范</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 1086–1109 · 20 道全真自测题</span>
+        <span class="meta-item">专业音频：45:00</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch46-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch46" aria-label="Chapter 46 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.1086–1109 · 共 24 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-1086">第 1086 页 · Chapter Opener & Learning Objectives (本章开篇与学习目标)</option><option value="page-1087">第 1087 页 · Key Terms & The PSW Scope in Acute Care (核心专业术语与急性期支持角色)</option><option value="page-1088">第 1088 页 · Transitions: Hospital Admission & Welcoming Clients (转归流程：入院迎新与环境适应)</option><option value="page-1089">第 1089 页 · The Hospital Bed Unit & Acute Equipment (急性期病床单元与专科监护设备)</option><option value="page-1090">第 1090 页 · Client Transfers & Facility Discharge (院内转科衔接与出院准备流程)</option><option value="page-1091">第 1091 页 · Compassionate Care & Safety Features (人文关怀与病房卫浴无障碍防护)</option><option value="page-1092">第 1092 页 · The Physical Examination & Diagnostic Instruments (体格检查流程与诊断器械准备)</option><option value="page-1093">第 1093 页 · Specialized Instruments & Client Preparation (专科检查仪器与受检身心准备)</option><option value="page-1094">第 1094 页 · Examination Positions & Draping Techniques (体检体位摆放与遮盖隐私保护)</option><option value="page-1095">第 1095 页 · Assisting During the Examination (体格检查中的协助配合要点)</option><option value="page-1096">第 1096 页 · Post-Examination Care & Pediatric Considerations (体检后护理要领与儿童受检关护)</option><option value="page-1097">第 1097 页 · Surgical Care: Types of Surgery & Team Collaboration (围手术期护理：手术分类与团队协作)</option><option value="page-1098">第 1098 页 · Preoperative Psychological Preparation & Client Fears (术前心理疏导与患者恐惧应对)</option><option value="page-1099">第 1099 页 · Preoperative Teaching & The Recovery Unit (术前宣教指导与麻醉恢复室环境)</option><option value="page-1100">第 1100 页 · Preoperative Diagnostic Tests, Nutrition & Skin Prep (术前诊断测试、禁食禁水与皮肤准备)</option><option value="page-1101">第 1101 页 · Personal Grooming, Valuables & Pre-Op Checklist (术前个人清洁、贵重物品保管与核对清单)</option><option value="page-1102">第 1102 页 · Hospital Preoperative Checklist Document (医院官方术前核对清单范本)</option><option value="page-1103">第 1103 页 · Types of Anaesthesia & Postoperative Room Preparation (麻醉分型与术后监护病房准备)</option><option value="page-1104">第 1104 页 · Postoperative Monitoring & Vital Signs Assessment (术后生命体征严密监测与临床观察)</option><option value="page-1105">第 1105 页 · Preventing Respiratory & Thromboembolic Complications (呼吸道并发症与静脉血栓/栓塞防治)</option><option value="page-1106">第 1106 页 · Postoperative Leg Exercises & Antiembolism Stockings (术后下肢主动运动与抗栓弹力袜应用)</option><option value="page-1107">第 1107 页 · Postoperative Comfort, Elimination & Early Ambulation (术后疼痛镇痛、大小便护理与早期下床)</option><option value="page-1108">第 1108 页 · Chapter Review, Key Points & Practice Questions 1–11 (本章总结、核心要点与真题测验 1–11)</option><option value="page-1109">第 1109 页 · Practice Questions 12–20, Clinical Rationales & Answers (真题测验 12–20、临床权威精解与参考答案)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-1086" class="cp-chip" id="cp-chip-46-1086" data-page="1086" onclick="handlePageChipClick(event, 'page-1086')" title="第 1086 页 · Chapter Opener & Learning Objectives (本章开篇与学习目标)"><span class="cp-num">p.1086</span></a><a href="#page-1087" class="cp-chip" id="cp-chip-46-1087" data-page="1087" onclick="handlePageChipClick(event, 'page-1087')" title="第 1087 页 · Key Terms & The PSW Scope in Acute Care (核心专业术语与急性期支持角色)"><span class="cp-num">p.1087</span></a><a href="#page-1088" class="cp-chip" id="cp-chip-46-1088" data-page="1088" onclick="handlePageChipClick(event, 'page-1088')" title="第 1088 页 · Transitions: Hospital Admission & Welcoming Clients (转归流程：入院迎新与环境适应)"><span class="cp-num">p.1088</span></a><a href="#page-1089" class="cp-chip" id="cp-chip-46-1089" data-page="1089" onclick="handlePageChipClick(event, 'page-1089')" title="第 1089 页 · The Hospital Bed Unit & Acute Equipment (急性期病床单元与专科监护设备)"><span class="cp-num">p.1089</span></a><a href="#page-1090" class="cp-chip" id="cp-chip-46-1090" data-page="1090" onclick="handlePageChipClick(event, 'page-1090')" title="第 1090 页 · Client Transfers & Facility Discharge (院内转科衔接与出院准备流程)"><span class="cp-num">p.1090</span></a><a href="#page-1091" class="cp-chip" id="cp-chip-46-1091" data-page="1091" onclick="handlePageChipClick(event, 'page-1091')" title="第 1091 页 · Compassionate Care & Safety Features (人文关怀与病房卫浴无障碍防护)"><span class="cp-num">p.1091</span></a><a href="#page-1092" class="cp-chip" id="cp-chip-46-1092" data-page="1092" onclick="handlePageChipClick(event, 'page-1092')" title="第 1092 页 · The Physical Examination & Diagnostic Instruments (体格检查流程与诊断器械准备)"><span class="cp-num">p.1092</span></a><a href="#page-1093" class="cp-chip" id="cp-chip-46-1093" data-page="1093" onclick="handlePageChipClick(event, 'page-1093')" title="第 1093 页 · Specialized Instruments & Client Preparation (专科检查仪器与受检身心准备)"><span class="cp-num">p.1093</span></a><a href="#page-1094" class="cp-chip" id="cp-chip-46-1094" data-page="1094" onclick="handlePageChipClick(event, 'page-1094')" title="第 1094 页 · Examination Positions & Draping Techniques (体检体位摆放与遮盖隐私保护)"><span class="cp-num">p.1094</span></a><a href="#page-1095" class="cp-chip" id="cp-chip-46-1095" data-page="1095" onclick="handlePageChipClick(event, 'page-1095')" title="第 1095 页 · Assisting During the Examination (体格检查中的协助配合要点)"><span class="cp-num">p.1095</span></a><a href="#page-1096" class="cp-chip" id="cp-chip-46-1096" data-page="1096" onclick="handlePageChipClick(event, 'page-1096')" title="第 1096 页 · Post-Examination Care & Pediatric Considerations (体检后护理要领与儿童受检关护)"><span class="cp-num">p.1096</span></a><a href="#page-1097" class="cp-chip" id="cp-chip-46-1097" data-page="1097" onclick="handlePageChipClick(event, 'page-1097')" title="第 1097 页 · Surgical Care: Types of Surgery & Team Collaboration (围手术期护理：手术分类与团队协作)"><span class="cp-num">p.1097</span></a><a href="#page-1098" class="cp-chip" id="cp-chip-46-1098" data-page="1098" onclick="handlePageChipClick(event, 'page-1098')" title="第 1098 页 · Preoperative Psychological Preparation & Client Fears (术前心理疏导与患者恐惧应对)"><span class="cp-num">p.1098</span></a><a href="#page-1099" class="cp-chip" id="cp-chip-46-1099" data-page="1099" onclick="handlePageChipClick(event, 'page-1099')" title="第 1099 页 · Preoperative Teaching & The Recovery Unit (术前宣教指导与麻醉恢复室环境)"><span class="cp-num">p.1099</span></a><a href="#page-1100" class="cp-chip" id="cp-chip-46-1100" data-page="1100" onclick="handlePageChipClick(event, 'page-1100')" title="第 1100 页 · Preoperative Diagnostic Tests, Nutrition & Skin Prep (术前诊断测试、禁食禁水与皮肤准备)"><span class="cp-num">p.1100</span></a><a href="#page-1101" class="cp-chip" id="cp-chip-46-1101" data-page="1101" onclick="handlePageChipClick(event, 'page-1101')" title="第 1101 页 · Personal Grooming, Valuables & Pre-Op Checklist (术前个人清洁、贵重物品保管与核对清单)"><span class="cp-num">p.1101</span></a><a href="#page-1102" class="cp-chip" id="cp-chip-46-1102" data-page="1102" onclick="handlePageChipClick(event, 'page-1102')" title="第 1102 页 · Hospital Preoperative Checklist Document (医院官方术前核对清单范本)"><span class="cp-num">p.1102</span></a><a href="#page-1103" class="cp-chip" id="cp-chip-46-1103" data-page="1103" onclick="handlePageChipClick(event, 'page-1103')" title="第 1103 页 · Types of Anaesthesia & Postoperative Room Preparation (麻醉分型与术后监护病房准备)"><span class="cp-num">p.1103</span></a><a href="#page-1104" class="cp-chip" id="cp-chip-46-1104" data-page="1104" onclick="handlePageChipClick(event, 'page-1104')" title="第 1104 页 · Postoperative Monitoring & Vital Signs Assessment (术后生命体征严密监测与临床观察)"><span class="cp-num">p.1104</span></a><a href="#page-1105" class="cp-chip" id="cp-chip-46-1105" data-page="1105" onclick="handlePageChipClick(event, 'page-1105')" title="第 1105 页 · Preventing Respiratory & Thromboembolic Complications (呼吸道并发症与静脉血栓/栓塞防治)"><span class="cp-num">p.1105</span></a><a href="#page-1106" class="cp-chip" id="cp-chip-46-1106" data-page="1106" onclick="handlePageChipClick(event, 'page-1106')" title="第 1106 页 · Postoperative Leg Exercises & Antiembolism Stockings (术后下肢主动运动与抗栓弹力袜应用)"><span class="cp-num">p.1106</span></a><a href="#page-1107" class="cp-chip" id="cp-chip-46-1107" data-page="1107" onclick="handlePageChipClick(event, 'page-1107')" title="第 1107 页 · Postoperative Comfort, Elimination & Early Ambulation (术后疼痛镇痛、大小便护理与早期下床)"><span class="cp-num">p.1107</span></a><a href="#page-1108" class="cp-chip" id="cp-chip-46-1108" data-page="1108" onclick="handlePageChipClick(event, 'page-1108')" title="第 1108 页 · Chapter Review, Key Points & Practice Questions 1–11 (本章总结、核心要点与真题测验 1–11)"><span class="cp-num">p.1108</span></a><a href="#page-1109" class="cp-chip" id="cp-chip-46-1109" data-page="1109" onclick="handlePageChipClick(event, 'page-1109')" title="第 1109 页 · Practice Questions 12–20, Clinical Rationales & Answers (真题测验 12–20、临床权威精解与参考答案)"><span class="cp-num">p.1109</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+    <section class="facsimile-page" id="page-1086" data-physical-page="1086">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1086</span>
+        <span class="page-topic-title">Chapter Opener & Learning Objectives (本章开篇与学习目标)</span>
+      </div>
+
+      <div class="chapter-header-box" style="margin-bottom:24px; padding:24px; background:linear-gradient(135deg, rgba(37,99,235,0.06), rgba(14,165,233,0.06)); border-left:4px solid var(--accent-color); border-radius:8px;">
+        <div class="ch-badge" style="font-size:13px; font-weight:700; color:var(--accent-color); letter-spacing:1px; text-transform:uppercase;">CHAPTER 46</div>
+        <h1 class="ch-title" style="margin:6px 0 10px 0; font-size:26px; font-weight:800; color:var(--text-primary);">Working in Acute Care</h1>
+        <div class="ch-title-cn" style="font-size:17px; font-weight:600; color:var(--text-secondary); margin-bottom:16px;">在急性期医疗机构中工作（医院照护与围手术期支持）</div>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:24px; text-align:center;">
+        <img src="images/ch46/ch46_opener.jpg" alt="Chapter 46 Opener" style="max-width:100%; border-radius:8px; border:1px solid var(--border-color); box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div class="fig-caption" style="font-size:13px; color:var(--text-secondary); margin-top:8px;">
+          <strong>Chapter 46 Opener:</strong> Support worker providing essential acute-care support and vital bedside assistance to a hospitalized patient. (iStockphoto/WaveBreakMedia)
+          <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">第 46 章篇首图：支持人员在医院急性期病房为住院患者提供基础床旁照护并协助跨学科医疗团队。</div>
+        </div>
+      </div>
+
+      <div class="objectives-card" style="margin-bottom:28px; padding:20px 24px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:10px;">
+        <h3 style="margin-top:0; margin-bottom:14px; font-size:17px; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+          <span style="display:inline-block; width:6px; height:16px; background:#10b981; border-radius:3px;"></span>
+          OBJECTIVES (学习目标)
+        </h3>
+        <p style="font-size:14px; color:var(--text-secondary); margin-bottom:12px;">After reading this chapter, the learner should be able to do the following (完成本章学习后，学习者应能够做到以下各项)：</p>
+        <ul style="padding-left:20px; font-size:14px; line-height:1.6; margin-bottom:0;">
+          
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe how to promote well-being during the admission, transfer, and discharge procedures.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述在入院、转科和出院流程中如何促进客户的身心健康与情感舒适。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain what to do before, during, and after a physical examination.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">解释在体格检查前、检查中及检查后支持人员的具体职责与操作要领。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Identify the equipment used during a physical examination.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">识别体格检查中所使用的各类诊断器械与常规检查耗材。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe how to prepare a client for an examination.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述如何为客户做好体格检查的生理与心理准备。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe the possible examination positions and how to drape the client for each of these positions.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述体检常见体位摆放方法以及在各种体位下如何为客户进行专业遮盖以保护隐私。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain guidelines for assisting with a physical examination.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">阐述在协助医生或护士进行体格检查时的专业操作准则。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe the common fears and concerns of surgical clients.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述外科手术患者最常见的身心恐惧、焦虑与顾虑。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain how clients are physically and psychologically prepared for surgery.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">解释如何从生理和心理双重维度协助患者做好充分的手术准备。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe how to prepare a room for the postoperative client.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述如何为术后返回病房的客户准备专科监护床单位及急救设施。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">List the postoperative signs and symptoms to report to the nurse.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">列出术后必须立即向责任护士汇报的危急体征与异常临床表现。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Explain how circulation is stimulated after surgery.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">解释术后如何通过肢体运动与辅助用具促进下肢血液循环以预防血栓形成。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe how to meet the client’s hygiene, nutrition, fluid, and elimination needs after surgery.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述如何在术后满足客户的个人卫生、营养摄入、液体补充及排泄需求。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Perform the procedures described in this chapter.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">规范执行本章所阐述的入院接诊、体位安置、术后运动等各项实操护理规程。</div>
+      </li>
+      <li style="margin-bottom:8px;">
+        <div class="obj-en" style="font-weight:500; color:var(--text-primary);">Describe what to do in an emergency situation.</div>
+        <div class="obj-cn" style="font-size:13px; color:var(--text-secondary);">描述在急性期监护环境中遭遇紧急突发状况时的规范应对与求援步骤。</div>
+      </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1087" data-physical-page="1087">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1087</span>
+        <span class="page-topic-title">Key Terms & The PSW Scope in Acute Care (核心专业术语与急性期支持角色)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">More and more hospitals are now employing support workers to provide basic bedside care to clients and to assist the health care team. In many municipalities, support workers are now being hired to assist acute-care health care teams for hospitalized clients. This chapter focuses on supporting the client during acute-care transitions, assisting with physical examinations, supporting the client having surgery, and how to assist in an emergency situation. In some provinces and territories, hospitalized people are called “patients,” while in other provinces, they are referred to as “clients.” For consistency, we have used the term <em>clients</em>.</p>
+        <p class="para-cn">越来越多的医院正在聘用支持人员为客户提供基础床旁照护，并协助医疗卫生团队开展工作。在加拿大许多城市中，支持人员已被广泛引入急性期医疗团队，协助照料住院患者。本章重点阐述如何在急性期转归流程中支持客户、协助完成体格检查、为手术患者提供全程围手术期支持，以及在紧急状况下如何规范求援与配合。在部分省份和地区，住院人员被称为“患者（patients）”，而在其他省份则被称为“客户（clients）”。为保持全书统一，我们通篇采用“客户”这一称谓。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">The role that support workers play and their scope of practice when caring for clients in an acute-care setting (such as a hospital) differ somewhat from their roles and scope of practice in other settings (see Chapter 3). For example, there may be a need for more tasks to be delegated in an acute-care setting (BOX 46.1). Also, because acute-care clients (such as those who are undergoing investigative procedures or having surgery) can develop life-threatening health challenges quickly, it is important to observe for and immediately report changes in the client’s condition to the nursing staff. As always, it is also important to stay within your scope of practice and not attempt anything that you have not been delegated or taught to do.</p>
+        <p class="para-cn">支持人员在急性期医疗机构（如医院）中照护客户时所扮演的角色及其执业范畴，与在其他照护场所（如社区或长期照护机构）存在一定差异（参见第 3 章）。例如，在急性期环境中，往往需要被委派执行更多专科任务（专栏 46.1）。此外，由于急性期患者（如正在接受侵入性检查或经历手术的患者）病情变化极其迅猛，极易在短时间内发生危及生命的健康恶化，因此敏锐观察并立即向护理人员汇报患者病情的微小变化显得生死攸关。与以往一样，严格恪守执业范畴、绝不擅自尝试任何未经正式委派或未受专业培训的操作，始终是铁的纪律。</p>
+      </div>
+
+      <div class="callout-box info" style="margin:20px 0; padding:18px 20px; background:rgba(37,99,235,0.04); border-left:4px solid #2563eb; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#1e40af;">BOX 46.1: Delegating Tasks in Acute Care (专栏 46.1：急性期照护中的任务委派)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.55;">
+          <p class="para-en">In acute care, nurses may delegate tasks that are not typically performed by support workers in home care or long-term care settings. Examples may include obtaining specific vital sign sequences, performing simple nonsterile dressing changes, applying sequential compression devices (SCDs), or assisting with complex bedside clinical procedures. Always adhere to the <strong>Five Rights of Delegation</strong>: the right task, the right circumstances, the right person, the right directions and communication, and the right supervision and evaluation.</p>
+          <p class="para-cn">在急性期医院环境中，护士可能会委派一些在居家养老或长期照护机构中通常不属于支持人员常规职责的医疗相关任务。例如：按特定频次采集生命体征序列、执行简单的无菌敷料更换、应用下肢间歇充气加压泵（SCDs），或协助床旁复杂临床操作。在执行前必须严格遵循<strong>委派五大正确原则</strong>：正确的任务、正确的情境、正确的人员、正确的指导与沟通、正确的监督与评估。</p>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:20px; margin-bottom:8px;">SUPPORTING THE CLIENT DURING TRANSITIONS (支持转归流程中的客户)</h3>
+        <p class="para-en">Clients often need to move from one environment to another—for example, into a facility (<em>admission</em>) or out of a facility (<em>discharge</em>) or from one room or unit in a facility to another (<em>transfer</em>). Transitions are difficult for most people. Do you remember how you felt the last time you moved? You might have felt sad if you had to leave friends and family behind, you might have felt strange and disoriented (out of place) in your new environment, or you might have felt worried about how you would adjust. Clients facing transitions in a healthcare facility often experience these same powerful emotions.</p>
+        <p class="para-cn">客户经常需要从一个环境迁往另一个新环境——例如，进入医疗机构办理接收（<strong>入院 Admission</strong>）、离开机构办理离院（<strong>出院 Discharge</strong>），或者在机构内部从一个房间/病区迁往另一病区（<strong>转科 Transfer</strong>）。对绝大多数人而言，环境转换都是充满压力的过程。你是否还记得上一次搬家时的切身感受？当你不得不告别亲朋好友时，内心可能会感到悲伤与留恋；身处全然陌生的新居时，会感到茫然无措与无所适从；你甚至会为自己能否适应新生活而深感担忧与焦虑。在医疗机构中经历转归变迁的患者，所承受的正是这种强烈而复杂的心理冲击。</p>
+      </div>
+
+      
+    <div id="sec-ch46-glossary" class="glossary-wrapper" style="margin-top:28px; margin-bottom:36px; padding:20px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:12px;">
+      <div class="glossary-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="margin:0; font-size:18px; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+          <span style="display:inline-block; width:8px; height:18px; background:var(--accent-color); border-radius:4px;"></span>
+          KEY TERMS: Chapter 46 核心专业术语表 (22 条)
+        </h3>
+        <div class="glossary-controls" style="display:flex; gap:10px;">
+          <input type="text" id="ch46-glossary-search" placeholder="Search terms (中英搜索)..." oninput="filterCh46Glossary()" style="padding:6px 12px; border:1px solid var(--border-color); border-radius:6px; font-size:13px; background:var(--bg-main); color:var(--text-primary);">
+          <button onclick="toggleCh46GlossaryMode()" class="btn-toggle-view" style="padding:6px 12px; border:1px solid var(--border-color); border-radius:6px; font-size:13px; background:var(--bg-main); color:var(--text-primary); cursor:pointer;">切换卡片/表格</button>
+        </div>
+      </div>
+      <div id="ch46-glossary-table-view" style="overflow-x:auto;">
+        <table class="glossary-table" style="width:100%; border-collapse:collapse; font-size:14px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); text-align:left;">
+              <th style="padding:10px; width:28%;">Term 术语</th>
+              <th style="padding:10px; width:72%;">Definition 定义与临床释义</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">admission</strong><span class="t-cn">入院 / 入机构手续</span></td>
+            <td class="def-col"><div class="d-en">Official entry of a client into a hospital or other health care facility. p. 1089</div><div class="d-cn">客户正式进入医院或其他医疗护理机构办理接收的官方程序。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">anaesthesia</strong><span class="t-cn">麻醉</span></td>
+            <td class="def-col"><div class="d-en">The loss of feeling or sensation, produced by a medication that blocks pain impulses to the brain. p. 1103</div><div class="d-cn">通过阻断向大脑传递疼痛神经冲动的药物所产生的知觉或感觉丧失状态。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">discharge</strong><span class="t-cn">出院 / 离院手续</span></td>
+            <td class="def-col"><div class="d-en">Official departure of a client from a hospital or other health care facility. p. 1090</div><div class="d-cn">客户正式离开医院或其他医疗保健机构的官方离院程序。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">elective surgery</strong><span class="t-cn">择期手术</span></td>
+            <td class="def-col"><div class="d-en">Surgery that is scheduled but nonurgent. p. 1097</div><div class="d-cn">预先安排且非急迫的手术，延期进行不会直接危及生命。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">embolus</strong><span class="t-cn">栓子</span></td>
+            <td class="def-col"><div class="d-en">An air bubble, blood clot (thrombus), or fat clot that travels through the vascular system until it lodges in a distant vessel. p. 1105</div><div class="d-cn">在血管系统中游走并在远处血管发生嵌塞的气泡、血凝块（血栓）或脂肪颗粒。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">emergency surgery</strong><span class="t-cn">急诊手术</span></td>
+            <td class="def-col"><div class="d-en">Surgery that must be done immediately to save a client’s life or prevent permanent disability. p. 1103</div><div class="d-cn">为挽救生命或防止永久性伤残而必须立即实施的抢救性手术。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">general anaesthesia</strong><span class="t-cn">全身麻醉</span></td>
+            <td class="def-col"><div class="d-en">Unconsciousness and the loss of feeling or sensation produced by a medication. p. 1103</div><div class="d-cn">由麻醉药物引起的意识丧失以及全身知觉与痛觉的完全消失。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">laryngeal mirror</strong><span class="t-cn">喉镜 / 间接喉镜</span></td>
+            <td class="def-col"><div class="d-en">An instrument used to examine the mouth, teeth, and throat. p. 1093</div><div class="d-cn">用于检查口腔、牙齿及咽喉部位的带柄小圆镜反射器械。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">lithotomy position</strong><span class="t-cn">膀胱截石位</span></td>
+            <td class="def-col"><div class="d-en">A back-lying position in which the hips are brought down to the edge of the examination table, the knees are flexed, the hips are externally rotated, and the feet are supported in stirrups. p. 1094</div><div class="d-cn">仰卧位，臀部移至检查台边缘，屈膝、双髋外展外旋，双足支撑于脚蹬（脚架）上的体位。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">local anaesthesia</strong><span class="t-cn">局部麻醉</span></td>
+            <td class="def-col"><div class="d-en">The loss of sensation in a small area, produced by a medication injected at the specific site or by a topical application. p. 1103</div><div class="d-cn">通过特定部位注射或局部涂抹药物所产生的局限小区域感觉丧失。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">nasal speculum</strong><span class="t-cn">前鼻镜 / 鼻窥器</span></td>
+            <td class="def-col"><div class="d-en">An instrument used to examine the inside of the nose. p. 1093</div><div class="d-cn">用于撑开鼻孔以检查鼻腔内部结构的器械。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">ophthalmoscope</strong><span class="t-cn">检眼镜 / 眼底镜</span></td>
+            <td class="def-col"><div class="d-en">A lighted instrument used to examine the internal structures of the eye. p. 1092</div><div class="d-cn">带有光源、用于检查眼球内部结构（如视网膜、视神经乳头）的光学器械。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">otoscope</strong><span class="t-cn">检耳镜 / 耳镜</span></td>
+            <td class="def-col"><div class="d-en">A lighted instrument used to examine the external ear and the eardrum (tympanic membrane). p. 1092</div><div class="d-cn">带有光源、用于检查外耳道和鼓膜的窥视器械。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">percussion hammer</strong><span class="t-cn">叩诊锤</span></td>
+            <td class="def-col"><div class="d-en">An instrument used to tap body parts to test reflexes. Also known as reflex hammer. p. 1092</div><div class="d-cn">用于敲击身体特定肌腱部位以测试神经反射的橡胶锤，亦称反射锤。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">postoperative</strong><span class="t-cn">术后（期）</span></td>
+            <td class="def-col"><div class="d-en">After surgery. p. 1103</div><div class="d-cn">手术结束之后的恢复时期。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">preoperative</strong><span class="t-cn">术前（期）</span></td>
+            <td class="def-col"><div class="d-en">Before surgery. p. 1098</div><div class="d-cn">施行手术之前的准备阶段。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">reflex hammer</strong><span class="t-cn">反射锤</span></td>
+            <td class="def-col"><div class="d-en">See percussion hammer. p. 1092</div><div class="d-cn">参见叩诊锤。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">regional anaesthesia</strong><span class="t-cn">区域麻醉 / 部位麻醉</span></td>
+            <td class="def-col"><div class="d-en">The loss of sensation or feeling in a large area of the body, produced by the injection of a medication. p. 1103</div><div class="d-cn">通过神经阻滞注射药物产生的身体大面积区域知觉或痛觉阻断（如硬膜外或脊麻）。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">thrombus</strong><span class="t-cn">血栓</span></td>
+            <td class="def-col"><div class="d-en">A blood clot that forms in a blood vessel, which has the potential to become an embolus. p. 1105</div><div class="d-cn">在活体心血管腔内形成的血凝块，具有脱落并转变成栓子的潜在危险。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">tuning fork</strong><span class="t-cn">音叉</span></td>
+            <td class="def-col"><div class="d-en">An instrument used to test hearing. p. 1093</div><div class="d-cn">通过震动发音以测试气导与骨导听力功能的金属器械。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">urgent surgery</strong><span class="t-cn">限期手术 / 紧急手术</span></td>
+            <td class="def-col"><div class="d-en">Surgery that must be done soon to prevent further damage, disability, or disease. p. 1097</div><div class="d-cn">为防止进一步组织损伤、伤残或疾病恶化而必须在短时间内实施的手术。</div></td>
+          </tr>
+          <tr class="glossary-row">
+            <td class="term-col"><strong class="t-en">vaginal speculum</strong><span class="t-cn">阴道窥器 / 鸭嘴器</span></td>
+            <td class="def-col"><div class="d-en">An instrument used to open the vagina so that it and the cervix can be examined. p. 1092</div><div class="d-cn">用于撑开阴道壁以便全面直视检查阴道黏膜及宫颈形态的双叶窥器。</div></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="ch46-glossary-cards-view" class="glossary-cards-grid" style="display:none; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:14px; margin-top:12px;">
+        
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">admission</strong><span class="t-cn">入院 / 入机构手续</span></div>
+            <div class="card-def-en">Official entry of a client into a hospital or other health care facility. p. 1089</div>
+            <div class="card-def-cn">客户正式进入医院或其他医疗护理机构办理接收的官方程序。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">anaesthesia</strong><span class="t-cn">麻醉</span></div>
+            <div class="card-def-en">The loss of feeling or sensation, produced by a medication that blocks pain impulses to the brain. p. 1103</div>
+            <div class="card-def-cn">通过阻断向大脑传递疼痛神经冲动的药物所产生的知觉或感觉丧失状态。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">discharge</strong><span class="t-cn">出院 / 离院手续</span></div>
+            <div class="card-def-en">Official departure of a client from a hospital or other health care facility. p. 1090</div>
+            <div class="card-def-cn">客户正式离开医院或其他医疗保健机构的官方离院程序。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">elective surgery</strong><span class="t-cn">择期手术</span></div>
+            <div class="card-def-en">Surgery that is scheduled but nonurgent. p. 1097</div>
+            <div class="card-def-cn">预先安排且非急迫的手术，延期进行不会直接危及生命。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">embolus</strong><span class="t-cn">栓子</span></div>
+            <div class="card-def-en">An air bubble, blood clot (thrombus), or fat clot that travels through the vascular system until it lodges in a distant vessel. p. 1105</div>
+            <div class="card-def-cn">在血管系统中游走并在远处血管发生嵌塞的气泡、血凝块（血栓）或脂肪颗粒。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">emergency surgery</strong><span class="t-cn">急诊手术</span></div>
+            <div class="card-def-en">Surgery that must be done immediately to save a client’s life or prevent permanent disability. p. 1103</div>
+            <div class="card-def-cn">为挽救生命或防止永久性伤残而必须立即实施的抢救性手术。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">general anaesthesia</strong><span class="t-cn">全身麻醉</span></div>
+            <div class="card-def-en">Unconsciousness and the loss of feeling or sensation produced by a medication. p. 1103</div>
+            <div class="card-def-cn">由麻醉药物引起的意识丧失以及全身知觉与痛觉的完全消失。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">laryngeal mirror</strong><span class="t-cn">喉镜 / 间接喉镜</span></div>
+            <div class="card-def-en">An instrument used to examine the mouth, teeth, and throat. p. 1093</div>
+            <div class="card-def-cn">用于检查口腔、牙齿及咽喉部位的带柄小圆镜反射器械。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">lithotomy position</strong><span class="t-cn">膀胱截石位</span></div>
+            <div class="card-def-en">A back-lying position in which the hips are brought down to the edge of the examination table, the knees are flexed, the hips are externally rotated, and the feet are supported in stirrups. p. 1094</div>
+            <div class="card-def-cn">仰卧位，臀部移至检查台边缘，屈膝、双髋外展外旋，双足支撑于脚蹬（脚架）上的体位。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">local anaesthesia</strong><span class="t-cn">局部麻醉</span></div>
+            <div class="card-def-en">The loss of sensation in a small area, produced by a medication injected at the specific site or by a topical application. p. 1103</div>
+            <div class="card-def-cn">通过特定部位注射或局部涂抹药物所产生的局限小区域感觉丧失。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">nasal speculum</strong><span class="t-cn">前鼻镜 / 鼻窥器</span></div>
+            <div class="card-def-en">An instrument used to examine the inside of the nose. p. 1093</div>
+            <div class="card-def-cn">用于撑开鼻孔以检查鼻腔内部结构的器械。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">ophthalmoscope</strong><span class="t-cn">检眼镜 / 眼底镜</span></div>
+            <div class="card-def-en">A lighted instrument used to examine the internal structures of the eye. p. 1092</div>
+            <div class="card-def-cn">带有光源、用于检查眼球内部结构（如视网膜、视神经乳头）的光学器械。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">otoscope</strong><span class="t-cn">检耳镜 / 耳镜</span></div>
+            <div class="card-def-en">A lighted instrument used to examine the external ear and the eardrum (tympanic membrane). p. 1092</div>
+            <div class="card-def-cn">带有光源、用于检查外耳道和鼓膜的窥视器械。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">percussion hammer</strong><span class="t-cn">叩诊锤</span></div>
+            <div class="card-def-en">An instrument used to tap body parts to test reflexes. Also known as reflex hammer. p. 1092</div>
+            <div class="card-def-cn">用于敲击身体特定肌腱部位以测试神经反射的橡胶锤，亦称反射锤。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">postoperative</strong><span class="t-cn">术后（期）</span></div>
+            <div class="card-def-en">After surgery. p. 1103</div>
+            <div class="card-def-cn">手术结束之后的恢复时期。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">preoperative</strong><span class="t-cn">术前（期）</span></div>
+            <div class="card-def-en">Before surgery. p. 1098</div>
+            <div class="card-def-cn">施行手术之前的准备阶段。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">reflex hammer</strong><span class="t-cn">反射锤</span></div>
+            <div class="card-def-en">See percussion hammer. p. 1092</div>
+            <div class="card-def-cn">参见叩诊锤。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">regional anaesthesia</strong><span class="t-cn">区域麻醉 / 部位麻醉</span></div>
+            <div class="card-def-en">The loss of sensation or feeling in a large area of the body, produced by the injection of a medication. p. 1103</div>
+            <div class="card-def-cn">通过神经阻滞注射药物产生的身体大面积区域知觉或痛觉阻断（如硬膜外或脊麻）。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">thrombus</strong><span class="t-cn">血栓</span></div>
+            <div class="card-def-en">A blood clot that forms in a blood vessel, which has the potential to become an embolus. p. 1105</div>
+            <div class="card-def-cn">在活体心血管腔内形成的血凝块，具有脱落并转变成栓子的潜在危险。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">tuning fork</strong><span class="t-cn">音叉</span></div>
+            <div class="card-def-en">An instrument used to test hearing. p. 1093</div>
+            <div class="card-def-cn">通过震动发音以测试气导与骨导听力功能的金属器械。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">urgent surgery</strong><span class="t-cn">限期手术 / 紧急手术</span></div>
+            <div class="card-def-en">Surgery that must be done soon to prevent further damage, disability, or disease. p. 1097</div>
+            <div class="card-def-cn">为防止进一步组织损伤、伤残或疾病恶化而必须在短时间内实施的手术。</div>
+          </div>
+          <div class="glossary-card">
+            <div class="card-term"><strong class="t-en">vaginal speculum</strong><span class="t-cn">阴道窥器 / 鸭嘴器</span></div>
+            <div class="card-def-en">An instrument used to open the vagina so that it and the cervix can be examined. p. 1092</div>
+            <div class="card-def-cn">用于撑开阴道壁以便全面直视检查阴道黏膜及宫颈形态的双叶窥器。</div>
+          </div>
+      </div>
+    </div>
+    
+    <script>
+    function filterCh46Glossary() {
+      var q = document.getElementById('ch46-glossary-search').value.toLowerCase();
+      var rows = document.querySelectorAll('#ch46-glossary-table-view .glossary-row');
+      rows.forEach(function(r) {
+        r.style.display = r.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+      var cards = document.querySelectorAll('#ch46-glossary-cards-view .glossary-card');
+      cards.forEach(function(c) {
+        c.style.display = c.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+    }
+    function toggleCh46GlossaryMode() {
+      var tv = document.getElementById('ch46-glossary-table-view');
+      var cv = document.getElementById('ch46-glossary-cards-view');
+      if (tv.style.display === 'none') {
+        tv.style.display = '';
+        cv.style.display = 'none';
+      } else {
+        tv.style.display = 'none';
+        cv.style.display = 'grid';
+      }
+    }
+    </script>
+    
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1088" data-physical-page="1088">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1088</span>
+        <span class="page-topic-title">Transitions: Hospital Admission & Welcoming Clients (转归流程：入院迎新与环境适应)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">Admission is the official entry of a person into a healthcare facility. The admission process usually begins in the admitting department (admitting office). Admitting personnel obtain necessary demographic and financial information, obtain signatures on consent forms, and issue an identification (ID) bracelet. Once the admitting paperwork is complete, the client is taken to the nursing unit, where the client is greeted by the nursing staff.</p>
+        <p class="para-cn">入院（Admission）是指一个人正式进入医疗保健机构的法定登记程序。入院流程通常始于入院接待处（入院办公室）。接待人员负责采集必需的人口学与医保财务信息、签署知情同意书，并佩戴患者身份识别腕带（ID bracelet）。办妥纸质或电子登记手续后，工作人员将客户护送至相应病区，由病区护理团队正式接诊问候。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Preparing the Client’s Room (准备患者病室环境)</h4>
+        <p class="para-en">The client’s room should be prepared before the client arrives on the nursing unit. In a hospital, the bed is usually left in the open position (the top linens are fanfolded to the foot of the bed) if the client arrives by wheelchair, or the linens may be fanfolded to the side if the client arrives on a stretcher. Ensure that the room is clean, warm, well-ventilated, and adequately lit. Place personal care items (washbasin, emesis basin, bedpan or urinal, water pitcher and cup, tissues) on the bedside stand or overbed table according to facility policy.</p>
+        <p class="para-cn">病区在迎接新客户到来之前，必须提前彻底整理好病室。在医院中，如果客户乘轮椅抵达，病床通常整理为开敞式（将盖被呈扇形折叠至床尾）；若乘平车平卧抵达，则将盖被扇形折叠至远离推车的一侧床缘。确保病室整洁卫生、室温适宜、通风优良且采光充足。根据机构规范，在床头柜或过床桌上备齐个人基础护理用物（脸盆、呕吐盆、便盆或尿壶、带盖水壶水杯、纸巾等）。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Welcoming the Client (热情迎接新入院客户)</h4>
+        <p class="para-en">The first impression is very important. When the client arrives, greet the client warmly and politely by name (e.g., “Good morning, Mrs. Janz. Welcome to 4-East. My name is Sarah, and I am the support worker caring for you today”). Introduce yourself and explain your role. Greet family members or friends who are accompanying the client (FIGURE 46.1). Call the client by name in the proper manner and lead the way to the client’s room. Remember that the client and family may be feeling anxious, so be friendly and gentle, and do not rush them. See Providing Compassionate Care: Welcoming a Newly Admitted Client, on page 1091.</p>
+        <p class="para-cn">第一印象对建立医患信任至关重要。当客户抵达病区时，应亲切而礼貌地直呼其姓名进行问候（例如：“早上好，简茨夫人。欢迎来到东四病区。我是萨拉，是今天负责协助照护您的支持人员”）。主动做自我介绍并清晰解释自己的工作角色。礼貌问候陪伴在侧的家属或亲友（图 46.1）。以得体尊重的称谓称呼客户，引导其进入病室。切记客户和家属此时可能处于极度焦虑之中，因此态度务必友善、温和，行动切勿匆忙催促。详见第 1091 页专栏《提供人文关怀：迎接新入院客户》。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Settling the Client into the Room (协助客户安顿入室)</h4>
+        <p class="para-en">Once in the room, help the client undress and put on a hospital gown or personal nightwear if the client is to be in bed, or assist them into a comfortable armchair. Assist the client with unpacking and storing clothing and personal items. Inventory personal belongings according to facility policy. Inspect clothing, jewellery, money, dentures, eyeglasses, and assistive devices, and record them on the personal belongings list. Have the client or family sign the inventory sheet, or send high-value items home with family members whenever possible.</p>
+        <p class="para-cn">进入病室后，若患者需要卧床休息，协助其脱下外衣换上病员服或自带睡衣；若允许下床，则协助其在舒适的靠背椅上就座。协助整理行李并将衣物及个人洗漱用具放入衣柜或床头柜。严格按照机构制度清点登记个人财物。核对衣物、首饰、现金、假牙、眼镜及助听器等辅具，如实记录在个人财产登记单上。请客户或随行家属签字确认，或在征得同意后建议家属将贵重金银现金带回家中妥善保管。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1089" data-physical-page="1089">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1089</span>
+        <span class="page-topic-title">The Hospital Bed Unit & Acute Equipment (急性期病床单元与专科监护设备)</span>
+      </div>
+
+      <div class="figures-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+        <div class="figure-card" style="text-align:center;">
+          <img src="images/ch46/fig-46-1.jpg" alt="Figure 46.1" style="max-width:100%; border-radius:6px; border:1px solid var(--border-color);">
+          <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+            <strong>FIGURE 46.1:</strong> A support worker introduces herself to a new client and family member.
+            <div style="font-size:11.5px; color:var(--text-muted);">图 46.1：支持人员向新入院客户及陪同家属做自我介绍并热情致意。</div>
+          </div>
+        </div>
+
+        <div class="figure-card" style="text-align:center;">
+          <img src="images/ch46/fig-46-2.jpg" alt="Figure 46.2" style="max-width:100%; border-radius:6px; border:1px solid var(--border-color);">
+          <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+            <strong>FIGURE 46.2:</strong> This hospital room has blood pressure equipment, an IV pole, oxygen and suction outlets, and a heart monitor. (iStockPhoto/SetsukoN)
+            <div style="font-size:11.5px; color:var(--text-muted);">图 46.2：急性期病房床头配置有壁式血压计、输液架、吸氧与负压吸引接口及心电监护仪。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">The Hospital Bed Unit (医院病床单元构成)</h4>
+        <p class="para-en">The hospital bed unit is designed to provide safety, comfort, and specialized medical support for acute-care clients. Modern acute-care hospital rooms often contain complex, wall-mounted medical equipment such as oxygen outlets, medical air, and suction (FIGURE 46.2) that are ready for immediate use when required. Oxygen tanks, oxygen concentrators, and portable suction equipment, all of which are also common in long-term care and home care settings, may also be present. Because medical equipment is expensive and easily broken, only medically necessary items should be placed at the bedside. Support workers must be familiar with the operation of hospital beds (electric controls for head, knee, and overall bed height), IV poles, and call bell systems.</p>
+        <p class="para-cn">医院病床单元的设计旨在为急性期患者提供全方位的安全防护、生理舒适以及专科医疗监护支持。现代急性期病房的床头墙壁通常集成了复杂的嵌入式医疗设施，如吸氧管道接口、医用压缩空气以及负压吸引阀门（图 46.2），以便在紧急抢救时随时调用。在长期照护和居家护理中常见的氧气瓶、制氧机及便携式吸引装置在医院也可能配备。由于医疗精密仪器造价昂贵且极易受损，床旁仅应放置医疗必需设备。支持人员必须熟练掌握多功能电动病床（床头抬升、膝下屈曲及整体高度升降控制器）、移动式输液架以及呼叫铃系统的标准操作。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Orienting the Client to the Environment (协助客户熟悉病区环境)</h4>
+        <p class="para-en">Orient the client to the room, unit, and facility. Show the client how to use the call bell, and emphasize that it must be kept within easy reach at all times. Explain how to operate the bed controls, the overbed table, the television, and the telephone. Show the client the bathroom and explain the emergency pull cord inside the bathroom. Introduce the client to their roommate if the room is semiprivate or a ward. Inform the client about mealtimes, visiting hours, and facility routines. Taking time to orient the client prevents confusion, reduces anxiety, and enhances client safety.</p>
+        <p class="para-cn">向客户全面介绍病室、病区乃至全院的核心环境设施。向客户演示呼叫铃的使用方法，并郑重强调呼叫铃必须始终置于其触手可及之处。指导客户如何操作电动床控制面板、调节过床桌、使用电视及床旁电话。带领客户参观卫生间，并重点解释卫生间内的紧急呼叫拉绳。如果入住的是双人病房（半私密）或多人大病房，应向同室室友进行友好引荐。告知每日三餐送餐时间、家属探视规定及病区作息制度。耐心细致的环境宣教能有效消除客户的迷茫不安、减轻心理恐惧，并从根本上预防跌倒等意外安全事故。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1090" data-physical-page="1090">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1090</span>
+        <span class="page-topic-title">Client Transfers & Facility Discharge (院内转科衔接与出院准备流程)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">TRANSFERS (院内转科衔接)</h3>
+        <p class="para-en">A transfer occurs when a client is moved from one room, unit, or department to another within the same healthcare facility. Transfers are usually related to changes in a client’s condition. For example, a client who becomes critically ill may be transferred from a medical-surgical unit to an intensive care unit (ICU). Conversely, a client whose condition improves may be transferred from the ICU to a step-down unit or regular inpatient unit. Transfers may also be done at the client’s request (e.g., requesting a private room) or to accommodate facility operational needs.</p>
+        <p class="para-cn">转科（Transfer）是指客户在同一医疗机构内部，从一个病房、病区或专科部门搬迁至另一处。转科通常与患者病情的重大演变直接相关。例如，当内外科普通病房的患者病情急剧恶化时，需要紧急转入重症监护室（ICU）；反之，当危重患者病情平稳好转后，则会从 ICU 转出至过渡病区（亚重症病区）或普通病房。此外，转科也可能应客户个人愿望发起（如申请入住单人私密病房），或为了配合医院整体床位统筹调配。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">Transfers can cause anxiety and distress because the client must leave familiar staff and surroundings to adapt to a new care environment. Support workers help reduce stress by explaining the reasons for the transfer, gathering and packing all personal belongings carefully, and ensuring that all medical records, charts, and medications accompany the client as directed by the nurse. Transport the client safely by wheelchair or stretcher. Upon arrival at the receiving unit, introduce the client to the new nursing staff, assist in settling the client into bed, and report any relevant observations to the receiving team.</p>
+        <p class="para-cn">转科往往会引发患者的恐惧与焦虑，因为他们不得不离开刚刚熟悉的医护面孔与周边环境，重新适应陌生的照护团队。支持人员可通过耐心地向其解释转科目的与必要性、妥善整理打包所有随身私人物品，并在责任护士指导下确保病历资料与专科药械完好随行来有效减轻心理应激。协助患者安全搭乘轮椅或平车转运。到达接收科室后，主动向新病区的护士介绍客户，协助将客户安顿在病床上并连接监护设施，最后向接收团队简明汇报转运途中的观察所见。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:20px; margin-bottom:8px;">DISCHARGES (出院准备与离院流程)</h3>
+        <p class="para-en">Discharge is the official departure of a client from a hospital or other healthcare facility. Discharge is a planned, multi-step process. A nurse or social worker usually coordinates discharge planning, but <strong>only a physician has the legal authority to write a discharge order</strong>. If a client insists on leaving the facility without a physician’s order, notify the nurse immediately; this is known as leaving <em>against medical advice (AMA)</em>.</p>
+        <p class="para-cn">出院（Discharge）是指客户正式办结手续离开医院或其他医疗机构的法定离院程序。出院是一个严密计划、多方协作的系统化过程。出院计划通常由专职责任护士或临床社工统筹协调，但<strong>唯有具备处方权的执业医生才拥有下达出院官方医嘱的法定权力</strong>。若客户在医生未下达医嘱的情况下执意强行离开医院，必须立即通报护士；在临床上这被称为“违背医疗建议擅自离院（Against Medical Advice, AMA）”。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">As a support worker, your duties during discharge include: assisting the client with dressing in street clothes, gathering and packing all personal possessions (checking drawers, closet, and bathroom thoroughly to ensure nothing is left behind), comparing belongings against the initial admission inventory list, and obtaining any stored valuables from the facility safe. The nurse provides written discharge instructions, reviews medications, and completes client teaching. Assist the client into a wheelchair, transport the client to the designated pickup area, assist the client into the vehicle safely, and report the time and manner of departure to the nurse.</p>
+        <p class="para-cn">作为支持人员，你在出院环节的核心职责包括：协助客户换好便服；全面清点并打包所有随身物品（务必彻底检查床头抽屉、衣柜、卫生间洗漱台，确保无任何遗漏）；将物品与入院初期的财产清单逐项核对；并在护士协助下从机构保险库取回代管的贵重物品交给客户。责任护士负责交代书面出院医嘱、宣教出院带药并指导康复随访。支持人员协助客户平稳坐上轮椅，平稳护送至医院指定的乘车出发区，小心搀扶协助客户安全上车，最后向病区护士汇报客户离院的确切时间、陪同家属及交通方式。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1091" data-physical-page="1091">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1091</span>
+        <span class="page-topic-title">Compassionate Care & Safety Features (人文关怀与病房卫浴无障碍防护)</span>
+      </div>
+
+      <div class="figures-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+        <div class="figure-card" style="text-align:center;">
+          <img src="images/ch46/fig-46-3.jpg" alt="Figure 46.3" style="max-width:100%; border-radius:6px; border:1px solid var(--border-color);">
+          <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+            <strong>FIGURE 46.3:</strong> Curtains around the bed provide privacy in hospitals and long-term care facilities.
+            <div style="font-size:11.5px; color:var(--text-muted);">图 46.3：病床周边的阻燃隔帘在医院及长期照护机构中为患者提供核心视觉隐私保护。</div>
+          </div>
+        </div>
+
+        <div class="figure-card" style="text-align:center;">
+          <img src="images/ch46/fig-46-4.jpg" alt="Figure 46.4" style="max-width:100%; border-radius:6px; border:1px solid var(--border-color);">
+          <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+            <strong>FIGURE 46.4:</strong> A facility bathroom. Note that there are several grab bars that can be used to assist the client. (Source: Brian Hillier)
+            <div style="font-size:11.5px; color:var(--text-muted);">图 46.4：机构无障碍卫浴室。注意墙面与马桶周边配置了多重防滑安全扶手与紧急拉绳。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout-box compassionate" style="margin:20px 0; padding:20px 22px; background:linear-gradient(135deg, rgba(16,185,129,0.06), rgba(5,150,105,0.06)); border-left:4px solid #10b981; border-radius:8px;">
+        <h4 style="margin:0 0 12px 0; font-size:16px; color:#065f46; display:flex; align-items:center; gap:8px;">
+          <span>PROVIDING COMPASSIONATE CARE: Welcoming a Newly Admitted Client</span>
+        </h4>
+        <div class="box-subtitle" style="font-size:14px; font-weight:600; color:#047857; margin-bottom:10px;">提供人文关怀：迎接新入院客户的核心原则（DIPPS 原则实践）</div>
+        
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <li style="margin-bottom:8px;">
+            <strong>Dignity (尊严):</strong> Treat the new client and their belongings with the utmost respect. Address the client by their formal name (e.g., Mr., Mrs., Ms.) unless requested otherwise. Handle personal effects with care—never toss or mishandle clothes or sentimental items.
+            <div style="color:var(--text-secondary); font-size:12.5px;">以最高尊重对待新客户及其私人物品。除客户主动要求外，始终尊称其正式称谓（如先生、女士）。轻拿轻放所有随身物品，严禁随意乱掷衣物或带有情感价值的纪念品。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Independence (独立性):</strong> Involve the client in decisions about room setup. Ask where they would like items placed on the bedside table and in cupboards. Encourage the client to do as much for themselves as their condition permits.
+            <div style="color:var(--text-secondary); font-size:12.5px;">鼓励客户参与病房环境布置的决策。征询其床头柜及衣柜内物品的摆放喜好。在病情与体能许可范围内，鼓励其自主完成力所能及的自理动作。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Preference (偏好):</strong> Honour the client’s choices regarding personal clothing, bath times, and daily routines whenever facility schedules and safety guidelines permit.
+            <div style="color:var(--text-secondary); font-size:12.5px;">在机构作息与医疗安全允许的框架下，充分尊重客户关于穿着衣物、盥洗时间及个人作息规律的个体偏好。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Privacy (隐私):</strong> Always pull privacy curtains completely around the bed unit (FIGURE 46.3) and close the door before performing any assessment, undressing, or personal care. Remember that curtains provide visual privacy, but conversation can still be heard—keep your voice soft and professional.
+            <div style="color:var(--text-secondary); font-size:12.5px;">在执行任何评估、脱衣或个人基础护理之前，务必将病床四周的隔帘完全拉严（图 46.3）并关严房门。切记隔帘仅能遮挡视线却无法隔绝声音——交谈时请保持温和轻柔且专业的语调。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Safety (安全):</strong> Ensure the call bell is functioning and within effortless reach at all times. Explain bathroom grab bars (FIGURE 46.4) and the emergency pull cord. Keep bed in the lowest horizontal position with wheels securely locked.
+            <div style="color:var(--text-secondary); font-size:12.5px;">确保呼叫铃功能完好且始终位于触手可及之处。详细说明卫浴扶手（图 46.4）及紧急求助拉绳的使用方法。病床必须始终处于最低水平位，且床脚刹车必须牢固锁死。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1092" data-physical-page="1092">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1092</span>
+        <span class="page-topic-title">The Physical Examination & Diagnostic Instruments (体格检查流程与诊断器械准备)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">THE PHYSICAL EXAMINATION (体格检查流程与支持配合)</h3>
+        <p class="para-en">Physicians and registered nurses perform physical examinations to promote health, determine the client’s physical and mental status, detect early signs of disease, and monitor existing illnesses or medical treatments. Physical examinations are performed in doctors’ offices, clinics, acute-care hospitals, and long-term care facilities (where annual physical examinations are often mandated by provincial regulations). Pre-employment physicals may also take place in a physician’s office or occupational health clinic.</p>
+        <p class="para-cn">医生和注册护士通过执行体格检查来促进整体健康、评估客户的身心机能状态、早期筛查疾病隐患，并持续监测现有疾病的进展或评估医疗干预效果。体格检查可在医师诊所、门诊部、急性期医院病房以及长期照护机构中进行（在长期照护机构中，各省法规通常强制要求新入院客户及在院居民每年接受全身体检）。此外，入职前体检也常在医生诊所或职业健康门诊部开展。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Equipment for the Physical Examination (体检专用诊断器械准备)</h4>
+        <p class="para-en">Instruments needed for a physical examination may include, but are not limited to, the following (FIGURE 46.5):</p>
+        <p class="para-cn">体格检查所需的医疗器械可能包括但不限于以下专业诊断工具（图 46.5）：</p>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:20px; text-align:center;">
+        <img src="images/ch46/fig-46-5.jpg" alt="Figure 46.5" style="max-width:85%; border-radius:6px; border:1px solid var(--border-color); box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+        <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+          <strong>FIGURE 46.5:</strong> Some of the many instruments used for a physical examination (Ophthalmoscope, Percussion hammer, Vaginal speculum, Tuning fork, Nasal speculum, Otoscope, Laryngeal mirror).
+          <div style="font-size:11.5px; color:var(--text-muted);">图 46.5：体格检查常用的多种专科诊断器械（检眼镜、叩诊锤、阴道窥器、音叉、鼻窥器、检耳镜、间接喉镜）。</div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Ophthalmoscope (检眼镜 / 眼底镜):</strong> A lighted instrument used to examine the internal structures of the eye (retina, optic disc, blood vessels).
+            <div style="font-size:13px; color:var(--text-secondary);">带有专科聚光照明系统的光学仪器，用于深入窥视检查眼球内部结构（视网膜、视神经乳头及眼底微血管）。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Otoscope (检耳镜 / 耳镜):</strong> A lighted instrument used to examine the external ear canal and the eardrum (tympanic membrane). Some diagnostic sets feature interchangeable heads that combine both ophthalmoscope and otoscope.
+            <div style="font-size:13px; color:var(--text-secondary);">带有光源与放大镜头的器械，用于直视检查外耳道黏膜及鼓膜（tympanic membrane）。许多临床诊断手柄配有可互换接头，兼容检眼镜与耳镜两用。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Percussion hammer / Reflex hammer (叩诊锤 / 反射锤):</strong> An instrument with a triangular rubber head used to tap tendon insertion points to test neurological deep tendon reflexes.
+            <div style="font-size:13px; color:var(--text-secondary);">带有三角形橡胶敲击头的器械，用于敲击特定肌腱附着点，以测试神经系统的深反射机能。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Vaginal speculum (阴道窥器 / 鸭嘴器):</strong> A bivalve metal or disposable plastic instrument used to gently open the vaginal walls so that the vaginal vault and cervix can be visualized.
+            <div style="font-size:13px; color:var(--text-secondary);">双叶金属或一次性医用塑料器械，用于轻柔撑开阴道壁，以便清晰直视观察阴道黏膜穹窿及宫颈外观。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1093" data-physical-page="1093">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1093</span>
+        <span class="page-topic-title">Specialized Instruments & Client Preparation (专科检查仪器与受检身心准备)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Nasal speculum (前鼻镜 / 鼻窥器):</strong> An instrument used to dilate the nares to examine the inside of the nasal cavity and mucous membranes.
+            <div style="font-size:13px; color:var(--text-secondary);">用于撑开前鼻孔以检查鼻腔内部黏膜、鼻中隔及鼻甲形态的器械。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Tuning fork (音叉):</strong> A two-pronged metallic instrument that vibrates at a specific frequency when struck, used to test auditory acuity and distinguish conductive from sensorineural hearing loss.
+            <div style="font-size:13px; color:var(--text-secondary);">敲击后按特定频率共振的双叉金属器械，用于评估听力敏锐度并鉴别传导性与神经性听力障碍。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Laryngeal mirror (间接喉镜 / 口咽镜):</strong> A small, angled circular mirror on a thin handle used with a light source to examine the teeth, posterior pharynx, and vocal cords.
+            <div style="font-size:13px; color:var(--text-secondary);">细长金属手柄上装有特定倾角的小圆镜，配合聚光光源用于检查牙齿咬合面、后咽壁及声带结构。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Other standard supplies:</strong> Sphygmomanometer and stethoscope, thermometer, tongue depressors (wooden spatulas), sterile cotton-tipped applicators, clean gloves, water-soluble lubricant (for rectal/vaginal exams), slides or liquid-based cytology collection kits, paper towels, and biohazard disposal receptacles.
+            <div style="font-size:13px; color:var(--text-secondary);">其他常规辅助用品：血压计与听诊器、体温计、压舌板（木质压舌板）、无菌棉签、医用检查手套、水溶性润滑剂（用于肛门直肠或阴道检查）、细胞学涂片玻片或液基细胞保存瓶、纸巾及医疗废物专用桶。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Preparing the Client for the Examination (受检客户的身心准备工作)</h4>
+        <p class="para-en">Preparing the client physically and psychologically promotes comfort, reduces apprehension, and facilitates a smooth, dignified examination. Prior to the examination:</p>
+        <p class="para-cn">从生理与心理双重层面协助受检者做好准备，不仅能提升体检舒适度、驱散恐惧顾虑，更能保证检查过程顺利、严谨且充满尊严。在检查开始之前：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Psychological reassurance (心理疏导):</strong> Clients are often embarrassed, anxious about pain, or fearful of what the examiner might discover. Explain what you will be doing to assist them. Reassure them that their privacy will be safeguarded throughout.
+            <div style="font-size:13px; color:var(--text-secondary);">受检者往往会产生害羞窘迫感、对操作疼痛的恐惧，或是对可能查出严重疾病的深层担忧。耐心解释你协助准备的每一个具体步骤。郑重向其保证全程都会严格保护个人隐私。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Voiding (排空膀胱):</strong> Ask the client to empty their bladder before the examination. An empty bladder makes abdominal and pelvic palpation more accurate and prevents discomfort or involuntary leakage during the exam. If a urine specimen is required, obtain it at this time.
+            <div style="font-size:13px; color:var(--text-secondary);">请客户在体检前排空膀胱。充盈的膀胱会干扰腹部触诊与妇科双合诊的准确性，并在受检受压时诱发剧烈不适或意外漏尿。若医嘱需留取中段尿常规标本，应在此时一并规范采集。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Disrobing and Gowning (更衣与穿检查袍):</strong> Ask the client to undress, providing privacy by closing the door and pulling curtains. Offer assistance if the client is frail, stiff, or unsteady. Help the client put on the examination gown, opening either to the front or back as directed by the examiner.
+            <div style="font-size:13px; color:var(--text-secondary);">请客户脱去外衣；在此期间拉好隔帘并关好房门以保护绝对隐私。若客户年老体弱、关节僵硬或步态不稳，应主动上前提供安全协助。协助客户穿好检查袍，并按检查者要求将开口置于前方或后方。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Baseline vital signs, height, and weight (测量基础体征与身高校秤):</strong> Measure height and weight if indicated. Measure vital signs (temperature, pulse, respiration, and blood pressure) according to facility protocol or examiner preference and document findings accurately.
+            <div style="font-size:13px; color:var(--text-secondary);">按规定协助测量净身高与体重。依照机构规程或检查医师要求精准测量基础生命体征（体温、脉搏、呼吸、血压）并及时规范记录。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1094" data-physical-page="1094">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1094</span>
+        <span class="page-topic-title">Examination Positions & Draping Techniques (体检体位摆放与遮盖隐私保护)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Positioning and Draping the Client (体检常见体位摆放与专业遮盖规范)</h4>
+        <p class="para-en">The client is positioned and draped according to the body part being examined. Correct draping prevents unnecessary body exposure, maintains professional boundaries, and keeps the client warm. An extra bath blanket should be kept available to prevent chilling (FIGURE 46.6).</p>
+        <p class="para-cn">根据所要检查的具体身体部位，协助客户采取特定体检体位并施以规范遮盖。严谨正确的遮盖能够彻底杜绝不必要的身体暴露、维护专业职业界限，并保持机体温暖。床头应常备一条保暖大浴毯以防患者受凉（图 46.6）。</p>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:20px; text-align:center;">
+        <img src="images/ch46/fig-46-6.jpg" alt="Figure 46.6" style="max-width:85%; border-radius:6px; border:1px solid var(--border-color); box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+        <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+          <strong>FIGURE 46.6:</strong> Positioning and draping for the physical examination. A, Supine position. B, Lithotomy position. C, Knee–chest position. D, Sims’ position.
+          <div style="font-size:11.5px; color:var(--text-muted);">图 46.6：体格检查体位摆放与遮盖技术。A，仰卧位；B，膀胱截石位；C，膝胸卧位；D，西姆斯氏卧位（左侧卧位）。</div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>A, Supine position (普通仰卧位, FIGURE 46.6, A):</strong> The client lies flat on their back with legs slightly separated and arms relaxed at their sides. The drape extends over the client from shoulders to feet. Used to examine the head, neck, chest, breasts, abdomen, heart, and extremities.
+            <div style="font-size:12.5px; color:var(--text-secondary);">受检者平卧于检查床上，双下肢自然伸直略微分开，双臂平放于体侧。遮盖单从双肩平展盖至足部。常用于检查头颈部、胸廓、乳房、腹部脏器、心脏听诊及四肢脉搏关节。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>B, Lithotomy position (膀胱截石位, FIGURE 46.6, B):</strong> The client lies on her back, and her hips are brought down to the lower edge of the examination table. The knees are flexed, hips externally rotated, and feet are secured in stirrups. The drape is arranged diagonally in a diamond pattern—one corner over the chest, two corners wrapping each leg, and the bottom corner between the thighs, folded back only when the examination begins. Used for female pelvic, vaginal, and rectal examinations.
+            <div style="font-size:12.5px; color:var(--text-secondary);">受检者仰卧，臀部移至检查台下边缘。屈膝、髋部外展外旋，双足置于脚蹬内支撑固定。遮盖单呈菱形斜向铺盖——顶角盖住胸部，两侧角分别包裹双下肢与膝盖，底角垂于两腿之间，仅在医生开始视诊与内诊的瞬间将底角向内折叠翻起。专用于女性盆腔、阴道及直肠检查。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>C, Knee–chest position (膝胸卧位, FIGURE 46.6, C):</strong> The client kneels on the table with knees slightly apart, resting their chest on the table and turning head to one side. The arms are above the head or flexed at elbows. The back is straight, and hips flexed at 90 degrees. Draped in a diamond shape to cover back, buttocks, and thighs. Used to examine the rectum and sometimes vagina. <em>Note: This position is strenuous and rarely used for older adults or clients with respiratory/heart disease; Sims' is preferred.</em>
+            <div style="font-size:12.5px; color:var(--text-secondary);">受检者跪在检查台上，双膝略微张开，胸部紧贴床面，头部转向一侧。双臂屈肘置于头侧。脊柱保持平直，髋部与大腿呈 90 度直角屈曲。以菱形单遮盖背部、臀部及大腿。用于直肠及部分阴道检查。<em>注意：该体位体能消耗极大且限制胸廓起伏，极少用于老年人或心肺功能不全者，临床多改用西姆斯氏位。</em></div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>D, Sims’ position (西姆斯氏侧卧位 / 半俯卧左侧卧位, FIGURE 46.6, D):</strong> The client lies on their left side. The right leg is sharply flexed so that it does not rest on the left leg, and the left arm is positioned comfortably behind the back. A diamond drape is applied, with the corner folded back to expose only the anal or perineal region. Preferred for rectal exams and enema administration, especially for older or frail clients.
+            <div style="font-size:12.5px; color:var(--text-secondary);">受检者呈左侧卧位。右大腿与右膝重度屈曲并前倾，使其不压迫左腿；左臂自然顺延置于背侧。遮盖单呈菱形覆盖，仅在检查时将遮盖单边角稍稍翻起以暴露肛门或会阴部。是直肠指诊、肛门镜检查及灌肠操作的首选体位，尤其极适合老年及体弱虚弱患者。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1095" data-physical-page="1095">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1095</span>
+        <span class="page-topic-title">Assisting During the Examination (体格检查中的协助配合要点)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Assisting With the Physical Examination (体格检查过程中的专业配合原则)</h4>
+        <p class="para-en">Depending on your employer's policies, your province or territory, and the examiner’s preference, your role during the physical examination may include:</p>
+        <p class="para-cn">依据所在机构规程、所在省或地区的监管法规以及检查医师的个人操作习惯，支持人员在体检过程中的核心协助职责包括：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Maintaining privacy and environmental comfort (维护私密与环境温控):</strong> Keep doors closed and curtains fully drawn. Minimize bodily exposure by uncovering only the specific anatomical area under active inspection, and immediately re-cover each area when the examiner finishes.
+            <div style="font-size:13px; color:var(--text-secondary);">始终确保病室门紧闭、床周隔帘拉严。将身体暴露降至最低限度——仅暴露当前正在检查的特定解剖区域，一旦该部位检查完毕立即重新盖好遮盖单。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Protecting client safety (全程确保患者人身安全):</strong> Never leave a disoriented, sedated, or frail client unattended on an elevated examination table. Provide physical support during position changes to prevent dizziness or falls.
+            <div style="font-size:13px; color:var(--text-secondary);">严禁将神志不清、应用了镇静药物或年老虚弱的患者独自一人留在高位检查台上。在翻身或体位变换时必须提供可靠的肢体支撑，杜绝突发体位性低血压眩晕或坠床摔伤。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Handing equipment and supplies (传递器械耗材与照明配合):</strong> Open sterile packaging as directed, pass requested instruments (percussion hammer, tongue depressor, speculum) to the examiner, apply water-soluble lubricant to gloves or specula, and adjust goose-neck examination lamps to ensure adequate focal illumination.
+            <div style="font-size:13px; color:var(--text-secondary);">按规范配合打开无菌包装，依序向医生递送所需器械（叩诊锤、压舌板、窥器等），为医用手套或窥器涂抹水溶性润滑剂，并适时调整鹅颈检查射灯的角度与焦点以确保视野明亮。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Providing emotional comfort (提供心理支持与情感抚慰):</strong> Stand near the client's head, hold the client's hand if welcomed, encourage slow deep breaths through the mouth during uncomfortable maneuvers (such as pelvic or rectal palpation), and reassure the client throughout.
+            <div style="font-size:13px; color:var(--text-secondary);">站在受检者头部或侧方，在客户接受的情况下轻握其手，在进行盆腔内诊或直肠指诊等引起酸胀不适的操作时，指导其用嘴做平缓深呼吸以放松腹肌，全程给予温和的言语宽慰。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="callout-box warning" style="margin:20px 0; padding:18px 20px; background:rgba(239,68,68,0.04); border-left:4px solid #ef4444; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#b91c1c;">CLINICAL ALERT: Chaperoning and Legal Protection (临床警示：陪检见证与法律防护)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.55;">
+          <p class="para-en">In many healthcare jurisdictions, having a third person present (a chaperone) during sensitive examinations—particularly breast, genital, pelvic, or rectal exams—is a mandatory professional standard. As a support worker, acting as a chaperone protects the client from inappropriate conduct and feelings of vulnerability, while also protecting the examiner against false allegations of misconduct.</p>
+          <p class="para-cn">在许多医疗司法管辖区，在对患者执行涉及隐私的敏感体检时（尤其是乳房视触诊、外生殖器、妇科盆腔内诊或肛门直肠指诊），必须有第三人在场（陪检员 Chaperone），这已成为强制性行业执业标准。支持人员作为陪检员在场，既能保护受检者免遭不当行为侵害并减轻其无助脆弱感，同时也是保护检查医师免受不实执业操守指控的重要法律盾牌。</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1096" data-physical-page="1096">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1096</span>
+        <span class="page-topic-title">Post-Examination Care & Pediatric Considerations (体检后护理要领与儿童受检关护)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Care After the Examination (体格检查后的规范清理与患者安置)</h4>
+        <p class="para-en">When the examination is concluded, help the client into a comfortable resting position or assist them to dress in street clothes. Provide tissues to wipe away excess lubricant or secretions from perineal and rectal regions. Clean and store reusable instruments according to standard infection control protocols. Label collected laboratory specimens (swabs, biopsies, cytological smears) immediately in the client's presence with full client name, health record number, date, time, and specimen source. Place specimens in biohazard transport bags for delivery to the laboratory.</p>
+        <p class="para-cn">体检全部结束之后，协助客户调整至舒适的平卧或半卧体位，或协助其脱下检查袍换好日常衣物。递送清洁纸巾以便客户擦净会阴部或肛周残留的润滑剂与分泌物。根据标准感控流程清洗、消毒并归放复用医疗器械。当着客户的面立即在采集的检验标本容器上（拭子、活检组织瓶、细胞学涂片）精确张贴标签，注明患者完整姓名、住院病历号、采集日期、确切时间及标本解剖来源。将标本放入防泄漏生物危害袋中，及时送检化验室。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">Discard disposable paper table covers, disposable drapes, and wooden spatulas in designated waste containers. Disinfect the examination table mattress and all touched surfaces with hospital-grade disinfectant wipes. Restock supplies (cotton applicators, table paper rolls, gloves) so the examination room is immediately ready for the next client. Wash your hands thoroughly.</p>
+        <p class="para-cn">将一次性检查床卷纸、一次性垫单及木质压舌板投入指定医疗废物桶。使用医院级消毒湿巾彻底擦拭消毒检查台垫面及所有被触碰过的表面。及时补充耗材（棉签、床单卷纸、医用手套等），确保检查室迅速恢复整备状态以迎接下一位患者。最后严格执行流动水洗手。</p>
+      </div>
+
+      <div class="callout-box info" style="margin:20px 0; padding:18px 20px; background:rgba(37,99,235,0.04); border-left:4px solid #2563eb; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#1e40af;">FOCUS ON CHILDREN: Physical Examinations in Pediatric Clients (聚焦儿童：儿科体检特殊考量)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.55;">
+          <p class="para-en">A parent or guardian must be present during examinations of infants, toddlers, preschool children, and school-aged children. The presence of a parent provides immense security and minimizes separation anxiety. Children may sit on a parent’s lap during examination of the ears, throat, or chest. Allow young children to handle safe instruments (like the reflex hammer or stethoscope) to demystify the equipment. Never use harsh restraint; praise cooperation warmly.</p>
+          <p class="para-cn">在对婴儿、幼儿、学龄前儿童及学龄期儿童进行体格检查时，<strong>必须有父母或法定监护人全程在场</strong>。亲人的陪伴能赋予患儿极大的安全感，将分离焦虑降至最低。在检查耳朵、咽喉或胸部听诊时，可允许幼儿坐在父母膝盖上接受检查。可允许幼童触摸把玩无害的安全器械（如反射锤或听诊器胸件）以消除对神秘仪器的恐惧。严禁采取粗暴强行约束；对孩子的任何配合均应给予热情的表扬与肯定。</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1097" data-physical-page="1097">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1097</span>
+        <span class="page-topic-title">Surgical Care: Types of Surgery & Team Collaboration (围手术期护理：手术分类与团队协作)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">SUPPORTING THE SURGICAL CLIENT (支持外科手术患者：围手术期照护)</h3>
+        <p class="para-en">Surgery is the branch of medicine that treats disease, injuries, and deformities by manual and operative methods. Millions of surgeries are performed annually in Canada. Surgery may be done to save life, cure disease (such as removing a tumour), relieve symptoms (palliative surgery), restore function, or alter physical appearance (cosmetic surgery). The surgical experience is divided into three distinct phases:</p>
+        <p class="para-cn">外科学（Surgery）是通过外科医师手法及器械切开手术来治疗疾病、创伤及畸形的医学分支。在加拿大，每年实施数百万台各类外科手术。手术的目的可以是抢救濒危生命、根治恶性疾病（如切除恶性肿瘤）、缓解晚期症状（姑息性手术）、重建机体功能（如关节置换），抑或改善外貌外观（整形美容手术）。整个外科手术体验在临床上被严密划分为三个连续阶段：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>1. Preoperative phase (术前期):</strong> The period extending from the moment the decision for surgery is made until the client is transferred to the operating room (OR) table.
+            <div style="font-size:13px; color:var(--text-secondary);">从临床确立手术治疗方案那一刻起，直至患者被正式移上手术台为止的准备阶段。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>2. Intraoperative phase (术中期):</strong> The period during the actual surgical procedure inside the operating suite, ending when the client is admitted to the postanaesthesia care unit (PACU).
+            <div style="font-size:13px; color:var(--text-secondary);">在手术室内施行外科手术操作的全过程，直至患者术毕被转送接入麻醉恢复室（PACU）为止。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>3. Postoperative phase (术后期):</strong> The period from admission to the PACU or recovery room until recovery is complete and the client is discharged from care.
+            <div style="font-size:13px; color:var(--text-secondary);">从患者进入麻醉恢复室开始，经病房康复治疗，直至彻底痊愈并办结出院手续的全过程。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Classification of Surgeries (外科手术临床分类)</h4>
+        <p class="para-en">Surgeries may be classified as elective, urgent, or emergency depending on the timing and urgency:</p>
+        <p class="para-cn">根据手术实施的时效紧迫性与威胁生命的程度，临床将手术划分为三大类别：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:0; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Elective surgery (择期手术):</strong> Surgery that is scheduled and planned in advance for a future date. It is necessary for health or quality of life, but failure to perform it immediately does not threaten life (e.g., knee replacement, cosmetic surgery, hernia repair, cataracts).
+            <div style="font-size:13px; color:var(--text-secondary);">预先计划并预约在未来某一具体日期实施的手术。对维持长期健康或提高生活质量有必要，但延期施行并不会即刻威胁生命安全（如全膝关节置换术、整形外科手术、腹股沟疝修补术、白内障摘除术等）。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Urgent surgery (限期手术 / 紧急手术):</strong> Surgery that must be done soon—usually within 24 to 48 hours—to prevent further tissue damage, disability, or severe disease progression (e.g., removal of an inflamed gallbladder, coronary artery bypass, closed fracture reduction).
+            <div style="font-size:13px; color:var(--text-secondary);">必须在较短时间内（通常在 24 至 48 小时之内）实施的手术，旨在防止进一步组织坏死、严重伤残或病情不可逆恶化（如急性化脓性胆囊炎胆囊切除术、冠状动脉旁路移植术、闭合性骨折复位术等）。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Emergency surgery (急症手术 / 急诊抢救手术):</strong> Surgery that must be done immediately without delay to save the client’s life or prevent permanent disability (e.g., uncontrolled traumatic hemorrhage, ruptured abdominal aortic aneurysm, ruptured appendix, emergency cesarean section).
+            <div style="font-size:13px; color:var(--text-secondary);">为挽救濒死生命或防止永久性残疾而必须分秒必争、立即施行的紧急抢救手术（如严重创伤性内出血止血、腹主动脉瘤破裂修补、急性阑尾炎穿孔修补、危急胎儿窘迫急症剖宫产术等）。</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1098" data-physical-page="1098">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1098</span>
+        <span class="page-topic-title">Preoperative Psychological Preparation & Client Fears (术前心理疏导与患者恐惧应对)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Psychological Preparation for Surgery (外科手术的术前心理准备与疏导)</h4>
+        <p class="para-en">Surgery is a stressful life event that triggers anxiety and fear in almost all clients. As surgery approaches, emotional concerns can intensify dramatically. Clients may experience deep-seated fears regarding:</p>
+        <p class="para-cn">外科手术是一项重大的应激生活事件，几乎在所有患者心中都会诱发不同程度的强烈焦虑与恐惧。随着手术时刻的临近，患者内心的情绪波动往往呈进行性加剧。患者通常会经历以下深层身心恐惧：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Fear of the unknown (对未知的恐惧):</strong> Not knowing what will happen in the operating room, what anaesthesia feels like, or what pain will be experienced afterwards.
+            <div style="font-size:13px; color:var(--text-secondary);">完全不清楚进入手术室后会发生什么、麻醉生效究竟是何种体验，或是术后自己将承受何种程度的剧痛折磨。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Fear of pain and discomfort (对疼痛与不适的恐惧):</strong> Clients fear unbearable postoperative surgical pain, nausea, and vomiting. Reassure the client that pain medications are ordered and pain management is an active priority for the care team.
+            <div style="font-size:13px; color:var(--text-secondary);">患者极度畏惧术后切口难以忍受的剧烈刀割样疼痛、剧烈恶心以及频繁干呕。支持人员应向其耐心解释医生已预先下达镇痛医嘱，全方位控痛是医疗团队的核心监护目标。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Fear of anaesthesia (对麻醉与失控的恐惧):</strong> Fear of losing consciousness and control, fear of waking up during surgery (anaesthesia awareness), or fear of never waking up at all.
+            <div style="font-size:13px; color:var(--text-secondary);">害怕彻底丧失意识与自我控制力、害怕在手术中途意外苏醒（术中知晓），或者深层恐惧麻醉后无法再度苏醒。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Fear of death (对死亡的恐惧):</strong> The terrifying realization that complications during complex surgery or anaesthesia can result in death.
+            <div style="font-size:13px; color:var(--text-secondary);">对手术或麻醉可能出现的致命并发症产生极度惊恐，意识到自己面临潜在的生命危险。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Fear of disfigurement or loss of body part (对身体毁损或器官缺失的恐惧):</strong> Fear of surgical scarring, amputation, mastectomy, or altered body image.
+            <div style="font-size:13px; color:var(--text-secondary);">因截肢、乳腺癌根治术、造口术或巨大手术瘢痕对自身身体完整性及身体意象改变产生的悲伤与恐惧。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">The Support Worker’s Role in Psychological Preparation (支持人员在心理支持中的职责)</h4>
+        <p class="para-en">Support workers play an essential role in reducing preoperative tension through therapeutic presence. Practice active listening—allow clients to voice their fears without interruption or dismissive false reassurances (never say “Don’t worry, you’ll be fine”). Report all client fears, questions regarding surgical procedure risks, or religious/cultural requests to the nurse immediately. Respect spiritual practices, and offer to contact spiritual care services if desired.</p>
+        <p class="para-cn">支持人员通过真诚共情的床旁陪伴，在缓解术前心理紧张中发挥着不可替代的作用。践行积极倾听——允许患者畅所欲言宣泄恐惧，切勿粗暴打断，严禁使用轻浮虚假的安慰性套话（绝对不能说“别担心，一点事都没有”）。一旦患者表达对死亡的恐惧、询问具体手术医疗风险，或提出宗教信仰诉求，必须立即如实报告责任护士。充分尊重患者的宗教习俗与灵性照护需求，在患者需要时协助联系院内宗教灵性服务团队。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1099" data-physical-page="1099">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1099</span>
+        <span class="page-topic-title">Preoperative Teaching & The Recovery Unit (术前宣教指导与麻醉恢复室环境)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Preoperative Teaching (术前患者宣教与康复演练)</h4>
+        <p class="para-en">Nurses provide structured preoperative teaching before surgery so that clients know what to expect and how to participate actively in their recovery. Teaching includes:</p>
+        <p class="para-cn">责任护士在手术前会组织系统化的术前健康宣教，使患者充分明晰围手术期所要经历的各个环节，并在术后积极主动地配合自我康复。宣教核心内容包括：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Deep-breathing and coughing exercises (深呼吸与有效咳嗽练习):</strong> Crucial techniques practiced preoperatively to prevent postoperative atelectasis and pneumonia.
+            <div style="font-size:13px; color:var(--text-secondary);">术前必须提前熟练掌握的核心肺部呼吸技巧，是预防术后肺不张与坠积性肺炎的关键防线。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Incentive spirometry (诱发性肺活量计使用):</strong> Breathing into a specialized handheld spirometer to ensure full expansion of lung bases.
+            <div style="font-size:13px; color:var(--text-secondary);">手持专用肺活量训练仪做缓慢深吸气，确保气体充盈肺底各肺泡小叶。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Leg exercises (术后下肢主动运动):</strong> Ankle rotations, knee flexion, and leg pumping to promote venous return and prevent deep vein thrombosis.
+            <div style="font-size:13px; color:var(--text-secondary);">踝关节屈伸旋转、屈膝抬腿等动作，旨在促进下肢静脉血液回流，防止深静脉血栓形成。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Turning and positioning (翻身移位与体位配合):</strong> Moving and splinting the surgical incision with a pillow or folded blanket during position changes to minimize pain.
+            <div style="font-size:13px; color:var(--text-secondary);">在翻身或体位变换时，用枕头或折叠毛毯轻压紧护手术切口（切口按压固定法），以大幅减轻牵拉剧痛。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:20px; text-align:center;">
+        <img src="images/ch46/fig-46-7.jpg" alt="Figure 46.7" style="max-width:85%; border-radius:6px; border:1px solid var(--border-color); box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+        <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+          <strong>FIGURE 46.7:</strong> Postanaesthesia care unit (PACU) or recovery room. Special monitoring equipment is in place to support the client as they wake up from anaesthesia.
+          <div style="font-size:11.5px; color:var(--text-muted);">图 46.7：麻醉恢复室（PACU）。配备有高精度生命支持监护设备，确保患者在麻醉苏醒过程中受到严密监护。</div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">The Postanaesthesia Care Unit (PACU) (麻醉恢复室环境宣教)</h4>
+        <p class="para-en">The postanaesthesia care unit (PACU), also known as the recovery room (FIGURE 46.7), is where the client is taken immediately following surgery. In the PACU, specially trained recovery nurses closely monitor airway patency, oxygen saturation, vital signs, surgical dressings, drainage tubes, and level of consciousness. Clients are explained that when they first wake up, they may feel groggy, disoriented, cold, or experience shivering, and that oxygen masks or nasal prongs will be in place.</p>
+        <p class="para-cn">麻醉恢复室（Postanaesthesia Care Unit, PACU），通常亦称为恢复室（Recovery room，图 46.7），是外科手术结束后患者被立即转入接受复苏监护的高精尖重症单元。在 PACU 中，受过高级重症复苏训练的专科护士会秒级严密监测患者的气道通畅度、经皮血氧饱和度、核心生命体征、切口敷料渗血情况、各类引流管道引流量以及意识苏醒分级。在术前应向患者提前解释：初次苏醒时可能会感到极度困倦、定向力短暂模糊、周身寒战或颤抖，且脸上会佩戴吸氧面罩或鼻导管，这些均为正常恢复表现。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1100" data-physical-page="1100">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1100</span>
+        <span class="page-topic-title">Preoperative Diagnostic Tests, Nutrition & Skin Prep (术前诊断测试、禁食禁水与皮肤准备)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Preoperative Physical Preparation (术前生理机能准备规程)</h4>
+        <p class="para-en">Physical preparation ensures the client's body is physically ready to endure the physiological stresses of anaesthesia and surgery, minimizing intraoperative and postoperative complications.</p>
+        <p class="para-cn">严格的术前生理准备旨在确保患者各机体系统达到耐受麻醉药物与外科手术创伤的最佳生理耐受状态，将术中与术后危急并发症发生率降至最低。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Preoperative diagnostic tests (术前辅助诊断检验):</strong> Physicians order tests to evaluate organ function and screen for hidden abnormalities. Common tests include complete blood count (CBC), electrolytes, blood typing and cross-matching (in case blood transfusion is required), urinalysis, chest X-ray (CXR), and 12-lead electrocardiogram (ECG) for cardiovascular status.
+            <div style="font-size:13px; color:var(--text-secondary);">外科医生会开具一系列系统化化验与器械检查以评估脏器储备机能。常规项目包括：全血细胞计数（CBC）、血清电解质、血型鉴定与交叉配血试验（备血以防术中大出血输血需求）、尿常规、胸部 X 光片（CXR）以及评估心脏心电传导与心肌供血的 12 导联心电图（ECG）。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Food and fluids — NPO (饮食与液体管理——绝对禁食禁水):</strong> The client is strictly <strong>NPO (nothing by mouth)</strong> for 6 to 8 hours before surgery, or according to specific anesthesiologist orders. This means <strong>absolutely no food, water, ice chips, coffee, candy, or chewing gum</strong>. <em>Rationale: General anaesthesia abolishes the client’s normal gag and swallow reflexes; if food or fluid is present in the stomach, vomiting can lead to pulmonary aspiration (stomach contents entering the lungs), causing severe chemical pneumonitis or fatal airway obstruction.</em> Remove water pitchers and glasses from the bedside.
+            <div style="font-size:13px; color:var(--text-secondary);">患者在手术前 6 至 8 小时内必须严格执行 <strong>NPO（禁食禁饮）</strong>医嘱，或遵循麻醉医师的具体禁食方案。这意味着<strong>经口绝对不进任何固体食物、纯水、碎冰、咖啡、糖果或口香糖</strong>。<em>核心病理机制：全身麻醉会彻底抑制人体的咽反射与吞咽吞咽保护性反射；若胃内有食物或胃酸残余，诱导期发生反流呕吐将导致胃内容物误吸入肺，引发急性吸入性化学性肺炎甚至窒息死亡。</em>务必提前撤走床头所有水壶与水杯。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Bowel preparation (肠道清洁准备):</strong> For abdominal, pelvic, or lower gastrointestinal surgeries, the bowel must be thoroughly cleansed to prevent intraoperative fecal contamination and postoperative abdominal distention. The physician may order a low-residue diet, laxatives, oral bowel purgative solutions, or cleansing enemas.
+            <div style="font-size:13px; color:var(--text-secondary);">对于腹部脏器、盆腔及下消化道外科手术，术前必须执行严密彻底的肠道清洁，以防术中肠管切开污染腹腔，并预防术后麻痹性肠胀气。医生会开具少渣半流质饮食、口服缓泻剂、电解质复方肠道泻药或清洁灌肠医嘱。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Skin preparation (手术区域皮肤准备与消毒清洁):</strong> The surgical site and surrounding skin must be meticulously cleansed to reduce the normal bacterial flora and prevent surgical site infections (SSIs). Clients are instructed to shower or bathe using an antiseptic soap, such as chlorhexidine gluconate (CHG), the night before and the morning of surgery. <em>Hair removal: Modern evidence-based practice strongly discourages razor shaving because razors cause microscopic cuts in the skin that rapidly become colonized by bacteria; if hair removal is required, surgical electric clippers with disposable single-use heads are used immediately prior to surgery.</em>
+            <div style="font-size:13px; color:var(--text-secondary);">手术切口及周围广泛区域的皮肤必须经过严格彻底的杀菌清洗，以大幅削减皮肤常驻菌群负荷，杜绝手术部位感染（SSIs）。指导患者在术前一晚及手术日清晨使用专用抗菌沐浴液（如葡萄糖酸氯己定 CHG）进行全身沐浴。<em>备皮除毛考量：现代循证外科护理指南严禁使用传统剃须刀片刮毛，因为刀片剃毛会造成肉眼不可见的微小表皮破损，细菌在划痕处会快速定植繁殖；若因毛发过密确需除毛，必须在临进手术室前使用配有一次性刀头的外科专用电动剪毛器轻柔修剪。</em></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1101" data-physical-page="1101">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1101</span>
+        <span class="page-topic-title">Personal Grooming, Valuables & Pre-Op Checklist (术前个人清洁、贵重物品保管与核对清单)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Personal Care on the Morning of Surgery (手术日清晨的个人清洁与准备细节)</h4>
+        <p class="para-en">On the morning of surgery, support workers assist with a series of critical preparatory tasks:</p>
+        <p class="para-cn">在手术日清晨，支持人员需协助落实一系列至关重要的细节准备规范：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Hospital gown (更换手术专用病号服):</strong> Help the client remove all personal clothing, including underwear and socks, and put on a clean, loose hospital gown that ties at the back.
+            <div style="font-size:13px; color:var(--text-secondary);">协助客户脱去所有个人衣物（包括内衣内裤及普通袜子），换上后背带系绳、质地柔软且易于快速穿脱的手术专用病号服。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Hair and cosmetics (头发固定与化妆品彻底卸除):</strong> Remove all hair pins, metal bobby pins, barrettes, clips, and combs. Metal items can cause electrical burns from high-frequency electrocautery devices during surgery. Cover the hair neatly with a disposable surgical cap. All makeup, nail polish, artificial nails, and lipstick must be completely removed so the anaesthesia team can continually observe nail beds and lip colour for capillary refill and signs of hypoxia or cyanosis.
+            <div style="font-size:13px; color:var(--text-secondary);">取下所有金属发夹、发卡、发梳及皮筋。金属导电体在术中应用高频高能电烙止血设备时极易传导电流诱发接触性电灼伤。用一次性医用手术帽将头发整齐包裹。所有面部化妆品、指甲油、假指甲及唇膏必须彻底卸除擦净，以便麻醉师在术中全程直视观察甲床毛细血管充盈状态与唇色，早期捕捉缺氧发绀指征。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Dentures, prostheses, and jewelry (义齿、义肢与首饰妥善处理):</strong> Full or partial dentures are removed to prevent airway dislodgement and obstruction during endotracheal intubation. Place dentures in a labeled denture cup filled with cool water and store securely. Remove hearing aids, eyeglasses, contact lenses, and prostheses according to surgical unit protocol. Remove all jewelry (rings, necklaces, piercings); if a wedding band cannot be removed, tape it securely to the finger with hypoallergenic tape.
+            <div style="font-size:13px; color:var(--text-secondary);">活动性全口或局部义齿必须全部取下，以防在气管插管全麻诱导时脱落滑入气道导致急性机械性窒息。将假牙浸泡在注有凉水的专用假牙盒中，盒外张贴清晰姓名标签妥善存放。遵照手术室要求取下助听器、眼镜、隐形眼镜及各部位义肢。摘下所有金银首饰与穿刺饰品；若婚戒嵌顿无法取下，须使用低敏透气胶带将其紧密缠绕固定在手指上。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Voiding before premedication (给药前排空膀胱):</strong> Instruct the client to void immediately before receiving preoperative sedative medications. Once preoperative sedative medications are administered, <strong>the client must remain strictly in bed with side rails raised</strong> because sedation causes dizziness, unsteady gait, and severe fall risk.
+            <div style="font-size:13px; color:var(--text-secondary);">叮嘱患者在应用术前镇静/抗胆碱药物之前务必彻底排空膀胱。一旦执行了术前注射给药，<strong>患者必须绝对卧床休息、两侧床档完全拉起锁死</strong>，因为镇静药物会引发头晕嗜睡及共济失调，盲目下床极易发生摔跌骨折。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">The Preoperative Checklist (术前官方核对清单)</h4>
+        <p class="para-en">A standardized preoperative checklist (FIGURE 46.8) is attached to the front of the client’s medical chart. The nurse systematically verifies and checks off each mandatory safety item—including signed operative consents, NPO verification, vital sign recording, removal of valuables and dentures, skin prep verification, and medication administration. Only when every single item on the checklist is signed off is the client considered legally and medically ready for transfer to the surgical suite.</p>
+        <p class="para-cn">一份标准化的术前安全核对清单（图 46.8）被固定张贴在患者纸质病历首页或电子病历顶栏。病区责任护士会严格对照清单逐项核查确认——包括知情同意书签字齐备、严格 NPO 状态核对、末次生命体征记录、义齿与贵重物品清空交接、皮肤准备达标以及术前药给药无误。唯有当清单上所有核心项目逐条确认并签署护士签名后，该患者在法律和医疗程序上才被认定具备转送手术室的标准资格。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1102" data-physical-page="1102">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1102</span>
+        <span class="page-topic-title">Hospital Preoperative Checklist Document (医院官方术前核对清单范本)</span>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:24px; text-align:center;">
+        <img src="images/ch46/fig-46-8.jpg" alt="Figure 46.8 Preoperative checklist" style="max-width:92%; border-radius:6px; border:1px solid var(--border-color); box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div class="fig-caption" style="font-size:13px; color:var(--text-secondary); margin-top:8px;">
+          <strong>FIGURE 46.8:</strong> Preoperative checklist document. (Courtesy Credit Valley Hospital, Mississauga, ON.)
+          <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">图 46.8：加拿大安大略省密西沙加市克雷迪特谷医院（Credit Valley Hospital）官方采用的外科术前核对清单范本。详列各项手术安全准入核验指标。</div>
+        </div>
+      </div>
+
+      <div class="callout-box info" style="margin:20px 0; padding:18px 20px; background:rgba(37,99,235,0.04); border-left:4px solid #2563eb; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#1e40af;">DOCUMENTATION & THE SURGICAL SAFETY CHECKLIST (临床文档与手术安全双重校验)</h4>
+        <div class="bilingual-para" style="font-size:13.5px; line-height:1.55;">
+          <p class="para-en">The preoperative checklist serves as a vital communication tool between the inpatient nursing unit, operating room transfer personnel, and surgical suite nurses. When the OR transport staff arrives to transfer the client, the unit nurse and the transport staff perform a strict dual-identifier verification (checking the client's ID bracelet against the chart and asking the client to state their full legal name and date of birth) before signing the checklist transfer release.</p>
+          <p class="para-cn">术前核对清单是病区护理团队、手术转运接送人员以及手术室巡回护士之间核心的信息交接桥梁。当手术室转运人员抵达病房交接患者时，病房护士与转运专员必须协同执行极其严苛的双重身份识别查对（对照病历腕带、请清醒患者亲口报出全名与出生年月日），在双方共同在核对清单交接栏签署工号与时间后，方准执行平车推移离区。</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1103" data-physical-page="1103">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1103</span>
+        <span class="page-topic-title">Types of Anaesthesia & Postoperative Room Preparation (麻醉分型与术后监护病房准备)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">ANAESTHESIA (现代临床麻醉分型)</h3>
+        <p class="para-en">Immediately prior to most surgical procedures, the client is given an anaesthetic. Anaesthesia is the loss of feeling or sensation produced by a medication that blocks pain impulses to the brain. There are three main types of anaesthesia:</p>
+        <p class="para-cn">在绝大多数外科手术操作开始之前，麻醉医师会为患者施用麻醉药物。麻醉（Anaesthesia）是指通过药物特异性阻断向中枢神经大脑传导的疼痛神经冲动，从而引起的暂时性知觉或感觉丧失状态。临床主要划分为三大麻醉类型：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>1. General anaesthesia (全身麻醉):</strong> Produces total unconsciousness, muscle relaxation, and complete loss of all feeling and sensation. Administered intravenously (IV) and via inhaled anaesthetic gases through an endotracheal tube or laryngeal mask. Used for major surgeries (e.g., open-heart, bowel resections, total joint replacements). The client must be closely watched until fully awake.
+            <div style="font-size:13px; color:var(--text-secondary);">诱导产生全身深度意识丧失、骨骼肌完全松弛，以及周身所有痛觉知觉的彻底消失。通常经静脉注射（IV）诱导，并通过经口气管插管或喉罩持续吸入挥发性麻醉气体维持。广泛应用于各类大型开腹、开胸或复杂关节手术。术后必须严密监护直至患者彻底恢复自主意识与保护性反射。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>2. Regional anaesthesia (区域麻醉 / 部位麻醉):</strong> Produces loss of sensation in a large specific region of the body without producing unconsciousness. The client remains awake. Produced by injecting local anaesthetic agents around specific nerve plexuses or into the spinal canal (e.g., <em>spinal anaesthesia</em> into the subarachnoid space or <em>epidural anaesthesia</em> into the epidural space). Widely used for lower abdominal surgery, pelvic procedures, hip fractures, and cesarean sections.
+            <div style="font-size:13px; color:var(--text-secondary);">在不引起中枢意识丧失的前提下，使身体某一广阔特定解剖区域发生痛觉丧失。患者在手术全程保持完全清醒。通过在特定神经丛周围或椎管内注入局麻药实现（如注入蛛网膜下腔的<strong>脊髓麻醉 / 蛛网膜下腔阻滞</strong>，或注入硬膜外腔的<strong>硬膜外麻醉</strong>）。极为广泛地应用于下腹部、盆腔、下肢髋关节骨折以及剖宫产手术。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>3. Local anaesthesia (局部麻醉):</strong> Produces loss of sensation in a small, localized area of tissue. Administered by local infiltration injection directly into tissues at the incision site or applied topically (e.g., eye drops, lidocaine sprays/creams). Used for minor outpatient procedures such as suturing simple lacerations, dental extractions, skin lesion biopsies, or eye surgery.
+            <div style="font-size:13px; color:var(--text-secondary);">使身体表浅的小范围局限组织发生感觉丧失。通过在切口周围组织内浸润注射局部麻醉药物，或采用表皮表面麻醉（如眼用局麻滴眼液、利多卡因喷雾或乳膏）。常用于简单的门诊小手术，如体表裂伤缝合、牙科拔牙、皮肤良恶性肿物切除活检或眼科白内障手术。</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Preparing the Postoperative Room (术后监护病室的终末整备规范)</h4>
+        <p class="para-en">While the client is in surgery, the support worker prepares the client’s room for their return. Prepare a <strong>surgical bed (recovery bed)</strong>: make the bed with clean linens, fanfolding the top linens to the side of the bed opposite the door or to the foot of the bed to allow easy transfer of the client from the stretcher. Raise the bed to the height of the transport stretcher. Equipment to assemble at the bedside includes: an IV pole, functioning suction canisters and tubing, wall oxygen regulator with nasal cannula or mask, emesis basin and paper tissues, vital signs diagnostic equipment (sphygmomanometer, pulse oximeter, thermometer), intake/output (I&O) record sheet, and extra warm blankets.</p>
+        <p class="para-cn">当患者在手术室接受手术期间，病房支持人员应迅速将病房终末整理好，以迎接患者安全返回。铺设专科<strong>麻醉手术床（恢复床）</strong>：换上洁净纯棉床单，将盖被呈扇形平展折叠至远离病房房门的一侧床沿（或床尾），以便于平车平推贴近后将患者平稳移上病床。将病床整体高度电动升高至与手术转运平车完全一致的水平面上。在床旁备齐以下专科抢救与监护耗材：移动输液架、负压吸引压力调节阀与连接吸引管、壁式氧气流量计配鼻导管或吸氧面罩、医用弯盘（呕吐盆）与清洁纸巾、生命体征采集仪（血压计、指脉氧饱和度探头、电子体温计）、出入液量（I&O）专用记录单以及预热的保暖加厚毛毯。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1104" data-physical-page="1104">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1104</span>
+        <span class="page-topic-title">Postoperative Monitoring & Vital Signs Assessment (术后生命体征严密监测与临床观察)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h3 style="font-size:18px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">POSTOPERATIVE CARE (术后病房专科照护要点)</h3>
+        <p class="para-en">When the client is stable and meets strict discharge criteria in the PACU, the client is transferred back to the surgical nursing unit. The PACU nurse gives a comprehensive bedside verbal report to the receiving unit nurse regarding the surgical procedure, types of anaesthesia given, total blood loss, IV fluids administered, medications given, drain outputs, and any intraoperative complications.</p>
+        <p class="para-cn">当患者生命体征平稳、完全达到 PACU 严苛的苏醒出室评分标准后，由专职人员护送返回外科病房。PACU 护士在床旁向病房接诊责任护士进行详尽的面对面交接班，内容涵盖：具体实施的手术名称、所用麻醉剂型、术中估计总出血量、补液量与输血量、镇痛与止吐药物使用情况、手术切口引流管通畅度及术中有无突发并发症等。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">The client is moved gently and carefully from the transport stretcher onto the prepared surgical bed using a slide board or transfer sheet, with at least two or three staff members assisting to protect the incision and prevent strain on lines and catheters. Position the client comfortably according to specific postoperative orders (e.g., flat with head turned to one side if unconscious or semirecumbent if awake and stable). Connect oxygen, ensure IV lines are infusing properly without tension, attach drainage bags below bed level, place the call bell in the client's hand, and position the emesis basin nearby.</p>
+        <p class="para-cn">由至少两至三名医护照护人员协同配合，使用过床滑板或中单将患者从转运平车平稳轻柔地平移至预先铺设好的麻醉床上，杜绝过度牵拉手术创口或撕脱各类输液导管及引流管。严格依照术后体位医嘱安置患者（如未完全清醒者去枕平卧、头偏向一侧以防呕吐窒息；完全清醒且血压平稳者取半卧位）。立即连接鼻导管吸氧、检查静脉输液管路通畅无张力扭曲、将尿袋及引流袋垂挂固定于床架低于膀胱水平面、将呼叫铃手柄塞入患者手中，并在头旁备好呕吐弯盘与纸巾。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Postoperative Vital Signs Schedule (术后生命体征测量频次规范)</h4>
+        <p class="para-en">Vital signs are monitored frequently postoperatively to detect early hemodynamic changes or respiratory depression. A typical standard hospital vital sign protocol is:</p>
+        <p class="para-cn">术后必须按高频时间梯度严密监测生命体征，以便早期捕捉血流动力学紊乱或麻醉药物残留引起的呼吸抑制。医院常规标准监测时间表如下：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:6px;"><strong>Every 15 minutes:</strong> for the first hour after return to the unit (返回病房后第 1 个小时内：每 15 分钟测量一次).</li>
+          <li style="margin-bottom:6px;"><strong>Every 30 minutes:</strong> for the next 1 to 2 hours if vitals remain stable (若体征平稳，接下来的 1 至 2 小时内：每 30 分钟测量一次).</li>
+          <li style="margin-bottom:6px;"><strong>Every 1 hour:</strong> for the next 4 hours (随后的 4 小时内：每 1 小时测量一次).</li>
+          <li style="margin-bottom:0;"><strong>Every 4 hours:</strong> thereafter, or as specifically ordered by the physician (此后：每 4 小时测量一次，直至病情完全稳定或按专科医嘱调整).</li>
+        </ul>
+      </div>
+
+      <div class="callout-box warning" style="margin:20px 0; padding:18px 20px; background:rgba(239,68,68,0.04); border-left:4px solid #ef4444; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#b91c1c;">CRITICAL OBSERVATIONS TO REPORT IMMEDIATELY (必须立即向责任护士汇报的危急体征)</h4>
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.55; color:var(--text-primary);">
+          <li><strong>Drop in blood pressure:</strong> A systolic drop of 20 mmHg or more from baseline, especially if accompanied by a rising, rapid pulse rate (tachycardia)—a hallmark sign of internal hemorrhage, hypovolemia, or developing shock. (血压骤降：收缩压较术前基础值下降 20 mmHg 以上，尤伴脉搏增快微弱，是活动性内出血或低血容量休克的危急指征).</li>
+          <li><strong>Irregular, weak, or rapid pulse:</strong> Signs of cardiac dysrhythmia or cardiovascular collapse. (脉搏微弱、细速或节律绝对不齐：心律失常或循环衰竭先兆).</li>
+          <li><strong>Shallow, slow (&lt;10 breaths/min), or noisy respirations:</strong> Stridor or snoring respirations indicating airway obstruction or opioid-induced respiratory depression. (呼吸浅慢每分钟少于 10 次、喘鸣或鼾声呼吸：提示上气道梗阻或阿片类镇痛药过量中毒).</li>
+          <li><strong>Cyanosis or pallor:</strong> Bluish lips or fingernails, pale, cold, clammy, or diaphoretic skin. (发绀或极度苍白：口唇甲床青紫、四肢厥冷、面色苍白湿冷大汗).</li>
+          <li><strong>Oxygen saturation &lt; 90%:</strong> Pulse oximetry indicating severe hypoxemia. (经皮血氧饱和度持续低于 90%：提示严重低氧血症).</li>
+          <li><strong>Excessive bright red wound drainage:</strong> Saturated surgical dressings, blood pooling beneath the client, or sudden large amounts of frank blood in drainage collection devices. (切口敷料大面积鲜血渗透浸润、床单有积血，或引流瓶内短时间引流出大量鲜红血液).</li>
+          <li><strong>Acute restlessness or sudden change in consciousness:</strong> Agitation, confusion, or difficulty arousing the client. (突发躁动不安、谵妄或呼之不应、嗜睡昏迷).</li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1105" data-physical-page="1105">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1105</span>
+        <span class="page-topic-title">Preventing Respiratory & Thromboembolic Complications (呼吸道并发症与静脉血栓/栓塞防治)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Preventing Respiratory Complications (防治术后呼吸道并发症)</h4>
+        <p class="para-en">Respiratory complications are common and potentially life-threatening during the postoperative period. Two major complications must be aggressively prevented: (1) <strong>atelectasis</strong> (the collapse of a portion of the lung or alveoli), and (2) <strong>pneumonia</strong> (an inflammation and infection in the lung tissues caused by pooled secretions). Because anaesthetic agents irritate the respiratory mucosa, reduce ciliary motion, and decrease the depth of breathing, and because surgical pain discourages the client from taking deep breaths, mucus accumulates rapidly in the bronchi.</p>
+        <p class="para-cn">在术后恢复期，呼吸道并发症极为多见且具有潜在的致命性。临床必须积极预防两大核心并发症：(1) <strong>肺不张（Atelectasis）</strong>（部分肺叶肺泡萎陷萎缩失去通气功能）；(2) <strong>肺炎（Pneumonia）</strong>（呼吸道积聚分泌物继发细菌感染引起的肺组织炎性实变）。由于吸入麻醉药物直接刺激呼吸道黏膜、削弱纤毛摆动清除功能并抑制呼吸中枢深度，加之术后切口刀割样剧痛使患者不敢用力深呼吸，大量黏稠痰液极易在细支气管内淤积阻塞。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en"><strong>Coughing and deep-breathing exercises:</strong> The client is instructed to perform deep breathing and coughing exercises every 1 to 2 hours while awake. The client takes a deep breath in through the nose, holds it for 3 to 5 seconds, and exhales slowly through pursed lips, repeating 3 to 5 times. On the final exhalation, the client coughs forcefully twice from the chest. <em>Splinting the incision:</em> To make coughing tolerable, show the client how to splint the surgical incision by holding a pillow or folded blanket firmly over the incision area. This counter-pressure significantly reduces tension on sutures and decreases sharp pain.</p>
+        <p class="para-cn"><strong>深呼吸与有效咳嗽锻炼：</strong>指导患者在清醒状态下每 1 至 2 小时进行一次深呼吸与咳嗽锻炼。患者经鼻腔做深长吸气，屏气 3 至 5 秒钟，随后经缩唇缓慢呼出，重复 3 至 5 次。在最后一次呼气末，自胸腹深部爆发性用力剧咳两次以排出痰栓。<em>切口按压固定法（Splinting）：</em>为了使咳嗽得以耐受，指导患者用双手紧抱枕头或折叠毛毯，牢牢压紧手术切口部位。这种对抗压力能极大化解腹壁缝线张力，将撕裂样锐痛减轻大半。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Stimulating Circulation: Thrombus and Embolus (促进循环：血栓与栓子病理)</h4>
+        <p class="para-en">After surgery, blood flow in the lower extremities can become extremely sluggish due to prolonged bed rest, muscle relaxation during anaesthesia, and pressure on leg veins from surgical positioning. Sluggish venous flow promotes the formation of a <strong>thrombus</strong>—a blood clot attached to the inner wall of a vein, most commonly in the deep veins of the calf or thigh (deep vein thrombosis, DVT) (FIGURE 46.9, A).</p>
+        <p class="para-cn">外科手术后，由于长时间卧床制动、麻醉导致的肌肉完全松弛失去肌泵挤压作用，以及手术体位对腘静脉及小腿血管的持续受压，下肢静脉血液流动会变得极其迟缓滞涩。滞缓的静脉血流极易诱发<strong>血栓（Thrombus）</strong>形成——即附着于静脉管壁内膜上的血凝块，最常见于小腿或大腿深静脉（下肢深静脉血栓形成，DVT）（图 46.9，A）。</p>
+      </div>
+
+      <div class="figure-card" style="margin-bottom:20px; text-align:center;">
+        <img src="images/ch46/fig-46-9.jpg" alt="Figure 46.9" style="max-width:85%; border-radius:6px; border:1px solid var(--border-color); box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+        <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+          <strong>FIGURE 46.9:</strong> A, A thrombus (blood clot) is attached to the wall of a vein. The arrows show the direction of blood flow. B, Part of the thrombus has broken off and become an embolus. The embolus travels in the bloodstream until it lodges in a distant vessel (e.g., pulmonary embolism).
+          <div style="font-size:11.5px; color:var(--text-muted);">图 46.9：A，附着于静脉管壁上的附壁血栓（thrombus），箭头指示血液回流方向。B，部分血栓脱落碎裂形成游走的栓子（embolus），随血流运行嵌塞于远处狭窄血管（如肺动脉栓塞）。</div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">If part or all of the thrombus breaks away from the vein wall, it becomes an <strong>embolus</strong> (FIGURE 46.9, B). The embolus travels rapidly through the inferior vena cava, passes through the right atrium and right ventricle of the heart, and lodges in a pulmonary artery in the lungs—a condition called a <strong>pulmonary embolism (PE)</strong>. A pulmonary embolism obstructs blood supply to lung tissue and is a catastrophic medical emergency that can cause sudden chest pain, cyanosis, acute shortness of breath, and instantaneous death.</p>
+        <p class="para-cn">一旦附壁血栓的一部分或整体从静脉壁脱落脱失，便转化为在血流中高速漂移的<strong>栓子（Embolus）</strong>（图 46.9，B）。栓子沿下腔静脉回流，穿过心脏右心房与右心室，最终死死嵌塞在管径逐级变细的肺动脉主干或分支血管中——这一危急病理状态称为<strong>肺动脉栓塞（Pulmonary Embolism, PE）</strong>。肺栓塞会瞬间阻断大面积肺实质的血液灌注，是一种极为险恶的急性医疗急症，可诱发突发撕裂样胸痛、发绀、极度呼吸困难，甚至在数秒内发生心搏骤停猝死。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1106" data-physical-page="1106">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1106</span>
+        <span class="page-topic-title">Postoperative Leg Exercises & Antiembolism Stockings (术后下肢主动运动与抗栓弹力袜应用)</span>
+      </div>
+
+      <div class="figures-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+        <div class="figure-card" style="text-align:center;">
+          <img src="images/ch46/fig-46-10.jpg" alt="Figure 46.10" style="max-width:100%; border-radius:6px; border:1px solid var(--border-color);">
+          <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+            <strong>FIGURE 46.10:</strong> The client flexes and then extends the knee during postoperative leg exercises.
+            <div style="font-size:11.5px; color:var(--text-muted);">图 46.10：患者在术后下肢主动功能锻炼中交替屈膝并充分伸展下肢。</div>
+          </div>
+        </div>
+
+        <div class="figure-card" style="text-align:center;">
+          <img src="images/ch46/fig-46-11.jpg" alt="Figure 46.11" style="max-width:100%; border-radius:6px; border:1px solid var(--border-color);">
+          <div class="fig-caption" style="font-size:12.5px; color:var(--text-secondary); margin-top:6px;">
+            <strong>FIGURE 46.11:</strong> Assist the client with raising and lowering the leg.
+            <div style="font-size:11.5px; color:var(--text-muted);">图 46.11：支持人员在床旁协助体弱患者平稳抬高并放下下肢，促进静脉回流。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Postoperative Leg Exercises (术后下肢运动操操作规范)</h4>
+        <p class="para-en">Leg exercises stimulate muscle contraction, which compresses veins and pumps blood back toward the heart, preventing venous pooling and thrombus formation. Leg exercises are performed every 1 to 2 hours while awake (FIGURES 46.10 and 46.11):</p>
+        <p class="para-cn">下肢功能运动通过肌肉的周期性收缩，对深层静脉产生泵压效应，强力驱动淤滞的血液向心脏回流，从根本上防止静脉血液淤积和血栓形成。患者在清醒状态下每 1 至 2 小时应进行一次锻炼（图 46.10 与图 46.11）：</p>
+      </div>
+
+      <div class="bilingual-para">
+        <ul style="padding-left:18px; margin-bottom:16px; font-size:14px; line-height:1.6;">
+          <li style="margin-bottom:8px;">
+            <strong>Ankle pumps / Circles:</strong> Rotate both ankles in full circles clockwise and counterclockwise, and flex toes toward the knees (dorsiflexion) and point toes downward (plantar flexion) 5 times each.
+            <div style="font-size:13px; color:var(--text-secondary);">踝关节环转运动：双踝顺时针及逆时针做最大幅度旋转；随后交替做脚趾向膝盖方向背屈及脚趾向下绷直跖屈，各重复 5 次。</div>
+          </li>
+          <li style="margin-bottom:8px;">
+            <strong>Knee flexion and extension (屈伸膝关节, FIGURE 46.10):</strong> Bend one knee, sliding the foot upward toward the buttocks, then straighten the leg back flat on the bed. Repeat 5 times with each leg.
+            <div style="font-size:13px; color:var(--text-secondary);">屈膝滑行动作（图 46.10）：弯曲一侧膝盖，足底贴着床单向上滑向臀部，随后平稳伸直小腿放平于床上。每条腿重复 5 次。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Leg raises (直腿抬高, FIGURE 46.11):</strong> Raise one leg a few inches off the mattress with knee straight, hold for 3 seconds, and slowly lower. Repeat with the other leg. <em>Safety Rule: Never place pillows under the client’s knees or calves, as pressure behind the knees compresses the popliteal vein and directly increases thrombus risk!</em>
+            <div style="font-size:13px; color:var(--text-secondary);">直腿抬高运动（图 46.11）：保持膝盖伸直，将整条腿抬离床面数英寸，维持 3 秒钟后缓慢放下。双腿交替进行。<em>核心安全禁忌：绝不能在患者膝下或小腿下垫枕头，因为膝后腘窝受压会直接压瘪腘静脉，极剧增加下肢深静脉血栓形成风险！</em></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Antiembolism Stockings & Sequential Compression Devices (抗栓弹力袜与间歇充气加压泵)</h4>
+        <p class="para-en">Physicians frequently order <strong>antiembolism stockings (TED stockings)</strong> or <strong>sequential compression devices (SCDs)</strong>. Antiembolism stockings exert graduated compression on the legs—greatest at the ankle and decreasing toward the thigh—speeding up venous blood velocity. SCDs consist of inflatable sleeves wrapped around the legs that rhythmically inflate and deflate with air from an electric pump, mimicking walking. Both elastic stockings and bandages could harm the client if applied improperly. Check skin colour and temperature of toes every 2 to 4 hours. Stockings must be removed twice daily for 30 minutes to wash the legs and inspect skin for redness or breakdown.</p>
+        <p class="para-cn">外科医生常会开具<strong>抗血栓弹力袜（TED 袜）</strong>或<strong>间歇充气加压装置（Sequential Compression Devices, SCDs）</strong>。抗栓弹力袜对下肢施加阶梯递减的渐进式压力——踝部压力最高，向小腿及大腿递减——从而加速静脉血流流速。SCD 则由包裹在腿部的充气套袖组成，由电动主机驱动周期性充气与放气，机械性模拟自然行走的肌泵挤压效果。若穿戴不当，弹力袜和弹力绷带都会压伤患者组织。每 2 至 4 小时必须检查一次脚趾的皮温、色泽与微循环充盈度。弹力袜每天必须脱下两次（每次约 30 分钟），以便清洁皮肤并彻底检查有无压红破损。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1107" data-physical-page="1107">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1107</span>
+        <span class="page-topic-title">Postoperative Comfort, Elimination & Early Ambulation (术后疼痛镇痛、大小便护理与早期下床)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:8px;">Comfort and Pain Management (术后舒适与疼痛管理)</h4>
+        <p class="para-en">Pain is common after surgery. The degree of pain depends on the surgery, the incision site, and individual pain tolerance. Pain causes muscle tension and prevents the client from coughing, deep breathing, and moving freely. Nurses administer analgesics as ordered (or manage client-controlled analgesia, PCA). As a support worker, provide comfort measures: reposition the client gently at least every 2 hours, support painful extremities with pillows, ensure fresh linens, maintain a quiet, calm environment, and report complaints of pain to the nurse promptly.</p>
+        <p class="para-cn">疼痛是术后最常见的痛苦体验。疼痛的剧烈程度取决于手术创伤大小、切口解剖部位以及个体的耐受阈值。剧烈疼痛会导致全身骨骼肌紧绷，使患者因畏痛而抗拒深呼吸、咳嗽及翻身活动。责任护士按医嘱给药（或管理患者自控镇痛泵 PCA）。支持人员应提供全方位的非药物舒适护理：至少每 2 小时轻柔协助翻身并调整体位；用软枕妥善支撑受累肢体；保持床单平整干燥无碎屑；营造安静舒适的修养氛围；一旦患者主诉疼痛加剧，立即报告护士。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Hygiene, Oral Care, and Diet (个人卫生、口腔清洁与进食进水)</h4>
+        <p class="para-en">Frequent oral hygiene is critical because NPO status, anaesthesia, and anticholinergic medications cause severe dry mouth. Provide damp sponge swabs or encourage rinsing and spitting water (if allowed). Assist with a refreshing bed bath and clean gown. Postoperative diet begins with small ice chips or sips of water, progressing to clear fluids, full fluids, and a regular diet as bowel sounds return and nausea subsides. Measure and record all intake and output (I&O) meticulously.</p>
+        <p class="para-cn">高频次的口腔护理必不可少，因为严格的禁食禁饮、麻醉挥发气体以及抗胆碱术前药会引起极度的咽干口渴。可用湿润的海绵拭子湿润口腔黏膜，或在允许的情况下指导患者用少量清水含漱后吐出（切勿吞咽）。协助完成温水擦浴并换上干燥整洁的病服。术后饮食遵循严格阶梯推进：由少量吸吮碎冰或抿水开始，随着肠鸣音恢复和恶心消退，逐步过渡至清流质、全流质、半流质，最终恢复普通饮食。严谨精确记录每一毫升的出入液量（I&O）。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Elimination and Early Ambulation (大小便监测与早期下床活动)</h4>
+        <p class="para-en">Anaesthesia, immobility, and pain medications often cause urinary retention and constipation. <strong>The surgical client should void within 6 to 8 hours after surgery.</strong> If the client does not void within this timeframe, notify the nurse immediately. Urinary catheterization or bladder ultrasound scanning may be necessary. Document the time, amount, and character of the first postoperative voiding.</p>
+        <p class="para-cn">麻醉肌松效应、制动卧床以及阿片类强效镇痛药物极易诱发急性尿潴留及肠麻痹便秘。<strong>外科手术患者通常必须在术后 6 至 8 小时内完成首次自主排尿。</strong>若超过此时限仍未排尿且下腹膨隆胀痛，必须立即通报护士。临床可能需要紧急行膀胱超声扫描测定残余尿量或执行无菌导尿术。详细记录术后首次排尿的精确时间、排尿量及尿液颜色性状。</p>
+      </div>
+
+      <div class="bilingual-para">
+        <p class="para-en">Early ambulation (getting out of bed and walking) stimulates circulation, increases peristalsis (preventing gas pains and constipation), and promotes deep breathing. The client is usually ambulated the evening of surgery or the day after. <em>Safety procedure:</em> Have the client sit on the edge of the bed with feet dangling for several minutes before standing, watching for dizziness or pale skin (orthostatic hypotension). Never rush the client; support them with a transfer belt, and remain close at all times.</p>
+        <p class="para-cn">早期下床活动（Early Ambulation）能极大地加速全身血液循环、强力刺激肠道蠕动（预防肠胀气肠梗阻与顽固便秘），并促进肺实质彻底复张。根据手术医嘱，患者通常在手术日当晚或术后次日首次协助下床。<em>核心安全规程：</em>下床前必须让患者在床沿静坐垂腿数分钟（Dangling），严密观察面色及有无头晕黑矇（预防体位性低血压）。行动切勿急躁匆忙；系好安全移位带，支持人员全程在侧提供坚实依靠与防跌倒保护。</p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1108" data-physical-page="1108">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1108</span>
+        <span class="page-topic-title">Chapter Review, Key Points & Practice Questions 1–11 (本章总结、核心要点与真题测验 1–11)</span>
+      </div>
+
+      <div class="chapter-review-box" style="margin-bottom:24px; padding:22px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:10px;">
+        <h3 style="margin-top:0; margin-bottom:14px; font-size:18px; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+          <span style="display:inline-block; width:6px; height:18px; background:var(--accent-color); border-radius:3px;"></span>
+          CHAPTER REVIEW: KEY POINTS (本章回顾与核心要点摘要)
+        </h3>
+        
+        <ul style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <li style="margin-bottom:6px;">It is important to remember that acute-care clients can develop life-threatening health challenges quickly. Look for and report changes in the client’s condition immediately to the proper person. (切记急性期患者病情演变迅猛，必须时刻警惕并立即汇报微小病情异动).</li>
+          <li style="margin-bottom:6px;">As a support worker, you can promote clients’ emotional well-being during transitions when you help them with the admission, transfer, and discharge processes. (支持人员在入院、转科和出院转归流程中，通过践行 DIPPS 原则促进客户的情感舒适与心理安定).</li>
+          <li style="margin-bottom:6px;">Physicians and nurses perform physical examinations to promote health and to diagnose and treat diseases. Some long-term care facilities require physical examinations of new admissions and yearly checkups thereafter. (体检旨在筛查疾病、评估机能并监测疗效；长期照护机构强制要求新入住及每年全身体格检查).</li>
+          <li style="margin-bottom:6px;">As a support worker, you may assist with exams. Your responsibilities depend on your employer’s policies and procedures, as well as the examiner’s preferences. (协助体检职责视机构制度与医师操作习惯而定，涵盖环境温控、器械传递、体位安置与隐私遮盖).</li>
+          <li style="margin-bottom:6px;">You need to be sensitive to your client’s feelings and concerns and help prepare the client physically and psychologically for the examination. (敏锐体察患者的羞怯与焦虑，做好充分的身心受检准备).</li>
+          <li style="margin-bottom:6px;">Maintaining warmth and privacy during the examination is very important. (在体检全程中，维持病室温暖与严格保护身体私密性至关重要).</li>
+          <li style="margin-bottom:6px;">A parent or another adult must be present when toddlers, preschool children, and school-aged children are being examined. (对婴幼儿及学龄儿童执行体检时，父母或法定监护人必须全程在场).</li>
+          <li style="margin-bottom:6px;">If your client is having elective or emergency surgery, you may be required to provide preoperative care, postoperative care, or both. Your supervisor will give you directions for care. (无论患者经历择期还是急症手术，支持人员在主管护士指导下规范执行术前与术后照护).</li>
+          <li style="margin-bottom:6px;">A nurse or a physician will do the preoperative and postoperative teaching and will explain to the client and the family what to expect before and after surgery. (医生或护士负责统筹术前术后健康宣教，交代围手术期预期与康复动作).</li>
+          <li style="margin-bottom:6px;">Your client may share with you concerns and fears about the upcoming surgery, and you need to report these concerns to your supervisor. (患者向你吐露的术前恐惧与精神顾虑，必须如实向主管护士通报).</li>
+          <li style="margin-bottom:0;">In a client’s postoperative period, you must be vigilant in watching for any signs or symptoms of respiratory, circulatory, or skin conditions and report and record any concerns immediately to your supervisor. (术后必须对呼吸道抑制、循环虚脱休克、血栓栓塞及皮肤异常保持极高警惕，发现异常秒级通报).</li>
+        </ul>
+      </div>
+
+      <div class="critical-thinking-box" style="margin-bottom:28px; padding:18px 20px; background:rgba(245,158,11,0.06); border-left:4px solid #f59e0b; border-radius:6px;">
+        <h4 style="margin:0 0 10px 0; font-size:15px; color:#b45309;">CRITICAL THINKING IN PRACTICE (临床批判性思维实践情境)</h4>
+        <ol style="padding-left:18px; margin-bottom:0; font-size:13.5px; line-height:1.6; color:var(--text-primary);">
+          <li style="margin-bottom:8px;">
+            <strong>Situation 1:</strong> During an exam, you must leave the room several times for supplies. What problems does leaving the room cause? How could your need to do so have been prevented?
+            <div style="font-size:12.5px; color:var(--text-secondary);">情境 1：在体检过程中，你因遗忘耗材不得不中途多次离开检查室去取物。频繁离室会带来哪些严重问题？该如何从根本上预防？（提示：离室会中断检查流程、使受检者产生被遗弃与暴露的恐惧，破坏检查室私密性，并延长暴露时间使患者受凉受冻。应在体检前严格对照器械清单，逐一将所有可能用到的器械耗材提前备齐于床旁）。</div>
+          </li>
+          <li style="margin-bottom:0;">
+            <strong>Situation 2:</strong> You are measuring a postoperative patient’s vital signs. The person is restless. The vital signs are similar to previous measurements. What do you do? Is there anything you need to report? If so, when?
+            <div style="font-size:12.5px; color:var(--text-secondary);">情境 2：你正在为术后患者测量生命体征。该患者表现出明显烦躁不安，但生命体征数值与前次测量基本相当。你该怎么做？需要向护士报告吗？何时报告？（提示：必须立即向责任护士汇报！烦躁不安（Restlessness）往往是脑组织轻度缺氧、体内隐匿性活动性内出血、或早期休克代偿期的最早神经系统危急预警信号，即便血压脉搏尚未发生断崖式暴跌，也绝不能掉以轻心）。</div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:20px; margin-bottom:12px;">REVIEW QUESTIONS (教材官方复习自测题 1–11)</h4>
+        <p class="para-en" style="font-size:13.5px; color:var(--text-secondary); margin-bottom:14px;">Circle T if the answer is true, and circle F if the answer is false (判断正误题：正确圈 T，错误圈 F)。</p>
+      </div>
+
+      <div class="editorial-quiz-preview" style="padding:16px; background:var(--bg-main); border:1px dashed var(--border-color); border-radius:8px;">
+        <p style="margin:0; font-size:14px; color:var(--text-secondary);"><em>本章共包含 20 道官方执业认证真题（题 1–9 为正误判断题，题 10–20 为单项选择题）。完整交互试题、即时核对及权威临床精解请访问独立题库章节 <strong><a href="#sec-ch46-quiz" onclick="switchSection('sec-ch46-quiz', '第 46 章：自测习题库')" style="color:var(--accent-color); font-weight:600; text-decoration:underline;">第 46 章自测习题库 (#sec-ch46-quiz)</a></strong>。</em></p>
+      </div>
+    </section>
+    
+
+    <section class="facsimile-page" id="page-1109" data-physical-page="1109">
+      <div class="page-top-ribbon">
+        <span class="page-num-chip">p. 1109</span>
+        <span class="page-topic-title">Practice Questions 12–20, Clinical Rationales & Answers (真题测验 12–20、临床权威精解与参考答案)</span>
+      </div>
+
+      <div class="bilingual-para">
+        <h4 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-top:10px; margin-bottom:12px;">REVIEW QUESTIONS Continued (教材官方复习自测题 12–20 及官方标准答案)</h4>
+        <p class="para-en" style="font-size:13.5px; color:var(--text-secondary); margin-bottom:16px;">Questions 12 to 20 focus on surgical positioning, operative preparation, NPO protocol, and postoperative recovery rules.</p>
+      </div>
+
+      <div class="official-answers-box" style="margin-top:20px; margin-bottom:28px; padding:20px 24px; background:linear-gradient(135deg, rgba(37,99,235,0.05), rgba(16,185,129,0.05)); border:1px solid var(--border-color); border-radius:10px;">
+        <h4 style="margin:0 0 12px 0; font-size:16px; color:var(--accent-color); display:flex; align-items:center; gap:8px;">
+          <span>Official Elsevier Review Answers (Elsevier 官方公布标准答案)</span>
+        </h4>
+        <div style="font-family:monospace; font-size:14px; font-weight:700; color:var(--text-primary); line-height:1.8; margin-bottom:14px;">
+          1. T | 2. T | 3. F | 4. F | 5. F | 6. T | 7. T | 8. T | 9. T | 10. B | 11. B | 12. B | 13. A | 14. B | 15. C | 16. D | 17. A | 18. A | 19. C | 20. A
+        </div>
+        <div style="font-size:13px; color:var(--text-secondary); line-height:1.6;">
+          <strong>Chapter Opener Image Credit:</strong> iStockphoto/WaveBreakMedia.<br>
+          <em>Note:</em> All 20 practice exam questions have been fully coded with responsive instant validation, detailed bilingual clinical rationales, and dual-class DOM compatibility in the dedicated Chapter 46 Quiz Bank.
+        </div>
+      </div>
+    </section>
+    
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch45')">← 上一章：第 45 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch46-quiz')">✍️ 20 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 47 章（临终关怀，26页）正在编排流水线中，即将上线！')">下一章：第 47 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch45.html" class="sbn-btn sbn-prev">← 上一章：第 45 章 (用药协助与药物管理)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch46-quiz" class="sbn-btn sbn-quiz">✍️ 20 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 46 章（急性照护）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 46 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch46_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
