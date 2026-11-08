@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mode-bilingual theme-paper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chapter 42: Caring for the Young · 双语沉浸学术研读版</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --font-base: clamp(16px, 0.4vw + 14.5px, 18px);
+      --font-cn-scale: 0.94;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --font-serif: "Noto Serif SC", Georgia, "Songti SC", serif;
+      
+      /* Theme: Warm Paper (Default) */
+      --bg-canvas: #faf6f0;
+      --bg-card: #ffffff;
+      --bg-overlay: rgba(250, 246, 240, 0.94);
+      --text-main: #2b2520;
+      --text-secondary: #5c5247;
+      --text-muted: #8c8279;
+      --accent-navy: #1e3a8a;
+      --border-subtle: #eae2d5;
+      --border-strong: #d8cebf;
+      
+      --box-sage-bg: #edf5f0;
+      --box-sage-border: #b7dfc8;
+      --box-sage-accent: #2e7d32;
+      
+      --box-blue-bg: #eef5fc;
+      --box-blue-border: #c2dbf7;
+      --box-blue-accent: #1e40af;
+      
+      --box-teal-bg: #edf7f6;
+      --box-teal-border: #b2dfdb;
+      --box-teal-accent: #00796b;
+      
+      --box-lavender-bg: #f4f0fa;
+      --box-lavender-border: #dcd3f5;
+      --box-lavender-accent: #5e35b1;
+      
+      --box-amber-bg: #fdf6ec;
+      --box-amber-border: #fcd34d;
+      --box-amber-accent: #d97706;
+      
+      --box-terracotta-bg: #fbf2ee;
+      --box-terracotta-border: #fed7aa;
+      --box-terracotta-accent: #c2410c;
+      
+      --box-case-bg: #eef4fa;
+      --box-case-border: #bfdbfe;
+      --box-case-accent: #1e40af;
+    }
+    
+    html.theme-white {
+      --bg-canvas: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-overlay: rgba(255, 255, 255, 0.94);
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+    }
+    
+    html.theme-night {
+      --bg-canvas: #121214;
+      --bg-card: #1c1c1f;
+      --bg-overlay: rgba(18, 18, 20, 0.94);
+      --text-main: #f1f5f9;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-navy: #60a5fa;
+      --border-subtle: #27272a;
+      --border-strong: #3f3f46;
+      
+      --box-sage-bg: #132219;
+      --box-sage-border: #1b3d2b;
+      --box-blue-bg: #121e33;
+      --box-blue-border: #1c3259;
+      --box-teal-bg: #102422;
+      --box-teal-border: #183d39;
+      --box-lavender-bg: #1d162b;
+      --box-lavender-border: #32234d;
+      --box-amber-bg: #261c11;
+      --box-amber-border: #422f18;
+      --box-terracotta-bg: #271913;
+      --box-terracotta-border: #472719;
+      --box-case-bg: #131c2e;
+      --box-case-border: #1f3154;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: anywhere; word-break: break-word; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 120px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    
+    /* Top Sticky App Navigation */
+    .top-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 48px;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .nav-home-btn {
+      text-decoration: none;
+      color: var(--accent-navy);
+      font-weight: 600;
+      font-size: 12px;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-home-btn:hover { background: var(--border-subtle); }
+    .nav-chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-chapter-title .ch-badge {
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .mode-switch-segmented {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .mode-seg-btn {
+      padding: 5px 12px;
+      border: none;
+      background: transparent;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .mode-seg-btn:hover { color: var(--text-main); }
+    .mode-seg-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .reading-util-group { display: flex; align-items: center; gap: 4px; }
+    .util-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .util-btn:hover { background: var(--border-subtle); color: var(--text-main); }
+    
+    .ambient-player {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px 12px 3px 4px;
+    }
+    .play-circle-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .player-meta { display: flex; flex-direction: column; }
+    .player-track-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player-track-time { font-size: 10px; color: var(--text-muted); }
+    
+    /* Golden Reading Canvas */
+    .reading-canvas,
+    .ch-editorial-flow,
+    .ch5-editorial-flow {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 20px 100px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* Chapter Hero */
+    .chapter-hero-editorial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 30px 26px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .hero-eyebrow {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-title-en {
+      font-size: 27px;
+      font-weight: 750;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title-cn {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Page Selector Box (Dropdown + Chips) */
+        /* Chapter Page Navigation Bar (Apple HIG Design) */
+    .chapter-page-nav-bar {
+      margin: 14px 0 24px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .theme-paper .chapter-page-nav-bar {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: #e6ded2;
+    }
+    .cp-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .cp-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      background: #e9e3d8;
+      color: #3d352e;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .cp-range-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .cp-dropdown-wrap {
+      min-width: 220px;
+      flex: 1;
+      max-width: 320px;
+    }
+    .cp-page-select {
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cp-page-select:focus {
+      border-color: var(--accent-navy);
+    }
+    .cp-chips-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .cp-chips-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .cp-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      border-radius: 5px;
+      background: #ffffff;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .cp-chip:hover {
+      background: var(--accent-navy);
+      color: #ffffff !important;
+      border-color: var(--accent-navy);
+      transform: translateY(-1px);
+    }
+    .cp-chip.active {
+      background: var(--accent-navy) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-navy) !important;
+      font-weight: 700;
+      box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+    }
+    [id^="page-"], .page-anchor-marker {
+      scroll-margin-top: 68px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Authentic Typographic Headings (Strictly following original textbook) */
+    .editorial-heading-major {
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-navy);
+    }
+    .editorial-heading-major .heading-en {
+      font-size: 23px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .editorial-heading-major .heading-cn {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-sub {
+      margin: 34px 0 14px;
+      padding-left: 12px;
+      border-left: 3.5px solid var(--accent-navy);
+    }
+    .editorial-heading-sub .heading-en {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .editorial-heading-sub .heading-cn {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .editorial-heading-micro {
+      margin: 24px 0 10px;
+    }
+    .editorial-heading-micro .heading-en {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .editorial-heading-micro .heading-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    /* Bilingual Paragraphs - No play buttons */
+    .bilingual-paragraph {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 6px 10px 8px 12px;
+      border-left: 3px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .bilingual-paragraph:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-left-color: var(--border-strong);
+    }
+    .bilingual-paragraph.audio-active {
+      background: rgba(30, 58, 138, 0.05);
+      border-left-color: var(--accent-navy);
+    }
+        
+    .para-en {
+      font-size: var(--font-base);
+      line-height: 1.78;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      font-weight: 420;
+    }
+    .para-cn {
+      font-size: calc(var(--font-base) * var(--font-cn-scale));
+      line-height: 1.82;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    
+    /* Boxes & Sidebars (Clear, distinct soft tint & solid left border) */
+    .editorial-box-container {
+      margin: 36px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .box-theme-sage { background: var(--box-sage-bg); border-color: var(--box-sage-border); border-left: 5px solid var(--box-sage-accent); }
+    .box-theme-blue { background: var(--box-blue-bg); border-color: var(--box-blue-border); border-left: 5px solid var(--box-blue-accent); }
+    .box-theme-teal { background: var(--box-teal-bg); border-color: var(--box-teal-border); border-left: 5px solid var(--box-teal-accent); }
+    .box-theme-lavender { background: var(--box-lavender-bg); border-color: var(--box-lavender-border); border-left: 5px solid var(--box-lavender-accent); }
+    .box-theme-amber { background: var(--box-amber-bg); border-color: var(--box-amber-border); border-left: 5px solid var(--box-amber-accent); }
+    .box-theme-terracotta { background: var(--box-terracotta-bg); border-color: var(--box-terracotta-border); border-left: 5px solid var(--box-terracotta-accent); }
+    .box-theme-case { background: var(--box-case-bg); border-color: var(--box-case-border); border-left: 5px solid var(--box-case-accent); }
+    
+    .box-banner-header {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.025);
+    }
+    .box-title-en {
+      font-size: 16.5px;
+      font-weight: 750;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .box-title-cn {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .box-body-content {
+      padding: 18px 20px;
+    }
+    .box-clause-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.07);
+    }
+    .box-clause-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-en {
+      font-size: calc(var(--font-base) * 0.94);
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .clause-cn {
+      font-size: calc(var(--font-base) * 0.9);
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .box-source-citation {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Key Terms Master Component */
+    .key-terms-master-container {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .kt-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .kt-title {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+    .kt-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kt-mode-toggle {
+      display: flex;
+      background: var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .kt-toggle-btn {
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      border-radius: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-toggle-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .kt-search-input {
+      padding: 5px 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+      min-width: 170px;
+      color: var(--text-main);
+    }
+    .kt-search-input:focus {
+      border-color: var(--accent-navy);
+    }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .editorial-table-container {
+      margin: 20px 0 28px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .editorial-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .editorial-content-table th {
+      background: var(--bg-canvas);
+      padding: 11px 14px;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .editorial-content-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .editorial-content-table tr:last-child td {
+      border-bottom: none;
+    }
+    .editorial-content-table tr:hover td {
+      background: rgba(30, 58, 138, 0.02);
+    }
+    .kt-compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .kt-compact-table th {
+      background: var(--bg-canvas);
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .kt-compact-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .kt-word {
+      font-size: 14px;
+      color: var(--accent-navy);
+      display: block;
+    }
+    .kt-ipa {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .etc-cn-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(30, 58, 138, 0.07);
+      color: var(--accent-navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kt-expand-bar {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .kt-expand-btn {
+      padding: 7px 18px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .kt-expand-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .terms-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .editorial-term-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .etc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .etc-word { font-size: 14.5px; font-weight: 700; color: var(--accent-navy); }
+    .etc-ipa { font-size: 11.5px; color: var(--text-muted); margin-left: 4px; font-family: monospace; }
+    .etc-def-en { font-size: 13px; line-height: 1.5; color: var(--text-main); margin-bottom: 4px; }
+    .etc-def-cn { font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+
+    /* Lists & Markers */
+    .editorial-list-block { margin: 16px 0; }
+    .editorial-list { list-style: none; padding-left: 0; }
+    .editorial-list-item {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .editorial-list-item::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-navy);
+      font-size: 11px;
+    }
+    .item-en { font-size: var(--font-base); line-height: 1.7; color: var(--text-main); }
+    .item-cn { font-size: calc(var(--font-base) * var(--font-cn-scale)); line-height: 1.75; color: var(--text-secondary); }
+
+    .page-anchor-marker {
+      margin: 40px 0 16px;
+      text-align: right;
+    }
+    .marker-pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--border-subtle);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .editorial-plate {
+      margin: 24px 0;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 8px 8px 0;
+    }
+    .ep-desc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+    .editorial-figure {
+      margin: 28px 0;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .ef-caption-en { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+
+    /* Tri-state Language Switching Directives */
+    html.mode-en .para-cn,
+    html.mode-en .item-cn,
+    html.mode-en .clause-cn,
+    html.mode-en .heading-cn,
+    html.mode-en .box-title-cn,
+    html.mode-en .hero-title-cn,
+    html.mode-en .etc-cn-tag,
+    html.mode-en .etc-def-cn,
+    html.mode-en .ep-desc {
+      display: none !important;
+    }
+
+    html.mode-cn .para-en,
+    html.mode-cn .item-en,
+    html.mode-cn .clause-en,
+    html.mode-cn .heading-en,
+    html.mode-cn .box-title-en,
+    html.mode-cn .hero-title-en,
+    html.mode-cn .etc-def-en,
+    html.mode-cn .ef-caption-en {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-sticky-bar { padding: 0 8px; justify-content: space-between; }
+      .nav-chapter-title { display: none; }
+      .nav-home-btn { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+      .mode-seg-btn { padding: 3px 6px; font-size: 11px; }
+      .ambient-player { padding: 2px 4px; }
+      .ambient-player .player-meta { display: none; }
+      .reading-util-group { display: none; }
+      .reading-canvas, .ch-editorial-flow { padding: 20px 14px 80px; }
+      .chapter-hero-editorial { padding: 20px 16px; }
+      .hero-title-en { font-size: 22px; }
+      .hero-title-cn { font-size: 16px; }
+      .editorial-heading-major .heading-en { font-size: 20px; }
+      .editorial-heading-sub .heading-en { font-size: 16.5px; }
+      .kt-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .kt-toolbar-right { width: 100%; justify-content: space-between; }
+      .page-selector-head { flex-direction: column; align-items: flex-start; }
+      .ps-dropdown-wrap { width: 100%; max-width: 100%; }
+    }
+
+    /* Standalone Universal Chapter Switcher & Bottom Nav */
+    .nav-chapter-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .standalone-chapter-select {
+      height: 32px;
+      padding: 0 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      max-width: 140px;
+      transition: all 0.15s ease;
+    }
+    @media (min-width: 600px) {
+      .standalone-chapter-select {
+        max-width: 260px;
+      }
+    }
+    .standalone-chapter-select:hover, .standalone-chapter-select:focus {
+      border-color: var(--accent-navy);
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.12);
+    }
+    .standalone-bottom-nav {
+      margin: 48px 0 24px 0;
+      padding: 24px 0 12px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .sbn-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sbn-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    .sbn-btn:hover {
+      background: var(--border-subtle);
+      color: var(--accent-navy);
+    }
+    .sbn-btn.sbn-quiz {
+      background: var(--box-blue-bg);
+      border-color: var(--box-blue-border);
+      color: var(--box-blue-accent);
+    }
+    .sbn-btn.sbn-quiz:hover {
+      filter: brightness(0.96);
+    }
+    .sbn-btn.sbn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: var(--bg-canvas);
+    }
+    .sbn-btn.sbn-pipeline {
+      background: var(--box-amber-bg);
+      border-color: var(--box-amber-border);
+      color: var(--box-amber-accent);
+    }
+
+
+    /* High-Res Clinical Figure & Caption Card */
+    .editorial-figure-card {
+      margin: 32px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .figure-image-wrap {
+      background: #f8fafc;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .figure-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .figure-caption {
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .fig-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .fig-en {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .fig-cn {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      line-height: 1.65;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-sticky-bar">
+    <div class="nav-left">
+      <a href="psw-reader.html" class="nav-home-btn" title="进入全书总阅读器">🏛️ 全书阅读器</a>
+      <div class="nav-chapter-switcher">
+        <span class="ch-badge">CH 42</span>
+        <select class="standalone-chapter-select" onchange="window.location.href=this.value" aria-label="全书章节跳转">
+          <option value="psw-reader.html">🏛️ 全书主阅读器 (含1-19章全部目录与题库)</option>
+<option value="psw-ch1.html">第 01 章 · 支持工作者的角色与法定职责</option>
+<option value="psw-ch2.html">第 02 章 · 加拿大医疗卫生保健体系与全民主管法律</option>
+<option value="psw-ch3.html">第 03 章 · 执业环境与工作场所</option>
+<option value="psw-ch4.html">第 04 章 · 职业伦理、行为守则与临床困境决断</option>
+<option value="psw-ch5.html">第 05 章 · 法律法规</option>
+<option value="psw-ch6.html">第 06 章 · 健康、全人福祉、疾病与残障实务应对</option>
+<option value="psw-ch7.html">第 07 章 · 多元文化尊重、跨文化沟通与包容性照护</option>
+<option value="psw-ch8.html">第 08 章 · 压力管理、职业倦怠预防与人身执业安全</option>
+<option value="psw-ch9.html">第 09 章 · 人际沟通与专业交流技巧</option>
+<option value="psw-ch10.html">第 10 章 · 与他人协作</option>
+<option value="psw-ch11.html">第 11 章 · 与服务对象及其家属共处协作</option>
+<option value="psw-ch12.html">第 12 章 · 识别与防范虐待、霸凌与骚扰</option>
+<option value="psw-ch13.html">第 13 章 · 开启您的职业生涯</option>
+<option value="psw-ch14.html">第 14 章 · 身体力学原理与安全转移技术</option>
+<option value="psw-ch15.html">第 15 章 · 运动与日常机能活动</option>
+<option value="psw-ch16.html">第 16 章 · 康复护理与恢复性照护</option>
+<option value="psw-ch17.html">第 17 章 · 个人卫生照护实务</option>
+<option value="psw-ch18.html">第 18 章 · 个人仪容修饰与更衣照护实务</option>
+<option value="psw-ch19.html">第 19 章 · 感染预防与控制实务</option>
+<option value="psw-ch20.html">第 20 章 · 安全与事故预防实务</option>
+<option value="psw-ch21.html">第 21 章 · 病床与铺床实务</option>
+<option value="psw-ch22.html">第 22 章 · 皮肤照护与创面压疮预防</option>
+<option value="psw-ch23.html">第 23 章 · 案主舒适支持、疼痛评估管理与睡眠休息照护</option>
+<option value="psw-ch24.html">第 24 章 · 测量身高、体重与生命体征</option>
+<option value="psw-ch25.html">第 25 章 · 医学术语与专业缩写</option>
+<option value="psw-ch26.html">第 26 章 · 制定照护计划、口头交班汇报与书面病历记录</option>
+<option value="psw-ch27.html">第 27 章 · 营养与体液照护</option>
+<option value="psw-ch28.html">第 28 章 · 肠内营养与静脉输液照护</option>
+<option value="psw-ch29.html">第 29 章 · 排尿照护与留置导尿管</option>
+<option value="psw-ch30.html">第 30 章 · 肠道排泄照护与造口管理</option>
+<option value="psw-ch31.html">第 31 章 · 生长与发育全生命周期</option>
+<option value="psw-ch32.html">第 32 章 · 人体结构与功能</option>
+<option value="psw-ch33.html">第 33 章 · 常见疾病与机体功能障碍</option>
+<option value="psw-ch34.html">第 34 章 · 听力与视力障碍</option>
+<option value="psw-ch35.html">第 35 章 · 言语和语言障碍</option>
+<option value="psw-ch36.html">第 36 章 · 发育障碍与发育迟缓残疾</option>
+<option value="psw-ch37.html">第 37 章 · 精神健康障碍</option>
+<option value="psw-ch38.html">第 38 章 · 定向障碍、谵妄与认知症痴呆</option>
+<option value="psw-ch39.html">第 39 章 · 促进氧合</option>
+<option value="psw-ch40.html">第 40 章 · 冷热敷应用与临床物理疗法</option>
+<option value="psw-ch41.html">第 41 章 · 婴儿及其父母的照护</option>
+<option value="psw-ch42.html" selected>第 42 章 · 儿童与青少年照护与家庭支持</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mode-switch-segmented" id="langModeSwitch">
+      <button class="mode-seg-btn active" data-mode="bilingual" onclick="switchLanguageMode('bilingual')">中英双语</button>
+      <button class="mode-seg-btn" data-mode="en" onclick="switchLanguageMode('en')">仅英文</button>
+      <button class="mode-seg-btn" data-mode="cn" onclick="switchLanguageMode('cn')">仅中文</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="reading-util-group">
+        <button class="util-btn" onclick="togglePaperTheme()" id="paperThemeBtn" title="切换护眼纸色">护眼纸色</button>
+      </div>
+
+      <div class="ambient-player">
+        <button class="play-circle-btn" id="rabPlayBtn" onclick="toggleReaderAudioPlay()">▶</button>
+        <div class="player-meta">
+          <span class="player-track-title" id="rabCurrentTitle">第 42 章 · 点选段落收听</span>
+          <span class="player-track-time" id="rabCurTime">00:00 / 40:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reading-canvas">
+    <header class="chapter-hero-editorial">
+      <div class="hero-eyebrow">CHAPTER 42 · SORRENTINO 5TH EDITION · 双语精研版</div>
+      <h1 class="hero-title-en">Caring for the Young</h1>
+      <h2 class="hero-title-cn">儿童与青少年照护与家庭支持：支持工作者角色、DIPPS原则实践、儿童面临挑战、营养与进餐挑战、儿童期肥胖症防范、Reye综合征阿司匹林禁忌硬线、睡眠与身体活动指南、纪律与行为引导、严禁体罚惩罚、应对具有挑战性行为、感染控制与手卫生、学童五大缺课病因（感冒/肠胃炎/中耳炎/红眼病/链球菌喉炎）、加拿大国家疫苗接种规划与群体免疫屏障</h2>
+      <div class="hero-meta-bar">
+        <span class="meta-item">Pages 1005–1018 · 11 道全真自测题</span>
+        <span class="meta-item">专业音频：40:00</span>
+        <span class="meta-item"><a href="psw-reader.html#sec-ch42-quiz" style="color:var(--accent-navy); text-decoration:none; font-weight:600;">前往自测习题库 ↗</a></span>
+      </div>
+    </header>
+
+    <div class="editorial-stream">
+      
+    <nav class="chapter-page-nav-bar" id="cp-nav-ch42" aria-label="Chapter 42 Page Navigation">
+      <div class="cp-nav-header">
+        <div class="cp-nav-meta">
+          <span class="cp-badge">PAGE NAV</span>
+          <span class="cp-title">本章物理页码导航</span>
+          <span class="cp-range-pill">p.1005–1018 · 共 14 个物理页</span>
+        </div>
+        <div class="cp-dropdown-wrap">
+          <select class="cp-page-select" onchange="jumpToChapterPage(this.value)" aria-label="选择原书页码快速跳转">
+            <option value="">-- 选择原书页码快速跳转 --</option>
+            <option value="page-1005">第 1005 页 · 开篇导读与学习目标 (Learning Objectives & Opener)</option><option value="page-1006">第 1006 页 · 支持儿童与家庭：支持工作者角色与DIPPS原则 (Supporting the Young, DIPPS & Key Terms)</option><option value="page-1007">第 1007 页 · 家庭照护指南：沟通技巧与关爱支持 (Communication & Compassionate Care, Box 42.1)</option><option value="page-1008">第 1008 页 · 营养与进餐：健康饮食、肥胖风险与摄食障碍 (Nutrition, Obesity Risks & Eating Disorders)</option><option value="page-1009">第 1009 页 · 进餐应对技巧：挑食应对与案例精析 (Managing Mealtimes & Jane Smith Case Scenario)</option><option value="page-1010">第 1010 页 · Reye综合征禁忌、休息睡眠与身体活动 (Reye's Syndrome Warning, Rest & Physical Activity)</option><option value="page-1011">第 1011 页 · 纪律管教准则：行为引导、一致性与家庭安全红线 (Discipline Principles & Safety Reporting Red Flags)</option><option value="page-1012">第 1012 页 · 严禁体罚惩罚、应对具有挑战性行为与防感染 (Punishment Prohibition & Managing Challenging Behaviours, Box 42.2)</option><option value="page-1013">第 1013 页 · 正负强化、冷静暂停与病童居家隔离标准 (Positive Reinforcement, Timeout & Sick Child Stay-Home Guidelines)</option><option value="page-1014">第 1014 页 · 学童缺课五大常见病因：感冒、肠胃炎、中耳炎、红眼病与链球菌喉炎 (Top 5 School Absences: Colds, Flu, Otitis, Pink Eye, Strep Throat)</option><option value="page-1015">第 1015 页 · 感染预防细则与儿童疫苗接种 (Infection Prevention & Childhood Immunization, Box 42.3)</option><option value="page-1016">第 1016 页 · 疫苗免疫机制、群体免疫与病童居家舒适照护 (Vaccine Science, Herd Immunity & Home Sick Child Care)</option><option value="page-1017">第 1017 页 · 本章核心要点总结、临床实践反思与自测题1-3 (Chapter Review, Critical Thinking & Practice Exam Q1-3)</option><option value="page-1018">第 1018 页 · 全真自测复习题4-11与官方权威标准答案解析 (Practice Exam Q4-11 & Official Elsevier Answers)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cp-chips-scroll">
+        <div class="cp-chips-ribbon">
+          <a href="#page-1005" class="cp-chip" id="cp-chip-42-1005" data-page="1005" onclick="handlePageChipClick(event, 'page-1005')" title="第 1005 页 · 开篇导读与学习目标 (Learning Objectives & Opener)"><span class="cp-num">p.1005</span></a><a href="#page-1006" class="cp-chip" id="cp-chip-42-1006" data-page="1006" onclick="handlePageChipClick(event, 'page-1006')" title="第 1006 页 · 支持儿童与家庭：支持工作者角色与DIPPS原则 (Supporting the Young, DIPPS & Key Terms)"><span class="cp-num">p.1006</span></a><a href="#page-1007" class="cp-chip" id="cp-chip-42-1007" data-page="1007" onclick="handlePageChipClick(event, 'page-1007')" title="第 1007 页 · 家庭照护指南：沟通技巧与关爱支持 (Communication & Compassionate Care, Box 42.1)"><span class="cp-num">p.1007</span></a><a href="#page-1008" class="cp-chip" id="cp-chip-42-1008" data-page="1008" onclick="handlePageChipClick(event, 'page-1008')" title="第 1008 页 · 营养与进餐：健康饮食、肥胖风险与摄食障碍 (Nutrition, Obesity Risks & Eating Disorders)"><span class="cp-num">p.1008</span></a><a href="#page-1009" class="cp-chip" id="cp-chip-42-1009" data-page="1009" onclick="handlePageChipClick(event, 'page-1009')" title="第 1009 页 · 进餐应对技巧：挑食应对与案例精析 (Managing Mealtimes & Jane Smith Case Scenario)"><span class="cp-num">p.1009</span></a><a href="#page-1010" class="cp-chip" id="cp-chip-42-1010" data-page="1010" onclick="handlePageChipClick(event, 'page-1010')" title="第 1010 页 · Reye综合征禁忌、休息睡眠与身体活动 (Reye's Syndrome Warning, Rest & Physical Activity)"><span class="cp-num">p.1010</span></a><a href="#page-1011" class="cp-chip" id="cp-chip-42-1011" data-page="1011" onclick="handlePageChipClick(event, 'page-1011')" title="第 1011 页 · 纪律管教准则：行为引导、一致性与家庭安全红线 (Discipline Principles & Safety Reporting Red Flags)"><span class="cp-num">p.1011</span></a><a href="#page-1012" class="cp-chip" id="cp-chip-42-1012" data-page="1012" onclick="handlePageChipClick(event, 'page-1012')" title="第 1012 页 · 严禁体罚惩罚、应对具有挑战性行为与防感染 (Punishment Prohibition & Managing Challenging Behaviours, Box 42.2)"><span class="cp-num">p.1012</span></a><a href="#page-1013" class="cp-chip" id="cp-chip-42-1013" data-page="1013" onclick="handlePageChipClick(event, 'page-1013')" title="第 1013 页 · 正负强化、冷静暂停与病童居家隔离标准 (Positive Reinforcement, Timeout & Sick Child Stay-Home Guidelines)"><span class="cp-num">p.1013</span></a><a href="#page-1014" class="cp-chip" id="cp-chip-42-1014" data-page="1014" onclick="handlePageChipClick(event, 'page-1014')" title="第 1014 页 · 学童缺课五大常见病因：感冒、肠胃炎、中耳炎、红眼病与链球菌喉炎 (Top 5 School Absences: Colds, Flu, Otitis, Pink Eye, Strep Throat)"><span class="cp-num">p.1014</span></a><a href="#page-1015" class="cp-chip" id="cp-chip-42-1015" data-page="1015" onclick="handlePageChipClick(event, 'page-1015')" title="第 1015 页 · 感染预防细则与儿童疫苗接种 (Infection Prevention & Childhood Immunization, Box 42.3)"><span class="cp-num">p.1015</span></a><a href="#page-1016" class="cp-chip" id="cp-chip-42-1016" data-page="1016" onclick="handlePageChipClick(event, 'page-1016')" title="第 1016 页 · 疫苗免疫机制、群体免疫与病童居家舒适照护 (Vaccine Science, Herd Immunity & Home Sick Child Care)"><span class="cp-num">p.1016</span></a><a href="#page-1017" class="cp-chip" id="cp-chip-42-1017" data-page="1017" onclick="handlePageChipClick(event, 'page-1017')" title="第 1017 页 · 本章核心要点总结、临床实践反思与自测题1-3 (Chapter Review, Critical Thinking & Practice Exam Q1-3)"><span class="cp-num">p.1017</span></a><a href="#page-1018" class="cp-chip" id="cp-chip-42-1018" data-page="1018" onclick="handlePageChipClick(event, 'page-1018')" title="第 1018 页 · 全真自测复习题4-11与官方权威标准答案解析 (Practice Exam Q4-11 & Official Elsevier Answers)"><span class="cp-num">p.1018</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="editorial-container" style="max-width:820px; margin:0 auto; padding:0 16px;">
+
+    <div class="page-anchor-marker" id="page-1005">
+      <span class="marker-pill">p. 1005</span>
+      <span class="marker-sec">Chapter Opener & Learning Objectives</span>
+    </div>
+
+    <div class="chapter-hero-editorial" style="margin-bottom:32px; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:28px 24px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div class="hero-eyebrow" style="font-size:12px; font-weight:700; color:#2563eb; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">CHAPTER 42 · SUPPORT WORKER FOUNDATIONS</div>
+      <h1 class="hero-title-en" style="font-size:28px; font-weight:800; color:#0f172a; margin-bottom:6px; line-height:1.25;">Caring for the Young</h1>
+      <div class="hero-title-cn" style="font-size:19px; font-weight:600; color:#475569; margin-bottom:18px;">婴儿、儿童与青少年的专业照护与家庭支持</div>
+      
+      <div class="figure-card" style="margin:20px 0 24px; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#f8fafc;">
+        <img src="images/ch42/ch42_opener.jpg" alt="Chapter 42 Opener: Support Worker with Children" style="width:100%; max-height:480px; object-fit:cover; display:block;" onerror="this.src='pages_dist/images/ch42/ch42_opener.jpg'">
+        <div class="figure-caption" style="padding:10px 14px; font-size:12.5px; color:#64748b; background:#f8fafc; border-top:1px solid #e2e8f0; text-align:center;">
+          Chapter Opener: Caring for infants, children, and youth in community and home care settings. (Photo credit: iStockphoto/monkeybusinessimages)
+        </div>
+      </div>
+
+      <div class="objectives-card" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px; margin-top:20px;">
+        <div class="obj-badge" style="display:inline-block; font-size:11px; font-weight:700; color:#166534; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">LEARNING OBJECTIVES · 学习目标</div>
+        <div class="obj-subtitle" style="font-size:14px; font-weight:600; color:#14532d; margin-bottom:12px;">After reading this chapter, the learner should be able to do the following / 研读本章后，学习者应能够达到以下执业能力指标：</div>
+        
+        <div style="display:grid; grid-template-columns:1fr; gap:16px;">
+          <div>
+            <ol style="margin:0; padding-left:20px; font-size:14.5px; color:#166534; line-height:1.65;">
+              <li class="obj-item-en" style="margin-bottom:6px;">Identify the role of the support worker when caring for the young.</li><li class="obj-item-en" style="margin-bottom:6px;">List ways to assist an infant or child to meet nutritional needs.</li><li class="obj-item-en" style="margin-bottom:6px;">Identify the principles for dealing with a child who displays challenging behaviours.</li><li class="obj-item-en" style="margin-bottom:6px;">Describe ways to prevent or minimize childhood infections.</li><li class="obj-item-en" style="margin-bottom:6px;">List the most common reasons for children missing school.</li><li class="obj-item-en" style="margin-bottom:6px;">Apply the information in this chapter to clinical practice.</li>
+            </ol>
+          </div>
+          <div style="border-top:1px dashed #86efac; padding-top:12px;">
+            <ol style="margin:0; padding-left:20px; font-size:13.5px; color:#15803d; line-height:1.65;">
+              <li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">明确支持工作者在照护儿童与青少年时的专业角色与职责范围。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">列举协助婴幼儿及儿童满足营养需求并营造良好进餐氛围的有效方法。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">掌握应对表现出具有挑战性行为儿童的核心原则、行为引导及绝对禁止惩罚的伦理红线。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">阐述预防或最大程度减少儿童感染的关键途径、手卫生标准与环境消毒规范。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">列出导致儿童缺课或脱离日托机构的前五大最常见急性感染性疾病及返校准则。</li><li class="obj-item-cn" style="margin-bottom:6px; color:#475569;">将本章关于儿童身心发展、家庭支持、疾病照护与疫苗科学的知识严谨应用于临床执业实践。</li>
+            </ol>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; font-size:12px; color:#166534; border-top:1px solid #dcfce7; padding-top:10px;">
+          Online resources & supplementary study materials: <a href="http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker" target="_blank" rel="noopener noreferrer" style="color:#2563eb; text-decoration:underline;">http://evolve.elsevier.com/Canada/Sorrentino/SupportWorker</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1006">
+      <span class="marker-pill">p. 1006</span>
+      <span class="marker-sec">Supporting the Infant, Child, or Teen & DIPPS Principles</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">This chapter discusses the need to provide a supportive environment for the young, discusses the role of the support worker when dealing with the family, and explores some of the difficulties support workers may experience when working with children. It also offers a list of ways to deal with children who display challenging behaviours. In addition, this chapter includes the common causes for children missing school. Readers should also refer to Chapters 12, 19, 31, and 32 for information about caring for children and the ages of children at each developmental level.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">本章探讨为儿童和青少年提供支持性成长环境的必要性，阐述支持工作者在与家庭互动中的专业角色，并深入剖析支持工作者在与儿童接触时可能遇到的各种实际困难。此外，本章还提供了一份应对表现出具有挑战性行为儿童的有效策略清单，并总结了导致学童缺课的最常见急性病因。读者还应参阅第 12、19、31 和 32 章，以获取有关儿童照护以及各发展阶段儿童年龄特征的详尽信息。</p>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-supporting">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:24px; margin-bottom:4px;">SUPPORTING THE INFANT, CHILD, OR TEEN</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">支持婴幼儿、儿童或青少年</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">As a support worker, you will be expected to provide care and support to people of all ages, including the young. The young person that you are assigned to support may be a family member of your primary client (see the Supporting Jane Smith: Families as Clients box on page 1010) or may be your assigned client. Always consult your supervisor if you have questions or concerns when working with children (FIGURE 42.1).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">作为一名支持工作者，你将被期望向所有年龄段的人群提供照护与支持，包括年幼群体。你被指派照料的年轻个体，可能是你主要案主的家庭成员（参见第 1010 页的《案例精析：支持简·史密斯——当整个家庭都是案主时》专栏），也可能是你直接负责的主要案主。在与儿童一起工作时，如果有任何疑问或担忧，务必立即向你的主管咨询（图 42.1）。</p>
+    </div>
+
+    <div class="editorial-figure" style="margin:24px 0; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px; text-align:center;">
+      <img src="images/ch42/fig-42-1.jpg" alt="FIGURE 42.1 The support worker provides care to a sick child." style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.04);" onerror="this.src='pages_dist/images/ch42/fig-42-1.jpg'">
+      <figcaption class="ef-caption-en" style="margin-top:10px; font-size:13px; font-weight:600; color:#334155;">
+        FIGURE 42.1 &nbsp;The support worker provides care to a sick child. (iStockphoto/filadendron)<br>
+        <span style="font-weight:400; color:#64748b;">图 42.1 支持工作者正在悉心照护患病儿童。</span>
+      </figcaption>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">When providing support to the young, you must always remember that they have rights, too. Promote the priorities of support work when working with children. When dealing with both the young and their families, you must remember to follow the principles of DIPPS (Dignity, Independence, Individualized care, Privacy, Preferences, and Safety) just as you would for any other client (see the Providing Compassionate Care: Working With Children box).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">在向儿童与青少年提供支持时，你必须始终铭记：他们同样享有平等的权利。在与儿童接触时，要坚决贯彻支持工作的各项核心优先原则。在面对年幼群体及其家庭时，必须牢记遵循 DIPPS 原则（尊严 Dignity、独立 Independence、个性化照护 Individualized care、隐私 Privacy、偏好 Preferences 和安全 Safety），就像对待任何成年或老年案主一样严谨（参见《提供仁爱同理照护：与儿童沟通合作的临床实践指南》专栏）。</p>
+    </div>
+
+    <div class="editorial-heading-sub">
+      <h3 class="heading-en" style="font-size:18px; font-weight:700; color:#0f172a; margin-top:20px; margin-bottom:4px;">The Support Worker’s Role</h3>
+      <div class="heading-cn" style="font-size:15px; font-weight:600; color:#475569; margin-bottom:12px;">支持工作者的专业角色</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">As a support worker, your goal is to provide a stable, secure, and safe atmosphere for the family. Such an environment is very important for children who have illnesses and for those who are experiencing stress when a family member is ill.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">作为一名支持工作者，你的专业目标是为案主家庭营造一个稳定、安心且安全的生活环境氛围。对于身患疾病的儿童，以及当家庭其他成员罹患重病而经历巨大心理压力的儿童而言，这样一个充满支持感的环境至关重要。</p>
+    </div>
+
+    
+    <section class="key-terms-container" id="sec-ch42-glossary" style="margin:28px 0; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:22px 20px; box-shadow:0 1px 4px rgba(0,0,0,0.03);">
+      <div class="kt-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid #e2e8f0;">
+        <div class="kt-toolbar-left">
+          <h3 class="kt-title" style="margin:0; font-size:18px; font-weight:700; color:#0f172a;">Key Terms · 第 42 章核心专业学术术语（共 13 词）</h3>
+          <span style="font-size:12.5px; color:#64748b;">涵盖儿科上呼吸道感染、胃肠炎、中耳炎、红眼病、咽鼓管、链球菌喉炎、Reye综合征、正负强化与肥胖症定义</span>
+        </div>
+        <div class="kt-toolbar-right" style="display:flex; align-items:center; gap:10px;">
+          <div class="kt-mode-toggle" style="display:flex; border:1px solid #cbd5e1; border-radius:6px; overflow:hidden;">
+            <button class="kt-toggle-btn active" id="kt-btn-table-ch42" onclick="setGlossaryMode('ch42', 'table')" style="padding:5px 12px; font-size:12px; font-weight:600; border:none; background:#2563eb; color:#ffffff; cursor:pointer;">速查词表</button>
+            <button class="kt-toggle-btn" id="kt-btn-cards-ch42" onclick="setGlossaryMode('ch42', 'cards')" style="padding:5px 12px; font-size:12px; font-weight:600; border:none; background:#f8fafc; color:#475569; cursor:pointer;">精研卡片</button>
+          </div>
+          <div class="kt-search-box">
+            <input type="text" class="kt-search-input" placeholder="🔍 快速搜索中英文术语..." oninput="filterGlossary('ch42', this.value)" style="padding:5px 10px; font-size:12.5px; border:1px solid #cbd5e1; border-radius:6px; outline:none;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode 1: Compact Table -->
+      <div class="kt-view-table active" id="kt-table-view-ch42">
+        <div class="table-wrap" style="overflow-x:auto;">
+          <table class="kt-compact-table" style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+              <tr style="background:#f8fafc; border-bottom:2px solid #e2e8f0;">
+                <th style="width:28%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">英文术语 / 国际音标</th>
+                <th style="width:22%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">中文标准译名</th>
+                <th style="width:50%; padding:10px 12px; font-size:12.5px; font-weight:700; color:#475569;">教材权威学术释义与临床界定</th>
+              </tr>
+            </thead>
+            <tbody id="kt-table-body-ch42">
+              
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">conjunctivitis</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/kənˌdʒʌŋktɪˈvaɪtɪs/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">结膜炎（红眼病）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">An inflammation of the clear membrane that covers the white part of the eye and lines the inner surface of the eyelids. The nonmedical term is pink eye. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">覆盖在眼白表面并衬于眼睑内表面的透明薄膜（结膜）发生的炎症。非医学通俗名称为红眼病（pink eye）。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">ear infection</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ɪər ɪnˈfɛkʃən/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">耳部感染（中耳炎）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">See otitis media. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">参见中耳炎（otitis media）。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">eustachian tube</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/juːˈsteɪkiən tjuːb/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">咽鼓管（耳咽管）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">The tiny drainage pipe in the middle ear. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">位于中耳微小的引流管道，连接中耳与鼻咽部，用于平衡鼓膜内外气压及引流分泌物。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">gastroenteritis</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˌɡæstroʊˌɛntəˈraɪtɪs/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">胃肠炎（肠胃型感冒）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">More commonly and incorrectly known as “stomach flu,” this illness causes vomiting and diarrhea and can lead to dehydration, particularly in very young children and frail older people. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">俗称且常被误称为“肠胃型感冒”（stomach flu）。该疾病引起呕吐和腹泻，并可迅速导致严重脱水，在极年幼的儿童和身体虚弱的年长者中尤为危险。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">negative reinforcement</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˈnɛɡətɪv ˌriːɪnˈfɔːrsmənt/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">负强化</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">Encouraging a behaviour by penalizing the person when that behaviour is not demonstrated. p. 1013</div>
+            <div class="kt-def-cn" style="color:#475569;">通过在未表现出某种行为时对个体施加惩罚/剥夺以鼓励该行为表现的方式。（第 1013 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">obesity</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/oʊˈbiːsəti/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">肥胖症</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">Excess fat accumulation that puts a person’s health at risk. p. 1008</div>
+            <div class="kt-def-cn" style="color:#475569;">对人体健康带来严重风险的过度脂肪积聚。（第 1008 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row kt-folded-row" style="display:none;">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">otitis media</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/oʊˈtaɪtɪs ˈmiːdiə/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">中耳炎</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">Infection (itis) of the middle (media) ear (ot), caused by either a virus or bacteria. Also known as ear infection. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">由病毒或细菌引起的中（media）耳（ot）感染与炎症（itis）。也称为耳部感染（ear infection）。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row kt-folded-row" style="display:none;">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">pink eye</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/pɪŋk aɪ/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">红眼病</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">See conjunctivitis. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">参见结膜炎（conjunctivitis）。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row kt-folded-row" style="display:none;">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">positive reinforcement</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˈpɒzətɪv ˌriːɪnˈfɔːrsmənt/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">正强化</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">Encouraging a behaviour by rewarding the desired behaviour after it is demonstrated. p. 1013</div>
+            <div class="kt-def-cn" style="color:#475569;">在个体表现出期望的行为之后给予奖励以鼓励并强化该行为的方式。（第 1013 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row kt-folded-row" style="display:none;">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">Reye’s syndrome</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˈraɪz ˌsɪndroʊm/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">瑞氏综合征（Reye综合征）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">A rare but potentially fatal disease that causes inflammation of the brain, which can occur during the recovery stage of flu or chicken pox. It has been seen in children who take Aspirin. p. 1010</div>
+            <div class="kt-def-cn" style="color:#475569;">一种罕见但可能致命的导致脑部急性炎症的严重疾病，通常发生在流感或水痘的康复期。该病已在服用阿司匹林（Aspirin/乙酰水杨酸）的儿童中被证实发生，因此儿童发热或病毒感染严禁使用阿司匹林。（第 1010 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row kt-folded-row" style="display:none;">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">strep throat</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/strɛp θroʊt/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">链球菌性喉炎（链球菌咽喉炎）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">A throat that is infected with streptococci. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">因受到链球菌（streptococci）感染而引发的咽喉部位急性感染与化脓性炎症。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row kt-folded-row" style="display:none;">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">streptococci</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˌstrɛptəˈkɒkaɪ/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">链球菌（单数形式为 streptococcus）</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">(singular, streptococcus) A type of bacteria that cause strep throat and other medical conditions. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">（单数形式为 streptococcus）一种导致链球菌咽喉炎及其他多种临床感染性疾病的细菌。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+        <tr class="kt-table-row kt-folded-row" style="display:none;">
+          <td class="kt-cell-term" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <strong class="kt-word" style="color:#1e3a8a; font-size:14.5px;">upper respiratory infections (URIs)</strong>
+            <span class="kt-ipa" style="display:block; font-size:11.5px; color:#64748b; font-family:monospace;">/ˈʌpər rɪˈspɪrətɔːri ɪnˈfɛkʃənz/</span>
+          </td>
+          <td class="kt-cell-cn" style="padding:10px 12px; border-bottom:1px solid #f1f5f9;">
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:13px; padding:2px 8px; border-radius:4px;">上呼吸道感染 (URIs / 普通感冒)</span>
+          </td>
+          <td class="kt-cell-def" style="padding:10px 12px; border-bottom:1px solid #f1f5f9; font-size:13px; line-height:1.5;">
+            <div class="kt-def-en" style="color:#1e293b; margin-bottom:4px;">The medical term for colds and other viral illnesses that affect the throat, nose, and sinuses. p. 1014</div>
+            <div class="kt-def-cn" style="color:#475569;">累及咽喉、鼻腔和鼻窦的普通感冒及其他病毒性疾病的正式医学术语。（第 1014 页）</div>
+          </td>
+        </tr>
+        
+            </tbody>
+          </table>
+        </div>
+        <div class="kt-expand-bar" id="kt-expand-bar-table-ch42" style="margin-top:14px; text-align:center;">
+          <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch42', 'table')" style="padding:6px 18px; font-size:12.5px; font-weight:600; color:#2563eb; background:#eff6ff; border:1px solid #bfdbfe; border-radius:6px; cursor:pointer;">
+            展开全部 13 个专业术语 ▼
+          </button>
+        </div>
+      </div>
+
+      <!-- Mode 2: Cards Deck -->
+      <div class="kt-view-cards" id="kt-cards-view-ch42" style="display:none;">
+        <div class="terms-editorial-grid" id="kt-cards-grid-ch42" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px;">
+          
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">conjunctivitis</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/kənˌdʒʌŋktɪˈvaɪtɪs/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">结膜炎（红眼病）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">An inflammation of the clear membrane that covers the white part of the eye and lines the inner surface of the eyelids. The nonmedical term is pink eye. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">覆盖在眼白表面并衬于眼睑内表面的透明薄膜（结膜）发生的炎症。非医学通俗名称为红眼病（pink eye）。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">ear infection</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ɪər ɪnˈfɛkʃən/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">耳部感染（中耳炎）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">See otitis media. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">参见中耳炎（otitis media）。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">eustachian tube</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/juːˈsteɪkiən tjuːb/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">咽鼓管（耳咽管）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">The tiny drainage pipe in the middle ear. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">位于中耳微小的引流管道，连接中耳与鼻咽部，用于平衡鼓膜内外气压及引流分泌物。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">gastroenteritis</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˌɡæstroʊˌɛntəˈraɪtɪs/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">胃肠炎（肠胃型感冒）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">More commonly and incorrectly known as “stomach flu,” this illness causes vomiting and diarrhea and can lead to dehydration, particularly in very young children and frail older people. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">俗称且常被误称为“肠胃型感冒”（stomach flu）。该疾病引起呕吐和腹泻，并可迅速导致严重脱水，在极年幼的儿童和身体虚弱的年长者中尤为危险。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">negative reinforcement</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈnɛɡətɪv ˌriːɪnˈfɔːrsmənt/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">负强化</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Encouraging a behaviour by penalizing the person when that behaviour is not demonstrated. p. 1013</div>
+            <div class="etc-def-cn" style="color:#475569;">通过在未表现出某种行为时对个体施加惩罚/剥夺以鼓励该行为表现的方式。（第 1013 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">obesity</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/oʊˈbiːsəti/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">肥胖症</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Excess fat accumulation that puts a person’s health at risk. p. 1008</div>
+            <div class="etc-def-cn" style="color:#475569;">对人体健康带来严重风险的过度脂肪积聚。（第 1008 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card kt-folded-card" style="display:none;" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">otitis media</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/oʊˈtaɪtɪs ˈmiːdiə/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">中耳炎</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Infection (itis) of the middle (media) ear (ot), caused by either a virus or bacteria. Also known as ear infection. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">由病毒或细菌引起的中（media）耳（ot）感染与炎症（itis）。也称为耳部感染（ear infection）。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card kt-folded-card" style="display:none;" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">pink eye</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/pɪŋk aɪ/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">红眼病</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">See conjunctivitis. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">参见结膜炎（conjunctivitis）。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card kt-folded-card" style="display:none;" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">positive reinforcement</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈpɒzətɪv ˌriːɪnˈfɔːrsmənt/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">正强化</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">Encouraging a behaviour by rewarding the desired behaviour after it is demonstrated. p. 1013</div>
+            <div class="etc-def-cn" style="color:#475569;">在个体表现出期望的行为之后给予奖励以鼓励并强化该行为的方式。（第 1013 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card kt-folded-card" style="display:none;" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">Reye’s syndrome</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈraɪz ˌsɪndroʊm/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">瑞氏综合征（Reye综合征）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">A rare but potentially fatal disease that causes inflammation of the brain, which can occur during the recovery stage of flu or chicken pox. It has been seen in children who take Aspirin. p. 1010</div>
+            <div class="etc-def-cn" style="color:#475569;">一种罕见但可能致命的导致脑部急性炎症的严重疾病，通常发生在流感或水痘的康复期。该病已在服用阿司匹林（Aspirin/乙酰水杨酸）的儿童中被证实发生，因此儿童发热或病毒感染严禁使用阿司匹林。（第 1010 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card kt-folded-card" style="display:none;" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">strep throat</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/strɛp θroʊt/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">链球菌性喉炎（链球菌咽喉炎）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">A throat that is infected with streptococci. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">因受到链球菌（streptococci）感染而引发的咽喉部位急性感染与化脓性炎症。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card kt-folded-card" style="display:none;" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">streptococci</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˌstrɛptəˈkɒkaɪ/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">链球菌（单数形式为 streptococcus）</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">(singular, streptococcus) A type of bacteria that cause strep throat and other medical conditions. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">（单数形式为 streptococcus）一种导致链球菌咽喉炎及其他多种临床感染性疾病的细菌。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        <div class="editorial-term-card kt-folded-card" style="display:none;" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+          <div class="etc-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+            <div>
+              <strong class="etc-word" style="color:#1e3a8a; font-size:15px;">upper respiratory infections (URIs)</strong>
+              <span class="etc-ipa" style="display:block; font-size:11px; color:#64748b; font-family:monospace;">/ˈʌpər rɪˈspɪrətɔːri ɪnˈfɛkʃənz/</span>
+            </div>
+            <span class="etc-cn-tag" style="background:#eff6ff; color:#1d4ed8; font-weight:600; font-size:12.5px; padding:2px 8px; border-radius:4px;">上呼吸道感染 (URIs / 普通感冒)</span>
+          </div>
+          <div class="etc-body" style="font-size:12.5px; line-height:1.5;">
+            <div class="etc-def-en" style="color:#1e293b; margin-bottom:4px;">The medical term for colds and other viral illnesses that affect the throat, nose, and sinuses. p. 1014</div>
+            <div class="etc-def-cn" style="color:#475569;">累及咽喉、鼻腔和鼻窦的普通感冒及其他病毒性疾病的正式医学术语。（第 1014 页）</div>
+          </div>
+        </div>
+        
+        </div>
+        <div class="kt-expand-bar" id="kt-expand-bar-cards-ch42" style="margin-top:14px; text-align:center;">
+          <button class="kt-expand-btn" onclick="toggleGlossaryFold('ch42', 'cards')" style="padding:6px 18px; font-size:12.5px; font-weight:600; color:#2563eb; background:#eff6ff; border:1px solid #bfdbfe; border-radius:6px; cursor:pointer;">
+            展开全部 13 张精研术语卡片 ▼
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="page-anchor-marker" id="page-1007">
+      <span class="marker-pill">p. 1007</span>
+      <span class="marker-sec">Family Responsibilities & Communication Guidelines (Box 42.1)</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:16px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Your responsibilities will vary in each family situation. However, the following are usually included:</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:14px;">你的具体工作职责会因每个家庭的实际情况而有所不同。然而，通常都会包含以下核心职责范围：</p>
+      
+      <ul class="editorial-list" style="list-style:none; padding-left:0; margin-bottom:20px;">
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;"><strong>Developing positive relationships with all family members.</strong> A positive relationship is one that is friendly, respectful, and trusting.</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;"><strong>与所有家庭成员建立积极正向的专业关系。</strong> 积极的关系表现为友善、尊重和充满信任。</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;"><strong>Maintaining the existing rules of behaviour.</strong></div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;"><strong>维护并巩固该家庭现有的行为规则与纪律规范。</strong></div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;"><strong>Maintaining daily routines, as much as possible.</strong></div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;"><strong>尽可能维持家庭既有的日常生活作息与常规惯例。</strong></div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;"><strong>Being alert to situations that may create stress or cause harm to the family.</strong> Report these situations to your supervisor (see the Think About Safety: Family Situations That Must Be Reported box on page 1011).</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;"><strong>对可能给家庭增加压力或造成伤害的异常环境状况保持高度警惕。</strong> 发现任何此类隐患必须立即向你的主管汇报（参见第 1011 页《安全警示：必须立即汇报的家庭高危异常情况》专栏）。</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-guidelines">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:24px; margin-bottom:4px;">GENERAL GUIDELINES FOR CARING FOR CHILDREN IN THE HOME</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">家庭中照护儿童的通用指导原则</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">As a support worker, you are responsible for helping the child to eat well; preventing injuries, falls, burns, and accidental poisoning; and preventing infections. Caring for children in the home requires that you communicate effectively with both the child and their family. Communication with the child should be appropriate for the child’s age and developmental level.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">作为一名支持工作者，你有责任帮助儿童吃好、吃出健康；全力预防各类意外伤害、跌倒、烫伤以及意外中毒；并严格预防感染的发生。在家庭环境中照护儿童，要求你必须能够与儿童及其家属进行行之有效的沟通。与儿童的沟通必须与该儿童的生理年龄和认知发育水平完全相匹配。</p>
+    </div>
+
+    <!-- BOX 42.1 -->
+    <aside class="editorial-box-container box-theme-teal" style="margin:24px 0; background:#f0fdfa; border:1px solid #99f6e4; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:14px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#0f766e; letter-spacing:0.06em; text-transform:uppercase;">BOX 42.1 · PROVIDING COMPASSIONATE CARE</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#115e59;">Working With Children</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#042f2e;">提供仁爱同理照护：与儿童沟通合作的临床实践指南</div>
+      </div>
+      <div class="box-body-content" style="font-size:14px; line-height:1.7; color:#134e4a;">
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Use active listening skills.</strong> Pay close attention to what the child is saying, how they are behaving, and their nonverbal cues. Children often communicate their distress, fear, or pain through actions rather than words.<br>
+            <span style="color:#042f2e;"><strong>运用积极倾听技巧。</strong> 密切注意儿童所说的话、行为举止以及非语言线索。儿童往往通过肢体动作而非语言来传达痛苦、恐惧或身体不适。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Get down to the child’s eye level.</strong> Kneel, squat, or sit on a low chair so that you do not tower over the child. Eye-to-eye contact establishes trust and makes you appear far less intimidating.<br>
+            <span style="color:#042f2e;"><strong>将身体放低至与儿童视线平齐的高度。</strong> 跪下、蹲下或坐在矮矮的椅子上，切忌高高耸立在儿童上方。视线平视能迅速建立信任感，消除压迫感与威慑力。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Use age-appropriate language.</strong> Use simple, clear, and reassuring words that the child can easily comprehend. Avoid medical jargon or complex multi-step instructions.<br>
+            <span style="color:#042f2e;"><strong>使用适合儿童年龄的浅显语言。</strong> 使用儿童能够轻松理解的简单、清晰、具有安抚性的词汇。避免使用复杂的医学行话或冗长繁琐的多步骤指令。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Give honest answers to questions.</strong> Never lie to a child. If a procedure or task might hurt or feel cold, tell the child calmly beforehand so that trust is not broken.<br>
+            <span style="color:#042f2e;"><strong>诚实如实地回答儿童的问题。</strong> 绝不要对儿童撒谎欺骗。如果某项操作可能引起疼痛或感觉冰凉，要提前平静地告诉孩子，以免破坏珍贵的信任纽带。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Do not take sides in sibling disputes.</strong> Encourage children to solve minor disagreements peacefully or redirect their attention to other cooperative activities.<br>
+            <span style="color:#042f2e;"><strong>切勿在兄弟姐妹争吵中偏袒任何一方。</strong> 鼓励孩子们和平解决小分歧，或温和地将他们的注意力转移到其他富有建设性的合作活动中。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Provide choices whenever possible.</strong> Allowing the child to choose between two healthy snacks or two shirts gives them a sense of control and independence.<br>
+            <span style="color:#042f2e;"><strong>在可行的情况下主动提供选择权。</strong> 允许儿童在两种健康点心或两件衣服之间做出自主选择，有助于培养他们的掌控感和独立自主意识。</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1008">
+      <span class="marker-pill">p. 1008</span>
+      <span class="marker-sec">Challenges Children Face & Nutrition and Mealtimes</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Before you start working with children, you should understand the environment they live in. In some cases, the child’s family situation may create a stressful working environment for you.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">在开始与儿童一起工作之前，你应该深入了解他们所生活的现实环境。在某些情况下，案主儿童所处的家庭境遇可能会为你带来极具挑战性和压力重重的工作环境。</p>
+      
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Here are a few of the many challenges that children and teens face in Canadian society today:</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:14px;">以下是当今年轻一代（儿童与青少年）在加拿大社会中面临的诸多现实挑战中的几个典型方面：</p>
+
+      <ul class="editorial-list" style="list-style:none; padding-left:0; margin-bottom:20px;">
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Increasing pressure to succeed academically and socially.</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">在学业成绩和社交圈层中取得成功的现实压力与日俱增。</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Bullying, including cyberbullying through social media and online platforms.</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">霸凌现象，尤其是通过社交媒体与网络平台蔓延的网络霸凌（cyberbullying）。</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Family breakdowns, parental divorce, substance abuse in the home, or living in poverty.</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">家庭破裂、父母离异、家庭内部成员药物滥用，或长期生活在贫困线以下。</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:10px; padding-left:20px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Body image concerns leading to disordered eating habits and low self-esteem.</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">对身材体型的畸形容貌焦虑，诱发紊乱的进食习惯与严重的自卑心理。</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-nutrition">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:24px; margin-bottom:4px;">NUTRITION AND MEALTIMES</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">营养与进餐支持</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Adequate nutrition is critical for the proper physical and cognitive growth and development of children. Helping children develop healthy eating habits early in life sets a foundation for lifelong health and wellness. Support workers should follow <em>Canada’s Food Guide</em> and the client’s established care plan when preparing or serving meals and snacks (see Chapter 25).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">充足均衡的营养对儿童的身体发育与大脑认知成长至关重要。在儿童幼年时期帮助其养成良好的健康饮食习惯，将为一生的身心健康奠定坚实基石。在准备或提供正餐与点心时，支持工作者应严格遵循《加拿大食品指南》（<em>Canada’s Food Guide</em>）和案主既定的照护计划（参见第 25 章）。</p>
+      
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Childhood Obesity.</strong> Obesity—excess fat accumulation that puts a person’s health at risk—is a growing public health problem among Canadian children and adolescents. Childhood obesity increases the risk of serious physical conditions such as type 2 diabetes, high blood pressure, high cholesterol, asthma, sleep apnea, joint problems, and liver disease. In addition, overweight and obese children frequently suffer from low self-esteem, depression, and bullying from peers.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>儿童期肥胖症。</strong> 肥胖症（Obesity）——即危及个体健康的过度脂肪积聚——正成为加拿大儿童与青少年群体中日益严峻的公共卫生危机。儿童肥胖症显著增加了罹患多种严重躯体疾病的风险，例如 2 型糖尿病、高血压、高胆固醇血症、哮喘、睡眠呼吸暂停综合征、关节受损以及脂肪肝等。此外，超重与肥胖儿童还极易遭受自尊心受创、抑郁焦虑以及同龄人的冷嘲热讽与霸凌。</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1009">
+      <span class="marker-pill">p. 1009</span>
+      <span class="marker-sec">Adolescent Self-Esteem & Supporting Jane Smith Case Study</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Poor body image increases the risk for eating disorders among youth. By Grade 9, only 26% of Canadian girls report having high self-esteem, compared with 40% of boys. Support workers must be sensitive to cultural, language, and dietary diversity—about 13% of Canadians speak a language other than English or French at home.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">不良的体象认同显著增加了青少年患摄食障碍的风险。调查显示，到了 9 年级，只有 26% 的加拿大女学生报告具有较高的自尊心，而男学生这一比例为 40%。此外，支持工作者必须对文化、语言和饮食多样性保持敏感——约有 13% 的加拿大人在家中使用英语或法语以外的语言交流。</p>
+    </div>
+
+    <!-- Case Study Box: Jane Smith Part 1 -->
+    <aside class="editorial-box-container box-theme-case" style="margin:24px 0; background:#f0f7ff; border:1px solid #bfdbfe; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:14px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#1e40af; letter-spacing:0.06em; text-transform:uppercase;">CASE STUDY · FAMILIES AS CLIENTS</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#1e3a8a;">Supporting Jane Smith: Families as Clients</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#172554;">案例精析：支持简·史密斯——当整个家庭都是案主时（第一部分）</div>
+      </div>
+      <div class="box-body-content" style="font-size:14px; line-height:1.75; color:#1e293b;">
+        <p class="para-en" style="margin-bottom:4px;">Jane Smith is a 32-year-old mother of four young children: an 8-year-old daughter, 6-year-old twin boys, and a 4-month-old infant. Jane’s husband works 12-hour shifts during the week but takes care of Jane and the children on weekends. During the week, Jane’s mother (who is herself not in good health) takes the three older children to and from day care and assists with the family’s shopping and laundry.</p>
+        <p class="para-cn" style="color:#475569; margin-bottom:14px;">简·史密斯（Jane Smith）是一位 32 岁的母亲，育有四个年幼的孩子：一个 8 岁的女儿、一对 6 岁的双胞胎儿子，以及一名刚刚 4 个月大的婴儿。简的丈夫在工作日每天需要倒班工作 12 个小时，只能在周末全力照顾简和孩子们。而在工作日期间，简的母亲（她自身的健康状况也不甚理想）负责接送三个年长孩子往返日托机构，并协助处理采购与洗衣等繁重家务。</p>
+        
+        <p class="para-en" style="margin-bottom:4px;">Jane was diagnosed with ovarian cancer during her pregnancy but waited until after her baby was born to start cancer treatments. Last month, Jane tripped over one of her children’s toys, fell, and broke her ankle. While her ankle was being X-rayed, it was discovered that Jane’s cancer had spread (metastasized) to her bones. Further tests revealed that it had also spread to her liver and brain. The doctors gave Jane only months to live.</p>
+        <p class="para-cn" style="color:#475569; margin-bottom:14px;">简在怀孕期间被确诊患有卵巢癌，但为了保全腹中胎儿，她坚持等到婴儿出生后才开始接受抗癌治疗。上个月，简不慎被地上散落的儿童玩具绊倒，导致脚踝严重骨折。在医院拍摄脚踝 X 光片时，医生震惊地发现简体内的癌细胞已经大面积扩散（骨转移）。随后的全面检查进一步证实，癌症已经转移至肝脏与大脑。医生告知，简的生命只剩下短短几个月。</p>
+
+        <p class="para-en" style="margin-bottom:4px;">Jane has a support worker in her home for 4 hours a day to assist with morning care for her and her baby. Jane’s baby is a happy, active infant who is beginning to crawl. The support worker’s responsibilities also include caring for the baby while Jane sleeps (she takes frequent naps throughout the day), light housekeeping (which includes ensuring that toys are not left on the floor), and preparing the family’s dinner.</p>
+        <p class="para-cn" style="color:#475569;">支持工作者每天前往简的家中服务 4 个小时，协助简和婴儿完成清晨基础照护。婴儿健康活泼，刚刚开始学习爬行。支持工作者的具体职责还包括：在简白天频繁小睡休息期间细心看护婴儿、完成轻度家务整理（重点包括确保玩具绝不散落遗留在地板上以防再次绊倒致残），以及为全家人准备健康晚餐。</p>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1010">
+      <span class="marker-pill">p. 1010</span>
+      <span class="marker-sec">Case Continued, Reye's Syndrome & Physical Activity</span>
+    </div>
+
+    <!-- Case Study Continued -->
+    <aside class="editorial-box-container box-theme-case" style="margin:20px 0; background:#f0f7ff; border:1px solid #bfdbfe; border-radius:10px; padding:18px 22px;">
+      <div class="box-banner-header" style="margin-bottom:10px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#1e40af; letter-spacing:0.06em; text-transform:uppercase;">CASE STUDY · CONTINUED</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:16px; font-weight:750; color:#1e3a8a;">Supporting Jane Smith: Families as Clients (Cont’d)</h4>
+        <div class="box-title-cn" style="font-size:14px; font-weight:600; color:#172554;">案例精析：支持简·史密斯——当整个家庭都是案主时（第二部分）</div>
+      </div>
+      <div class="box-body-content" style="font-size:14px; line-height:1.75; color:#1e293b;">
+        <p class="para-en" style="margin-bottom:4px;">Because Jane’s husband’s insurance covers the cost of a support worker for only up to 20 hours per week, Jane is worried about what will happen to her family when her condition declines further. Jane has often told the support worker just how grateful she is to have this assistance. As the support worker, how would you respond to Jane’s comment?</p>
+        <p class="para-cn" style="color:#475569;">由于简丈夫的商业健康保险每周最多仅能报销 20 个小时的支持工作者上门服务费用，简对于未来自身病情不可逆恶化时家庭将何去何从感到极度的焦虑与无助。简经常动情地向支持工作者表达她对这份照护援助由衷的感激。作为一名专业的支持工作者，你应当如何以合乎专业界限且充满共情的方式回应简的心声？</p>
+      </div>
+    </aside>
+
+    <div class="editorial-heading-sub">
+      <h3 class="heading-en" style="font-size:18px; font-weight:700; color:#0f172a; margin-top:20px; margin-bottom:4px;">Mealtime Challenges and Serious Medical Warnings</h3>
+      <div class="heading-cn" style="font-size:15px; font-weight:600; color:#475569; margin-bottom:12px;">进餐应对挑战与重大临床用药警示</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">In many households, mealtimes can become an exhausting battleground between parents and children. Children may refuse food to exert autonomy, or they may struggle with eating disorders (see Chapter 37), such as anorexia nervosa (eating too little) or bulimia nervosa (bingeing and purging).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">在许多家庭中，吃饭时间很容易演变成父母与子女之间筋疲力尽的争吵战场。孩子可能会通过拒绝进食来宣示自主权，或者可能正经历着严重的摄食障碍（参见第 37 章），例如神经性厌食症（极度节食拒绝进食）或神经性贪食症（暴食后催吐）。</p>
+    </div>
+
+    <!-- Reye's Syndrome Red Flag Box -->
+    <aside class="editorial-box-container box-theme-amber" style="margin:24px 0; background:#fefce8; border:1px solid #fef08a; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#854d0e; letter-spacing:0.06em; text-transform:uppercase;">CRITICAL MEDICATION SAFETY WARNING · 绝对用药禁忌</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#713f12;">Reye’s Syndrome: Aspirin Contraindication in Children</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#422006;">瑞氏综合征：儿童及青少年严禁服用阿司匹林硬性安全红线</div>
+      </div>
+      <div class="box-body-content" style="font-size:14px; line-height:1.7; color:#713f12;">
+        <p class="para-en" style="margin-bottom:4px;"><strong>Reye’s syndrome</strong> is a rare but potentially fatal disease causing severe inflammation and swelling of the brain and liver damage. It occurs primarily during the recovery stage of viral infections such as the flu (influenza) or chickenpox (varicella). Clinical research has linked Reye’s syndrome directly to the administration of <strong>Aspirin (acetylsalicylic acid / ASA)</strong> to infants, children, and teenagers suffering from fever or viral illnesses.</p>
+        <p class="para-cn" style="margin-bottom:10px; color:#422006;"><strong>瑞氏综合征（Reye’s syndrome）</strong> 是一种罕见但可能迅速致死的严重急性脑水肿与肝脏脂肪变性疾病。该病主要发生在流感（influenza）或水痘（varicella）等急性病毒感染的恢复期。大量临床研究已明确证实，瑞氏综合征的发生与给患有发热或病毒感染的婴幼儿、儿童及青少年服用<strong>阿司匹林（Aspirin，即乙酰水杨酸 ASA）</strong>存在极强的直接关联。</p>
+        <div style="background:#fef08a; border-left:4px solid #ca8a04; padding:10px 14px; border-radius:4px; font-weight:600;">
+          SUPPORT WORKER SAFETY RULE: NEVER administer Aspirin, medications containing ASA, or bismuth subsalicylate to infants, children, or adolescents with fever or viral symptoms. If a family asks you to give a child medicine, immediately report to your supervisor. Acetaminophen or ibuprofen may be prescribed by the physician instead.<br>
+          <span style="font-weight:400;">支持工作者安全铁律：在任何情况下，绝对严禁向患有发烧或病毒感染症状的婴幼儿、儿童或青少年给予阿司匹林、任何含有乙酰水杨酸成分的复方药物或次水杨酸铋！若家属要求给药，必须立即汇报主管并核查医嘱；儿科退烧镇痛应遵医嘱使用对乙酰氨基酚（扑热息痛）或布洛芬。</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="editorial-heading-major" id="sec-ch42-rest">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:24px; margin-bottom:4px;">REST, SLEEP, PLAY, AND EXERCISE</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">休息、睡眠、游戏与身体活动</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Adequate sleep and regular physical activity are vital for healthy growth, emotional regulation, and cognitive development. Sleep requirements vary by age: infants require 12 to 16 hours, toddlers 11 to 14 hours, preschoolers 10 to 13 hours, school-age children 9 to 11 hours, and teens 8 to 10 hours of sleep per 24-hour period. Support workers should maintain calming bedtime routines, avoid screens before bed, and ensure active play following the <em>Canadian 24-Hour Movement Guidelines</em> (at least 60 minutes of moderate-to-vigorous physical activity daily for children aged 5–17 years).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">充足的高质量睡眠与有规律的身体活动，是促进儿童健康成长、情绪调节以及大脑发育的核心支柱。不同年龄段儿童的睡眠需求各异：婴儿每天需要 12 至 16 小时，蹒跚学步幼儿需要 11 至 14 小时，学龄前儿童需要 10 至 13 小时，学龄儿童需要 9 至 11 小时，而青少年每 24 小时周期需要 8 至 10 小时睡眠。支持工作者应协助维护平静规律的睡前作息惯例，避免睡前接触电子屏幕，并依据《加拿大 24 小时运动指南》保障每日充足的游戏与运动（5 至 17 岁青少年儿童每天至少进行 60 分钟中高强度的身体活动）。</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1011">
+      <span class="marker-pill">p. 1011</span>
+      <span class="marker-sec">Discipline Principles & Safety Reporting Red Flags</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-discipline">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">DISCIPLINE</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">行为纪律与行为引导准则</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">When supervising or caring for children, you need to reinforce the rules of acceptable behaviour in the home. The system of rules that governs how we act is called <strong>discipline</strong>. Discipline is a positive way of teaching responsible behaviour. It sets limits and provides guidelines so that children can learn how to behave in an appropriate way. A support worker should never use physical force, such as spanking or pinching, at any time.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">在监督或照看儿童时，你需要巩固并执行该家庭中公认的可接受行为准则。用于规范我们日常言行举止的规则体系被称为<strong>纪律（discipline）</strong>。纪律是一种教育儿童养成负责任行为的积极途径。它设定了明确的界限并提供了行动指南，从而使儿童能够逐步学会如何以恰当得体的方式处事。支持工作者在任何时候、任何情况下都绝对不得使用身体暴力或体罚，例如打屁股、掌掴或拧掐捏掐。</p>
+      
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Discipline should be consistent.</strong> Each time a rule is broken, the consequence should be the same. For example, Noah (age 4 years) forgets to remove his boots and gets the floor dirty. He must get a cloth and help clean the floor, and he is not allowed to play until he does so. Noah knows the rules and what will happen if a rule is broken. The child feels secure when they know the caregiver’s expectations.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>纪律必须保持高度的一致性（consistent）。</strong> 每次只要违反规则，所承担的后果都应当完全相同。例如，4 岁的诺亚（Noah）进屋时忘记脱靴子把地板弄脏了。他必须拿抹布帮忙把地板擦干净，而且在把地板擦干净之前不允许去玩耍。诺亚清楚家庭的规矩，也知道一旦违背规矩会有什么后果。当儿童能够清晰预期照护者的要求与后果时，他们内心会获得极大的安全感与确定性。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Recognize the child’s efforts when they try to follow the rules of the household. Praising these efforts encourages acceptable behaviour. Being positive with children is always more effective than being negative. For example, if Noah gets the floor dirty, it is better to say, “Let’s clean up the mess” than “Shame on you for making that big mess.” After he cleans up the mess, you could say, “Thank you for doing such a fine job.” This show of appreciation would help to make Noah feel good about his accomplishment. Praise and acknowledgement also promote a child’s dignity and show respect for the child.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">当儿童努力尝试遵守家庭规则时，要及时肯定并认可他们的努力。赞扬这些努力能够强力鼓励正面积极的行为。对儿童采取积极的态度，永远比采取消极批评有效得多。例如，如果诺亚把地板弄脏了，说一句“我们一起把这里收拾干净吧”要比当面羞辱训斥“你搞得这么脏，真为你害臊”好得多。在他收拾干净之后，你可以真诚地说：“谢谢你把地板擦得这么干净，做得太棒了。”这种及时的赞赏会让诺亚对自己达成的成果感到自豪。由衷的表扬与认可不仅能维护儿童的尊严，更体现了对儿童人格的尊重。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Your role in disciplining the child is to:</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:12px;">你在协助儿童遵守纪律方面的专业职责是：</p>
+      
+      <ul class="editorial-list" style="list-style:none; padding-left:0; margin-bottom:18px;">
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Know the rules of acceptable behaviour in each family situation</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">准确了解并掌握每个案主家庭中关于可接受行为的既定规矩</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Ask an appropriate family member to clarify the rules if you are unsure</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">若对某些具体规则心存疑问，请向恰当的家庭监护成员寻求明确解释</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Reinforce existing rules</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">尊重并坚定巩固该家庭既有的既定规矩</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Be consistent when using discipline</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">在执行行为引导与纪律时始终保持一致的原则与要求</div>
+        </li>
+        <li class="editorial-list-item" style="margin-bottom:8px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">•</span>
+          <div class="item-en" style="font-size:14.5px; color:#1e293b; line-height:1.65;">Praise the child’s efforts at following the rules</div>
+          <div class="item-cn" style="font-size:13.5px; color:#475569; line-height:1.7;">对儿童为遵守规则所做出的每一次努力给予及时的认可与真诚赞扬</div>
+        </li>
+      </ul>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Some parents may have very few rules of discipline, or the existing rules may seem too harsh or too loose. In such a case, you should contact your supervisor. New rules may need to be set, but you should not set discipline rules without the guidance of your supervisor.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">有些家庭的父母可能极少设立管教规则，或者现存的规则显得过分严苛或极端松散放任。在此类复杂情况下，你应当立即联系你的主管。虽然可能需要重新确立新的行为准则，但支持工作者绝对不得在没有主管明确指导的情况下私自擅自建立纪律规则。</p>
+    </div>
+
+    <!-- Safety Box: Family Situations That Must Be Reported -->
+    <aside class="editorial-box-container box-theme-amber" style="margin:24px 0; background:#fefce8; border:1px solid #fef08a; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#854d0e; letter-spacing:0.06em; text-transform:uppercase;">THINK ABOUT SAFETY · 绝对汇报红线</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#713f12;">Family Situations That Must Be Reported</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#422006;">安全警示：必须立即向主管汇报的案主家庭高危异常情况</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#713f12;">
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Violent behaviour of a family member (see Chapter 12)<br>
+            <span style="color:#422006;">家庭成员出现任何暴力或虐待行为（参见第 12 章）</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Frequent visits by “strangers,” who seem to make the members of the household fearful or uneasy<br>
+            <span style="color:#422006;">“陌生人”频繁造访，且似乎令家中成员感到极度恐惧或焦虑不安</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Suspected abuse of illegal drugs—for example, the presence of instruments or equipment for drug use<br>
+            <span style="color:#422006;">疑似滥用非法毒品/违禁药物——例如在室内发现用于吸毒的器具、针管或装置</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Presence of frequent bruises and cuts on a child or other children in the family<br>
+            <span style="color:#422006;">儿童或家中其他孩子身上频繁出现不明原因的淤青、伤痕、割伤或烫伤（虐童高危迹象）</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            If the school-aged child is not enrolled in school and is not being home-schooled<br>
+            <span style="color:#422006;">达到学龄的儿童未在学校注册入学，且家中并未提供经合法批准的居家教育（home-schooled）</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Excessive drinking, as evidenced by the presence of liquor bottles hidden throughout the house or the child’s parent or caregiver being inebriated<br>
+            <span style="color:#422006;">过量酗酒，表现为屋中各处藏有酒瓶，或儿童的父母/照护者处于醉酒酩酊状态</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Electricity, heat, or water turned off<br>
+            <span style="color:#422006;">供电、供暖或自来水被切断停供（危及生存的恶劣居住环境）</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Severe shortage of food or clothing—for example, no food in the cupboards or refrigerator, or the child being dressed inappropriately for the weather (such as no coat in winter)<br>
+            <span style="color:#422006;">食物或衣物极度匮乏——例如橱柜或冰箱内空空如也毫无食物，或者儿童穿着与严寒天气严重不符（如冬天没有冬衣外套）</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Illness of a child that has been unreported to you<br>
+            <span style="color:#422006;">儿童患有急性严重疾病但家属此前从未向你或医疗机构披露汇报</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Sudden departure of caregiver<br>
+            <span style="color:#422006;">主要照护者突然不辞而别或将儿童遗弃</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#ca8a04; font-weight:700;">▪</span>
+            Unexpected return of a family member<br>
+            <span style="color:#422006;">先前被禁足、离家或有暴力前科的家庭成员出人意料地突然返回家中</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1012">
+      <span class="marker-pill">p. 1012</span>
+      <span class="marker-sec">Punishment Prohibition & Managing Challenging Behaviours (Box 42.2)</span>
+    </div>
+
+    <div class="editorial-heading-sub">
+      <h3 class="heading-en" style="font-size:18px; font-weight:700; color:#0f172a; margin-top:16px; margin-bottom:4px;">Punishment</h3>
+      <div class="heading-cn" style="font-size:15px; font-weight:600; color:#475569; margin-bottom:12px;">绝对禁止实施惩罚的执业准则</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Punishment</strong> is a harsh response that occurs when a discipline rule is broken. Punishing a child for failing to follow the rules of the household is not your responsibility. If a family member asks you to do so, explain that it is against your agency’s policy to carry out punishment. Ask the family member to contact your supervisor if they have further questions. Record this information, and tell your supervisor about the situation.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>惩罚（Punishment）</strong> 是当纪律规则被破坏时所采取的一种粗暴严厉的负面反应。因为儿童未能遵守家庭规则而对其实施惩罚，<strong>绝对不是支持工作者的职责与权限</strong>。如果有家庭成员要求你对孩子实施惩罚，请向其礼貌而明确地解释：执行任何惩罚均严重违反你所属机构的执业政策与道德规约。请该家庭成员如果有进一步的疑问直接联系你的主管。请务必将此次沟通如实记录在工作日志中，并将具体情况完整汇报给你的主管。</p>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-challenging">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:24px; margin-bottom:4px;">SUPPORTING THE CHILD WHO DEMONSTRATES CHALLENGING BEHAVIOURS</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">支持表现出具有挑战性行为的儿童</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Children raised in troubled environments may become troubled themselves. Children who display challenging behaviours may be verbally aggressive, resistant to rules and regulations, or have difficulty forming bonds with others.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">在充满困扰和动荡的环境中抚养长大的儿童，其自身往往也会受到深深的困扰。表现出具有挑战性行为的儿童，可能具有言语攻击性、对家庭规则和日常规矩表现出强烈的抵触反抗，或者在与他人建立信任纽带方面存在显著困难。</p>
+      
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Why Do Some Children “Act Out”?</strong> Children of all ages sometimes express their feelings of anger, frustration, fear, guilt, or shame through their behaviour because it is the only way they know how to convey what they feel. Some children display emotional or behavioural outbursts, whereas others will demonstrate that they feel overwhelmed, tired, or physically unwell. Children may behave this way if there are too many changes in their lives; if they have recently experienced painful losses; or if they have problems at school, such as difficulty learning, too much peer pressure, or experience bullying.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>为什么有些孩子会出现“捣乱/发泄情绪”（Act Out）的行为？</strong> 各个年龄段的儿童有时都会通过外在的不良行为来宣泄愤怒、沮丧、恐惧、内疚或羞耻感，因为这是他们懂得传达内心感受的唯一方式。有些儿童会表现出剧烈的情绪或行为爆发，而另一些儿童则会表现出不知所措、极度疲倦或身体不适。当儿童的生活中发生过多重大变故、最近经历了痛苦的亲人离丧，或者在学校遇到了困难（如学习障碍、过大的同伴压力或遭遇霸凌）时，他们往往就会表现出此类具有挑战性的异常行为。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Some children may have suffered or witnessed physical abuse, emotional abuse, or sexual abuse, or they may be using drugs or alcohol. In cases in which children have been hospitalized for much of their lives, they may have difficulty accepting limits, especially if their parents have tended to overindulge them, as parents are tempted to do if they think the child may die or if they feel a need to reduce their own feelings of guilt regarding the child’s illness.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">有些儿童可能曾遭受或目睹过身体虐待、情感虐待或性虐待，或者他们可能正在偷偷接触毒品或酗酒。在儿童大部分生命都在医院中度过的情况下，他们往往很难接受行为约束与界限，特别是如果他们的父母倾向于过度溺爱纵容他们——当父母认为孩子可能命不久矣，或者父母感到有必要借溺爱来减轻自己对孩子患病的内疚自责时，往往极易出现这种过度纵容的情形。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">It is the support worker’s responsibility to provide care in a nonjudgemental and supportive manner no matter the reason for a child “acting out.” Some ways to successfully manage a child who displays challenging behaviours are discussed in BOX 42.2.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">无论儿童“发泄捣乱”的根本原因是什么，支持工作者的专业职责都是以非评判性（nonjudgemental）且充满支持关爱的方式提供照护。专栏 42.2 详细讨论了成功应对表现出具有挑战性行为儿童的实用临床策略。</p>
+    </div>
+
+    <!-- BOX 42.2 -->
+    <aside class="editorial-box-container box-theme-sage" style="margin:24px 0; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:14px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#166534; letter-spacing:0.06em; text-transform:uppercase;">BOX 42.2 · FOCUS ON CHILDREN</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#14532d;">Managing Challenging Behaviours</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#052e16;">聚焦儿童：应对具有挑战性行为的临床策略指南</div>
+      </div>
+      <div class="box-body-content" style="font-size:14px; line-height:1.7; color:#166534;">
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Stay calm and in control of your emotions.</strong> Never shout, scream, or argue with the child. Your calm presence helps de-escalate tension and models emotional regulation.<br>
+            <span style="color:#14532d;"><strong>始终保持冷静并掌控自己的情绪。</strong> 绝不要对儿童吼叫、尖叫或与其发生争执。你的沉着镇定有助于平息紧张局势，并为儿童树立情绪自我调节的良好榜样。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Set clear, realistic limits.</strong> Make sure the child understands what is expected. Keep household rules few, simple, and enforceable.<br>
+            <span style="color:#14532d;"><strong>设立明确且符合实际的界限。</strong> 确保儿童完全明白照护者的期望。家庭规矩应当精炼、浅显且切实行得通。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Use positive reinforcement.</strong> Catch the child being good! Praise specific positive behaviours (e.g., “Thank you for sharing your crayons so nicely”).<br>
+            <span style="color:#14532d;"><strong>善用正强化技巧。</strong> 善于发现儿童表现良好的时刻！对具体的良好行为给予真诚的表扬（例如：“谢谢你这么友好地与弟弟分享蜡笔”）。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Use redirection and distraction.</strong> Gently guide the child’s attention away from an escalating confrontation toward a constructive, calming activity.<br>
+            <span style="color:#14532d;"><strong>运用转移注意力与重塑活动方向。</strong> 温和地将儿童的注意力从即将激化的对抗中转移开，引导其参与富有建设性且能平复心情的活动。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Pick your battles.</strong> Avoid unnecessary power struggles over trivial issues. Focus your energy on safety and essential health routines.<br>
+            <span style="color:#14532d;"><strong>明智选择管教重点（有所为有所不为）。</strong> 避免在无关紧要的琐事上与孩子陷入不必要的权力拉锯战。将核心精力聚焦于人身安全与关键健康常规上。</span>
+          </li>
+          <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#22c55e; font-weight:700;">▪</span>
+            <strong>Never use physical force or humiliation.</strong> Physical punishment or shaming damages the child’s dignity, fosters aggression, and violates professional standards.<br>
+            <span style="color:#14532d;"><strong>绝对严禁使用肢体暴力或当众羞辱。</strong> 体罚或当面羞辱会严重践踏儿童的尊严，催生反叛与攻击性，且属于严重的职业违规行为。</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="editorial-heading-major" id="sec-ch42-infections">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:24px; margin-bottom:4px;">PREVENTING INFECTIONS</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">预防儿童感染与控制传播</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">When children start child care or school, it may seem as if they get sick all the time. This pattern is normal, as all children’s immune systems are developing, and their resistance to infection develops only after exposure to a multitude of germs (see Chapter 17). Young children in large groups are breeding grounds for organisms that cause illnesses. Little hands rub drippy noses and then transfer infectious agents to other children or to shared toys.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">当孩子刚开始进入日托机构或学校时，看起来他们好像总是在接连不断地生病。这种现象其实是完全正常的，因为所有儿童的免疫系统都在发育过程中，他们对感染的抵抗力只有在接触了形形色色的病菌后才会逐步建立起来（参见第 17 章）。聚集在大型群体中的幼儿往往是病原微生物滋生与传播的温床。稚嫩的小手揉擦流涕的鼻子，随后又将传染源沾染到其他孩子身上或共享的玩具表面。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">The single most important thing anyone can do to prevent illness is to wash their hands thoroughly and frequently. The US Centers for Disease Control and Prevention has recommended that people wash their hands with soap and warm water for 20 seconds—about as long as it takes to sing the “Happy Birthday” song twice. Alcohol-based hand sanitizers come in disposable wipes or in gel form, require no water, and help keep hands clean (see Chapter 19).</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">任何人为了预防疾病所能采取的最重要、最有效的措施，就是<strong>彻底且频繁地洗手</strong>。权威疾控机构建议人们使用肥皂和温水搓洗双手至少 20 秒——这大约相当于把《生日快乐》歌完整唱两遍的时间。含有酒精成分的手消毒剂（含醇免洗洗手液）有一次性湿巾或凝胶形式，无需用水，能有效协助维持手部清洁（参见第 19 章）。</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1013">
+      <span class="marker-pill">p. 1013</span>
+      <span class="marker-sec">Sick Child Stay-Home Guidelines, Reinforcement & Time-Out</span>
+    </div>
+
+    <div class="editorial-heading-sub">
+      <h3 class="heading-en" style="font-size:18px; font-weight:700; color:#0f172a; margin-top:16px; margin-bottom:4px;">How Long Should Sick Children Stay Home?</h3>
+      <div class="heading-cn" style="font-size:15px; font-weight:600; color:#475569; margin-bottom:12px;">患病学童居家隔离时限与返校硬性指标</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Each facility generally has its own rules, but most will not let children attend school or child care if they have a fever of more than 38°C (100.4°F), are vomiting, have diarrhea, have tested positive for COVID-19, or have been in contact with a person with COVID-19. In addition, some facilities require that children with strep throat or bacterial conjunctivitis (pink eye) be on antibiotic therapy for 24 hours before returning to the classroom.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">每个学校或日托机构通常都有各自的规定，但绝大多数机构都会明确禁止在出现以下情况时让儿童到校：体温超过 38°C（100.4°F）、出现呕吐、腹泻、新冠病毒检测呈阳性，或曾与确诊新冠感染者发生密切接触。此外，部分机构还严格要求：患有链球菌性咽喉炎或细菌性结膜炎（红眼病）的儿童，必须在接受规范抗生素治疗满 24 小时之后，方获准返回教室集体生活。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Positive vs. Negative Reinforcement.</strong> When teaching children, positive reinforcement—encouraging a desired behaviour by rewarding it after it is demonstrated (e.g., stickers, praise, extra playtime)—is substantially more effective than negative reinforcement (encouraging behaviour by imposing penalties or taking away privileges when the behaviour is missing). Positive reinforcement builds confidence, fosters mutual respect, and strengthens emotional security.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>正强化与负强化的对比运用。</strong> 在引导儿童行为时，<strong>正强化（Positive reinforcement）</strong>——即在儿童表现出期望的行为后通过给予奖励（例如奖励贴纸、由衷称赞、增加游戏时间）来鼓励并巩固该行为——远比负强化（Negative reinforcement，即在儿童未表现出期望行为时施加剥夺或惩处）有效得多。正强化能够塑造儿童的自信心，促进彼此尊重，并筑牢心理安全感。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Time-Out Guidelines.</strong> A time-out is a brief period of quiet separation used to allow an overwhelmed or misbehaving child to calm down and regain emotional control. General clinical guidelines recommend approximately 1 minute per year of the child’s age (e.g., a 4-year-old child has a 4-minute time-out). The time-out location must be safe, quiet, free of distractions or entertainment (no screens or toys), and within the support worker’s direct line of sight. After the time-out ends, calmly discuss the behaviour, reaffirm your care, and help the child transition back to positive play.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>冷静暂停（Time-Out）的规范操作指南。</strong> 冷静暂停是一种简短的情绪隔离法，旨在让情绪失控或出现不良行为的儿童暂时离开冲突环境，平复躁动并重新恢复情绪自我控制。通用的临床指南推荐：暂停时长大致为<strong>儿童每增长一岁对应 1 分钟</strong>（例如，4 岁的儿童进行 4 分钟的冷静暂停）。设置暂停的地点必须确保绝对安全、安静、没有分散注意力的娱乐元素（绝不能提供电子屏幕或玩具），且必须处于支持工作者直接视线范围内。暂停时间结束后，平静温和地与孩子交流刚才的行为原因，重申对话语和感受的关爱，并协助孩子顺畅回归积极的游戏互动中。</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1014">
+      <span class="marker-pill">p. 1014</span>
+      <span class="marker-sec">Top Five Reasons Children Miss School (Colds, Stomach Flu, Otitis, Pink Eye, Strep)</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-top-five">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">The Top Five Reasons Children Miss School or Child Care</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">学童缺课或脱离日托机构的前五大最常见急性病因</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px 20px; margin-bottom:16px;">
+        <h4 style="margin:0 0 8px; font-size:16px; color:#1e3a8a;">1. Colds (Upper Respiratory Infections / URIs) · 普通感冒（上呼吸道感染）</h4>
+        <p class="para-en" style="font-size:14px; color:#1e293b; line-height:1.65; margin-bottom:4px;">The most common childhood illnesses are upper respiratory infections (URIs), the medical term for viral illnesses affecting the throat, nose, and sinuses. Symptoms include runny or stuffy nose, sneezing, coughing, mild sore throat, and low-grade fever. Colds usually resolve on their own in 7 to 10 days. Treatment involves rest, plenty of fluids, and symptom relief.</p>
+        <p class="para-cn" style="font-size:13.5px; color:#475569; line-height:1.7; margin:0;">儿童期最常见的疾病是上呼吸道感染（URIs），这是累及鼻腔、咽喉及鼻窦的病毒性感染的正式医学术语。临床症状包括流涕、鼻塞、打喷嚏、咳嗽、轻微喉咙痛以及低热。普通感冒通常在 7 至 10 天内自行痊愈。照护方案主要是充分休息、多饮水以及对症舒适缓解。</p>
+      </div>
+
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px 20px; margin-bottom:16px;">
+        <h4 style="margin:0 0 8px; font-size:16px; color:#1e3a8a;">2. Gastroenteritis (“Stomach Flu”) · 急性胃肠炎（俗称“胃肠型感冒”）</h4>
+        <p class="para-en" style="font-size:14px; color:#1e293b; line-height:1.65; margin-bottom:4px;">Gastroenteritis—incorrectly called the “stomach flu”—is an inflammation of the stomach and intestines caused by viruses (such as rotavirus or norovirus) or bacteria. It causes sudden nausea, vomiting, watery diarrhea, and cramping. <strong>CRITICAL CLINICAL DANGER: Dehydration!</strong> Young children can become dangerously dehydrated very quickly through fluid loss. Signs of dehydration include dry mouth, crying without tears, sunken eyes, extreme lethargy, and no wet diaper for over 6 hours. Report immediately!</p>
+        <p class="para-cn" style="font-size:13.5px; color:#475569; line-height:1.7; margin:0;">胃肠炎（常被误称为“肠胃感冒”）是由病毒（如轮状病毒、诺如病毒）或细菌引起的胃黏膜与肠道急性炎症。它会导致突发的恶心、剧烈呕吐、水样腹泻和腹部绞痛。<strong>重大临床生命威胁：严重脱水！</strong> 幼童因体液丢失极易迅速陷入致命的重度脱水状态。脱水关键体征包括：口干舌燥、哭泣时无眼泪、眼眶深陷凹陷、极度嗜睡萎靡，以及超过 6 小时没有湿尿布。发现上述征象必须立即紧急汇报主管！</p>
+      </div>
+
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px 20px; margin-bottom:16px;">
+        <h4 style="margin:0 0 8px; font-size:16px; color:#1e3a8a;">3. Ear Infection (Otitis Media) · 耳部感染（急性中耳炎）</h4>
+        <p class="para-en" style="font-size:14px; color:#1e293b; line-height:1.65; margin-bottom:4px;">Otitis media is an infection of the middle ear space behind the eardrum, caused by viruses or bacteria. Young children are highly susceptible because their <strong>eustachian tubes</strong> (tiny drainage pipes connecting the middle ear to the back of the throat) are shorter, narrower, and more horizontal than in adults, allowing fluids and pathogens to easily become trapped. Symptoms include ear pain, tugging or pulling at the ear, fever, crying when lying flat, and irritability.</p>
+        <p class="para-cn" style="font-size:13.5px; color:#475569; line-height:1.7; margin:0;">中耳炎（Otitis media）是鼓膜后方中耳腔发生的病毒或细菌感染。年幼儿童极易罹患中耳炎，因为他们的<strong>咽鼓管（eustachian tubes</strong>，连接中耳与咽喉后壁的微小引流管道）比成年人更短、更窄且更为水平，极易导致分泌物滞留与病菌积聚。典型症状包括耳部剧烈疼痛、频繁拉扯或揪扯耳朵、发热、平躺时因中耳压力增大而大声哭闹，以及烦躁不安。</p>
+      </div>
+
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px 20px; margin-bottom:16px;">
+        <h4 style="margin:0 0 8px; font-size:16px; color:#1e3a8a;">4. Pink Eye (Conjunctivitis) · 红眼病（急性结膜炎）</h4>
+        <p class="para-en" style="font-size:14px; color:#1e293b; line-height:1.65; margin-bottom:4px;">Conjunctivitis—commonly known as pink eye—is an inflammation of the transparent membrane (conjunctiva) covering the eyeball and lining the inner eyelid. It can be viral, bacterial, or allergic. Symptoms include redness, swelling, burning, itching, and yellowish or greenish discharge that crusts over the eyelashes, sealing the eyelids shut upon waking. <strong>Bacterial conjunctivitis is extremely contagious</strong>; children must remain home until on prescribed antibiotic drops for at least 24 hours.</p>
+        <p class="para-cn" style="font-size:13.5px; color:#475569; line-height:1.7; margin:0;">结膜炎（俗称红眼病）是覆盖在眼球前方并衬于眼睑内面的透明结膜发生的急性炎症。病因可为病毒性、细菌性或过敏性。临床症状包括结膜充血发红、眼睑水肿、灼热、瘙痒，以及黄绿色脓性分泌物，常常在清晨醒来时结痂将眼睫毛粘结在一起导致睁眼困难。<strong>细菌性结膜炎具有极强的传染性</strong>；患儿必须居家隔离并在使用处方抗生素眼药水满 24 小时后方可返校。</p>
+      </div>
+
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px 20px; margin-bottom:16px;">
+        <h4 style="margin:0 0 8px; font-size:16px; color:#1e3a8a;">5. Strep Throat · 链球菌性喉炎（化脓性链球菌咽峡炎）</h4>
+        <p class="para-en" style="font-size:14px; color:#1e293b; line-height:1.65; margin-bottom:4px;">Strep throat is a contagious bacterial infection caused by <strong>group A streptococci</strong>. Symptoms include sudden, severe sore throat, pain upon swallowing, fever, headache, swollen tender neck lymph nodes, and red tonsils often coated with white patches or streaks of pus. Strep throat requires physician diagnosis via throat swab and treatment with antibiotics to prevent serious complications such as rheumatic fever or kidney damage. The child must stay home until they have received antibiotics for at least 24 hours.</p>
+        <p class="para-cn" style="font-size:13.5px; color:#475569; line-height:1.7; margin:0;">链球菌喉炎是由 <strong>A 族链球菌（streptococci）</strong> 引起的急性接触传染性细菌感染。典型临床特征包括突发的剧烈喉咙痛、吞咽困难剧痛、发热、头痛、颈部淋巴结肿大压痛，以及扁桃体显著充血发红且常覆有白色脓性斑点或脓栓。链球菌感染必须经由医生咽拭子培养确诊，并立即接受规范抗生素疗程，以预防风湿热（心脏瓣膜损伤）或急性肾小球肾炎等危急并发症。患儿必须服药抗生素满 24 小时方能返校。</p>
+      </div>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1015">
+      <span class="marker-pill">p. 1015</span>
+      <span class="marker-sec">Infection Prevention & Childhood Immunization (Box 42.3)</span>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;">Vaccines are so effective that most of the diseases that they help prevent have now become rare in Canada (see BOX 42.3: Recommended Childhood Immunizations in Canada). Immunization protects children from devastating and historically fatal childhood illnesses including measles, mumps, rubella, pertussis (whooping cough), diphtheria, tetanus, certain types of bacterial meningitis, and polio.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;">疫苗的预防效果极其卓著，以至于它们所预防的大多数凶险传染病在当今加拿大已变得极为罕见（参见专栏 42.3《加拿大国家推荐儿童免疫接种规划》）。疫苗接种保护着广大儿童免受历史上曾经造成无数残疾与死亡的灾难性小儿传染病的侵害，包括麻疹、流行性腮腺炎、风疹、百日咳、白喉、破伤风、特定类型的细菌性脑膜炎以及脊髓灰质炎（小儿麻痹症）。</p>
+    </div>
+
+    <!-- BOX 42.3 -->
+    <aside class="editorial-box-container box-theme-teal" style="margin:24px 0; background:#f0fdfa; border:1px solid #99f6e4; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:14px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#0f766e; letter-spacing:0.06em; text-transform:uppercase;">BOX 42.3 · FOCUS ON IMMUNIZATION</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#115e59;">Recommended Childhood Immunizations in Canada</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#042f2e;">聚焦免疫：加拿大公共卫生署推荐儿童核心疫苗接种项目与临床防护</div>
+      </div>
+      <div class="box-body-content" style="font-size:13.5px; line-height:1.7; color:#134e4a;">
+        <ul style="list-style:none; padding-left:0; margin:0;">
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>DTaP-IPV-Hib:</strong> Diphtheria, Tetanus, acellular Pertussis (whooping cough), Inactivated Polio, and <em>Haemophilus influenzae</em> type b (prevents epiglottitis and severe meningitis).<br>
+            <span style="color:#042f2e;"><strong>五联疫苗（DTaP-IPV-Hib）：</strong> 预防白喉、破伤风、无细胞百日咳、脊髓灰质炎灭活疫苗及 b 型流感嗜血杆菌（有效预防急性喉炎喉梗阻与化脓性脑膜炎）。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>MMRV:</strong> Measles, Mumps, Rubella, and Varicella (chickenpox). Administered at 12 months and 4–6 years.<br>
+            <span style="color:#042f2e;"><strong>四联麻风腮水痘疫苗（MMRV）：</strong> 预防麻疹、流行性腮腺炎、风疹与水痘。于幼儿 12 月龄及 4–6 岁幼托前常规接种。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Pneumococcal Conjugate (PCV13):</strong> Protects against <em>Streptococcus pneumoniae</em> causing pneumonia, bloodstream infections, and severe ear infections.<br>
+            <span style="color:#042f2e;"><strong>肺炎球菌结合疫苗（PCV13）：</strong> 预防导致重症肺炎、菌血症以及难治性中耳炎的肺炎链球菌感染。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Rotavirus Vaccine:</strong> Oral vaccine protecting infants against severe viral gastroenteritis and life-threatening dehydrating diarrhea.<br>
+            <span style="color:#042f2e;"><strong>轮状病毒口服疫苗：</strong> 口服给药，保护婴幼儿免受重症病毒性胃肠炎及致死性脱水性腹泻的威胁。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Meningococcal Conjugate (Men-C):</strong> Protects against invasive meningococcal disease causing rapid fatal sepsis and meningitis.<br>
+            <span style="color:#042f2e;"><strong>脑膜炎球菌疫苗（Men-C）：</strong> 预防侵袭性脑膜炎双球菌感染，防范暴发性致命脓毒症与流行性脑脊髓膜炎。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>HPV (Human Papillomavirus):</strong> Administered in school programs (Grade 7) to prevent cervical, anal, and throat cancers.<br>
+            <span style="color:#042f2e;"><strong>人乳头瘤病毒疫苗（HPV）：</strong> 在学堂免疫计划中（通常为 7 年级）接种，有效预防宫颈癌、肛门癌及口咽喉部恶性肿瘤。</span>
+          </li>
+          <li style="margin-bottom:8px; padding-left:18px; position:relative;">
+            <span style="position:absolute; left:0; top:0; color:#0d9488; font-weight:700;">▪</span>
+            <strong>Annual Influenza & COVID-19:</strong> Recommended for all children aged 6 months and older to reduce severe hospitalizations and complications.<br>
+            <span style="color:#042f2e;"><strong>年度流感疫苗与新冠疫苗：</strong> 推荐 6 月龄及以上所有儿童按季接种，显著降低重症住院率与多系统炎症并发症。</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="page-anchor-marker" id="page-1016">
+      <span class="marker-pill">p. 1016</span>
+      <span class="marker-sec">Vaccine Science, Herd Immunity & Home Sick Child Care</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-vaccine-science">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">HOW VACCINES WORK AND HERD IMMUNITY</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">疫苗免疫机制与群体免疫屏障</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>How Vaccines Work.</strong> Vaccines work by imitating an infection. When a vaccine is given, it introduces weakened antigens or inactive pieces of a pathogen into the body. The body’s natural immune system recognizes these harmless components as foreign invaders and produces specific <strong>antibodies</strong> and immune memory cells without causing the disease itself. Later, if the child is exposed to the real live pathogen, their immune system immediately recognizes it and destroys it before it can cause illness.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>疫苗的工作机制。</strong> 疫苗通过模拟一次无害的感染发挥作用。当注射疫苗时，它向体内引入了灭活病原体片段或减毒抗原。人体的天然免疫系统会将这些无害成分识别为外来入侵者，从而在不引发真实疾病的前提下，生成具有特异性的<strong>抗体（antibodies）</strong>与免疫记忆细胞。日后当儿童在现实中接触到真正的活体致病菌或病毒时，免疫系统便能立即将其精准消灭，在疾病发作之前将其拦截阻断。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Herd Immunity (Community Immunity).</strong> When vaccination rates are kept at high levels in the population (typically 95% or higher for highly infectious diseases like measles), the occurrence of disease is low and outbreaks are rare. This community-wide shield is known as <strong>herd immunity</strong>. Herd immunity is critical because it protects vulnerable individuals who cannot be vaccinated—such as newborn infants, people undergoing cancer chemotherapy, or those with severe immune deficiencies. Conversely, when vaccination rates drop due to vaccine hesitancy or misinformation, disease rates surge and dangerous outbreaks resurface.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>群体免疫（社区免疫屏障）。</strong> 当整个人群的疫苗接种率维持在极高水平时（对于麻疹等高传染性疾病，通常需要达到 95% 或更高），疾病在社区中的发生率极低，暴发极为罕见。这种覆盖全社会的防护盾被称为<strong>群体免疫（herd immunity）</strong>。群体免疫之所以至关重要，是因为它能切实保护那些因医学原因而无法接种疫苗的极其脆弱的人群——例如刚出生的初生婴儿、正在接受肿瘤化疗的患者或严重先天性免疫缺陷者。反之，一旦接种率因疫苗犹豫或虚假信息的误导而下滑，疾病发病率就会急剧飙升，引发致命的疫情反弹。</p>
+
+      <p class="para-en" style="font-size:15px; color:#1e293b; line-height:1.75; margin-bottom:4px;"><strong>Caring for a Sick Child at Home.</strong> When caring for a sick child, the support worker should follow the physician’s or nurse supervisor’s instructions closely. Keep the child rested, comfortable, and well-hydrated. Offer small, frequent sips of water, clear broth, diluted apple juice, or oral rehydration solutions. Keep the room quiet, well-ventilated, and comfortable. Observe and immediately report warning signs: fever over 38.5°C, stiff neck, extreme lethargy, persistent vomiting, or difficulty breathing.</p>
+      <p class="para-cn" style="font-size:14px; color:#475569; line-height:1.8; margin-bottom:16px;"><strong>病童居家舒适照护规范。</strong> 在居家环境中照料患病儿童时，支持工作者应严密遵从主治医师或主管护士的医嘱。保障患儿充分休息、处于舒适卧位并维持良好水分摄入。建议频繁少量提供温水、清淡肉汤、稀释苹果汁或口服补液盐溶液。保持居室安静、通风良好且温度适宜。密切观察并立即向主管汇报危险预警征象：体温超过 38.5°C、颈项强直强直、极度嗜睡唤不醒、持续剧烈呕吐或呼吸急促呼吸困难。</p>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1017">
+      <span class="marker-pill">p. 1017</span>
+      <span class="marker-sec">Chapter Review Key Points, Critical Thinking & Practice Exam Q1–3</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-review">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">CHAPTER REVIEW</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">本章核心复习精要</div>
+    </div>
+
+    <div class="review-key-points" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:20px 22px; margin-bottom:24px;">
+      <h3 style="margin:0 0 14px; font-size:17px; font-weight:700; color:#1e3a8a;">KEY POINTS / 核心知识点精炼（全书原版 9 大纲要）</h3>
+      <ul style="list-style:none; padding-left:0; margin:0; font-size:14px; line-height:1.7; color:#334155;">
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Support workers provide care and support to people of all ages, including the young. A young person that you are assigned to support may be your assigned client and have physical or developmental challenges or they may be a family member of your primary client.<br>
+          <span style="color:#64748b;">支持工作者向包括年幼群体在内的所有年龄段人群提供照护与支持。你被指派协助的年轻个体可能是身患身体或发育障碍的直接案主，也可能是你主要案主的家庭成员。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          As a support worker, you need to adjust your approach to providing care to a child according to the child’s age.<br>
+          <span style="color:#64748b;">作为一名支持工作者，你必须根据儿童的实际生理年龄与认知发展水平灵活调整照护方式与沟通技巧。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Your responsibilities will vary in each family situation but usually will include (1) developing positive relationships with all family members, (2) maintaining the existing rules of behaviour, (3) maintaining daily routines as much as possible, (4) being alert to situations that may create stress or cause harm to the family, and (5) reporting any issues to your supervisor.<br>
+          <span style="color:#64748b;">你在各家庭中的具体职责有所差异，但通常包括：(1) 与所有家庭成员建立积极关系、(2) 维护巩固现行行为规则、(3) 尽可能维持日常生活惯例、(4) 警惕可能造成压力或伤害的异常隐患、以及 (5) 将所有问题立即汇报给主管。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          In regard to children, support workers are responsible for helping the child to (1) eat well, (2) prevent injuries, (3) prevent falls, (4) prevent burns, (5) prevent accidental poisoning, and (6) prevent infections.<br>
+          <span style="color:#64748b;">针对儿童照护，支持工作者的主要职责是协助儿童：(1) 均衡良好进餐、(2) 预防意外创伤、(3) 预防跌倒跌伤、(4) 预防烫伤烧伤、(5) 预防意外中毒、以及 (6) 预防感染。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          As a support worker, you should be aware of the general guidelines for caring for children in the home regarding (1) communication; (2) rest, sleep, play, and exercise; (3) mealtime; and (4) discipline.<br>
+          <span style="color:#64748b;">支持工作者应全面掌握在家庭中照护儿童的通用指导方针：(1) 沟通交流、(2) 休息睡眠、游戏与运动锻炼、(3) 进餐时间管理、以及 (4) 行为纪律引导。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Your role, as a support worker, in disciplining the child is to (1) know the rules of acceptable behaviour in each family situation, (2) ask an appropriate family member to clarify the rules if you are unsure, (3) reinforce existing rules, (4) be consistent when using discipline, and (5) praise the child’s efforts at following the rules.<br>
+          <span style="color:#64748b;">支持工作者在儿童纪律引导中的角色是：(1) 清楚掌握各家庭的准则、(2) 疑问时向适宜家属请教明确、(3) 巩固现有规则、(4) 保持一致的一贯性、以及 (5) 真诚赞扬孩子遵守规则的努力。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Generally, children with signs or symptoms of illness can return to school when they (1) have no fever, (2) can eat and drink normally, (3) are rested and alert enough to pay attention in class, and (4) have completed any period of medically recommended isolation.<br>
+          <span style="color:#64748b;">患病儿童通常在满足以下条件时方可返校：(1) 完全退烧、(2) 能正常进食饮水、(3) 充分休息且清醒警觉能专注听课、以及 (4) 完成了医学推荐的隔离期。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          The top five reasons children miss school or child care are (1) colds, (2) gastroenteritis (stomach flu), (3) ear infection (otitis media), (4) pink eye (conjunctivitis), and (5) sore throats.<br>
+          <span style="color:#64748b;">学童缺课或脱离日托的前五大最常见急性病因是：(1) 普通感冒、(2) 胃肠炎（胃肠感冒）、(3) 耳部感染（中耳炎）、(4) 红眼病（结膜炎）、以及 (5) 喉咙痛（链球菌咽峡炎）。</span>
+        </li>
+        <li style="margin-bottom:10px; padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; top:0; color:#2563eb; font-weight:700;">▪</span>
+          Support workers should be aware of the reasons some children “act out.”<br>
+          <span style="color:#64748b;">支持工作者必须深刻理解有些孩子出现情绪失控或违拗“捣乱”（acting out）背后的深层心理诱因。</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Critical Thinking Box -->
+    <aside class="editorial-box-container box-theme-case" style="margin:24px 0; background:#f0f7ff; border:1px solid #bfdbfe; border-radius:10px; padding:20px 22px;">
+      <div class="box-banner-header" style="margin-bottom:12px;">
+        <span class="box-badge" style="font-size:11px; font-weight:700; color:#1e40af; letter-spacing:0.06em; text-transform:uppercase;">CRITICAL THINKING IN PRACTICE · 临床实践思辨</span>
+        <h4 class="box-title-en" style="margin:4px 0 2px; font-size:17px; font-weight:750; color:#1e3a8a;">Scenario: 5-Year-Old Boy in Crisis</h4>
+        <div class="box-title-cn" style="font-size:14.5px; font-weight:600; color:#172554;">案例思考：母亲腹部手术住院康复期间，居家照护 5 岁男童的突发危机应对</div>
+      </div>
+      <div class="box-body-content" style="font-size:14px; line-height:1.75; color:#1e293b;">
+        <p class="para-en" style="margin-bottom:4px;">While his mother is in the hospital recuperating from abdominal surgery, you are caring for a 5-year-old boy who is usually home-schooled. At lunchtime, you warm up his meal, place it on the table, and ask him to wash his hands. The boy refuses to do so and then begins throwing his toy building blocks at you, runs into his room, and hides. You do not know what to do and debate whether or not you should go after him in his room. You also do not know how much firmness to use when insisting that he eat. How much discipline should you use? Does this incident warrant a call to your supervisor? What can you do in this instance? Can you identify reasons for this child’s behaviour?</p>
+        <p class="para-cn" style="color:#475569;">当一位母亲因腹部大手术在医院住院康复期间，你正受聘在她家中照护她平时接受居家教育（home-schooled）的 5 岁儿子。午餐时间，你热好了饭菜摆在桌上，并温和地请他先去洗手。小男孩断然拒绝洗手，紧接着开始抓起他的玩具积木朝你狠狠砸来，随后飞奔跑进自己的房间躲藏了起来。你一时不知所措，纠结是否应当立刻追进房间去抓他出来。你也不知道在坚持要求他吃饭时应该展现多大程度的强硬立场。你应该实施多大程度的纪律约束？这起突发事件是否需要立即向你的主管汇报？在当前情况下你应该采取哪些步骤？你能分析出导致这个孩子出现这种激进攻击性行为的深层心理原因吗？</p>
+      </div>
+    </aside>
+
+    <div class="editorial-heading-major" id="sec-ch42-quiz-opener">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:28px; margin-bottom:4px;">REVIEW QUESTIONS (Questions 1 to 3)</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">本章自测复习题（第 1 至 3 题）</div>
+    </div>
+
+
+    <div class="page-anchor-marker" id="page-1018">
+      <span class="marker-pill">p. 1018</span>
+      <span class="marker-sec">Review Questions 4 to 11 & Official Elsevier Answer Key</span>
+    </div>
+
+    <div class="editorial-heading-major" id="sec-ch42-quiz-q4-11">
+      <h2 class="heading-en" style="font-size:22px; font-weight:750; color:#0f172a; margin-top:20px; margin-bottom:4px;">REVIEW QUESTIONS (Questions 4 to 11)</h2>
+      <div class="heading-cn" style="font-size:16px; font-weight:600; color:#475569; margin-bottom:16px;">本章自测复习题（第 4 至 11 题与官方权威标准答案解析）</div>
+    </div>
+
+    <div class="prose-block" style="margin-bottom:20px;">
+      <p class="para-en" style="font-size:14.5px; color:#1e293b; line-height:1.7; margin-bottom:4px;">Official Elsevier Canadian 5th Edition Review Questions 1 through 11 test essential clinical knowledge regarding support worker roles, active listening, pleasant mealtimes, absolute punishment prohibition, vaccine science, common childhood school absences, and immunity maturation.</p>
+      <p class="para-cn" style="font-size:13.5px; color:#475569; line-height:1.75; margin-bottom:16px;">爱思唯尔加拿大第 5 版官方全真自测复习题第 1 至 11 题，全面考核支持工作者职责、积极倾听技巧、餐桌和谐环境构建、绝对禁止惩罚硬性红线、疫苗生物学机理、学童五大缺课病因及免疫成熟规律等核心执业考点。</p>
+    </div>
+
+</div>
+    <div class="sheet-bottom-nav">
+      <button class="sbn-btn sbn-prev" onclick="switchSection('sec-ch41')">← 上一章：第 41 章</button>
+      <button class="sbn-btn sbn-quiz" onclick="switchSection('sec-ch42-quiz')">✍️ 11 道全真自测题 ↗</button>
+      <button class="sbn-btn sbn-next sbn-pipeline" onclick="alert('第 39 章（常见疾病与失调，62页）正在编排流水线中，即将上线！')">下一章：第 39 章 (流水线调度中) ⏳</button>
+    </div>
+    
+    </div>
+
+    <footer class="standalone-bottom-nav">
+      <div class="sbn-inner">
+        <a href="psw-ch41.html" class="sbn-btn sbn-prev">← 上一章：第 41 章 (婴儿及其父母的照护)</a>
+        <a href="psw-reader.html" class="sbn-btn sbn-home">🏛️ 全书总阅读器</a>
+        <a href="psw-reader.html#sec-ch42-quiz" class="sbn-btn sbn-quiz">✍️ 11 道全真自测题 ↗</a>
+        <a href="javascript:void(0)" onclick="alert('第 43 章（老年人照护）正在编排流水线中，即将上线！')" class="sbn-btn sbn-next sbn-pipeline">下一章：第 43 章 (流水线调度中) ⏳</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var readerAudio = new Audio('audio/psw/ch42_master.mp3');
+    var isPlaying = false;
+    var lastActiveEntry = null;
+
+    function switchLanguageMode(mode) {
+      var html = document.documentElement;
+      html.classList.remove('mode-bilingual', 'mode-en', 'mode-cn');
+      html.classList.add('mode-' + mode);
+      
+      var btns = document.querySelectorAll('.mode-seg-btn');
+      btns.forEach(function(b) {
+        if (b.getAttribute('data-mode') === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      
+      try { localStorage.setItem('psw_lang_mode', mode); } catch (e) {}
+    }
+
+    function initLanguageMode() {
+      var saved = 'bilingual';
+      try { saved = localStorage.getItem('psw_lang_mode') || 'bilingual'; } catch (e) {}
+      switchLanguageMode(saved);
+      
+      try {
+        var savedTheme = localStorage.getItem('psw_theme');
+        if (savedTheme === 'white') {
+          document.documentElement.classList.remove('theme-paper');
+          document.documentElement.classList.add('theme-white');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '📖 护眼纸色';
+        } else {
+          document.documentElement.classList.add('theme-paper');
+          var btn = document.getElementById('paperThemeBtn');
+          if (btn) btn.innerText = '⚪ 纯白背景';
+        }
+      } catch (e) {}
+    }
+
+    function togglePaperTheme() {
+      var html = document.documentElement;
+      var isPaper = html.classList.toggle('theme-paper');
+      var btn = document.getElementById('paperThemeBtn');
+      if (isPaper) {
+        html.classList.remove('theme-white');
+        if (btn) btn.innerText = '⚪ 纯白背景';
+        try { localStorage.setItem('psw_theme', 'paper'); } catch (e) {}
+      } else {
+        html.classList.add('theme-white');
+        if (btn) btn.innerText = '📖 护眼纸色';
+        try { localStorage.setItem('psw_theme', 'white'); } catch (e) {}
+      }
+    }
+
+    function toggleReaderAudioPlay() {
+      var btn = document.getElementById('rabPlayBtn');
+      if (isPlaying) {
+        readerAudio.pause();
+        isPlaying = false;
+        if (btn) btn.innerText = '▶';
+      } else {
+        readerAudio.play();
+        isPlaying = true;
+        if (btn) btn.innerText = '⏸';
+      }
+    }
+
+    function playParagraphAudio(el) {
+      var start = parseFloat(el.getAttribute('data-start') || 0);
+      var title = el.getAttribute('data-title') || '';
+      
+      if (lastActiveEntry) lastActiveEntry.classList.remove('audio-active');
+      el.classList.add('audio-active');
+      lastActiveEntry = el;
+
+      readerAudio.currentTime = start;
+      readerAudio.play();
+      isPlaying = true;
+      var btn = document.getElementById('rabPlayBtn');
+      if (btn) btn.innerText = '⏸';
+      if (title) {
+        document.getElementById('rabCurrentTitle').innerText = title;
+      }
+    }
+
+    /* Dual-mode Glossary Controls */
+    function switchGlossaryView(ch, mode) {
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('kt-btn-cards-' + ch);
+      var btns = document.querySelectorAll('#terms-' + ch + ' .kt-toggle-btn, #kt-container-' + ch + ' .kt-toggle-btn');
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (mode === 'table') {
+        if (tableEl) { tableEl.style.display = 'block'; tableEl.classList.add('active'); }
+        if (cardsEl) { cardsEl.style.display = 'none'; cardsEl.classList.remove('active'); }
+        if (btnTable) btnTable.classList.add('active');
+      } else {
+        if (tableEl) { tableEl.style.display = 'none'; tableEl.classList.remove('active'); }
+        if (cardsEl) { cardsEl.style.display = 'block'; cardsEl.classList.add('active'); }
+        if (btnCards) btnCards.classList.add('active');
+      }
+    }
+    function setGlossaryMode(ch, mode) {
+      switchGlossaryView(ch, mode);
+    }
+    function setGlossaryView(ch, mode) {
+      switchGlossaryView(ch, mode);
+      var tableEl = document.getElementById('kt-table-view-' + ch);
+      var cardsEl = document.getElementById('kt-cards-view-' + ch);
+      var btnTable = document.getElementById('btn-view-table-' + ch) || document.getElementById('kt-btn-table-' + ch);
+      var btnCards = document.getElementById('btn-view-cards-' + ch) || document.getElementById('kt-btn-cards-' + ch);
+      if (mode === 'cards') {
+        if (tableEl) tableEl.style.display = 'none';
+        if (cardsEl) cardsEl.style.display = 'block';
+        if (btnTable) btnTable.classList.remove('active');
+        if (btnCards) btnCards.classList.add('active');
+      } else {
+        if (tableEl) tableEl.style.display = 'block';
+        if (cardsEl) cardsEl.style.display = 'none';
+        if (btnTable) btnTable.classList.add('active');
+        if (btnCards) btnCards.classList.remove('active');
+      }
+    }
+    function toggleGlossaryCards(ch) {
+      var cards = document.querySelectorAll('#kt-cards-grid-' + ch + ' .kt-card-overflow');
+      var btn = document.getElementById('kt-exp-btn-' + ch);
+      var isHidden = false;
+      cards.forEach(function(c) {
+        if (c.style.display === 'none' || !c.style.display) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+          isHidden = true;
+        }
+      });
+      if (btn) {
+        btn.innerText = isHidden ? '展开全部精研术语卡片 ▼' : '收起术语卡片 ▲';
+      }
+    }
+
+    function toggleGlossaryFold(ch, viewType) {
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var isExpanded = container.classList.toggle('is-expanded-' + viewType);
+      var rows = container.querySelectorAll(viewType === 'table' ? '.kt-folded-row, .kt-compact-table tr' : '.kt-folded-card, .kt-term-card');
+      var btn = document.querySelector('#kt-expand-bar-' + viewType + '-' + ch + ' .kt-expand-btn');
+      rows.forEach(function(r) {
+        r.style.display = isExpanded ? (viewType === 'table' ? '' : 'block') : 'none';
+      });
+      if (btn) {
+        btn.innerHTML = isExpanded ? '收起术语表 ▲' : '展开全部专业术语 ▼';
+      }
+    }
+
+    function filterGlossary(ch, query) {
+      var input = document.getElementById('kt-search-' + ch);
+      var q = (query !== undefined ? query : (input ? input.value : '')).trim().toLowerCase();
+      var container = document.getElementById('terms-' + ch) || document.getElementById('kt-container-' + ch);
+      if (!container) return;
+      var rows = container.querySelectorAll('.kt-compact-table tbody tr, .kt-table-row');
+      var cards = container.querySelectorAll('.kt-term-card, .editorial-term-card');
+      var expandTableBar = document.getElementById('kt-expand-bar-table-' + ch);
+      var expandCardsBar = document.getElementById('kt-expand-bar-cards-' + ch);
+
+      if (!q) {
+        var isExpandedTable = container.classList.contains('is-expanded-table');
+        rows.forEach(function(r, idx) {
+          r.style.display = (idx < 6 || isExpandedTable) ? '' : 'none';
+        });
+        var isExpandedCards = container.classList.contains('is-expanded-cards');
+        cards.forEach(function(c, idx) {
+          c.style.display = (idx < 6 || isExpandedCards) ? '' : 'none';
+        });
+        if (expandTableBar) expandTableBar.style.display = 'block';
+        if (expandCardsBar) expandCardsBar.style.display = 'block';
+        return;
+      }
+
+      if (expandTableBar) expandTableBar.style.display = 'none';
+      if (expandCardsBar) expandCardsBar.style.display = 'none';
+
+      rows.forEach(function(r) {
+        var text = (r.innerText || '').toLowerCase();
+        r.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+      cards.forEach(function(c) {
+        var text = (c.innerText || '').toLowerCase();
+        c.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    }
+
+    /* Chapter Page Navigation Controls */
+    function jumpToChapterPage(pageId) {
+      if (!pageId) return;
+      var el = document.getElementById(pageId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try { history.replaceState(null, null, '#' + pageId); } catch(e) {}
+        updateActivePageChip(pageId);
+      }
+    }
+
+    function handlePageChipClick(event, pageId) {
+      if (event) event.preventDefault();
+      jumpToChapterPage(pageId);
+    }
+
+    function updateActivePageChip(pageId) {
+      if (!pageId) return;
+      var pNum = pageId.replace('page-', '');
+      var chips = document.querySelectorAll('.cp-chip');
+      chips.forEach(function(c) {
+        if (c.getAttribute('data-page') === pNum) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var selects = document.querySelectorAll('.cp-page-select');
+      selects.forEach(function(s) {
+        if (s.value === pageId) {
+          // already selected
+        } else {
+          var opt = s.querySelector('option[value="' + pageId + '"]');
+          if (opt) s.value = pageId;
+        }
+      });
+    }
+
+    function initPageActiveObserver() {
+      if (!window.IntersectionObserver) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            if (id && id.indexOf('page-') === 0) {
+              updateActivePageChip(id);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      });
+
+      var markers = document.querySelectorAll('[id^="page-"]');
+      markers.forEach(function(m) {
+        observer.observe(m);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPageActiveObserver);
+    } else {
+      initPageActiveObserver();
+    }
+
+    initLanguageMode();
+  </script>
+</body>
+</html>
